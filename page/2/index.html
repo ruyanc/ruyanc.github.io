@@ -157,6 +157,307 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/NCL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/NCL/" class="post-title-link" itemprop="url">NCL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>℃     </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
+
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li>output large files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>output</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>read multiple files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
+<li>Font</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>coordinate info</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>Label Bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>add box</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>change color bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2D Fill</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>significance test with dots</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>mask land</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
+<li>parameters</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rad  = <span class="number">4.0</span>*<span class="built_in">atan</span>(<span class="number">1.0</span>)/<span class="number">180.0</span></span><br><span class="line">density of water: <span class="number">997</span> kg/m³</span><br><span class="line">Acceleration due to gravity: <span class="number">9.80665</span> m/s2</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>units</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> day = <span class="number">86400</span>s</span><br><span class="line"><span class="number">1</span> kg m-<span class="number">2</span> s-<span class="number">1</span> = <span class="number">86400</span> mm/day</span><br><span class="line"><span class="number">1</span> Pa = <span class="number">1</span> N/m2     <span class="number">1</span> N = <span class="number">1</span> kg⋅m⋅s−<span class="number">2</span></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared <span class="keyword">in</span> the direction of the applied force.</span><br><span class="line"><span class="number">1</span> Pa = <span class="number">10</span>−<span class="number">5</span> bar   SI base units: kg⋅m−<span class="number">1</span>⋅s−<span class="number">2</span></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line">m/s kg/kg hPa  to mm/day     </span><br><span class="line">Q_vint_unit = Q_vint/(<span class="number">9.8</span>*<span class="number">997</span>)*<span class="number">86400</span>*<span class="number">1000</span>*<span class="number">100</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span> SV = <span class="number">10</span>^<span class="number">6</span> m^<span class="number">3</span> s^-<span class="number">1</span></span><br><span class="line">stream <span class="function"><span class="keyword">function</span></span>: m^<span class="number">2</span> s^-<span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>![image-20201215145607663](&#x2F;Users&#x2F;chen&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20201215145607663.png)</p>
+<ul>
+<li>area average</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>advection</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
+<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
+<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a target="_blank" rel="noopener" href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
+<ul>
+<li>zonal gradients</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>vertical integration</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>remap</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>regression</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>conform_dims</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
+<li>create a directory if it does not already exist</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>convert a GRIB file to netCDF</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/PDF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/PDF/" class="post-title-link" itemprop="url">PDF</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
+<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
+<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a target="_blank" rel="noopener" href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
+<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
+<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a target="_blank" rel="noopener" href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
+<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Parameters/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -221,99 +522,6 @@
 
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Python_Install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/Python_Install/" class="post-title-link" itemprop="url">Python</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p> <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b9eac8419c8d">https://www.jianshu.com/p/b9eac8419c8d</a></p>
-<p>下载anaconda</p>
-<h4 id="查看帮助"><a href="#查看帮助" class="headerlink" title="查看帮助"></a>查看帮助</h4><p><code>conda -h</code></p>
-<h4 id="基于python3-8版本创建一个名字为python38的环境"><a href="#基于python3-8版本创建一个名字为python38的环境" class="headerlink" title="基于python3.8版本创建一个名字为python38的环境"></a>基于python3.8版本创建一个名字为python38的环境</h4><p><code>conda create --name python38 python=3.8</code></p>
-<h4 id="激活此环境"><a href="#激活此环境" class="headerlink" title="激活此环境"></a>激活此环境</h4><p><code>activate python38</code></p>
-<h4 id="再来检查python版本，显示是-3-8"><a href="#再来检查python版本，显示是-3-8" class="headerlink" title="再来检查python版本，显示是 3.8"></a>再来检查python版本，显示是 3.8</h4><p><code>python -V </code></p>
-<h4 id="退出当前环境"><a href="#退出当前环境" class="headerlink" title="退出当前环境"></a>退出当前环境</h4><p><code>deactivate python38</code></p>
-<h4 id="删除该环境"><a href="#删除该环境" class="headerlink" title="删除该环境"></a>删除该环境</h4><p><code>conda remove -n python38 --all</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conda update --all</span><br><span class="line"></span><br><span class="line">conda create -n py38 python=3.8</span><br><span class="line"></span><br><span class="line">conda activate py38 # 激活这个新的配置环境</span><br><span class="line"></span><br><span class="line">python --version # 检查版本</span><br><span class="line"></span><br><span class="line"># 打开 anaconda navigator，会现多出来一个可选择的环境</span><br><span class="line"></span><br><span class="line">添加清华镜像 https://blog.csdn.net/u014330763/article/details/79994593</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h4 id="Jupyter-Notebook-add-conda-env"><a href="#Jupyter-Notebook-add-conda-env" class="headerlink" title="Jupyter Notebook add conda env"></a>Jupyter Notebook add conda env</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create --name pyn_env --channel conda-forge pyngl pynio</span><br><span class="line"></span><br><span class="line">source activate pyn_env</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="jupyter-notebook-添加-conda-环境"><a href="#jupyter-notebook-添加-conda-环境" class="headerlink" title="jupyter notebook 添加 conda 环境"></a>jupyter notebook 添加 conda 环境</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">conda install ipykernel</span><br><span class="line"></span><br><span class="line">source activate pyn_env</span><br><span class="line"></span><br><span class="line">python -m ipykernel install --user --name pyn_env --display-name &quot;Python pyn_env&quot;</span><br><span class="line"></span><br><span class="line">jupyter notebook</span><br><span class="line"></span><br><span class="line">切换kernal环境</span><br></pre></td></tr></table></figure>
 
 
       
@@ -671,6 +879,99 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Python_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/Python_Install/" class="post-title-link" itemprop="url">Python</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p> <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b9eac8419c8d">https://www.jianshu.com/p/b9eac8419c8d</a></p>
+<p>下载anaconda</p>
+<h4 id="查看帮助"><a href="#查看帮助" class="headerlink" title="查看帮助"></a>查看帮助</h4><p><code>conda -h</code></p>
+<h4 id="基于python3-8版本创建一个名字为python38的环境"><a href="#基于python3-8版本创建一个名字为python38的环境" class="headerlink" title="基于python3.8版本创建一个名字为python38的环境"></a>基于python3.8版本创建一个名字为python38的环境</h4><p><code>conda create --name python38 python=3.8</code></p>
+<h4 id="激活此环境"><a href="#激活此环境" class="headerlink" title="激活此环境"></a>激活此环境</h4><p><code>activate python38</code></p>
+<h4 id="再来检查python版本，显示是-3-8"><a href="#再来检查python版本，显示是-3-8" class="headerlink" title="再来检查python版本，显示是 3.8"></a>再来检查python版本，显示是 3.8</h4><p><code>python -V </code></p>
+<h4 id="退出当前环境"><a href="#退出当前环境" class="headerlink" title="退出当前环境"></a>退出当前环境</h4><p><code>deactivate python38</code></p>
+<h4 id="删除该环境"><a href="#删除该环境" class="headerlink" title="删除该环境"></a>删除该环境</h4><p><code>conda remove -n python38 --all</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">conda update --all</span><br><span class="line"></span><br><span class="line">conda create -n py38 python=3.8</span><br><span class="line"></span><br><span class="line">conda activate py38 # 激活这个新的配置环境</span><br><span class="line"></span><br><span class="line">python --version # 检查版本</span><br><span class="line"></span><br><span class="line"># 打开 anaconda navigator，会现多出来一个可选择的环境</span><br><span class="line"></span><br><span class="line">添加清华镜像 https://blog.csdn.net/u014330763/article/details/79994593</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Jupyter-Notebook-add-conda-env"><a href="#Jupyter-Notebook-add-conda-env" class="headerlink" title="Jupyter Notebook add conda env"></a>Jupyter Notebook add conda env</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create --name pyn_env --channel conda-forge pyngl pynio</span><br><span class="line"></span><br><span class="line">source activate pyn_env</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="jupyter-notebook-添加-conda-环境"><a href="#jupyter-notebook-添加-conda-环境" class="headerlink" title="jupyter notebook 添加 conda 环境"></a>jupyter notebook 添加 conda 环境</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">conda install ipykernel</span><br><span class="line"></span><br><span class="line">source activate pyn_env</span><br><span class="line"></span><br><span class="line">python -m ipykernel install --user --name pyn_env --display-name &quot;Python pyn_env&quot;</span><br><span class="line"></span><br><span class="line">jupyter notebook</span><br><span class="line"></span><br><span class="line">切换kernal环境</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Python_Plot/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -729,108 +1030,6 @@
 
 
 
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/WRF_install/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/WRF_install/" class="post-title-link" itemprop="url">WRF Install</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h2><h3 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h3 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h3><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h2 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h2><h3 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h3 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h3><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
 
       
     </div>
@@ -967,6 +1166,108 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/WRF_install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/WRF_install/" class="post-title-link" itemprop="url">WRF Install</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h2><h3 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h3 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h3><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h2 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h2><h3 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h3><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h3 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h3><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/WRF_run_with_CFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1051,7 +1352,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/GitHub/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/19/AtmoSci/Weather/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -1065,173 +1366,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/05/01/Tools/GitHub/" class="post-title-link" itemprop="url">Github</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Gitee/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/Gitee/" class="post-title-link" itemprop="url">Gitee</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/19/OcnSci/Ocean/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/04/19/OcnSci/Ocean/" class="post-title-link" itemprop="url">Ocean</a>
+            <a href="/2022/04/19/AtmoSci/Weather/" class="post-title-link" itemprop="url">Weather</a>
         </h2>
 
         <div class="post-meta">
@@ -1248,7 +1383,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 16:24:21" itemprop="dateModified" datetime="2022-05-23T16:24:21+08:00">2022-05-23</time>
+                <time title="Modified: 2022-05-23 16:23:59" itemprop="dateModified" datetime="2022-05-23T16:23:59+08:00">2022-05-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1256,7 +1391,7 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OcnSci/" itemprop="url" rel="index"><span itemprop="name">-OcnSci</span></a>
+                  <a href="/categories/AtmSci/" itemprop="url" rel="index"><span itemprop="name">-AtmSci</span></a>
                 </span>
             </span>
 
@@ -1271,9 +1406,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-
+          <h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a target="_blank" rel="noopener" href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a target="_blank" rel="noopener" href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a target="_blank" rel="noopener" href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>
       
     </div>
 
