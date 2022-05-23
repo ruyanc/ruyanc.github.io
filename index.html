@@ -117,12 +117,12 @@
   </li>
         <li class="menu-item menu-item-atmsci">
 
-    <a href="/AtmSci/" rel="section"><i class="fa fa-archive fa-fw"></i>AtmSci</a>
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-archive fa-fw"></i>AtmSci</a>
 
   </li>
         <li class="menu-item menu-item-ocnsci">
 
-    <a href="/OcnSci/" rel="section"><i class="fa fa-archive fa-fw"></i>OcnSci</a>
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-archive fa-fw"></i>OcnSci</a>
 
   </li>
         <li class="menu-item menu-item-tools">
@@ -420,7 +420,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 16:11:29" itemprop="dateModified" datetime="2022-05-23T16:11:29+08:00">2022-05-23</time>
+                <time title="Modified: 2022-05-23 16:16:46" itemprop="dateModified" datetime="2022-05-23T16:16:46+08:00">2022-05-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -443,35 +443,28 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>4.5 The Four Run Types</strong></p>
-<p>The environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘continue’ or ‘branch’, with ‘startup’ being the default setting. The four options are described in this section.</p>
-<p><strong>4.5.1 Startup Runs</strong></p>
-<p>If $RUNTYPE is set to ‘startup’, the model will start from some arbitrary baseline state that need not be associated with any previous run. Startup runs are typically initialized using a $BASEDATE of 0001-01-01, although there is no dependence of these runs on previous case names or calendar dates. The ice model uses the $BASEDATE sent from the coupler on a startup run. The ice setup script will create a pointer file named <em>rpointer.ice</em> with the name of the initial restart file in it using $BASEDATE. The date read in from the restart file will be written over by $BASEDATE. The primary environment variables for a startup run are:</p>
+          <h4 id="4-5-The-Four-Run-Types"><a href="#4-5-The-Four-Run-Types" class="headerlink" title="4.5 The Four Run Types"></a>4.5 The Four Run Types</h4><p>The environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘continue’ or ‘branch’, with ‘startup’ being the default setting. The four options are described in this section.</p>
+<h4 id="4-5-1-Startup-Runs"><a href="#4-5-1-Startup-Runs" class="headerlink" title="4.5.1 Startup Runs"></a>4.5.1 Startup Runs</h4><p>If $RUNTYPE is set to ‘startup’, the model will start from some arbitrary baseline state that need not be associated with any previous run. Startup runs are typically initialized using a $BASEDATE of 0001-01-01, although there is no dependence of these runs on previous case names or calendar dates. The ice model uses the $BASEDATE sent from the coupler on a startup run. The ice setup script will create a pointer file named <em>rpointer.ice</em> with the name of the initial restart file in it using $BASEDATE. The date read in from the restart file will be written over by $BASEDATE. The primary environment variables for a startup run are:</p>
 <p> CASE    test.a1    #new case name</p>
 <p> RUNTYPE  startup    </p>
 <p> BASEDATE  0001-01-01  #start date for initial run</p>
 <p>Startup runs can start from a $BASEDATE other then 0001-01-01. Startup runs can also be initialized using data created within the ice model, as described in the next section.</p>
-<p>**<br> 4.5.1.1 Using Initial Conditions from within CSIM4**</p>
-<p>Initial conditions can be calculated within the ice model in a subroutine called init_state in <em>ice_init.F</em>. Here, the ocean surface is initialized at the freezing point everywhere north of 40 degrees and south of -40 degrees latitude, allowing ice to form everywhere in these regions. While running the ice model with a data ocean will melt any extra ice during the first year of integration, is not recommended that these initial conditions be used when running the ice model coupled to an active ocean model. The advantage of using this input is that it is not grid or land mask dependent. To use these initial conditions, set RESTART in <em>ice.setup.csh</em>:</p>
+<h5 id="4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><a href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4" class="headerlink" title="4.5.1.1 Using Initial Conditions from within CSIM4"></a>4.5.1.1 Using Initial Conditions from within CSIM4</h5><p>Initial conditions can be calculated within the ice model in a subroutine called init_state in <em>ice_init.F</em>. Here, the ocean surface is initialized at the freezing point everywhere north of 40 degrees and south of -40 degrees latitude, allowing ice to form everywhere in these regions. While running the ice model with a data ocean will melt any extra ice during the first year of integration, is not recommended that these initial conditions be used when running the ice model coupled to an active ocean model. The advantage of using this input is that it is not grid or land mask dependent. To use these initial conditions, set RESTART in <em>ice.setup.csh</em>:</p>
 <p>set RESTART &#x3D; .false.</p>
-<p>**<br> 4.5.1.2 Using Initial Conditions from Input Data Files**</p>
-<p>The input data file for the ice model is a binary restart file from a previous run. If $RUNTYPE is set to ‘startup’, the ice setup script is will read the initial condition file from the input data directory, <em>iced.0001-01-01.$ICE_GRID</em> regardless of $BASEDATE. For ‘continue’ runs, the input data file is determined by the filename set in the restart pointer file (see section <a target="_blank" rel="noopener" href="https://www.cesm.ucar.edu/models/ccsm2.0/csim/UsersGuide/ice_usrdoc/node21.html#pointer_files">4.8.2.1</a>). If $RUNTYPE is ‘branch’ or ‘hybrid’, the ice setup script will attempt to file a restart file with $REFDATE in the filename.</p>
+<h6 id="4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><a href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files" class="headerlink" title="4.5.1.2 Using Initial Conditions from Input Data Files"></a>4.5.1.2 Using Initial Conditions from Input Data Files</h6><p>The input data file for the ice model is a binary restart file from a previous run. If $RUNTYPE is set to ‘startup’, the ice setup script is will read the initial condition file from the input data directory, <em>iced.0001-01-01.$ICE_GRID</em> regardless of $BASEDATE. For ‘continue’ runs, the input data file is determined by the filename set in the restart pointer file (see section <a target="_blank" rel="noopener" href="https://www.cesm.ucar.edu/models/ccsm2.0/csim/UsersGuide/ice_usrdoc/node21.html#pointer_files">4.8.2.1</a>). If $RUNTYPE is ‘branch’ or ‘hybrid’, the ice setup script will attempt to file a restart file with $REFDATE in the filename.</p>
 <p>For the startup and hybrid setups, it is not necessary that the date inside the binary file match the date in the filename, since the $BASEDATE received from the coupler will override the date in the restart file. This will not be true for continue and branch runs, where the $BASEDATE is set in the model using the date in the restart file. Initializing the model using a restart file from an equilibrium run will result in a more physically reasonable scenario than the initial conditions set within CSIM4. The conditions in the initial restart file provided with CSIM4 are from an active ice only equilibrium run using modified NCEP forcing. The drawbacks are that the data is binary, difficult to edit, and is date and grid dependent. A restart file will be used as initial conditions if</p>
 <p>set RESTART &#x3D; .true.</p>
 <p>in <em>ice.setup.csh</em>.</p>
-<p><strong>4.5.2 Hybrid Runs</strong></p>
-<p>A hybrid run should be used when a collection of arbitrary initial&#x2F;restart files from previous runs is desired to start the model. A new $CASE and $BASEDATE can be specified. The ice model receives $BASEDATE from the coupler. The date read in from the restart file will be written over by $BASEDATE. The climate simulated by the hybrid run should be continuous compared to the previous run, but an exact restart will not be produced. If all components start from the same reference case and date, $REFCASE and $REFDATE can be used to specify the previous date and case. Generally, a hybrid run will require some modifications to the scripts by the user, especially if some components are starting from inconsistent runs or dates. The primary environment variables for a startup run are:</p>
+<h4 id="4-5-2-Hybrid-Runs"><a href="#4-5-2-Hybrid-Runs" class="headerlink" title="4.5.2 Hybrid Runs"></a>4.5.2 Hybrid Runs</h4><p>A hybrid run should be used when a collection of arbitrary initial&#x2F;restart files from previous runs is desired to start the model. A new $CASE and $BASEDATE can be specified. The ice model receives $BASEDATE from the coupler. The date read in from the restart file will be written over by $BASEDATE. The climate simulated by the hybrid run should be continuous compared to the previous run, but an exact restart will not be produced. If all components start from the same reference case and date, $REFCASE and $REFDATE can be used to specify the previous date and case. Generally, a hybrid run will require some modifications to the scripts by the user, especially if some components are starting from inconsistent runs or dates. The primary environment variables for a startup run are:</p>
 <p> CASE    test.a1    #new case name</p>
 <p> RUNTYPE  hybrid</p>
 <p> BASEDATE  0001-01-01  #date where to start run</p>
 <p> REFCASE         #reference case for initial&#x2F;restart data</p>
 <p> REFDATE  0001-01-01  #date in REFCASE to obtain initial&#x2F;restart data</p>
-<p><strong>4.5.3 Continue Runs</strong></p>
-<p>A continue run is an exact continuation of a previous run. This means that the run will produce a bit-for-bit answer as if the existing run had not stopped. In this case, it is assumed that $CASE and $BASEDATE have not changed and that the date is continuous from the previous run. For a continue run, the only change required in the main script is to set:</p>
+<h4 id="4-5-3-Continue-Runs"><a href="#4-5-3-Continue-Runs" class="headerlink" title="4.5.3 Continue Runs"></a>4.5.3 Continue Runs</h4><p>A continue run is an exact continuation of a previous run. This means that the run will produce a bit-for-bit answer as if the existing run had not stopped. In this case, it is assumed that $CASE and $BASEDATE have not changed and that the date is continuous from the previous run. For a continue run, the only change required in the main script is to set:</p>
 <p> RUNTYPE  continue</p>
 <p>A change in the $BASEDATE is not necessary for a continue run, since the date is read in from the restart files, and the coupler checks to see that the dates between the component models match.</p>
-<p><strong>4.5.4 Branch Runs</strong></p>
-<p>Branch runs will continue a previous run but with a new case name and possibly a new start date, where the previous run has created a consistent set of restart files. Branch runs differ from continuation runs in that they are typically used to perform sensitivity studies, or to modify output streams, branching off a previous run. The new case will restart exactly, as in a continuation run, if no source code or input namelist parameters have changed. For a branch run, $BASEDATE must remain the same as that in the previous run, and the following environment variables must be set in the the main script:</p>
+<h4 id="4-5-4-Branch-Runs"><a href="#4-5-4-Branch-Runs" class="headerlink" title="4.5.4 Branch Runs"></a>4.5.4 Branch Runs</h4><p>Branch runs will continue a previous run but with a new case name and possibly a new start date, where the previous run has created a consistent set of restart files. Branch runs differ from continuation runs in that they are typically used to perform sensitivity studies, or to modify output streams, branching off a previous run. The new case will restart exactly, as in a continuation run, if no source code or input namelist parameters have changed. For a branch run, $BASEDATE must remain the same as that in the previous run, and the following environment variables must be set in the the main script:</p>
 <p> CASE    new case name </p>
 <p> RUNTYPE  branch</p>
 <p> BASEDATE  date to start this run</p>
@@ -517,7 +510,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/LaTex/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/04/19/LaTex/" class="post-title-link" itemprop="url">LaTex</a>
         </h2>
 
         <div class="post-meta">
@@ -534,8 +527,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-07 15:59:47" itemprop="dateModified" datetime="2022-05-07T15:59:47+08:00">2022-05-07</time>
+                <time title="Modified: 2022-05-23 16:17:39" itemprop="dateModified" datetime="2022-05-23T16:17:39+08:00">2022-05-23</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
 
           
 
@@ -595,7 +597,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/MAC/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/04/19/MAC/" class="post-title-link" itemprop="url">MAC</a>
         </h2>
 
         <div class="post-meta">
@@ -612,8 +614,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-09 09:58:17" itemprop="dateModified" datetime="2022-05-09T09:58:17+08:00">2022-05-09</time>
+                <time title="Modified: 2022-05-23 16:18:32" itemprop="dateModified" datetime="2022-05-23T16:18:32+08:00">2022-05-23</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
 
           
 
@@ -626,7 +637,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Tips-for-MAC"><a href="#Tips-for-MAC" class="headerlink" title="Tips for MAC"></a>Tips for MAC</h1><h4 id="Mac-装机"><a href="#Mac-装机" class="headerlink" title="Mac 装机"></a>Mac 装机</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">基础：Chrome*</span><br><span class="line"></span><br><span class="line">通讯：微信+QQ+网易邮箱大师</span><br><span class="line"></span><br><span class="line">会议：腾讯会议+ZOOM</span><br><span class="line"></span><br><span class="line">科研：Omnigraffle+Panoply+Mathpix Snip+MacTex+VSCode+Typora+Sublime Tex+PDF Reader Pro+XQuartz*+Global Protect*+有道词典+字体拷贝</span><br><span class="line"></span><br><span class="line">娱乐：爱奇艺+网易云音乐 </span><br><span class="line"></span><br><span class="line">解压：The Unarchiver</span><br><span class="line"></span><br><span class="line">其他：字体迁移（/Library/Fonts）+ SoundFlower</span><br><span class="line"></span><br><span class="line">Brew: brew install tree</span><br></pre></td></tr></table></figure>
+          <h4 id="Mac-装机"><a href="#Mac-装机" class="headerlink" title="Mac 装机"></a>Mac 装机</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">基础：Chrome*</span><br><span class="line"></span><br><span class="line">通讯：微信+QQ+网易邮箱大师</span><br><span class="line"></span><br><span class="line">会议：腾讯会议+ZOOM</span><br><span class="line"></span><br><span class="line">科研：Omnigraffle+Panoply+Mathpix Snip+MacTex+VSCode+Typora+Sublime Tex+PDF Reader Pro+XQuartz*+Global Protect*+有道词典+字体拷贝</span><br><span class="line"></span><br><span class="line">娱乐：爱奇艺+网易云音乐 </span><br><span class="line"></span><br><span class="line">解压：The Unarchiver</span><br><span class="line"></span><br><span class="line">其他：字体迁移（/Library/Fonts）+ SoundFlower</span><br><span class="line"></span><br><span class="line">Brew: brew install tree</span><br></pre></td></tr></table></figure>
 
 
 
@@ -675,7 +686,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/IDL/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/04/19/IDL/" class="post-title-link" itemprop="url">IDL</a>
         </h2>
 
         <div class="post-meta">
@@ -692,8 +703,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-07 16:17:30" itemprop="dateModified" datetime="2022-05-07T16:17:30+08:00">2022-05-07</time>
+                <time title="Modified: 2022-05-23 16:17:28" itemprop="dateModified" datetime="2022-05-23T16:17:28+08:00">2022-05-23</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
 
           
 
@@ -816,7 +836,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/MacCron/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/04/19/MacCron/" class="post-title-link" itemprop="url">Mac Cron</a>
         </h2>
 
         <div class="post-meta">
@@ -833,8 +853,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-18 10:43:47" itemprop="dateModified" datetime="2022-05-18T10:43:47+08:00">2022-05-18</time>
+                <time title="Modified: 2022-05-23 16:19:09" itemprop="dateModified" datetime="2022-05-23T16:19:09+08:00">2022-05-23</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
 
           
 
@@ -919,7 +948,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2022/04/19/Python_Install/" class="post-title-link" itemprop="url">Untitled</a>
+            <a href="/2022/04/19/Python_Install/" class="post-title-link" itemprop="url">Python</a>
         </h2>
 
         <div class="post-meta">
@@ -936,8 +965,17 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-07 16:12:17" itemprop="dateModified" datetime="2022-05-07T16:12:17+08:00">2022-05-07</time>
+                <time title="Modified: 2022-05-23 16:19:38" itemprop="dateModified" datetime="2022-05-23T16:19:38+08:00">2022-05-23</time>
               </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
 
           
 
