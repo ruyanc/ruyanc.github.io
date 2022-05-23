@@ -157,83 +157,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Python_Plot/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/Python_Plot/" class="post-title-link" itemprop="url">Python Plot</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="XY-plot"><a href="#XY-plot" class="headerlink" title="XY plot"></a>XY plot</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line"></span><br><span class="line">N = <span class="number">10</span></span><br><span class="line">x = [-<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">y = [<span class="number">1.224</span>,<span class="number">0.6785</span>,<span class="number">0.6446</span>,<span class="number">0.5833</span>,<span class="number">0.4638</span>,<span class="number">0.4261</span>,<span class="number">0.391</span>,<span class="number">0.4139</span>,<span class="number">0.3949</span>,<span class="number">0.3611</span>]</span><br><span class="line"></span><br><span class="line">colors = <span class="string">&#x27;blue&#x27;</span></span><br><span class="line">area = [i * <span class="number">200</span> <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">plt.scatter(x, y, s=area, c=colors, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">labels = [<span class="string">&#x27;EN&#x27;</span>,<span class="string">&#x27;iter0&#x27;</span>,<span class="string">&#x27;iter1&#x27;</span>,<span class="string">&#x27;iter2&#x27;</span>,<span class="string">&#x27;iter3&#x27;</span>,<span class="string">&#x27;iter4&#x27;</span>,<span class="string">&#x27;iter5&#x27;</span>,<span class="string">&#x27;iter6&#x27;</span>,<span class="string">&#x27;iter7&#x27;</span>,<span class="string">&#x27;iter8&#x27;</span>]</span><br><span class="line">plt.xticks(x, labels,fontsize=<span class="number">14</span>)</span><br><span class="line">plt.yticks(fontsize=<span class="number">14</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&#x27;Iteration Steps&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Tropical Q500 RMSE&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">&#x27;/project/cas/ruyanc/WORK/plots/MOD/CAM5/Q500/RMSE_evo.pdf&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-
-
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/WRF_run_with_CFS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -484,7 +407,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
