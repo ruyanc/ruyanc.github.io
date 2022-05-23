@@ -328,95 +328,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/CDO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/CDO/" class="post-title-link" itemprop="url">CDO</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">31</span> <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_1mon.nc</span><br><span class="line"></span><br><span class="line">ncks -d time,<span class="number">0</span>,<span class="number">9</span> infile outfile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=tos,sos,mldr10_1 <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_var.nc</span><br><span class="line"></span><br><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">168</span> ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209910.</span>nc ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209811.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v850.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> *.nc /project/cas/ruyanc/WORK/<span class="keyword">data</span>/CMIP5/q850_add/CNRM-CM5_r1i1p1_q850.nc</span><br><span class="line"></span><br><span class="line">ncrcat ./temp/*.nc ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">20000</span> ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc ACCESS1-<span class="number">3_r1i1p1_u200</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">200</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v200.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">850</span> toga_ersstv3b_ens01_Q_188001-<span class="number">201612.</span>nc toga_ersstv3b_ens01_Q850_188001-<span class="number">201612.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=DTCOND,QRL,QRS,DTV ./temp/*.nc CAM4_EN_plusQ0p15_heating_000210-<span class="number">000304.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=TS ./temp/*.nc CAM4_EN_plusQ0p15_TS_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PSL ./temp/*.nc CAM4_EN_plusQ0p15_PSL_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=Nudge_T ./temp/*.nc CAM4_EN_plusQ0p51_Nudge_T_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PS,PHIS ./temp/*.nc CAM4_EN_PS_PHIS_000310-<span class="number">000404.</span>nc</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cdo cat ifile1 ifile2 ifile3 ofile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=T,U,V,level=<span class="number">200</span>,<span class="number">500</span>,<span class="number">850</span> ifile1 ifile2 ifile3 ofile</span><br><span class="line"></span><br><span class="line">cdo remapbil,r144*<span class="number">72</span> file_in file_out</span><br><span class="line"></span><br><span class="line">cdo remapbil,r360x180 -selvar,sst HadISST_sst.nc sst.nc</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h4 id="txt-to-nc"><a href="#txt-to-nc" class="headerlink" title="txt to nc"></a>txt to nc</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cdo -f nc input,r1x1,zaxis temp_z.nc &lt; temp_z.txt </span><br><span class="line"></span><br><span class="line">cdo -f nc input,r60x500 /Users/ruyanc/Desktop/SY6/<span class="keyword">DATA</span>/Infrared/From_YXH/To_NC/temperature_profile_20210909.nc &lt; /Users/ruyanc/Desktop/SY6/<span class="keyword">DATA</span>/Infrared/From_YXH/<span class="keyword">Data</span>/temperature_profile_20210909.txt</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="NCO"><a href="#NCO" class="headerlink" title="NCO"></a>NCO</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ncrcat -v ts -d lev,<span class="number">0</span> /nfs2/Models/FGOALS-gc-script/dataall/data_ocn/MMEAN0001-??.nc ts.nc</span><br><span class="line"></span><br><span class="line">ncrcat -d plev,<span class="number">5</span> *.nc zg_Amon_bcc-csm1-<span class="number">1_000101</span>-<span class="number">050012.</span>nc</span><br><span class="line"></span><br><span class="line">ncatted -a coordinates,sst,c,c,<span class="string">&quot;nav_lon nav_lat&quot;</span> sst_data.nc</span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/CESM/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -712,6 +623,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/CDO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/CDO/" class="post-title-link" itemprop="url">CDO</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">31</span> <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_1mon.nc</span><br><span class="line"></span><br><span class="line">ncks -d time,<span class="number">0</span>,<span class="number">9</span> infile outfile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=tos,sos,mldr10_1 <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_var.nc</span><br><span class="line"></span><br><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">168</span> ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209910.</span>nc ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209811.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v850.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> *.nc /project/cas/ruyanc/WORK/<span class="keyword">data</span>/CMIP5/q850_add/CNRM-CM5_r1i1p1_q850.nc</span><br><span class="line"></span><br><span class="line">ncrcat ./temp/*.nc ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">20000</span> ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc ACCESS1-<span class="number">3_r1i1p1_u200</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">200</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v200.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">850</span> toga_ersstv3b_ens01_Q_188001-<span class="number">201612.</span>nc toga_ersstv3b_ens01_Q850_188001-<span class="number">201612.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=DTCOND,QRL,QRS,DTV ./temp/*.nc CAM4_EN_plusQ0p15_heating_000210-<span class="number">000304.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=TS ./temp/*.nc CAM4_EN_plusQ0p15_TS_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PSL ./temp/*.nc CAM4_EN_plusQ0p15_PSL_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=Nudge_T ./temp/*.nc CAM4_EN_plusQ0p51_Nudge_T_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PS,PHIS ./temp/*.nc CAM4_EN_PS_PHIS_000310-<span class="number">000404.</span>nc</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cdo cat ifile1 ifile2 ifile3 ofile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=T,U,V,level=<span class="number">200</span>,<span class="number">500</span>,<span class="number">850</span> ifile1 ifile2 ifile3 ofile</span><br><span class="line"></span><br><span class="line">cdo remapbil,r144*<span class="number">72</span> file_in file_out</span><br><span class="line"></span><br><span class="line">cdo remapbil,r360x180 -selvar,sst HadISST_sst.nc sst.nc</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="txt-to-nc"><a href="#txt-to-nc" class="headerlink" title="txt to nc"></a>txt to nc</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cdo -f nc input,r1x1,zaxis temp_z.nc &lt; temp_z.txt </span><br><span class="line"></span><br><span class="line">cdo -f nc input,r60x500 /Users/ruyanc/Desktop/SY6/<span class="keyword">DATA</span>/Infrared/From_YXH/To_NC/temperature_profile_20210909.nc &lt; /Users/ruyanc/Desktop/SY6/<span class="keyword">DATA</span>/Infrared/From_YXH/<span class="keyword">Data</span>/temperature_profile_20210909.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="NCO"><a href="#NCO" class="headerlink" title="NCO"></a>NCO</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ncrcat -v ts -d lev,<span class="number">0</span> /nfs2/Models/FGOALS-gc-script/dataall/data_ocn/MMEAN0001-??.nc ts.nc</span><br><span class="line"></span><br><span class="line">ncrcat -d plev,<span class="number">5</span> *.nc zg_Amon_bcc-csm1-<span class="number">1_000101</span>-<span class="number">050012.</span>nc</span><br><span class="line"></span><br><span class="line">ncatted -a coordinates,sst,c,c,<span class="string">&quot;nav_lon nav_lat&quot;</span> sst_data.nc</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Gitee/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -768,90 +768,6 @@
       
           <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/IDL/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Personal Blog">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/05/01/Tools/IDL/" class="post-title-link" itemprop="url">IDL</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a target="_blank" rel="noopener" href="http://w.astro.berkeley.edu/~jbloom/IDL/">http://w.astro.berkeley.edu/~jbloom/IDL/</a></p>
-<p><code>IDL&gt; .run adpf_plot.pro </code></p>
-<p>Oh ok. Yes - this code has a bunch of my own library subroutines in it. You can find these at ~&#x2F;IDL&#x2F;lib_isla and that one in particular is at &#x2F;home&#x2F;islas&#x2F;IDL&#x2F;lib_isla&#x2F;readnetcdfs.</p>
-<p>You’ll need to either copy that into the directory you’re running the code in, or make your own library and point to it with commands equivalent to what I have in my .idlenv file </p>
-<p>&#x2F;home&#x2F;islas&#x2F;.idlenv</p>
-<p>Alternatively, you might want to just translate it into NCL if you’re more comfortable with that. You may come across other library routines that you need, in which case let me know and I can point you toward where they are in my library.</p>
-<p>Thanks,</p>
-<p>Isla</p>
-<p>&#x2F;glade&#x2F;u&#x2F;apps&#x2F;ch&#x2F;opt&#x2F;idl&#x2F;8.7.2&#x2F;idl87&#x2F;lib&#x2F;</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export IDL_DIR=&quot;/glade/u/apps/ch/opt/idl/8.7.2/idl87&quot;</span><br><span class="line"></span><br><span class="line">export IDL_PATH=&quot;+/glade/u/home/islas/IDL/lib_isla:+/glade/u/apps/ch/opt/idl/8.7.2/idl87/lib/&quot;</span><br><span class="line"></span><br><span class="line">export IDL_PATH=&quot;+/glade/u/home/islas/IDL/lib_isla/plotting/withmaps/general/&quot;</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
@@ -938,6 +854,90 @@
 <h4 id="Include-Figures"><a href="#Include-Figures" class="headerlink" title="Include Figures"></a>Include Figures</h4><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\centering</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>,angle=90]&#123;R1-Asymetry.pdf&#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\caption</span>&#123;XXXX&#125;<span class="keyword">\label</span>&#123;R-AsySig&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
 
 
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/IDL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Ruyan">
+      <meta itemprop="description" content="Personal Blog">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/05/01/Tools/IDL/" class="post-title-link" itemprop="url">IDL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a target="_blank" rel="noopener" href="http://w.astro.berkeley.edu/~jbloom/IDL/">http://w.astro.berkeley.edu/~jbloom/IDL/</a></p>
+<p><code>IDL&gt; .run adpf_plot.pro </code></p>
+<p>Oh ok. Yes - this code has a bunch of my own library subroutines in it. You can find these at ~&#x2F;IDL&#x2F;lib_isla and that one in particular is at &#x2F;home&#x2F;islas&#x2F;IDL&#x2F;lib_isla&#x2F;readnetcdfs.</p>
+<p>You’ll need to either copy that into the directory you’re running the code in, or make your own library and point to it with commands equivalent to what I have in my .idlenv file </p>
+<p>&#x2F;home&#x2F;islas&#x2F;.idlenv</p>
+<p>Alternatively, you might want to just translate it into NCL if you’re more comfortable with that. You may come across other library routines that you need, in which case let me know and I can point you toward where they are in my library.</p>
+<p>Thanks,</p>
+<p>Isla</p>
+<p>&#x2F;glade&#x2F;u&#x2F;apps&#x2F;ch&#x2F;opt&#x2F;idl&#x2F;8.7.2&#x2F;idl87&#x2F;lib&#x2F;</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export IDL_DIR=&quot;/glade/u/apps/ch/opt/idl/8.7.2/idl87&quot;</span><br><span class="line"></span><br><span class="line">export IDL_PATH=&quot;+/glade/u/home/islas/IDL/lib_isla:+/glade/u/apps/ch/opt/idl/8.7.2/idl87/lib/&quot;</span><br><span class="line"></span><br><span class="line">export IDL_PATH=&quot;+/glade/u/home/islas/IDL/lib_isla/plotting/withmaps/general/&quot;</span><br></pre></td></tr></table></figure>
 
 
       
