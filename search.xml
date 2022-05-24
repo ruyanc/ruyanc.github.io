@@ -52,29 +52,160 @@
       </categories>
   </entry>
   <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tools/GitHub/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
+    <title>Hexo</title>
+    <url>/2022/05/24/Tools/Hexo/</url>
+    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><h4 id="常用命令及文件地址："><a href="#常用命令及文件地址：" class="headerlink" title="常用命令及文件地址："></a>常用命令及文件地址：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">部署到本地预览查看三部曲：</span><br><span class="line">hexo clean （清除缓存）</span><br><span class="line">hexo g (生成静态网页)</span><br><span class="line">hexo s (本地启动预览查看)</span><br><span class="line"></span><br><span class="line">部署到git服务器上：</span><br><span class="line">hexo deploy </span><br><span class="line"></span><br><span class="line">博客配置文件地址：</span><br><span class="line">~/blog/_config.yml</span><br><span class="line"></span><br><span class="line">主题配置文件地址</span><br><span class="line">~/blog/themes/next/_config.yml</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+<h2 id="二、next主题的安装和基本配置"><a href="#二、next主题的安装和基本配置" class="headerlink" title="二、next主题的安装和基本配置"></a>二、next主题的安装和基本配置</h2><h3 id="（一）安装"><a href="#（一）安装" class="headerlink" title="（一）安装"></a>（一）安装</h3><p>首先从github上clone到本地，在终端cd 到blog文件夹（即你通过Hexo init生成的根目录），然后在终端输入命令：</p>
+<figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+
+<p>进入blog的全局配置文件：_config.yml （在blog文件夹下 &#x2F;blog&#x2F;_config.yml）</p>
+<p>找到theme字段：设置为</p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+
+<p>此时可以查看下主题是否配置成功，执行上面提到的三部曲（ <strong>终端cd到blog文件夹 执行 hexo clean , hexo g , hexo s</strong> ） 然后访问<a href="https://link.juejin.im/?target=http://localhost:4000/">http://localhost:4000/</a>,在本地查看效果，进行预览</p>
+<h3 id="（二）-基本信息的配置"><a href="#（二）-基本信息的配置" class="headerlink" title="（二） 基本信息的配置"></a>（二） 基本信息的配置</h3><p>更多的博客和主题的配置可参考 <a href="https://link.juejin.im/?target=https://hexo.io/zh-cn/docs/index.html">hexo官方文档</a> 和 <a href="https://link.juejin.im/?target=http://theme-next.iissnan.com/">next主题文档</a>，如不想那么麻烦，可以继续往下看，下面就是我使用的一些常用的功能，足够自己使用了</p>
+<h4 id="1、网站标题、作者、语言"><a href="#1、网站标题、作者、语言" class="headerlink" title="1、网站标题、作者、语言"></a>1、网站标题、作者、语言</h4><p><strong>在博客配置文件_config.yml中进行如下配置</strong></p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line"><span class="symbol">title:</span> </span><br><span class="line"><span class="symbol">subtitle:</span> </span><br><span class="line"><span class="symbol">description:</span> </span><br><span class="line"><span class="symbol">author:</span> </span><br><span class="line"><span class="symbol">language:</span> en</span><br><span class="line"><span class="symbol">timezone:</span> Asia/Shanghai （如不填，则表示默认电脑的时区）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这里设置标题作者名字等信息，其中language一项最好配置成zh-Hans（简体中文），（查看next主题支持哪些语言 可查看~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages文件夹）</p>
+<h4 id="2、next主题的风格设置"><a href="#2、next主题的风格设置" class="headerlink" title="2、next主题的风格设置"></a>2、next主题的风格设置</h4><p><strong>在主题配置文件_config.yml中进行如下配置</strong></p>
+<p>next默认有四种风格，可根据自己喜欢的样式去设置查看</p>
+<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line">scheme<span class="operator">:</span> Gemini</span><br></pre></td></tr></table></figure>
+
+<p>我这里使用的是Gemini样式，其中#表示注释，使用哪种去掉前面的#即可，后不再说明</p>
+<h4 id="3、设置菜单选项"><a href="#3、设置菜单选项" class="headerlink" title="3、设置菜单选项"></a>3、设置菜单选项</h4><p>打开主题配置文件：</p>
+<p>先奉上我的配置方便大家去参考：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  <span class="comment">#home: /home/ || fa fa-home</span></span><br><span class="line">  <span class="comment">#Welcome: /home/Welcome/ || fa fa-home</span></span><br><span class="line">  AtmSci : //categories/AtmSci/ || fa fa-archive</span><br><span class="line">  OcnSci : //categories/OcnSci/ || fa fa-archive </span><br><span class="line">  Tools: //categories/Tools/ || fa fa-archive</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.</span></span><br><span class="line">menu_settings:</span><br><span class="line">  icons: <span class="literal">true</span> </span><br><span class="line">  badges: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<p>其中menu表示配置菜单内容，menu_icons表示菜单图片，如需使用图片则在menu中设定值的后面加上 || 图片名</p>
+<p><strong>（1）常用的默认菜单项，其中home和archives两页是系统默认的就有的，其他的需要自己创建，后面会讲到</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">键值</th>
+<th align="left">设定值</th>
+<th align="left">显示文本（简体中文）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">home</td>
+<td align="left">home: &#x2F;</td>
+<td align="left">主页</td>
+</tr>
+<tr>
+<td align="left">archives</td>
+<td align="left">archives: &#x2F;</td>
+<td align="left">归档页</td>
+</tr>
+<tr>
+<td align="left">categories</td>
+<td align="left">categories: &#x2F;categories</td>
+<td align="left">分类页</td>
+</tr>
+<tr>
+<td align="left">tags</td>
+<td align="left">tags: &#x2F;tags</td>
+<td align="left">标签页</td>
+</tr>
+<tr>
+<td align="left">about</td>
+<td align="left">about: &#x2F;about</td>
+<td align="left">关于页面</td>
+</tr>
+</tbody></table>
+<p><strong>（2）设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages&#x2F;{language}.yml （{language} 为你所使用的语言）。</strong></p>
+<p><strong>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages&#x2F;zh-Hans.yml，在 menu 字段下添加一项：</strong></p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br></pre></td></tr></table></figure>
+
+<p><strong>（3）设定菜单项的图标，对应的字段是 menu_icons。 此设定格式是 item name: icon name，其中 item name 与上一步所配置的菜单名字对应，icon name 是 <a href="https://link.juejin.im/?target=http://www.bootcss.com/p/font-awesome/%23icons-web-app">Font Awesome</a> 图标的 名字,去掉前缀icon-(或使用<a href="https://link.juejin.im/?target=https://fontawesome.com/icons?d=gallery">图标库</a>中的图片名称)。而 enable 可用于控制是否显示图标，你可以设置成 false 来去掉图标。next主题默认集成了识别<a href="https://link.juejin.im/?target=http://www.bootcss.com/p/font-awesome/%23icons-web-app">Font Awesome</a>图片的方式，只需要在里面找到想要图标的名称，就可以拿过来使用</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Enable/Disable menu icons.</span></span><br><span class="line"></span><br><span class="line">menu_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Icon Mapping.</span></span><br><span class="line">  home: home</span><br><span class="line">  about: user</span><br><span class="line">  categories: th</span><br><span class="line">  tags: tags</span><br><span class="line">  archives: archive</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>请注意键值（如 home）的大小写要严格匹配</strong></p>
+</blockquote>
+<h4 id="4、创建上述菜单选项中对应的页面"><a href="#4、创建上述菜单选项中对应的页面" class="headerlink" title="4、创建上述菜单选项中对应的页面"></a>4、创建上述菜单选项中对应的页面</h4><p><strong>（1）分类页面</strong></p>
+<p>终端中cd 进入blog文件夹，执行 <code>hexo new page &quot;categories&quot;</code> 然后在~&#x2F;blog&#x2F;source 文件夹中即可看到categories文件夹，打开里面的index.md文件，设置如下（注意：后面要加空格）：</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line"><span class="title">title</span>: 分类 （title可以自定义）</span><br><span class="line"><span class="class"><span class="keyword">type</span>: categories （记住你写的<span class="keyword">type</span>类型，后面分类文章需要使用）</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
+
+<p>这时候上一步中菜单项的配置才会生效</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">    home: /</span><br><span class="line">    archives: /archives</span><br><span class="line">    categories: /categories</span><br></pre></td></tr></table></figure>
+
+<p>这时候如运行本地查看会发现打开后没有任何东西，下面会告诉大家使用方法</p>
+<p><strong>（2）标签页面</strong></p>
+<p>同分类界面相同，终端中cd 进入blog文件夹，执行 <code>hexo new page &quot;tags&quot;</code> 然后在~&#x2F;blog&#x2F;source 文件夹中即可看到tags文件夹，打开里面的index.md文件，设置如下（注意：后面要加空格）：</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line"><span class="title">title</span>: 标签 （title可以自定义）</span><br><span class="line"><span class="class"><span class="keyword">type</span>: tags （记住你写的<span class="keyword">type</span>类型，后面分类文章需要使用）</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
+
+<p>运行打开后同样什么都不会有</p>
+<p><strong>（3）关于页面</strong></p>
+<p>同理，打开index.md文件后，只需要配置标题即可</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line">title: 自我介绍</span><br><span class="line"><span class="type">date</span>: <span class="number">2018</span><span class="number">-02</span><span class="number">-28</span> <span class="number">17</span>:<span class="number">11</span>:<span class="number">54</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
+
+<p>然后下面填写正文即可（这是我使用的方式，但是“关于”界面也可以使用其他方式配置，如配置个链接等，这里大家自行百度即可）</p>
+<h4 id="5、给文章添加分类和标签"><a href="#5、给文章添加分类和标签" class="headerlink" title="5、给文章添加分类和标签"></a>5、给文章添加分类和标签</h4><p>首先创建一个文章，上篇文章末尾有讲到，终端cd 进入blog文件夹，执行 <code>hexo new &quot;文章名字&quot;</code>，打开文章（在~&#x2F;blog&#x2F;source&#x2F;_posts文件夹下）,然后进行如下配置：</p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">title:</span> 标题</span><br><span class="line"><span class="symbol">date:</span> <span class="number">2018</span>-<span class="number">03</span>-<span class="number">02</span> <span class="number">09</span>:<span class="number">36</span>:<span class="number">14</span></span><br><span class="line"><span class="symbol">tags:</span> [blog] （注意：使用[]，将需要添加的标签写进去，多个标签用,分隔，categories同理）</span><br><span class="line"><span class="symbol">categories:</span> [blog]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>保存，此时再去运行查看，点击分类和标签页面就会看到自己的文章了，不再是空的了</p>
+<blockquote>
+<p>但是经过上述操作，发现每创建一篇文章都要在上面去加标签等字段，如果后期功能多的话，可能会要加很多字段，比较麻烦，这里有个比较相对容易的方式不用每次都去添加那些字段 首先打开文件 ~&#x2F;blog&#x2F;scaffolds&#x2F;post.md ,进行如下配置：</p>
+</blockquote>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">tags: &#123;&#123; tags &#125;&#125;</span><br><span class="line">categories: </span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+<h4 id="6-修改作者头像并旋转"><a href="#6-修改作者头像并旋转" class="headerlink" title="6.修改作者头像并旋转"></a>6.修改作者头像并旋转</h4><p>打开主题配置文件，修改字段 avatar， 值设置成头像的链接地址</p>
+<p>将头像放置主题目录下的 source&#x2F;uploads&#x2F; （新建 uploads 目录若不存在） 配置为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar: /uploads/avatar.png</span><br></pre></td></tr></table></figure>
+
+<p>或者 放置在 source&#x2F;images&#x2F; 目录下 配置为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar: /images/avatar.png</span><br></pre></td></tr></table></figure>
+
+<p>或直接放上链接，如： <code>avatar: http://example.com/avatar.png</code></p>
+<h4 id="7-头像下方添加自己的github等信息"><a href="#7-头像下方添加自己的github等信息" class="headerlink" title="7.头像下方添加自己的github等信息"></a>7.头像下方添加自己的github等信息</h4><p>打开主题配置文件，找到social字段，配置如下，大家可根据自己情况去配置，图片的使用方法同菜单栏一样</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line"></span><br><span class="line">  GitHub: https://github.com/username || github</span><br><span class="line"></span><br><span class="line">  <span class="comment">#E-Mail: </span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment">#icons_only: false</span></span><br><span class="line">  <span class="comment">#transition: false</span></span><br><span class="line">  GitHub: github</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="8-给站点添加友情链接功能"><a href="#8-给站点添加友情链接功能" class="headerlink" title="8.给站点添加友情链接功能"></a>8.给站点添加友情链接功能</h4><p>打开主题配置文件，进行如下配置：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">links_title: 友情链接</span><br><span class="line"></span><br><span class="line">links:</span><br><span class="line">    <span class="comment">#百度: http://www.baidu.com/</span></span><br><span class="line">    <span class="comment">#新浪: http://example.com/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="三、next主题的高级配置和一些炫酷的效果"><a href="#三、next主题的高级配置和一些炫酷的效果" class="headerlink" title="三、next主题的高级配置和一些炫酷的效果"></a>三、next主题的高级配置和一些炫酷的效果</h2><h3 id="（一）-增加评论系统"><a href="#（一）-增加评论系统" class="headerlink" title="（一） 增加评论系统"></a>（一） 增加评论系统</h3><p>百度了一下最新的消息，当前版本的next主题中已经内置支持了各种各样的评论系统，但由于政策的原因（需要实名评论），导致大多数的评论插件都已经失效了，而国外的一些加载比较慢。</p>
+<p>这里附上gitment的评论集成方式<a href="https://link.juejin.im/?target=https://jingyan.baidu.com/article/2f9b480de2b5b341cb6cc2be.html">集成流程</a></p>
+<p><strong>gitment</strong>（依托于github issue，能够自己管理，而且被墙的概率小），不过兼容性不太好（需要chrome内核才行），本人使用的gitment，有一个小问题，就是每次发布文章时需要登录下自己的github账号去初始化一下评论，评论功能才能使用，否则会提示“未开放评论”</p>
+<p><strong>Hypercomments</strong> 是国外的一个第三方评论平台</p>
+<p><strong>多说</strong> 在2017年06月01日就关闭评论服务了</p>
+<p><strong>网易云跟贴</strong> 2017年08月01日也停止服务了</p>
+<p><strong>来必力</strong> (韩国人弄的)总是乱码</p>
+<p><strong>DISQUS</strong> 外国的，加载慢</p>
+<hr>
+<h3 id="（二）-隐藏网页底部powered-By-Hexo-x2F-强力驱动"><a href="#（二）-隐藏网页底部powered-By-Hexo-x2F-强力驱动" class="headerlink" title="（二） 隐藏网页底部powered By Hexo &#x2F; 强力驱动"></a>（二） 隐藏网页底部powered By Hexo &#x2F; 强力驱动</h3><p>打开主题配置文件，找到如下图位置，将powered设置为 false，theme下的enable 设置为 false</p>
+<hr>
+<h3 id="（三）-设置首页文章列表不显示全文-只显示预览"><a href="#（三）-设置首页文章列表不显示全文-只显示预览" class="headerlink" title="（三） 设置首页文章列表不显示全文(只显示预览)"></a>（三） 设置首页文章列表不显示全文(只显示预览)</h3><ul>
+<li><p>进入hexo博客项目的themes&#x2F;next目录</p>
+</li>
+<li><p>打开_config.yml文件</p>
+</li>
+<li><p>搜索”auto_excerpt”,找到如下部分：</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommand.</span><br><span class="line"># Please use <span class="comment">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>把enable改为对应的false改为true，length设置下，然后hexo d -g，再进主页，问题就解决了！</p>
+</li>
+</ul>
+<hr>
+<h3 id="（四）-增加本地搜索功能"><a href="#（四）-增加本地搜索功能" class="headerlink" title="（四） 增加本地搜索功能"></a>（四） 增加本地搜索功能</h3><h4 id="添加百度-x2F-谷歌-x2F-本地-自定义站点内容搜索"><a href="#添加百度-x2F-谷歌-x2F-本地-自定义站点内容搜索" class="headerlink" title="添加百度&#x2F;谷歌&#x2F;本地 自定义站点内容搜索"></a>添加百度&#x2F;谷歌&#x2F;本地 自定义站点内容搜索</h4><ol>
+<li><p>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb <span class="attr">--save</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑博客配置文件，新增以下内容到任意位置：</p>
+<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">	  <span class="built_in">path</span>: search.xml</span><br><span class="line">	  field: post</span><br><span class="line">	  <span class="built_in">format</span>: html</span><br><span class="line">	  limit: <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编辑主题配置文件，启用本地搜索功能：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">Local</span> <span class="keyword">search</span></span><br><span class="line"></span><br><span class="line">local_search:</span><br><span class="line">  enable: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>-Tools</category>
@@ -412,194 +543,51 @@
       </categories>
   </entry>
   <entry>
-    <title>Hexo</title>
-    <url>/2022/05/24/Tools/Hexo/</url>
-    <content><![CDATA[<h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><h4 id="常用命令及文件地址："><a href="#常用命令及文件地址：" class="headerlink" title="常用命令及文件地址："></a>常用命令及文件地址：</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">部署到本地预览查看三部曲：</span><br><span class="line">hexo clean （清除缓存）</span><br><span class="line">hexo g (生成静态网页)</span><br><span class="line">hexo s (本地启动预览查看)</span><br><span class="line"></span><br><span class="line">部署到git服务器上：</span><br><span class="line">hexo deploy </span><br><span class="line"></span><br><span class="line">博客配置文件地址：</span><br><span class="line">~/blog/_config.yml</span><br><span class="line"></span><br><span class="line">主题配置文件地址</span><br><span class="line">~/blog/themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+    <title>Github</title>
+    <url>/2022/05/01/Tools/GitHub/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="二、next主题的安装和基本配置"><a href="#二、next主题的安装和基本配置" class="headerlink" title="二、next主题的安装和基本配置"></a>二、next主题的安装和基本配置</h2><h3 id="（一）安装"><a href="#（一）安装" class="headerlink" title="（一）安装"></a>（一）安装</h3><p>首先从github上clone到本地，在终端cd 到blog文件夹（即你通过Hexo init生成的根目录），然后在终端输入命令：</p>
-<figure class="highlight perl"><table><tr><td class="code"><pre><span class="line">git clone https:<span class="regexp">//gi</span>thub.com/iissnan/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-
-<p>进入blog的全局配置文件：_config.yml （在blog文件夹下 &#x2F;blog&#x2F;_config.yml）</p>
-<p>找到theme字段：设置为</p>
-<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-
-<p>此时可以查看下主题是否配置成功，执行上面提到的三部曲（ <strong>终端cd到blog文件夹 执行 hexo clean , hexo g , hexo s</strong> ） 然后访问<a href="https://link.juejin.im/?target=http://localhost:4000/">http://localhost:4000/</a>,在本地查看效果，进行预览</p>
-<h3 id="（二）-基本信息的配置"><a href="#（二）-基本信息的配置" class="headerlink" title="（二） 基本信息的配置"></a>（二） 基本信息的配置</h3><p>更多的博客和主题的配置可参考 <a href="https://link.juejin.im/?target=https://hexo.io/zh-cn/docs/index.html">hexo官方文档</a> 和 <a href="https://link.juejin.im/?target=http://theme-next.iissnan.com/">next主题文档</a>，如不想那么麻烦，可以继续往下看，下面就是我使用的一些常用的功能，足够自己使用了</p>
-<h4 id="1、网站标题、作者、语言"><a href="#1、网站标题、作者、语言" class="headerlink" title="1、网站标题、作者、语言"></a>1、网站标题、作者、语言</h4><p><strong>在博客配置文件_config.yml中进行如下配置</strong></p>
-<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line"><span class="symbol">title:</span> </span><br><span class="line"><span class="symbol">subtitle:</span> </span><br><span class="line"><span class="symbol">description:</span> </span><br><span class="line"><span class="symbol">author:</span> </span><br><span class="line"><span class="symbol">language:</span> en</span><br><span class="line"><span class="symbol">timezone:</span> Asia/Shanghai （如不填，则表示默认电脑的时区）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这里设置标题作者名字等信息，其中language一项最好配置成zh-Hans（简体中文），（查看next主题支持哪些语言 可查看~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;languages文件夹）</p>
-<h4 id="2、next主题的风格设置"><a href="#2、next主题的风格设置" class="headerlink" title="2、next主题的风格设置"></a>2、next主题的风格设置</h4><p><strong>在主题配置文件_config.yml中进行如下配置</strong></p>
-<p>next默认有四种风格，可根据自己喜欢的样式去设置查看</p>
-<figure class="highlight r"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment">#scheme: Muse</span></span><br><span class="line"><span class="comment">#scheme: Mist</span></span><br><span class="line"><span class="comment">#scheme: Pisces</span></span><br><span class="line">scheme<span class="operator">:</span> Gemini</span><br></pre></td></tr></table></figure>
-
-<p>我这里使用的是Gemini样式，其中#表示注释，使用哪种去掉前面的#即可，后不再说明</p>
-<h4 id="3、设置菜单选项"><a href="#3、设置菜单选项" class="headerlink" title="3、设置菜单选项"></a>3、设置菜单选项</h4><p>打开主题配置文件：</p>
-<p>先奉上我的配置方便大家去参考：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  <span class="comment">#home: /home/ || fa fa-home</span></span><br><span class="line">  <span class="comment">#Welcome: /home/Welcome/ || fa fa-home</span></span><br><span class="line">  AtmSci : //categories/AtmSci/ || fa fa-archive</span><br><span class="line">  OcnSci : //categories/OcnSci/ || fa fa-archive </span><br><span class="line">  Tools: //categories/Tools/ || fa fa-archive</span><br><span class="line">  <span class="comment">#about: /about/ || fa fa-user</span></span><br><span class="line">  <span class="comment">#tags: /tags/ || fa fa-tags</span></span><br><span class="line">  <span class="comment">#categories: /categories/ || fa fa-th</span></span><br><span class="line">  <span class="comment">#archives: /archives/ || fa fa-archive</span></span><br><span class="line">  <span class="comment">#schedule: /schedule/ || fa fa-calendar</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || fa fa-sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || fa fa-heartbeat</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable / Disable menu icons / item badges.</span></span><br><span class="line">menu_settings:</span><br><span class="line">  icons: <span class="literal">true</span> </span><br><span class="line">  badges: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>其中menu表示配置菜单内容，menu_icons表示菜单图片，如需使用图片则在menu中设定值的后面加上 || 图片名</p>
-<p><strong>（1）常用的默认菜单项，其中home和archives两页是系统默认的就有的，其他的需要自己创建，后面会讲到</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">键值</th>
-<th align="left">设定值</th>
-<th align="left">显示文本（简体中文）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">home</td>
-<td align="left">home: &#x2F;</td>
-<td align="left">主页</td>
-</tr>
-<tr>
-<td align="left">archives</td>
-<td align="left">archives: &#x2F;</td>
-<td align="left">归档页</td>
-</tr>
-<tr>
-<td align="left">categories</td>
-<td align="left">categories: &#x2F;categories</td>
-<td align="left">分类页</td>
-</tr>
-<tr>
-<td align="left">tags</td>
-<td align="left">tags: &#x2F;tags</td>
-<td align="left">标签页</td>
-</tr>
-<tr>
-<td align="left">about</td>
-<td align="left">about: &#x2F;about</td>
-<td align="left">关于页面</td>
-</tr>
-</tbody></table>
-<p><strong>（2）设置菜单项的显示文本。在第一步中设置的菜单的名称并不直接用于界面上的展示。Hexo 在生成的时候将使用 这个名称查找对应的语言翻译，并提取显示文本。这些翻译文本放置在 NexT 主题目录下的 languages&#x2F;{language}.yml （{language} 为你所使用的语言）。</strong></p>
-<p><strong>以简体中文为例，若你需要添加一个菜单项，比如 something。那么就需要修改简体中文对应的翻译文件 languages&#x2F;zh-Hans.yml，在 menu 字段下添加一项：</strong></p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-tag">menu</span>:</span><br><span class="line">  home: 首页</span><br><span class="line">  archives: 归档</span><br><span class="line">  categories: 分类</span><br><span class="line">  tags: 标签</span><br><span class="line">  about: 关于</span><br></pre></td></tr></table></figure>
-
-<p><strong>（3）设定菜单项的图标，对应的字段是 menu_icons。 此设定格式是 item name: icon name，其中 item name 与上一步所配置的菜单名字对应，icon name 是 <a href="https://link.juejin.im/?target=http://www.bootcss.com/p/font-awesome/%23icons-web-app">Font Awesome</a> 图标的 名字,去掉前缀icon-(或使用<a href="https://link.juejin.im/?target=https://fontawesome.com/icons?d=gallery">图标库</a>中的图片名称)。而 enable 可用于控制是否显示图标，你可以设置成 false 来去掉图标。next主题默认集成了识别<a href="https://link.juejin.im/?target=http://www.bootcss.com/p/font-awesome/%23icons-web-app">Font Awesome</a>图片的方式，只需要在里面找到想要图标的名称，就可以拿过来使用</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Enable/Disable menu icons.</span></span><br><span class="line"></span><br><span class="line">menu_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Icon Mapping.</span></span><br><span class="line">  home: home</span><br><span class="line">  about: user</span><br><span class="line">  categories: th</span><br><span class="line">  tags: tags</span><br><span class="line">  archives: archive</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p><strong>请注意键值（如 home）的大小写要严格匹配</strong></p>
-</blockquote>
-<h4 id="4、创建上述菜单选项中对应的页面"><a href="#4、创建上述菜单选项中对应的页面" class="headerlink" title="4、创建上述菜单选项中对应的页面"></a>4、创建上述菜单选项中对应的页面</h4><p><strong>（1）分类页面</strong></p>
-<p>终端中cd 进入blog文件夹，执行 <code>hexo new page &quot;categories&quot;</code> 然后在~&#x2F;blog&#x2F;source 文件夹中即可看到categories文件夹，打开里面的index.md文件，设置如下（注意：后面要加空格）：</p>
-<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line"><span class="title">title</span>: 分类 （title可以自定义）</span><br><span class="line"><span class="class"><span class="keyword">type</span>: categories （记住你写的<span class="keyword">type</span>类型，后面分类文章需要使用）</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
-
-<p>这时候上一步中菜单项的配置才会生效</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">    home: /</span><br><span class="line">    archives: /archives</span><br><span class="line">    categories: /categories</span><br></pre></td></tr></table></figure>
-
-<p>这时候如运行本地查看会发现打开后没有任何东西，下面会告诉大家使用方法</p>
-<p><strong>（2）标签页面</strong></p>
-<p>同分类界面相同，终端中cd 进入blog文件夹，执行 <code>hexo new page &quot;tags&quot;</code> 然后在~&#x2F;blog&#x2F;source 文件夹中即可看到tags文件夹，打开里面的index.md文件，设置如下（注意：后面要加空格）：</p>
-<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line"><span class="title">title</span>: 标签 （title可以自定义）</span><br><span class="line"><span class="class"><span class="keyword">type</span>: tags （记住你写的<span class="keyword">type</span>类型，后面分类文章需要使用）</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
-
-<p>运行打开后同样什么都不会有</p>
-<p><strong>（3）关于页面</strong></p>
-<p>同理，打开index.md文件后，只需要配置标题即可</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line">title: 自我介绍</span><br><span class="line"><span class="type">date</span>: <span class="number">2018</span><span class="number">-02</span><span class="number">-28</span> <span class="number">17</span>:<span class="number">11</span>:<span class="number">54</span></span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
-
-<p>然后下面填写正文即可（这是我使用的方式，但是“关于”界面也可以使用其他方式配置，如配置个链接等，这里大家自行百度即可）</p>
-<h4 id="5、给文章添加分类和标签"><a href="#5、给文章添加分类和标签" class="headerlink" title="5、给文章添加分类和标签"></a>5、给文章添加分类和标签</h4><p>首先创建一个文章，上篇文章末尾有讲到，终端cd 进入blog文件夹，执行 <code>hexo new &quot;文章名字&quot;</code>，打开文章（在~&#x2F;blog&#x2F;source&#x2F;_posts文件夹下）,然后进行如下配置：</p>
-<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="symbol">title:</span> 标题</span><br><span class="line"><span class="symbol">date:</span> <span class="number">2018</span>-<span class="number">03</span>-<span class="number">02</span> <span class="number">09</span>:<span class="number">36</span>:<span class="number">14</span></span><br><span class="line"><span class="symbol">tags:</span> [blog] （注意：使用[]，将需要添加的标签写进去，多个标签用,分隔，categories同理）</span><br><span class="line"><span class="symbol">categories:</span> [blog]</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<p>保存，此时再去运行查看，点击分类和标签页面就会看到自己的文章了，不再是空的了</p>
-<blockquote>
-<p>但是经过上述操作，发现每创建一篇文章都要在上面去加标签等字段，如果后期功能多的话，可能会要加很多字段，比较麻烦，这里有个比较相对容易的方式不用每次都去添加那些字段 首先打开文件 ~&#x2F;blog&#x2F;scaffolds&#x2F;post.md ,进行如下配置：</p>
-</blockquote>
-<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---</span></span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line"><span class="built_in">date</span>: &#123;&#123; <span class="built_in">date</span> &#125;&#125;</span><br><span class="line">tags: &#123;&#123; tags &#125;&#125;</span><br><span class="line">categories: </span><br><span class="line"><span class="comment">---</span></span><br></pre></td></tr></table></figure>
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="6-修改作者头像并旋转"><a href="#6-修改作者头像并旋转" class="headerlink" title="6.修改作者头像并旋转"></a>6.修改作者头像并旋转</h4><p>打开主题配置文件，修改字段 avatar， 值设置成头像的链接地址</p>
-<p>将头像放置主题目录下的 source&#x2F;uploads&#x2F; （新建 uploads 目录若不存在） 配置为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar: /uploads/avatar.png</span><br></pre></td></tr></table></figure>
-
-<p>或者 放置在 source&#x2F;images&#x2F; 目录下 配置为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">avatar: /images/avatar.png</span><br></pre></td></tr></table></figure>
-
-<p>或直接放上链接，如： <code>avatar: http://example.com/avatar.png</code></p>
-<h4 id="7-头像下方添加自己的github等信息"><a href="#7-头像下方添加自己的github等信息" class="headerlink" title="7.头像下方添加自己的github等信息"></a>7.头像下方添加自己的github等信息</h4><p>打开主题配置文件，找到social字段，配置如下，大家可根据自己情况去配置，图片的使用方法同菜单栏一样</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">social:</span><br><span class="line"></span><br><span class="line">  GitHub: https://github.com/username || github</span><br><span class="line"></span><br><span class="line">  <span class="comment">#E-Mail: </span></span><br><span class="line">  <span class="comment">#Google: https://plus.google.com/yourname || google</span></span><br><span class="line">  <span class="comment">#Twitter: https://twitter.com/yourname || twitter</span></span><br><span class="line">  <span class="comment">#FB Page: https://www.facebook.com/yourname || facebook</span></span><br><span class="line">  <span class="comment">#VK Group: https://vk.com/yourname || vk</span></span><br><span class="line">  <span class="comment">#StackOverflow: https://stackoverflow.com/yourname || stack-overflow</span></span><br><span class="line">  <span class="comment">#YouTube: https://youtube.com/yourname || youtube</span></span><br><span class="line">  <span class="comment">#Instagram: https://instagram.com/yourname || instagram</span></span><br><span class="line">  <span class="comment">#Skype: skype:yourname?call|chat || skype</span></span><br><span class="line"></span><br><span class="line">social_icons:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  <span class="comment">#icons_only: false</span></span><br><span class="line">  <span class="comment">#transition: false</span></span><br><span class="line">  GitHub: github</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="8-给站点添加友情链接功能"><a href="#8-给站点添加友情链接功能" class="headerlink" title="8.给站点添加友情链接功能"></a>8.给站点添加友情链接功能</h4><p>打开主题配置文件，进行如下配置：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">links_title: 友情链接</span><br><span class="line"></span><br><span class="line">links:</span><br><span class="line">    <span class="comment">#百度: http://www.baidu.com/</span></span><br><span class="line">    <span class="comment">#新浪: http://example.com/</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="三、next主题的高级配置和一些炫酷的效果"><a href="#三、next主题的高级配置和一些炫酷的效果" class="headerlink" title="三、next主题的高级配置和一些炫酷的效果"></a>三、next主题的高级配置和一些炫酷的效果</h2><h3 id="（一）-增加评论系统"><a href="#（一）-增加评论系统" class="headerlink" title="（一） 增加评论系统"></a>（一） 增加评论系统</h3><p>百度了一下最新的消息，当前版本的next主题中已经内置支持了各种各样的评论系统，但由于政策的原因（需要实名评论），导致大多数的评论插件都已经失效了，而国外的一些加载比较慢。</p>
-<p>这里附上gitment的评论集成方式<a href="https://link.juejin.im/?target=https://jingyan.baidu.com/article/2f9b480de2b5b341cb6cc2be.html">集成流程</a></p>
-<p><strong>gitment</strong>（依托于github issue，能够自己管理，而且被墙的概率小），不过兼容性不太好（需要chrome内核才行），本人使用的gitment，有一个小问题，就是每次发布文章时需要登录下自己的github账号去初始化一下评论，评论功能才能使用，否则会提示“未开放评论”</p>
-<p><strong>Hypercomments</strong> 是国外的一个第三方评论平台</p>
-<p><strong>多说</strong> 在2017年06月01日就关闭评论服务了</p>
-<p><strong>网易云跟贴</strong> 2017年08月01日也停止服务了</p>
-<p><strong>来必力</strong> (韩国人弄的)总是乱码</p>
-<p><strong>DISQUS</strong> 外国的，加载慢</p>
-<hr>
-<h3 id="（二）-隐藏网页底部powered-By-Hexo-x2F-强力驱动"><a href="#（二）-隐藏网页底部powered-By-Hexo-x2F-强力驱动" class="headerlink" title="（二） 隐藏网页底部powered By Hexo &#x2F; 强力驱动"></a>（二） 隐藏网页底部powered By Hexo &#x2F; 强力驱动</h3><p>打开主题配置文件，找到如下图位置，将powered设置为 false，theme下的enable 设置为 false</p>
-<hr>
-<h3 id="（三）-设置首页文章列表不显示全文-只显示预览"><a href="#（三）-设置首页文章列表不显示全文-只显示预览" class="headerlink" title="（三） 设置首页文章列表不显示全文(只显示预览)"></a>（三） 设置首页文章列表不显示全文(只显示预览)</h3><ul>
-<li><p>进入hexo博客项目的themes&#x2F;next目录</p>
-</li>
-<li><p>打开_config.yml文件</p>
-</li>
-<li><p>搜索”auto_excerpt”,找到如下部分：</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommand.</span><br><span class="line"># Please use <span class="comment">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: false</span><br><span class="line">  length: 150</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>把enable改为对应的false改为true，length设置下，然后hexo d -g，再进主页，问题就解决了！</p>
-</li>
-</ul>
-<hr>
-<h3 id="（四）-增加本地搜索功能"><a href="#（四）-增加本地搜索功能" class="headerlink" title="（四） 增加本地搜索功能"></a>（四） 增加本地搜索功能</h3><h4 id="添加百度-x2F-谷歌-x2F-本地-自定义站点内容搜索"><a href="#添加百度-x2F-谷歌-x2F-本地-自定义站点内容搜索" class="headerlink" title="添加百度&#x2F;谷歌&#x2F;本地 自定义站点内容搜索"></a>添加百度&#x2F;谷歌&#x2F;本地 自定义站点内容搜索</h4><ol>
-<li><p>安装 hexo-generator-searchdb，在站点的根目录下执行以下命令：</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb <span class="attr">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑博客配置文件，新增以下内容到任意位置：</p>
-<figure class="highlight lua"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">	  <span class="built_in">path</span>: search.xml</span><br><span class="line">	  field: post</span><br><span class="line">	  <span class="built_in">format</span>: html</span><br><span class="line">	  limit: <span class="number">10000</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>编辑主题配置文件，启用本地搜索功能：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">Local</span> <span class="keyword">search</span></span><br><span class="line"></span><br><span class="line">local_search:</span><br><span class="line">  enable: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
 </ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>-Tools</category>
       </categories>
   </entry>
   <entry>
-    <title>Weather</title>
-    <url>/2022/05/01/AtmoSci/Weather/</url>
-    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
-<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
-<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
-<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
-<p>LI is generally scaled as follows:</p>
-<ul>
-<li><p>LI 6 or Greater, Very Stable Conditions</p>
-</li>
-<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
-</li>
-<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
-</li>
-<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
-</li>
-<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
-</li>
-</ul>
-<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
-<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
-<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
-<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
-<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
-<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
-<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tools/Parameters/</url>
+    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
+
+]]></content>
       <categories>
-        <category>-AtmSci</category>
+        <category>-Tools</category>
       </categories>
   </entry>
   <entry>
@@ -696,6 +684,144 @@
 ]]></content>
       <categories>
         <category>-Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Yaml</title>
+    <url>/2022/05/24/Tools/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>-Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Weather</title>
+    <url>/2022/05/01/AtmoSci/Weather/</url>
+    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
+      <categories>
+        <category>-AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -980,132 +1106,6 @@
 <p>[求助] Python 读取ECMWF ERA_interim 数据时间的问题</p>
 <p><a href="http://bbs.06climate.com/forum.php?mod=viewthread&amp;tid=46154">http://bbs.06climate.com/forum.php?mod=viewthread&amp;tid=46154</a></p>
 <h3 id="Python-Plot"><a href="#Python-Plot" class="headerlink" title="Python Plot"></a>Python Plot</h3><h4 id="XY-plot"><a href="#XY-plot" class="headerlink" title="XY plot"></a>XY plot</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line"></span><br><span class="line">N = <span class="number">10</span></span><br><span class="line">x = [-<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">y = [<span class="number">1.224</span>,<span class="number">0.6785</span>,<span class="number">0.6446</span>,<span class="number">0.5833</span>,<span class="number">0.4638</span>,<span class="number">0.4261</span>,<span class="number">0.391</span>,<span class="number">0.4139</span>,<span class="number">0.3949</span>,<span class="number">0.3611</span>]</span><br><span class="line"></span><br><span class="line">colors = <span class="string">&#x27;blue&#x27;</span></span><br><span class="line">area = [i * <span class="number">200</span> <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">plt.scatter(x, y, s=area, c=colors, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">labels = [<span class="string">&#x27;EN&#x27;</span>,<span class="string">&#x27;iter0&#x27;</span>,<span class="string">&#x27;iter1&#x27;</span>,<span class="string">&#x27;iter2&#x27;</span>,<span class="string">&#x27;iter3&#x27;</span>,<span class="string">&#x27;iter4&#x27;</span>,<span class="string">&#x27;iter5&#x27;</span>,<span class="string">&#x27;iter6&#x27;</span>,<span class="string">&#x27;iter7&#x27;</span>,<span class="string">&#x27;iter8&#x27;</span>]</span><br><span class="line">plt.xticks(x, labels,fontsize=<span class="number">14</span>)</span><br><span class="line">plt.yticks(fontsize=<span class="number">14</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&#x27;Iteration Steps&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Tropical Q500 RMSE&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">&#x27;/project/cas/ruyanc/WORK/plots/MOD/CAM5/Q500/RMSE_evo.pdf&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Yaml</title>
-    <url>/2022/05/24/Tools/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tools/Parameters/</url>
-    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>-Tools</category>
