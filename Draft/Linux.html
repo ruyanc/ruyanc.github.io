@@ -21,9 +21,9 @@
   </script>
 
   <meta name="description" content="ssh Automatic Loginhttps:&#x2F;&#x2F;blog.csdn.net&#x2F;wangzhkai&#x2F;article&#x2F;details&#x2F;80288894  Linux下生成密钥 生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的">
-<meta property="og:type" content="article">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Linux">
-<meta property="og:url" content="http://example.com/2022/05/01/Tools/Linux/index.html">
+<meta property="og:url" content="http://example.com/Draft/Linux.html">
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="ssh Automatic Loginhttps:&#x2F;&#x2F;blog.csdn.net&#x2F;wangzhkai&#x2F;article&#x2F;details&#x2F;80288894  Linux下生成密钥 生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的">
 <meta property="og:locale" content="en_US">
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zwfjvruqj210o0sqjw1.jpg">
 
-<link rel="canonical" href="http://example.com/2022/05/01/Tools/Linux/">
+<link rel="canonical" href="http://example.com/Draft/Linux">
 
 
 <script id="page-configurations">
@@ -42,12 +42,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'en'
   };
 </script>
 
-  <title>Linux | ruyanc</title>
+  <title>Linux | ruyanc
+</title>
   
 
 
@@ -149,68 +150,33 @@
       <div class="main-inner">
         <div class="content-wrap">
           
+  
+  
 
-          <div class="content post posts-expand">
+          <div class="content page posts-expand">
             
 
     
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tools/Linux/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Ruyan">
-      <meta itemprop="description" content="Contact me by: ruyan1810@gmail.com">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ruyanc">
-    </span>
+    
+    
+    <div class="post-block" lang="en">
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          Linux
-        </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+<h1 class="post-title" itemprop="name headline">Linux
+</h1>
 
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-05-23 12:00:00" itemprop="dateModified" datetime="2022-05-23T12:00:00+08:00">2022-05-23</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">-Tools</span></a>
-                </span>
-            </span>
+<div class="post-meta">
+  
 
-          
+</div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-        <h4 id="ssh-Automatic-Login"><a href="#ssh-Automatic-Login" class="headerlink" title="ssh Automatic Login"></a>ssh Automatic Login</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzhkai/article/details/80288894">https://blog.csdn.net/wangzhkai/article/details/80288894</a></p>
+      
+      
+      <div class="post-body">
+          <h4 id="ssh-Automatic-Login"><a href="#ssh-Automatic-Login" class="headerlink" title="ssh Automatic Login"></a>ssh Automatic Login</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/wangzhkai/article/details/80288894">https://blog.csdn.net/wangzhkai/article/details/80288894</a></p>
 <ol>
 <li><p>Linux下生成密钥</p>
 <p>生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的。<br>然后我们再执行 ssh-keygen -t rsa，进入“.ssh”会生成以下几个文件：<br>id_rsa : 生成的私钥文件<br>id_rsa.pub ： 生成的公钥文件 </p>
@@ -388,35 +354,16 @@
 <p><a target="_blank" rel="noopener" href="https://www.meted.ucar.edu/ucar/fortran/">https://www.meted.ucar.edu/ucar/fortran/</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash">https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash</a></p>
 
+      </div>
+      
+      
+      
     </div>
+    
 
     
     
     
-
-      <footer class="post-footer">
-
-        
-
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2022/05/01/Tools/Parameters/" rel="prev" title="Parameters">
-      <i class="fa fa-chevron-left"></i> Parameters
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/05/01/AtmoSci/Weather/" rel="next" title="Weather">
-      Weather <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
 
 
           </div>

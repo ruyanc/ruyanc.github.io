@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="4.5 The Four Run TypesThe environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘cont">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CESM">
+<meta property="og:url" content="http://example.com/Draft/CESM.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="4.5 The Four Run TypesThe environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘cont">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-05-23T04:00:00.000Z">
+<meta property="article:author" content="Ruyan">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/Draft/CESM">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'en'
+  };
+</script>
+
+  <title>CESM | ruyanc
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-archive fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-archive fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-tools">
+
+    <a href="/categories/Tools/" rel="section"><i class="fa fa-archive fa-fw"></i>Tools</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+  
+  
+
+          <div class="content page posts-expand">
+            
+
+    
+    
+    
+    <div class="post-block" lang="en">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">CESM
+</h1>
+
+<div class="post-meta">
+  
+
+</div>
+
+</header>
+
+      
+      
+      
+      <div class="post-body">
+          <h4 id="4-5-The-Four-Run-Types"><a href="#4-5-The-Four-Run-Types" class="headerlink" title="4.5 The Four Run Types"></a>4.5 The Four Run Types</h4><p>The environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘continue’ or ‘branch’, with ‘startup’ being the default setting. The four options are described in this section.</p>
+<h4 id="4-5-1-Startup-Runs"><a href="#4-5-1-Startup-Runs" class="headerlink" title="4.5.1 Startup Runs"></a>4.5.1 Startup Runs</h4><p>If $RUNTYPE is set to ‘startup’, the model will start from some arbitrary baseline state that need not be associated with any previous run. Startup runs are typically initialized using a $BASEDATE of 0001-01-01, although there is no dependence of these runs on previous case names or calendar dates. The ice model uses the $BASEDATE sent from the coupler on a startup run. The ice setup script will create a pointer file named <em>rpointer.ice</em> with the name of the initial restart file in it using $BASEDATE. The date read in from the restart file will be written over by $BASEDATE. The primary environment variables for a startup run are:</p>
+<p> CASE    test.a1    #new case name</p>
+<p> RUNTYPE  startup    </p>
+<p> BASEDATE  0001-01-01  #start date for initial run</p>
+<p>Startup runs can start from a $BASEDATE other then 0001-01-01. Startup runs can also be initialized using data created within the ice model, as described in the next section.</p>
+<h5 id="4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><a href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4" class="headerlink" title="4.5.1.1 Using Initial Conditions from within CSIM4"></a>4.5.1.1 Using Initial Conditions from within CSIM4</h5><p>Initial conditions can be calculated within the ice model in a subroutine called init_state in <em>ice_init.F</em>. Here, the ocean surface is initialized at the freezing point everywhere north of 40 degrees and south of -40 degrees latitude, allowing ice to form everywhere in these regions. While running the ice model with a data ocean will melt any extra ice during the first year of integration, is not recommended that these initial conditions be used when running the ice model coupled to an active ocean model. The advantage of using this input is that it is not grid or land mask dependent. To use these initial conditions, set RESTART in <em>ice.setup.csh</em>:</p>
+<p>set RESTART &#x3D; .false.</p>
+<h6 id="4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><a href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files" class="headerlink" title="4.5.1.2 Using Initial Conditions from Input Data Files"></a>4.5.1.2 Using Initial Conditions from Input Data Files</h6><p>The input data file for the ice model is a binary restart file from a previous run. If $RUNTYPE is set to ‘startup’, the ice setup script is will read the initial condition file from the input data directory, <em>iced.0001-01-01.$ICE_GRID</em> regardless of $BASEDATE. For ‘continue’ runs, the input data file is determined by the filename set in the restart pointer file (see section <a target="_blank" rel="noopener" href="https://www.cesm.ucar.edu/models/ccsm2.0/csim/UsersGuide/ice_usrdoc/node21.html#pointer_files">4.8.2.1</a>). If $RUNTYPE is ‘branch’ or ‘hybrid’, the ice setup script will attempt to file a restart file with $REFDATE in the filename.</p>
+<p>For the startup and hybrid setups, it is not necessary that the date inside the binary file match the date in the filename, since the $BASEDATE received from the coupler will override the date in the restart file. This will not be true for continue and branch runs, where the $BASEDATE is set in the model using the date in the restart file. Initializing the model using a restart file from an equilibrium run will result in a more physically reasonable scenario than the initial conditions set within CSIM4. The conditions in the initial restart file provided with CSIM4 are from an active ice only equilibrium run using modified NCEP forcing. The drawbacks are that the data is binary, difficult to edit, and is date and grid dependent. A restart file will be used as initial conditions if</p>
+<p>set RESTART &#x3D; .true.</p>
+<p>in <em>ice.setup.csh</em>.</p>
+<h4 id="4-5-2-Hybrid-Runs"><a href="#4-5-2-Hybrid-Runs" class="headerlink" title="4.5.2 Hybrid Runs"></a>4.5.2 Hybrid Runs</h4><p>A hybrid run should be used when a collection of arbitrary initial&#x2F;restart files from previous runs is desired to start the model. A new $CASE and $BASEDATE can be specified. The ice model receives $BASEDATE from the coupler. The date read in from the restart file will be written over by $BASEDATE. The climate simulated by the hybrid run should be continuous compared to the previous run, but an exact restart will not be produced. If all components start from the same reference case and date, $REFCASE and $REFDATE can be used to specify the previous date and case. Generally, a hybrid run will require some modifications to the scripts by the user, especially if some components are starting from inconsistent runs or dates. The primary environment variables for a startup run are:</p>
+<p> CASE    test.a1    #new case name</p>
+<p> RUNTYPE  hybrid</p>
+<p> BASEDATE  0001-01-01  #date where to start run</p>
+<p> REFCASE         #reference case for initial&#x2F;restart data</p>
+<p> REFDATE  0001-01-01  #date in REFCASE to obtain initial&#x2F;restart data</p>
+<h4 id="4-5-3-Continue-Runs"><a href="#4-5-3-Continue-Runs" class="headerlink" title="4.5.3 Continue Runs"></a>4.5.3 Continue Runs</h4><p>A continue run is an exact continuation of a previous run. This means that the run will produce a bit-for-bit answer as if the existing run had not stopped. In this case, it is assumed that $CASE and $BASEDATE have not changed and that the date is continuous from the previous run. For a continue run, the only change required in the main script is to set:</p>
+<p> RUNTYPE  continue</p>
+<p>A change in the $BASEDATE is not necessary for a continue run, since the date is read in from the restart files, and the coupler checks to see that the dates between the component models match.</p>
+<h4 id="4-5-4-Branch-Runs"><a href="#4-5-4-Branch-Runs" class="headerlink" title="4.5.4 Branch Runs"></a>4.5.4 Branch Runs</h4><p>Branch runs will continue a previous run but with a new case name and possibly a new start date, where the previous run has created a consistent set of restart files. Branch runs differ from continuation runs in that they are typically used to perform sensitivity studies, or to modify output streams, branching off a previous run. The new case will restart exactly, as in a continuation run, if no source code or input namelist parameters have changed. For a branch run, $BASEDATE must remain the same as that in the previous run, and the following environment variables must be set in the the main script:</p>
+<p> CASE    new case name </p>
+<p> RUNTYPE  branch</p>
+<p> BASEDATE  date to start this run</p>
+<p> REFCASE  reference case to branch from </p>
+<p> REFDATE  date in REFCASE to obtain restart data</p>
+<p>【CESM2 release news】<br><a target="_blank" rel="noopener" href="https://eos.org/articles/new-version-of-popular-climate-model-released">https://eos.org/articles/new-version-of-popular-climate-model-released</a></p>
+<p>【CMIP6 forcing】<br><a target="_blank" rel="noopener" href="https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#">https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#</a><br><a target="_blank" rel="noopener" href="https://pcmdi.llnl.gov/mips/amip/">https://pcmdi.llnl.gov/mips/amip/</a><br><a target="_blank" rel="noopener" href="https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63">https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63</a></p>
+<p>【CMIP5 model errors】<a target="_blank" rel="noopener" href="https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/">https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/</a></p>
+<p>【How do climate models work?】<a target="_blank" rel="noopener" href="https://www.carbonbrief.org/qa-how-do-climate-models-work">https://www.carbonbrief.org/qa-how-do-climate-models-work</a></p>
+<p>【CESM related】</p>
+<p>Supported Grids: <a target="_blank" rel="noopener" href="http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html">http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html</a></p>
+<p>【GFDL idealized model】<a target="_blank" rel="noopener" href="https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview">https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview</a></p>
+
+      </div>
+      
+      
+      
+    </div>
+    
+
+    
+    
+    
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-The-Four-Run-Types"><span class="nav-number">1.</span> <span class="nav-text">4.5 The Four Run Types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-Startup-Runs"><span class="nav-number">2.</span> <span class="nav-text">4.5.1 Startup Runs</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><span class="nav-number">2.1.</span> <span class="nav-text">4.5.1.1 Using Initial Conditions from within CSIM4</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><span class="nav-number">2.1.1.</span> <span class="nav-text">4.5.1.2 Using Initial Conditions from Input Data Files</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-2-Hybrid-Runs"><span class="nav-number">3.</span> <span class="nav-text">4.5.2 Hybrid Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-3-Continue-Runs"><span class="nav-number">4.</span> <span class="nav-text">4.5.3 Continue Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-4-Branch-Runs"><span class="nav-number">5.</span> <span class="nav-text">4.5.4 Branch Runs</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Ruyan</p>
+  <div class="site-description" itemprop="description">Contact me by: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ruyan</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
