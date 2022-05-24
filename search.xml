@@ -10,45 +10,228 @@
       </categories>
   </entry>
   <entry>
-    <title>Ocean</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-]]></content>
+    <title>Weather</title>
+    <url>/2022/05/01/AtmoSci/Weather/</url>
+    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
       <categories>
-        <category>-OcnSci</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
-    <title>Fortran</title>
-    <url>/2022/05/01/Tools/Fortran/</url>
-    <content><![CDATA[<h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
-<ol>
-<li>USE netcdf</li>
-<li>NF90_OPEN函数打开文件</li>
-<li>NF90_INQ_DIMID获取维度ID</li>
-<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
-<li>ALLOCATE分配动态数组</li>
-<li>NF90_INQ_VARID获取变量ID</li>
-<li>NF90_GET_VAR获取变量值</li>
-</ol>
-<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
-<p>以下是具体示例代码</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
+    <title>Github</title>
+    <url>/2022/05/01/Tools/GitHub/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
 
-<p>编译方法：</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
 
 <p>参考：</p>
-<ul>
-<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
-<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
-</ul>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
-        <category>-Tools</category>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>NCL</title>
+    <url>/2022/05/01/Tools/NCL/</url>
+    <content><![CDATA[<p>℃     </p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
+
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li>output large files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>output</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>read multiple files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
+<li>Font</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>coordinate info</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>Label Bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>add box</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>change color bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2D Fill</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>significance test with dots</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>mask land</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
+<li>area average</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>advection</li>
+</ul>
+<p><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
+<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
+<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
+<ul>
+<li>zonal gradients</li>
+</ul>
+<p><a href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>vertical integration</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>remap</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>regression</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>conform_dims</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
+<li>create a directory if it does not already exist</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>convert a GRIB file to netCDF</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tools/Parameters/</url>
+    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tools</category>
       </categories>
   </entry>
   <entry>
@@ -208,7 +391,7 @@
 </ol>
 ]]></content>
       <categories>
-        <category>-Tools</category>
+        <category>Tools</category>
       </categories>
   </entry>
   <entry>
@@ -393,201 +576,7 @@
 <p><a href="https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash">https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash</a></p>
 ]]></content>
       <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>NCL</title>
-    <url>/2022/05/01/Tools/NCL/</url>
-    <content><![CDATA[<p>℃     </p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
-
-<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
-<li>output large files</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>output</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>read multiple files</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
-<li>Font</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>coordinate info</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>Label Bar</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>add box</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>change color bar</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>2D Fill</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>significance test with dots</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>mask land</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
-<li>area average</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>advection</li>
-</ul>
-<p><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
-<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
-<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
-<ul>
-<li>zonal gradients</li>
-</ul>
-<p><a href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>vertical integration</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>remap</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>regression</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>conform_dims</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
-<li>create a directory if it does not already exist</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>convert a GRIB file to netCDF</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tools/GitHub/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
-]]></content>
-      <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tools/Parameters/</url>
-    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>-Tools</category>
+        <category>Tools</category>
       </categories>
   </entry>
   <entry>
@@ -683,145 +672,7 @@
 <p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Yaml</title>
-    <url>/2022/05/24/Tools/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>-Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Weather</title>
-    <url>/2022/05/01/AtmoSci/Weather/</url>
-    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
-<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
-<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
-<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
-<p>LI is generally scaled as follows:</p>
-<ul>
-<li><p>LI 6 or Greater, Very Stable Conditions</p>
-</li>
-<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
-</li>
-<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
-</li>
-<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
-</li>
-<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
-</li>
-</ul>
-<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
-<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
-<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
-<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
-<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
-<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
-<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
-      <categories>
-        <category>-AtmSci</category>
+        <category>Tools</category>
       </categories>
   </entry>
   <entry>
@@ -1108,7 +959,156 @@
 <h3 id="Python-Plot"><a href="#Python-Plot" class="headerlink" title="Python Plot"></a>Python Plot</h3><h4 id="XY-plot"><a href="#XY-plot" class="headerlink" title="XY plot"></a>XY plot</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt </span><br><span class="line"></span><br><span class="line">N = <span class="number">10</span></span><br><span class="line">x = [-<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]</span><br><span class="line">y = [<span class="number">1.224</span>,<span class="number">0.6785</span>,<span class="number">0.6446</span>,<span class="number">0.5833</span>,<span class="number">0.4638</span>,<span class="number">0.4261</span>,<span class="number">0.391</span>,<span class="number">0.4139</span>,<span class="number">0.3949</span>,<span class="number">0.3611</span>]</span><br><span class="line"></span><br><span class="line">colors = <span class="string">&#x27;blue&#x27;</span></span><br><span class="line">area = [i * <span class="number">200</span> <span class="keyword">for</span> i <span class="keyword">in</span> y]</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(<span class="number">10</span>,<span class="number">5</span>))</span><br><span class="line">plt.scatter(x, y, s=area, c=colors, alpha=<span class="number">0.5</span>)</span><br><span class="line"></span><br><span class="line">labels = [<span class="string">&#x27;EN&#x27;</span>,<span class="string">&#x27;iter0&#x27;</span>,<span class="string">&#x27;iter1&#x27;</span>,<span class="string">&#x27;iter2&#x27;</span>,<span class="string">&#x27;iter3&#x27;</span>,<span class="string">&#x27;iter4&#x27;</span>,<span class="string">&#x27;iter5&#x27;</span>,<span class="string">&#x27;iter6&#x27;</span>,<span class="string">&#x27;iter7&#x27;</span>,<span class="string">&#x27;iter8&#x27;</span>]</span><br><span class="line">plt.xticks(x, labels,fontsize=<span class="number">14</span>)</span><br><span class="line">plt.yticks(fontsize=<span class="number">14</span>)</span><br><span class="line"></span><br><span class="line">plt.xlabel(<span class="string">&#x27;Iteration Steps&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Tropical Q500 RMSE&#x27;</span>, fontsize=<span class="number">18</span>)</span><br><span class="line"></span><br><span class="line">plt.savefig(<span class="string">&#x27;/project/cas/ruyanc/WORK/plots/MOD/CAM5/Q500/RMSE_evo.pdf&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>-Tools</category>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ocean</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Yaml</title>
+    <url>/2022/05/24/Tools/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fortran</title>
+    <url>/2022/05/01/Tools/Fortran/</url>
+    <content><![CDATA[<h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
+<ol>
+<li>USE netcdf</li>
+<li>NF90_OPEN函数打开文件</li>
+<li>NF90_INQ_DIMID获取维度ID</li>
+<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
+<li>ALLOCATE分配动态数组</li>
+<li>NF90_INQ_VARID获取变量ID</li>
+<li>NF90_GET_VAR获取变量值</li>
+</ol>
+<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
+<p>以下是具体示例代码</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
+
+<p>编译方法：</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
+
+<p>参考：</p>
+<ul>
+<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
+<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tools</category>
       </categories>
   </entry>
 </search>
