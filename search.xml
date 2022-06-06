@@ -207,17 +207,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Fundamental</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ERA5</title>
     <url>/2022/05/27/Tools/ERA5/</url>
     <content><![CDATA[<h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
@@ -227,35 +216,6 @@
 
 <h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tools/GitHub/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tools</category>
@@ -288,6 +248,35 @@
 <li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
 <li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
 </ul>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Github</title>
+    <url>/2022/05/01/Tools/GitHub/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tools</category>
@@ -639,209 +628,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Yaml</title>
-    <url>/2022/05/24/Tools/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>WRF</title>
-    <url>/2022/05/01/Tools/WRF/</url>
-    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
-<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
-<p>实时预报数据下载地址：</p>
-<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
-<p>历史预报数据下载地址：</p>
-<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
-<p>数据下载脚本：</p>
-<p>In [1]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
-
-<p>驱动WRF</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
-<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
-<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
-<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
-<p><strong>注意</strong>：</p>
-<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
-<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
-<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
-<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
-<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
-<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
-<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
-<ul>
-<li><p>链接 met_em* 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
-<ul>
-<li><p>初始化气象要素</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
-
-<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
-</li>
-<li><p>模拟积分——开始模拟</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
-</li>
-</ul>
-<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
-<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
-<p>关于模式后处理，之前也提到过一些：</p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
-<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-  </entry>
-  <entry>
     <title>NCL</title>
     <url>/2022/05/01/Tools/NCL/</url>
     <content><![CDATA[<p>℃     </p>
@@ -982,6 +768,47 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tools/Parameters/</url>
+    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>FasterHosts</title>
+    <url>/2022/06/06/Tools/FasterHosts/</url>
+    <content><![CDATA[<h2 id="FasterHosts"><a href="#FasterHosts" class="headerlink" title="FasterHosts"></a>FasterHosts</h2><p><code>FasterHosts</code> 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 <code>domain</code> 替换成访问速度较快的那个。</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>加速访问 GitHub 相关的资源</li>
+<li>支持配置 Hosts</li>
+</ul>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="手动安装-Chrome-插件"><a href="#手动安装-Chrome-插件" class="headerlink" title="手动安装 Chrome 插件"></a>手动安装 Chrome 插件</h3><blockquote>
+<ol>
+<li>下载 <a href="https://gitee.com/link?target=https://github.com/gauseen/faster-hosts/archive/master.zip">FasterHosts</a> 然后解压，找到 <code>extension</code> 子目录</li>
+<li>打开 Chrome，输入: <code>chrome://extensions/</code></li>
+<li>打开「开发者e模式」</li>
+<li>选择「加载已解压的扩展程序」，然后定位到刚才解压的文件夹里面的 <code>extension</code> 目录，确定</li>
+<li>这就安装好了，关闭「开发这模式」</li>
+</ol>
+</blockquote>
 ]]></content>
       <categories>
         <category>Tools</category>
@@ -1276,22 +1103,217 @@
       </categories>
   </entry>
   <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tools/Parameters/</url>
-    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+    <title>WRF</title>
+    <url>/2022/05/01/Tools/WRF/</url>
+    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
+<p>实时预报数据下载地址：</p>
+<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
+<p>历史预报数据下载地址：</p>
+<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
+<p>数据下载脚本：</p>
+<p>In [1]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
+
+<p>驱动WRF</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
+<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
+<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
 
 
 
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
+<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
+<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
+<p><strong>注意</strong>：</p>
+<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
+<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
+<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
+<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
+<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
+<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
+<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
+<ul>
+<li><p>链接 met_em* 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
+<ul>
+<li><p>初始化气象要素</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
 
+<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
+</li>
+<li><p>模拟积分——开始模拟</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
+</li>
+</ul>
+<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
+<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
+<p>关于模式后处理，之前也提到过一些：</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
+<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
         <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Yaml</title>
+    <url>/2022/05/24/Tools/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fundamental</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
       </categories>
   </entry>
 </search>
