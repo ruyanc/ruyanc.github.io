@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="℃      1~F34~0~F~ C  Function123456789101112131415161718192021222324252627282930undef(&quot;ttest_TLL&quot;)function ttest_TLL(x:numeric,y:numeric,sig:numeric)begin    dimXY &#x3D; dimsizes(x)    ntim  &#x3D; d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NCL">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/NCL/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="℃      1~F34~0~F~ C  Function123456789101112131415161718192021222324252627282930undef(&quot;ttest_TLL&quot;)function ttest_TLL(x:numeric,y:numeric,sig:numeric)begin    dimXY &#x3D; dimsizes(x)    ntim  &#x3D; d">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-06T09:28:58.348Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/NCL/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>NCL | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-archive fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-archive fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-paper">
+
+    <a href="/categories/Paper/" rel="section"><i class="fa fa-archive fa-fw"></i>Paper</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-archive fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-archive fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/NCL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="Contact me by: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NCL
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-06-06 17:28:58" itemprop="dateModified" datetime="2022-06-06T17:28:58+08:00">2022-06-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>℃     </p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
+
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li>output large files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>output</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>read multiple files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
+<li>Font</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>coordinate info</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>Label Bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>add box</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>change color bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2D Fill</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>significance test with dots</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>mask land</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
+<li>area average</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>advection</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
+<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
+<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a target="_blank" rel="noopener" href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
+<ul>
+<li>zonal gradients</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>vertical integration</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>remap</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>regression</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>conform_dims</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
+<li>create a directory if it does not already exist</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>convert a GRIB file to netCDF</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Parameters/" rel="prev" title="Parameters">
+      <i class="fa fa-chevron-left"></i> Parameters
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Fortran/" rel="next" title="Fortran">
+      Fortran <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">2.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NAN%E5%80%BC"><span class="nav-number">3.</span> <span class="nav-text">处理NAN值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">4.</span> <span class="nav-text">plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calculation"><span class="nav-number">5.</span> <span class="nav-text">Calculation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Function"><span class="nav-number">6.</span> <span class="nav-text">System_Function</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">Contact me by: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
+
