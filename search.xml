@@ -10,6 +10,42 @@
       </categories>
   </entry>
   <entry>
+    <title>Ref_Data</title>
+    <url>/2022/06/07/PDF/Ref_Data/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="【腾讯文档】Ref_Data" data-height="https://docs.qq.com/pdf/DSmR4TGlFUnpBU3hM"></div>
+
+]]></content>
+      <categories>
+        <category>PDF</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fundamental</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ERA5</title>
+    <url>/2022/05/27/Tool/ERA5/</url>
+    <content><![CDATA[<h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
+<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Weather</title>
     <url>/2022/05/01/AtmoSci/Weather/</url>
     <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
@@ -38,31 +74,6 @@
 <img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
       <categories>
         <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Data</title>
-    <url>/2022/06/07/PDF/Ref_Data/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="/categories/PDF/Ref_Data.pdf" data-height="500px"></div>
-
-]]></content>
-      <categories>
-        <category>PDF</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ERA5</title>
-    <url>/2022/05/27/Tool/ERA5/</url>
-    <content><![CDATA[<h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
-<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Tool</category>
       </categories>
   </entry>
   <entry>
@@ -1302,17 +1313,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Fundamental</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CHLA</title>
     <url>/2022/05/24/Paper/CHLA/</url>
     <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
@@ -1324,40 +1324,6 @@
 ]]></content>
       <categories>
         <category>Paper</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>应俊</title>
-    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
-    <content><![CDATA[<h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
-<p>CMIP6 intensity of ENSO 一致性</p>
-<p>Increased ENSO rainfall variability in response to global warming</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
-<p>relative SST 模式和观测差异很大   </p>
-<p>模式EN-like，观测LN-Like</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
-<p>relative SST 的变化信号显现较 annual mean 晚</p>
-<p>ENSO海温：振幅  </p>
-<p>ENSO降水：东移</p>
-<p>ENSO降水变化信号较海温早30年左右</p>
-<p>动力部分起主导作用：温度相对变化</p>
-<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
-<p><strong>学术报告 2022-11</strong></p>
-<p><strong>报告时间：2022年5月17日 09:30</strong></p>
-<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
-<p><strong>报告题目</strong></p>
-<p>Emergence of climate change in the tropical Pacific</p>
-<p><strong>报告摘要</strong></p>
-<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
       </categories>
   </entry>
   <entry>
@@ -1391,6 +1357,40 @@
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
 <hr>
 <h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>应俊</title>
+    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
+    <content><![CDATA[<h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
+<p>CMIP6 intensity of ENSO 一致性</p>
+<p>Increased ENSO rainfall variability in response to global warming</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
+<p>relative SST 模式和观测差异很大   </p>
+<p>模式EN-like，观测LN-Like</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
+<p>relative SST 的变化信号显现较 annual mean 晚</p>
+<p>ENSO海温：振幅  </p>
+<p>ENSO降水：东移</p>
+<p>ENSO降水变化信号较海温早30年左右</p>
+<p>动力部分起主导作用：温度相对变化</p>
+<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
+<p><strong>学术报告 2022-11</strong></p>
+<p><strong>报告时间：2022年5月17日 09:30</strong></p>
+<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
+<p><strong>报告题目</strong></p>
+<p>Emergence of climate change in the tropical Pacific</p>
+<p><strong>报告摘要</strong></p>
+<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
