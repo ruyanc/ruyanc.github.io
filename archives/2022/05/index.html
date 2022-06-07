@@ -215,8 +215,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/27/Tool/Python/" itemprop="url">
-            <span itemprop="name">Python</span>
+          <a class="post-title-link" href="/2022/05/27/Tool/ERA5/" itemprop="url">
+            <span itemprop="name">ERA5</span>
           </a>
       </div>
 
@@ -235,8 +235,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/27/Tool/ERA5/" itemprop="url">
-            <span itemprop="name">ERA5</span>
+          <a class="post-title-link" href="/2022/05/27/Tool/Python/" itemprop="url">
+            <span itemprop="name">Python</span>
           </a>
       </div>
 
@@ -295,8 +295,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/24/Tool/Yaml/" itemprop="url">
-            <span itemprop="name">Yaml</span>
+          <a class="post-title-link" href="/2022/05/24/Paper/CHLA/" itemprop="url">
+            <span itemprop="name">CHLA</span>
           </a>
       </div>
 
@@ -315,8 +315,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/24/Paper/CHLA/" itemprop="url">
-            <span itemprop="name">CHLA</span>
+          <a class="post-title-link" href="/2022/05/24/Tool/Yaml/" itemprop="url">
+            <span itemprop="name">Yaml</span>
           </a>
       </div>
 
@@ -375,8 +375,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/01/Tool/Linux/" itemprop="url">
-            <span itemprop="name">Linux</span>
+          <a class="post-title-link" href="/2022/05/01/OcnSci/Ocean/" itemprop="url">
+            <span itemprop="name">Fundamental</span>
           </a>
       </div>
 
@@ -395,8 +395,8 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2022/05/01/Tool/Fortran/" itemprop="url">
-            <span itemprop="name">Fortran</span>
+          <a class="post-title-link" href="/2022/05/01/AtmoSci/Weather/" itemprop="url">
+            <span itemprop="name">Weather</span>
           </a>
       </div>
 
@@ -570,6 +570,26 @@
 
 
 
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
 
 
 
