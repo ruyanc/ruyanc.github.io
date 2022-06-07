@@ -21,6 +21,17 @@
       </categories>
   </entry>
   <entry>
+    <title>Ref_Data</title>
+    <url>/2022/06/07/OcnSci/Ref_Data/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+
+]]></content>
+      <categories>
+        <category>PDF</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Weather</title>
     <url>/2022/05/01/AtmoSci/Weather/</url>
     <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
@@ -304,191 +315,6 @@
 <li><p>编辑主题配置文件，启用本地搜索功能：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">Local</span> <span class="keyword">search</span></span><br><span class="line"></span><br><span class="line">local_search:</span><br><span class="line">  enable: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux</title>
-    <url>/2022/05/01/Tool/Linux/</url>
-    <content><![CDATA[<h4 id="ssh-Automatic-Login"><a href="#ssh-Automatic-Login" class="headerlink" title="ssh Automatic Login"></a>ssh Automatic Login</h4><ol>
-<li><p>Linux下生成密钥</p>
-<p>生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的。<br>然后我们再执行 ssh-keygen -t rsa，进入“.ssh”会生成以下几个文件：<br>id_rsa : 生成的私钥文件<br>id_rsa.pub ： 生成的公钥文件 </p>
-</li>
-<li><p>远程免密登录<br>现在我们就需要把key文件复制到其它几台服务器了，而复制的方式主要有两种：</p>
-<ul>
-<li>通过ssh-copy-id的方式<br>　命令： ssh-copy-id 服务器IP<br>  　这样我们就把生成的key放到了指定的服务器上了</li>
-<li>手工复制<br>这个不多说了，把那几个文件&#x2F;.ssh&#x2F;id_rsa.put通过U盘或其它的存储介质复制到其它服务器上。<br>上面这些步骤做完之后我们就可以高兴的用 命令 ssh 服务器IP 来免密码访问其它服务器了。</li>
-</ul>
-</li>
-</ol>
-<p>来源：<a href="https://blog.csdn.net/wangzhkai/article/details/80288894">https://blog.csdn.net/wangzhkai/article/details/80288894</a></p>
-<h4 id="源代码软件安装命令"><a href="#源代码软件安装命令" class="headerlink" title="源代码软件安装命令"></a>源代码软件安装命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/test</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="恢复成系统缺省的-bashrc"><a href="#恢复成系统缺省的-bashrc" class="headerlink" title="恢复成系统缺省的.bashrc"></a>恢复成系统缺省的.bashrc</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /etc/skel/.bashrc ~</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Wget"><a href="#Wget" class="headerlink" title="Wget"></a>Wget</h4><p><code>wget -r -c —timestamping ftp://ftp_hermes:hermes%@ftp.hermes.acri.fr/828378130</code></p>
-<p>如果时间戳更新则下载，否则不下载</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --user=ifenty --password=ABCD -r -nc -np -nH --cut-dirs=2 https://ecco.jpl.nasa.gov/drive/files/ECCO2/cube92_latlon_quart_90S90N/SALT.nc</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="查看文件个数"><a href="#查看文件个数" class="headerlink" title="查看文件个数"></a>查看文件个数</h4><p><code>ls -l | grep &quot;^-&quot; | wc -l</code></p>
-<h4 id="查看目录个数"><a href="#查看目录个数" class="headerlink" title="查看目录个数"></a>查看目录个数</h4><p><code>ls -l ./|grep &quot;^d&quot;|wc -l</code></p>
-<h4 id="按文件大小排序"><a href="#按文件大小排序" class="headerlink" title="按文件大小排序"></a>按文件大小排序</h4><p><code>du -s * | sort -n | head -566</code></p>
-<h4 id="数字范围"><a href="#数字范围" class="headerlink" title="数字范围"></a>数字范围</h4><p><code>&#123;10..20&#125; or [10-20]</code></p>
-<h4 id="安装CDO"><a href="#安装CDO" class="headerlink" title="安装CDO"></a>安装CDO</h4><p><code>conda create --prefix=/home/rychen/cdo -c conda-forge cdo</code></p>
-<h4 id="安装NCO"><a href="#安装NCO" class="headerlink" title="安装NCO"></a>安装NCO</h4><p><code>conda install -c conda-forge nco</code></p>
-<p>安装顺序：conda - NCL - NCO</p>
-<h4 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h4><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">tar -xf XXX.tar</span><br><span class="line">unzip XXX.zip</span><br><span class="line">gunzip XXX.gz</span><br><span class="line">tar -xvf XXX.tar</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="压缩包命令"><a href="#压缩包命令" class="headerlink" title="压缩包命令"></a>压缩包命令</h4><p><a href="https://www.jb51.net/LINUXjishu/43356.html">https://www.jb51.net/LINUXjishu/43356.html</a></p>
-<p> <a href="https://www.cnblogs.com/yuandonghua/p/10254288.html">https://www.cnblogs.com/yuandonghua/p/10254288.html</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxv -f filename.tar.gz -c directory  </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将压缩包解压在directory文件夹下</span></span><br><span class="line">tar -jxv -f filename.tar.bz2 -c directory </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将压缩包解压在directory文件夹下</span></span><br><span class="line">tar –xZv -f file.tar.Z # 解压 tar.Z 包</span><br><span class="line">tar –xv -f file.tar  # 解压tar包</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">tar参数 -x 表示解压，-c 表示压缩，-t 表示查看内容，-r 表示向压缩归档文件末尾追加文件，-u 表示更新原压缩包中的文件</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将所有.jpg的文件打成一个tar包，并用bzip2压缩</span></span><br><span class="line">tar -cjf all.tar.bz2 *.jpg  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新原来tar包中logo.gif文件</span></span><br><span class="line">tar -uf all.tar logo.gif</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">rar包只能用 unrar解压，据说RAR <span class="keyword">for</span> Linux不是免费的</span></span><br><span class="line">unrar e file.rar  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">zip包只能用 unzip解压</span></span><br><span class="line">unzip file.zip    </span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="查看内存使用"><a href="#查看内存使用" class="headerlink" title="查看内存使用"></a>查看内存使用</h4><p><code>ps aux | sort -rnk 4 | head -5</code></p>
-<h4 id="查看内存剩余"><a href="#查看内存剩余" class="headerlink" title="查看内存剩余"></a>查看内存剩余</h4><p><code>free -h</code></p>
-<h4 id="循环切割图片"><a href="#循环切割图片" class="headerlink" title="循环切割图片"></a>循环切割图片</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for i in `ls ./`</span><br><span class="line">	do pdfcrop $i $i</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="循环remap"><a href="#循环remap" class="headerlink" title="循环remap"></a>循环remap</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">do cdo remapbil,r36x19 $i ../Remap/Control/$i</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="sh-loop"><a href="#sh-loop" class="headerlink" title="sh loop"></a>sh loop</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Declare an array of string with <span class="built_in">type</span></span></span><br><span class="line">declare -a StringArray=(&quot;Linux Mint&quot; &quot;Fedora&quot; &quot;Red Hat Linux&quot; &quot;Ubuntu&quot; &quot;Debian&quot; )</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Iterate the string array using <span class="keyword">for</span> loop</span></span><br><span class="line">for val in $&#123;StringArray[@]&#125;; do</span><br><span class="line">   echo $val</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for i in &#123;1961..2013&#125; </span><br><span class="line">do</span><br><span class="line">  ncl  year_select=$i 1_cal_divQ_JRA55_trans.ncl</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">for i <span class="keyword">in</span> `ls ./`</span><br><span class="line"><span class="keyword">do</span> pdfcrop $i $i</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for i <span class="keyword">in</span> `ls ./`</span><br><span class="line"><span class="keyword">do</span> cdo remapbil,r4500x3600 $i ../tos_remap/$i</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="移动前5个文件到相应目录下"><a href="#移动前5个文件到相应目录下" class="headerlink" title="移动前5个文件到相应目录下"></a>移动前5个文件到相应目录下</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for i in `ls|head -n 5`</span><br><span class="line">do</span><br><span class="line">mv $i ./dir</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="切割图片"><a href="#切割图片" class="headerlink" title="切割图片"></a>切割图片</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">convert -density 216 -trim +repage -border 8 -bordercolor white -flatten fig1.eps fig1.png</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="动图制作"><a href="#动图制作" class="headerlink" title="动图制作"></a>动图制作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install imagemagick</span><br><span class="line">convert -delay 20 `ls|head -n 20` -loop 0 ~/finerainy.gif</span><br><span class="line">convert -density 200x200 -dispose previous -quality 100 -delay 40 `ls|head -n 9` -loop 0 ./test.gif</span><br><span class="line">convert -delay 20 `ls|head -n 20` -loop 0 ~/finerainy.gif</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://www.imagemagick.org/script/download.php#macosx">https://www.imagemagick.org/script/download.php#macosx</a></p>
-<h4 id="查看文件个数-1"><a href="#查看文件个数-1" class="headerlink" title="查看文件个数"></a>查看文件个数</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls -l | grep &quot;^-&quot; | wc -l</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="标准错误输出重定向到标准输出"><a href="#标准错误输出重定向到标准输出" class="headerlink" title="标准错误输出重定向到标准输出"></a>标准错误输出重定向到标准输出</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">1&gt; </span><span class="language-bash">Get-BoM-Temp.out 2&gt;&amp;1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="按文件大小排序-1"><a href="#按文件大小排序-1" class="headerlink" title="按文件大小排序"></a>按文件大小排序</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -s * | sort -n | head -10</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="查看存储空间"><a href="#查看存储空间" class="headerlink" title="查看存储空间"></a>查看存储空间</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h #将以人类可以阅读的容量格式显示各挂载点的存储空间使用情况</span><br><span class="line">du -h --max-depth=1 /path # 表示显示 path 路径下只深入到第一层子目录的各文件夹大小</span><br><span class="line">free -h #将以人类可以阅读的容量格式显示内存使用情况</span><br><span class="line">fdisk -l #查看硬盘及分区情况</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="linux中文件名有空格"><a href="#linux中文件名有空格" class="headerlink" title="linux中文件名有空格"></a>linux中文件名有空格</h4><p>在空格前加反斜杠,例如文件名为“software package”，在Linux中可表示为“software\ package”</p>
-<h4 id="批量替换文件名中特定字符"><a href="#批量替换文件名中特定字符" class="headerlink" title="批量替换文件名中特定字符"></a>批量替换文件名中特定字符</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for file in `ls | grep .nc`; do newfile=`echo $file | sed &#x27;s/pt/pt_S2S/g&#x27;`; mv $file $newfile; done</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Linux记录程序交互过程"><a href="#Linux记录程序交互过程" class="headerlink" title="Linux记录程序交互过程"></a>Linux记录程序交互过程</h4><p><a href="https://www.ibm.com/developerworks/cn/aix/library/au-screenshots1/index.html">https://www.ibm.com/developerworks/cn/aix/library/au-screenshots1/index.html</a></p>
-<p>平时安装或调试一个软件时，总会需要记录程序输出信息或交互过程以便后期查看学习。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls ./ &gt; ./file1   #将ls程序的标准输出写到file1文件中</span><br><span class="line">ls ./ 2&gt; ./file1  #将ls程序的错误输出写到file1文件中</span><br><span class="line">ls ./ &amp;&gt; ./file1  #将ls程序的标准输出和错误输出都写到file1文件中</span><br><span class="line">ls ./ 1&gt; ./file1 2&gt; ./file2 #将ls程序的标准输出写到file1文件中，将错误输出写到file2文件中</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">单箭头&gt;，表示以覆盖的方式输出到文件中</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">双箭头&gt;&gt;，表示以追加的方式输出到文件中，不会覆盖之前的内容</span></span><br></pre></td></tr></table></figure>
-
-<p>然而常用的重定向功能只能记录程序的标准输出或错误输出，不能记录用户与程序的交互过程，此时发现一个比较好用的命令 <code>script output_file.txt</code> 。加入参数<code>-a</code>会把会话记录附加到<code>output_file.txt</code>文件后面，保留先前的内容。<br>该命令会启动一个子shell，并将用户键入的所有内容、运行的任何程序的所有输出以及这些程序产生的任何错误保存到一个输出文件中。最后通过键入exit命令退出 script 模式并关闭输出文件。<br>script 命令产生的文件通常包含控制字符，即退格、回车、用于显示某些提示的特殊字符以及您编辑前一个 shell 命令时使用的字符等等。可以使用文本编辑器清理script输出文件，网上有各种清理脚本可用。</p>
-<h4 id="jobs"><a href="#jobs" class="headerlink" title="jobs"></a>jobs</h4><p>ctrl+z 暂停任务； jobs 查看任务序号； bg 任务序号 把任务放到后台；fg 任务序号 把任务放到前台；ctrl+c 停止任务</p>
-<h4 id="搜索工具"><a href="#搜索工具" class="headerlink" title="搜索工具"></a>搜索工具</h4><h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><p><a href="http://blog.sina.com.cn/s/blog_65e13da00100of1f.html">http://blog.sina.com.cn/s/blog_65e13da00100of1f.html</a></p>
-<ul>
-<li><p>或操作</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep -E &#x27;123|abc&#x27; filename   # 找出文件（filename）中包含123或者包含abc的行，-E指用正则表达式来描述关键词</span><br><span class="line">egrep &#x27;123|abc&#x27; filename     # 用egrep同样可以实现</span><br><span class="line">awk &#x27;/123|abc/&#x27; filename     # awk 的实现方式</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>与操作</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep pattern1 files | grep pattern2  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示既匹配 pattern1 又匹配 pattern2 的行。</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>其他操作</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep -i pattern files   # 不区分大小写地搜索。默认情况区分大小写，</span><br><span class="line">grep -r pattern ./*     # 可以搜索次级目录下的文件</span><br><span class="line">grep -l pattern files   # 只列出匹配的文件名，</span><br><span class="line">grep -L pattern files   # 列出不匹配的文件名，</span><br><span class="line">grep -w pattern files   # 只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’），</span><br><span class="line">grep -C number pattern files //匹配的上下文分别显示[number]行，</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="find"><a href="#find" class="headerlink" title="find"></a>find</h4><p>该命令可以用于查找文件名中带有某字符的文件，也可查找近期更新或读取过的文件等等。个人最常用的还是下面的这个命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">find ./ -name &quot;*.txt&quot; | xargs grep  &quot;Hello&quot;  </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找出后缀为txt的文件，再次基础上再筛选出文件内容中有Hello的</span></span><br><span class="line">find ./ -name &quot;*.txt&quot; | grep  &quot;Hello&quot;     </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">类似于find ./ -name <span class="string">&quot;*Hello*.txt&quot;</span></span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Linux进程管理与后台运行"><a href="#Linux进程管理与后台运行" class="headerlink" title="Linux进程管理与后台运行"></a>Linux进程管理与后台运行</h4><p>常用任务管理命令</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">jobs      # 查看任务，返回任务编号n和进程号</span><br><span class="line">bg  %n    # 将编号为n的任务转后台运行</span><br><span class="line">fg  %n    # 将编号为n的任务转前台运行</span><br><span class="line">ctrl+z    # 挂起当前任务</span><br><span class="line">ctrl+c    # 结束当前任务</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">kill -9  进程号 # 立即强制删除一个工作   </span><br><span class="line">kill -15 %n  # 以正常的程序方式终止一项工作</span><br></pre></td></tr></table></figure>
-
-<p>不受HUP影响的后台运行<br>在Linux中，如果要让进程在后台运行，一般情况下，我们在命令后面加上&amp;即可。 但这样是将命令放入到一个作业队列中了，但当网络断开或本地终端断开连接后，终端会发送hangup（HUP）信号来通知其关闭所有子进程，因此该任务也会终止。 为了使任务不受HUP（hangup）信号影响，该博文 记录了好几种方法。 本人觉得最好用的是以下两种，记录如下。</p>
-<ul>
-<li>nohup</li>
-</ul>
-<p>在正常命令前加入nohup，就可以让提交的命令忽略 hangup 信号。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nohup mpirun –np 8 ./wrf.exe</span><br><span class="line">nohup command &gt; myout.file 2&gt;&amp;1 &amp;  </span><br></pre></td></tr></table></figure>
-
-<p>指定了输出信息的文件，缺省情况下该作业的所有输出都被重定向到一个名为<code>nohup.out</code>的文件中</p>
-<p>用 nohup 后，可以用 <code>jobs</code> 来查看任务， 再次登录查看任务可以用 <code>top</code> 或者 <code>ps –a</code> <code>ps -ef</code> 可以查看主机所有运行的进程 <code>ps -ef | grep</code> 过滤条件 但是，请注意，以上两个命令都只能查看单个节点的运行情况。对于并行运行、集群系统、天河等电脑，则无法使用上述命令来查看任务提交情况，而应该使用 qstat（四期）, yhq(tianhe)</p>
-<ul>
-<li>screen</li>
-</ul>
-<p>通过screen来创建新的虚拟终端，在该终端中运行作业。 </p>
-<p><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-screen/">https://www.ibm.com/developerworks/cn/linux/l-cn-screen/</a></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">最好给每个会话命名，便于区分</span></span><br><span class="line">screen -dmS session_name # 建立一个一开始便处于断开模式下的会话（-S 表示创建screen会话时为会话指定一个名字）</span><br><span class="line">screen -r session_name # 重新连接指定会话</span><br><span class="line">screen -d session_name # 断开其他正在运行的screen会话</span><br><span class="line">screen -S session_name -X quit # 删除一个会话</span><br><span class="line"></span><br><span class="line">screen -list # 列出所有会话名、状态</span><br><span class="line">screen -wipe # 会清除会话状态为 dead 的会话</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入会话后，可用快捷键CTRL-a CTRL-d 来暂时断开当前会话，任务不会中断</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入会话后，CTRL-c CTRL-d，任务被中断并删除</span></span><br><span class="line"></span><br><span class="line">screen -h num	 # 可以指定历史回滚缓冲区大小为num行</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="cheyenne"><a href="#cheyenne" class="headerlink" title="cheyenne"></a>cheyenne</h4><p>You can either copy things over to our local machines or you could work directly on cheyenne. If you want to do something that is memory intensive on cheyenne you need to open up a session on the processing nodes. This can be done using the following….</p>
-<p><code>execdav -a P04010022 -m 3G -t 12:00:00</code></p>
-<p>You can replace 3G with whatever memory allocation you want. It’s often hard to know but if you can go as low as you think, you’ll get in the queue faster. You can change 12:00:00 to however long you want to open the session for. Again, the lower the time, the quicker you’ll go through the queue. It doesn’t matter if you have a session open and it’s idle. P04010022 is the project number. You’ll have to load the modules you want to use e.g., </p>
-<p><code>module load ncl</code></p>
-<p><a href="https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots">https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots</a></p>
-<p>To see if your current directory is present in any snapshots, just run <strong>snapls</strong> on your command line. You can also specify a directory by executing <strong>snapls -ldhtr directory_name</strong>.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zwfjvruqj210o0sqjw1.jpg" alt="File space"></p>
-<h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p><a href="https://explainshell.com/">https://explainshell.com/</a></p>
-<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><p>- 添加 Homebrew 到 &#x2F;home&#x2F;rychen&#x2F;.bash_profile 文件的 PATH 中，执行下面命令即可:</p>
- <figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">echo <span class="string">&#x27;eval &quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; /home/rychen/.bash_profile</span><br><span class="line"></span><br><span class="line">eval <span class="string">&quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h4><p><code>/bin/bash -c &quot;**$(**curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh**)**&quot;</code></p>
-<p><a href="https://zhuanlan.zhihu.com/p/90508170">https://zhuanlan.zhihu.com/p/90508170</a></p>
-<h4 id="Wrong-with-git-and-curl-verison"><a href="#Wrong-with-git-and-curl-verison" class="headerlink" title="Wrong with git and curl verison"></a>Wrong with git and curl verison</h4><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">export HOMEBREW_GIT_PATH=/usr/<span class="keyword">local</span>/bin/git</span><br><span class="line">export HOMEBREW_NO_ENV_FILTERING=<span class="number">1</span></span><br><span class="line">export HOMEBREW_CURL_PATH=<span class="string">&quot;$HOME/bin/curl&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Vimium-chrome-插件"><a href="#Vimium-chrome-插件" class="headerlink" title="Vimium chrome 插件"></a>Vimium chrome 插件</h4><p><a href="https://chrome.google.com/extensions/detail/dbepggeogbaibhgnhhndojpepiihcmeb">https://chrome.google.com/extensions/detail/dbepggeogbaibhgnhhndojpepiihcmeb</a></p>
-<ul>
-<li>向下滚动页面：j</li>
-<li>向上滚动页面：k</li>
-<li>上翻一页：d</li>
-<li>下翻一页：u</li>
-<li>滚到最顶部：gg</li>
-<li>滚动最底部：G</li>
-<li>访问上级页面：H</li>
-<li>访问下级页面：L</li>
-<li>刷新当前页面：r</li>
-<li>关闭当前页面：x</li>
-<li>打开新标签页：t</li>
-<li>查看页面可点击链接：f</li>
-</ul>
-<h4 id="NCAR-Tutorial"><a href="#NCAR-Tutorial" class="headerlink" title="NCAR Tutorial"></a>NCAR Tutorial</h4><p><a href="https://www.meted.ucar.edu/ucar/unix/">https://www.meted.ucar.edu/ucar/unix/</a> </p>
-<p><a href="https://www.meted.ucar.edu/ucar/fortran/">https://www.meted.ucar.edu/ucar/fortran/</a></p>
-<p><a href="https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash">https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -948,102 +774,6 @@
       </categories>
   </entry>
   <entry>
-    <title>WRF</title>
-    <url>/2022/05/01/Tool/WRF/</url>
-    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
-<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
-<p>实时预报数据下载地址：</p>
-<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
-<p>历史预报数据下载地址：</p>
-<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
-<p>数据下载脚本：</p>
-<p>In [1]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
-
-<p>驱动WRF</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
-<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
-<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
-<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
-<p><strong>注意</strong>：</p>
-<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
-<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
-<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
-<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
-<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
-<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
-<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
-<ul>
-<li><p>链接 met_em* 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
-<ul>
-<li><p>初始化气象要素</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
-
-<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
-</li>
-<li><p>模拟积分——开始模拟</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
-</li>
-</ul>
-<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
-<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
-<p>关于模式后处理，之前也提到过一些：</p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
-<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Writting</title>
     <url>/2022/06/02/Tool/Writting/</url>
     <content><![CDATA[<p>作者：Leo Dong<br>链接：<a href="https://www.zhihu.com/question/35931336/answer/1338390359">https://www.zhihu.com/question/35931336/answer/1338390359</a></p>
@@ -1196,6 +926,287 @@
       </categories>
   </entry>
   <entry>
+    <title>Linux</title>
+    <url>/2022/05/01/Tool/Linux/</url>
+    <content><![CDATA[<h4 id="ssh-Automatic-Login"><a href="#ssh-Automatic-Login" class="headerlink" title="ssh Automatic Login"></a>ssh Automatic Login</h4><ol>
+<li><p>Linux下生成密钥</p>
+<p>生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的。<br>然后我们再执行 ssh-keygen -t rsa，进入“.ssh”会生成以下几个文件：<br>id_rsa : 生成的私钥文件<br>id_rsa.pub ： 生成的公钥文件 </p>
+</li>
+<li><p>远程免密登录<br>现在我们就需要把key文件复制到其它几台服务器了，而复制的方式主要有两种：</p>
+<ul>
+<li>通过ssh-copy-id的方式<br>　命令： ssh-copy-id 服务器IP<br>  　这样我们就把生成的key放到了指定的服务器上了</li>
+<li>手工复制<br>这个不多说了，把那几个文件&#x2F;.ssh&#x2F;id_rsa.put通过U盘或其它的存储介质复制到其它服务器上。<br>上面这些步骤做完之后我们就可以高兴的用 命令 ssh 服务器IP 来免密码访问其它服务器了。</li>
+</ul>
+</li>
+</ol>
+<p>来源：<a href="https://blog.csdn.net/wangzhkai/article/details/80288894">https://blog.csdn.net/wangzhkai/article/details/80288894</a></p>
+<h4 id="源代码软件安装命令"><a href="#源代码软件安装命令" class="headerlink" title="源代码软件安装命令"></a>源代码软件安装命令</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/test</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="恢复成系统缺省的-bashrc"><a href="#恢复成系统缺省的-bashrc" class="headerlink" title="恢复成系统缺省的.bashrc"></a>恢复成系统缺省的.bashrc</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cp /etc/skel/.bashrc ~</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Wget"><a href="#Wget" class="headerlink" title="Wget"></a>Wget</h4><p><code>wget -r -c —timestamping ftp://ftp_hermes:hermes%@ftp.hermes.acri.fr/828378130</code></p>
+<p>如果时间戳更新则下载，否则不下载</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wget --user=ifenty --password=ABCD -r -nc -np -nH --cut-dirs=2 https://ecco.jpl.nasa.gov/drive/files/ECCO2/cube92_latlon_quart_90S90N/SALT.nc</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看文件个数"><a href="#查看文件个数" class="headerlink" title="查看文件个数"></a>查看文件个数</h4><p><code>ls -l | grep &quot;^-&quot; | wc -l</code></p>
+<h4 id="查看目录个数"><a href="#查看目录个数" class="headerlink" title="查看目录个数"></a>查看目录个数</h4><p><code>ls -l ./|grep &quot;^d&quot;|wc -l</code></p>
+<h4 id="按文件大小排序"><a href="#按文件大小排序" class="headerlink" title="按文件大小排序"></a>按文件大小排序</h4><p><code>du -s * | sort -n | head -566</code></p>
+<h4 id="数字范围"><a href="#数字范围" class="headerlink" title="数字范围"></a>数字范围</h4><p><code>&#123;10..20&#125; or [10-20]</code></p>
+<h4 id="安装CDO"><a href="#安装CDO" class="headerlink" title="安装CDO"></a>安装CDO</h4><p><code>conda create --prefix=/home/rychen/cdo -c conda-forge cdo</code></p>
+<h4 id="安装NCO"><a href="#安装NCO" class="headerlink" title="安装NCO"></a>安装NCO</h4><p><code>conda install -c conda-forge nco</code></p>
+<p>安装顺序：conda - NCL - NCO</p>
+<h4 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h4><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">tar -xf XXX.tar</span><br><span class="line">unzip XXX.zip</span><br><span class="line">gunzip XXX.gz</span><br><span class="line">tar -xvf XXX.tar</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="压缩包命令"><a href="#压缩包命令" class="headerlink" title="压缩包命令"></a>压缩包命令</h4><p><a href="https://www.jb51.net/LINUXjishu/43356.html">https://www.jb51.net/LINUXjishu/43356.html</a></p>
+<p> <a href="https://www.cnblogs.com/yuandonghua/p/10254288.html">https://www.cnblogs.com/yuandonghua/p/10254288.html</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">tar -zxv -f filename.tar.gz -c directory  </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将压缩包解压在directory文件夹下</span></span><br><span class="line">tar -jxv -f filename.tar.bz2 -c directory </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将压缩包解压在directory文件夹下</span></span><br><span class="line">tar –xZv -f file.tar.Z # 解压 tar.Z 包</span><br><span class="line">tar –xv -f file.tar  # 解压tar包</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">tar参数 -x 表示解压，-c 表示压缩，-t 表示查看内容，-r 表示向压缩归档文件末尾追加文件，-u 表示更新原压缩包中的文件</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将所有.jpg的文件打成一个tar包，并用bzip2压缩</span></span><br><span class="line">tar -cjf all.tar.bz2 *.jpg  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新原来tar包中logo.gif文件</span></span><br><span class="line">tar -uf all.tar logo.gif</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">rar包只能用 unrar解压，据说RAR <span class="keyword">for</span> Linux不是免费的</span></span><br><span class="line">unrar e file.rar  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">zip包只能用 unzip解压</span></span><br><span class="line">unzip file.zip    </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看内存使用"><a href="#查看内存使用" class="headerlink" title="查看内存使用"></a>查看内存使用</h4><p><code>ps aux | sort -rnk 4 | head -5</code></p>
+<h4 id="查看内存剩余"><a href="#查看内存剩余" class="headerlink" title="查看内存剩余"></a>查看内存剩余</h4><p><code>free -h</code></p>
+<h4 id="循环切割图片"><a href="#循环切割图片" class="headerlink" title="循环切割图片"></a>循环切割图片</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for i in `ls ./`</span><br><span class="line">	do pdfcrop $i $i</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="循环remap"><a href="#循环remap" class="headerlink" title="循环remap"></a>循环remap</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">do cdo remapbil,r36x19 $i ../Remap/Control/$i</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="sh-loop"><a href="#sh-loop" class="headerlink" title="sh loop"></a>sh loop</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Declare an array of string with <span class="built_in">type</span></span></span><br><span class="line">declare -a StringArray=(&quot;Linux Mint&quot; &quot;Fedora&quot; &quot;Red Hat Linux&quot; &quot;Ubuntu&quot; &quot;Debian&quot; )</span><br><span class="line"><span class="meta prompt_"> </span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Iterate the string array using <span class="keyword">for</span> loop</span></span><br><span class="line">for val in $&#123;StringArray[@]&#125;; do</span><br><span class="line">   echo $val</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for i in &#123;1961..2013&#125; </span><br><span class="line">do</span><br><span class="line">  ncl  year_select=$i 1_cal_divQ_JRA55_trans.ncl</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">for i <span class="keyword">in</span> `ls ./`</span><br><span class="line"><span class="keyword">do</span> pdfcrop $i $i</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">for i <span class="keyword">in</span> `ls ./`</span><br><span class="line"><span class="keyword">do</span> cdo remapbil,r4500x3600 $i ../tos_remap/$i</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="移动前5个文件到相应目录下"><a href="#移动前5个文件到相应目录下" class="headerlink" title="移动前5个文件到相应目录下"></a>移动前5个文件到相应目录下</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for i in `ls|head -n 5`</span><br><span class="line">do</span><br><span class="line">mv $i ./dir</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="切割图片"><a href="#切割图片" class="headerlink" title="切割图片"></a>切割图片</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">convert -density 216 -trim +repage -border 8 -bordercolor white -flatten fig1.eps fig1.png</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="动图制作"><a href="#动图制作" class="headerlink" title="动图制作"></a>动图制作</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install imagemagick</span><br><span class="line">convert -delay 20 `ls|head -n 20` -loop 0 ~/finerainy.gif</span><br><span class="line">convert -density 200x200 -dispose previous -quality 100 -delay 40 `ls|head -n 9` -loop 0 ./test.gif</span><br><span class="line">convert -delay 20 `ls|head -n 20` -loop 0 ~/finerainy.gif</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://www.imagemagick.org/script/download.php#macosx">https://www.imagemagick.org/script/download.php#macosx</a></p>
+<h4 id="查看文件个数-1"><a href="#查看文件个数-1" class="headerlink" title="查看文件个数"></a>查看文件个数</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls -l | grep &quot;^-&quot; | wc -l</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="标准错误输出重定向到标准输出"><a href="#标准错误输出重定向到标准输出" class="headerlink" title="标准错误输出重定向到标准输出"></a>标准错误输出重定向到标准输出</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">1&gt; </span><span class="language-bash">Get-BoM-Temp.out 2&gt;&amp;1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="按文件大小排序-1"><a href="#按文件大小排序-1" class="headerlink" title="按文件大小排序"></a>按文件大小排序</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">du -s * | sort -n | head -10</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="查看存储空间"><a href="#查看存储空间" class="headerlink" title="查看存储空间"></a>查看存储空间</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">df -h #将以人类可以阅读的容量格式显示各挂载点的存储空间使用情况</span><br><span class="line">du -h --max-depth=1 /path # 表示显示 path 路径下只深入到第一层子目录的各文件夹大小</span><br><span class="line">free -h #将以人类可以阅读的容量格式显示内存使用情况</span><br><span class="line">fdisk -l #查看硬盘及分区情况</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="linux中文件名有空格"><a href="#linux中文件名有空格" class="headerlink" title="linux中文件名有空格"></a>linux中文件名有空格</h4><p>在空格前加反斜杠,例如文件名为“software package”，在Linux中可表示为“software\ package”</p>
+<h4 id="批量替换文件名中特定字符"><a href="#批量替换文件名中特定字符" class="headerlink" title="批量替换文件名中特定字符"></a>批量替换文件名中特定字符</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">for file in `ls | grep .nc`; do newfile=`echo $file | sed &#x27;s/pt/pt_S2S/g&#x27;`; mv $file $newfile; done</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Linux记录程序交互过程"><a href="#Linux记录程序交互过程" class="headerlink" title="Linux记录程序交互过程"></a>Linux记录程序交互过程</h4><p><a href="https://www.ibm.com/developerworks/cn/aix/library/au-screenshots1/index.html">https://www.ibm.com/developerworks/cn/aix/library/au-screenshots1/index.html</a></p>
+<p>平时安装或调试一个软件时，总会需要记录程序输出信息或交互过程以便后期查看学习。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ls ./ &gt; ./file1   #将ls程序的标准输出写到file1文件中</span><br><span class="line">ls ./ 2&gt; ./file1  #将ls程序的错误输出写到file1文件中</span><br><span class="line">ls ./ &amp;&gt; ./file1  #将ls程序的标准输出和错误输出都写到file1文件中</span><br><span class="line">ls ./ 1&gt; ./file1 2&gt; ./file2 #将ls程序的标准输出写到file1文件中，将错误输出写到file2文件中</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">单箭头&gt;，表示以覆盖的方式输出到文件中</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">双箭头&gt;&gt;，表示以追加的方式输出到文件中，不会覆盖之前的内容</span></span><br></pre></td></tr></table></figure>
+
+<p>然而常用的重定向功能只能记录程序的标准输出或错误输出，不能记录用户与程序的交互过程，此时发现一个比较好用的命令 <code>script output_file.txt</code> 。加入参数<code>-a</code>会把会话记录附加到<code>output_file.txt</code>文件后面，保留先前的内容。<br>该命令会启动一个子shell，并将用户键入的所有内容、运行的任何程序的所有输出以及这些程序产生的任何错误保存到一个输出文件中。最后通过键入exit命令退出 script 模式并关闭输出文件。<br>script 命令产生的文件通常包含控制字符，即退格、回车、用于显示某些提示的特殊字符以及您编辑前一个 shell 命令时使用的字符等等。可以使用文本编辑器清理script输出文件，网上有各种清理脚本可用。</p>
+<h4 id="jobs"><a href="#jobs" class="headerlink" title="jobs"></a>jobs</h4><p>ctrl+z 暂停任务； jobs 查看任务序号； bg 任务序号 把任务放到后台；fg 任务序号 把任务放到前台；ctrl+c 停止任务</p>
+<h4 id="搜索工具"><a href="#搜索工具" class="headerlink" title="搜索工具"></a>搜索工具</h4><h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><p><a href="http://blog.sina.com.cn/s/blog_65e13da00100of1f.html">http://blog.sina.com.cn/s/blog_65e13da00100of1f.html</a></p>
+<ul>
+<li><p>或操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep -E &#x27;123|abc&#x27; filename   # 找出文件（filename）中包含123或者包含abc的行，-E指用正则表达式来描述关键词</span><br><span class="line">egrep &#x27;123|abc&#x27; filename     # 用egrep同样可以实现</span><br><span class="line">awk &#x27;/123|abc/&#x27; filename     # awk 的实现方式</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>与操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep pattern1 files | grep pattern2  </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">显示既匹配 pattern1 又匹配 pattern2 的行。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他操作</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">grep -i pattern files   # 不区分大小写地搜索。默认情况区分大小写，</span><br><span class="line">grep -r pattern ./*     # 可以搜索次级目录下的文件</span><br><span class="line">grep -l pattern files   # 只列出匹配的文件名，</span><br><span class="line">grep -L pattern files   # 列出不匹配的文件名，</span><br><span class="line">grep -w pattern files   # 只匹配整个单词，而不是字符串的一部分（如匹配‘magic’，而不是‘magical’），</span><br><span class="line">grep -C number pattern files //匹配的上下文分别显示[number]行，</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="find"><a href="#find" class="headerlink" title="find"></a>find</h4><p>该命令可以用于查找文件名中带有某字符的文件，也可查找近期更新或读取过的文件等等。个人最常用的还是下面的这个命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">find ./ -name &quot;*.txt&quot; | xargs grep  &quot;Hello&quot;  </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">找出后缀为txt的文件，再次基础上再筛选出文件内容中有Hello的</span></span><br><span class="line">find ./ -name &quot;*.txt&quot; | grep  &quot;Hello&quot;     </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">类似于find ./ -name <span class="string">&quot;*Hello*.txt&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Linux进程管理与后台运行"><a href="#Linux进程管理与后台运行" class="headerlink" title="Linux进程管理与后台运行"></a>Linux进程管理与后台运行</h4><p>常用任务管理命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">jobs      # 查看任务，返回任务编号n和进程号</span><br><span class="line">bg  %n    # 将编号为n的任务转后台运行</span><br><span class="line">fg  %n    # 将编号为n的任务转前台运行</span><br><span class="line">ctrl+z    # 挂起当前任务</span><br><span class="line">ctrl+c    # 结束当前任务</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">kill -9  进程号 # 立即强制删除一个工作   </span><br><span class="line">kill -15 %n  # 以正常的程序方式终止一项工作</span><br></pre></td></tr></table></figure>
+
+<p>不受HUP影响的后台运行<br>在Linux中，如果要让进程在后台运行，一般情况下，我们在命令后面加上&amp;即可。 但这样是将命令放入到一个作业队列中了，但当网络断开或本地终端断开连接后，终端会发送hangup（HUP）信号来通知其关闭所有子进程，因此该任务也会终止。 为了使任务不受HUP（hangup）信号影响，该博文 记录了好几种方法。 本人觉得最好用的是以下两种，记录如下。</p>
+<ul>
+<li>nohup</li>
+</ul>
+<p>在正常命令前加入nohup，就可以让提交的命令忽略 hangup 信号。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nohup mpirun –np 8 ./wrf.exe</span><br><span class="line">nohup command &gt; myout.file 2&gt;&amp;1 &amp;  </span><br></pre></td></tr></table></figure>
+
+<p>指定了输出信息的文件，缺省情况下该作业的所有输出都被重定向到一个名为<code>nohup.out</code>的文件中</p>
+<p>用 nohup 后，可以用 <code>jobs</code> 来查看任务， 再次登录查看任务可以用 <code>top</code> 或者 <code>ps –a</code> <code>ps -ef</code> 可以查看主机所有运行的进程 <code>ps -ef | grep</code> 过滤条件 但是，请注意，以上两个命令都只能查看单个节点的运行情况。对于并行运行、集群系统、天河等电脑，则无法使用上述命令来查看任务提交情况，而应该使用 qstat（四期）, yhq(tianhe)</p>
+<ul>
+<li>screen</li>
+</ul>
+<p>通过screen来创建新的虚拟终端，在该终端中运行作业。 </p>
+<p><a href="https://www.ibm.com/developerworks/cn/linux/l-cn-screen/">https://www.ibm.com/developerworks/cn/linux/l-cn-screen/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">最好给每个会话命名，便于区分</span></span><br><span class="line">screen -dmS session_name # 建立一个一开始便处于断开模式下的会话（-S 表示创建screen会话时为会话指定一个名字）</span><br><span class="line">screen -r session_name # 重新连接指定会话</span><br><span class="line">screen -d session_name # 断开其他正在运行的screen会话</span><br><span class="line">screen -S session_name -X quit # 删除一个会话</span><br><span class="line"></span><br><span class="line">screen -list # 列出所有会话名、状态</span><br><span class="line">screen -wipe # 会清除会话状态为 dead 的会话</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入会话后，可用快捷键CTRL-a CTRL-d 来暂时断开当前会话，任务不会中断</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入会话后，CTRL-c CTRL-d，任务被中断并删除</span></span><br><span class="line"></span><br><span class="line">screen -h num	 # 可以指定历史回滚缓冲区大小为num行</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="cheyenne"><a href="#cheyenne" class="headerlink" title="cheyenne"></a>cheyenne</h4><p>You can either copy things over to our local machines or you could work directly on cheyenne. If you want to do something that is memory intensive on cheyenne you need to open up a session on the processing nodes. This can be done using the following….</p>
+<p><code>execdav -a P04010022 -m 3G -t 12:00:00</code></p>
+<p>You can replace 3G with whatever memory allocation you want. It’s often hard to know but if you can go as low as you think, you’ll get in the queue faster. You can change 12:00:00 to however long you want to open the session for. Again, the lower the time, the quicker you’ll go through the queue. It doesn’t matter if you have a session open and it’s idle. P04010022 is the project number. You’ll have to load the modules you want to use e.g., </p>
+<p><code>module load ncl</code></p>
+<p><a href="https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots">https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots</a></p>
+<p>To see if your current directory is present in any snapshots, just run <strong>snapls</strong> on your command line. You can also specify a directory by executing <strong>snapls -ldhtr directory_name</strong>.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zwfjvruqj210o0sqjw1.jpg" alt="File space"></p>
+<h4 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h4><p><a href="https://explainshell.com/">https://explainshell.com/</a></p>
+<h4 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h4><p>- 添加 Homebrew 到 &#x2F;home&#x2F;rychen&#x2F;.bash_profile 文件的 PATH 中，执行下面命令即可:</p>
+ <figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">echo <span class="string">&#x27;eval &quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; /home/rychen/.bash_profile</span><br><span class="line"></span><br><span class="line">eval <span class="string">&quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="安装homebrew"><a href="#安装homebrew" class="headerlink" title="安装homebrew"></a>安装homebrew</h4><p><code>/bin/bash -c &quot;**$(**curl -fsSL https://cdn.jsdelivr.net/gh/ineo6/homebrew-install/install.sh**)**&quot;</code></p>
+<p><a href="https://zhuanlan.zhihu.com/p/90508170">https://zhuanlan.zhihu.com/p/90508170</a></p>
+<h4 id="Wrong-with-git-and-curl-verison"><a href="#Wrong-with-git-and-curl-verison" class="headerlink" title="Wrong with git and curl verison"></a>Wrong with git and curl verison</h4><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">export HOMEBREW_GIT_PATH=/usr/<span class="keyword">local</span>/bin/git</span><br><span class="line">export HOMEBREW_NO_ENV_FILTERING=<span class="number">1</span></span><br><span class="line">export HOMEBREW_CURL_PATH=<span class="string">&quot;$HOME/bin/curl&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Vimium-chrome-插件"><a href="#Vimium-chrome-插件" class="headerlink" title="Vimium chrome 插件"></a>Vimium chrome 插件</h4><p><a href="https://chrome.google.com/extensions/detail/dbepggeogbaibhgnhhndojpepiihcmeb">https://chrome.google.com/extensions/detail/dbepggeogbaibhgnhhndojpepiihcmeb</a></p>
+<ul>
+<li>向下滚动页面：j</li>
+<li>向上滚动页面：k</li>
+<li>上翻一页：d</li>
+<li>下翻一页：u</li>
+<li>滚到最顶部：gg</li>
+<li>滚动最底部：G</li>
+<li>访问上级页面：H</li>
+<li>访问下级页面：L</li>
+<li>刷新当前页面：r</li>
+<li>关闭当前页面：x</li>
+<li>打开新标签页：t</li>
+<li>查看页面可点击链接：f</li>
+</ul>
+<h4 id="NCAR-Tutorial"><a href="#NCAR-Tutorial" class="headerlink" title="NCAR Tutorial"></a>NCAR Tutorial</h4><p><a href="https://www.meted.ucar.edu/ucar/unix/">https://www.meted.ucar.edu/ucar/unix/</a> </p>
+<p><a href="https://www.meted.ucar.edu/ucar/fortran/">https://www.meted.ucar.edu/ucar/fortran/</a></p>
+<p><a href="https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash">https://www.meted.ucar.edu/ucar/unix/navmenu.php?tab=1&amp;page=3-3-0&amp;type=flash</a></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WRF</title>
+    <url>/2022/05/01/Tool/WRF/</url>
+    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
+<p>实时预报数据下载地址：</p>
+<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
+<p>历史预报数据下载地址：</p>
+<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
+<p>数据下载脚本：</p>
+<p>In [1]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
+
+<p>驱动WRF</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
+<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
+<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
+
+
+
+<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
+<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
+<p><strong>注意</strong>：</p>
+<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
+<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
+<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
+<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
+<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
+<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
+<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
+<ul>
+<li><p>链接 met_em* 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
+<ul>
+<li><p>初始化气象要素</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
+
+<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
+</li>
+<li><p>模拟积分——开始模拟</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
+</li>
+</ul>
+<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
+<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
+<p>关于模式后处理，之前也提到过一些：</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
+<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Yaml</title>
     <url>/2022/05/24/Tool/Yaml/</url>
     <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
@@ -1303,37 +1314,17 @@
       </categories>
   </entry>
   <entry>
-    <title>应俊</title>
-    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
-    <content><![CDATA[<h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
-<p>CMIP6 intensity of ENSO 一致性</p>
-<p>Increased ENSO rainfall variability in response to global warming</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
-<p>relative SST 模式和观测差异很大   </p>
-<p>模式EN-like，观测LN-Like</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
-<p>relative SST 的变化信号显现较 annual mean 晚</p>
-<p>ENSO海温：振幅  </p>
-<p>ENSO降水：东移</p>
-<p>ENSO降水变化信号较海温早30年左右</p>
-<p>动力部分起主导作用：温度相对变化</p>
-<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
-<p><strong>学术报告 2022-11</strong></p>
-<p><strong>报告时间：2022年5月17日 09:30</strong></p>
-<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+    <title>CHLA</title>
+    <url>/2022/05/24/Paper/CHLA/</url>
+    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
+<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
 <hr>
-<p><strong>报告人简介</strong></p>
-<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
-<p><strong>报告题目</strong></p>
-<p>Emergence of climate change in the tropical Pacific</p>
-<p><strong>报告摘要</strong></p>
-<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
+<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
+<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
+<hr>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>Paper</category>
       </categories>
   </entry>
   <entry>
@@ -1588,18 +1579,43 @@
       </categories>
   </entry>
   <entry>
-    <title>CDO_Ref_Card</title>
-    <url>/2022/06/07/PDF/CDO_Ref_Card/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+    <title>应俊</title>
+    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
+    <content><![CDATA[<h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
+<p>CMIP6 intensity of ENSO 一致性</p>
+<p>Increased ENSO rainfall variability in response to global warming</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
+<p>relative SST 模式和观测差异很大   </p>
+<p>模式EN-like，观测LN-Like</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
+<p>relative SST 的变化信号显现较 annual mean 晚</p>
+<p>ENSO海温：振幅  </p>
+<p>ENSO降水：东移</p>
+<p>ENSO降水变化信号较海温早30年左右</p>
+<p>动力部分起主导作用：温度相对变化</p>
+<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
+<p><strong>学术报告 2022-11</strong></p>
+<p><strong>报告时间：2022年5月17日 09:30</strong></p>
+<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
+<p><strong>报告题目</strong></p>
+<p>Emergence of climate change in the tropical Pacific</p>
+<p><strong>报告摘要</strong></p>
+<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
 ]]></content>
       <categories>
-        <category>PDF</category>
+        <category>Seminar</category>
       </categories>
   </entry>
   <entry>
-    <title>CDO_UserGuide</title>
-    <url>/2022/06/07/PDF/CDO_UserGuide.md/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
+    <title>CDO_Ref_Card</title>
+    <url>/2022/06/07/PDF/CDO_Ref_Card/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>PDF</category>
@@ -1615,9 +1631,9 @@
       </categories>
   </entry>
   <entry>
-    <title>ENSO_Events</title>
-    <url>/2022/06/07/PDF/ENSO_Events/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+    <title>CDO_UserGuide</title>
+    <url>/2022/06/07/PDF/CDO_UserGuide.md/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>PDF</category>
@@ -1627,6 +1643,15 @@
     <title>ENSO_Waves</title>
     <url>/2022/06/07/PDF/ENSO_Waves/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>PDF</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO_Events</title>
+    <url>/2022/06/07/PDF/ENSO_Events/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>PDF</category>
@@ -1675,31 +1700,6 @@
 ]]></content>
       <categories>
         <category>PDF</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Data</title>
-    <url>/2022/06/07/PDF/Ref_Data/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-
-]]></content>
-      <categories>
-        <category>PDF</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CHLA</title>
-    <url>/2022/05/24/Paper/CHLA/</url>
-    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
-<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
-<hr>
-<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
-<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Paper</category>
       </categories>
   </entry>
 </search>
