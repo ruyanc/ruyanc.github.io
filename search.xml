@@ -1,66 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>ENSO_Events</title>
-    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>About Me</title>
     <url>/2050/01/01/Welcome/</url>
     <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2kg7l1fo6j21d30u0afh.jpg" alt="cover"></p>
 ]]></content>
       <categories>
         <category>Welcome</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fundamental</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Data</title>
-    <url>/2022/06/07/OcnSci/Ref_Data/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CHLA</title>
-    <url>/2022/05/24/Paper/CHLA/</url>
-    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
-<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
-<hr>
-<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
-<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Paper</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO_Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -104,9 +50,58 @@
       </categories>
   </entry>
   <entry>
+    <title>ENSO_Events</title>
+    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO_Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fundamental</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ref_Data</title>
+    <url>/2022/06/07/OcnSci/Ref_Data/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CDO_Ref_Card</title>
     <url>/2022/06/07/Tool/CDO_Ref_Card/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CDO_UserGuide</title>
+    <url>/2022/06/07/Tool/CDO_UserGuide.md/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -182,19 +177,39 @@
       </categories>
   </entry>
   <entry>
-    <title>CDO_UserGuide</title>
-    <url>/2022/06/07/Tool/CDO_UserGuide.md/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
+    <title>Fortran95_Introduction</title>
+    <url>/2022/06/07/Tool/Fortran95_Introduction/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
+
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Fortran95_Introduction</title>
-    <url>/2022/06/07/Tool/Fortran95_Introduction/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
+    <title>Github</title>
+    <url>/2022/05/01/Tool/GitHub/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -355,15 +370,6 @@
 <li><p>编辑主题配置文件，启用本地搜索功能：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">Local</span> <span class="keyword">search</span></span><br><span class="line"></span><br><span class="line">local_search:</span><br><span class="line">  enable: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux_CMD</title>
-    <url>/2022/06/07/Tool/Linux_CMD/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -555,28 +561,18 @@
       </categories>
   </entry>
   <entry>
-    <title>Latex_Symbols</title>
-    <url>/2022/06/07/Tool/Latex_Symbols/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
+    <title>Linux_CMD</title>
+    <url>/2022/06/07/Tool/Linux_CMD/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tool/Parameters/</url>
-    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
+    <title>Latex_Symbols</title>
+    <url>/2022/06/07/Tool/Latex_Symbols/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -729,29 +725,9 @@
       </categories>
   </entry>
   <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tool/GitHub/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
+    <title>Python-Matplotlib_Cheatsheet</title>
+    <url>/2022/06/07/Tool/Python-Matplotlib_Cheatsheet/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1046,18 +1022,114 @@
       </categories>
   </entry>
   <entry>
-    <title>Python-Matplotlib_Cheatsheet</title>
-    <url>/2022/06/07/Tool/Python-Matplotlib_Cheatsheet/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
+    <title>Python_Pandas_Cheatsheet</title>
+    <url>/2022/06/07/Tool/Python_Pandas_Cheatsheet/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Python_Pandas_Cheatsheet</title>
-    <url>/2022/06/07/Tool/Python_Pandas_Cheatsheet/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
+    <title>Ref_Figures</title>
+    <url>/2022/06/07/Tool/Ref_Figures/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WRF</title>
+    <url>/2022/05/01/Tool/WRF/</url>
+    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
+<p>实时预报数据下载地址：</p>
+<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
+<p>历史预报数据下载地址：</p>
+<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
+<p>数据下载脚本：</p>
+<p>In [1]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
+
+<p>驱动WRF</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
+<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
+<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
+
+
+
+<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
+<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
+<p><strong>注意</strong>：</p>
+<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
+<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
+<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
+<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
+<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
+<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
+<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
+<ul>
+<li><p>链接 met_em* 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
+<ul>
+<li><p>初始化气象要素</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
+
+<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
+</li>
+<li><p>模拟积分——开始模拟</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
+</li>
+</ul>
+<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
+<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
+<p>关于模式后处理，之前也提到过一些：</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
+<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1323,108 +1395,36 @@
       </categories>
   </entry>
   <entry>
-    <title>WRF</title>
-    <url>/2022/05/01/Tool/WRF/</url>
-    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
-<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
-<p>实时预报数据下载地址：</p>
-<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
-<p>历史预报数据下载地址：</p>
-<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
-<p>数据下载脚本：</p>
-<p>In [1]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
-
-<p>驱动WRF</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tool/Parameters/</url>
+    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
-<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
-<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
 
 
 
-<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
-<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
-<p><strong>注意</strong>：</p>
-<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
-<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
-<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
-<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
-<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
-<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
-<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
-<ul>
-<li><p>链接 met_em* 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
-<ul>
-<li><p>初始化气象要素</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
 
-<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
-</li>
-<li><p>模拟积分——开始模拟</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
-</li>
-</ul>
-<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
-<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
-<p>关于模式后处理，之前也提到过一些：</p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
-<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Ref_Figures</title>
-    <url>/2022/06/07/Tool/Ref_Figures/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+    <title>CHLA</title>
+    <url>/2022/05/24/Paper/CHLA/</url>
+    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
+<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
+<hr>
+<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
+<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
+<hr>
 ]]></content>
       <categories>
-        <category>Tool</category>
+        <category>Paper</category>
       </categories>
   </entry>
   <entry>
@@ -1456,50 +1456,6 @@
 <p>Emergence of climate change in the tropical Pacific</p>
 <p><strong>报告摘要</strong></p>
 <p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>张荣华</title>
-    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
-    <content><![CDATA[<h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
-<p>penetration depth: 太阳辐射的穿透深度</p>
-<p>赤道中东太平洋chla高值与上升流有关</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
-<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
-<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
-<p>clm chla ENSO振幅较观测偏大</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
-<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
-<p>周期偏长的偏差也明显改善</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
-<p>简单大气+复杂OGCM</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
-<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
-<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
-<p>同时均对周期存在影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
-<p>导致了ENSO的复杂性</p>
-<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
-<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
-<p>海洋生物同样可以通过动力过程影响海洋</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1608,9 +1564,44 @@
       </categories>
   </entry>
   <entry>
-    <title>罗德海</title>
-    <url>/2022/06/09/Seminar/0609-%E7%BD%97%E5%BE%B7%E6%B5%B7/</url>
-    <content><![CDATA[<h2 id="多尺度动力学及灾害性天气预报系列讲座-罗德海-中科院大气所"><a href="#多尺度动力学及灾害性天气预报系列讲座-罗德海-中科院大气所" class="headerlink" title="多尺度动力学及灾害性天气预报系列讲座  罗德海 中科院大气所"></a>多尺度动力学及灾害性天气预报系列讲座  罗德海 中科院大气所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tze6qgdlj20f60kbtce.jpg" alt="461f7b9349ac0ce3face6d57b133f5a0"></p>
+    <title>张荣华</title>
+    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
+    <content><![CDATA[<h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
+<p>penetration depth: 太阳辐射的穿透深度</p>
+<p>赤道中东太平洋chla高值与上升流有关</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
+<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
+<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
+<p>clm chla ENSO振幅较观测偏大</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
+<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
+<p>周期偏长的偏差也明显改善</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
+<p>简单大气+复杂OGCM</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
+<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
+<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
+<p>同时均对周期存在影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
+<p>导致了ENSO的复杂性</p>
+<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
+<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
+<p>海洋生物同样可以通过动力过程影响海洋</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1707,6 +1698,15 @@
 <p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
 <hr>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>罗德海</title>
+    <url>/2022/06/09/Seminar/0609-%E7%BD%97%E5%BE%B7%E6%B5%B7/</url>
+    <content><![CDATA[<h2 id="多尺度动力学及灾害性天气预报系列讲座-罗德海-中科院大气所"><a href="#多尺度动力学及灾害性天气预报系列讲座-罗德海-中科院大气所" class="headerlink" title="多尺度动力学及灾害性天气预报系列讲座  罗德海 中科院大气所"></a>多尺度动力学及灾害性天气预报系列讲座  罗德海 中科院大气所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tze6qgdlj20f60kbtce.jpg" alt="461f7b9349ac0ce3face6d57b133f5a0"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
