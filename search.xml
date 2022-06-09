@@ -10,39 +10,107 @@
       </categories>
   </entry>
   <entry>
-    <title>EGU2022</title>
-    <url>/2022/05/23/Seminar/0523-EGU/</url>
-    <content><![CDATA[<h2 id="AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts"><a href="#AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts" class="headerlink" title="AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts"></a><font color=red>AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts</font></h2><h4 id="Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022"><a href="#Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022" class="headerlink" title="Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, https://doi.org/10.5194/egusphere-egu22-12033, 2022."></a>Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, <a href="https://doi.org/10.5194/egusphere-egu22-12033">https://doi.org/10.5194/egusphere-egu22-12033</a>, 2022.</h4><p>Air-sea coupling is critical in influencing atmospheric temperature and precipitation. The effect of greenhouse gases has influenced atmospheric variability and extreme events. Understanding and quantifying the effect of air-sea feedback on atmospheric variability and extremes remains unknown.</p>
-<p>In this work we show results obtained from two numerical experiments. We use the HadSM4 configuration that couples the HadAM4 model at N144 resolution with a Slab Ocean to generate a large ensemble (~1000 members) of realizations of the 2013-14 October-March winter season, forced with a calibrated ocean heat convergence flux.</p>
-<p>A twin experiment is performed by forcing HadAM4 with the diagnosed SST and sea ice from the ensemble, yielding a new ensemble with identical realizations of SST and sea ice. The only difference between the two ensembles is the enabling or disabling of the feedback of air-sea heat fluxes on SST.</p>
-<p>While the impact of the feedback on the mean climate is relatively small, we show that its influence has important consequences for the variability of many important quantities, including air-sea fluxes and return periods of extreme events.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7ve5eqdj21380lawiu.jpg" alt="Screen Shot 2022-05-27 at 15.45.54"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vi7i49j21310ip77s.jpg" alt="Screen Shot 2022-05-27 at 15.48.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vlujgzj21330j20vq.jpg" alt="Screen Shot 2022-05-27 at 15.48.15"></p>
-<hr>
-<h4 id="Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022"><a href="#Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022" class="headerlink" title="Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, https://doi.org/10.5194/egusphere-egu22-4948, 2022."></a>Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, <a href="https://doi.org/10.5194/egusphere-egu22-4948">https://doi.org/10.5194/egusphere-egu22-4948</a>, 2022.</h4><p>Extreme weather events have devastating impacts on human health, economic activities, ecosystems, and infrastructure. It is therefore crucial to anticipate extremes and their impacts to allow for preparedness and emergency measures. There is indeed potential for probabilistic subseasonal prediction on timescales of several weeks for selected cases of extreme events that are linked to remote drivers and large-scale teleconnections. We here present a range of case studies, including heatwaves, cold spells, and tropical cyclones, where precursors and global linkages may have improved sub-seasonal predictability. These linkages include teleconnections from the tropics as well as the stratosphere, in addition to circumglobal teleconnections. The considered heatwaves exhibit predictability on timescales of 3-4 weeks, while this timescale is 2-3 weeks for cold spells. Precipitation extremes are the least predictable among the considered extremes. Tropical cyclones, on the other hand, can exhibit probabilistic forecast skill on timescales of up to 3 weeks, which tends to be favored by remote precursors such as the Madden-Julian Oscillation. These case studies clearly illustrate the potential for event – dependent advance warnings for a wide range of extreme events globally. The subseasonal predictability of extreme events allows for an extension of warning horizons, can provide advance information to impact modelers, and informs communities and stakeholders affected by the impacts of extreme weather events.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vock3yj213a0m2n3v.jpg" alt="Screen Shot 2022-05-27 at 15.50.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7w37yzbj20fp0fnmyk.jpg" alt="Screen Shot 2022-05-27 at 15.52.21"></p>
-<h2 id="OS1-7-The-North-Atlantic-natural-variability-and-global-change"><a href="#OS1-7-The-North-Atlantic-natural-variability-and-global-change" class="headerlink" title="OS1.7 The North Atlantic: natural variability and global change"></a><font color=red>OS1.7 The North Atlantic: natural variability and global change</font></h2><h4 id="Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022"><a href="#Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022" class="headerlink" title="Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, https://doi.org/10.5194/egusphere-egu22-7402, 2022."></a>Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, <a href="https://doi.org/10.5194/egusphere-egu22-7402">https://doi.org/10.5194/egusphere-egu22-7402</a>, 2022.</h4><p>The variations of the winter climate in Europe are influenced by the North Atlantic Oscillation (NAO). Therefore, the ability to predict the NAO is of great value. Predictability of the NAO can be enabled through oceanic processes that are characterized by relatively long time scales, for example interannual to decadal. An important variable for the interannual to (multi-)decadal variability in the North Atlantic is the Atlantic Meridional Overturning Circulation (AMOC). The NAO and the AMOC are known to interact, but observational records of the AMOC are short and the details of this interaction are unknown. Thus, our understanding largely relies on climate model simulations. However, the interaction of NAO and AMOC is very model dependent.</p>
-<p>Here, we present the diversity across CMIP6 models in pre-industrial control experiments. The focus lies on simulations of the NAO, the AMOC, their interaction, and related variables on interannual to decadal timescales. Regarding the NAO-AMOC interaction, there are large differences in the strength of their relationship, in the location (like the latitude of the AMOC), its periodicity and in the time-lag between both variables.</p>
-<p>Furthermore, we propose hypotheses of the causes for this diversity in the models. Specific processes involved in NAO-AMOC interaction might be of varying relative importance from model to model, for example, NAO-related buoyancy versus wind-forcing affecting the AMOC. Also, mean state difference like in the North Atlantic sea surface temperature might play an important role for causing differences in the variability across models.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlexoa6oj21040hs776.jpg" alt="Screen Shot 2022-05-31 at 14.46.32"></p>
-<hr>
-<h4 id="Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022"><a href="#Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022" class="headerlink" title="Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, https://doi.org/10.5194/egusphere-egu22-1682, 2022."></a>Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, <a href="https://doi.org/10.5194/egusphere-egu22-1682">https://doi.org/10.5194/egusphere-egu22-1682</a>, 2022.</h4><p>Record low surface temperatures were observed in the subpolar North Atlantic during 2015, despite the majority of the global ocean experiencing higher than average surface temperatures. We compute mixed layer temperature budgets in the ECCO Version 4 state estimate to further understand the processes responsible for the North Atlantic cold anomaly. We show that surface forcing was the cause of approximately 75% of the initial cooling in the winter of 2013&#x2F;14, after which the cold anomaly was sequestered beneath the deep winter mixed layer. Re-emergence of the cold anomaly during the summer&#x2F;autumn of 2014 was primarily driven by a strong temperature gradient across the base of the mixed layer. Vertical diffusion resulted in approximately 70% of the re-emergence, with entrainment of deeper water driving the remaining 30%. In the summer of 2015, surface warming of the mixed layer was then anomalously low, resulting in the most negative temperature anomalies. Spatial patterns in the budgets show that the initial surface cooling was strongest in the south of the region, due to strong westerly winds related to the positive phase of the East Atlantic Pattern. Subsequent anomalies in surface fluxes associated with the North Atlantic Oscillation were stronger in the north, but the impact on the average temperature of the mixed layer was largely masked by anomalously high winter mixed layer depths.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlkettp8j20z80bpmz5.jpg" alt="Screen Shot 2022-05-31 at 15.00.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rll5b33ej20zm0bj75s.jpg" alt="Screen Shot 2022-05-31 at 15.02.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlol7onhj20xg0en0v1.jpg" alt="Screen Shot 2022-05-31 at 15.04.54"></p>
-<hr>
-<h4 id="Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022"><a href="#Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022" class="headerlink" title="Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, https://doi.org/10.5194/egusphere-egu22-5829, 2022."></a>Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, <a href="https://doi.org/10.5194/egusphere-egu22-5829">https://doi.org/10.5194/egusphere-egu22-5829</a>, 2022.</h4><p>The North Atlantic Jet Stream is well known to leave an imprint on the North Atlantic SST in the form of a tri-polar pattern. The majority of the existing research has focused on the winter jet stream position or strength of the jet stream. Here we look at the response of the North Atlantic SSTs to the strength and position of the North Atlantic Jet Stream across all seasons in the CMIP6 piControl simulations. For the case of both the strength and position of the jet stream the multi-model mean response is a tripolar SST pattern, with the response to the changes in strength showing a slight horseshoe pattern with the northern and southern most anomalies connected on the east and most evident in the summer. The SST response to winter and spring jet stream changes persist the longest with the northern most imprint on the SSTs lasting up to 2 years. The response to changes in the jet stream in the summer and fall leave an imprint on the SSTs lasting atmost into the following year.  Furthermore, we investigate at how these responses vary among the CMIP6 models and potential mechanisms leading to the persistence.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlre690ij20ox0ctjsw.jpg" alt="Screen Shot 2022-05-31 at 15.08.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rltsuyd5j20p60hvadc.jpg" alt="Screen Shot 2022-05-31 at 15.10.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwr3gpwj20px0ian00.jpg" alt="Screen Shot 2022-05-31 at 15.13.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
-<hr>
-<h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
+    <title>ENSO_Events</title>
+    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO_Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fundamental</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ref_Data</title>
+    <url>/2022/06/07/OcnSci/Ref_Data/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CHLA</title>
+    <url>/2022/05/24/Paper/CHLA/</url>
+    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
+<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
+<hr>
+<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
+<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
+<hr>
+]]></content>
+      <categories>
+        <category>Paper</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Tips</title>
+    <url>/2022/06/09/Paper/Tips/</url>
+    <content><![CDATA[<h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Paper</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Conversions_and_Constants</title>
+    <url>/2022/06/07/AtmoSci/Conversions_and_Constants/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>AtmSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Weather</title>
+    <url>/2022/05/01/AtmoSci/Weather/</url>
+    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
+      <categories>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -74,64 +142,6 @@
 <p>Emergence of climate change in the tropical Pacific</p>
 <p><strong>报告摘要</strong></p>
 <p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>秦大河</title>
-    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
-    <content><![CDATA[<h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
-<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
-<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
-<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
-<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
-<p><strong>冰盖 Ice sheet</strong></p>
-<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
-<p><strong>冰架 Iceshelf</strong></p>
-<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
-<p><strong>冰山 Iceberg</strong></p>
-<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
-<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
-<hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -204,6 +214,42 @@
       </categories>
   </entry>
   <entry>
+    <title>EGU2022</title>
+    <url>/2022/05/23/Seminar/0523-EGU/</url>
+    <content><![CDATA[<h2 id="AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts"><a href="#AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts" class="headerlink" title="AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts"></a><font color=red>AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts</font></h2><h4 id="Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022"><a href="#Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022" class="headerlink" title="Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, https://doi.org/10.5194/egusphere-egu22-12033, 2022."></a>Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, <a href="https://doi.org/10.5194/egusphere-egu22-12033">https://doi.org/10.5194/egusphere-egu22-12033</a>, 2022.</h4><p>Air-sea coupling is critical in influencing atmospheric temperature and precipitation. The effect of greenhouse gases has influenced atmospheric variability and extreme events. Understanding and quantifying the effect of air-sea feedback on atmospheric variability and extremes remains unknown.</p>
+<p>In this work we show results obtained from two numerical experiments. We use the HadSM4 configuration that couples the HadAM4 model at N144 resolution with a Slab Ocean to generate a large ensemble (~1000 members) of realizations of the 2013-14 October-March winter season, forced with a calibrated ocean heat convergence flux.</p>
+<p>A twin experiment is performed by forcing HadAM4 with the diagnosed SST and sea ice from the ensemble, yielding a new ensemble with identical realizations of SST and sea ice. The only difference between the two ensembles is the enabling or disabling of the feedback of air-sea heat fluxes on SST.</p>
+<p>While the impact of the feedback on the mean climate is relatively small, we show that its influence has important consequences for the variability of many important quantities, including air-sea fluxes and return periods of extreme events.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7ve5eqdj21380lawiu.jpg" alt="Screen Shot 2022-05-27 at 15.45.54"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vi7i49j21310ip77s.jpg" alt="Screen Shot 2022-05-27 at 15.48.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vlujgzj21330j20vq.jpg" alt="Screen Shot 2022-05-27 at 15.48.15"></p>
+<hr>
+<h4 id="Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022"><a href="#Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022" class="headerlink" title="Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, https://doi.org/10.5194/egusphere-egu22-4948, 2022."></a>Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, <a href="https://doi.org/10.5194/egusphere-egu22-4948">https://doi.org/10.5194/egusphere-egu22-4948</a>, 2022.</h4><p>Extreme weather events have devastating impacts on human health, economic activities, ecosystems, and infrastructure. It is therefore crucial to anticipate extremes and their impacts to allow for preparedness and emergency measures. There is indeed potential for probabilistic subseasonal prediction on timescales of several weeks for selected cases of extreme events that are linked to remote drivers and large-scale teleconnections. We here present a range of case studies, including heatwaves, cold spells, and tropical cyclones, where precursors and global linkages may have improved sub-seasonal predictability. These linkages include teleconnections from the tropics as well as the stratosphere, in addition to circumglobal teleconnections. The considered heatwaves exhibit predictability on timescales of 3-4 weeks, while this timescale is 2-3 weeks for cold spells. Precipitation extremes are the least predictable among the considered extremes. Tropical cyclones, on the other hand, can exhibit probabilistic forecast skill on timescales of up to 3 weeks, which tends to be favored by remote precursors such as the Madden-Julian Oscillation. These case studies clearly illustrate the potential for event – dependent advance warnings for a wide range of extreme events globally. The subseasonal predictability of extreme events allows for an extension of warning horizons, can provide advance information to impact modelers, and informs communities and stakeholders affected by the impacts of extreme weather events.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vock3yj213a0m2n3v.jpg" alt="Screen Shot 2022-05-27 at 15.50.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7w37yzbj20fp0fnmyk.jpg" alt="Screen Shot 2022-05-27 at 15.52.21"></p>
+<h2 id="OS1-7-The-North-Atlantic-natural-variability-and-global-change"><a href="#OS1-7-The-North-Atlantic-natural-variability-and-global-change" class="headerlink" title="OS1.7 The North Atlantic: natural variability and global change"></a><font color=red>OS1.7 The North Atlantic: natural variability and global change</font></h2><h4 id="Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022"><a href="#Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022" class="headerlink" title="Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, https://doi.org/10.5194/egusphere-egu22-7402, 2022."></a>Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, <a href="https://doi.org/10.5194/egusphere-egu22-7402">https://doi.org/10.5194/egusphere-egu22-7402</a>, 2022.</h4><p>The variations of the winter climate in Europe are influenced by the North Atlantic Oscillation (NAO). Therefore, the ability to predict the NAO is of great value. Predictability of the NAO can be enabled through oceanic processes that are characterized by relatively long time scales, for example interannual to decadal. An important variable for the interannual to (multi-)decadal variability in the North Atlantic is the Atlantic Meridional Overturning Circulation (AMOC). The NAO and the AMOC are known to interact, but observational records of the AMOC are short and the details of this interaction are unknown. Thus, our understanding largely relies on climate model simulations. However, the interaction of NAO and AMOC is very model dependent.</p>
+<p>Here, we present the diversity across CMIP6 models in pre-industrial control experiments. The focus lies on simulations of the NAO, the AMOC, their interaction, and related variables on interannual to decadal timescales. Regarding the NAO-AMOC interaction, there are large differences in the strength of their relationship, in the location (like the latitude of the AMOC), its periodicity and in the time-lag between both variables.</p>
+<p>Furthermore, we propose hypotheses of the causes for this diversity in the models. Specific processes involved in NAO-AMOC interaction might be of varying relative importance from model to model, for example, NAO-related buoyancy versus wind-forcing affecting the AMOC. Also, mean state difference like in the North Atlantic sea surface temperature might play an important role for causing differences in the variability across models.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlexoa6oj21040hs776.jpg" alt="Screen Shot 2022-05-31 at 14.46.32"></p>
+<hr>
+<h4 id="Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022"><a href="#Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022" class="headerlink" title="Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, https://doi.org/10.5194/egusphere-egu22-1682, 2022."></a>Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, <a href="https://doi.org/10.5194/egusphere-egu22-1682">https://doi.org/10.5194/egusphere-egu22-1682</a>, 2022.</h4><p>Record low surface temperatures were observed in the subpolar North Atlantic during 2015, despite the majority of the global ocean experiencing higher than average surface temperatures. We compute mixed layer temperature budgets in the ECCO Version 4 state estimate to further understand the processes responsible for the North Atlantic cold anomaly. We show that surface forcing was the cause of approximately 75% of the initial cooling in the winter of 2013&#x2F;14, after which the cold anomaly was sequestered beneath the deep winter mixed layer. Re-emergence of the cold anomaly during the summer&#x2F;autumn of 2014 was primarily driven by a strong temperature gradient across the base of the mixed layer. Vertical diffusion resulted in approximately 70% of the re-emergence, with entrainment of deeper water driving the remaining 30%. In the summer of 2015, surface warming of the mixed layer was then anomalously low, resulting in the most negative temperature anomalies. Spatial patterns in the budgets show that the initial surface cooling was strongest in the south of the region, due to strong westerly winds related to the positive phase of the East Atlantic Pattern. Subsequent anomalies in surface fluxes associated with the North Atlantic Oscillation were stronger in the north, but the impact on the average temperature of the mixed layer was largely masked by anomalously high winter mixed layer depths.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlkettp8j20z80bpmz5.jpg" alt="Screen Shot 2022-05-31 at 15.00.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rll5b33ej20zm0bj75s.jpg" alt="Screen Shot 2022-05-31 at 15.02.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlol7onhj20xg0en0v1.jpg" alt="Screen Shot 2022-05-31 at 15.04.54"></p>
+<hr>
+<h4 id="Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022"><a href="#Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022" class="headerlink" title="Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, https://doi.org/10.5194/egusphere-egu22-5829, 2022."></a>Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, <a href="https://doi.org/10.5194/egusphere-egu22-5829">https://doi.org/10.5194/egusphere-egu22-5829</a>, 2022.</h4><p>The North Atlantic Jet Stream is well known to leave an imprint on the North Atlantic SST in the form of a tri-polar pattern. The majority of the existing research has focused on the winter jet stream position or strength of the jet stream. Here we look at the response of the North Atlantic SSTs to the strength and position of the North Atlantic Jet Stream across all seasons in the CMIP6 piControl simulations. For the case of both the strength and position of the jet stream the multi-model mean response is a tripolar SST pattern, with the response to the changes in strength showing a slight horseshoe pattern with the northern and southern most anomalies connected on the east and most evident in the summer. The SST response to winter and spring jet stream changes persist the longest with the northern most imprint on the SSTs lasting up to 2 years. The response to changes in the jet stream in the summer and fall leave an imprint on the SSTs lasting atmost into the following year.  Furthermore, we investigate at how these responses vary among the CMIP6 models and potential mechanisms leading to the persistence.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlre690ij20ox0ctjsw.jpg" alt="Screen Shot 2022-05-31 at 15.08.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rltsuyd5j20p60hvadc.jpg" alt="Screen Shot 2022-05-31 at 15.10.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwr3gpwj20px0ian00.jpg" alt="Screen Shot 2022-05-31 at 15.13.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
+<hr>
+<h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
     <title>张荣华</title>
     <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
     <content><![CDATA[<h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
@@ -248,47 +294,61 @@
       </categories>
   </entry>
   <entry>
-    <title>应俊</title>
-    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
-    <content><![CDATA[<h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
-<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
+    <title>秦大河</title>
+    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
+    <content><![CDATA[<h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
+<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
+<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
+<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
+<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
+<p><strong>冰盖 Ice sheet</strong></p>
+<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
+<p><strong>冰架 Iceshelf</strong></p>
+<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
+<p><strong>冰山 Iceberg</strong></p>
+<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
+<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
 <hr>
-<p><strong>报告人简介</strong></p>
-<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
-<p><strong>报告题目</strong></p>
-<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
-<p><strong>报告摘要</strong></p>
-<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO_Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Data</title>
-    <url>/2022/06/07/OcnSci/Ref_Data/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-
-]]></content>
-      <categories>
-        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -350,47 +410,65 @@
       </categories>
   </entry>
   <entry>
-    <title>Fundamental</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<p><span style="color:green">Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021). </span></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<hr>
+    <title>Group Study</title>
+    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tww2nif8j20yg0n876q.jpg" alt="Screen Shot 2022-06-02 at 15.03.33"></p>
+<h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
+<p>2℃增暖，北极夏季无冰，但可恢复</p>
+<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
+<p>动力作用对海冰的生成重要</p>
+<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
+<p>冰架对海平面没有影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
+<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
+<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
+<p>次表层海水增暖，溶解底部的冰盖</p>
+<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
+<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
+<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
+<p>冰川主导</p>
+<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
+<p>冰盖主导</p>
+<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
+<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
+<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
+<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
+<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
 ]]></content>
       <categories>
-        <category>OcnSci</category>
+        <category>Seminar</category>
       </categories>
   </entry>
   <entry>
-    <title>ENSO_Events</title>
-    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+    <title>魏云涛</title>
+    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
+    <content><![CDATA[<h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
+<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
+<p><strong>报告题目</strong></p>
+<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
+<p><strong>报告摘要</strong></p>
+<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
 ]]></content>
       <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CHLA</title>
-    <url>/2022/05/24/Paper/CHLA/</url>
-    <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
-<p><strong>Abstract</strong> This study explores the influence of phytoplankton on the tropical Pacific heat budget. A hybrid coupled model for the tropical Pacific that is based on a primitive equation reduced-gravity multilayer ocean model, a dynamic ocean mixed layer, an atmospheric mixed layer, and a statistical atmosphere is used. The statistical atmosphere relates deviations of the sea surface temperature from its mean to wind stress anomalies and allows for the rectification of the annual cycle and the El Niño–Southern Oscillation (ENSO) phenomenon through the positive Bjerknes feedback. Furthermore, a nine-component ecosystem model is coupled to the physical variables of the ocean. <strong>The simulated chlorophyll concentrations can feed back onto the ocean heat budget by their optical properties, which modify solar light absorption in the surface layers. It is shown that both the surface layer concentration as well as the vertical profile of chlorophyll have a significant effect on the simulated mean state, the tropical annual cycle, and ENSO.</strong> This study supports a previously suggested hypothesis (Timmermann and Jin) that predicts an influence of phytoplankton concentration of the tropical Pacific climate mean state and its variability. The bioclimate feedback diagnosed here works as follows: Maxima in the subsurface chlorophyll concentrations lead to an enhanced subsurface warming due to the absorption of photosynthetically available shortwave radiation. This warming triggers a deepening of the mixed layer in the eastern equatorial Pacific and eventually a reduction of the surface ocean currents (Murtugudde et al.). The weakened south-equatorial current generates an eastern Pacific surface warming, which is strongly enhanced by the Bjerknes feedback. Because of the deepening of the mixed layer, the strength of the simulated annual cycle is also diminished. This in turn leads to an increase in ENSO variability.</p>
-<hr>
-<p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
-<p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
-<hr>
-]]></content>
-      <categories>
-        <category>Paper</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Tips</title>
-    <url>/2022/06/09/Paper/Tips/</url>
-    <content><![CDATA[<h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Paper</category>
+        <category>Seminar</category>
       </categories>
   </entry>
   <entry>
@@ -449,41 +527,35 @@
       </categories>
   </entry>
   <entry>
-    <title>Group Study</title>
-    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tww2nif8j20yg0n876q.jpg" alt="Screen Shot 2022-06-02 at 15.03.33"></p>
-<h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
-<p>2℃增暖，北极夏季无冰，但可恢复</p>
-<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
-<p>动力作用对海冰的生成重要</p>
-<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
-<p>冰架对海平面没有影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
-<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
-<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
-<p>次表层海水增暖，溶解底部的冰盖</p>
-<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
-<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
-<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
-<p>冰川主导</p>
-<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
-<p>冰盖主导</p>
-<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
-<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
-<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
-<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
-<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
+    <title>Fortran</title>
+    <url>/2022/05/01/Tool/Fortran/</url>
+    <content><![CDATA[<h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
+<ol>
+<li>USE netcdf</li>
+<li>NF90_OPEN函数打开文件</li>
+<li>NF90_INQ_DIMID获取维度ID</li>
+<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
+<li>ALLOCATE分配动态数组</li>
+<li>NF90_INQ_VARID获取变量ID</li>
+<li>NF90_GET_VAR获取变量值</li>
+</ol>
+<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
+<p>以下是具体示例代码</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
+
+<p>编译方法：</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
+
+<p>参考：</p>
+<ul>
+<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
+<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
+</ul>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>Tool</category>
       </categories>
   </entry>
   <entry>
@@ -491,6 +563,35 @@
     <url>/2022/06/07/Tool/Fortran95_Introduction/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
 
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Github</title>
+    <url>/2022/05/01/Tool/GitHub/</url>
+    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -657,67 +758,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tool/GitHub/</url>
-    <content><![CDATA[<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fortran</title>
-    <url>/2022/05/01/Tool/Fortran/</url>
-    <content><![CDATA[<h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
-<ol>
-<li>USE netcdf</li>
-<li>NF90_OPEN函数打开文件</li>
-<li>NF90_INQ_DIMID获取维度ID</li>
-<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
-<li>ALLOCATE分配动态数组</li>
-<li>NF90_INQ_VARID获取变量ID</li>
-<li>NF90_GET_VAR获取变量值</li>
-</ol>
-<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
-<p>以下是具体示例代码</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
-
-<p>编译方法：</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
-
-<p>参考：</p>
-<ul>
-<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
-<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Latex_Symbols</title>
     <url>/2022/06/07/Tool/Latex_Symbols/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
@@ -876,15 +916,6 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Python-Matplotlib_Cheatsheet</title>
-    <url>/2022/06/07/Tool/Python-Matplotlib_Cheatsheet/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1373,15 +1404,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Ref_Figures</title>
-    <url>/2022/06/07/Tool/Ref_Figures/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Parameters</title>
     <url>/2022/05/01/Tool/Parameters/</url>
     <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
@@ -1401,246 +1423,21 @@
       </categories>
   </entry>
   <entry>
-    <title>WRF</title>
-    <url>/2022/05/01/Tool/WRF/</url>
-    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
-<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
-<p>实时预报数据下载地址：</p>
-<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
-<p>历史预报数据下载地址：</p>
-<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
-<p>数据下载脚本：</p>
-<p>In [1]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
-
-<p>驱动WRF</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
-<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
-<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
-<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
-<p><strong>注意</strong>：</p>
-<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
-<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
-<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
-<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
-<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
-<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
-<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
-<ul>
-<li><p>链接 met_em* 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
-<ul>
-<li><p>初始化气象要素</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
-
-<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
-</li>
-<li><p>模拟积分——开始模拟</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
-</li>
-</ul>
-<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
-<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
-<p>关于模式后处理，之前也提到过一些：</p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
-<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
+    <title>Python-Matplotlib_Cheatsheet</title>
+    <url>/2022/06/07/Tool/Python-Matplotlib_Cheatsheet/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Conversions_and_Constants</title>
-    <url>/2022/06/07/AtmoSci/Conversions_and_Constants/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Yaml</title>
-    <url>/2022/05/24/Tool/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
+    <title>Ref_Figures</title>
+    <url>/2022/06/07/Tool/Ref_Figures/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Weather</title>
-    <url>/2022/05/01/AtmoSci/Weather/</url>
-    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
-<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
-<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
-<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
-<p>LI is generally scaled as follows:</p>
-<ul>
-<li><p>LI 6 or Greater, Very Stable Conditions</p>
-</li>
-<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
-</li>
-<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
-</li>
-<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
-</li>
-<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
-</li>
-</ul>
-<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
-<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
-<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
-<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
-<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
-<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
-<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
-      <categories>
-        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -1790,6 +1587,209 @@
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h2><p>以上这些就是我感觉大家在写论文中有可能会需要用到的全部网站了。看到这里的你，我笃定你一定是一个努力学习的好学生，所以老规矩，一张思维导图送给你，便于翻看。</p>
 <p><img src="https://pic1.zhimg.com/50/v2-adcf9f1e1360f3c62e9cdb2732a024a8_720w.jpg?source=1940ef5c" alt="img"><img src="https://pic1.zhimg.com/80/v2-adcf9f1e1360f3c62e9cdb2732a024a8_1440w.jpg?source=1940ef5c" alt="img"></p>
 <p><strong>归纳加上试用这些网站花了Leo一周的时间，如果你觉得这些网站对你有帮助的话，请花一秒的时间双击屏幕给个赞吧</strong>，你们的支持是我输出优质干货的最大动力。</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Yaml</title>
+    <url>/2022/05/24/Tool/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>WRF</title>
+    <url>/2022/05/01/Tool/WRF/</url>
+    <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
+<p>实时预报数据下载地址：</p>
+<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
+<p>历史预报数据下载地址：</p>
+<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
+<p>数据下载脚本：</p>
+<p>In [1]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
+
+<p>驱动WRF</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
+<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
+<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
+
+
+
+<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
+<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
+<p><strong>注意</strong>：</p>
+<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
+<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
+<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
+<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
+<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
+<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
+<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
+<ul>
+<li><p>链接 met_em* 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
+<ul>
+<li><p>初始化气象要素</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
+
+<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
+</li>
+<li><p>模拟积分——开始模拟</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
+</li>
+</ul>
+<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
+<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
+<p>关于模式后处理，之前也提到过一些：</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
+<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
         <category>Tool</category>
