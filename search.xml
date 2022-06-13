@@ -10,32 +10,39 @@
       </categories>
   </entry>
   <entry>
-    <title>ENSO_Events</title>
-    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+    <title>EGU2022</title>
+    <url>/2022/05/23/Seminar/0523-EGU/</url>
+    <content><![CDATA[<h2 id="AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts"><a href="#AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts" class="headerlink" title="AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts"></a><font color=red>AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts</font></h2><h4 id="Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022"><a href="#Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022" class="headerlink" title="Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, https://doi.org/10.5194/egusphere-egu22-12033, 2022."></a>Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, <a href="https://doi.org/10.5194/egusphere-egu22-12033">https://doi.org/10.5194/egusphere-egu22-12033</a>, 2022.</h4><p>Air-sea coupling is critical in influencing atmospheric temperature and precipitation. The effect of greenhouse gases has influenced atmospheric variability and extreme events. Understanding and quantifying the effect of air-sea feedback on atmospheric variability and extremes remains unknown.</p>
+<p>In this work we show results obtained from two numerical experiments. We use the HadSM4 configuration that couples the HadAM4 model at N144 resolution with a Slab Ocean to generate a large ensemble (~1000 members) of realizations of the 2013-14 October-March winter season, forced with a calibrated ocean heat convergence flux.</p>
+<p>A twin experiment is performed by forcing HadAM4 with the diagnosed SST and sea ice from the ensemble, yielding a new ensemble with identical realizations of SST and sea ice. The only difference between the two ensembles is the enabling or disabling of the feedback of air-sea heat fluxes on SST.</p>
+<p>While the impact of the feedback on the mean climate is relatively small, we show that its influence has important consequences for the variability of many important quantities, including air-sea fluxes and return periods of extreme events.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7ve5eqdj21380lawiu.jpg" alt="Screen Shot 2022-05-27 at 15.45.54"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vi7i49j21310ip77s.jpg" alt="Screen Shot 2022-05-27 at 15.48.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vlujgzj21330j20vq.jpg" alt="Screen Shot 2022-05-27 at 15.48.15"></p>
+<hr>
+<h4 id="Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022"><a href="#Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022" class="headerlink" title="Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, https://doi.org/10.5194/egusphere-egu22-4948, 2022."></a>Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, <a href="https://doi.org/10.5194/egusphere-egu22-4948">https://doi.org/10.5194/egusphere-egu22-4948</a>, 2022.</h4><p>Extreme weather events have devastating impacts on human health, economic activities, ecosystems, and infrastructure. It is therefore crucial to anticipate extremes and their impacts to allow for preparedness and emergency measures. There is indeed potential for probabilistic subseasonal prediction on timescales of several weeks for selected cases of extreme events that are linked to remote drivers and large-scale teleconnections. We here present a range of case studies, including heatwaves, cold spells, and tropical cyclones, where precursors and global linkages may have improved sub-seasonal predictability. These linkages include teleconnections from the tropics as well as the stratosphere, in addition to circumglobal teleconnections. The considered heatwaves exhibit predictability on timescales of 3-4 weeks, while this timescale is 2-3 weeks for cold spells. Precipitation extremes are the least predictable among the considered extremes. Tropical cyclones, on the other hand, can exhibit probabilistic forecast skill on timescales of up to 3 weeks, which tends to be favored by remote precursors such as the Madden-Julian Oscillation. These case studies clearly illustrate the potential for event – dependent advance warnings for a wide range of extreme events globally. The subseasonal predictability of extreme events allows for an extension of warning horizons, can provide advance information to impact modelers, and informs communities and stakeholders affected by the impacts of extreme weather events.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vock3yj213a0m2n3v.jpg" alt="Screen Shot 2022-05-27 at 15.50.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7w37yzbj20fp0fnmyk.jpg" alt="Screen Shot 2022-05-27 at 15.52.21"></p>
+<h2 id="OS1-7-The-North-Atlantic-natural-variability-and-global-change"><a href="#OS1-7-The-North-Atlantic-natural-variability-and-global-change" class="headerlink" title="OS1.7 The North Atlantic: natural variability and global change"></a><font color=red>OS1.7 The North Atlantic: natural variability and global change</font></h2><h4 id="Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022"><a href="#Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022" class="headerlink" title="Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, https://doi.org/10.5194/egusphere-egu22-7402, 2022."></a>Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, <a href="https://doi.org/10.5194/egusphere-egu22-7402">https://doi.org/10.5194/egusphere-egu22-7402</a>, 2022.</h4><p>The variations of the winter climate in Europe are influenced by the North Atlantic Oscillation (NAO). Therefore, the ability to predict the NAO is of great value. Predictability of the NAO can be enabled through oceanic processes that are characterized by relatively long time scales, for example interannual to decadal. An important variable for the interannual to (multi-)decadal variability in the North Atlantic is the Atlantic Meridional Overturning Circulation (AMOC). The NAO and the AMOC are known to interact, but observational records of the AMOC are short and the details of this interaction are unknown. Thus, our understanding largely relies on climate model simulations. However, the interaction of NAO and AMOC is very model dependent.</p>
+<p>Here, we present the diversity across CMIP6 models in pre-industrial control experiments. The focus lies on simulations of the NAO, the AMOC, their interaction, and related variables on interannual to decadal timescales. Regarding the NAO-AMOC interaction, there are large differences in the strength of their relationship, in the location (like the latitude of the AMOC), its periodicity and in the time-lag between both variables.</p>
+<p>Furthermore, we propose hypotheses of the causes for this diversity in the models. Specific processes involved in NAO-AMOC interaction might be of varying relative importance from model to model, for example, NAO-related buoyancy versus wind-forcing affecting the AMOC. Also, mean state difference like in the North Atlantic sea surface temperature might play an important role for causing differences in the variability across models.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlexoa6oj21040hs776.jpg" alt="Screen Shot 2022-05-31 at 14.46.32"></p>
+<hr>
+<h4 id="Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022"><a href="#Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022" class="headerlink" title="Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, https://doi.org/10.5194/egusphere-egu22-1682, 2022."></a>Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, <a href="https://doi.org/10.5194/egusphere-egu22-1682">https://doi.org/10.5194/egusphere-egu22-1682</a>, 2022.</h4><p>Record low surface temperatures were observed in the subpolar North Atlantic during 2015, despite the majority of the global ocean experiencing higher than average surface temperatures. We compute mixed layer temperature budgets in the ECCO Version 4 state estimate to further understand the processes responsible for the North Atlantic cold anomaly. We show that surface forcing was the cause of approximately 75% of the initial cooling in the winter of 2013&#x2F;14, after which the cold anomaly was sequestered beneath the deep winter mixed layer. Re-emergence of the cold anomaly during the summer&#x2F;autumn of 2014 was primarily driven by a strong temperature gradient across the base of the mixed layer. Vertical diffusion resulted in approximately 70% of the re-emergence, with entrainment of deeper water driving the remaining 30%. In the summer of 2015, surface warming of the mixed layer was then anomalously low, resulting in the most negative temperature anomalies. Spatial patterns in the budgets show that the initial surface cooling was strongest in the south of the region, due to strong westerly winds related to the positive phase of the East Atlantic Pattern. Subsequent anomalies in surface fluxes associated with the North Atlantic Oscillation were stronger in the north, but the impact on the average temperature of the mixed layer was largely masked by anomalously high winter mixed layer depths.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlkettp8j20z80bpmz5.jpg" alt="Screen Shot 2022-05-31 at 15.00.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rll5b33ej20zm0bj75s.jpg" alt="Screen Shot 2022-05-31 at 15.02.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlol7onhj20xg0en0v1.jpg" alt="Screen Shot 2022-05-31 at 15.04.54"></p>
+<hr>
+<h4 id="Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022"><a href="#Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022" class="headerlink" title="Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, https://doi.org/10.5194/egusphere-egu22-5829, 2022."></a>Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, <a href="https://doi.org/10.5194/egusphere-egu22-5829">https://doi.org/10.5194/egusphere-egu22-5829</a>, 2022.</h4><p>The North Atlantic Jet Stream is well known to leave an imprint on the North Atlantic SST in the form of a tri-polar pattern. The majority of the existing research has focused on the winter jet stream position or strength of the jet stream. Here we look at the response of the North Atlantic SSTs to the strength and position of the North Atlantic Jet Stream across all seasons in the CMIP6 piControl simulations. For the case of both the strength and position of the jet stream the multi-model mean response is a tripolar SST pattern, with the response to the changes in strength showing a slight horseshoe pattern with the northern and southern most anomalies connected on the east and most evident in the summer. The SST response to winter and spring jet stream changes persist the longest with the northern most imprint on the SSTs lasting up to 2 years. The response to changes in the jet stream in the summer and fall leave an imprint on the SSTs lasting atmost into the following year.  Furthermore, we investigate at how these responses vary among the CMIP6 models and potential mechanisms leading to the persistence.</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlre690ij20ox0ctjsw.jpg" alt="Screen Shot 2022-05-31 at 15.08.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rltsuyd5j20p60hvadc.jpg" alt="Screen Shot 2022-05-31 at 15.10.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwr3gpwj20px0ian00.jpg" alt="Screen Shot 2022-05-31 at 15.13.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
+<hr>
+<h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
 ]]></content>
       <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO_Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Data</title>
-    <url>/2022/06/07/OcnSci/Ref_Data/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-
-]]></content>
-      <categories>
-        <category>OcnSci</category>
+        <category>Seminar</category>
       </categories>
   </entry>
   <entry>
@@ -67,54 +74,6 @@
 <p>Emergence of climate change in the tropical Pacific</p>
 <p><strong>报告摘要</strong></p>
 <p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fundamental</title>
-    <url>/2022/05/01/OcnSci/Ocean/</url>
-    <content><![CDATA[<h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
-<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>EGU2022</title>
-    <url>/2022/05/23/Seminar/0523-EGU/</url>
-    <content><![CDATA[<h2 id="AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts"><a href="#AS1-20-Subseasonal-to-Seasonal-Prediction-Processes-and-Impacts" class="headerlink" title="AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts"></a><font color=red>AS1.20 Subseasonal-to-Seasonal Prediction: Processes and Impacts</font></h2><h4 id="Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022"><a href="#Aengenheyster-M-Sparrow-S-Watson-P-Wallom-D-Zanna-L-and-Allen-M-Impact-of-sub-seasonal-atmosphere-ocean-interactions-in-a-large-ensemble-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-12033-https-doi-org-10-5194-egusphere-egu22-12033-2022" class="headerlink" title="Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, https://doi.org/10.5194/egusphere-egu22-12033, 2022."></a>Aengenheyster, M., Sparrow, S., Watson, P., Wallom, D., Zanna, L., and Allen, M.: Impact of sub-seasonal atmosphere-ocean interactions in a large ensemble, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-12033, <a href="https://doi.org/10.5194/egusphere-egu22-12033">https://doi.org/10.5194/egusphere-egu22-12033</a>, 2022.</h4><p>Air-sea coupling is critical in influencing atmospheric temperature and precipitation. The effect of greenhouse gases has influenced atmospheric variability and extreme events. Understanding and quantifying the effect of air-sea feedback on atmospheric variability and extremes remains unknown.</p>
-<p>In this work we show results obtained from two numerical experiments. We use the HadSM4 configuration that couples the HadAM4 model at N144 resolution with a Slab Ocean to generate a large ensemble (~1000 members) of realizations of the 2013-14 October-March winter season, forced with a calibrated ocean heat convergence flux.</p>
-<p>A twin experiment is performed by forcing HadAM4 with the diagnosed SST and sea ice from the ensemble, yielding a new ensemble with identical realizations of SST and sea ice. The only difference between the two ensembles is the enabling or disabling of the feedback of air-sea heat fluxes on SST.</p>
-<p>While the impact of the feedback on the mean climate is relatively small, we show that its influence has important consequences for the variability of many important quantities, including air-sea fluxes and return periods of extreme events.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7ve5eqdj21380lawiu.jpg" alt="Screen Shot 2022-05-27 at 15.45.54"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vi7i49j21310ip77s.jpg" alt="Screen Shot 2022-05-27 at 15.48.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vlujgzj21330j20vq.jpg" alt="Screen Shot 2022-05-27 at 15.48.15"></p>
-<hr>
-<h4 id="Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022"><a href="#Domeisen-D-I-V-White-C-J-Afargan-Gerstman-H-Antoine-S-Ardilouze-C-Batte-L-Camargo-S-J-Collins-D-Ferranti-L-Infanti-J-M-Janiga-M-A-Kolstad-E-W-LaJoie-E-Magnusson-L-Strazzo-S-Vitart-F-and-Wulff-C-O-Teleconnection-driven-sub-seasonal-predictability-of-extreme-events-Relevant-case-studies-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-4948-https-doi-org-10-5194-egusphere-egu22-4948-2022" class="headerlink" title="Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, https://doi.org/10.5194/egusphere-egu22-4948, 2022."></a>Domeisen, D. I. V., White, C. J., Afargan-Gerstman, H., Antoine, S., Ardilouze, C., Batté, L., Camargo, S. J., Collins, D., Ferranti, L., Infanti, J. M., Janiga, M. A., Kolstad, E. W., LaJoie, E., Magnusson, L., Strazzo, S., Vitart, F., and Wulff, C. O.: Teleconnection-driven sub-seasonal predictability of extreme events: Relevant case studies, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-4948, <a href="https://doi.org/10.5194/egusphere-egu22-4948">https://doi.org/10.5194/egusphere-egu22-4948</a>, 2022.</h4><p>Extreme weather events have devastating impacts on human health, economic activities, ecosystems, and infrastructure. It is therefore crucial to anticipate extremes and their impacts to allow for preparedness and emergency measures. There is indeed potential for probabilistic subseasonal prediction on timescales of several weeks for selected cases of extreme events that are linked to remote drivers and large-scale teleconnections. We here present a range of case studies, including heatwaves, cold spells, and tropical cyclones, where precursors and global linkages may have improved sub-seasonal predictability. These linkages include teleconnections from the tropics as well as the stratosphere, in addition to circumglobal teleconnections. The considered heatwaves exhibit predictability on timescales of 3-4 weeks, while this timescale is 2-3 weeks for cold spells. Precipitation extremes are the least predictable among the considered extremes. Tropical cyclones, on the other hand, can exhibit probabilistic forecast skill on timescales of up to 3 weeks, which tends to be favored by remote precursors such as the Madden-Julian Oscillation. These case studies clearly illustrate the potential for event – dependent advance warnings for a wide range of extreme events globally. The subseasonal predictability of extreme events allows for an extension of warning horizons, can provide advance information to impact modelers, and informs communities and stakeholders affected by the impacts of extreme weather events.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7vock3yj213a0m2n3v.jpg" alt="Screen Shot 2022-05-27 at 15.50.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2q7w37yzbj20fp0fnmyk.jpg" alt="Screen Shot 2022-05-27 at 15.52.21"></p>
-<h2 id="OS1-7-The-North-Atlantic-natural-variability-and-global-change"><a href="#OS1-7-The-North-Atlantic-natural-variability-and-global-change" class="headerlink" title="OS1.7 The North Atlantic: natural variability and global change"></a><font color=red>OS1.7 The North Atlantic: natural variability and global change</font></h2><h4 id="Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022"><a href="#Reintges-A-Robson-J-Sutton-R-and-Yeager-S-Diversity-in-NAO-AMOC-interaction-on-interannual-to-decadal-timescales-across-CMIP6-models-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-7402-https-doi-org-10-5194-egusphere-egu22-7402-2022" class="headerlink" title="Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, https://doi.org/10.5194/egusphere-egu22-7402, 2022."></a>Reintges, A., Robson, J., Sutton, R., and Yeager, S.: Diversity in NAO-AMOC interaction on interannual to decadal timescales across CMIP6 models, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-7402, <a href="https://doi.org/10.5194/egusphere-egu22-7402">https://doi.org/10.5194/egusphere-egu22-7402</a>, 2022.</h4><p>The variations of the winter climate in Europe are influenced by the North Atlantic Oscillation (NAO). Therefore, the ability to predict the NAO is of great value. Predictability of the NAO can be enabled through oceanic processes that are characterized by relatively long time scales, for example interannual to decadal. An important variable for the interannual to (multi-)decadal variability in the North Atlantic is the Atlantic Meridional Overturning Circulation (AMOC). The NAO and the AMOC are known to interact, but observational records of the AMOC are short and the details of this interaction are unknown. Thus, our understanding largely relies on climate model simulations. However, the interaction of NAO and AMOC is very model dependent.</p>
-<p>Here, we present the diversity across CMIP6 models in pre-industrial control experiments. The focus lies on simulations of the NAO, the AMOC, their interaction, and related variables on interannual to decadal timescales. Regarding the NAO-AMOC interaction, there are large differences in the strength of their relationship, in the location (like the latitude of the AMOC), its periodicity and in the time-lag between both variables.</p>
-<p>Furthermore, we propose hypotheses of the causes for this diversity in the models. Specific processes involved in NAO-AMOC interaction might be of varying relative importance from model to model, for example, NAO-related buoyancy versus wind-forcing affecting the AMOC. Also, mean state difference like in the North Atlantic sea surface temperature might play an important role for causing differences in the variability across models.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlexoa6oj21040hs776.jpg" alt="Screen Shot 2022-05-31 at 14.46.32"></p>
-<hr>
-<h4 id="Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022"><a href="#Sanders-R-Jones-D-Josey-S-Sinha-B-and-Forget-G-Using-mixed-layer-heat-budgets-to-determine-the-drivers-of-the-2015-North-Atlantic-cold-anomaly-in-ocean-state-estimates-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-1682-https-doi-org-10-5194-egusphere-egu22-1682-2022" class="headerlink" title="Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, https://doi.org/10.5194/egusphere-egu22-1682, 2022."></a>Sanders, R., Jones, D., Josey, S., Sinha, B., and Forget, G.: Using mixed layer heat budgets to determine the drivers of the 2015 North Atlantic cold anomaly in ocean state estimates, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-1682, <a href="https://doi.org/10.5194/egusphere-egu22-1682">https://doi.org/10.5194/egusphere-egu22-1682</a>, 2022.</h4><p>Record low surface temperatures were observed in the subpolar North Atlantic during 2015, despite the majority of the global ocean experiencing higher than average surface temperatures. We compute mixed layer temperature budgets in the ECCO Version 4 state estimate to further understand the processes responsible for the North Atlantic cold anomaly. We show that surface forcing was the cause of approximately 75% of the initial cooling in the winter of 2013&#x2F;14, after which the cold anomaly was sequestered beneath the deep winter mixed layer. Re-emergence of the cold anomaly during the summer&#x2F;autumn of 2014 was primarily driven by a strong temperature gradient across the base of the mixed layer. Vertical diffusion resulted in approximately 70% of the re-emergence, with entrainment of deeper water driving the remaining 30%. In the summer of 2015, surface warming of the mixed layer was then anomalously low, resulting in the most negative temperature anomalies. Spatial patterns in the budgets show that the initial surface cooling was strongest in the south of the region, due to strong westerly winds related to the positive phase of the East Atlantic Pattern. Subsequent anomalies in surface fluxes associated with the North Atlantic Oscillation were stronger in the north, but the impact on the average temperature of the mixed layer was largely masked by anomalously high winter mixed layer depths.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlkettp8j20z80bpmz5.jpg" alt="Screen Shot 2022-05-31 at 15.00.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rll5b33ej20zm0bj75s.jpg" alt="Screen Shot 2022-05-31 at 15.02.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlol7onhj20xg0en0v1.jpg" alt="Screen Shot 2022-05-31 at 15.04.54"></p>
-<hr>
-<h4 id="Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022"><a href="#Mecking-J-Sinha-B-Harvey-B-Robson-J-and-Bracegirdle-T-Seasonal-differences-in-the-persistence-of-SST’s-Response-to-the-North-Atlantic-Jet-Stream-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5829-https-doi-org-10-5194-egusphere-egu22-5829-2022" class="headerlink" title="Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, https://doi.org/10.5194/egusphere-egu22-5829, 2022."></a>Mecking, J., Sinha, B., Harvey, B., Robson, J., and Bracegirdle, T.: Seasonal differences in the persistence of SST’s Response to the North Atlantic Jet Stream, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5829, <a href="https://doi.org/10.5194/egusphere-egu22-5829">https://doi.org/10.5194/egusphere-egu22-5829</a>, 2022.</h4><p>The North Atlantic Jet Stream is well known to leave an imprint on the North Atlantic SST in the form of a tri-polar pattern. The majority of the existing research has focused on the winter jet stream position or strength of the jet stream. Here we look at the response of the North Atlantic SSTs to the strength and position of the North Atlantic Jet Stream across all seasons in the CMIP6 piControl simulations. For the case of both the strength and position of the jet stream the multi-model mean response is a tripolar SST pattern, with the response to the changes in strength showing a slight horseshoe pattern with the northern and southern most anomalies connected on the east and most evident in the summer. The SST response to winter and spring jet stream changes persist the longest with the northern most imprint on the SSTs lasting up to 2 years. The response to changes in the jet stream in the summer and fall leave an imprint on the SSTs lasting atmost into the following year.  Furthermore, we investigate at how these responses vary among the CMIP6 models and potential mechanisms leading to the persistence.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlre690ij20ox0ctjsw.jpg" alt="Screen Shot 2022-05-31 at 15.08.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rltsuyd5j20p60hvadc.jpg" alt="Screen Shot 2022-05-31 at 15.10.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwr3gpwj20px0ian00.jpg" alt="Screen Shot 2022-05-31 at 15.13.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
-<hr>
-<h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -231,24 +190,38 @@
       </categories>
   </entry>
   <entry>
-    <title>魏云涛</title>
-    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
-    <content><![CDATA[<h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
-<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
-<p><strong>报告题目</strong></p>
-<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
-<p><strong>报告摘要</strong></p>
-<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
+    <title>Group Study</title>
+    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tww2nif8j20yg0n876q.jpg" alt="Screen Shot 2022-06-02 at 15.03.33"></p>
+<h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
+<p>2℃增暖，北极夏季无冰，但可恢复</p>
+<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
+<p>动力作用对海冰的生成重要</p>
+<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
+<p>冰架对海平面没有影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
+<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
+<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
+<p>次表层海水增暖，溶解底部的冰盖</p>
+<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
+<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
+<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
+<p>冰川主导</p>
+<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
+<p>冰盖主导</p>
+<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
+<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
+<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
+<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
+<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -371,6 +344,30 @@
       </categories>
   </entry>
   <entry>
+    <title>魏云涛</title>
+    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
+    <content><![CDATA[<h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
+<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
+<p><strong>报告题目</strong></p>
+<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
+<p><strong>报告摘要</strong></p>
+<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CHLA</title>
     <url>/2022/05/24/Paper/CHLA/</url>
     <content><![CDATA[<p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
@@ -395,47 +392,19 @@
       </categories>
   </entry>
   <entry>
-    <title>Group Study</title>
-    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tww2nif8j20yg0n876q.jpg" alt="Screen Shot 2022-06-02 at 15.03.33"></p>
-<h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
-<p>2℃增暖，北极夏季无冰，但可恢复</p>
-<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
-<p>动力作用对海冰的生成重要</p>
-<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
-<p>冰架对海平面没有影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
-<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
-<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
-<p>次表层海水增暖，溶解底部的冰盖</p>
-<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
-<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
-<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
-<p>冰川主导</p>
-<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
-<p>冰盖主导</p>
-<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
-<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
-<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
-<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
-<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
+    <title>Conversions_and_Constants</title>
+    <url>/2022/06/07/AtmoSci/Conversions_and_Constants/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
-    <title>机器学习的六个核心算法</title>
-    <url>/2022/06/13/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h5 id="最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"><a href="#最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。" class="headerlink" title="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"></a>最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。</h5><p>文章开头，吴恩达回忆他的研究历程中曾有一次抉择：</p>
+    <title></title>
+    <url>/2022/04/19/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<p>title: 机器学习的六个核心算法<br>categories: Paper<br>date: 2022&#x2F;06&#x2F;13 12:00:00</p>
+<h5 id="最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"><a href="#最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。" class="headerlink" title="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"></a>最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。</h5><p>文章开头，吴恩达回忆他的研究历程中曾有一次抉择：</p>
 <p>多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预算，他最终选择了神经网络，在很长的一段时间内弃用增强决策树。</p>
 <p>这是一个错误的决定，「幸好我的团队很快修改了我的选择，项目才成功。」吴恩达谈道。</p>
 <p>他由此感叹，不断学习与更新基础知识是十分重要的。与其他技术领域一样，随着研究人员的增加、研究成果数量的增长，机器学习领域也在不断发展。但有些基础算法与核心思想的贡献是经得起时间考验的：</p>
@@ -449,10 +418,7 @@
 <h2 id="线性回归：直的-amp-窄的"><a href="#线性回归：直的-amp-窄的" class="headerlink" title="线性回归：直的&amp;窄的"></a><strong>线性回归：直的&amp;窄的</strong></h2><p>线性回归是机器学习中的一个关键的统计方法，但它并非不战而胜。它由两位杰出的数学家提出，但200 年过去了，这个问题仍未解决。长期存在的争议不仅证明了该算法具有出色的实用性，还证明了它的本质十分简单。</p>
 <p>那么线性回归到底是谁的算法呢？</p>
 <p>1805 年，法国数学家 Adrien-Marie Legendre 发表了将一条线拟合到一组点的方法，同时试图预测彗星的位置（天体导航是当时全球商业中最有价值的科学方向，就像今天的人工智能一样）。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOfNNUvlUgcVm2RhF8icQmNNOb50QvES1uhJqdO9M3zTp703V1ia6hjRsQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p>图注：Adrien-Marie Legendre 的素描画像</p>
 <p>四年后，24 岁的德国神童 Carl Friedrich Gauss （高斯）坚称他自 1795 年以来一直在使用它，但认为它太琐碎了，无法写。高斯的主张促使Legendre匿名发表了一份文章，称“一位非常著名的几何学家毫不犹豫地采用了这种方法。”</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOJL0SJkvOC6EPy7ib63vO3OceJ9lfibpJW4ylRQOhjAvg9hOmhmlNvBQQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：Carl Friedrich Gauss</p>
 <p><strong>斜率和偏差</strong>：当结果与影响它的变量之间的关系遵循直线时，线性回归很有用。例如，汽车的油耗与其重量成线性关系。</p>
 <ul>
 <li>汽车的油耗 y 与其重量 x 之间的关系取决于直线的斜率 w（油耗随重量上升的幅度）和偏置项 b（零重量时的油耗）：y&#x3D;w*x+b。</li>
@@ -465,7 +431,6 @@
 <h2 id="逻辑回归：跟随曲线"><a href="#逻辑回归：跟随曲线" class="headerlink" title="逻辑回归：跟随曲线"></a><strong>逻辑回归：跟随曲线</strong></h2><p>曾经有一段时间，逻辑回归只用于对一件事进行分类：如果你喝了一瓶毒药，你可能会被贴上的标签是“活着”还是“死去”呢？时代变了，今天，不仅呼叫紧急服务为这个问题提供了更好的答案，而且逻辑回归也成为了深度学习的核心。</p>
 <p><strong>毒物控制</strong>：</p>
 <p>逻辑函数可以追溯到 1830 年代，当时比利时统计学家 P.F. Verhulst 发明它来描述人口动态：随着时间的推移，指数增长的初始爆炸随着它消耗可用资源而趋于平缓，从而产生特征逻辑曲线。一个多世纪过去后，美国统计学家 E. B. Wilson 和他的学生 Jane Worcester 又设计了逻辑回归来计算给定有害物质有多少是致命的。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOyicCWGnByS9WB95gsKYhdhuibzJHDC2Dlg1mtldlfCNcrE0wpey6l0DQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：P.F. Verhulst</p>
 <p><strong>拟合函数</strong>：逻辑回归将逻辑函数拟合到数据集，以便预测给定事件（例如，摄入士的宁）发生特定结果（例如，过早死亡）的概率。</p>
 <ul>
 <li>训练水平调整曲线的中心位置，垂直调整曲线的中间位置，以最大限度地减少函数输出与数据之间的误差。</li>
@@ -478,11 +443,9 @@
 <li>进一步的工作产生了有序逻辑回归，其中结果是有序值。</li>
 <li>为了处理稀疏或高维数据，逻辑回归可以利用与线性回归相同的正则化技术。</li>
 </ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsO3e3qmxibgZibLlDAM6NUReeIvjn1o6REPmxUeoNoJtkagn14UeGq031w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：David Cox</p>
 <p><strong>多功能曲线</strong>：逻辑函数以相当准确的方式描述了广泛的现象，因此逻辑回归在许多情况下提供了有用的基线预测。在医学上，它可以估计死亡率和疾病风险。在政治学中，它预测选举的赢家和输家。在经济学中，它预测商业前景。更重要的是，它在各种各样的神经网络中驱动一部分神经元（其中非线性是 Sigmoid 函数）。</p>
 <h2 id="梯度下降：一切都在下坡"><a href="#梯度下降：一切都在下坡" class="headerlink" title="梯度下降：一切都在下坡"></a><strong>梯度下降：一切都在下坡</strong></h2><p>想象一下黄昏后在山上徒步旅行，发现脚下什么都看不到。而且您的手机电池没电了，因此您无法使用 GPS 应用程序找到回家的路。您可能会通过梯度下降找到最快的路径。小心不要从悬崖上走。</p>
 <p><strong>太阳和地毯：</strong> 梯度下降比通过陡峭的地形下降更有利。1847年，法国数学家Augustin-Louis Cauchy发明了近似恒星轨道的算法。60 年后，他的同胞 Jacques Hadamard 独立开发了它来描述薄而灵活的物体（如地毯）的变形，这可能会使膝盖向下徒步更容易。然而，在机器学习中，它最常见的用途是找到学习算法损失函数的最低点。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOHZ3Vk98Rr6FfnhkrNLJYotia1JVdhM9l3X07V6zw7mEHC9tH3J5j7dw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：Augustin-Louis Cauchy</p>
 <p><strong>向下爬</strong>：经过训练的神经网络提供了一个函数，该函数在给定输入的情况下计算所需的输出。训练网络的一种方法是通过迭代计算实际输出与期望输出之间的差异，然后更改网络的参数值以缩小差异，从而将输出中的损失或误差最小化。梯度下降缩小了差异，将计算损失的函数最小化。网络的参数值相当于地形上的一个位置，损失的是当前高度。随着你的下降，你可以提高网络计算接近所需输出的能力。可见性是有限的，因为在典型的监督学习情况下，该算法仅依赖于网络的参数值和损失函数的梯度或斜率——即你在山上的位置和你脚下的斜率。</p>
 <ul>
 <li>基本方法是向地形下降最陡的方向移动。诀窍是校准你的步幅。步幅太小，就需要很长时间才能取得进展；步幅太大，你就会跳入未知的领域，可能是上坡而不是下坡。</li>
@@ -493,7 +456,6 @@
 <p><strong>最优优化器</strong>：梯度下降是寻找任一函数的最小值的明确选择。在可以直接计算精确解的情况下——例如，具有大量变量的线性回归任务中——它可以逼近一个值，而且通常速度更快、成本更低。但它确实在复杂的非线性任务中发挥了作用。凭借梯度下降和冒险精神，你可能可以及时赶出山区吃晚饭。</p>
 <h2 id="神经网络：寻找函数"><a href="#神经网络：寻找函数" class="headerlink" title="神经网络：寻找函数"></a><strong>神经网络：寻找函数</strong></h2><p>让我们先把这个问题弄清楚：大脑不是一个图形处理单元集，如果它是的话，那它运行的软件要比典型的人工神经网络复杂得多。而神经网络的灵感来自大脑的结构：一层层相互连接的神经元，每个神经元根据其相邻状态来计算自己的输出，由此产生的一连串活动形成了一个想法——或识别出一张猫的照片。</p>
 <p><strong>从生物到人工</strong>：大脑通过神经元之间相互作用来学习的想法可以追溯到 1873 年，但直到 1943 年，美国神经科学家 Warren McCulloch 和 Walter Pitts 才利用简单的数学规则建立了生物神经网络模型。1958 年，美国心理学家Frank Rosenblatt开发出感测器——这是一种在打卡机上实现的单层视觉网络，旨在为美国海军建立一个硬件版本。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="Image">图注：Frank Rosenblatt</p>
 <p><strong>越大越好</strong>：Rosenblatt 的发明只能识别单线分类。之后，乌克兰数学家 Alexey Ivakhnenko 和 Valentin Lapa 通过在任意层数中堆叠神经元网络，克服了这一限制。1985 年，独立工作的法国计算机科学家 Yann LeCun、David Parker 和美国心理学家 David Rumelhart 及其同事，描述了使用反向传播来有效训练此类网络。在新千年的第一个十年中，包括 Kumar Chellapilla、Dave Steinkraus 和 Rajat Raina（与吴恩达合作）在内的研究人员通过使用图形处理单元进一步推动了神经网络的发展，这使得越来越大的神经网络能从互联网生成的海量数据中得到学习。</p>
 <p><strong>适合每项任务</strong>：神经网络背后的原理很简单：对于任何任务，都有一个可执行它的函数。一个神经网络通过组合多个简单函数构成可训练函数，每个函数由单个神经元执行。一个神经元的功能由称为「权重」的可调参数决定。给定这些权重和输入示例及其所需输出的随机值，就可以反复更改权重，直到可训练的函数能完成手头的任务。</p>
 <ul>
@@ -515,7 +477,7 @@
 <p><strong>走进森林：</strong> 美国统计学家 Leo Breiman 和新西兰统计学家 Adele Cutler 将这一特征转化为优势，于 2001 年开发了随机森林（random forest）——这是一个决策树的集合，每个决策树会处理不同的、重叠的示例选择，并对最终结果进行投票。随机森林和它的表亲XGBoost不太容易过度拟合，这有助于使它们成为最受欢迎的机器学习算法之一。这就像让亚里士多德、Porphyry、Blumenbach、Darwin、 Jane Goodall、Dian Fossey和其他 1000 位动物学家一起在房间里，确保你的分类是最好的。</p>
 <h2 id="K均值聚类：群体思维"><a href="#K均值聚类：群体思维" class="headerlink" title="K均值聚类：群体思维"></a><strong>K均值聚类：群体思维</strong></h2><p>如果你在聚会上与其他人站得很近，那么你们很可能有一些共同点。这就是使用 k 均值聚类将数据点分组的想法。无论是通过人类机构还是其他力量形成的群体，这个算法都会找到它们。</p>
 <p><strong>从爆炸到拨号音</strong>：美国物理学家 Stuart Lloyd 是贝尔实验室标志性创新工厂和发明原子弹的曼哈顿计划的校友，他于 1957 年首次提出 k-means 聚类，以在数字信号中分配信息，但直到 1982 年才发表这个工作：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOpJuygA1lgnEzII4KgU8XhiasDWcKYJUDZiaUGNHg87RibIyeCW8JibgTDg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image">论文地址：<a href="https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf">https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf</a></p>
+<p>论文地址：<a href="https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf">https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf</a></p>
 <p>与此同时，美国统计学家 Edward Forgy 在 1965 年描述了一种类似的方法，导致了它的替代名称为「Lloyd-Forgy 算法」。</p>
 <p><strong>寻找中心</strong>：考虑将聚类分成志同道合的工作组。给定房间中参与者的位置和要形成的组数，k-means 聚类可以将参与者分成大小大致相等的组，每个组都聚集在一个中心点或质心周围。</p>
 <ul>
@@ -535,8 +497,66 @@
 <p>原文链接: <a href="https://read.deeplearning.ai/the-batch/issue-146/">https://read.deeplearning.ai/the-batch/issue-146/</a><br>来源 | AI科技评论</p>
 </blockquote>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Weather</title>
+    <url>/2022/05/01/AtmoSci/Weather/</url>
+    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
       <categories>
-        <category>Paper</category>
+        <category>AtmSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO_Events</title>
+    <url>/2022/06/07/OcnSci/ENSO_Events/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO_Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO_Waves/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fundamental</title>
+    <url>/2022/05/01/OcnSci/Ocean/</url>
+    <content><![CDATA[<h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
+<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -549,12 +569,14 @@
       </categories>
   </entry>
   <entry>
-    <title>CDO_UserGuide</title>
-    <url>/2022/06/07/Tool/CDO_UserGuide.md/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
+    <title>Ref_Data</title>
+    <url>/2022/06/07/OcnSci/Ref_Data/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+
 ]]></content>
       <categories>
-        <category>Tool</category>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -567,6 +589,15 @@
 
 <h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CDO_UserGuide</title>
+    <url>/2022/06/07/Tool/CDO_UserGuide.md/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1175,27 +1206,28 @@
       </categories>
   </entry>
   <entry>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tool/Parameters/</url>
+    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Python-Matplotlib_Cheatsheet</title>
     <url>/2022/06/07/Tool/Python-Matplotlib_Cheatsheet/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Python_Pandas_Cheatsheet</title>
-    <url>/2022/06/07/Tool/Python_Pandas_Cheatsheet/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ref_Figures</title>
-    <url>/2022/06/07/Tool/Ref_Figures/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1490,6 +1522,24 @@
       </categories>
   </entry>
   <entry>
+    <title>Python_Pandas_Cheatsheet</title>
+    <url>/2022/06/07/Tool/Python_Pandas_Cheatsheet/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ref_Figures</title>
+    <url>/2022/06/07/Tool/Ref_Figures/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>WRF</title>
     <url>/2022/05/01/Tool/WRF/</url>
     <content><![CDATA[<h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
@@ -1580,113 +1630,6 @@
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
 <p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Yaml</title>
-    <url>/2022/05/24/Tool/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1845,62 +1788,110 @@
       </categories>
   </entry>
   <entry>
-    <title>Conversions_and_Constants</title>
-    <url>/2022/06/07/AtmoSci/Conversions_and_Constants/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tool/Parameters/</url>
-    <content><![CDATA[<h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+    <title>Yaml</title>
+    <url>/2022/05/24/Tool/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
 
-
-
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Weather</title>
-    <url>/2022/05/01/AtmoSci/Weather/</url>
-    <content><![CDATA[<h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
-<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
-<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
-<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
-<p>LI is generally scaled as follows:</p>
-<ul>
-<li><p>LI 6 or Greater, Very Stable Conditions</p>
-</li>
-<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
-</li>
-<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
-</li>
-<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
-</li>
-<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
-</li>
-</ul>
-<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
-<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
-<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
-<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
-<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
-<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
-<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
-      <categories>
-        <category>AtmSci</category>
       </categories>
   </entry>
 </search>

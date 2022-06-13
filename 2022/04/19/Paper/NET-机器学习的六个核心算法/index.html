@@ -20,27 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。文章开头，吴恩达回忆他的研究历程中曾有一次抉择： 多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预算，他最终选择了神经网络，在很长的一段时间内弃用增强决策树。 这是一个错误的决定，「幸好我的团队很快修改了我的选择，项目才成功。」吴恩达谈道。">
+  <meta name="description" content="title: 机器学习的六个核心算法categories: Paperdate: 2022&#x2F;06&#x2F;13 12:00:00 最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。文章开头，吴恩达回忆他的研究历程中曾有一次抉择： 多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预">
 <meta property="og:type" content="article">
-<meta property="og:title" content="机器学习的六个核心算法">
-<meta property="og:url" content="http://example.com/2022/06/13/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:title" content="ruyanc">
+<meta property="og:url" content="http://example.com/2022/04/19/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。文章开头，吴恩达回忆他的研究历程中曾有一次抉择： 多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预算，他最终选择了神经网络，在很长的一段时间内弃用增强决策树。 这是一个错误的决定，「幸好我的团队很快修改了我的选择，项目才成功。」吴恩达谈道。">
+<meta property="og:description" content="title: 机器学习的六个核心算法categories: Paperdate: 2022&#x2F;06&#x2F;13 12:00:00 最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。文章开头，吴恩达回忆他的研究历程中曾有一次抉择： 多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预">
 <meta property="og:locale">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOfNNUvlUgcVm2RhF8icQmNNOb50QvES1uhJqdO9M3zTp703V1ia6hjRsQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOJL0SJkvOC6EPy7ib63vO3OceJ9lfibpJW4ylRQOhjAvg9hOmhmlNvBQQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOyicCWGnByS9WB95gsKYhdhuibzJHDC2Dlg1mtldlfCNcrE0wpey6l0DQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsO3e3qmxibgZibLlDAM6NUReeIvjn1o6REPmxUeoNoJtkagn14UeGq031w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOHZ3Vk98Rr6FfnhkrNLJYotia1JVdhM9l3X07V6zw7mEHC9tH3J5j7dw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOpJuygA1lgnEzII4KgU8XhiasDWcKYJUDZiaUGNHg87RibIyeCW8JibgTDg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="article:published_time" content="2022-06-13T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-13T00:52:01.441Z">
+<meta property="article:published_time" content="2022-04-19T06:41:32.468Z">
+<meta property="article:modified_time" content="2022-06-13T00:55:15.145Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOfNNUvlUgcVm2RhF8icQmNNOb50QvES1uhJqdO9M3zTp703V1ia6hjRsQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 
-<link rel="canonical" href="http://example.com/2022/06/13/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/">
+<link rel="canonical" href="http://example.com/2022/04/19/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/">
 
 
 <script id="page-configurations">
@@ -53,7 +45,7 @@
   };
 </script>
 
-  <title>机器学习的六个核心算法 | ruyanc</title>
+  <title> | ruyanc</title>
   
 
 
@@ -198,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/13/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/04/19/Paper/NET-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%85%AD%E4%B8%AA%E6%A0%B8%E5%BF%83%E7%AE%97%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -211,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          机器学习的六个核心算法
+          
         </h1>
 
         <div class="post-meta">
@@ -220,19 +212,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2022-06-13 12:00:00 / Modified: 08:52:01" itemprop="dateCreated datePublished" datetime="2022-06-13T12:00:00+08:00">2022-06-13</time>
+              <time title="Created: 2022-04-19 14:41:32" itemprop="dateCreated datePublished" datetime="2022-04-19T14:41:32+08:00">2022-04-19</time>
             </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Paper/" itemprop="url" rel="index"><span itemprop="name">Paper</span></a>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
                 </span>
-            </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-06-13 08:55:15" itemprop="dateModified" datetime="2022-06-13T08:55:15+08:00">2022-06-13</time>
+              </span>
 
           
 
@@ -245,7 +234,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h5 id="最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"><a href="#最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。" class="headerlink" title="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"></a>最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。</h5><p>文章开头，吴恩达回忆他的研究历程中曾有一次抉择：</p>
+        <p>title: 机器学习的六个核心算法<br>categories: Paper<br>date: 2022&#x2F;06&#x2F;13 12:00:00</p>
+<h5 id="最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"><a href="#最近，吴恩达在其创办的人工智能周讯《The-Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。" class="headerlink" title="最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。"></a>最近，吴恩达在其创办的人工智能周讯《The Batch》上更新了一篇博文，总结了机器学习领域多个基础算法的历史溯源。</h5><p>文章开头，吴恩达回忆他的研究历程中曾有一次抉择：</p>
 <p>多年前，在一次项目中，选择算法时，他不得不在神经网络与决策树学习算法之间做选择。考虑到计算预算，他最终选择了神经网络，在很长的一段时间内弃用增强决策树。</p>
 <p>这是一个错误的决定，「幸好我的团队很快修改了我的选择，项目才成功。」吴恩达谈道。</p>
 <p>他由此感叹，不断学习与更新基础知识是十分重要的。与其他技术领域一样，随着研究人员的增加、研究成果数量的增长，机器学习领域也在不断发展。但有些基础算法与核心思想的贡献是经得起时间考验的：</p>
@@ -259,10 +249,7 @@
 <h2 id="线性回归：直的-amp-窄的"><a href="#线性回归：直的-amp-窄的" class="headerlink" title="线性回归：直的&amp;窄的"></a><strong>线性回归：直的&amp;窄的</strong></h2><p>线性回归是机器学习中的一个关键的统计方法，但它并非不战而胜。它由两位杰出的数学家提出，但200 年过去了，这个问题仍未解决。长期存在的争议不仅证明了该算法具有出色的实用性，还证明了它的本质十分简单。</p>
 <p>那么线性回归到底是谁的算法呢？</p>
 <p>1805 年，法国数学家 Adrien-Marie Legendre 发表了将一条线拟合到一组点的方法，同时试图预测彗星的位置（天体导航是当时全球商业中最有价值的科学方向，就像今天的人工智能一样）。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOfNNUvlUgcVm2RhF8icQmNNOb50QvES1uhJqdO9M3zTp703V1ia6hjRsQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p>图注：Adrien-Marie Legendre 的素描画像</p>
 <p>四年后，24 岁的德国神童 Carl Friedrich Gauss （高斯）坚称他自 1795 年以来一直在使用它，但认为它太琐碎了，无法写。高斯的主张促使Legendre匿名发表了一份文章，称“一位非常著名的几何学家毫不犹豫地采用了这种方法。”</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOJL0SJkvOC6EPy7ib63vO3OceJ9lfibpJW4ylRQOhjAvg9hOmhmlNvBQQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：Carl Friedrich Gauss</p>
 <p><strong>斜率和偏差</strong>：当结果与影响它的变量之间的关系遵循直线时，线性回归很有用。例如，汽车的油耗与其重量成线性关系。</p>
 <ul>
 <li>汽车的油耗 y 与其重量 x 之间的关系取决于直线的斜率 w（油耗随重量上升的幅度）和偏置项 b（零重量时的油耗）：y&#x3D;w*x+b。</li>
@@ -275,7 +262,6 @@
 <h2 id="逻辑回归：跟随曲线"><a href="#逻辑回归：跟随曲线" class="headerlink" title="逻辑回归：跟随曲线"></a><strong>逻辑回归：跟随曲线</strong></h2><p>曾经有一段时间，逻辑回归只用于对一件事进行分类：如果你喝了一瓶毒药，你可能会被贴上的标签是“活着”还是“死去”呢？时代变了，今天，不仅呼叫紧急服务为这个问题提供了更好的答案，而且逻辑回归也成为了深度学习的核心。</p>
 <p><strong>毒物控制</strong>：</p>
 <p>逻辑函数可以追溯到 1830 年代，当时比利时统计学家 P.F. Verhulst 发明它来描述人口动态：随着时间的推移，指数增长的初始爆炸随着它消耗可用资源而趋于平缓，从而产生特征逻辑曲线。一个多世纪过去后，美国统计学家 E. B. Wilson 和他的学生 Jane Worcester 又设计了逻辑回归来计算给定有害物质有多少是致命的。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOyicCWGnByS9WB95gsKYhdhuibzJHDC2Dlg1mtldlfCNcrE0wpey6l0DQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：P.F. Verhulst</p>
 <p><strong>拟合函数</strong>：逻辑回归将逻辑函数拟合到数据集，以便预测给定事件（例如，摄入士的宁）发生特定结果（例如，过早死亡）的概率。</p>
 <ul>
 <li>训练水平调整曲线的中心位置，垂直调整曲线的中间位置，以最大限度地减少函数输出与数据之间的误差。</li>
@@ -288,11 +274,9 @@
 <li>进一步的工作产生了有序逻辑回归，其中结果是有序值。</li>
 <li>为了处理稀疏或高维数据，逻辑回归可以利用与线性回归相同的正则化技术。</li>
 </ul>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsO3e3qmxibgZibLlDAM6NUReeIvjn1o6REPmxUeoNoJtkagn14UeGq031w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：David Cox</p>
 <p><strong>多功能曲线</strong>：逻辑函数以相当准确的方式描述了广泛的现象，因此逻辑回归在许多情况下提供了有用的基线预测。在医学上，它可以估计死亡率和疾病风险。在政治学中，它预测选举的赢家和输家。在经济学中，它预测商业前景。更重要的是，它在各种各样的神经网络中驱动一部分神经元（其中非线性是 Sigmoid 函数）。</p>
 <h2 id="梯度下降：一切都在下坡"><a href="#梯度下降：一切都在下坡" class="headerlink" title="梯度下降：一切都在下坡"></a><strong>梯度下降：一切都在下坡</strong></h2><p>想象一下黄昏后在山上徒步旅行，发现脚下什么都看不到。而且您的手机电池没电了，因此您无法使用 GPS 应用程序找到回家的路。您可能会通过梯度下降找到最快的路径。小心不要从悬崖上走。</p>
 <p><strong>太阳和地毯：</strong> 梯度下降比通过陡峭的地形下降更有利。1847年，法国数学家Augustin-Louis Cauchy发明了近似恒星轨道的算法。60 年后，他的同胞 Jacques Hadamard 独立开发了它来描述薄而灵活的物体（如地毯）的变形，这可能会使膝盖向下徒步更容易。然而，在机器学习中，它最常见的用途是找到学习算法损失函数的最低点。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOHZ3Vk98Rr6FfnhkrNLJYotia1JVdhM9l3X07V6zw7mEHC9tH3J5j7dw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><br>图注：Augustin-Louis Cauchy</p>
 <p><strong>向下爬</strong>：经过训练的神经网络提供了一个函数，该函数在给定输入的情况下计算所需的输出。训练网络的一种方法是通过迭代计算实际输出与期望输出之间的差异，然后更改网络的参数值以缩小差异，从而将输出中的损失或误差最小化。梯度下降缩小了差异，将计算损失的函数最小化。网络的参数值相当于地形上的一个位置，损失的是当前高度。随着你的下降，你可以提高网络计算接近所需输出的能力。可见性是有限的，因为在典型的监督学习情况下，该算法仅依赖于网络的参数值和损失函数的梯度或斜率——即你在山上的位置和你脚下的斜率。</p>
 <ul>
 <li>基本方法是向地形下降最陡的方向移动。诀窍是校准你的步幅。步幅太小，就需要很长时间才能取得进展；步幅太大，你就会跳入未知的领域，可能是上坡而不是下坡。</li>
@@ -303,7 +287,6 @@
 <p><strong>最优优化器</strong>：梯度下降是寻找任一函数的最小值的明确选择。在可以直接计算精确解的情况下——例如，具有大量变量的线性回归任务中——它可以逼近一个值，而且通常速度更快、成本更低。但它确实在复杂的非线性任务中发挥了作用。凭借梯度下降和冒险精神，你可能可以及时赶出山区吃晚饭。</p>
 <h2 id="神经网络：寻找函数"><a href="#神经网络：寻找函数" class="headerlink" title="神经网络：寻找函数"></a><strong>神经网络：寻找函数</strong></h2><p>让我们先把这个问题弄清楚：大脑不是一个图形处理单元集，如果它是的话，那它运行的软件要比典型的人工神经网络复杂得多。而神经网络的灵感来自大脑的结构：一层层相互连接的神经元，每个神经元根据其相邻状态来计算自己的输出，由此产生的一连串活动形成了一个想法——或识别出一张猫的照片。</p>
 <p><strong>从生物到人工</strong>：大脑通过神经元之间相互作用来学习的想法可以追溯到 1873 年，但直到 1943 年，美国神经科学家 Warren McCulloch 和 Walter Pitts 才利用简单的数学规则建立了生物神经网络模型。1958 年，美国心理学家Frank Rosenblatt开发出感测器——这是一种在打卡机上实现的单层视觉网络，旨在为美国海军建立一个硬件版本。</p>
-<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="Image">图注：Frank Rosenblatt</p>
 <p><strong>越大越好</strong>：Rosenblatt 的发明只能识别单线分类。之后，乌克兰数学家 Alexey Ivakhnenko 和 Valentin Lapa 通过在任意层数中堆叠神经元网络，克服了这一限制。1985 年，独立工作的法国计算机科学家 Yann LeCun、David Parker 和美国心理学家 David Rumelhart 及其同事，描述了使用反向传播来有效训练此类网络。在新千年的第一个十年中，包括 Kumar Chellapilla、Dave Steinkraus 和 Rajat Raina（与吴恩达合作）在内的研究人员通过使用图形处理单元进一步推动了神经网络的发展，这使得越来越大的神经网络能从互联网生成的海量数据中得到学习。</p>
 <p><strong>适合每项任务</strong>：神经网络背后的原理很简单：对于任何任务，都有一个可执行它的函数。一个神经网络通过组合多个简单函数构成可训练函数，每个函数由单个神经元执行。一个神经元的功能由称为「权重」的可调参数决定。给定这些权重和输入示例及其所需输出的随机值，就可以反复更改权重，直到可训练的函数能完成手头的任务。</p>
 <ul>
@@ -325,7 +308,7 @@
 <p><strong>走进森林：</strong> 美国统计学家 Leo Breiman 和新西兰统计学家 Adele Cutler 将这一特征转化为优势，于 2001 年开发了随机森林（random forest）——这是一个决策树的集合，每个决策树会处理不同的、重叠的示例选择，并对最终结果进行投票。随机森林和它的表亲XGBoost不太容易过度拟合，这有助于使它们成为最受欢迎的机器学习算法之一。这就像让亚里士多德、Porphyry、Blumenbach、Darwin、 Jane Goodall、Dian Fossey和其他 1000 位动物学家一起在房间里，确保你的分类是最好的。</p>
 <h2 id="K均值聚类：群体思维"><a href="#K均值聚类：群体思维" class="headerlink" title="K均值聚类：群体思维"></a><strong>K均值聚类：群体思维</strong></h2><p>如果你在聚会上与其他人站得很近，那么你们很可能有一些共同点。这就是使用 k 均值聚类将数据点分组的想法。无论是通过人类机构还是其他力量形成的群体，这个算法都会找到它们。</p>
 <p><strong>从爆炸到拨号音</strong>：美国物理学家 Stuart Lloyd 是贝尔实验室标志性创新工厂和发明原子弹的曼哈顿计划的校友，他于 1957 年首次提出 k-means 聚类，以在数字信号中分配信息，但直到 1982 年才发表这个工作：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cNFA8C0uVPuNqicARDfV4XYLt8JhicVIsOpJuygA1lgnEzII4KgU8XhiasDWcKYJUDZiaUGNHg87RibIyeCW8JibgTDg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image">论文地址：<a target="_blank" rel="noopener" href="https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf">https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf</a></p>
+<p>论文地址：<a target="_blank" rel="noopener" href="https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf">https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf</a></p>
 <p>与此同时，美国统计学家 Edward Forgy 在 1965 年描述了一种类似的方法，导致了它的替代名称为「Lloyd-Forgy 算法」。</p>
 <p><strong>寻找中心</strong>：考虑将聚类分成志同道合的工作组。给定房间中参与者的位置和要形成的组数，k-means 聚类可以将参与者分成大小大致相等的组，每个组都聚集在一个中心点或质心周围。</p>
 <ul>
@@ -358,13 +341,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/" rel="prev" title="魏云涛">
-      <i class="fa fa-chevron-left"></i> 魏云涛
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2050/01/01/Welcome/" rel="next" title="Welcome to my blog">
-      Welcome to my blog <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/WRF/" rel="next" title="WRF">
+      WRF <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
