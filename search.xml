@@ -90,6 +90,24 @@
       </categories>
   </entry>
   <entry>
+    <title>CDO Ref Card</title>
+    <url>/2022/05/01/Tool/CDO%20Ref%20Card/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CDO UserGuide</title>
+    <url>/2022/05/01/Tool/CDO%20UserGuide.md/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CDO</title>
     <url>/2022/05/01/Tool/CDO/</url>
     <content><![CDATA[<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">31</span> <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_1mon.nc</span><br><span class="line"></span><br><span class="line">ncks -d time,<span class="number">0</span>,<span class="number">9</span> infile outfile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=tos,sos,mldr10_1 <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_var.nc</span><br><span class="line"></span><br><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">168</span> ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209910.</span>nc ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209811.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v850.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> *.nc /project/cas/ruyanc/WORK/<span class="keyword">data</span>/CMIP5/q850_add/CNRM-CM5_r1i1p1_q850.nc</span><br><span class="line"></span><br><span class="line">ncrcat ./temp/*.nc ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">20000</span> ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc ACCESS1-<span class="number">3_r1i1p1_u200</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">200</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v200.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">850</span> toga_ersstv3b_ens01_Q_188001-<span class="number">201612.</span>nc toga_ersstv3b_ens01_Q850_188001-<span class="number">201612.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=DTCOND,QRL,QRS,DTV ./temp/*.nc CAM4_EN_plusQ0p15_heating_000210-<span class="number">000304.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=TS ./temp/*.nc CAM4_EN_plusQ0p15_TS_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PSL ./temp/*.nc CAM4_EN_plusQ0p15_PSL_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=Nudge_T ./temp/*.nc CAM4_EN_plusQ0p51_Nudge_T_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PS,PHIS ./temp/*.nc CAM4_EN_PS_PHIS_000310-<span class="number">000404.</span>nc</span><br></pre></td></tr></table></figure>
@@ -108,24 +126,6 @@
 
 <h4 id="NCO"><a href="#NCO" class="headerlink" title="NCO"></a>NCO</h4><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">ncrcat -v ts -d lev,<span class="number">0</span> /nfs2/Models/FGOALS-gc-script/dataall/data_ocn/MMEAN0001-??.nc ts.nc</span><br><span class="line"></span><br><span class="line">ncrcat -d plev,<span class="number">5</span> *.nc zg_Amon_bcc-csm1-<span class="number">1_000101</span>-<span class="number">050012.</span>nc</span><br><span class="line"></span><br><span class="line">ncatted -a coordinates,sst,c,c,<span class="string">&quot;nav_lon nav_lat&quot;</span> sst_data.nc</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CDO_Ref_Card</title>
-    <url>/2022/05/01/Tool/CDO_Ref_Card/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CDO_UserGuide</title>
-    <url>/2022/05/01/Tool/CDO_UserGuide.md/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -243,8 +243,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Fortran95_Introduction</title>
-    <url>/2022/05/01/Tool/Fortran95_Introduction/</url>
+    <title>Fortran95</title>
+    <url>/2022/05/01/Tool/Fortran95/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
 
 ]]></content>
@@ -474,9 +474,18 @@
       </categories>
   </entry>
   <entry>
-    <title>Latex_Symbols</title>
-    <url>/2022/05/01/Tool/Latex_Symbols/</url>
+    <title>Latex Symbols</title>
+    <url>/2022/05/01/Tool/Latex%20Symbols/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux CMD</title>
+    <url>/2022/05/01/Tool/Linux%20CMD/</url>
+    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -668,17 +677,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Linux_CMD</title>
-    <url>/2022/05/01/Tool/Linux_CMD/</url>
-    <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Mac Cron</title>
-    <url>/2022/05/01/Tool/MacCron/</url>
+    <url>/2022/05/01/Tool/Mac%20Cron/</url>
     <content><![CDATA[<h3 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h3><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
 <p>最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍</p>
 <p><a href="https://link.zhihu.com/?target=https://segmentfault.com/a/1190000020850932">为什么crontab不执行 - SegmentFault 思否</a></p>
@@ -726,20 +726,6 @@
     <title>Matplotlib Cheatsheet</title>
     <url>/2022/05/01/Tool/Matplotlib%20Cheatsheet/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>PDF</title>
-    <url>/2022/05/01/Tool/PDF/</url>
-    <content><![CDATA[<h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
-<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
-<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
-<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
-<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
-<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -886,6 +872,20 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PDF</title>
+    <url>/2022/05/01/Tool/PDF/</url>
+    <content><![CDATA[<h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
+<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
+<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
+<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
+<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
+<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1208,8 +1208,8 @@
       </categories>
   </entry>
   <entry>
-    <title>Ref_Figures</title>
-    <url>/2022/05/01/Tool/Ref_Figures/</url>
+    <title>Ref Figures</title>
+    <url>/2022/05/01/Tool/Ref%20Figures/</url>
     <content><![CDATA[<div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
 ]]></content>
       <categories>
@@ -1307,113 +1307,6 @@
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
 <p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
 <p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Yaml</title>
-    <url>/2022/05/01/Tool/Yaml/</url>
-    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1572,6 +1465,113 @@
       </categories>
   </entry>
   <entry>
+    <title>Yaml</title>
+    <url>/2022/05/01/Tool/Yaml/</url>
+    <content><![CDATA[<h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>应俊</title>
     <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
     <content><![CDATA[<h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
@@ -1636,50 +1636,6 @@
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2rlwurgh3j20pj0c940f.jpg" alt="Screen Shot 2022-05-31 at 15.12.55"></p>
 <hr>
 <h4 id="Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022"><a href="#Hellmich-L-Matei-D-Suarez-Gutierrez-L-and-Muller-W-A-Contribution-of-the-Atlantic-Ocean-to-European-Heat-Extremes-EGU-General-Assembly-2022-Vienna-Austria-23–27-May-2022-EGU22-5694-https-doi-org-10-5194-egusphere-egu22-5694-2022" class="headerlink" title="Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, https://doi.org/10.5194/egusphere-egu22-5694, 2022"></a>Hellmich, L., Matei, D., Suarez-Gutierrez, L., and Müller, W. A.: Contribution of the Atlantic Ocean to European Heat Extremes, EGU General Assembly 2022, Vienna, Austria, 23–27 May 2022, EGU22-5694, <a href="https://doi.org/10.5194/egusphere-egu22-5694">https://doi.org/10.5194/egusphere-egu22-5694</a>, 2022</h4><p>Mechanisms explaining the internal variability of mean summer temperatures have been found on seasonal to sub- and multi-decadal timescales, but their contribution to variability in extreme temperatures is not fully established. Here, we investigate the sub-decadal (5-10yr) variability of European summer heat extremes and their potential drivers. By using reanalyses (ERA5&#x2F;ORA-20C) and the Max Planck Institute Grand Ensemble (MPI-GE), we identify dominant timescales of temperature extremes variability over Europe. We are able to link heat extremes over Central Europe with a southward development of a meridional ocean heat transport anomaly over the North Atlantic (NA), starting about 6 years prior an extreme event. This connection is reinforced by other variables such as ocean heat content and atmospheric sea level pressure and jet stream displacement. The results indicate the important role of the inertia of the NA for the occurrence of heat extremes over Europe, and possibly help to improve their predictability several years ahead.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>张荣华</title>
-    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
-    <content><![CDATA[<h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
-<p>penetration depth: 太阳辐射的穿透深度</p>
-<p>赤道中东太平洋chla高值与上升流有关</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
-<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
-<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
-<p>clm chla ENSO振幅较观测偏大</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
-<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
-<p>周期偏长的偏差也明显改善</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
-<p>简单大气+复杂OGCM</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
-<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
-<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
-<p>同时均对周期存在影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
-<p>导致了ENSO的复杂性</p>
-<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
-<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
-<p>海洋生物同样可以通过动力过程影响海洋</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1752,37 +1708,44 @@
       </categories>
   </entry>
   <entry>
-    <title>Group Study</title>
-    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
-<p>2℃增暖，北极夏季无冰，但可恢复</p>
-<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
-<p>动力作用对海冰的生成重要</p>
-<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
-<p>冰架对海平面没有影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
-<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
-<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
-<p>次表层海水增暖，溶解底部的冰盖</p>
-<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
-<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
-<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
-<p>冰川主导</p>
-<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
-<p>冰盖主导</p>
-<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
-<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
-<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
-<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
-<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
+    <title>张荣华</title>
+    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
+    <content><![CDATA[<h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
+<p>penetration depth: 太阳辐射的穿透深度</p>
+<p>赤道中东太平洋chla高值与上升流有关</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
+<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
+<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
+<p>clm chla ENSO振幅较观测偏大</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
+<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
+<p>周期偏长的偏差也明显改善</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
+<p>简单大气+复杂OGCM</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
+<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
+<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
+<p>同时均对周期存在影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
+<p>导致了ENSO的复杂性</p>
+<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
+<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
+<p>海洋生物同样可以通过动力过程影响海洋</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1841,6 +1804,43 @@
 <p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
 <hr>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Group Study</title>
+    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
+<p>2℃增暖，北极夏季无冰，但可恢复</p>
+<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
+<p>动力作用对海冰的生成重要</p>
+<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
+<p>冰架对海平面没有影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
+<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
+<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
+<p>次表层海水增暖，溶解底部的冰盖</p>
+<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
+<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
+<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
+<p>冰川主导</p>
+<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
+<p>冰盖主导</p>
+<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
+<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
+<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
+<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
+<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
