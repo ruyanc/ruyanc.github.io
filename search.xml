@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Welcome to my blog</title>
+    <url>/2050/01/01/Welcome/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2kg7l1fo6j21d30u0afh.jpg" alt="cover"></p>
+]]></content>
+      <categories>
+        <category>Welcome</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CHLA</title>
     <url>/2022/05/24/Paper/CHLA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
@@ -22,36 +31,6 @@
 ]]></content>
       <categories>
         <category>Paper</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Conversions and Constants</title>
-    <url>/2022/06/07/AtmoSci/Conversions%20and%20Constants/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Basic</title>
-    <url>/2022/05/01/OcnSci/Basic/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
-<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -86,28 +65,18 @@
       </categories>
   </entry>
   <entry>
-    <title>ENSO Events</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ocean Data</title>
-    <url>/2022/06/07/OcnSci/Ocean%20Data/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CDO Ref Card</title>
     <url>/2022/05/01/Tool/CDO%20Ref%20Card/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CDO User Guide</title>
+    <url>/2022/05/01/Tool/CDO%20User%20Guide.md/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -138,12 +107,12 @@
       </categories>
   </entry>
   <entry>
-    <title>CDO User Guide</title>
-    <url>/2022/05/01/Tool/CDO%20User%20Guide.md/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
+    <title>Conversions and Constants</title>
+    <url>/2022/06/07/AtmoSci/Conversions%20and%20Constants/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
 ]]></content>
       <categories>
-        <category>Tool</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -169,57 +138,6 @@
       </categories>
   </entry>
   <entry>
-    <title>CESM</title>
-    <url>/2022/05/01/Tool/CESM/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="4-5-The-Four-Run-Types"><a href="#4-5-The-Four-Run-Types" class="headerlink" title="4.5 The Four Run Types"></a>4.5 The Four Run Types</h4><p>The environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘continue’ or ‘branch’, with ‘startup’ being the default setting. The four options are described in this section.</p>
-<h4 id="4-5-1-Startup-Runs"><a href="#4-5-1-Startup-Runs" class="headerlink" title="4.5.1 Startup Runs"></a>4.5.1 Startup Runs</h4><p>If $RUNTYPE is set to ‘startup’, the model will start from some arbitrary baseline state that need not be associated with any previous run. Startup runs are typically initialized using a $BASEDATE of 0001-01-01, although there is no dependence of these runs on previous case names or calendar dates. The ice model uses the $BASEDATE sent from the coupler on a startup run. The ice setup script will create a pointer file named <em>rpointer.ice</em> with the name of the initial restart file in it using $BASEDATE. The date read in from the restart file will be written over by $BASEDATE. The primary environment variables for a startup run are:</p>
-<p> CASE    test.a1    #new case name</p>
-<p> RUNTYPE  startup    </p>
-<p> BASEDATE  0001-01-01  #start date for initial run</p>
-<p>Startup runs can start from a $BASEDATE other then 0001-01-01. Startup runs can also be initialized using data created within the ice model, as described in the next section.</p>
-<h5 id="4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><a href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4" class="headerlink" title="4.5.1.1 Using Initial Conditions from within CSIM4"></a>4.5.1.1 Using Initial Conditions from within CSIM4</h5><p>Initial conditions can be calculated within the ice model in a subroutine called init_state in <em>ice_init.F</em>. Here, the ocean surface is initialized at the freezing point everywhere north of 40 degrees and south of -40 degrees latitude, allowing ice to form everywhere in these regions. While running the ice model with a data ocean will melt any extra ice during the first year of integration, is not recommended that these initial conditions be used when running the ice model coupled to an active ocean model. The advantage of using this input is that it is not grid or land mask dependent. To use these initial conditions, set RESTART in <em>ice.setup.csh</em>:</p>
-<p>set RESTART &#x3D; .false.</p>
-<h6 id="4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><a href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files" class="headerlink" title="4.5.1.2 Using Initial Conditions from Input Data Files"></a>4.5.1.2 Using Initial Conditions from Input Data Files</h6><p>The input data file for the ice model is a binary restart file from a previous run. If $RUNTYPE is set to ‘startup’, the ice setup script is will read the initial condition file from the input data directory, <em>iced.0001-01-01.$ICE_GRID</em> regardless of $BASEDATE. For ‘continue’ runs, the input data file is determined by the filename set in the restart pointer file (see section <a href="https://www.cesm.ucar.edu/models/ccsm2.0/csim/UsersGuide/ice_usrdoc/node21.html#pointer_files">4.8.2.1</a>). If $RUNTYPE is ‘branch’ or ‘hybrid’, the ice setup script will attempt to file a restart file with $REFDATE in the filename.</p>
-<p>For the startup and hybrid setups, it is not necessary that the date inside the binary file match the date in the filename, since the $BASEDATE received from the coupler will override the date in the restart file. This will not be true for continue and branch runs, where the $BASEDATE is set in the model using the date in the restart file. Initializing the model using a restart file from an equilibrium run will result in a more physically reasonable scenario than the initial conditions set within CSIM4. The conditions in the initial restart file provided with CSIM4 are from an active ice only equilibrium run using modified NCEP forcing. The drawbacks are that the data is binary, difficult to edit, and is date and grid dependent. A restart file will be used as initial conditions if</p>
-<p>set RESTART &#x3D; .true.</p>
-<p>in <em>ice.setup.csh</em>.</p>
-<h4 id="4-5-2-Hybrid-Runs"><a href="#4-5-2-Hybrid-Runs" class="headerlink" title="4.5.2 Hybrid Runs"></a>4.5.2 Hybrid Runs</h4><p>A hybrid run should be used when a collection of arbitrary initial&#x2F;restart files from previous runs is desired to start the model. A new $CASE and $BASEDATE can be specified. The ice model receives $BASEDATE from the coupler. The date read in from the restart file will be written over by $BASEDATE. The climate simulated by the hybrid run should be continuous compared to the previous run, but an exact restart will not be produced. If all components start from the same reference case and date, $REFCASE and $REFDATE can be used to specify the previous date and case. Generally, a hybrid run will require some modifications to the scripts by the user, especially if some components are starting from inconsistent runs or dates. The primary environment variables for a startup run are:</p>
-<p> CASE    test.a1    #new case name</p>
-<p> RUNTYPE  hybrid</p>
-<p> BASEDATE  0001-01-01  #date where to start run</p>
-<p> REFCASE         #reference case for initial&#x2F;restart data</p>
-<p> REFDATE  0001-01-01  #date in REFCASE to obtain initial&#x2F;restart data</p>
-<h4 id="4-5-3-Continue-Runs"><a href="#4-5-3-Continue-Runs" class="headerlink" title="4.5.3 Continue Runs"></a>4.5.3 Continue Runs</h4><p>A continue run is an exact continuation of a previous run. This means that the run will produce a bit-for-bit answer as if the existing run had not stopped. In this case, it is assumed that $CASE and $BASEDATE have not changed and that the date is continuous from the previous run. For a continue run, the only change required in the main script is to set:</p>
-<p> RUNTYPE  continue</p>
-<p>A change in the $BASEDATE is not necessary for a continue run, since the date is read in from the restart files, and the coupler checks to see that the dates between the component models match.</p>
-<h4 id="4-5-4-Branch-Runs"><a href="#4-5-4-Branch-Runs" class="headerlink" title="4.5.4 Branch Runs"></a>4.5.4 Branch Runs</h4><p>Branch runs will continue a previous run but with a new case name and possibly a new start date, where the previous run has created a consistent set of restart files. Branch runs differ from continuation runs in that they are typically used to perform sensitivity studies, or to modify output streams, branching off a previous run. The new case will restart exactly, as in a continuation run, if no source code or input namelist parameters have changed. For a branch run, $BASEDATE must remain the same as that in the previous run, and the following environment variables must be set in the the main script:</p>
-<p> CASE    new case name </p>
-<p> RUNTYPE  branch</p>
-<p> BASEDATE  date to start this run</p>
-<p> REFCASE  reference case to branch from </p>
-<p> REFDATE  date in REFCASE to obtain restart data</p>
-<p>【CESM2 release news】<br><a href="https://eos.org/articles/new-version-of-popular-climate-model-released">https://eos.org/articles/new-version-of-popular-climate-model-released</a></p>
-<p>【CMIP6 forcing】<br><a href="https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#">https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#</a><br><a href="https://pcmdi.llnl.gov/mips/amip/">https://pcmdi.llnl.gov/mips/amip/</a><br><a href="https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63">https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63</a></p>
-<p>【CMIP5 model errors】<a href="https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/">https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/</a></p>
-<p>【How do climate models work?】<a href="https://www.carbonbrief.org/qa-how-do-climate-models-work">https://www.carbonbrief.org/qa-how-do-climate-models-work</a></p>
-<p>【CESM related】</p>
-<p>Supported Grids: <a href="http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html">http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html</a></p>
-<p>【GFDL idealized model】<a href="https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview">https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview</a></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Cite Figures</title>
-    <url>/2022/05/01/Tool/Cite%20Figures/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>ERA5</title>
     <url>/2022/05/01/Tool/ERA5/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
@@ -232,67 +150,6 @@
 ]]></content>
       <categories>
         <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fortran</title>
-    <url>/2022/05/01/Tool/Fortran/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
-<ol>
-<li>USE netcdf</li>
-<li>NF90_OPEN函数打开文件</li>
-<li>NF90_INQ_DIMID获取维度ID</li>
-<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
-<li>ALLOCATE分配动态数组</li>
-<li>NF90_INQ_VARID获取变量ID</li>
-<li>NF90_GET_VAR获取变量值</li>
-</ol>
-<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
-<p>以下是具体示例代码</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
-
-<p>编译方法：</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
-
-<p>参考：</p>
-<ul>
-<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
-<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Fortran95</title>
-    <url>/2022/05/01/Tool/Fortran95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
-
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Gitee</title>
-    <url>/2022/05/01/Tool/Gitee/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Welcome to my blog</title>
-    <url>/2050/01/01/Welcome/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2kg7l1fo6j21d30u0afh.jpg" alt="cover"></p>
-]]></content>
-      <categories>
-        <category>Welcome</category>
       </categories>
   </entry>
   <entry>
@@ -367,6 +224,109 @@
 ]]></content>
       <categories>
         <category>Paper</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Cite Figures</title>
+    <url>/2022/05/01/Tool/Cite%20Figures/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CESM</title>
+    <url>/2022/05/01/Tool/CESM/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="4-5-The-Four-Run-Types"><a href="#4-5-The-Four-Run-Types" class="headerlink" title="4.5 The Four Run Types"></a>4.5 The Four Run Types</h4><p>The environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘continue’ or ‘branch’, with ‘startup’ being the default setting. The four options are described in this section.</p>
+<h4 id="4-5-1-Startup-Runs"><a href="#4-5-1-Startup-Runs" class="headerlink" title="4.5.1 Startup Runs"></a>4.5.1 Startup Runs</h4><p>If $RUNTYPE is set to ‘startup’, the model will start from some arbitrary baseline state that need not be associated with any previous run. Startup runs are typically initialized using a $BASEDATE of 0001-01-01, although there is no dependence of these runs on previous case names or calendar dates. The ice model uses the $BASEDATE sent from the coupler on a startup run. The ice setup script will create a pointer file named <em>rpointer.ice</em> with the name of the initial restart file in it using $BASEDATE. The date read in from the restart file will be written over by $BASEDATE. The primary environment variables for a startup run are:</p>
+<p> CASE    test.a1    #new case name</p>
+<p> RUNTYPE  startup    </p>
+<p> BASEDATE  0001-01-01  #start date for initial run</p>
+<p>Startup runs can start from a $BASEDATE other then 0001-01-01. Startup runs can also be initialized using data created within the ice model, as described in the next section.</p>
+<h5 id="4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><a href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4" class="headerlink" title="4.5.1.1 Using Initial Conditions from within CSIM4"></a>4.5.1.1 Using Initial Conditions from within CSIM4</h5><p>Initial conditions can be calculated within the ice model in a subroutine called init_state in <em>ice_init.F</em>. Here, the ocean surface is initialized at the freezing point everywhere north of 40 degrees and south of -40 degrees latitude, allowing ice to form everywhere in these regions. While running the ice model with a data ocean will melt any extra ice during the first year of integration, is not recommended that these initial conditions be used when running the ice model coupled to an active ocean model. The advantage of using this input is that it is not grid or land mask dependent. To use these initial conditions, set RESTART in <em>ice.setup.csh</em>:</p>
+<p>set RESTART &#x3D; .false.</p>
+<h6 id="4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><a href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files" class="headerlink" title="4.5.1.2 Using Initial Conditions from Input Data Files"></a>4.5.1.2 Using Initial Conditions from Input Data Files</h6><p>The input data file for the ice model is a binary restart file from a previous run. If $RUNTYPE is set to ‘startup’, the ice setup script is will read the initial condition file from the input data directory, <em>iced.0001-01-01.$ICE_GRID</em> regardless of $BASEDATE. For ‘continue’ runs, the input data file is determined by the filename set in the restart pointer file (see section <a href="https://www.cesm.ucar.edu/models/ccsm2.0/csim/UsersGuide/ice_usrdoc/node21.html#pointer_files">4.8.2.1</a>). If $RUNTYPE is ‘branch’ or ‘hybrid’, the ice setup script will attempt to file a restart file with $REFDATE in the filename.</p>
+<p>For the startup and hybrid setups, it is not necessary that the date inside the binary file match the date in the filename, since the $BASEDATE received from the coupler will override the date in the restart file. This will not be true for continue and branch runs, where the $BASEDATE is set in the model using the date in the restart file. Initializing the model using a restart file from an equilibrium run will result in a more physically reasonable scenario than the initial conditions set within CSIM4. The conditions in the initial restart file provided with CSIM4 are from an active ice only equilibrium run using modified NCEP forcing. The drawbacks are that the data is binary, difficult to edit, and is date and grid dependent. A restart file will be used as initial conditions if</p>
+<p>set RESTART &#x3D; .true.</p>
+<p>in <em>ice.setup.csh</em>.</p>
+<h4 id="4-5-2-Hybrid-Runs"><a href="#4-5-2-Hybrid-Runs" class="headerlink" title="4.5.2 Hybrid Runs"></a>4.5.2 Hybrid Runs</h4><p>A hybrid run should be used when a collection of arbitrary initial&#x2F;restart files from previous runs is desired to start the model. A new $CASE and $BASEDATE can be specified. The ice model receives $BASEDATE from the coupler. The date read in from the restart file will be written over by $BASEDATE. The climate simulated by the hybrid run should be continuous compared to the previous run, but an exact restart will not be produced. If all components start from the same reference case and date, $REFCASE and $REFDATE can be used to specify the previous date and case. Generally, a hybrid run will require some modifications to the scripts by the user, especially if some components are starting from inconsistent runs or dates. The primary environment variables for a startup run are:</p>
+<p> CASE    test.a1    #new case name</p>
+<p> RUNTYPE  hybrid</p>
+<p> BASEDATE  0001-01-01  #date where to start run</p>
+<p> REFCASE         #reference case for initial&#x2F;restart data</p>
+<p> REFDATE  0001-01-01  #date in REFCASE to obtain initial&#x2F;restart data</p>
+<h4 id="4-5-3-Continue-Runs"><a href="#4-5-3-Continue-Runs" class="headerlink" title="4.5.3 Continue Runs"></a>4.5.3 Continue Runs</h4><p>A continue run is an exact continuation of a previous run. This means that the run will produce a bit-for-bit answer as if the existing run had not stopped. In this case, it is assumed that $CASE and $BASEDATE have not changed and that the date is continuous from the previous run. For a continue run, the only change required in the main script is to set:</p>
+<p> RUNTYPE  continue</p>
+<p>A change in the $BASEDATE is not necessary for a continue run, since the date is read in from the restart files, and the coupler checks to see that the dates between the component models match.</p>
+<h4 id="4-5-4-Branch-Runs"><a href="#4-5-4-Branch-Runs" class="headerlink" title="4.5.4 Branch Runs"></a>4.5.4 Branch Runs</h4><p>Branch runs will continue a previous run but with a new case name and possibly a new start date, where the previous run has created a consistent set of restart files. Branch runs differ from continuation runs in that they are typically used to perform sensitivity studies, or to modify output streams, branching off a previous run. The new case will restart exactly, as in a continuation run, if no source code or input namelist parameters have changed. For a branch run, $BASEDATE must remain the same as that in the previous run, and the following environment variables must be set in the the main script:</p>
+<p> CASE    new case name </p>
+<p> RUNTYPE  branch</p>
+<p> BASEDATE  date to start this run</p>
+<p> REFCASE  reference case to branch from </p>
+<p> REFDATE  date in REFCASE to obtain restart data</p>
+<p>【CESM2 release news】<br><a href="https://eos.org/articles/new-version-of-popular-climate-model-released">https://eos.org/articles/new-version-of-popular-climate-model-released</a></p>
+<p>【CMIP6 forcing】<br><a href="https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#">https://docs.google.com/document/d/1pU9IiJvPJwRvIgVaSDdJ4O0Jeorv_2ekEtted34K9cA/edit#</a><br><a href="https://pcmdi.llnl.gov/mips/amip/">https://pcmdi.llnl.gov/mips/amip/</a><br><a href="https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63">https://pcmdi.llnl.gov/report/pdf/60.pdf?id=63</a></p>
+<p>【CMIP5 model errors】<a href="https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/">https://wattsupwiththat.com/2015/03/10/whoops-study-shows-huge-basic-errors-found-in-cmip5-climate-models/</a></p>
+<p>【How do climate models work?】<a href="https://www.carbonbrief.org/qa-how-do-climate-models-work">https://www.carbonbrief.org/qa-how-do-climate-models-work</a></p>
+<p>【CESM related】</p>
+<p>Supported Grids: <a href="http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html">http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html</a></p>
+<p>【GFDL idealized model】<a href="https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview">https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview</a></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fortran95</title>
+    <url>/2022/05/01/Tool/Fortran95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Gitee</title>
+    <url>/2022/05/01/Tool/Gitee/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fortran</title>
+    <url>/2022/05/01/Tool/Fortran/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Read-NC"><a href="#Read-NC" class="headerlink" title="Read NC"></a>Read NC</h3><p>fortran中读取nc文件主要分为以下几步：</p>
+<ol>
+<li>USE netcdf</li>
+<li>NF90_OPEN函数打开文件</li>
+<li>NF90_INQ_DIMID获取维度ID</li>
+<li>NF90_INQUIRE_DIMENSION获取各维度的长度</li>
+<li>ALLOCATE分配动态数组</li>
+<li>NF90_INQ_VARID获取变量ID</li>
+<li>NF90_GET_VAR获取变量值</li>
+</ol>
+<p>tips:社区环境不支持fortran，可以拷贝至团队版本或者本地进行尝试。</p>
+<p>以下是具体示例代码</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">program main </span><br><span class="line"></span><br><span class="line">    USE netcdf</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    implicit none </span><br><span class="line"></span><br><span class="line">    integer:: status, fidA, dimID_TIME, dimID_LAT, dimID_LON, T2_ID, LAT_ID, LON_ID, U10_ID</span><br><span class="line">    integer:: nx, ny, nt</span><br><span class="line"></span><br><span class="line">    real   , dimension(:,:,:) , allocatable :: t2m, u10</span><br><span class="line">    real   , dimension(:,:)   , allocatable :: lat, lon</span><br><span class="line">    CHARACTER(LEN=100) :: file_in</span><br><span class="line"></span><br><span class="line">    file_in  = &#x27;Test.nc&#x27;</span><br><span class="line"></span><br><span class="line">    !----------------------------------------------------------------</span><br><span class="line">    ! 打开文件 :</span><br><span class="line">    status = NF90_OPEN(TRIM(file_in),0,fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;read_A&quot;)</span><br><span class="line"></span><br><span class="line">    !- read ID of dimensions of interest and save them in-----------------</span><br><span class="line">    ! 获取维度变量ID</span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;time&quot;,dimID_TIME)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;y&quot;,dimID_LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_DIMID(fidA,&quot;x&quot;,dimID_LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dimID_LON&quot;)</span><br><span class="line"></span><br><span class="line">    ! 获取维度的值:</span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_TIME,len=nt)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_TIME&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LAT,len=ny)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQUIRE_DIMENSION(fidA,dimID_LON,len=nx)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_dim_LON&quot;)</span><br><span class="line"></span><br><span class="line">    print*,nx,ny,nt </span><br><span class="line"></span><br><span class="line">    !- Allocation of arrays :</span><br><span class="line">    ALLOCATE(  t2m(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  u10(nx, ny, nt)  )</span><br><span class="line">    ALLOCATE(  LAT(nx, ny)  )</span><br><span class="line">    ALLOCATE(  LON(nx, ny)  )</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量ID :</span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;T2&quot;,T2_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_T2_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;U10&quot;,U10_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_U10_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lat&quot;,LAT_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LAT_ID&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_INQ_VARID(fidA,&quot;lon&quot;,LON_ID)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;inq_LON_ID&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    !- 获取变量值 :</span><br><span class="line">    status = NF90_GET_VAR(fidA,T2_ID,t2m)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_T2&quot;)</span><br><span class="line">   </span><br><span class="line">    status = NF90_GET_VAR(fidA,U10_ID,u10)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_U10&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LAT_ID,LAT)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LAT&quot;)</span><br><span class="line"></span><br><span class="line">    status = NF90_GET_VAR(fidA,LON_ID,LON)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;getvar_LON&quot;)</span><br><span class="line"></span><br><span class="line">    !- close netcdf file :</span><br><span class="line">    status = NF90_CLOSE(fidA)</span><br><span class="line">    call erreur(status,.TRUE.,&quot;close_A&quot;)</span><br><span class="line"></span><br><span class="line">    print*,t2m(:,1,1)</span><br><span class="line">    print*,u10(:,1,1)</span><br><span class="line"></span><br><span class="line">    print*,lat(:,1)</span><br><span class="line"></span><br><span class="line">    print*,lon(:,1)</span><br><span class="line"></span><br><span class="line">end </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">SUBROUTINE erreur(iret, lstop, chaine)</span><br><span class="line">! used to provide clear error messages :</span><br><span class="line">USE netcdf</span><br><span class="line">INTEGER, INTENT(in)                     :: iret</span><br><span class="line">LOGICAL, INTENT(in)                     :: lstop</span><br><span class="line">CHARACTER(LEN=*), INTENT(in)            :: chaine</span><br><span class="line">!</span><br><span class="line">CHARACTER(LEN=80)                       :: message</span><br><span class="line">!</span><br><span class="line">IF ( iret .NE. 0 ) THEN</span><br><span class="line">  WRITE(*,*) &#x27;ROUTINE: &#x27;, TRIM(chaine)</span><br><span class="line">  WRITE(*,*) &#x27;ERROR: &#x27;, iret</span><br><span class="line">  message=NF90_STRERROR(iret)</span><br><span class="line">  WRITE(*,*) &#x27;WHICH MEANS:&#x27;,TRIM(message)</span><br><span class="line">  IF ( lstop ) STOP</span><br><span class="line">ENDIF</span><br><span class="line">!</span><br><span class="line">END SUBROUTINE erreur</span><br></pre></td></tr></table></figure>
+
+<p>编译方法：</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># bash</span><br><span class="line">NETCDF=xxx/netcdf/4.4.1  </span><br><span class="line">NC_INC=&quot;-I $&#123;NETCDF&#125;/include&quot;    </span><br><span class="line">NC_LIB=&quot;-L $&#123;NETCDF&#125;/lib -lnetcdf -lnetcdff&quot;  </span><br><span class="line">ifort -c $NC_INC io_netcdf.f90  </span><br><span class="line">ifort -o run_example io_netcdf.o $NC_LIB  </span><br><span class="line">./run_example  </span><br></pre></td></tr></table></figure>
+
+<p>参考：</p>
+<ul>
+<li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
+<li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tool</category>
       </categories>
   </entry>
   <entry>
@@ -530,28 +490,29 @@
       </categories>
   </entry>
   <entry>
-    <title>Latex Symbols</title>
-    <url>/2022/05/01/Tool/Latex%20Symbols/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux CMD</title>
-    <url>/2022/05/01/Tool/Linux%20CMD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>How to publish a paper</title>
-    <url>/2022/05/01/Tool/How%20to%20publish%20a%20paper/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
-<hr>
+    <title>Github</title>
+    <url>/2022/05/01/Tool/GitHub/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -574,6 +535,240 @@
 
 
 
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>How to publish a paper</title>
+    <url>/2022/05/01/Tool/How%20to%20publish%20a%20paper/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Latex Symbols</title>
+    <url>/2022/05/01/Tool/Latex%20Symbols/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlJ4QWZxYnFlaUdV" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux CMD</title>
+    <url>/2022/05/01/Tool/Linux%20CMD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm11RU5Udk56UUxa" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>NCL</title>
+    <url>/2022/05/01/Tool/NCL/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>℃     </p>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
+
+<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
+<li>output large files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>output</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>read multiple files</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
+<li>Font</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>coordinate info</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>Label Bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>add box</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>change color bar</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>2D Fill</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>significance test with dots</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>mask land</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
+<li>area average</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>advection</li>
+</ul>
+<p><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
+<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
+<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
+<ul>
+<li>zonal gradients</li>
+</ul>
+<p><a href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>vertical integration</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>remap</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>regression</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>conform_dims</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
+</ul>
+<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
+<li>create a directory if it does not already exist</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>convert a GRIB file to netCDF</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PDF</title>
+    <url>/2022/05/01/Tool/PDF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
+<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
+<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
+<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
+<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
+<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mac Cron</title>
+    <url>/2022/05/01/Tool/Mac%20Cron/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h3><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
+<p>最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍</p>
+<p><a href="https://link.zhihu.com/?target=https://segmentfault.com/a/1190000020850932">为什么crontab不执行 - SegmentFault 思否</a></p>
+<p>还是不行，再找答案，发现这个</p>
+<p><a href="https://link.zhihu.com/?target=https://blog.csdn.net/xjh093/article/details/108517904">Mac 自动任务 crontab 不执行</a></p>
+<p>看起来写得不咋地，但是确实好用啊 ，解决了我的问题</p>
+<p>总结起来，就是</p>
+<h4 id="0x00-可能之一"><a href="#0x00-可能之一" class="headerlink" title="0x00 可能之一"></a>0x00 可能之一</h4><p>可能先去 这里 了解一下下</p>
+<p>查看任务是否存在：</p>
+<p>sudo launchctl list | grep cron</p>
+<p>有输出则说明存在</p>
+<p>查看启动项配置:</p>
+<p>locate com.vix.cron</p>
+<p>如果有 WARNING</p>
+<p>就执行系统提供的命令</p>
+<p>应该是这样的</p>
+<p>sudo launchctl load -W &#x2F;System&#x2F;Library&#x2F;LaunchDaemons&#x2F;com.apple.locate.plist</p>
+<p>查看 &#x2F;etc&#x2F;crontab 是否存在:</p>
+<p>ls &#x2F;etc&#x2F;crontab</p>
+<p>没有就创建:</p>
+<p>sudo touch &#x2F;etc&#x2F;crontab</p>
+<p>然后再重新开个定时任务</p>
+<p>试试~</p>
+<h4 id="0x01-可能之二"><a href="#0x01-可能之二" class="headerlink" title="0x01 可能之二"></a>0x01 可能之二</h4><p>系统是 OSX 10.15 Catalina 以上的</p>
+<p>对 cron 的权限进行了限制</p>
+<p>需要在 系统偏好设置 里将 cron 添加 完全磁盘访问权限</p>
+<p><strong>重点在这里：：：</strong></p>
+<p><em><strong>系统偏好设置 -&gt; 安全性与隐私 -&gt; 选择 隐私 -&gt; 左侧菜单找到完全磁盘访问权限</strong></em></p>
+<p><em><strong>在右侧查看是否有 cron 这个应用</strong></em></p>
+<p><em><strong>没有的话</strong></em></p>
+<p><em><strong>就添加进去</strong></em></p>
+<p><em><strong>然后勾选</strong></em></p>
+<p><em><strong>cron 程序所在目录:</strong></em></p>
+<p><em><strong>终端输入 whereis cron</strong></em></p>
+<p><em><strong>打印：&#x2F;usr&#x2F;sbin&#x2F;cron</strong></em></p>
+<p><em><strong>再输入 open &#x2F;usr&#x2F;sbin</strong></em></p>
+<p><em><strong>在打开的文件夹内找到 cron</strong></em></p>
+<p><em><strong>把这个文件直接拖动到 系统偏好设置 右侧应用列表框内</strong></em></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -774,198 +969,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Mac Cron</title>
-    <url>/2022/05/01/Tool/Mac%20Cron/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h3><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
-<p>最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍</p>
-<p><a href="https://link.zhihu.com/?target=https://segmentfault.com/a/1190000020850932">为什么crontab不执行 - SegmentFault 思否</a></p>
-<p>还是不行，再找答案，发现这个</p>
-<p><a href="https://link.zhihu.com/?target=https://blog.csdn.net/xjh093/article/details/108517904">Mac 自动任务 crontab 不执行</a></p>
-<p>看起来写得不咋地，但是确实好用啊 ，解决了我的问题</p>
-<p>总结起来，就是</p>
-<h4 id="0x00-可能之一"><a href="#0x00-可能之一" class="headerlink" title="0x00 可能之一"></a>0x00 可能之一</h4><p>可能先去 这里 了解一下下</p>
-<p>查看任务是否存在：</p>
-<p>sudo launchctl list | grep cron</p>
-<p>有输出则说明存在</p>
-<p>查看启动项配置:</p>
-<p>locate com.vix.cron</p>
-<p>如果有 WARNING</p>
-<p>就执行系统提供的命令</p>
-<p>应该是这样的</p>
-<p>sudo launchctl load -W &#x2F;System&#x2F;Library&#x2F;LaunchDaemons&#x2F;com.apple.locate.plist</p>
-<p>查看 &#x2F;etc&#x2F;crontab 是否存在:</p>
-<p>ls &#x2F;etc&#x2F;crontab</p>
-<p>没有就创建:</p>
-<p>sudo touch &#x2F;etc&#x2F;crontab</p>
-<p>然后再重新开个定时任务</p>
-<p>试试~</p>
-<h4 id="0x01-可能之二"><a href="#0x01-可能之二" class="headerlink" title="0x01 可能之二"></a>0x01 可能之二</h4><p>系统是 OSX 10.15 Catalina 以上的</p>
-<p>对 cron 的权限进行了限制</p>
-<p>需要在 系统偏好设置 里将 cron 添加 完全磁盘访问权限</p>
-<p><strong>重点在这里：：：</strong></p>
-<p><em><strong>系统偏好设置 -&gt; 安全性与隐私 -&gt; 选择 隐私 -&gt; 左侧菜单找到完全磁盘访问权限</strong></em></p>
-<p><em><strong>在右侧查看是否有 cron 这个应用</strong></em></p>
-<p><em><strong>没有的话</strong></em></p>
-<p><em><strong>就添加进去</strong></em></p>
-<p><em><strong>然后勾选</strong></em></p>
-<p><em><strong>cron 程序所在目录:</strong></em></p>
-<p><em><strong>终端输入 whereis cron</strong></em></p>
-<p><em><strong>打印：&#x2F;usr&#x2F;sbin&#x2F;cron</strong></em></p>
-<p><em><strong>再输入 open &#x2F;usr&#x2F;sbin</strong></em></p>
-<p><em><strong>在打开的文件夹内找到 cron</strong></em></p>
-<p><em><strong>把这个文件直接拖动到 系统偏好设置 右侧应用列表框内</strong></em></p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>NCL</title>
-    <url>/2022/05/01/Tool/NCL/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>℃     </p>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">~F34~<span class="number">0</span>~F~ C</span><br></pre></td></tr></table></figure>
-
-<h2 id="Function"><a href="#Function" class="headerlink" title="Function"></a>Function</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">undef(<span class="string">&quot;ttest_TLL&quot;</span>)</span><br><span class="line"><span class="function"><span class="keyword">function</span></span> ttest_TLL(x:numeric,y:numeric,sig:numeric)</span><br><span class="line">begin</span><br><span class="line">    dimXY = dimsizes(x)</span><br><span class="line">    ntim  = dimXY(<span class="number">0</span>)</span><br><span class="line">    nlat  = dimXY(<span class="number">1</span>)</span><br><span class="line">    mlon  = dimXY(<span class="number">2</span>)</span><br><span class="line">    xtmp = x(lat|:,lon|:,time|:)       ; reorder but <span class="keyword">do</span> it <span class="keyword">only</span> once [temporary]</span><br><span class="line">    ytmp = y(lat|:,lon|:,time|:)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    xAve = dim_avg (xtmp)              ; calculate means at each grid point </span><br><span class="line">    yAve = dim_avg (ytmp)</span><br><span class="line">    xVar = dim_variance (xtmp)         ; calculate variances</span><br><span class="line">    yVar = dim_variance (ytmp)</span><br><span class="line">    sigr = sig                        ; critical sig lvl for r</span><br><span class="line">    xEqv = equiv_sample_size (xtmp, sigr,<span class="number">0</span>)</span><br><span class="line">    yEqv = equiv_sample_size (ytmp, sigr,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    printVarSummary(xEqv)</span><br><span class="line">    printVarSummary(yEqv)</span><br><span class="line"></span><br><span class="line">    xN   = wgt_areaave (xEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)    ; wgty could be gaussian weights </span><br><span class="line">    yN   = wgt_areaave (yEqv, <span class="number">1.</span>, <span class="number">1.</span>, <span class="number">0</span>)</span><br><span class="line">    iflag= False                        ; population variance similar</span><br><span class="line">    prob = ttest(xAve,xVar,xN, yAve,yVar,yN, iflag, False)</span><br><span class="line">    copy_VarMeta(xtmp(:,:,<span class="number">0</span>),prob)</span><br><span class="line">    <span class="keyword">return</span>(prob)</span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="IO"><a href="#IO" class="headerlink" title="IO"></a>IO</h2><ul>
-<li>output large files</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;NetCDF4Classic&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>output</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">finame_out           =   dir+<span class="string">&quot;/WORK/data/OUT/MOD/Boot_NPI/CMIP5/&quot;</span>+modelname+<span class="string">&quot;_NPI_J-J_EN.nc&quot;</span></span><br><span class="line">system(<span class="string">&quot;rm -rf &quot;</span>+finame_out)</span><br><span class="line">setfileoption(<span class="string">&quot;nc&quot;</span>,<span class="string">&quot;Format&quot;</span>,<span class="string">&quot;LargeFile&quot;</span>)</span><br><span class="line">fiout                =   addfile(finame_out,<span class="string">&quot;c&quot;</span>)</span><br><span class="line">fiout-&gt;NPI       		 =   save_NPI_E</span><br><span class="line">fiout-&gt;NPI_avg       =   dim_avg_n_Wrap(save_NPI_E,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>read multiple files</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;---Get list of files from years <span class="number">1980</span> to <span class="number">2008</span></span><br><span class="line">yyyy      = ispan(<span class="number">1958</span>,<span class="number">2010</span>,<span class="number">1</span>)</span><br><span class="line">all_files = <span class="string">&quot;JRA55_divQ_trans_&quot;</span> + yyyy + <span class="string">&quot;.nc&quot;</span></span><br><span class="line"></span><br><span class="line">fils = systemfunc (<span class="string">&quot;ls /project/cas/ruyanc/WORK/data/OUT/OBS/Diabatic/1958/Q_mon_1958-2010_JRA.nc&quot;</span>)</span><br><span class="line">f    = addfiles (fils, <span class="string">&quot;r&quot;</span>)</span><br><span class="line">ListSetType (f, <span class="string">&quot;join&quot;</span>)</span><br><span class="line">Q  = f[:]-&gt;Q</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="处理NAN值"><a href="#处理NAN值" class="headerlink" title="处理NAN值"></a>处理NAN值</h2><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">any</span>(isnan_ieee(t2m_an))) <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">value</span> = <span class="number">1.e20</span></span><br><span class="line">      replace_ieeenan (t2m_an, <span class="keyword">value</span>, <span class="number">0</span>)</span><br><span class="line">      t2m_an@_FillValue = <span class="keyword">value</span></span><br><span class="line"><span class="keyword">end</span> <span class="keyword">if</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="plot"><a href="#plot" class="headerlink" title="plot"></a>plot</h2><ul>
-<li>Font</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@cnLineLabelFont       = <span class="string">&quot;helvetica&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>coordinate info</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">sf_temp&amp;lat@units=<span class="string">&quot;degrees_north&quot;</span></span><br><span class="line">sf_temp&amp;lon@units=<span class="string">&quot;degrees_east&quot;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>Label Bar</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res_cn@lbLabelBarOn          			= True</span><br><span class="line">res_cn@lbBoxEndCapStyle  					= <span class="string">&quot;TriangleBothEnds&quot;</span> </span><br><span class="line">res_cn@pmLabelBarOrthogonalPosF 	= <span class="number">0.2</span></span><br><span class="line">res@lbLabelBarOn       						= True</span><br><span class="line">res@lbTitleString  	= <span class="string">&quot;units: 10~S~6~N~ m~S~2~N~ s~S~-1~N~&quot;</span></span><br><span class="line">res@lbTitleFont 		=  <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@lbTitlePosition = <span class="string">&quot;Top&quot;</span></span><br><span class="line">res@lbTitleFont 		= <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">res@pmLabelBarHeightF 	= <span class="number">0.07</span></span><br><span class="line">res@pmLabelBarWidthF 		= <span class="number">0.7</span> </span><br><span class="line">res@lbLabelFontHeightF 	= <span class="number">0.013</span></span><br><span class="line">res@lbTitleFontHeightF 	= <span class="number">0.017</span></span><br><span class="line">res@pmLabelBarOrthogonalPosF = <span class="number">0.2</span> </span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>add box</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">ypts = (/<span class="number">15.0</span>,  <span class="number">15.0</span>, -<span class="number">15.0</span>, -<span class="number">15.0</span>, <span class="number">15.0</span>/)</span><br><span class="line">xpts = (/<span class="number">30</span>, <span class="number">110</span>, <span class="number">110</span>, <span class="number">30</span>, <span class="number">30</span>/)</span><br><span class="line"></span><br><span class="line">resp                  = True      </span><br><span class="line">resp@gsLineColor      = <span class="string">&quot;red&quot;</span>                </span><br><span class="line">resp@gsLineThicknessF = <span class="number">6.0</span>        </span><br><span class="line"></span><br><span class="line">dum1 = new(<span class="number">4</span>,graphic)</span><br><span class="line"><span class="keyword">do</span> i = <span class="number">0</span> , <span class="number">3</span></span><br><span class="line">dum1(i)=gsn_add_polyline(wks,plot,xpts(i:i+<span class="number">1</span>),ypts(i:i+<span class="number">1</span>),resp)</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">do</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>change color bar</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cmap    	= read_colormap_file(<span class="string">&quot;temp_19lev&quot;</span>)    </span><br><span class="line">ncolors 	= dimsizes(cmap(:,<span class="number">0</span>))      </span><br><span class="line">cmap(<span class="number">9</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>) </span><br><span class="line">cmap(<span class="number">10</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line">cmap(<span class="number">11</span>,:) = namedcolor2rgba(<span class="string">&quot;white&quot;</span>)</span><br><span class="line"></span><br><span class="line">res@cnFillPalette := cmap</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>2D Fill</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">;************************************************</span><br><span class="line">; <span class="number">2</span>D Fill</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">begin</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; set <span class="keyword">parameter</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">dirin = <span class="string">&quot;/home/hwy_stu/WORK3/973/data/&quot;</span></span><br><span class="line">dirout = <span class="string">&quot;/home/hwy_stu/WORK3/973/plots/CLM/&quot;</span></span><br><span class="line"></span><br><span class="line">StartDate = <span class="number">197901</span></span><br><span class="line">EndDate   = <span class="number">200512</span></span><br><span class="line"></span><br><span class="line">lonE = <span class="number">0</span></span><br><span class="line">lonW = <span class="number">350</span></span><br><span class="line">latS = -<span class="number">90</span></span><br><span class="line">latN = <span class="number">90</span></span><br><span class="line"></span><br><span class="line">para = <span class="string">&quot;ctl&quot;</span></span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; read <span class="keyword">in</span> <span class="keyword">data</span></span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  filein_1 = addfile(dirin+<span class="string">&quot;/obs/GPCP.precip.mon.mean_remap.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_ori_1 = filein_1-&gt;precip</span><br><span class="line"></span><br><span class="line">  var_cut = var_ori_1(&#123;StartDate:EndDate&#125;,:,:)</span><br><span class="line">  printVarSummary(var_cut)  </span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_cut)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_cut))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units: &quot;</span>+var_cut@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var_TransUnits = var_cut*<span class="number">1000</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">24</span></span><br><span class="line">  copy_VarMeta(var_cut,var_TransUnits)</span><br><span class="line">  var_TransUnits@units = <span class="string">&quot;mm/day&quot;</span></span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;units new: &quot;</span>+var_TransUnits@units)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;min: &quot;</span>+<span class="built_in">min</span>(var_TransUnits)+<span class="string">&quot;   max: &quot;</span>+<span class="built_in">max</span>(var_TransUnits))</span><br><span class="line">  <span class="built_in">print</span>(<span class="string">&quot;------------------------------------&quot;</span>)</span><br><span class="line"></span><br><span class="line">  var = var_cut</span><br><span class="line">  var_clm = dim_avg_n_Wrap(var,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">;************************************************</span><br><span class="line">; create plot</span><br><span class="line">;************************************************</span><br><span class="line"></span><br><span class="line">  wks   =  gsn_open_wks(<span class="string">&quot;pdf&quot;</span>,dirout+<span class="string">&quot;precip_clm_GPCP&quot;</span>)            </span><br><span class="line">  cmap  =  read_colormap_file(<span class="string">&quot;precip2_17lev&quot;</span>)</span><br><span class="line"></span><br><span class="line">  res   = True      </span><br><span class="line">  </span><br><span class="line">  res@mpMinLonF     = lonE</span><br><span class="line">  res@mpMaxLonF     = lonW</span><br><span class="line">  res@mpMinLatF     = latS</span><br><span class="line">  res@mpMaxLatF     = latN</span><br><span class="line">  res@mpCenterLonF  = <span class="number">180</span></span><br><span class="line"></span><br><span class="line">  res@cnLevelSelectionMode = <span class="string">&quot;ManualLevels&quot;</span>    </span><br><span class="line">  res@cnMinLevelValF       = <span class="number">1.</span>              </span><br><span class="line">  res@cnMaxLevelValF       = <span class="number">12.</span>             </span><br><span class="line">  res@cnLevelSpacingF      = <span class="number">1.</span>           </span><br><span class="line">  </span><br><span class="line">  res@cnFillOn             = True</span><br><span class="line">  res@cnFillPalette        = cmap;(<span class="number">0</span>:<span class="number">18</span>,:)</span><br><span class="line"></span><br><span class="line">  res@cnLinesOn     = False</span><br><span class="line">  res@cnInfoLabelOn = False</span><br><span class="line"></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiMainFont            = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmXBLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tmYLLabelFont         = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiYAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@tiXAxisFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@txFont                = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbLabelFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line">  res@lbTitleFont           = <span class="string">&quot;helvetica&quot;</span></span><br><span class="line"></span><br><span class="line">  res@tiMainString          = <span class="string">&quot;&quot;</span> </span><br><span class="line">  res@gsnCenterString       = <span class="string">&quot;GPCP Precipitation Climatology&quot;</span></span><br><span class="line">  res@gsnCenterStringFontHeightF    = <span class="number">0.02</span></span><br><span class="line">  res@gsnCenterStringOrthogonalPosF = <span class="number">0.1</span></span><br><span class="line">  res@gsnLeftString         = <span class="built_in">min</span>(var&amp;time)+<span class="string">&quot;-&quot;</span>+<span class="built_in">max</span>(var&amp;time) </span><br><span class="line">  res@gsnRightString        =  var@units</span><br><span class="line">  res@pmTickMarkDisplayMode = <span class="string">&quot;Always&quot;</span></span><br><span class="line"></span><br><span class="line">  res@lbLabelBarOn              = True</span><br><span class="line">  res@pmLabelBarHeightF         = <span class="number">0.08</span></span><br><span class="line">  res@pmLabelBarOrthogonalPosF  = <span class="number">0.1</span></span><br><span class="line"></span><br><span class="line">  plot = gsn_csm_contour_map(wks,var_clm, res)  </span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>significance test with dots</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">res2 = res </span><br><span class="line">res2@cnFillMode = <span class="string">&quot;AreaFill&quot;</span></span><br><span class="line">res2@cnFillPattern = <span class="number">17</span></span><br><span class="line">res2@cnFillDotSizeF = <span class="number">0.004</span></span><br><span class="line">res2@cnMonoFillColor = True</span><br><span class="line">res2@cnFillColor = <span class="string">&quot;Black&quot;</span></span><br><span class="line">res2@gsnRightString        = <span class="string">&quot;&quot;</span></span><br><span class="line">res2@lbLabelBarOn          = False</span><br></pre></td></tr></table></figure>
-
-
-
-<ul>
-<li>mask land</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">fi_mask = addfile(dir+<span class="string">&quot;/WORK/data/Reference/landsea.nc&quot;</span>,<span class="string">&quot;r&quot;</span>)</span><br><span class="line">lsm  = landsea_mask(fi_mask-&gt;LSMASK,TS_ctr&amp;lat,TS_ctr&amp;lon)       </span><br><span class="line">TS_an_FM = mask(TS_an_FM,lsm.eq<span class="number">.1</span>,False)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Calculation"><a href="#Calculation" class="headerlink" title="Calculation"></a>Calculation</h2><ul>
-<li>area average</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">NPI_box   = slp_an(:,&#123;<span class="number">35</span>:<span class="number">60</span>&#125;,&#123;<span class="number">165</span>:<span class="number">360</span>-<span class="number">145</span>&#125;)</span><br><span class="line">NPI_lat   = NPI_box&amp;lat</span><br><span class="line">NPI_clat  = <span class="built_in">cos</span>(NPI_lat*rad)</span><br><span class="line">NPI       = wgt_areaave_Wrap(NPI_box,NPI_clat,<span class="number">1.0</span>,<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>advection</li>
-</ul>
-<p><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable_cfd.shtml</a></p>
-<p>Using centered-finite_differences (cfd) to estimate gradients, advect a variable horizontally on a regional or global rectilinear grid.</p>
-<p>Use “highly accurate” spherical harmonics to estimate gradients and advect a variable horizontally on a global rectilinear grid.<br><a href="http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml">http://www.ncl.ucar.edu/Document/Functions/Contributed/advect_variable.shtml</a><br>NOTE: This is a non-linear quantity. Generally, it is not appropriate to use (say) monthly means quantities. Rather, high-frequency (hourly, 3-hr, 6-hr, daily) quantities should be used.<br>This function requires that the grids be global because the “highly accurate” spherical harmonic functions are used to derive the gradients.</p>
-<ul>
-<li>zonal gradients</li>
-</ul>
-<p><a href="http://ncl.ucar.edu/Applications/gradients.shtml">http://ncl.ucar.edu/Applications/gradients.shtml</a></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">grad_latlon_cfd</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>vertical integration</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">linlog = 1 </span><br><span class="line">pbot   = 1000</span><br><span class="line">ptop   = 100</span><br><span class="line"></span><br><span class="line">Q_vint = vibeta (Q&amp;pre,Q(lat|:,lon|:,pre|:), linlog,ps,pbot,ptop)</span><br><span class="line">copy_VarMeta(Q(0,:,:),Q_vint)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>remap</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">area_conserve_remap_Wrap (loni,lati,fi, lono,lato, False)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>regression</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">rc = regCoef_n(NPI,Precip,<span class="number">0</span>,<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">rc<span class="comment">!0 = &quot;lat&quot;</span></span><br><span class="line">rc<span class="comment">!1 = &quot;lon&quot; </span></span><br><span class="line">rc&amp;lat = Precip&amp;lat </span><br><span class="line">rc&amp;lon = Precip&amp;lon </span><br><span class="line"></span><br><span class="line">printVarSummary(rc)</span><br><span class="line">printMinMax(rc,True)</span><br><span class="line"></span><br><span class="line">tval = onedtond(rc@tval , dimsizes(rc))</span><br><span class="line">df   = onedtond(rc@nptxy, dimsizes(rc)) - <span class="number">2</span> </span><br><span class="line">b = tval    ; b must be same <span class="built_in">size</span> as tval (and df)</span><br><span class="line">b = <span class="number">0.5</span></span><br><span class="line">prob = betainc(df/(df+tval^<span class="number">2</span>),df/<span class="number">2.0</span>,b)       ; prob(nlat,nlon)</span><br><span class="line">copy_VarMeta(rc,prob)</span><br><span class="line"></span><br><span class="line">rc_sig = rc</span><br><span class="line">psig = <span class="number">0.05</span></span><br><span class="line">rc_sig = <span class="keyword">where</span>(prob.le.psig,rc_sig,rc_sig@_FillValue)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>conform_dims</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">PREC_FM = PREC_FM*conform_dims(dimsizes(PREC_FM),ratio_EN_DJF,<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>Find the latitude and longitude location of the maximum value in a two dimensional array</li>
-</ul>
-<figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">dims = dimsizes(X)</span><br><span class="line">x1d  = ndtooned(X)      </span><br><span class="line"></span><br><span class="line">inds = ind_resolve(maxind (x1d), dims)</span><br><span class="line">ilat = inds(<span class="number">0</span>,<span class="number">0</span>)       </span><br><span class="line">ilon = inds(<span class="number">0</span>,<span class="number">1</span>)        </span><br><span class="line"></span><br><span class="line">lat_max = X&amp;lat(ilat)   </span><br><span class="line">lon_max = X&amp;lon(ilon)   </span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Maximum value located at &quot;</span>+lat_max+<span class="string">&quot;, &quot;</span>+lon_max) </span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="System-Function"><a href="#System-Function" class="headerlink" title="System_Function"></a>System_Function</h2><ul>
-<li>create a directory if it does not already exist</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">DIR = &quot;SAMPLE&quot;</span><br><span class="line">system(&quot;if ! test -d &quot; + DIR +&quot; ; then mkdir &quot; + DIR + &quot; ; fi&quot;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>convert a GRIB file to netCDF</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Pandas Cheatsheet</title>
     <url>/2022/05/01/Tool/Pandas%20Cheatsheet/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
@@ -988,20 +991,6 @@
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>PDF</title>
-    <url>/2022/05/01/Tool/PDF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
-<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
-<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
-<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
-<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
-<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1392,6 +1381,134 @@
       </categories>
   </entry>
   <entry>
+    <title>Yaml</title>
+    <url>/2022/05/01/Tool/Yaml/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
+<li><p><strong>Yaml 基本语法：</strong></p>
+<ul>
+<li><p>大小写敏感</p>
+</li>
+<li><p>使用缩进，表示层级关系</p>
+</li>
+<li><p>缩进不允许使用tab，只允许空格</p>
+</li>
+<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
+</li>
+<li><p>‘#’表示注释</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Yaml 数据类型</strong></p>
+<ol>
+<li><p>对象：键值对的集合</p>
+<ul>
+<li><p>键值对典型结构：key: value</p>
+<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>列表：一组按次序排列的值</p>
+<ul>
+<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
+ <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
+
+<p>key为列表名，value为列表值。</p>
+</li>
+<li><p>示例：</p>
+  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>读取Yaml文件</p>
+<ul>
+<li><p>读取文件：test.yml的信息：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
+</li>
+<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
+</li>
+</ul>
+<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
+<ul>
+<li><p><strong>基本原理：</strong></p>
+<ul>
+<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
+</li>
+<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
+</li>
+<li><p>保存函数的调用关系图和函数的调用信息</p>
+</li>
+<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
+</li>
+</ul>
+</li>
+<li><p><strong>基本使用方法：</strong></p>
+<ol>
+<li><p>使用 <code>-pg</code> 参数编译程序</p>
+</li>
+<li><p>运行程序，并正常退出</p>
+</li>
+<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
+</li>
+</ol>
+</li>
+<li><p><strong>使用举例</strong></p>
+<p>测试运行 <code>Test_IOGrapes.exe</code></p>
+<ol>
+<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
+</li>
+<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
+</li>
+<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
+</li>
+<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
+<ul>
+<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
+<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
+</li>
+<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Basic</title>
+    <url>/2022/05/01/OcnSci/Basic/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
+<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO Events</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Writting</title>
     <url>/2022/05/01/Tool/Writting/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>作者：Leo Dong<br>链接：<a href="https://www.zhihu.com/question/35931336/answer/1338390359">https://www.zhihu.com/question/35931336/answer/1338390359</a></p>
@@ -1544,144 +1661,12 @@
       </categories>
   </entry>
   <entry>
-    <title>Yaml</title>
-    <url>/2022/05/01/Tool/Yaml/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Yaml-amp-gprof-amp-hpctoolkit-使用参考"><a href="#Yaml-amp-gprof-amp-hpctoolkit-使用参考" class="headerlink" title="Yaml &amp; gprof &amp; hpctoolkit 使用参考"></a>Yaml &amp; gprof &amp; hpctoolkit 使用参考</h1><h2 id="1-Yaml"><a href="#1-Yaml" class="headerlink" title="1. Yaml"></a>1. <strong>Yaml</strong></h2><ul>
-<li><p><strong>Yaml 基本语法：</strong></p>
-<ul>
-<li><p>大小写敏感</p>
-</li>
-<li><p>使用缩进，表示层级关系</p>
-</li>
-<li><p>缩进不允许使用tab，只允许空格</p>
-</li>
-<li><p>缩进的空格数不重要，相同层级，左对齐即可</p>
-</li>
-<li><p>‘#’表示注释</p>
-</li>
-</ul>
-</li>
-<li><p><strong>Yaml 数据类型</strong></p>
-<ol>
-<li><p>对象：键值对的集合</p>
-<ul>
-<li><p>键值对典型结构：key: value</p>
-<p>key为键值名，value为键值。value 可以是任一数据类型，包括键值对。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">icosTr_grid:</span></span><br><span class="line">  <span class="attr">glvl:</span> <span class="number">4</span></span><br><span class="line">  <span class="attr">slvl:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>列表：一组按次序排列的值</p>
-<ul>
-<li><p>列表典型结构：<code>key: [value1, value2]</code>, 或者 :</p>
- <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">key:</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value1</span></span><br><span class="line"> <span class="bullet">-</span> <span class="string">value2</span></span><br></pre></td></tr></table></figure>
-
-<p>key为列表名，value为列表值。</p>
-</li>
-<li><p>示例：</p>
-  <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">latlon_grid:</span></span><br><span class="line">  <span class="attr">num_grid:</span> [<span class="number">1025</span>, <span class="number">1025</span>]</span><br><span class="line">  <span class="attr">domain_latlon:</span> [<span class="number">21.0</span>, <span class="number">25.0</span>, <span class="number">111.5</span>, <span class="number">115.0</span>]</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>读取Yaml文件</p>
-<ul>
-<li><p>读取文件：test.yml的信息：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">modelState:</span></span><br><span class="line">  <span class="attr">vLevel:</span> <span class="number">10</span></span><br><span class="line">  <span class="attr">varList:</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">uwnd</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">vwnd</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">temp</span> </span><br><span class="line">   <span class="bullet">-</span> <span class="string">qvapor</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">rho</span></span><br><span class="line">   <span class="bullet">-</span> <span class="string">qrain</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>子程序读取：<code>CALL yaml_read(‘test.yml’, ‘modelState’, ‘vLevel’, rt_vlevel)</code>, <code>rt_vlevel</code> 为返回值。</p>
-</li>
-<li><p>函数读取：<code>file_open = yaml_get_var((‘test.yml’, ‘modelState’, ‘vLevel’, rt_vars)</code>, <code>file_open</code> 为 <strong>0</strong> 表示变量读取成功。</p>
-</li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p><strong>Yaml Parser:</strong> <a href="https://codebeautify.org/yaml-parser-online">YAML Parser is easy to use tool to parser YAML String and visualize in hierarchy. Copy, Paste, and Parse.</a></p>
-</li>
-</ul>
-<h2 id="2-gprof使用"><a href="#2-gprof使用" class="headerlink" title="2. gprof使用"></a>2. <strong>gprof</strong>使用</h2><p>  查看用户自定函数的调用关系及运行时间。编译一般使用 <code>-O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/gprof">查看：参考链接</a></p>
-<ul>
-<li><p><strong>基本原理：</strong></p>
-<ul>
-<li><p>gcc&#x2F;g++ 编译时加上 <code>-pg</code></p>
-</li>
-<li><p>编译器在每个函数的开头加 <code>mcount</code> 函数调用</p>
-</li>
-<li><p>保存函数的调用关系图和函数的调用信息</p>
-</li>
-<li><p>最终在程序退出时保存在 <code>gmon.out</code> 文件中</p>
-</li>
-</ul>
-</li>
-<li><p><strong>基本使用方法：</strong></p>
-<ol>
-<li><p>使用 <code>-pg</code> 参数编译程序</p>
-</li>
-<li><p>运行程序，并正常退出</p>
-</li>
-<li><p>使用 <code>gprof</code> 命令查看 <code>gmon.out</code> 文件</p>
-</li>
-</ol>
-</li>
-<li><p><strong>使用举例</strong></p>
-<p>测试运行 <code>Test_IOGrapes.exe</code></p>
-<ol>
-<li><p><code>cmake</code>时，添加参数<code>-pg</code>: <code>SET (CMAKE_Fortran_FLAGS &quot;$&#123;CMAKE_Fortran_FLAGS&#125; -pg&quot;)</code></p>
-</li>
-<li><p>编译并运行 <code>Test_IOGrapes.exe</code>，运行成功生成 <code>gmon.out</code></p>
-</li>
-<li><p>使用 <code>gprof</code>查看 <code>gmon.out</code>：<code>gprof Debug/ Test_IOGrapes.exe gmon.out &gt; gprof.txt</code></p>
-</li>
-<li><p>生成运行及调用信息图：<code>gprof Debug/Test_IOGrapes.exe gmon.out | gprof2dot |dot -Tpng -o example.png</code></p>
-</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-HPCTOOLKIT-安装使用"><a href="#3-HPCTOOLKIT-安装使用" class="headerlink" title="3. HPCTOOLKIT 安装使用"></a>3. <strong>HPCTOOLKIT</strong> 安装使用</h2><p>  多线程热点分析工具。编译一般使用 <code>-g -O3</code> 。<a href="https://hpc.llnl.gov/software/development-environment-software/hpc-toolkit">查看：参考链接</a></p>
-<ul>
-<li><p><strong>通过spack安装：<code>spack install hpctoolkit</code></strong></p>
-<p>如果安装失败，出现类似由 <code>&#39;make -j16 install&#39;</code>的报错，尝试使用<code>spack install -j1 hpctoolkit</code>安装。</p>
-</li>
-<li><p><strong>以 <code>Test_IOGrapes.exe</code>为例：</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. mpirun -np 4 hpcrun -t Debug/Test_IOGrapes.exe</span><br><span class="line">2. hpcstruct Debug/Test_IOGrapes.exe</span><br><span class="line">3. hpcprof hpctoolkit-Test_IOGrapes.exe-measurements</span><br><span class="line">4. hpcviewer hpctoolkit-Test_IOGrapes.exe-database</span><br></pre></td></tr></table></figure></li>
-</ul>
+    <title>ENSO Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
 ]]></content>
       <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>应俊</title>
-    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
-<p>CMIP6 intensity of ENSO 一致性</p>
-<p>Increased ENSO rainfall variability in response to global warming</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
-<p>relative SST 模式和观测差异很大   </p>
-<p>模式EN-like，观测LN-Like</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
-<p>relative SST 的变化信号显现较 annual mean 晚</p>
-<p>ENSO海温：振幅  </p>
-<p>ENSO降水：东移</p>
-<p>ENSO降水变化信号较海温早30年左右</p>
-<p>动力部分起主导作用：温度相对变化</p>
-<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
-<p><strong>学术报告 2022-11</strong></p>
-<p><strong>报告时间：2022年5月17日 09:30</strong></p>
-<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
-<p><strong>报告题目</strong></p>
-<p>Emergence of climate change in the tropical Pacific</p>
-<p><strong>报告摘要</strong></p>
-<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -1787,47 +1772,47 @@
       </categories>
   </entry>
   <entry>
-    <title>张荣华</title>
-    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
-<p>penetration depth: 太阳辐射的穿透深度</p>
-<p>赤道中东太平洋chla高值与上升流有关</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
-<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
-<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
-<p>clm chla ENSO振幅较观测偏大</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
-<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
-<p>周期偏长的偏差也明显改善</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
-<p>简单大气+复杂OGCM</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
-<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
-<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
-<p>同时均对周期存在影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
-<p>导致了ENSO的复杂性</p>
-<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
-<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
-<p>海洋生物同样可以通过动力过程影响海洋</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
+    <title>应俊</title>
+    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
+<p>CMIP6 intensity of ENSO 一致性</p>
+<p>Increased ENSO rainfall variability in response to global warming</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
+<p>relative SST 模式和观测差异很大   </p>
+<p>模式EN-like，观测LN-Like</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
+<p>relative SST 的变化信号显现较 annual mean 晚</p>
+<p>ENSO海温：振幅  </p>
+<p>ENSO降水：东移</p>
+<p>ENSO降水变化信号较海温早30年左右</p>
+<p>动力部分起主导作用：温度相对变化</p>
+<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
+<p><strong>学术报告 2022-11</strong></p>
+<p><strong>报告时间：2022年5月17日 09:30</strong></p>
+<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
+<p><strong>报告题目</strong></p>
+<p>Emergence of climate change in the tropical Pacific</p>
+<p><strong>报告摘要</strong></p>
+<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ocean Data</title>
+    <url>/2022/06/07/OcnSci/Ocean%20Data/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+]]></content>
+      <categories>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -1862,64 +1847,6 @@
 <p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
 <h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
 <h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>秦大河</title>
-    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
-<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
-<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
-<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
-<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
-<p><strong>冰盖 Ice sheet</strong></p>
-<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
-<p><strong>冰架 Iceshelf</strong></p>
-<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
-<p><strong>冰山 Iceberg</strong></p>
-<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
-<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
-<hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1984,30 +1911,6 @@
       </categories>
   </entry>
   <entry>
-    <title>魏云涛</title>
-    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
-<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
-<p><strong>报告题目</strong></p>
-<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
-<p><strong>报告摘要</strong></p>
-<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
     <title>王林</title>
     <url>/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0614-王林-南极平流层爆发性增温-中科院大气所"><a href="#0614-王林-南极平流层爆发性增温-中科院大气所" class="headerlink" title="0614 王林 南极平流层爆发性增温  中科院大气所"></a>0614 王林 南极平流层爆发性增温  中科院大气所</h3><hr>
@@ -2059,6 +1962,64 @@
       </categories>
   </entry>
   <entry>
+    <title>秦大河</title>
+    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
+<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
+<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
+<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
+<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
+<p><strong>冰盖 Ice sheet</strong></p>
+<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
+<p><strong>冰架 Iceshelf</strong></p>
+<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
+<p><strong>冰山 Iceberg</strong></p>
+<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
+<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
     <title>黄瑞新</title>
     <url>/2022/06/24/Seminar/0624-%E9%BB%84%E7%91%9E%E6%96%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0624-黄瑞新-Thermohaline-circulation-sea-water-thermodynamics-and-climate-changes-伍兹霍尔海洋研究所"><a href="#0624-黄瑞新-Thermohaline-circulation-sea-water-thermodynamics-and-climate-changes-伍兹霍尔海洋研究所" class="headerlink" title="0624 黄瑞新 Thermohaline circulation, sea water thermodynamics and climate changes 伍兹霍尔海洋研究所"></a>0624 黄瑞新 Thermohaline circulation, sea water thermodynamics and climate changes 伍兹霍尔海洋研究所</h3><hr>
@@ -2069,32 +2030,71 @@
       </categories>
   </entry>
   <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tool/GitHub/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
+    <title>魏云涛</title>
+    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
+<h4 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
+<p><strong>报告题目</strong></p>
+<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
+<p><strong>报告摘要</strong></p>
+<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
 ]]></content>
       <categories>
-        <category>Tool</category>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>张荣华</title>
+    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
+<p>penetration depth: 太阳辐射的穿透深度</p>
+<p>赤道中东太平洋chla高值与上升流有关</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
+<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
+<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
+<p>clm chla ENSO振幅较观测偏大</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
+<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
+<p>周期偏长的偏差也明显改善</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
+<p>简单大气+复杂OGCM</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
+<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
+<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
+<p>同时均对周期存在影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
+<p>导致了ENSO的复杂性</p>
+<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
+<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
+<p>海洋生物同样可以通过动力过程影响海洋</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
       </categories>
   </entry>
 </search>
