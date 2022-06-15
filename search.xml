@@ -10,55 +10,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Conversions and Constants</title>
-    <url>/2022/06/07/AtmoSci/Conversions%20and%20Constants/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Basic</title>
-    <url>/2022/05/01/OcnSci/Basic/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
-<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
-<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO Events</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Ocean Data</title>
-    <url>/2022/06/07/OcnSci/Ocean%20Data/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
-
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ENSO Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>OcnSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CHLA</title>
     <url>/2022/05/24/Paper/CHLA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
@@ -67,6 +18,16 @@
 <p><span style="color:green">Zhang, R. An ocean‐biology‐induced negative feedback on ENSO as derived from a hybrid coupled model of the tropical Pacific. <em>J</em> <em>Geophys</em> <em>Res Oceans</em> <strong>120</strong>, 8052–8076 (2015). </span></p>
 <p><strong>Abstract</strong> Biological conditions in the tropical Pacific Ocean (e.g., phytoplankton biomass) are strongly regulated by physical changes that are associated with the El Ni~no-Southern Oscillation (ENSO). <strong>The existence and variation of phytoplankton biomass act to modulate the vertical penetration of the incoming sunlight into the upper ocean, which causes an ocean-biology-induced heating (OBH) effect on the climate system.</strong> Previously, the penetration depth of solar radiation in the upper ocean (Hp) has been defined to describe the related bioclimate connections. An empirical model for interannual Hp variability that is para- meterized in terms of its relationship with the sea surface temperature (SST) in the tropical Pacific was derived from remotely sensed ocean color data and is incorporated into a hybrid coupled model (HCM) to represent the OBH effects. In this paper, several HCM experiments are performed to demonstrate the bio- feedback onto the ENSO, including a climatological Hp run (in which Hp is prescribed as only seasonally varying), interannual Hp runs (with different intensities of the interannually varying OBH effects), and a run in which the sign of the OBH effect is reversed. Significant modulating impacts on the interannual variability are found in the HCM and are characterized by a negative feedback between the ocean biology and the climate system in the tropical Pacific; stronger the OBH feedback, weaker the interannual variability. The processes that are involved in the feedback are analyzed. The SST is modulated indirectly by dynamic ocean processes that are induced by OBH. The significance and implication of the OBH effects are discussed in terms of their roles in ENSO variability and the model biases in the tropical Pacific.</p>
 <hr>
+]]></content>
+      <categories>
+        <category>Paper</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>TED</title>
+    <url>/2022/05/24/Paper/TED/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen"><a href="#3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen" class="headerlink" title="3 Ways to Make Flying More Climate-Friendly | Ryah Whalen"></a>3 Ways to Make Flying More Climate-Friendly | Ryah Whalen</h4><iframe width="560" height="315" src="https://www.youtube.com/embed/JY-_GRi56KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ]]></content>
       <categories>
         <category>Paper</category>
@@ -147,12 +108,52 @@
       </categories>
   </entry>
   <entry>
-    <title>CDO Ref Card</title>
-    <url>/2022/05/01/Tool/CDO%20Ref%20Card/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+    <title>ENSO Events</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
 ]]></content>
       <categories>
-        <category>Tool</category>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Conversions and Constants</title>
+    <url>/2022/06/07/AtmoSci/Conversions%20and%20Constants/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlRQZnNTUFJqRnJQ" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>AtmSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Basic</title>
+    <url>/2022/05/01/OcnSci/Basic/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1odsnne9ej20ng0ien08.jpg" alt="Screen Shot 2022-04-27 at 16.47.20"></p>
+<h2 id="Wind-stress-crul-and-ILD-x2F-MLD"><a href="#Wind-stress-crul-and-ILD-x2F-MLD" class="headerlink" title="Wind stress crul and ILD&#x2F;MLD"></a>Wind stress crul and ILD&#x2F;MLD</h2><p>Negative (positive) wind stress curl leads to surface water convergence (divergence) of upper surface water and deepens (shoals) ILD and MLD.</p>
+<p>Besides, enhanced wind stress increases evaporation and induces cooling convection (Qu and Meyers 2005). Negative heat flux enhances mixing in the upper ocean (Lee et al. 2015). In addition to these surface processes, high-salinity subtropical water from below is important for the formation of BLs as well (Foltz and McPhaden 2009).</p>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Ocean Data</title>
+    <url>/2022/06/07/OcnSci/Ocean%20Data/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
+
+]]></content>
+      <categories>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -165,34 +166,34 @@
       </categories>
   </entry>
   <entry>
-    <title>Weather</title>
-    <url>/2022/05/01/AtmoSci/Weather/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
-<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
-<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
-<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
-<p>LI is generally scaled as follows:</p>
+    <title>Chrome</title>
+    <url>/2022/05/01/Tool/Chrome/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="FasterHosts"><a href="#FasterHosts" class="headerlink" title="FasterHosts"></a>FasterHosts</h2><p><code>FasterHosts</code> 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 <code>domain</code> 替换成访问速度较快的那个。</p>
 <ul>
-<li><p>LI 6 or Greater, Very Stable Conditions</p>
-</li>
-<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
-</li>
-<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
-</li>
-<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
-</li>
-<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
-</li>
+<li>加速访问 GitHub 相关的资源</li>
+<li>支持配置 Hosts</li>
 </ul>
-<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
-<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
-<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
-<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
-<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
-<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
-<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
+<blockquote>
+<ol>
+<li>下载 <a href="https://gitee.com/link?target=https://github.com/gauseen/faster-hosts/archive/master.zip">FasterHosts</a> 然后解压，找到 <code>extension</code> 子目录</li>
+<li>打开 Chrome，输入: <code>chrome://extensions/</code></li>
+<li>打开「开发者模式」</li>
+<li>选择「加载已解压的扩展程序」，然后定位到刚才解压的文件夹里面的 <code>extension</code> 目录，确定</li>
+<li>这就安装好了，关闭「开发这模式」</li>
+</ol>
+</blockquote>
+]]></content>
       <categories>
-        <category>AtmSci</category>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CDO Ref Card</title>
+    <url>/2022/05/01/Tool/CDO%20Ref%20Card/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmhBT1BNSXFKbGd2" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
       </categories>
   </entry>
   <entry>
@@ -238,38 +239,6 @@
       </categories>
   </entry>
   <entry>
-    <title>TED</title>
-    <url>/2022/05/24/Paper/TED/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen"><a href="#3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen" class="headerlink" title="3 Ways to Make Flying More Climate-Friendly | Ryah Whalen"></a>3 Ways to Make Flying More Climate-Friendly | Ryah Whalen</h4><div id="dplayer0" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer0"),"loop":"yes","screenshot":"yes","video":{"url":"https://www.youtube.com/watch?t=37s&v=JY-_GRi56KQ"},"danmaku":{"api":"https://api.prprpr.me/dplayer/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script> 
-
-]]></content>
-      <categories>
-        <category>Paper</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Chrome</title>
-    <url>/2022/05/01/Tool/Chrome/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="FasterHosts"><a href="#FasterHosts" class="headerlink" title="FasterHosts"></a>FasterHosts</h2><p><code>FasterHosts</code> 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 <code>domain</code> 替换成访问速度较快的那个。</p>
-<ul>
-<li>加速访问 GitHub 相关的资源</li>
-<li>支持配置 Hosts</li>
-</ul>
-<blockquote>
-<ol>
-<li>下载 <a href="https://gitee.com/link?target=https://github.com/gauseen/faster-hosts/archive/master.zip">FasterHosts</a> 然后解压，找到 <code>extension</code> 子目录</li>
-<li>打开 Chrome，输入: <code>chrome://extensions/</code></li>
-<li>打开「开发者模式」</li>
-<li>选择「加载已解压的扩展程序」，然后定位到刚才解压的文件夹里面的 <code>extension</code> 目录，确定</li>
-<li>这就安装好了，关闭「开发这模式」</li>
-</ol>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CDO</title>
     <url>/2022/05/01/Tool/CDO/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><figure class="highlight fortran"><table><tr><td class="code"><pre><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">31</span> <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_1mon.nc</span><br><span class="line"></span><br><span class="line">ncks -d time,<span class="number">0</span>,<span class="number">9</span> infile outfile</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=tos,sos,mldr10_1 <span class="number">1_WP_1d_00010101_00010629_grid_T</span>.nc MOD_ocn_var.nc</span><br><span class="line"></span><br><span class="line">cdo seltimestep,<span class="number">1</span>/<span class="number">168</span> ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209910.</span>nc ta_Amon_HadGEM2-ES_piControl_r1i1p1_208412-<span class="number">209811.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v850.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">85000</span> *.nc /project/cas/ruyanc/WORK/<span class="keyword">data</span>/CMIP5/q850_add/CNRM-CM5_r1i1p1_q850.nc</span><br><span class="line"></span><br><span class="line">ncrcat ./temp/*.nc ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">20000</span> ACCESS1-<span class="number">3_r1i1p1_ua</span>.nc ACCESS1-<span class="number">3_r1i1p1_u200</span>.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">200</span> ./temp/*.nc HadGEM2-ES_r1i1p1_v200.nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,level=<span class="number">850</span> toga_ersstv3b_ens01_Q_188001-<span class="number">201612.</span>nc toga_ersstv3b_ens01_Q850_188001-<span class="number">201612.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=DTCOND,QRL,QRS,DTV ./temp/*.nc CAM4_EN_plusQ0p15_heating_000210-<span class="number">000304.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=TS ./temp/*.nc CAM4_EN_plusQ0p15_TS_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PSL ./temp/*.nc CAM4_EN_plusQ0p15_PSL_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=Nudge_T ./temp/*.nc CAM4_EN_plusQ0p51_Nudge_T_002010-<span class="number">002104.</span>nc</span><br><span class="line"></span><br><span class="line">cdo <span class="keyword">select</span>,<span class="keyword">name</span>=PS,PHIS ./temp/*.nc CAM4_EN_PS_PHIS_000310-<span class="number">000404.</span>nc</span><br></pre></td></tr></table></figure>
@@ -294,9 +263,25 @@
       </categories>
   </entry>
   <entry>
-    <title>Cite Figures</title>
-    <url>/2022/05/01/Tool/Cite%20Figures/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+    <title>ERA5</title>
+    <url>/2022/05/01/Tool/ERA5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
+<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Fortran95</title>
+    <url>/2022/05/01/Tool/Fortran95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
+
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -329,16 +314,6 @@
 <li><a href="https://nicojourdain.github.io/students_dir/students_netcdf_fortran/">https://nicojourdain.github.io/students_dir/students_netcdf_fortran/</a></li>
 <li><a href="https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html">https://docs.unidata.ucar.edu/netcdf-fortran/current/f90_The-NetCDF-Fortran-90-Interface-Guide.html</a></li>
 </ul>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Gitee</title>
-    <url>/2022/05/01/Tool/Gitee/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -505,47 +480,39 @@
       </categories>
   </entry>
   <entry>
-    <title>ERA5</title>
-    <url>/2022/05/01/Tool/ERA5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
-<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+    <title>Github</title>
+    <url>/2022/05/01/Tool/GitHub/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
 
 
 
-<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>How to publish a paper</title>
-    <url>/2022/05/01/Tool/How%20to%20publish%20a%20paper/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>LaTex</title>
-    <url>/2022/05/01/Tool/LaTex/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Journal-Abbreviation"><a href="#Journal-Abbreviation" class="headerlink" title="Journal Abbreviation"></a>Journal Abbreviation</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">&#123;Geophys.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Environ.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Mon.<span class="keyword">\ </span>Wea.<span class="keyword">\ </span>Rev.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Atmos.<span class="keyword">\ </span>Sci.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Climate&#125;</span><br><span class="line"></span><br><span class="line">&#123;Climate Dyn.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Geophys.<span class="keyword">\ </span>Res.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Bull.<span class="keyword">\ </span>Amer.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Quart.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Roy.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Taylor <span class="built_in">&amp;</span> Francis&#125;</span><br><span class="line"></span><br><span class="line">&#123;Theor.<span class="keyword">\ </span>Appl.<span class="keyword">\ </span>Climatol.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Phys.<span class="keyword">\ </span>Oceanogr.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Int.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Climatol.&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Special-Symbol"><a href="#Special-Symbol" class="headerlink" title="Special Symbol"></a>Special Symbol</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">El Ni<span class="keyword">\~</span>&#123;n&#125;o</span><br><span class="line"></span><br><span class="line">165<span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>E</span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>C</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p><code>latexdiff Origin.tex Revised.tex &gt; ./diff/diff.tex</code></p>
-<h4 id="count"><a href="#count" class="headerlink" title="count"></a>count</h4><p><code>texcount file-name1.tex file-name2.tex</code></p>
-<h4 id="Include-Figures"><a href="#Include-Figures" class="headerlink" title="Include Figures"></a>Include Figures</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\centering</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>,angle=90]&#123;R1-Asymetry.pdf&#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\caption</span>&#123;XXXX&#125;<span class="keyword">\label</span>&#123;R-AsySig&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
-
-
-
+    <title>Gitee</title>
+    <url>/2022/05/01/Tool/Gitee/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -755,6 +722,38 @@
       </categories>
   </entry>
   <entry>
+    <title>How to publish a paper</title>
+    <url>/2022/05/01/Tool/How%20to%20publish%20a%20paper/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="如何发表一份工作"><a href="#如何发表一份工作" class="headerlink" title="如何发表一份工作"></a>如何发表一份工作</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31zszksekj20zk0jagof.jpg" alt="e99a6986adba1aab072f88c815caa0bf"></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>LaTex</title>
+    <url>/2022/05/01/Tool/LaTex/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Journal-Abbreviation"><a href="#Journal-Abbreviation" class="headerlink" title="Journal Abbreviation"></a>Journal Abbreviation</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">&#123;Geophys.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Environ.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Mon.<span class="keyword">\ </span>Wea.<span class="keyword">\ </span>Rev.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Atmos.<span class="keyword">\ </span>Sci.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Climate&#125;</span><br><span class="line"></span><br><span class="line">&#123;Climate Dyn.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Geophys.<span class="keyword">\ </span>Res.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Bull.<span class="keyword">\ </span>Amer.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Quart.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Roy.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Taylor <span class="built_in">&amp;</span> Francis&#125;</span><br><span class="line"></span><br><span class="line">&#123;Theor.<span class="keyword">\ </span>Appl.<span class="keyword">\ </span>Climatol.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Phys.<span class="keyword">\ </span>Oceanogr.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Int.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Climatol.&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Special-Symbol"><a href="#Special-Symbol" class="headerlink" title="Special Symbol"></a>Special Symbol</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">El Ni<span class="keyword">\~</span>&#123;n&#125;o</span><br><span class="line"></span><br><span class="line">165<span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>E</span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>C</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="diff"><a href="#diff" class="headerlink" title="diff"></a>diff</h4><p><code>latexdiff Origin.tex Revised.tex &gt; ./diff/diff.tex</code></p>
+<h4 id="count"><a href="#count" class="headerlink" title="count"></a>count</h4><p><code>texcount file-name1.tex file-name2.tex</code></p>
+<h4 id="Include-Figures"><a href="#Include-Figures" class="headerlink" title="Include Figures"></a>Include Figures</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\centering</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>,angle=90]&#123;R1-Asymetry.pdf&#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\caption</span>&#123;XXXX&#125;<span class="keyword">\label</span>&#123;R-AsySig&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Mac Cron</title>
     <url>/2022/05/01/Tool/Mac%20Cron/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h3><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
@@ -801,6 +800,15 @@
       </categories>
   </entry>
   <entry>
+    <title>Pandas Cheatsheet</title>
+    <url>/2022/05/01/Tool/Pandas%20Cheatsheet/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Matplotlib Cheatsheet</title>
     <url>/2022/05/01/Tool/Matplotlib%20Cheatsheet/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmF5Qk92dFZTbU5H" data-height="1000px"></div>
@@ -810,42 +818,43 @@
       </categories>
   </entry>
   <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tool/GitHub/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
+    <title>Cite Figures</title>
+    <url>/2022/05/01/Tool/Cite%20Figures/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
       </categories>
   </entry>
   <entry>
-    <title>Fortran95</title>
-    <url>/2022/05/01/Tool/Fortran95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlZTeVhicVdYWnJQ" data-height="1000px"></div>
-
-]]></content>
+    <title>Weather</title>
+    <url>/2022/05/01/AtmoSci/Weather/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="skew-T"><a href="#skew-T" class="headerlink" title="skew-T"></a>skew-T</h4><p><a href="https://www.e-education.psu.edu/meteo300/node/638">https://www.e-education.psu.edu/meteo300/node/638</a></p>
+<h4 id="CAPE"><a href="#CAPE" class="headerlink" title="CAPE"></a>CAPE</h4><p>可以打个比方去理解CAPE值。就好像地震一样，CAPE值预报了“地震”的级数，而抬升指数预报了发生“地震”的可能性。如果你知道明天“地震”的级别很高，而且知道发生“地震”的可能性也很高，你一定知道明天不要飞，就怕啥也不知道就飞出去了。</p>
+<h4 id="Lift-Index"><a href="#Lift-Index" class="headerlink" title="Lift Index"></a>Lift Index</h4><p>The <strong>lifted index</strong> (<strong>LI</strong>) is the <a href="https://en.wikipedia.org/wiki/Temperature">temperature</a> difference between the environment Te(p) and an <a href="https://en.wikipedia.org/wiki/Air_parcel">air parcel</a> lifted <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatically</a> Tp(p) at a given pressure height in the <a href="https://en.wikipedia.org/wiki/Troposphere">troposphere</a> (lowest layer where most weather occurs) of the <a href="https://en.wikipedia.org/wiki/Earth's_atmosphere">atmosphere</a>, usually 500 <a href="https://en.wikipedia.org/wiki/Pascal_(unit)">hPa</a> (<a href="https://en.wikipedia.org/wiki/Bar_(unit)">mb</a>). The temperature is measured in Celsius. When the value is positive, the atmosphere (at the respective height) is stable and when the value is negative, the atmosphere is <a href="https://en.wikipedia.org/wiki/Atmospheric_instability">unstable</a>.</p>
+<p>LI can be computed using computer algorithms but can also be determined graphically. To do this, generally, the <a href="https://en.wikipedia.org/wiki/Air_parcel">parcel</a> is lifted from the portion of the <a href="https://en.wikipedia.org/wiki/Planetary_boundary_layer">planetary boundary layer</a> (PBL) that lies below the morning <a href="https://en.wikipedia.org/wiki/Inversion_(meteorology)">inversion</a>. The air here should be about 60 to 65% <a href="https://en.wikipedia.org/wiki/Relative_humidity">RH</a>, which is then lifted along the dry adiabat (see also <a href="https://en.wikipedia.org/wiki/Adiabatic_process">adiabatic process</a>) to the <a href="https://en.wikipedia.org/wiki/Lifted_condensation_level">lifting condensation level (LCL)</a>, which is the intersection of that curve with the average <a href="https://en.wikipedia.org/wiki/Mixing_ratio">mixing ratio</a> in the boundary layer. Once the LCL is found, the parcel is lifted along the moist adiabat to 500 mb. It is then that one finds LI &#x3D; Te(p) - Tp(p).</p>
+<p>LI is generally scaled as follows:</p>
+<ul>
+<li><p>LI 6 or Greater, Very Stable Conditions</p>
+</li>
+<li><p>LI Between 1 and 6 : Stable Conditions, Thunderstorms Not Likely</p>
+</li>
+<li><p>LI Between 0 and -2 : Slightly Unstable, Thunderstorms Possible, With Lifting Mechanism (i.e., cold front, daytime heating, …)</p>
+</li>
+<li><p>LI Between -2 and -6 : Unstable, Thunderstorms Likely, Some Severe With Lifting Mechanism</p>
+</li>
+<li><p>LI Less Than -6: Very Unstable, Severe Thunderstorms Likely With Lifting Mechanism</p>
+</li>
+</ul>
+<h3 id="台风近海快速加强"><a href="#台风近海快速加强" class="headerlink" title="台风近海快速加强"></a>台风近海快速加强</h3><p>资料显示，近海快速加强的台风均满足既有较强的高层出流、垂直切变又不太大的大气环流配置条件，但是，如何来判定它是否符合上述配置条件是主要难点。因此，对快速加强台风个例进行研究，是提升判识能力的有效途径。此外，加强对数值模式的检验和提高对模式产品的解释应用能力，也是提高预报准确率的重要途径之一。</p>
+<h4 id="CPEC-amp-OPEC"><a href="#CPEC-amp-OPEC" class="headerlink" title="CPEC&amp;OPEC"></a>CPEC&amp;OPEC</h4><p><a href="http://ir.igsnrr.ac.cn/handle/311030/2807">http://ir.igsnrr.ac.cn/handle/311030/2807</a></p>
+<h3 id="海表面热通量"><a href="#海表面热通量" class="headerlink" title="海表面热通量"></a>海表面热通量</h3><p><a href="https://max.book118.com/html/2017/0118/84886975.shtm">https://max.book118.com/html/2017/0118/84886975.shtm</a></p>
+<h4 id="自由对流高度和抬升凝结高度"><a href="#自由对流高度和抬升凝结高度" class="headerlink" title="自由对流高度和抬升凝结高度"></a>自由对流高度和抬升凝结高度</h4><p>LFC是从LCL沿着湿绝热线上升，与层结曲线的第一个交点，有时候二者没有交点，所以LFC不一定每次都能得到。LFC表示超过这个高度后，空气块受到向上的正浮力，已经不需要外力就可以自由上升了。</p>
+<p>CCL是由地面气压P0和露点Td0之交点沿着等饱和比湿线上升，与温度廓线之交点。CCL可以看作是热力对流产生的积云的云底高度，它是热力作用所导致的凝结面。</p>
+<p>具体由下图可以看出，二者的差距主要取决于从LCL往上的湿绝热线和等饱和比湿线之间的间隔。</p>
+<img src="https://pic1.zhimg.com/50/v2-0e72b437be2d543eb969e212351bf935_720w.jpg?source=1940ef5c" data-caption="" data-size="normal" data-rawwidth="808" data-rawheight="572" data-default-watermark-src="https://pic3.zhimg.com/50/v2-3a3101b75bcc1a27977c26a5850568d6_720w.jpg?source=1940ef5c" class="origin_image zh-lightbox-thumb" width="808" data-original="https://pic3.zhimg.com/v2-0e72b437be2d543eb969e212351bf935_r.jpg?source=1940ef5c"/>]]></content>
       <categories>
-        <category>Tool</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -857,34 +866,6 @@
 <p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
 <h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
 <p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Pandas Cheatsheet</title>
-    <url>/2022/05/01/Tool/Pandas%20Cheatsheet/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Parameters</title>
-    <url>/2022/05/01/Tool/Parameters/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
-
-
-
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1030,6 +1011,25 @@
 <li>convert a GRIB file to netCDF</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Parameters</title>
+    <url>/2022/05/01/Tool/Parameters/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Units"><a href="#Units" class="headerlink" title="Units"></a>Units</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1 day = 86400s</span><br><span class="line"></span><br><span class="line">1 kg m-2 s-1 = 86400 mm/day</span><br><span class="line"></span><br><span class="line">1 Pa = 1 N/m2   1 N = 1 kg⋅m⋅s−2</span><br><span class="line"></span><br><span class="line">One newton is the force needed to accelerate one kilogram of mass at the rate of one metre per second squared in the direction of the applied force.</span><br><span class="line"></span><br><span class="line">1 Pa = 10−5 bar  SI base units‎: ‎kg⋅m−1⋅s−2</span><br><span class="line"></span><br><span class="line">vertical integrated moisture budget： </span><br><span class="line"></span><br><span class="line">m/s kg/kg hPa to mm/day   Q_vint_unit = Q_vint/(9.8*997)*86400*1000*100</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">1 SV = 10^6 m^3 s^-1 流量的单位</span><br><span class="line"></span><br><span class="line">stream function: m^2 s^-1</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvqrcj2wj20sp08wq3j.jpg" alt="Latent Heat of vaporization of water at 20 °C"></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">K day-1 * m2 * height =  ~ W M-2</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -1325,102 +1325,6 @@
       </categories>
   </entry>
   <entry>
-    <title>WRF</title>
-    <url>/2022/05/01/Tool/WRF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
-
-<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
-<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
-
-<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
-<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
-
-<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
-<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>这样就完成了！只需一步，立刻就可以完成！</p>
-<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
-
-<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
-
-<p>接着，执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
-
-<p>spack会提示：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
-
-<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
-
-<p>即可！</p>
-<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
-<p>实时预报数据下载地址：</p>
-<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
-<p>历史预报数据下载地址：</p>
-<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
-<p>数据下载脚本：</p>
-<p>In [1]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
-
-<p>驱动WRF</p>
-<p>In [ ]:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
-<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
-<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
-
-
-
-<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
-<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
-<p><strong>注意</strong>：</p>
-<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
-<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
-<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
-<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
-<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
-<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
-<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
-<ul>
-<li><p>链接 met_em* 文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
-</ul>
-<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
-<ul>
-<li><p>初始化气象要素</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
-
-<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
-</li>
-<li><p>模拟积分——开始模拟</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
-
-<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
-</li>
-</ul>
-<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
-<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
-<p>关于模式后处理，之前也提到过一些：</p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
-<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
-<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Writting</title>
     <url>/2022/05/01/Tool/Writting/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>作者：Leo Dong<br>链接：<a href="https://www.zhihu.com/question/35931336/answer/1338390359">https://www.zhihu.com/question/35931336/answer/1338390359</a></p>
@@ -1680,37 +1584,99 @@
       </categories>
   </entry>
   <entry>
-    <title>应俊</title>
-    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
-<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
-<p>CMIP6 intensity of ENSO 一致性</p>
-<p>Increased ENSO rainfall variability in response to global warming</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
-<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
-<p>relative SST 模式和观测差异很大   </p>
-<p>模式EN-like，观测LN-Like</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
-<p>relative SST 的变化信号显现较 annual mean 晚</p>
-<p>ENSO海温：振幅  </p>
-<p>ENSO降水：东移</p>
-<p>ENSO降水变化信号较海温早30年左右</p>
-<p>动力部分起主导作用：温度相对变化</p>
-<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
-<p><strong>学术报告 2022-11</strong></p>
-<p><strong>报告时间：2022年5月17日 09:30</strong></p>
-<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
-<p><strong>报告题目</strong></p>
-<p>Emergence of climate change in the tropical Pacific</p>
-<p><strong>报告摘要</strong></p>
-<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
+    <title>WRF</title>
+    <url>/2022/05/01/Tool/WRF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Install-WRF"><a href="#Install-WRF" class="headerlink" title="Install WRF"></a>Install WRF</h3><h4 id="1-安装spack，并配置环境变量"><a href="#1-安装spack，并配置环境变量" class="headerlink" title="1. 安装spack，并配置环境变量"></a>1. 安装spack，并配置环境变量</h4><h5 id="1-1-克隆spack仓库到本地"><a href="#1-1-克隆spack仓库到本地" class="headerlink" title="1.1 克隆spack仓库到本地"></a>1.1 克隆spack仓库到本地</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 将spack克隆到~/spack文件夹。克隆位置可改</span><br><span class="line">git clone -c feature.manyFiles=true https://github.com/spack/spack.git ~/spack</span><br></pre></td></tr></table></figure>
+
+<p>如果你无法连接到互联网，可以在github网页上，下载仓库的zip文件，然后解压到你所需要的位置。</p>
+<h5 id="1-2-将spack-setup环境命令加载到bashrc中"><a href="#1-2-将spack-setup环境命令加载到bashrc中" class="headerlink" title="1.2 将spack setup环境命令加载到bashrc中"></a>1.2 将spack setup环境命令加载到bashrc中</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">echo &quot;source ~/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-3-寻找编译器"><a href="#1-3-寻找编译器" class="headerlink" title="1.3 寻找编译器"></a>1.3 寻找编译器</h5><p>spack可以搜索你的环境变量<code>PATH</code>中所有编译器的可执行文件，并将其全路径保存到<code>~/.spack/linux/compilers.yaml</code>文件中。</p>
+<p>假设你的超算上已使用module等方法管理编译器，你也可以先load你需要用到的编译器。总之，你需要保证你的编译器的可执行文件位于系统的<code>PATH</code>环境变量中。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack compiler find</span><br></pre></td></tr></table></figure>
+
+<p>当然你也可以打开<code>~/.spack/linux/compilers.yaml</code>文件，手动修改路径</p>
+<h4 id="2-安装wrf"><a href="#2-安装wrf" class="headerlink" title="2. 安装wrf"></a>2. 安装wrf</h4><h5 id="2-1-如果可以连接互联网"><a href="#2-1-如果可以连接互联网" class="headerlink" title="2.1 如果可以连接互联网"></a>2.1 如果可以连接互联网</h5><figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>这样就完成了！只需一步，立刻就可以完成！</p>
+<h5 id="2-2-如果无法连接互联网"><a href="#2-2-如果无法连接互联网" class="headerlink" title="2.2 如果无法连接互联网"></a>2.2 如果无法连接互联网</h5><p>在一台可以连网的liux机器上安装spack；接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack info wrf </span><br></pre></td></tr></table></figure>
+
+<p>查询wrf需要安装哪些依赖项。由输出信息可得知，wrf需要依赖</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hdf5,jemalloc,libtirpc,m4,netcdf-c,parallel-netcdf,pkgconfig,time,jasper,libpng,libtool,mpi,netcdf-fortran,perl,tcsh和zlib；</span><br></pre></td></tr></table></figure>
+
+<p>接着，执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack mirror create hdf5 jemalloc libtirpc  m4 netcdf-c parallel-netcdf pkgconfig time jasper libpng libtool mpi netcdf-fortran  perl tcsh zlib wrf</span><br></pre></td></tr></table></figure>
+
+<p>spack会提示：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Successfully updated mirror in file:/[某路径]</span><br></pre></td></tr></table></figure>
+
+<p>将该路径的文件全部打包，移动到你无法联网的那台机器上。然后再执行</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">spack install wrf</span><br></pre></td></tr></table></figure>
+
+<p>即可！</p>
+<h3 id="WRF-run-with-CFS"><a href="#WRF-run-with-CFS" class="headerlink" title="WRF run with CFS"></a>WRF run with CFS</h3><h5 id="数据介绍："><a href="#数据介绍：" class="headerlink" title="数据介绍："></a>数据介绍：</h5><p>Saha, S., Moorthi, S., Wu, X., et al. (2014). The NCEP climate forecast system version 2. Journal of Climate, 27(6), 2185–2208. <a href="https://doi.org/10.1175/JCLI-D-12-00823.1">https://doi.org/10.1175/JCLI-D-12-00823.1</a></p>
+<p>实时预报数据下载地址：</p>
+<p><a href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs/</a></p>
+<p>历史预报数据下载地址：</p>
+<p><a href="https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/">https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast/</a></p>
+<p>数据下载脚本：</p>
+<p>In [1]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># @ 气象备忘录</span><br><span class="line"># @ meteo_notebook@163.com</span><br><span class="line"></span><br><span class="line">import os,sys</span><br><span class="line">from datetime import datetime,timedelta</span><br><span class="line">import bisect</span><br><span class="line">import pandas as pd </span><br><span class="line"></span><br><span class="line">def str2time(timestr, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strptime(timestr, format)</span><br><span class="line"></span><br><span class="line">def time2str(time, format = &quot;%Y%m%d%H&quot;):</span><br><span class="line">    return datetime.strftime(time, format)</span><br><span class="line"></span><br><span class="line">def download_cfs():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载实时预报数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    </span><br><span class="line">    HH       = time2str(dt_init, &quot;%H&quot;)</span><br><span class="line">    YYYY     = time2str(dt_init, &quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = time2str(dt_init, &quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = time2str(dt_init, &quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/cfs/prod/cfs&quot;</span><br><span class="line">    url      = f&quot;&#123;url_root&#125;/cfs.&#123;YYYYMMDD&#125;/&#123;HH&#125;/6hrly_grib_01&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    </span><br><span class="line">def download_cfs_his():</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    下载历史数据</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    dt_init  = str2time(init)</span><br><span class="line">    YYYY     = dt_init.strftime(&quot;%Y&quot;)</span><br><span class="line">    YYYYMM   = dt_init.strftime(&quot;%Y%m&quot;)</span><br><span class="line">    YYYYMMDD = dt_init.strftime(&quot;%Y%m%d&quot;)</span><br><span class="line">    </span><br><span class="line">    url_root = &quot;https://www.ncei.noaa.gov/data/climate-forecast-system/access/operational-9-month-forecast&quot;</span><br><span class="line">    url_pres = f&quot;&#123;url_root&#125;/6-hourly-by-pressure/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    url_sfc  = f&quot;&#123;url_root&#125;/6-hourly-flux/&#123;YYYY&#125;/&#123;YYYYMM&#125;/&#123;YYYYMMDD&#125;/&#123;init&#125;&quot;</span><br><span class="line">    </span><br><span class="line">    valid = time2str(dt_valid)</span><br><span class="line">    # 等压面数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_pres&#125;/pgbf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line">    # 地表数据</span><br><span class="line">    os.system(f&quot;axel &#123;url_sfc&#125;/flxf&#123;valid&#125;.01.&#123;init&#125;.grb2&quot;)</span><br><span class="line"></span><br><span class="line">if __name__ == &quot;__main__&quot;:</span><br><span class="line">    </span><br><span class="line">    init  = &quot;2022040600&quot;  # 模式起报时间</span><br><span class="line">    </span><br><span class="line">    # 预报时段很长，仅下载其中的一部分</span><br><span class="line">    start = &quot;2022040600&quot;  # 下载数据开始时间</span><br><span class="line">    end   = &quot;2022040700&quot;  # 下载数据结束时间</span><br><span class="line"></span><br><span class="line">    # 下载目录设置</span><br><span class="line">    wrk_dir = f&quot;/home/data/cfs/&#123;init&#125;&quot;</span><br><span class="line">    if not os.path.exists(wrk_dir): os.makedirs(wrk_dir)</span><br><span class="line">    os.chdir(wrk_dir)</span><br><span class="line"></span><br><span class="line">    idx = pd.date_range(str2time(start), str2time(end), freq=&#x27;6H&#x27;)</span><br><span class="line">    for dt_valid in idx:</span><br><span class="line">        print(dt_valid)</span><br><span class="line">        download_cfs()</span><br><span class="line">2022-04-06 00:00:00</span><br><span class="line">2022-04-06 06:00:00</span><br><span class="line">2022-04-06 12:00:00</span><br><span class="line">2022-04-06 18:00:00</span><br><span class="line">2022-04-07 00:00:00</span><br></pre></td></tr></table></figure>
+
+<p>驱动WRF</p>
+<p>In [ ]:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ungrib/Variable_Tables/Vtable.CFSR Vtable</span><br><span class="line">./link_grib.csh $&#123;DATA_PATH&#125;/*  # 可以同时链接等压面和地表数据</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="WRF-notes"><a href="#WRF-notes" class="headerlink" title="WRF notes"></a>WRF notes</h3><p><a href="https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw">https://mp.weixin.qq.com/s/TkQfZJlnbiOd2_9XFnAehw</a></p>
+<p>WPS只是WRF运用实际数据模拟的准备过程，这就好比开车要先上车。讲完前处理过程之后 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484195&idx=1&sn=8bbaab8961f31fdcfd7be91edac58480&chksm=e8bc7319dfcbfa0f4128114c2a2745f16d660260b2dbda5f4431beff76b526db341211834642&scene=21#wechat_redirect">WRF模式之WPS的配置运行</a>，就要开始模拟了。</p>
+<p>模拟之前同样需要设置参数，这里的参数通过 namelist.input 文件控制，常规的 namelist.input 文件内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp;time_control</span><br><span class="line"> run_days                            = 1,</span><br><span class="line"> run_hours                           = 0,</span><br><span class="line"> run_minutes                         = 0,</span><br><span class="line"> run_seconds                         = 0,</span><br><span class="line"> start_year                          = 2015, 2015,</span><br><span class="line"> start_month                         = 10, 10,</span><br><span class="line"> start_day                           = 04, 04,</span><br><span class="line"> start_hour                          = 00, 00,</span><br><span class="line"> start_minute                        = 00, 00,</span><br><span class="line"> start_second                        = 00, 00,</span><br><span class="line"> end_year                            = 2015, 2015,</span><br><span class="line"> end_month                           = 10, 10,</span><br><span class="line"> end_day                             = 05, 05,</span><br><span class="line"> end_hour                            = 00, 00,</span><br><span class="line"> end_minute                          = 00, 00,</span><br><span class="line"> end_second                          = 00, 00,</span><br><span class="line"> interval_seconds                    = 21600</span><br><span class="line"> input_from_file                     = .true.,.true.,</span><br><span class="line"> history_interval                    = 10,   5,  # 表示多长时间输出一次结果</span><br><span class="line"> frames_per_outfile                  = 36,  36,  # 表示多少个结果输出到一个文件</span><br><span class="line"> restart                             = .false.,</span><br><span class="line"> restart_interval                    = 360,</span><br><span class="line"> io_form_history                     = 2</span><br><span class="line"> io_form_restart                     = 2</span><br><span class="line"> io_form_input                       = 2</span><br><span class="line"> io_form_boundary                    = 2</span><br><span class="line"> debug_level                         = 10</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step                           = 45,</span><br><span class="line"> time_step_fract_num                 = 0,</span><br><span class="line"> time_step_fract_den                 = 1,</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> s_we                                = 1,     1,</span><br><span class="line"> e_we                                = 241,   424,</span><br><span class="line"> s_sn                                = 1,     1,</span><br><span class="line"> e_sn                                = 220,   421,</span><br><span class="line"> s_vert                              = 1,     1,</span><br><span class="line"> e_vert                              =  48,    48,</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> dx                                  = 9000,   3000,</span><br><span class="line"> dy                                  = 9000,   3000,</span><br><span class="line"> grid_id                             = 1,     2,</span><br><span class="line"> parent_id                           = 0,     1,</span><br><span class="line"> i_parent_start                      = 0,    50,</span><br><span class="line"> j_parent_start                      = 0,    40,</span><br><span class="line"> parent_grid_ratio                   = 1,    3,</span><br><span class="line"> parent_time_step_ratio              = 1,    3,</span><br><span class="line"> feedback                            = 0,</span><br><span class="line"> smooth_option                       = 1,</span><br><span class="line"> num_metgrid_levels                  = 27,</span><br><span class="line"> num_metgrid_soil_levels             = 4,</span><br><span class="line"> p_top_requested                     = 5000,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> mp_physics                          = 17,     17,</span><br><span class="line"> gsfcgce_hail                        = 0,    </span><br><span class="line"> gsfcgce_2ice                        = 0,    </span><br><span class="line"> ra_lw_physics                       = 1,     1,</span><br><span class="line"> ra_sw_physics                       = 1,     1,</span><br><span class="line"> radt                                = 9,     9,</span><br><span class="line"> sf_sfclay_physics                   = 1,     1,</span><br><span class="line"> sf_surface_physics                  = 2,     2,</span><br><span class="line"> bl_pbl_physics                      = 1,     1,</span><br><span class="line"> bldt                                = 0,     0,</span><br><span class="line"> cu_physics                          = 1,     0,</span><br><span class="line"> cudt                                = 5,     0,</span><br><span class="line"> surface_input_source                = 1,</span><br><span class="line"> num_soil_layers                     = 4,</span><br><span class="line"> maxiens                             = 1,</span><br><span class="line"> maxens                              = 3,</span><br><span class="line"> maxens2                             = 3,</span><br><span class="line"> maxens3                             = 16,</span><br><span class="line"> ensdim                              = 144,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;dynamics</span><br><span class="line"> w_damping                           = 1,</span><br><span class="line"> diff_opt                            = 2,</span><br><span class="line"> km_opt                              = 4,</span><br><span class="line"> diff_6th_opt                        = 2,</span><br><span class="line"> diff_6th_factor                     = 0.12,</span><br><span class="line"> damp_opt                            = 0,</span><br><span class="line"> base_temp                           = 290.</span><br><span class="line"> zdamp                               = 5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,</span><br><span class="line"> khdif                               =   0,     0,  </span><br><span class="line"> kvdif                               =   0,     0,  </span><br><span class="line"> non_hydrostatic                     = .true., .true.,</span><br><span class="line"> time_step_sound                     = 6,      6,  </span><br><span class="line"> h_mom_adv_order                     = 5,      5,  </span><br><span class="line"> v_mom_adv_order                     = 5,      5,  </span><br><span class="line"> h_sca_adv_order                     = 5,      5,  </span><br><span class="line"> v_sca_adv_order                     = 5,      5,  </span><br><span class="line"> moist_adv_opt                       = 3,</span><br><span class="line"> scalar_adv_opt                      = 3,</span><br><span class="line"> momentum_adv_opt                    = 3,</span><br><span class="line"> chem_adv_opt                        = 3,</span><br><span class="line"> tke_adv_opt                         = 3,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;bdy_control</span><br><span class="line"> spec_bdy_width                      = 5,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 4,</span><br><span class="line"> specified                           = .true.,</span><br><span class="line"> nested                              = .false., .true.,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;grib2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 0,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"> /</span><br></pre></td></tr></table></figure>
+
+
+
+<p>一般情况下，在模拟时需要关心的是 &amp;time_control， &amp;domains，&amp;physics部分的参数设置。</p>
+<p>&amp;time_control 部分主要控制的是模拟的时间范围，debug 信息输出，输出格式等信息。</p>
+<p><strong>注意</strong>：</p>
+<p>&amp;domains 部分的参数设置要和所用初始场以及WPS namelist.wps的一些参数设置相同，否则会出错。 </p>
+<p>&amp;physics 部分主要控制的是微物理方案，辐射方案以及积云对流参数化等的选择。</p>
+<p>&amp;dynamics 部分控制的是动力参数的设置。</p>
+<p>&amp;fdda 主要应用于资料同化参数的设置。</p>
+<p>还有一些其它部分的参数设置，通常这些部分的参数不需要更改。</p>
+<p>大概了解了一下namelist.input的参数设置之后，就可以运行了。再运行之前，先把WPS过程中运行 metgrid.exe 的时候生成了一些 met_em*文件<strong>拷贝</strong>或是<strong>链接</strong>到 WRFV3&#x2F;run下，当然也可以链接到 WRFV3&#x2F;test&#x2F;em_real&#x2F; 下。（关于链接和拷贝的命令看这里 <a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483970&idx=1&sn=c5c10f9190cb1bfd7a06d830441e927e&chksm=e8bc7278dfcbfb6ec76c6b31b96030a51849ca7a4d643a0323e41046957a47736f8ba9371bfe&scene=21#wechat_redirect">linux常用命令之进阶</a>）</p>
+<p>开始之前先进入 WRFV3&#x2F;run 目录下：</p>
+<ul>
+<li><p>链接 met_em* 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -sf ../../WPS/met_em.d0* .</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>注意</strong>： 命令后的 . 不能省，这里的 . 表示当前路径。</p>
+<ul>
+<li><p>初始化气象要素</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./real.exe</span><br></pre></td></tr></table></figure>
+
+<p>运行成功后会生成一些文件，wrfbdy_d01，wrfinput_d*</p>
+</li>
+<li><p>模拟积分——开始模拟</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>上述方式为串行运行，如果编译支持并行运算的话，可以执行以下命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">mpirun -np 4 ./wrf.exe</span><br></pre></td></tr></table></figure>
+
+<p>表示使用4个处理器进行运算。当然， real.exe 也支持并行运算。</p>
+</li>
+</ul>
+<p>然后就等模拟结束就行了。耗时长短与模拟个例时间长短，嵌套层数多少，模拟域范围大小等因素有关。当然，如果出错了的话就另说了&#x3D;&#x3D;</p>
+<p>模拟结束之后会生成一系列输出文件，比如：wrfout_d01_2015-10-04_00:00:00 等文件。可能没有后缀，但是默认的输出文件格式为 nc。模拟结束之后就是后处理过程了。</p>
+<p>关于模式后处理，之前也提到过一些：</p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483979&idx=1&sn=25876476b164990b9baefd8556b437e7&chksm=e8bc7271dfcbfb67d42b57bdf6549b814db47875cb8e003388709a032e788559554874f3350f&scene=21#wechat_redirect">真・WRF模式后处理之Python版</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247483947&idx=1&sn=1545c8f3592dcd4a26e39c9d79a4675c&chksm=e8bc7211dfcbfb07404bd16146c3255514dd3e718f3e8c54bf497e3a30f9b949e813279a0ef1&scene=21#wechat_redirect">WRF模式后处理</a></p>
+<p><a href="http://mp.weixin.qq.com/s?__biz=MzIyOTc5NjE4MQ==&mid=2247484134&idx=1&sn=3d28deab9516aa94e8c37394731845a1&chksm=e8bc72dcdfcbfbca73cbf44fc143b5524f21d907447d1a58c5389e813e513b7fde617be98497&scene=21#wechat_redirect">高维数据可视化</a></p>
+<p>后处理过程其实就是处理数据的过程。使用什么工具或是编程语言都可以，没有限制。只要你能得到想要的结果就行了。</p>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>Tool</category>
       </categories>
   </entry>
   <entry>
@@ -1816,6 +1782,77 @@
       </categories>
   </entry>
   <entry>
+    <title>应俊</title>
+    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h3><hr>
+<h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p>warmer get wetter &amp; wet get wetter</p>
+<p>CMIP6 intensity of ENSO 一致性</p>
+<p>Increased ENSO rainfall variability in response to global warming</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
+<p>relative SST 模式和观测差异很大   </p>
+<p>模式EN-like，观测LN-Like</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
+<p>relative SST 的变化信号显现较 annual mean 晚</p>
+<p>ENSO海温：振幅  </p>
+<p>ENSO降水：东移</p>
+<p>ENSO降水变化信号较海温早30年左右</p>
+<p>动力部分起主导作用：温度相对变化</p>
+<h4 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
+<p><strong>学术报告 2022-11</strong></p>
+<p><strong>报告时间：2022年5月17日 09:30</strong></p>
+<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
+<p><strong>报告题目</strong></p>
+<p>Emergence of climate change in the tropical Pacific</p>
+<p><strong>报告摘要</strong></p>
+<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Group Study</title>
+    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
+<p>2℃增暖，北极夏季无冰，但可恢复</p>
+<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
+<p>动力作用对海冰的生成重要</p>
+<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
+<p>冰架对海平面没有影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
+<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
+<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
+<p>次表层海水增暖，溶解底部的冰盖</p>
+<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
+<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
+<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
+<p>冰川主导</p>
+<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
+<p>冰盖主导</p>
+<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
+<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
+<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
+<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
+<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
     <title>张荣华</title>
     <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
@@ -1860,95 +1897,51 @@
       </categories>
   </entry>
   <entry>
-    <title>Group Study</title>
-    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
-<p>2℃增暖，北极夏季无冰，但可恢复</p>
-<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
-<p>动力作用对海冰的生成重要</p>
-<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
-<p>冰架对海平面没有影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
-<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
-<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
-<p>次表层海水增暖，溶解底部的冰盖</p>
-<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
-<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
-<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
-<p>冰川主导</p>
-<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
-<p>冰盖主导</p>
-<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
-<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
-<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
-<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
-<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>秦大河</title>
-    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
-<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
-<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
-<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
-<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
-<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
-<p><strong>冰盖 Ice sheet</strong></p>
-<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
-<p><strong>冰架 Iceshelf</strong></p>
-<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
-<p><strong>冰山 Iceberg</strong></p>
-<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
-<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
+    <title>王林</title>
+    <url>/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0614-王林-南极平流层爆发性增温-中科院大气所"><a href="#0614-王林-南极平流层爆发性增温-中科院大气所" class="headerlink" title="0614 王林 南极平流层爆发性增温  中科院大气所"></a>0614 王林 南极平流层爆发性增温  中科院大气所</h3><hr>
+<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhlzipzj20we0nmn0b.jpg" alt="Screen Shot 2022-06-14 at 14.34.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhojbogj21460u0jzq.jpg" alt="Screen Shot 2022-06-14 at 14.35.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rkq73vqj21400u0dlc.jpg" alt="Screen Shot 2022-06-14 at 14.38.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ro5x1rpj20o7052t9e.jpg" alt="Screen Shot 2022-06-14 at 14.41.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37roqetfoj20ot0h3q51.jpg" alt="Screen Shot 2022-06-14 at 14.42.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rqkzthcj20ot0hbdi9.jpg" alt="Screen Shot 2022-06-14 at 14.44.08"></p>
+<h3 id="南极SSW的特征、机制和影响"><a href="#南极SSW的特征、机制和影响" class="headerlink" title="南极SSW的特征、机制和影响"></a>南极SSW的特征、机制和影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rrqltnfj20os0f6gnm.jpg" alt="Screen Shot 2022-06-14 at 14.45.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ruwv8qyj20om0hg0vo.jpg" alt="Screen Shot 2022-06-14 at 14.47.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rvwsjrcj20oi0hsmzp.jpg" alt="Screen Shot 2022-06-14 at 14.49.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rykiuobj20oi0i9dj8.jpg" alt="Screen Shot 2022-06-14 at 14.51.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rzdyjtwj20oe0hon0m.jpg" alt="Screen Shot 2022-06-14 at 14.52.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s0j4t71j20oh0hlq5w.jpg" alt="Screen Shot 2022-06-14 at 14.53.42"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s1538t6j20op0epq5f.jpg" alt="Screen Shot 2022-06-14 at 14.54.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s2n19nej20ol0hywim.jpg" alt="Screen Shot 2022-06-14 at 14.55.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s6kewr4j20oi0hwdiy.jpg" alt="Screen Shot 2022-06-14 at 14.59.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s8oa5m1j20oh0idn0f.jpg" alt="Screen Shot 2022-06-14 at 15.01.33"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sbcpa4sj20ni0hojuc.jpg" alt="Screen Shot 2022-06-14 at 15.04.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si3okwjj20ol0g7gn9.jpg" alt="Screen Shot 2022-06-14 at 15.07.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si6h926j20or0fh771.jpg" alt="Screen Shot 2022-06-14 at 15.10.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37skwj9vdj20oo0fs77m.jpg" alt="Screen Shot 2022-06-14 at 15.13.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37slm15upj20ov0foju1.jpg" alt="Screen Shot 2022-06-14 at 15.13.53"></p>
+<h3 id="气候影响"><a href="#气候影响" class="headerlink" title="气候影响"></a>气候影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sn5fmnuj20od0hywhn.jpg" alt="Screen Shot 2022-06-14 at 15.15.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sp1awbxj20oo0flgo8.jpg" alt="Screen Shot 2022-06-14 at 15.17.16"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sqftu96j20oj0ibn01.jpg" alt="Screen Shot 2022-06-14 at 15.18.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ssnv6l3j20o90g2wgr.jpg" alt="Screen Shot 2022-06-14 at 15.20.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37st8y74yj20ol0efdih.jpg" alt="Screen Shot 2022-06-14 at 15.21.14"></p>
+<h3 id="2019年南极SSW的个例分析"><a href="#2019年南极SSW的个例分析" class="headerlink" title="2019年南极SSW的个例分析"></a>2019年南极SSW的个例分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sutnocgj20oh0i5dii.jpg" alt="Screen Shot 2022-06-14 at 15.22.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37swm8jnwj20ot0h241q.jpg" alt="Screen Shot 2022-06-14 at 15.24.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sy6fbr2j20p00i70vr.jpg" alt="Screen Shot 2022-06-14 at 15.26.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t0mgb7kj20p20ij0wq.jpg" alt="Screen Shot 2022-06-14 at 15.27.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t2cbe3ij20ot0ihtcu.jpg" alt="Screen Shot 2022-06-14 at 15.30.04"></p>
+<p>![Screen Shot 2022-06-14 at 15.30.25](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-14 at 15.30.25.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6a5k3wj20s30k4djk.jpg" alt="Screen Shot 2022-06-14 at 15.33.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6u8t2pj20sb0ko0z8.jpg" alt="Screen Shot 2022-06-14 at 15.34.19"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t8ezz9rj20rz0ksq5j.jpg" alt="Screen Shot 2022-06-14 at 15.35.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t9gbctmj20s60jywi0.jpg" alt="Screen Shot 2022-06-14 at 15.36.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ta38d9rj20rk0kpwh8.jpg" alt="Screen Shot 2022-06-14 at 15.37.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tako948j20ro0kpwhc.jpg" alt="Screen Shot 2022-06-14 at 15.37.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tbhesnxj20rw0ir422.jpg" alt="Screen Shot 2022-06-14 at 15.38.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tby9ksnj20qy0l3n20.jpg" alt="Screen Shot 2022-06-14 at 15.39.14"></p>
 <hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37kkhyhvpj20u013zgrl.jpg" alt="WechatIMG5366"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -2013,51 +2006,58 @@
       </categories>
   </entry>
   <entry>
-    <title>王林</title>
-    <url>/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="0614-王林-南极平流层爆发性增温-中科院大气所"><a href="#0614-王林-南极平流层爆发性增温-中科院大气所" class="headerlink" title="0614 王林 南极平流层爆发性增温  中科院大气所"></a>0614 王林 南极平流层爆发性增温  中科院大气所</h3><hr>
-<h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhlzipzj20we0nmn0b.jpg" alt="Screen Shot 2022-06-14 at 14.34.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhojbogj21460u0jzq.jpg" alt="Screen Shot 2022-06-14 at 14.35.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rkq73vqj21400u0dlc.jpg" alt="Screen Shot 2022-06-14 at 14.38.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ro5x1rpj20o7052t9e.jpg" alt="Screen Shot 2022-06-14 at 14.41.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37roqetfoj20ot0h3q51.jpg" alt="Screen Shot 2022-06-14 at 14.42.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rqkzthcj20ot0hbdi9.jpg" alt="Screen Shot 2022-06-14 at 14.44.08"></p>
-<h3 id="南极SSW的特征、机制和影响"><a href="#南极SSW的特征、机制和影响" class="headerlink" title="南极SSW的特征、机制和影响"></a>南极SSW的特征、机制和影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rrqltnfj20os0f6gnm.jpg" alt="Screen Shot 2022-06-14 at 14.45.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ruwv8qyj20om0hg0vo.jpg" alt="Screen Shot 2022-06-14 at 14.47.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rvwsjrcj20oi0hsmzp.jpg" alt="Screen Shot 2022-06-14 at 14.49.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rykiuobj20oi0i9dj8.jpg" alt="Screen Shot 2022-06-14 at 14.51.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rzdyjtwj20oe0hon0m.jpg" alt="Screen Shot 2022-06-14 at 14.52.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s0j4t71j20oh0hlq5w.jpg" alt="Screen Shot 2022-06-14 at 14.53.42"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s1538t6j20op0epq5f.jpg" alt="Screen Shot 2022-06-14 at 14.54.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s2n19nej20ol0hywim.jpg" alt="Screen Shot 2022-06-14 at 14.55.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s6kewr4j20oi0hwdiy.jpg" alt="Screen Shot 2022-06-14 at 14.59.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s8oa5m1j20oh0idn0f.jpg" alt="Screen Shot 2022-06-14 at 15.01.33"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sbcpa4sj20ni0hojuc.jpg" alt="Screen Shot 2022-06-14 at 15.04.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si3okwjj20ol0g7gn9.jpg" alt="Screen Shot 2022-06-14 at 15.07.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si6h926j20or0fh771.jpg" alt="Screen Shot 2022-06-14 at 15.10.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37skwj9vdj20oo0fs77m.jpg" alt="Screen Shot 2022-06-14 at 15.13.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37slm15upj20ov0foju1.jpg" alt="Screen Shot 2022-06-14 at 15.13.53"></p>
-<h3 id="气候影响"><a href="#气候影响" class="headerlink" title="气候影响"></a>气候影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sn5fmnuj20od0hywhn.jpg" alt="Screen Shot 2022-06-14 at 15.15.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sp1awbxj20oo0flgo8.jpg" alt="Screen Shot 2022-06-14 at 15.17.16"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sqftu96j20oj0ibn01.jpg" alt="Screen Shot 2022-06-14 at 15.18.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ssnv6l3j20o90g2wgr.jpg" alt="Screen Shot 2022-06-14 at 15.20.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37st8y74yj20ol0efdih.jpg" alt="Screen Shot 2022-06-14 at 15.21.14"></p>
-<h3 id="2019年南极SSW的个例分析"><a href="#2019年南极SSW的个例分析" class="headerlink" title="2019年南极SSW的个例分析"></a>2019年南极SSW的个例分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sutnocgj20oh0i5dii.jpg" alt="Screen Shot 2022-06-14 at 15.22.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37swm8jnwj20ot0h241q.jpg" alt="Screen Shot 2022-06-14 at 15.24.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sy6fbr2j20p00i70vr.jpg" alt="Screen Shot 2022-06-14 at 15.26.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t0mgb7kj20p20ij0wq.jpg" alt="Screen Shot 2022-06-14 at 15.27.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t2cbe3ij20ot0ihtcu.jpg" alt="Screen Shot 2022-06-14 at 15.30.04"></p>
-<p>![Screen Shot 2022-06-14 at 15.30.25](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-14 at 15.30.25.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6a5k3wj20s30k4djk.jpg" alt="Screen Shot 2022-06-14 at 15.33.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6u8t2pj20sb0ko0z8.jpg" alt="Screen Shot 2022-06-14 at 15.34.19"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t8ezz9rj20rz0ksq5j.jpg" alt="Screen Shot 2022-06-14 at 15.35.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t9gbctmj20s60jywi0.jpg" alt="Screen Shot 2022-06-14 at 15.36.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ta38d9rj20rk0kpwh8.jpg" alt="Screen Shot 2022-06-14 at 15.37.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tako948j20ro0kpwhc.jpg" alt="Screen Shot 2022-06-14 at 15.37.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tbhesnxj20rw0ir422.jpg" alt="Screen Shot 2022-06-14 at 15.38.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tby9ksnj20qy0l3n20.jpg" alt="Screen Shot 2022-06-14 at 15.39.14"></p>
+    <title>秦大河</title>
+    <url>/2022/06/06/Seminar/0606-%E7%A7%A6%E5%A4%A7%E6%B2%B3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学"><a href="#0606-气候变化与冰冻圈科学的发展-秦大河-兰州大学" class="headerlink" title="0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学"></a>0606 气候变化与冰冻圈科学的发展  秦大河 兰州大学</h2><h3 id="气候变化科学的发展"><a href="#气候变化科学的发展" class="headerlink" title="气候变化科学的发展"></a>气候变化科学的发展</h3><p>WMO 2021年气候公报</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykgrtbzlj20kp0mx7a1.jpg" alt="Screen Shot 2022-06-06 at 15.42.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykipfba3j21720o3qb6.jpg" alt="Screen Shot 2022-06-06 at 15.44.17"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykqfv71bj215g07facs.jpg" alt="Screen Shot 2022-06-06 at 15.51.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykrlymb9j20zr01z74s.jpg" alt="Screen Shot 2022-06-06 at 15.52.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykryvohxj215h0nudlp.jpg" alt="Screen Shot 2022-06-06 at 15.53.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yktbky7pj216u0mztfi.jpg" alt="Screen Shot 2022-06-06 at 15.54.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykup2w97j21590k7wk0.jpg" alt="Screen Shot 2022-06-06 at 15.55.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykvw7ghej21600nedls.jpg" alt="Screen Shot 2022-06-06 at 15.56.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykwtsjdjj214l0mnq6q.jpg" alt="Screen Shot 2022-06-06 at 15.57.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykx89n14j215l0mgtcq.jpg" alt="Screen Shot 2022-06-06 at 15.58.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykyy5ewnj216i0leq94.jpg" alt="Screen Shot 2022-06-06 at 15.59.54"></p>
+<h3 id="冰冻圈和冰冻圈科学"><a href="#冰冻圈和冰冻圈科学" class="headerlink" title="冰冻圈和冰冻圈科学"></a>冰冻圈和冰冻圈科学</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl1xohcyj216v0mj494.jpg" alt="Screen Shot 2022-06-06 at 16.02.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl6qo9yoj216p0kyn18.jpg" alt="Screen Shot 2022-06-06 at 16.07.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl7a5fvmj213d0j40vk.jpg" alt="Screen Shot 2022-06-06 at 16.07.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yl8mhl5rj20zq0kpq7f.jpg" alt="Screen Shot 2022-06-06 at 16.09.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yla3duytj214y0i8n1f.jpg" alt="Screen Shot 2022-06-06 at 16.10.12"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylblqovfj215s0ib43o.jpg" alt="Screen Shot 2022-06-06 at 16.12.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylc5s6omj21050ml43l.jpg" alt="Screen Shot 2022-06-06 at 16.12.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yldp6fsoj215b0nvwk7.jpg" alt="Screen Shot 2022-06-06 at 16.14.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylfbmtmnj20un0lcgqi.jpg" alt="Screen Shot 2022-06-06 at 16.15.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylh80lp3j216g0ns43y.jpg" alt="Screen Shot 2022-06-06 at 16.17.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylhzbwq3j216m0no13e.jpg" alt="Screen Shot 2022-06-06 at 16.18.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylkrdeefj215p0jh0xz.jpg" alt="Screen Shot 2022-06-06 at 16.20.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylmql16nj21570hcahh.jpg" alt="Screen Shot 2022-06-06 at 16.22.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylnj5wucj215m0mgtgi.jpg" alt="Screen Shot 2022-06-06 at 16.23.31"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2yloml8v0j215g0lntge.jpg" alt="Screen Shot 2022-06-06 at 16.24.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylpgcnyaj21260lmjwj.jpg" alt="Screen Shot 2022-06-06 at 16.25.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylqsdl0uj212h0lhq8a.jpg" alt="Screen Shot 2022-06-06 at 16.26.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ylstjyluj20z80mj421.jpg" alt="Screen Shot 2022-06-06 at 16.28.37"></p>
+<h3 id="健康地球"><a href="#健康地球" class="headerlink" title="健康地球"></a>健康地球</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym1n6izfj20wl0fldim.jpg" alt="Screen Shot 2022-06-06 at 16.36.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym2194p4j214z0mydm6.jpg" alt="Screen Shot 2022-06-06 at 16.37.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym3jvpssj20wh0hwjty.jpg" alt="Screen Shot 2022-06-06 at 16.38.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym4793bsj214z0lpjv5.jpg" alt="Screen Shot 2022-06-06 at 16.39.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym5lyqbvj216q0o2wnd.jpg" alt="Screen Shot 2022-06-06 at 16.40.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym6zijxzj21650nadkm.jpg" alt="Screen Shot 2022-06-06 at 16.42.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ym8i2308j216n0kdgtj.jpg" alt="Screen Shot 2022-06-06 at 16.43.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ymdm162wj216o0mxdp9.jpg" alt="Screen Shot 2022-06-06 at 16.48.34"></p>
+<h3 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h3><p><strong>冰川 Glacier</strong></p>
+<p>根据冰川的形态和规模，可将冰川为为3类：大陆冰川、山谷冰川、山麓冰川。南极冰川就是大陆冰川。</p>
+<p>大陆冰川为规模广大的冰川，覆盖在大陆或高原区，所有的高山、低谷以及平原全部受到覆盖。中央部位较高，冰自中央向周围任何方向移动，不经融化而直接入海，因其覆盖整个陆地再由陆地边缘直接入海，故称大陆冰川。</p>
+<p><strong>冰盖 Ice sheet</strong></p>
+<p>冰盖，又称大陆冰川，是覆盖着广大地区的极厚的冰层的陆地面积（一般常见于高原地区），覆盖面积大于5万平方公里。覆盖面积少于5万平方公里的叫做冰原。地球上有2个冰盖，分别是南极冰盖和格陵兰冰盖。</p>
+<p><strong>冰架 Iceshelf</strong></p>
+<p>冰架是冰盖（大陆冰川）向海洋中的延伸部分。最大的冰架是罗斯冰架、菲尔希纳冰架、龙尼冰架和亚美利冰架。冰架能以每年2500米的速度移向海洋，在它的边缘，断裂的冰架渐渐漂移到海洋中，形成巨大的冰山。</p>
+<p><strong>冰山 Iceberg</strong></p>
+<p>冰架崩解后成为冰山，或者说冰山的来源就是冰架崩解。北极海上的冰山大多呈尖塔状，是北极圈内各个岛上的冰河滑落海中所造成；南极附近的冰山大多呈平顶桌状，是由覆盖在南极大陆上的大冰层末端逐渐塌陷而浮于海上所致。</p>
+<p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
 <hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37kkhyhvpj20u013zgrl.jpg" alt="WechatIMG5366"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
