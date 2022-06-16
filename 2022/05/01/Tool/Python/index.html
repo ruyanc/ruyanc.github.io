@@ -28,8 +28,17 @@
 <meta property="og:description" content="Install Python https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;b9eac8419c8d 下载anaconda 查看帮助conda -h 基于python3.8版本创建一个名字为python38的环境conda create --name python38 python&#x3D;3.8 激活此环境activate python38 再来检查python版本，显示是 3.8python -">
 <meta property="og:locale">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/I9yFeiacVauaiaae9AbA49yXs7Beia1kCUuguSNclYCgXHnF0RHlUBnrlmhnysygn15FoHiatQF3HGc2GT8BwiaCesw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005173056854.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005180629378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005181636749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191006162524988.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191006164918490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005191121417.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005185941397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005191808280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20191005194604302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-14T03:12:09.889Z">
+<meta property="article:modified_time" content="2022-06-16T13:47:34.055Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/I9yFeiacVauaiaae9AbA49yXs7Beia1kCUuguSNclYCgXHnF0RHlUBnrlmhnysygn15FoHiatQF3HGc2GT8BwiaCesw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
@@ -227,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-14 11:12:09" itemprop="dateModified" datetime="2022-06-14T11:12:09+08:00">2022-06-14</time>
+                <time title="Modified: 2022-06-16 21:47:34" itemprop="dateModified" datetime="2022-06-16T21:47:34+08:00">2022-06-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -425,22 +434,60 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import osPaths = os.listdir(filepath)</span><br></pre></td></tr></table></figure>
 
 <p>filepath文件夹下的所有文件名就被保存在paths变量中了，之后再结合for语句和之前介绍过的文件读取函数，循环读取paths中的每一行就可以了。简单又省心！</p>
-<h4 id="read-NC"><a href="#read-NC" class="headerlink" title="read NC"></a>read NC</h4><p><code>nc_path = &quot;./air.sfc.1997.nc&quot;</code></p>
-<p>读入文件：使用netCDF4的Dataset方法即可读入文件，读入文件后直接输出即可查看文件的结构。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nc = Dataset(nc_path)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(nc)</span><br></pre></td></tr></table></figure>
-
-<p>查看文件的变量：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(nc.variables.keys())</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> nc.variables.keys():</span><br><span class="line"></span><br><span class="line">  <span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
-
-<p>查看某个变量的信息：</p>
-<p><code>print(nc.variables[&#39;air&#39;])</code></p>
-<p>查看某个变量的属性：</p>
-<p><code>print(nc.variables[&#39;air&#39;].ncattrs())</code></p>
-<p>读取数据值</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = nc.variables[<span class="string">&#x27;air&#x27;</span>][:]</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data)</span><br></pre></td></tr></table></figure>
+<h4 id="read-NC"><a href="#read-NC" class="headerlink" title="read NC"></a>read NC</h4><p><em><strong>1. 介绍</strong></em><br>.nc（network Common Data Format）文件是气象上常用的数据格式，python上读取.nc使用较多的库为netCDF4这个库，下面将介绍这个库的具体方法。</p>
+<p>安装很简单:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install netCDF4</span><br></pre></td></tr></table></figure>
 
 
 
+<p>.nc文件介绍参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wildand/article/details/88899718">https://blog.csdn.net/wildand/article/details/88899718</a></p>
+<p><em><strong>2. .nc文件的读取</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#导入nc库</span><br><span class="line">import netCDF4 as nc</span><br><span class="line"></span><br><span class="line">filename = &#x27;2017-06-15_2017-06-17.nc&#x27;   # .nc文件名</span><br><span class="line">f = nc.Dataset(filename)   #读取.nc文件，传入f中。此时f包含了该.nc文件的全部信息</span><br></pre></td></tr></table></figure>
+
+<p><strong>#step1： 查看.nc文件的全部变量，及该变量的全部信息（维度大小，单位等）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">all_vars = f.variables.keys()   #获取所有变量名称</span><br><span class="line">print(len(all_vars))  #长度为18</span><br><span class="line"></span><br><span class="line">all_vars_info = f.variables.items()  #获取所有变量信息</span><br><span class="line">print(type(all_vars_info))   #输出为： odict_items 。这里将其转化为 list列表</span><br><span class="line">print(len(all_vars_info))   #长度为18</span><br><span class="line">all_vars_info = list(all_vars_info)  #此时每个变量的信息为其中一个列表</span><br></pre></td></tr></table></figure>
+
+<p>如图：包含经纬度、时间、等变量名称<br><img src="https://img-blog.csdnimg.cn/20191005173056854.png" alt="在这里插入图片描述"><br>看看 all_vars_info的前两个变量的信息，如下，显示了 shape unit name float32 fillvalue等信息</p>
+<p><img src="https://img-blog.csdnimg.cn/20191005180629378.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>#step2： 查看.nc文件的单个变量，及该变量的全部信息（维度大小，单位等）</strong><br>如果对某个变量感兴趣（已知变量名)，想查看这个变量的信息，获取这个变量的数据，方法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#我们要查看  ’u‘的信息</span><br><span class="line">var = &#x27;u&#x27;</span><br><span class="line">var_info = f.variables[var]   #获取变量信息</span><br><span class="line">var_data = f[var][:]   #获取变量的数据</span><br><span class="line">print(var_info)</span><br><span class="line">print(var_data.shape)  </span><br><span class="line"></span><br><span class="line">#很方便转化为array数组</span><br><span class="line">print(type(var_data))    #&lt;class &#x27;numpy.ma.core.MaskedArray&#x27;&gt;  .nc文件的变量数组都为Masked array</span><br><span class="line">var_data = np.array(var_data)  #转化为np.array数组</span><br><span class="line"></span><br><span class="line"># 读取数据</span><br><span class="line">data = nc.variables[&#x27;air&#x27;][:]</span><br><span class="line"></span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure>
+
+<p>输出如下：<br><img src="https://img-blog.csdnimg.cn/20191005181636749.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>#step3： 列表形式记录所有变量信息</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">###最直接的办法，获取每个变量的缩写名字，标准名字(long_name),units和shape大小。这样很方便后续操作</span><br><span class="line">all_vars_name = []</span><br><span class="line">all_vars_long_name = []</span><br><span class="line">all_vars_units = []</span><br><span class="line">all_vars_shape = []</span><br><span class="line"></span><br><span class="line">for key in f1.variables.keys():</span><br><span class="line">    </span><br><span class="line">    all_vars_name.append(key)</span><br><span class="line">    all_vars_long_name.append(f1.variables[key].long_name)</span><br><span class="line">    all_vars_units.append(f1.variables[key].units)</span><br><span class="line">    all_vars_shape.append(f1.variables[key].shape)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：<br><img src="https://img-blog.csdnimg.cn/20191006162524988.png" alt="在这里插入图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#做成表格</span><br><span class="line">a_vars_info = pd.DataFrame(all_vars_name,columns = [&#x27;name&#x27;])</span><br><span class="line">a_vars_info[&#x27;long_name&#x27;] = all_vars_long_name</span><br><span class="line">a_vars_info[&#x27;units&#x27;] = all_vars_units</span><br><span class="line">a_vars_info[&#x27;shape&#x27;] = all_vars_shape</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191006164918490.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>注意：</strong>完成上述操作之后，记得关掉该文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.close()  #关闭文件。如果文件关闭后，再使用f.variabels.items()等操作是行不通的。</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>3. nc文件的创建</strong></em></p>
+<p><strong>#step1： 创建一个文件</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f_w = nc.Dataset(&#x27;hecheng.nc&#x27;,&#x27;w&#x27;,format = &#x27;NETCDF4&#x27;)   #创建一个格式为.nc的，名字为 ‘hecheng.nc’的文件</span><br></pre></td></tr></table></figure>
+
+<p>#step2： 写入一些基本的信息</p>
+<p>.nc文件的里面的每个变量都有维度信息，比如，上面的 var&#x3D;‘u’,维度为 1237161*177。这里面的各个维度，并不是随便定义的，是与基础的变量信息相关的。<br>如[12,37,161,177] &#x3D; [time,level,latitude,longitude],第一个维度为时间信息，依次为 垂直层信息，纬度、经度信息。<br>所以，我们要先写入一些基本的信息：时间，垂直层，纬度，经度</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#time纬度为12。注意，第2个参数 表示维度，但是必须是 integer整型，也就是只能创建一个基础单一维度信息。</span><br><span class="line">#如果后面要创建一个变量维度&gt;1，则必须由前面的单一维度组合而来。后面会介绍。</span><br><span class="line"></span><br><span class="line">#确定基础变量的维度信息。相对与坐标系的各个轴(x,y,z)</span><br><span class="line">f_w.createDimension(&#x27;time&#x27;,12)  </span><br><span class="line">f_w.createDimension(&#x27;level&#x27;,37) </span><br><span class="line">f_w.createDimension(&#x27;lat&#x27;,161)   </span><br><span class="line">f_w.createDimension(&#x27;lon&#x27;,177)  </span><br><span class="line"></span><br><span class="line">##创建变量。参数依次为：‘变量名称’，‘数据类型’，‘基础维度信息’</span><br><span class="line">f_w.createVariable(&#x27;time&#x27;,np.int,(&#x27;time&#x27;))  </span><br><span class="line">f_w.createVariable(&#x27;level&#x27;,np.int,(&#x27;level&#x27;))  </span><br><span class="line">f_w.createVariable(&#x27;lat&#x27;,np.float32,(&#x27;lat&#x27;))  </span><br><span class="line">f_w.createVariable(&#x27;lon&#x27;,np.float32,(&#x27;lon&#x27;))</span><br><span class="line"></span><br><span class="line">#写入变量time的数据。维度必须与定义的一致。</span><br><span class="line">time = np.array([0,6,12,18,0,6,12,18,0,6,12,18])</span><br><span class="line">f_w.variables[&#x27;time&#x27;][:] = time  </span><br><span class="line"></span><br><span class="line">#新创建一个多维度变量，并写入数据，</span><br><span class="line">f_w.createVariable( &#x27;u&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.ones(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">f_w.variables[var][:] = var_data </span><br></pre></td></tr></table></figure>
+
+<p>关闭文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f_w.close()</span><br></pre></td></tr></table></figure>
+
+<p>还可以写入fill_value等信息<br><img src="https://img-blog.csdnimg.cn/20191005191121417.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20191005185941397.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>按照上述方式创建完成后，用一些可视化软件打开，结果如上图。</p>
+<p><strong>#step3： 创建群组</strong></p>
+<p>如上图，所以变量都是平行的位置，如果变量特别多，将相同类型的变量放进同一个group中，会更加方便。<br>来看一个示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">f_w = nc.Dataset(&#x27;haha4.nc&#x27;,&#x27;w&#x27;,format = &#x27;NETCDF4&#x27;)</span><br><span class="line"></span><br><span class="line">f_w.createDimension(&#x27;time&#x27;,12)</span><br><span class="line">f_w.createDimension(&#x27;level&#x27;,37)</span><br><span class="line">f_w.createDimension(&#x27;lat&#x27;,161)  </span><br><span class="line">f_w.createDimension(&#x27;lon&#x27;,177)</span><br><span class="line"></span><br><span class="line">f_w.createVariable(&#x27;time&#x27;,np.int,(&#x27;time&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;level&#x27;,np.int,(&#x27;level&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;lat&#x27;,np.float32,(&#x27;lat&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;lon&#x27;,np.float32,(&#x27;lon&#x27;))</span><br><span class="line"></span><br><span class="line">time = np.array([0,6,12,18,0,6,12,18,0,6,12,18])</span><br><span class="line"></span><br><span class="line">f_w.variables[&#x27;time&#x27;][:] = time</span><br><span class="line">f_w.variables[&#x27;level&#x27;][:] = level</span><br><span class="line"></span><br><span class="line">f_w.createVariable( &#x27;q&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.ones(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">f_w.variables[&#x27;q&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">#创建一个群组，名字为&#x27;wind&#x27;</span><br><span class="line">group1 = f_w.createGroup(&#x27;wind&#x27;) </span><br><span class="line"></span><br><span class="line">group1.createVariable( &#x27;u&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.ones(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">group1.variables[&#x27;u&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">group1.createVariable( &#x27;v&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.zeros(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">group1.variables[&#x27;v&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">group1.close  # 关闭群组， 注意，这里没有括号</span><br><span class="line"></span><br><span class="line">f_w.close()</span><br></pre></td></tr></table></figure>
+
+<p>创建结果如下：<br><img src="https://img-blog.csdnimg.cn/20191005191808280.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>看，group的信息出来了</p>
+<p>**#step4：查看带有group的.nc文件的信息 **</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f1 = nc.Dataset(&#x27;haha5.nc&#x27;)</span><br><span class="line">vars = f1.variables.keys()  #odict_keys([&#x27;time&#x27;, &#x27;level&#x27;, &#x27;lat&#x27;, &#x27;lon&#x27;, &#x27;q&#x27;])  看不到groups信息</span><br><span class="line">#通过以下命令</span><br><span class="line">group_name = f1.groups.keys()  #获取组名,输出为：odict_keys([&#x27;wind&#x27;])</span><br></pre></td></tr></table></figure>
+
+<p>使用如下命令都能看到group内的变量的信息。<br><img src="https://img-blog.csdnimg.cn/20191005194604302.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzcxODY3NQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#获取group内的变量的数据</span><br><span class="line">group_var_data = f1[&#x27;wind&#x27;][&#x27;u&#x27;][:]  </span><br><span class="line">print(group_var_data.shape)  #(12, 37, 161, 177)</span><br></pre></td></tr></table></figure>
+
+<p><em><strong>4. 总结</strong></em></p>
+<p>气象上常用除了.nc文件外，还有 hdf文件，这两者格式都差不多，但是我更爱.hdf格式文件<br>后面有机会再介绍.hdf文件的读写操作。</p>
 <p>其他文件读写的部分方法见下方链接内的论坛讨论：</p>
 <p>微信不能添加外部超链接，请<strong>复制链接</strong>至浏览器食用！</p>
 <p>Python读取txt文件并绘制站点降水散点图：(by：平流层的萝卜)</p>
@@ -545,12 +592,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/WRF/" rel="prev" title="WRF">
-      <i class="fa fa-chevron-left"></i> WRF
+    <a href="/2022/05/01/Tool/NCL/" rel="prev" title="NCL">
+      <i class="fa fa-chevron-left"></i> NCL
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Parameters/" rel="next" title="Parameters">
-      Parameters <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/PDF/" rel="next" title="PDF">
+      PDF <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
