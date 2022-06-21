@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://pic2.zhimg.com/v2-1d91aedf2446e2809adcf248a3075101_b.jpg">
 <meta property="og:image" content="https://pic2.zhimg.com/v2-b8d1cec6d0263ac30ae2c2254b8cd271_b.jpg">
 <meta property="article:published_time" content="2022-06-13T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-06-21T01:02:27.244Z">
+<meta property="article:modified_time" content="2022-06-21T01:08:02.909Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic4.zhimg.com/v2-c14a230ae828aae045bf3c9f6d2f387b_b.jpg">
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-06-21 09:02:27" itemprop="dateModified" datetime="2022-06-21T09:02:27+08:00">2022-06-21</time>
+                <time title="Modified: 2022-06-21 09:08:02" itemprop="dateModified" datetime="2022-06-21T09:08:02+08:00">2022-06-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -272,12 +272,12 @@
 <p><img src="https://pic4.zhimg.com/v2-6912748e170ea345da64abf810f712f7_b.jpg" alt="img"></p>
 <p>另一方面，通过GNSS我们可以直接测量出来B点的经纬度，通过坐标转换之后可以直接获得B点在X轴方向行驶的<strong>观测值</strong>，这里我们假设观测值为13m。问题来了，距离惯性坐标系点的距离现在有估计值（12m&#x3D;10m+2m）和观测值（13m）两个值，且两个值不一致，我们该如何确定B点的<strong>准确估计值</strong>呢？</p>
 <p>众所周知，IMU测量汽车本体的加速度和角速度过程中，存在误差和噪声，GNSS通过卫星信号定位车辆经纬度的过程中也存在误差和噪声。两种传感器给出的值都是一种概率最大，意思是在这个位置的概率最大，其它位置不是不可能只是概率较小。而在卡尔曼滤波算法的理论中，无论是汽车上一秒的位置，IMU的测量数据，还是GNSS的直接观测值均被认为服从正态分布。 </p>
-<p>正态分布是一种概率分布，一般表示为***N(均值、方差)***。服从正态分布的随机变量取与均值邻近的值的概率大，取与均值越远的值的概率越小。同时方差越小，分布越集中在均值附近，方差越大，分布越分散。</p>
-<p>这里我们假设A点位置Xt-1服从<em><strong>N(2,0.22)*<strong>，如下图所示。从图中可以看出</strong>2m</strong>处纵坐标最大，概率最大，其它取值概率均小于此处。方差</em>*0.22**则代表A点位置的误差水平。</p>
+<p>正态分布是一种概率分布，一般表示为**N(均值、方差)**。服从正态分布的随机变量取与均值邻近的值的概率大，取与均值越远的值的概率越小。同时方差越小，分布越集中在均值附近，方差越大，分布越分散。</p>
+<p>这里我们假设A点位置Xt-1服从<strong>N(2,0.22)<strong>，如下图所示。从图中可以看出</strong>2m</strong>处纵坐标最大，概率最大，其它取值概率均小于此处。方差<strong>0.22</strong>则代表A点位置的误差水平。</p>
 <p><img src="https://pic2.zhimg.com/v2-3f2413e52c49133e849f3d8bd78b9875_b.jpg" alt="img"></p>
-<p>而对于IMU和GNSS这两种传感器来说，他们的噪声方差是可以测量的，在使用时是已知的。这里我们省略移动模型建模过程，直接假设基于IMU获得B点相对于A点的距离估计值XI服从<em><strong>N(10,0.12)*</strong> ，方差</em>*0.12**则代表IMU噪声的误差水平，此误差水平受IMU的精度，测量的累积时长有关。</p>
-<p>GNSS通过卫星信号获得B点相对于原点的测量值XG服从<em><strong>N(13,0.42)*</strong> ，方差</em>*0.42<strong>代表GNSS噪声的误差水平。此误差水平一方面受GNSS里卫星板卡的精度水平，另一方面主要受所处的环境有关，是否有遮挡，是否多金属环境等。由于B点处于林荫道下，卫星信号时有时无，因此此时</strong>0.42**的误差水平还是比较高的。 </p>
-<p>现在我们有了两组数据，一组是B点相对于原点0的估计值XBOI &#x3D; XI + XA &#x3D; ***N(10,0.12) + N(2,0.22) &#x3D; N(12,0.12 +0.22)***，一组是B点相对于原点0的观测值XG &#x3D; **<em>N(13,0.42)*<strong>。全文的高潮点来了，我该如何从两个概率分布中找到最准确的那个估计值呢，可以想象的是这个准确的估计值也遵从正态分布，这个正态分布的均值就是我们苦苦追寻的值。卡尔曼给出的答案是，直接将两个概率分布相乘，即</strong></em>N(12,0.12 +0.22) * N(13,0.42)***。</p>
+<p>而对于IMU和GNSS这两种传感器来说，他们的噪声方差是可以测量的，在使用时是已知的。这里我们省略移动模型建模过程，直接假设基于IMU获得B点相对于A点的距离估计值XI服从<strong>N(10,0.12)</strong> ，方差<strong>0.12</strong>则代表IMU噪声的误差水平，此误差水平受IMU的精度，测量的累积时长有关。</p>
+<p>GNSS通过卫星信号获得B点相对于原点的测量值XG服从<strong>N(13,0.42)</strong> ，方差<strong>0.42</strong>代表GNSS噪声的误差水平。此误差水平一方面受GNSS里卫星板卡的精度水平，另一方面主要受所处的环境有关，是否有遮挡，是否多金属环境等。由于B点处于林荫道下，卫星信号时有时无，因此此时<strong>0.42</strong>的误差水平还是比较高的。 </p>
+<p>现在我们有了两组数据，一组是B点相对于原点0的估计值 **XBOI &#x3D; XI + XA &#x3D; N(10,0.12) + N(2,0.22) &#x3D; N(12,0.12 +0.22)**，一组是B点相对于原点0的观测值XG &#x3D; **N(13,0.42)<strong>。全文的高潮点来了，我该如何从两个概率分布中找到最准确的那个估计值呢，可以想象的是这个准确的估计值也遵从正态分布，这个正态分布的均值就是我们苦苦追寻的值。卡尔曼给出的答案是，直接将两个概率分布相乘，即</strong>N(12,0.12 +0.22) * N(13,0.42)**。</p>
 <p><img src="https://pic4.zhimg.com/v2-1d605c073fd773c939522ec9807b526b_b.png" alt="img"></p>
 <p>正态分布的乘法公式如上，将<em><strong>N(12,0.12 +0.22) * N(13,0.42)*<strong>中的值带入下面公式，则可以得到如下正态分布。B点准确估计值就是此正态分布的均值12.23m,此准确估计值的误差水平为</strong>0.192</strong>。0.222&#x2F;(0.222+0.42)这个参数在卡尔曼滤波算法理论中被称为</em>*卡尔曼增益**。</p>
 <p><img src="https://pic3.zhimg.com/v2-52a6ffe1ef8e4a7fb9820e5d1bed6caa_b.jpg" alt="img"></p>
