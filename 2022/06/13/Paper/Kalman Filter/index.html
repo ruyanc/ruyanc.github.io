@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;530377846 诞生背景 听名字就知道又是一种以名字而命名的算法，而这个人的全名就是鲁道夫·卡尔曼（Rudolf E.Kalman）。1930年，卡尔曼出生在一个犹太人家庭。1957年，从哥伦比亚大学博士毕业后，先在IBM干了一年技术员，随即加入到一位著名数学家创办的工作室做数学研究，这一干就是6年。在这6年间，卡尔曼悬梁刺股、挑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kalman Filter">
+<meta property="og:url" content="http://example.com/2022/06/13/Paper/Kalman%20Filter/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;530377846 诞生背景 听名字就知道又是一种以名字而命名的算法，而这个人的全名就是鲁道夫·卡尔曼（Rudolf E.Kalman）。1930年，卡尔曼出生在一个犹太人家庭。1957年，从哥伦比亚大学博士毕业后，先在IBM干了一年技术员，随即加入到一位著名数学家创办的工作室做数学研究，这一干就是6年。在这6年间，卡尔曼悬梁刺股、挑">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-6912748e170ea345da64abf810f712f7_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-3f2413e52c49133e849f3d8bd78b9875_b.jpg">
+<meta property="og:image" content="https://pic4.zhimg.com/v2-1d605c073fd773c939522ec9807b526b_b.png">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-52a6ffe1ef8e4a7fb9820e5d1bed6caa_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-ac4755ecf42174cae06cb1ba43700891_b.png">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-1d91aedf2446e2809adcf248a3075101_b.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-b8d1cec6d0263ac30ae2c2254b8cd271_b.jpg">
+<meta property="article:published_time" content="2022-06-13T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-21T01:16:10.017Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/v2-6912748e170ea345da64abf810f712f7_b.jpg">
+
+<link rel="canonical" href="http://example.com/2022/06/13/Paper/Kalman%20Filter/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Kalman Filter | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-paper">
+
+    <a href="/categories/Paper/" rel="section"><i class="fa fa-archive fa-fw"></i>Paper</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-line-chart fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-users fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/13/Paper/Kalman%20Filter/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="Contact me by: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Kalman Filter
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-06-13 12:00:00" itemprop="dateCreated datePublished" datetime="2022-06-13T12:00:00+08:00">2022-06-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-06-21 09:16:10" itemprop="dateModified" datetime="2022-06-21T09:16:10+08:00">2022-06-21</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Paper/" itemprop="url" rel="index"><span itemprop="name">Paper</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/530377846">https://zhuanlan.zhihu.com/p/530377846</a></p>
+<p><strong>诞生背景</strong></p>
+<p>听名字就知道又是一种以名字而命名的算法，而这个人的全名就是鲁道夫·卡尔曼（Rudolf E.Kalman）。1930年，卡尔曼出生在一个犹太人家庭。1957年，从哥伦比亚大学博士毕业后，先在IBM干了一年技术员，随即加入到一位著名数学家创办的工作室做数学研究，这一干就是6年。在这6年间，卡尔曼悬梁刺股、挑灯夜战，在前人工作基础上、团队成员协作下，发明了在专业工程师圈子熟知的卡尔曼滤波算法。</p>
+<p>但是刚出道的卡尔曼滤波算法并没有迎来学术界的聚光灯，反而遭遇学术界九代长老们的非议和质疑，这像极了历史上其它著名理论的出道遭遇。所幸的是，卡尔曼在三十而立之年的时候，遇到了伯乐，时任NASA动力分析处主任的斯坦尼·施密特（Stanley F. Schmidt），一位主导人类历史上第一个登月计划中导航项目的男人。</p>
+<p>施密特当时遇到的难题是：飞船从陀螺仪、加速度计和雷达等传感器上获取的测量数据充满了不确定性误差和随机噪声。当飞船飞向月球表面时，如果不能很好地处理这些误差和噪声，产生的危害将是致命的。施密特尝试了时下各种滤波算法后，效果均不理想，直到一次偶然的机会听闻卡尔曼有个很厉害的新滤波算法。</p>
+<p>施密特随即邀请卡尔曼访问NASA，双方一见钟情，眉来眼去之后便确认通过卡尔曼滤波算法可以对飞船所处的位置和速度做出精确估计，同时还可以确定这些估计在统计意义上的好坏程度。随后，两人爱情的结晶成功助力阿波罗飞船登月。卡尔曼滤波算法自此一战成名，直到今天，还一直引领控制理论和系统科学的主流。卡尔曼自此也开始成为各种荣誉和奖项的收割机。</p>
+<p>《麻省理工学院技术评论》在一篇纪念卡尔曼先生的文章中提到道：“卡尔曼最重要的发明是卡尔曼滤波算法，该算法成就了过去50年间的许多基本技术，如把阿波罗号宇航员送上月球的航天计算机系统、把人类送去探索深海和星球的机器人载体，以及几乎所有需要从噪声数据去估算实际状态的项目。有人甚至把包括环绕地球的卫星系统、卫星地面站及各类计算机系统在内的整个GPS系统统称为一个巨大无比的卡尔曼滤波器。”</p>
+<p><strong>原理的直观理解</strong></p>
+<p>目前可以看到的介绍卡尔曼滤波算法文章，上来不是正态分布，就是协方差矩阵，突然感觉回到了大学本科概率统计的课堂。知道老师介绍的字面意思是什么，但无法领会这东西可以解决工程中的什么问题。这似乎是大学所有基础类课程的通病，只学会了公式的推导过程，求解方法，但没有领悟这公式可以带来的“人民币”价值。</p>
+<p>直到偶然机会看到一则通俗介绍卡尔滤波算法的回答，备受启发，能让一个算法之外的自动驾驶从业人员快速了解其原理。本文于是借鉴其表达思路，也通过一个朴素而不普通的实例来直观的介绍卡尔曼滤波算法在融合定位领域的一个作用。</p>
+<p>我们假设一辆在公路上行驶的汽车，起点位置A，下一秒汽车驶入林荫道中的B点，再下一秒汽车驶出林荫道来到C点。这辆汽车上安装有IMU和GNSS两种定位传感器。起点A的位置和速度假设是已知的，距离惯性坐标系X轴原点的距离为2m，速度为Vt-1。当车辆驶入到B点时，一方面我们可以根据IMU测量得到汽车本体的三轴加速度和三轴角速度，结合初始速度Vt-1，便可以计算得到B点相对于A点在X轴方向行驶距离的<strong>估计值，</strong>这里我们假设估计值为10m。</p>
+<p><img src="https://pic4.zhimg.com/v2-6912748e170ea345da64abf810f712f7_b.jpg" alt="img"></p>
+<p>另一方面，通过GNSS我们可以直接测量出来B点的经纬度，通过坐标转换之后可以直接获得B点在X轴方向行驶的<strong>观测值</strong>，这里我们假设观测值为13m。问题来了，距离惯性坐标系点的距离现在有估计值（12m&#x3D;10m+2m）和观测值（13m）两个值，且两个值不一致，我们该如何确定B点的<strong>准确估计值</strong>呢？</p>
+<p>众所周知，IMU测量汽车本体的加速度和角速度过程中，存在误差和噪声，GNSS通过卫星信号定位车辆经纬度的过程中也存在误差和噪声。两种传感器给出的值都是一种概率最大，意思是在这个位置的概率最大，其它位置不是不可能只是概率较小。而在卡尔曼滤波算法的理论中，无论是汽车上一秒的位置，IMU的测量数据，还是GNSS的直接观测值均被认为服从正态分布。 </p>
+<p>正态分布是一种概率分布，一般表示为**N(均值、方差)**。服从正态分布的随机变量取与均值邻近的值的概率大，取与均值越远的值的概率越小。同时方差越小，分布越集中在均值附近，方差越大，分布越分散。</p>
+<p>这里我们假设A点位置Xt-1服从<strong>N(2,0.22)<strong>，如下图所示。从图中可以看出</strong>2m</strong>处纵坐标最大，概率最大，其它取值概率均小于此处。方差<strong>0.22</strong>则代表A点位置的误差水平。</p>
+<p><img src="https://pic2.zhimg.com/v2-3f2413e52c49133e849f3d8bd78b9875_b.jpg" alt="img"></p>
+<p>而对于IMU和GNSS这两种传感器来说，他们的噪声方差是可以测量的，在使用时是已知的。这里我们省略移动模型建模过程，直接假设基于IMU获得B点相对于A点的距离估计值XI服从<strong>N(10,0.12)</strong> ，方差<strong>0.12</strong>则代表IMU噪声的误差水平，此误差水平受IMU的精度，测量的累积时长有关。</p>
+<p>GNSS通过卫星信号获得B点相对于原点的测量值XG服从<strong>N(13,0.42)</strong> ，方差<strong>0.42</strong>代表GNSS噪声的误差水平。此误差水平一方面受GNSS里卫星板卡的精度水平，另一方面主要受所处的环境有关，是否有遮挡，是否多金属环境等。由于B点处于林荫道下，卫星信号时有时无，因此此时<strong>0.42</strong>的误差水平还是比较高的。 </p>
+<p>现在我们有了两组数据，一组是B点相对于原点0的估计值 **XBOI &#x3D; XI + XA &#x3D; N(10,0.12) + N(2,0.22) &#x3D; N(12,0.12 +0.22)**，一组是B点相对于原点0的观测值XG &#x3D; **N(13,0.42)<strong>。全文的高潮点来了，我该如何从两个概率分布中找到最准确的那个估计值呢，可以想象的是这个准确的估计值也遵从正态分布，这个正态分布的均值就是我们苦苦追寻的值。卡尔曼给出的答案是，直接将两个概率分布相乘，即</strong>N(12,0.12 +0.22) * N(13,0.42)**。</p>
+<p><img src="https://pic4.zhimg.com/v2-1d605c073fd773c939522ec9807b526b_b.png" alt="img"></p>
+<p>正态分布的乘法公式如上，将<strong>N(12,0.12 +0.22) * N(13,0.42)<strong>中的值带入下面公式，则可以得到如下正态分布。B点准确估计值就是此正态分布的均值</strong>12.23</strong>,此准确估计值的误差水平为<strong>0.192</strong>。0.22^2&#x2F;(0.22^2+0.4^2)这个参数在卡尔曼滤波算法理论中被称为<strong>卡尔曼增益</strong>。</p>
+<p><img src="https://pic3.zhimg.com/v2-52a6ffe1ef8e4a7fb9820e5d1bed6caa_b.jpg" alt="img"></p>
+<p>B点的（12.23,0.192）又将作为计算C点位置的初始值，重复上述过程。</p>
+<p><strong>算法的理论分析</strong></p>
+<p>卡尔曼滤波算法是那种理解起来很难，但用起来非常简单的算法。整个算法只有五个公式，公式的详细推导对于绝大多数人来说没有必要也没有兴趣了解。因此，本段直接给出推导后的预测方程和更新方程，并简单解释变量和方程的含义。</p>
+<p><strong>一、预测方程</strong></p>
+<p><strong>xk-1</strong>为系统上一时刻状态向量，这个状态向量可以包含任何需要跟踪的信号，且状态向量中的每个变量都服从正态分布。在上文直观理解车辆运动例子中，这个状态变量包含速度和位置。</p>
+<p>我们采用预测矩阵<strong>F</strong>,来刻画上一时刻状态到当前时刻状态的关系。同时考虑到外部因素会带来一些与系统自身状态没有相关性的改变，我们引入外部控制量<strong>ut-1</strong>及系统参数B。至此，一个考虑了自身和外部因素的状态预测方程便诞生了，如下式所示。</p>
+<p><img src="https://pic2.zhimg.com/v2-ac4755ecf42174cae06cb1ba43700891_b.png" alt="img"></p>
+<p>在车辆运动例子中，上一时刻的状态变量中速度和位置变量是存在一定关系的，速度大，运行到当前时刻时，车辆就会行驶得更远。但在其它的系统中，我们可能无法仅凭肉眼就直观的看到变量间的依赖关系，而这也是卡尔曼滤波算法的核心目的，从不确定的系统中，尽可能的挖掘确定的信息。</p>
+<p>卡尔曼滤波算法在这里使用的是协方差矩阵<strong>Pk-1</strong>来衡量上一时刻状态变量中每个变量的相关程度。同时将没有跟踪到的噪音干扰当作协方差为<strong>Q</strong>的噪音来影响，由此我们可以获得当前时刻考虑外部因素的协方差矩阵，如下式所示。</p>
+<p><img src="https://pic2.zhimg.com/v2-1d91aedf2446e2809adcf248a3075101_b.jpg" alt="img"></p>
+<p><strong>二、更新方程</strong></p>
+<p>通过上文的预测过程，我们对系统当前时刻的状态有了一个模糊的估计。与此同时，我们也将通过传感器测量到当前时刻系统状态的观测值<strong>zk</strong>及其测量的不确定性<strong>R</strong>。对于测量量，我们还需要一个变换矩阵<strong>H</strong>，来将系统真实状态空间映射成观测空间。随后再经过艰苦卓绝的推导便可以得到如下的状态更新方程组。</p>
+<p><strong><img src="https://pic2.zhimg.com/v2-b8d1cec6d0263ac30ae2c2254b8cd271_b.jpg" alt="img"></strong></p>
+<p><strong>自动驾驶中的应用</strong>  </p>
+<p>卡尔曼滤波算法在自动驾驶的经典应用之一就是融合定位。L4&#x2F;L5自动驾驶系统基本标配GNSS和IMU。GNSS定位数据更新频率低（典型10Hz），有遮挡或多径影响下，输出的定位数据不可靠。IMU定位数据更新频率高（典型150Hz）,但是内部积分运算会随着时间的推移，产生较大的累计误差。</p>
+<p>而为了获得全局准确的定位数据，各家利用GNSS可靠的定位数据来对IMU进行校准，消除IMU的累计误差。同时在GNSS定位不可靠时，利用IMU自身推算结果优化GNSS定位不可靠的数据。而从GNSS&#x2F;IMU的不确定信息中获得更多确定性信息的手段就是利用的卡尔曼滤波算法。</p>
+<p>而在障碍物追踪和预测方面，卡尔曼滤波算法广泛被用于通过融合激光雷达和毫米波雷达的数据，估计障碍物的位置和速度。而在车道线追踪和预测方面，卡尔曼滤波算法可以通过对当前图像的预测来估计下一时刻车道线的位置，并且能识别判断出车道线的走向(左转或右转)，提取有效的道路信息进行车道线的跟踪。</p>
+<p><strong>小结</strong></p>
+<p>在深度学习口号喊得震天响的今天，笔者不得不戳穿的一个真相便是，卡尔曼滤波算法可能仍是多数自动驾驶公司的当家花旦。这个朴素而不普通的算法，仅凭五个公式便可解决极其复杂的问题，没有理由不受到工程技术人员的拥戴。有时为了追求技术先进性而一味的盲目从众，消耗的还是自己本身。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/13/Paper/Six%20of%20the%20most%20useful%20ML%20algorithms%20copy/" rel="prev" title="Six of the most useful ML algorithms">
+      <i class="fa fa-chevron-left"></i> Six of the most useful ML algorithms
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/" rel="next" title="王林">
+      王林 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">Contact me by: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
+

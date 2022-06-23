@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源: https:&#x2F;&#x2F;read.deeplearning.ai&#x2F;the-batch&#x2F;issue-146&#x2F; Dear friends, Years ago, I had to choose between a neural network and a decision tree learning algorithm. It was necessary to pick an efficient on">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Six of the most useful ML algorithms">
+<meta property="og:url" content="http://example.com/2022/06/13/Paper/Six%20of%20the%20most%20useful%20ML%20algorithms%20copy/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源: https:&#x2F;&#x2F;read.deeplearning.ai&#x2F;the-batch&#x2F;issue-146&#x2F; Dear friends, Years ago, I had to choose between a neural network and a decision tree learning algorithm. It was necessary to pick an efficient on">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-06-13T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-06-13T03:44:09.119Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/06/13/Paper/Six%20of%20the%20most%20useful%20ML%20algorithms%20copy/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Six of the most useful ML algorithms | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-paper">
+
+    <a href="/categories/Paper/" rel="section"><i class="fa fa-archive fa-fw"></i>Paper</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-line-chart fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-users fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/06/13/Paper/Six%20of%20the%20most%20useful%20ML%20algorithms%20copy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="Contact me by: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Six of the most useful ML algorithms
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-06-13 12:00:00 / Modified: 11:44:09" itemprop="dateCreated datePublished" datetime="2022-06-13T12:00:00+08:00">2022-06-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Paper/" itemprop="url" rel="index"><span itemprop="name">Paper</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><strong>来源: <a target="_blank" rel="noopener" href="https://read.deeplearning.ai/the-batch/issue-146/">https://read.deeplearning.ai/the-batch/issue-146/</a></strong></p>
+<p><em>Dear friends,</em></p>
+<p><em>Years ago, I had to choose between a neural network and a decision tree learning algorithm. It was necessary to pick an efficient one, because we planned to apply the algorithm to a very large set of users on a limited compute budget. I went with a neural network. I hadn’t used boosted decision trees in a while, and I thought they required more computation than they actually do — so I made a bad call. Fortunately, my team quickly revised my decision, and the project was successful.</em></p>
+<p><em>This experience was a lesson in the importance of learning, and continually refreshing, foundational knowledge. If I had refreshed my familiarity with boosted trees, I would have made a better decision.</em></p>
+<p><em>Machine learning, like many technical fields, evolves as the community of researchers builds on top of one another’s work. Some contributions have staying power and become the basis of further developments. Consequently, everything from a housing-price predictor to a text-to-image generator is built on core ideas that include algorithms (linear and logistic regression, decision trees, and so on) and concepts (regularization, optimizing a loss function, bias&#x2F;variance, and the like).</em></p>
+<p><em>A solid, up-to-date foundation is one key to being a productive machine learning engineer. Many teams draw on these ideas in their day-to-day work, and blog posts and research papers often assume that you’re familiar with them. This shared base of knowledge is essential to the rapid progress we’ve seen in machine learning in recent years.</em></p>
+<p><em>That’s why I’m updating my original machine learning class as the new <a target="_blank" rel="noopener" href="https://www.deeplearning.ai/program/machine-learning-specialization/?utm_campaign=mls-launch-2022&utm_source=the-batch-web">Machine Learning Specialization</a>, which will be available in a few weeks.</em></p>
+<p><em>My team spent many hours debating the most important concepts to teach. We developed extensive syllabi for various topics and prototyped course units in them. Sometimes this process helped us realize that a different topic was more important, so we cut material we had developed to focus on something else. The result, I hope, is an accessible set of courses that will help anyone master the most important algorithms and concepts in machine learning today — including deep learning but also a lot of other things — and to build effective learning systems.</em></p>
+<p><em>In that spirit, this week’s issue of</em> The Batch <em>explores some of our field’s most important algorithms, explaining how they work and describing some of their surprising origins. If you’re just starting out, I hope it will demystify some of the approaches at the heart of machine learning. For those who are more advanced, you’ll find lesser-known perspectives on familiar territory. Either way, I hope this special issue will help you build your intuition and give you fun facts about machine learning’s foundations that you can share with friends.</em></p>
+<p><em>Keep learning!</em></p>
+<p><em>Andrew</em></p>
+<h1 id="Essential-Algorithms"><a href="#Essential-Algorithms" class="headerlink" title="Essential Algorithms"></a>Essential Algorithms</h1><p>Machine learning offers a deep toolbox for solving all kinds of problems, but which tool is best for which task? When is the open-ended wrench better than the adjustable kind? Who invented these things anyway? In this special issue of <em>The Batch</em>, we survey six of the most useful algorithms in the kit: where they came from, what they do, and how they’re evolving as AI advances into every facet of society. If you want to learn more, the <em>Machine Learning Specialization</em> provides a simple, practical introduction to these algorithms and more. <a target="_blank" rel="noopener" href="https://www.deeplearning.ai/program/machine-learning-specialization/?utm_campaign=mls-launch-2022&utm_source=the-batch-web">Join the waitlist</a> to be notified when it’s available.</p>
+<h1 id="Linear-Regression-Straight-amp-Narrow"><a href="#Linear-Regression-Straight-amp-Narrow" class="headerlink" title="Linear Regression: Straight &amp; Narrow"></a>Linear Regression: Straight &amp; Narrow</h1><p>Linear regression may be the key statistical method in machine learning, but it didn’t get to be that way without a fight. Two eminent mathematicians claimed credit for it, and 200 years later the matter remains unresolved. The longstanding dispute attests not only to the algorithm’s extraordinary utility but also to its essential simplicity.<br><strong>Whose algorithm is it anyway?</strong> In 1805, French mathematician Adrien-Marie Legendre published the method of fitting a line to a set of points while trying to predict the location of a comet (celestial navigation being the science most valuable in global commerce at the time, much like AI is today — the new electricity, if you will, two decades before the electric motor). Four years later, the 24-year-old German wunderkind Carl Friedrich Gauss insisted that he had been using it since 1795 but had deemed it too trivial to write about. Gauss’ claim prompted Legendre to publish an addendum anonymously observing that “a very celebrated geometer has not hesitated to appropriate this method.”<br><strong>Slopes and biases:</strong> Linear regression is useful any time the relationship between an outcome and a variable that influences it follows a straight line. For instance, a car’s fuel consumption bears a linear relationship to its weight.</p>
+<ul>
+<li>The relationship between a car’s fuel consumption <em>y</em> and its weight <em>x</em> depends on the line’s slope <em>w</em> (how steeply fuel consumption rises with weight) and bias term <em>b</em> (fuel consumption at zero weight): <em>y&#x3D;w*x+b</em>.</li>
+<li>During training, given a car’s weight, the algorithm predicts the expected fuel consumption. It compares expected and actual fuel consumption. Then it minimizes the squared difference, typically via the technique of ordinary least squares, which hones the values of <em>w</em> and <em>b</em>.</li>
+<li>Taking the car’s drag into account makes it possible to generate more precise predictions. The additional variable extends the line into a plane. In this way, linear regression can accommodate any number of variables&#x2F;dimensions.</li>
+</ul>
+<p><strong>Two steps to ubiquity:</strong> The algorithm immediately helped navigators to follow the stars, and later biologists (notably Charles Darwin’s cousin Francis Galton) to identify heritable traits in plants and animals. Two further developments unlocked its broad potential. In 1922, English statisticians Ronald Fisher and Karl Pearson showed how linear regression fit into the general statistical framework of correlation and distribution, making it useful throughout all sciences. And, nearly a century later, the advent of computers provided the data and processing power to take far greater advantage of it.<br><strong>Coping with ambiguity:</strong> Of course, data is never perfectly measured, and some variables are more important than others. These facts of life have spurred more sophisticated variants. For instance, linear regression with regularization (also called <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Tikhonov_regularization">ridge regression</a>) encourages a linear regression model to not depend too much on any one variable, or rather to rely evenly on the most important variables. If you’re going for simplicity, a different form of regularization (L1 instead of L2) results in <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Lasso_(statistics)">lasso</a>, which encourages as many coefficients as possible to be zero. In other words, it learns to select variables with high prediction power and ignores the rest. <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Elastic_net_regularization">Elastic net </a>combines both types of regularization. It’s useful when data is sparse or features appear to be correlated.<br><strong>In every neuron:</strong> Still, the simple version is enormously useful. The most common sort of neuron in a neural network is a linear regression model followed by a nonlinear activation function, making linear regression a fundamental building block of deep learning.</p>
+<h1 id="Logistic-Regression-Follow-the-Curve"><a href="#Logistic-Regression-Follow-the-Curve" class="headerlink" title="Logistic Regression: Follow the Curve"></a>Logistic Regression: Follow the Curve</h1><p>There was a moment when logistic regression was used to classify just one thing: If you drink a vial of poison, are you likely to be labeled “living” or “deceased”? Times have changed, and today not only does calling emergency services provide a better answer to that question, but logistic regression is at the very heart of deep learning.<br><strong>Poison control:</strong> The logistic function dates to the 1830s, when the Belgian statistician P.F. Verhulst invented it to describe population dynamics: Over time, an initial explosion of exponential growth flattens as it consumes available resources, resulting in the characteristic logistic curve. More than a century passed before American statistician E. B. Wilson and his student Jane Worcester devised logistic regression to figure out how much of a given hazardous substance would be fatal. How they gathered their training data is a subject for another essay.<br><strong>Fitting the function:</strong> Logistic regression fits the logistic function to a dataset in order to predict the probability, given an event (say, ingesting strychnine), that a particular outcome will occur (say, an untimely demise).</p>
+<ul>
+<li>Training adjusts the curve’s center location horizontally and its middle vertically to minimize error between the function’s output and the data.</li>
+<li>Adjusting the center to the right or the left means that it would take more or less poison to kill the average person. A steep slope signifies certainty: Before the halfway point, most people survive; beyond the halfway point, <em>sayonara</em>. A gentle slope is more forgiving: lower than midway up the curve, more than half survive; farther up, less than half.</li>
+<li>Set a threshold of, say, 0.5 between one outcome and another, and the curve becomes a classifier. Just enter the dose into the model, and you’ll know whether you should be planning a party or a funeral.</li>
+</ul>
+<p><strong>More outcomes:</strong> Verhulst’s work found the probabilities of binary outcomes, ignoring further possibilities like which side of the afterlife a poison victim might land in. His successors extended the algorithm:</p>
+<ul>
+<li>Working independently in the late 1960s, British statistician [David Cox](<a target="_blank" rel="noopener" href="https://scholar.google.com/scholar_lookup?hl=en&amp;publication_year=1966&amp;pages=55-71&amp;author=D">https://scholar.google.com/scholar_lookup?hl=en&amp;publication_year=1966&amp;pages=55-71&amp;author=D</a>. R. Coxauthor%3DF. N. David&amp;title&#x3D;Some procedures associated with the logistic qualitative response curve&amp;utm_campaign&#x3D;The Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) and Dutch statistician [Henri Theil](<a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2525642?casa_token=PyEOSgvoa4cAAAAA:4t757YdDeEwOHZlGH06W7GOd5djaJjP1_eRkv5V8UqPhL1sKTwzsw6FmD6veSI_hL9X3CbPdhaTcKbEj8I0aoDwHQ46Vv34C2EXgKrXMvmXrXwy7NA&amp;seq=1&amp;utm_campaign=The">https://www.jstor.org/stable/2525642?casa_token=PyEOSgvoa4cAAAAA%3A4t757YdDeEwOHZlGH06W7GOd5djaJjP1_eRkv5V8UqPhL1sKTwzsw6FmD6veSI_hL9X3CbPdhaTcKbEj8I0aoDwHQ46Vv34C2EXgKrXMvmXrXwy7NA&amp;seq=1&amp;utm_campaign=The</a> Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) adapted logistic regression for situations that have more than two possible outcomes.</li>
+<li>Further work yielded <a target="_blank" rel="noopener" href="https://www.jstor.org/stable/2984952">ordered logistic regression</a>, in which the outcomes are ordered values.</li>
+<li>To deal with sparse or high-dimensional data, logistic regression can take advantage of the same regularization techniques as linear regression.</li>
+</ul>
+<p><strong>Versatile curve:</strong> The logistic function describes a wide range of phenomena with fair accuracy, so logistic regression provides serviceable baseline predictions in many situations. In medicine, it estimates mortality and risk of disease. In political science, it predicts winners and losers of elections. In economics, it forecasts business prospects. More important, it drives a portion of the neurons, in which the nonlinearity is a sigmoid, in a wide variety of neural networks.</p>
+<h1 id="Gradient-Descent-It’s-All-Downhill"><a href="#Gradient-Descent-It’s-All-Downhill" class="headerlink" title="Gradient Descent: It’s All Downhill"></a>Gradient Descent: It’s All Downhill</h1><p>Imagine hiking in the mountains past dusk and finding that you can’t see much beyond your feet. And your phone’s battery died so you can’t use a GPS app to find your way home. You might find the quickest path down via gradient descent. Just be careful not to walk off a cliff.<br><strong>Suns and rugs:</strong> Gradient descent is good for more than descending through precipitous terrain. In 1847, French mathematician Augustin-Louis Cauchy <a target="_blank" rel="noopener" href="https://cs.uwaterloo.ca/~y328yu/classics/cauchy-en.pdf">invented</a> the algorithm to approximate the orbits of stars. Sixty years later, his compatriot Jacques Hadamard independently <a target="_blank" rel="noopener" href="https://searchworks.stanford.edu/view/2147097">developed</a> it to describe deformations of thin, flexible objects like throw rugs that might make a downward hike easier on the knees. In machine learning, though, its most common use is to find the lowest point in the landscape of a learning algorithm’s loss function.<br><strong>Downward climb:</strong> A trained neural network provides a function that, given an input, computes a desired output. One way to train the network is to minimize the loss, or error in its output, by iteratively computing the difference between the actual output and the desired output and then changing the network’s parameter values to narrow that difference. Gradient descent narrows the difference, minimizing the function that computes the loss. The network’s parameter values are tantamount to a position on the landscape, and the loss is the current altitude. As you descend, you improve the network’s ability to compute outputs close to the desired one. Visibility is limited because, in a typical supervised learning situation, the algorithm relies solely on the network’s parameter values and the gradient, or slope of the loss function — that is, your position on the hill and the slope immediately beneath your feet.</p>
+<ul>
+<li>The basic method is to move in the direction where the terrain descends most steeply. The trick is to calibrate your stride. Too small, and it takes ages to make any progress. Too large, and you leap into the unknown, possibly heading uphill instead of downward.</li>
+<li>Given the current position, the algorithm estimates the direction of steepest descent by computing the gradient of the loss function. The gradient points uphill, so the algorithm steps in the opposite direction by subtracting a fraction of the gradient. The fraction <em>α</em>, which is called the learning rate, determines the size of the step before measuring the gradient again.</li>
+<li>Apply this iteratively, and hopefully you’ll arrive at a valley. Congratulations!</li>
+</ul>
+<p><strong>Stuck in the valley:</strong> Too bad your phone is out of juice, because the algorithm may not have propelled you to the bottom of a convex mountain. You may be stuck in a nonconvex landscape of multiple valleys (local minima), peaks (local maxima), saddles (saddle points), and plateaus. In fact, tasks like image recognition, text generation, and speech recognition are nonconvex, and many variations on gradient descent have emerged to handle such situations.  For example, the algorithm may have <a target="_blank" rel="noopener" href="https://distill.pub/2017/momentum/">momentum </a>that helps it zoom over small rises and dips, giving it a better chance at arriving at the bottom. Researchers have devised so many variants that it may seem as though there are as many optimizers as there are local minima. Luckily, local and global minima tend to be <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1412.0233">roughly equivalent</a>.<br><strong>Optimal optimizer:</strong> Gradient descent is the clear choice for finding the minimum of any function. In cases where an exact solution can be computed directly — say, a linear regression task with lots of variables — it can approximate one, often faster and more cheaply. But it really comes into its own in complex, nonlinear tasks. Armed with gradient descent and an adventurous spirit, you might just make it out of the mountains in time for dinner.</p>
+<h2 id="A-MESSAGE-FROM-DEEPLEARNING-AI"><a href="#A-MESSAGE-FROM-DEEPLEARNING-AI" class="headerlink" title="A MESSAGE FROM DEEPLEARNING.AI"></a>A MESSAGE FROM <strong><a target="_blank" rel="noopener" href="http://deeplearning.ai/">DEEPLEARNING.AI</a></strong></h2><p>No advanced math required! The new <em>Machine Learning Specialization</em> balances intuition, practice, and theory to create a powerful learning experience for beginners. <a target="_blank" rel="noopener" href="https://www.deeplearning.ai/program/machine-learning-specialization/?utm_campaign=mls-launch-2022&utm_source=the-batch-web">Pre-enroll</a> and achieve your career goals.</p>
+<h1 id="Neural-Networks-Find-the-Function"><a href="#Neural-Networks-Find-the-Function" class="headerlink" title="Neural Networks: Find the Function"></a>Neural Networks: Find the Function</h1><p>Let’s get this out of the way: A brain is not a cluster of graphics processing units, and if it were, it would run software far more complex than the typical artificial neural network. Yet neural networks were inspired by the brain’s architecture: layers of interconnected neurons, each of which computes its own output depending on the states of its neighbors. The resulting cascade of activity forms an idea — or recognizes a picture of a cat.<br><strong>From biological to artificial:</strong> The insight that the brain learns through interactions among neurons dates back to 1873, but it wasn’t until 1943 that American neuroscientists Warren McCulloch and Walter Pitts <a target="_blank" rel="noopener" href="http://www.cse.chalmers.se/~coquand/AUTOMATA/mcp.pdf">modeled </a>biological neural networks using simple mathematical rules. In 1958, American psychologist Frank Rosenblatt developed the <a target="_blank" rel="noopener" href="https://citeseerx.ist.psu.edu/viewdoc/download">perceptron</a>, a single-layer vision network implemented on punch cards with the intention of building a hardware version for the United States Navy.<br><strong>Bigger is better:</strong> Rosenblatt’s invention recognized only classes that could be separated by a line. Ukrainian mathematicians Alexey Ivakhnenko and Valentin Lapa overcame this limitation by <a target="_blank" rel="noopener" href="https://mailman.srv.cs.cmu.edu/pipermail/connectionists/2014-July/027158.html">stacking</a> networks of neurons in any number of layers. In 1985, working independently, French computer scientist Yann LeCun, David Parker, and American psychologist David Rumelhart and his colleagues [described](<a target="_blank" rel="noopener" href="http://yann.lecun.com/exdb/publis/pdf/lecun-85.pdf?utm_campaign=The">http://yann.lecun.com/exdb/publis/pdf/lecun-85.pdf?utm_campaign=The</a> Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) [using](<a target="_blank" rel="noopener" href="https://books.google.com/books/about/Learning_logic.html?id=2kS9GwAACAAJ&amp;utm_campaign=The">https://books.google.com/books/about/Learning_logic.html?id=2kS9GwAACAAJ&amp;utm_campaign=The</a> Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) <a target="_blank" rel="noopener" href="https://www.nature.com/articles/323533a0">backpropagation</a> to train such networks efficiently. In the first decade of the new millennium, researchers including Kumar Chellapilla, Dave Steinkraus, and Rajat Raina (with Andrew Ng) <a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.1109/ICDAR.2005.251">accelerated</a> [neural](<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.1145/1553374.1553486?utm_campaign=The">https://dl.acm.org/doi/10.1145/1553374.1553486?utm_campaign=The</a> Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) [networks](<a target="_blank" rel="noopener" href="https://hal.inria.fr/inria-00112631?utm_campaign=The">https://hal.inria.fr/inria-00112631?utm_campaign=The</a> Batch&amp;utm_source&#x3D;hs_email&amp;utm_medium&#x3D;email&amp;_hsenc&#x3D;p2ANqtz-89CuP3WvPesniFqd7Y2_JHnJ2W7cNuwgaPgBDzsj7k_StihDPBT45KtWU5iDiwJ3MTnaA2) using graphical processing units, which has enabled ever-larger neural networks to learn from the immense amounts of data generated by the internet.<br><strong>Fit for every task:</strong> The idea behind a neural network is simple: For any task, there’s a function that can perform it. A neural network constitutes a trainable function by combining many simple functions, each executed by a single neuron. A neuron’s function is determined by adjustable parameters called weights. Given random values for those weights and examples of inputs and their desired outputs, it’s possible to alter the weights iteratively until the trainable function performs the task at hand.</p>
+<ul>
+<li>A neuron accepts various inputs (for example, numbers representing a pixel or word, or the outputs of the previous layer), multiplies them by its weights, adds the products, and feeds the sum through a nonlinear function, or activation function, chosen by the developer. Consider it linear regression plus an activation function.</li>
+<li>Training modifies the weights. For every example input, the network computes an output and compares it to the expected output. Backpropagation uses gradient descent to change the weights to reduce the difference between actual and expected outputs. Repeat this process enough times with enough (good) examples, and the network should learn to perform the task.</li>
+</ul>
+<p><strong>Black box:</strong> While a trained network may perform its task, good luck determining how. You can read the final function, but often it’s so complex — with thousands of variables and nested activation functions — that it’s exceedingly difficult to explain how the network succeeded at its task. Moreover, a trained network is only as good as the data it learned from. For instance, if the dataset was skewed, the network’s output will be skewed. If it included only high-resolution pictures of cats, there’s no telling how it would respond to lower-resolution images.<br><strong>Toward common sense:</strong> Reporting on Rosenblatt’s Perceptron in 1958, <em>The New York Times</em> blazed the trail for AI hype by <a target="_blank" rel="noopener" href="https://timesmachine.nytimes.com/timesmachine/1958/07/08/83417341.html">calling</a> it “the embryo of an electronic computer that the United States Navy expects will be able to walk, talk, see, write, reproduce itself and be conscious of its existence.” While it didn’t live up to that billing, it begot a host of impressive models: convolutional neural networks for images; recurrent neural networks for text; and transformers for images, text, speech, video, protein structures, and more. They’ve done amazing things, exceeding human-level performance in playing Go and approaching it in practical tasks like diagnosing x-ray images. Yet they still have a hard time with common sense and logical reasoning. <a target="_blank" rel="noopener" href="https://lacker.io/ai/2020/07/06/giving-gpt-3-a-turing-test.html">Ask GPT-3</a>, “When counting, what number comes before a million?” and it may respond, “Nine hundred thousand and ninety-nine comes before a million.” To which we reply: Keep learning!</p>
+<h1 id="Decision-Trees-From-Root-to-Leaves"><a href="#Decision-Trees-From-Root-to-Leaves" class="headerlink" title="Decision Trees: From Root to Leaves"></a>Decision Trees: From Root to Leaves</h1><p>What kind of beast was Aristotle? The philosopher’s follower Porphyry, who lived in Syria during the third century, came up with a logical way to answer the question. He organized Aristotle’s proposed “categories of being” from general to specific and assigned Aristotle himself to each category in turn: Aristotle’s substance occupied space rather than being conceptual or spiritual; his body was animate not inanimate; his mind was rational not irrational. Thus his classification was human. Medieval teachers of logic drew the sequence as a vertical flowchart: An early decision tree.<br><strong>The digital difference:</strong> Fast forward to 1963, when University of Michigan sociologist John Sonquist and economist James Morgan, dividing survey respondents into groups, first <a target="_blank" rel="noopener" href="https://www.semanticscholar.org/paper/Problems-in-the-Analysis-of-Survey-Data%2C-and-a-Morgan-Sonquist/957728a4244d3b323e98e351098a0125382f1199">implemented</a> decision trees in a computer. Such work became commonplace with the advent of software that automates training the algorithm, now implemented in a variety of machine learning libraries including scikit-learn. The code took a quartet of statisticians at Stanford and UC Berkeley 10 years to develop. Today, coding a decision tree from scratch is a homework assignment in Machine Learning 101.<br><strong>Roots in the sky:</strong> A decision tree can perform classification or regression. It grows downward, from root to canopy, in a hierarchy of decisions that sort input examples into two (or more) groups. Consider the task of Johann Blumenbach, the German physician and anthropologist who first distinguished monkeys from apes (setting aside humans) circa 1776, before which they had been categorized together. The classification depends on various criteria such as presence or absence of a tail, narrow or broad chest, upright versus crouched posture, and lesser or greater intelligence. A decision tree trained to label such animals would consider each criterion one by one, ultimately separating the two groups.</p>
+<ul>
+<li>The tree starts with a root node that can be viewed as containing all examples in a dataset of creatures — chimpanzees, gorillas, and orangutans as well as capuchins, baboons, and marmosets. The root presents a choice between examples that exhibit a particular feature or not, leading to two child nodes that contain examples with and without that feature. Each child poses yet another choice (with or without a different feature) leading to two more children, and so on. The process ends with any number of leaf nodes, each of which contains examples that belong — mostly or wholly — to one class.</li>
+<li>To grow, the tree must find the root decision. To choose, it considers all features and their values — posterior appendage, barrel chest, and so on — and chooses the one that maximizes the purity of the split, optimal purity being defined as 100 percent of examples of one class going to a particular child node and none going to the other node. Splits are rarely 100 percent pure after just one decision and may never get there, so the process continues, producing level after level of child nodes, until purity won’t rise much by considering further features. At this point, the tree is fully trained.</li>
+<li>At inference, a fresh example traverses the tree from top to bottom evaluating a different decision at each level. It takes the label of the data contained by the leaf node it lands in.</li>
+</ul>
+<p><strong>Top 10 hit:</strong> Given Blumenbach’s conclusion (later overturned by Charles Darwin) that humans are distinguished from apes by a broad pelvis, hands, and close-set teeth, what if we wanted to extend the decision tree to classify not just apes and monkeys but humans as well? Australian computer scientist John Ross Quinlan made this possible in 1986 with <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF00116251">ID3</a>, which extended decision trees to support nonbinary outcomes. In 2008, a further refinement called <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF00993309">C4.5</a> capped a list of Top 10 Algorithms in Data Mining curated by the IEEE International Conference on Data Mining. In a world of rampant innovation, that’s staying power.<br><strong>Raking leaves:</strong> Decision trees do have some drawbacks. They can easily overfit the data by growing so many levels that leaf nodes include as few as one example. Worse, they’re prone to the butterfly effect: Change one example, and the tree that grows could look dramatically different.<br><strong>Into the woods:</strong> Turning this trait into an advantage, American statistician Leo Breiman and New Zealander statistician Adele Cutler in 2001 developed the <a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1023/A:1010933404324">random forest</a>, an ensemble of decision trees, each of which processes a different, overlapping selection of examples that vote on a final decision. Random forest and its cousin XGBoost are less prone to overfitting, which helps make them among the most popular machine learning algorithms. It’s like having Aristotle, Porphyry, Blumenbach, Darwin, Jane Goodall, Dian Fossey, and 1,000 other zoologists in the room together, all making sure your classifications are the best they can be.</p>
+<h1 id="K-Means-Clustering-Group-Think"><a href="#K-Means-Clustering-Group-Think" class="headerlink" title="K-Means Clustering: Group Think"></a>K-Means Clustering: Group Think</h1><p>If you’re standing close to others at a party, it’s likely that you have something in common. This is the idea behind using k-means clustering to split data points into groups. Whether the groups formed via human agency or some other force, this algorithm will find them.<br><strong>From detonations to dial tones:</strong> American physicist Stuart Lloyd, an alumnus of both Bell Labs’ iconic innovation factory and the Manhattan Project that invented the atomic bomb, first proposed k-means clustering in 1957 to distribute information within digital signals. He didn’t <a target="_blank" rel="noopener" href="https://cs.nyu.edu/~roweis/csc2515-2006/readings/lloyd57.pdf">publish</a> it until 1982. Meanwhile, American statistician Edward Forgy <a target="_blank" rel="noopener" href="https://cir.nii.ac.jp/crid/1571980074621944832">described</a> a similar method in 1965, leading to its alternative name, the Lloyd-Forgy algorithm.<br><strong>Finding the center:</strong> Consider breaking up the party into like-minded working groups. Given the positions of attendees in the room and the number of groups to be formed, k-means clustering can divide the attendees into groups of roughly equal size, each gathered around a central point, or centroid.</p>
+<ul>
+<li>During training, the algorithm initially designates k centroids by randomly choosing k people. (K must be chosen manually, and finding an optimal value is not always trivial.) Then it grows k clusters by associating each person to the closest centroid.</li>
+<li>For each cluster, it computes the mean position of all people assigned to the group and designates the mean position as the new centroid. Each new centroid probably isn’t occupied by a person, but so what? People tend to gather around the chocolate fondue.</li>
+<li>Having calculated new centroids, the algorithm reassigns individuals to the centroid closest to them. Then it computes new centroids, adjusts clusters, and so on, until the centroids (and the groups around them) no longer shift. From there, assigning newcomers to the right cluster is easy. Let them take their place in the room and look for the nearest centroid.</li>
+<li>Be forewarned: Given the initial random centroid assignments, you may not end up in the same group as that cute data-centric AI specialist you were hoping to be with. The algorithm does a good job, but it’s not guaranteed to find the best solution. Better luck at the next party!</li>
+</ul>
+<p><strong>Different distances:</strong> Of course the distance between clustered objects doesn’t need to be spatial. Any measure between two vectors will do. For instance, rather than grouping partygoers according to physical proximity, k-means clustering can divide them by their outfits, occupations, or other attributes. Online shops use it to partition customers based on their preferences or behavior, and astronomers to group stars of the same type.<br><strong>Power to the data points:</strong> The idea has spawned a few notable variations:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/9780470316801.ch2">K-medoids</a> use actual data points as centroids rather than mean positions in a given cluster. The medoids are points that minimize the distance to all other points in their cluster. This variation is more interpretable because the centroids are always data points.</li>
+<li><a target="_blank" rel="noopener" href="https://www.tandfonline.com/doi/abs/10.1080/01969727308546046">Fuzzy C-Means Clustering</a> enables the data points to participate in multiple clusters to varying degrees. It replaces hard cluster assignments with degrees of membership depending on distance from the centroids.</li>
+</ul>
+<p><strong>Revelry in *n* dimensions:</strong> Nonetheless, the algorithm in its original form remains widely useful — especially because, as an unsupervised algorithm, it doesn’t require gathering potentially expensive labeled data. It’s also ever faster to use. For instance, machine learning libraries including scikit-learn benefit from the 2002 addition of <a target="_blank" rel="noopener" href="http://www.cs.umd.edu/~mount/Papers/pami02.pdf">kd-trees</a> that partition high-dimensional data extremely quickly. By the way, if you throw any high-dimensional parties, we’d love to be on the guest list.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/06/09/Seminar/0609-%E7%BD%97%E5%BE%B7%E6%B5%B7/" rel="prev" title="罗德海">
+      <i class="fa fa-chevron-left"></i> 罗德海
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/06/13/Paper/Kalman%20Filter/" rel="next" title="Kalman Filter">
+      Kalman Filter <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Essential-Algorithms"><span class="nav-number">1.</span> <span class="nav-text">Essential Algorithms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Linear-Regression-Straight-amp-Narrow"><span class="nav-number">2.</span> <span class="nav-text">Linear Regression: Straight &amp; Narrow</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Logistic-Regression-Follow-the-Curve"><span class="nav-number">3.</span> <span class="nav-text">Logistic Regression: Follow the Curve</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gradient-Descent-It%E2%80%99s-All-Downhill"><span class="nav-number">4.</span> <span class="nav-text">Gradient Descent: It’s All Downhill</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-MESSAGE-FROM-DEEPLEARNING-AI"><span class="nav-number">4.1.</span> <span class="nav-text">A MESSAGE FROM DEEPLEARNING.AI</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Neural-Networks-Find-the-Function"><span class="nav-number">5.</span> <span class="nav-text">Neural Networks: Find the Function</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Decision-Trees-From-Root-to-Leaves"><span class="nav-number">6.</span> <span class="nav-text">Decision Trees: From Root to Leaves</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#K-Means-Clustering-Group-Think"><span class="nav-number">7.</span> <span class="nav-text">K-Means Clustering: Group Think</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">Contact me by: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
+</html>
+
