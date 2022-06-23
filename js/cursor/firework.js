@@ -1,4 +1,4 @@
-class Circle {
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>class Circle {
   constructor({ origin, speed, color, angle, context }) {
     this.origin = origin
     this.position = { ...this.origin }
