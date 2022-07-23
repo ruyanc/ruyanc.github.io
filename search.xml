@@ -19,21 +19,23 @@
       </categories>
   </entry>
   <entry>
-    <title>ENSO Events</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+    <title>Emergent constraints</title>
+    <url>/2022/05/01/AtmoSci/Emergent%20constraints/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>Reducing Uncertainties in Climate Projections with Emergent Constraints: Concepts, Examples and Prospects</strong>     <em>Florent Brient</em>     </p>
+<p>Models disagree on a significant number of responses to climate change, such as climate feedback, regional changes, or the strength of equilibrium climate sensitivity. Emergent constraints aim to reduce these uncertainties by finding links between the inter-model spread in an observable predictor and climate projections. In this paper, the concepts underlying this framework are recalled with an emphasis on the statistical inference used for narrowing uncertainties, and a review of emergent constraints found in the last two decades. Potential links between highlighted predictors are explored, especially those targeting uncertainty reductions in climate sensitivity, cloud feedback, and changes of the hydrological cycle. Yet the disagreement across emergent constraints suggests that the spread in climate sensitivity can not be significantly narrowed. This calls for weighting the realism of emergent constraints by quantifying the level of physical understanding explaining the relationship. This would also permit more efficient model evaluation and better targeted model development. In the context of the upcoming CMIP6 model intercomparison a growing number of new predictors and uncertainty reductions is expected, which call for robust statistical inferences that allow cross-validation of more likely estimates.     </p>
+<p>Advances in Atmospheric Sciences 2020 <a href="https://dx.doi.org/10.1007/s00376-019-9140-8">https://dx.doi.org/10.1007/s00376-019-9140-8</a></p>
 ]]></content>
       <categories>
-        <category>OcnSci</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
-    <title>ENSO Waves</title>
-    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+    <title>URL</title>
+    <url>/2022/05/01/AtmoSci/URL/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Atmosphere-Ocean-and-Climate-Dynamics"><a href="#Atmosphere-Ocean-and-Climate-Dynamics" class="headerlink" title="Atmosphere, Ocean and Climate Dynamics"></a>Atmosphere, Ocean and Climate Dynamics</h4><p><a href="http://marshallplumb.mit.edu/">http://marshallplumb.mit.edu/</a></p>
 ]]></content>
       <categories>
-        <category>OcnSci</category>
+        <category>AtmSci</category>
       </categories>
   </entry>
   <entry>
@@ -68,17 +70,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Emergent constraints</title>
-    <url>/2022/05/01/AtmoSci/Emergent%20constraints/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><strong>Reducing Uncertainties in Climate Projections with Emergent Constraints: Concepts, Examples and Prospects</strong>     <em>Florent Brient</em>     </p>
-<p>Models disagree on a significant number of responses to climate change, such as climate feedback, regional changes, or the strength of equilibrium climate sensitivity. Emergent constraints aim to reduce these uncertainties by finding links between the inter-model spread in an observable predictor and climate projections. In this paper, the concepts underlying this framework are recalled with an emphasis on the statistical inference used for narrowing uncertainties, and a review of emergent constraints found in the last two decades. Potential links between highlighted predictors are explored, especially those targeting uncertainty reductions in climate sensitivity, cloud feedback, and changes of the hydrological cycle. Yet the disagreement across emergent constraints suggests that the spread in climate sensitivity can not be significantly narrowed. This calls for weighting the realism of emergent constraints by quantifying the level of physical understanding explaining the relationship. This would also permit more efficient model evaluation and better targeted model development. In the context of the upcoming CMIP6 model intercomparison a growing number of new predictors and uncertainty reductions is expected, which call for robust statistical inferences that allow cross-validation of more likely estimates.     </p>
-<p>Advances in Atmospheric Sciences 2020 <a href="https://dx.doi.org/10.1007/s00376-019-9140-8">https://dx.doi.org/10.1007/s00376-019-9140-8</a></p>
-]]></content>
-      <categories>
-        <category>AtmSci</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Basic</title>
     <url>/2022/05/01/OcnSci/Basic/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="SST-amp-SSS-correlation"><a href="#SST-amp-SSS-correlation" class="headerlink" title="SST &amp; SSS correlation"></a>SST &amp; SSS correlation</h2><p>Kido, S., Nonaka, M. &amp; Tanimoto, Y. Sea Surface Temperature–Salinity Covariability and Its Scale‐Dependent Characteristics. <em>Geophys Res Lett</em> <strong>48</strong>, (2021).  </p>
@@ -97,6 +88,24 @@
       </categories>
   </entry>
   <entry>
+    <title>ENSO Events</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Events/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSnZhc1hXdlNZY2Fl" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ENSO Waves</title>
+    <url>/2022/06/07/OcnSci/ENSO%20Waves/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmN4S2ZOYU1VQklm" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>OcnSci</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Ocean Data</title>
     <url>/2022/06/07/OcnSci/Ocean%20Data/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkRUbGZ3dnROelhP" data-height="1000px"></div>
@@ -107,36 +116,12 @@
       </categories>
   </entry>
   <entry>
-    <title>应俊</title>
-    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>warmer get wetter &amp; wet get wetter</p>
-<p>CMIP6 intensity of ENSO 一致性</p>
-<p>Increased ENSO rainfall variability in response to global warming</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
-<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
-<p>relative SST 模式和观测差异很大   </p>
-<p>模式EN-like，观测LN-Like</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
-<p>relative SST 的变化信号显现较 annual mean 晚</p>
-<p>ENSO海温：振幅  </p>
-<p>ENSO降水：东移</p>
-<p>ENSO降水变化信号较海温早30年左右</p>
-<p>动力部分起主导作用：温度相对变化</p>
-<h3 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
-<p><strong>学术报告 2022-11</strong></p>
-<p><strong>报告时间：2022年5月17日 09:30</strong></p>
-<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
-<p><strong>报告题目</strong></p>
-<p>Emergence of climate change in the tropical Pacific</p>
-<p><strong>报告摘要</strong></p>
-<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
+    <title>URL</title>
+    <url>/2022/05/01/OcnSci/URL/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Atmosphere-Ocean-and-Climate-Dynamics"><a href="#Atmosphere-Ocean-and-Climate-Dynamics" class="headerlink" title="Atmosphere, Ocean and Climate Dynamics"></a>Atmosphere, Ocean and Climate Dynamics</h4><p><a href="http://marshallplumb.mit.edu/">http://marshallplumb.mit.edu/</a></p>
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>OcnSci</category>
       </categories>
   </entry>
   <entry>
@@ -243,81 +228,33 @@
       </categories>
   </entry>
   <entry>
-    <title>张荣华</title>
-    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
-<p>penetration depth: 太阳辐射的穿透深度</p>
-<p>赤道中东太平洋chla高值与上升流有关</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
-<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
-<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
-<p>clm chla ENSO振幅较观测偏大</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
-<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
-<p>周期偏长的偏差也明显改善</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
-<p>简单大气+复杂OGCM</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
-<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
-<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
-<p>同时均对周期存在影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
-<p>导致了ENSO的复杂性</p>
-<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
-<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
-<p>海洋生物同样可以通过动力过程影响海洋</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Group Study</title>
-    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
-<p>2℃增暖，北极夏季无冰，但可恢复</p>
-<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
-<p>动力作用对海冰的生成重要</p>
-<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
-<p>冰架对海平面没有影响</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
-<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
-<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
-<p>次表层海水增暖，溶解底部的冰盖</p>
-<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
-<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
-<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
-<p>冰川主导</p>
-<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
-<p>冰盖主导</p>
-<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
-<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
-<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
-<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
-<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
+    <title>应俊</title>
+    <url>/2022/05/17/Seminar/0517-%E5%BA%94%E4%BF%8A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所"><a href="#0517-应俊-热带太平洋气候变化显现（Emergence）-第二海洋研究所" class="headerlink" title="0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所"></a>0517 应俊 热带太平洋气候变化显现（Emergence） 第二海洋研究所</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p>warmer get wetter &amp; wet get wetter</p>
+<p>CMIP6 intensity of ENSO 一致性</p>
+<p>Increased ENSO rainfall variability in response to global warming</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5lnnnpej217q0a0q4g.jpg" alt="Screen Shot 2022-05-17 at 09.40.05"></p>
+<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b5n16bjvj21e60q0afj.jpg" alt="Screen Shot 2022-05-17 at 09.41.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6ffim59j21fn0jl7at.jpg" alt="Screen Shot 2022-05-17 at 09.50.17"></p>
+<p>relative SST 模式和观测差异很大   </p>
+<p>模式EN-like，观测LN-Like</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b67w8v4yj21de0o0dlm.jpg" alt="Screen Shot 2022-05-17 at 10.01.23"></p>
+<p>relative SST 的变化信号显现较 annual mean 晚</p>
+<p>ENSO海温：振幅  </p>
+<p>ENSO降水：东移</p>
+<p>ENSO降水变化信号较海温早30年左右</p>
+<p>动力部分起主导作用：温度相对变化</p>
+<h3 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2b6happ15j214w0m8gr7.jpg" alt="Screen Shot 2022-05-17 at 10.10.21"></p>
+<p><strong>学术报告 2022-11</strong></p>
+<p><strong>报告时间：2022年5月17日 09:30</strong></p>
+<p><strong>腾讯会议ID（线上）：472 427 746</strong></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>应俊，自然资源部第二海洋研究所卫星海洋环境动力学国家重点实验室副研究员。2016年博士毕业于中国科学院大气物理研究所。于2020-2021年访问英国埃克塞特大学。研究方向为气候动力学、热带海气相互作用等，在Nature Climate Change, Nature Reviews Earth&amp;Environment, Journal of Climate, Climate Dynamics等期刊发表论文近30篇，出版个人学术专著一部。获中国科学院优秀博士学位论文奖（2017），领跑者5000—中国精品科技期刊顶尖学术论文奖（2017），自然资源部第二海洋研究所“青年英才”项目（2020）。</p>
+<p><strong>报告题目</strong></p>
+<p>Emergence of climate change in the tropical Pacific</p>
+<p><strong>报告摘要</strong></p>
+<p>Future changes in the mean climate of the tropical Pacific and characteristics of the El Niño-Southern Oscillation (ENSO) are established as likely. Determining the time of emergence (ToE) of climate change signals from the natural variability is critical for mitigation strategies and adaptation planning. Here, using a multi-model ensemble, we find that the annual-mean sea surface temperature (SST) signal has already emerged across much of the tropical Pacific, appearing last in the east. The signal of a wetter annual-mean rainfall in the east is expected to emerge by mid-century, with some sensitivity to emission scenario. However, the ENSO-related rainfall variability signal is projected to emerge by around 2040 regardless of emission scenario, around 30 years earlier than ENSO-related SST variability signal at around 2070. Our results are instructive for the detection of climate change signals and reinforce the rapidly emerging risks of ENSO-induced climate extremes regardless of mitigation actions.</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -376,6 +313,50 @@
 <p>简单概述一下就是，南极的冰川是大陆冰川，因为覆盖面积大于5万平方公里，所以称之为冰盖。冰盖边缘的冰架会向海洋漂移，断裂的冰架独自在海洋中存在，称之为冰山。</p>
 <hr>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ykhylrs3j20u019044w.jpg" alt="WechatIMG2732"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>张荣华</title>
+    <url>/2022/06/01/Seminar/0601-%E5%BC%A0%E8%8D%A3%E5%8D%8E/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所"><a href="#0601-张荣华-海洋生物过程引发的加热效应及对ENSO的调制影响-中科院海洋所" class="headerlink" title="0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所"></a>0601 张荣华 海洋生物过程引发的加热效应及对ENSO的调制影响   中科院海洋所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srhh9zh2j20oe0i3dj3.jpg" alt="Screen Shot 2022-06-01 at 15.11.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srm8n5ybj20ld0fwjt4.jpg" alt="Screen Shot 2022-06-01 at 15.16.30"></p>
+<p>penetration depth: 太阳辐射的穿透深度</p>
+<p>赤道中东太平洋chla高值与上升流有关</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srp9poqsj20m20futae.jpg" alt="Screen Shot 2022-06-01 at 15.19.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srqp0gduj20ma0g30uz.jpg" alt="Screen Shot 2022-06-01 at 15.20.47"></p>
+<p>El Niño期间，CHLA少，穿透得深，混合层吸收得少</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srvwj1n9j20m00gk0vh.jpg" alt="Screen Shot 2022-06-01 at 15.25.46"></p>
+<p>![Screen Shot 2022-06-01 at 15.27.08](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-01 at 15.27.08.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sryjjsxyj20m20g2ad5.jpg" alt="Screen Shot 2022-06-01 at 15.28.03"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2srzr3v03j20lz0fxq5t.jpg" alt="Screen Shot 2022-06-01 at 15.29.25"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss2bvea8j20lp0g6abr.jpg" alt="Screen Shot 2022-06-01 at 15.31.01"></p>
+<p>clm chla ENSO振幅较观测偏大</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss492ndej20m70f2416.jpg" alt="Screen Shot 2022-06-01 at 15.33.32"></p>
+<p>考虑年际可变的叶绿素异常后ENSO振幅明显减小</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss6uarxfj20lw0dwjs5.jpg" alt="Screen Shot 2022-06-01 at 15.36.18"></p>
+<p>周期偏长的偏差也明显改善</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ss856h5sj20ma0g0q5z.jpg" alt="Screen Shot 2022-06-01 at 15.37.21"></p>
+<p>简单大气+复杂OGCM</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssb78if6j20m70gln0q.jpg" alt="Screen Shot 2022-06-01 at 15.40.29"></p>
+<p>试验：分别考虑CHLA年际异常和淡水通量年际异常对ENSO的影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssc05oyfj20m70dhac8.jpg" alt="Screen Shot 2022-06-01 at 15.40.54"></p>
+<p>方式和程度存在差异：CHLA为负反馈，淡水通量为正反馈</p>
+<p>同时均对周期存在影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssdc05jwj20lz0f0jtr.jpg" alt="Screen Shot 2022-06-01 at 15.42.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sse4okwcj20m40fowhz.jpg" alt="Screen Shot 2022-06-01 at 15.42.58"></p>
+<p>导致了ENSO的复杂性</p>
+<p>CESM中缺乏负反馈，可能导致ENSO模拟偏强</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssglgrogj20mb0ft76l.jpg" alt="Screen Shot 2022-06-01 at 15.45.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sshq5joqj20m20er762.jpg" alt="Screen Shot 2022-06-01 at 15.46.45"></p>
+<p>全球变暖背景下，海洋上层生物量减少的可能影响？</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssjozn2ij20ma0gawi2.jpg" alt="Screen Shot 2022-06-01 at 15.48.30"></p>
+<p>海洋生物同样可以通过动力过程影响海洋</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ssk8u6l4j20m50f2diq.jpg" alt="Screen Shot 2022-06-01 at 15.49.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sslxbj7xj20md0gmaei.jpg" alt="Screen Shot 2022-06-01 at 15.50.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2sklh5xm1j20u016w47e.jpg" alt="3961320ee9f45786d865fd2a54fbf839"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -441,90 +422,36 @@
   </entry>
   <entry>
     <title>Group Study</title>
-    <url>/2022/06/21/Seminar/0621-%E7%BB%84%E4%BC%9A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0621-环流动力工作总结-夏一凡"><a href="#0621-环流动力工作总结-夏一凡" class="headerlink" title="0621 环流动力工作总结 夏一凡"></a>0621 环流动力工作总结 夏一凡</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1a1jlm2j217s0u0thk.jpg" alt="Screen Shot 2022-06-22 at 15.02.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1a9k3t4j21ab0u010m.jpg" alt="Screen Shot 2022-06-22 at 15.03.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1arpnyej21di0u0q9r.jpg" alt="Screen Shot 2022-06-22 at 15.05.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1bodjdsj21e80u044v.jpg" alt="Screen Shot 2022-06-22 at 15.05.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1cy6710j21ce0u077s.jpg" alt="Screen Shot 2022-06-22 at 15.06.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1e0qjedj21890u0wjs.jpg" alt="Screen Shot 2022-06-22 at 15.08.00"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1qtx05hj219s0u0jwa.jpg" alt="Screen Shot 2022-06-22 at 15.19.51"></p>
-<h2 id="东南印度洋海表盐度对IOD的非对称响应-孙启伟"><a href="#东南印度洋海表盐度对IOD的非对称响应-孙启伟" class="headerlink" title="东南印度洋海表盐度对IOD的非对称响应  孙启伟"></a>东南印度洋海表盐度对IOD的非对称响应  孙启伟</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3oabrghj21qt0u0tgs.jpg" alt="Screen Shot 2022-06-22 at 16.26.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3vh9vmxj21ns0u0agj.jpg" alt="Screen Shot 2022-06-22 at 16.28.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3vki7z0j21cx0u0n9b.jpg" alt="Screen Shot 2022-06-22 at 16.33.18"></p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>魏云涛</title>
-    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
-<h3 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
-<hr>
-<p><strong>报告人简介</strong></p>
-<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
-<p><strong>报告题目</strong></p>
-<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
-<p><strong>报告摘要</strong></p>
-<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>王林</title>
-    <url>/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0614-王林-南极平流层爆发性增温-中科院大气所"><a href="#0614-王林-南极平流层爆发性增温-中科院大气所" class="headerlink" title="0614 王林 南极平流层爆发性增温  中科院大气所"></a>0614 王林 南极平流层爆发性增温  中科院大气所</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhlzipzj20we0nmn0b.jpg" alt="Screen Shot 2022-06-14 at 14.34.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhojbogj21460u0jzq.jpg" alt="Screen Shot 2022-06-14 at 14.35.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rkq73vqj21400u0dlc.jpg" alt="Screen Shot 2022-06-14 at 14.38.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ro5x1rpj20o7052t9e.jpg" alt="Screen Shot 2022-06-14 at 14.41.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37roqetfoj20ot0h3q51.jpg" alt="Screen Shot 2022-06-14 at 14.42.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rqkzthcj20ot0hbdi9.jpg" alt="Screen Shot 2022-06-14 at 14.44.08"></p>
-<h3 id="南极SSW的特征、机制和影响"><a href="#南极SSW的特征、机制和影响" class="headerlink" title="南极SSW的特征、机制和影响"></a>南极SSW的特征、机制和影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rrqltnfj20os0f6gnm.jpg" alt="Screen Shot 2022-06-14 at 14.45.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ruwv8qyj20om0hg0vo.jpg" alt="Screen Shot 2022-06-14 at 14.47.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rvwsjrcj20oi0hsmzp.jpg" alt="Screen Shot 2022-06-14 at 14.49.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rykiuobj20oi0i9dj8.jpg" alt="Screen Shot 2022-06-14 at 14.51.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rzdyjtwj20oe0hon0m.jpg" alt="Screen Shot 2022-06-14 at 14.52.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s0j4t71j20oh0hlq5w.jpg" alt="Screen Shot 2022-06-14 at 14.53.42"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s1538t6j20op0epq5f.jpg" alt="Screen Shot 2022-06-14 at 14.54.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s2n19nej20ol0hywim.jpg" alt="Screen Shot 2022-06-14 at 14.55.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s6kewr4j20oi0hwdiy.jpg" alt="Screen Shot 2022-06-14 at 14.59.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s8oa5m1j20oh0idn0f.jpg" alt="Screen Shot 2022-06-14 at 15.01.33"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sbcpa4sj20ni0hojuc.jpg" alt="Screen Shot 2022-06-14 at 15.04.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si3okwjj20ol0g7gn9.jpg" alt="Screen Shot 2022-06-14 at 15.07.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si6h926j20or0fh771.jpg" alt="Screen Shot 2022-06-14 at 15.10.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37skwj9vdj20oo0fs77m.jpg" alt="Screen Shot 2022-06-14 at 15.13.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37slm15upj20ov0foju1.jpg" alt="Screen Shot 2022-06-14 at 15.13.53"></p>
-<h3 id="气候影响"><a href="#气候影响" class="headerlink" title="气候影响"></a>气候影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sn5fmnuj20od0hywhn.jpg" alt="Screen Shot 2022-06-14 at 15.15.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sp1awbxj20oo0flgo8.jpg" alt="Screen Shot 2022-06-14 at 15.17.16"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sqftu96j20oj0ibn01.jpg" alt="Screen Shot 2022-06-14 at 15.18.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ssnv6l3j20o90g2wgr.jpg" alt="Screen Shot 2022-06-14 at 15.20.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37st8y74yj20ol0efdih.jpg" alt="Screen Shot 2022-06-14 at 15.21.14"></p>
-<h3 id="2019年南极SSW的个例分析"><a href="#2019年南极SSW的个例分析" class="headerlink" title="2019年南极SSW的个例分析"></a>2019年南极SSW的个例分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sutnocgj20oh0i5dii.jpg" alt="Screen Shot 2022-06-14 at 15.22.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37swm8jnwj20ot0h241q.jpg" alt="Screen Shot 2022-06-14 at 15.24.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sy6fbr2j20p00i70vr.jpg" alt="Screen Shot 2022-06-14 at 15.26.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t0mgb7kj20p20ij0wq.jpg" alt="Screen Shot 2022-06-14 at 15.27.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t2cbe3ij20ot0ihtcu.jpg" alt="Screen Shot 2022-06-14 at 15.30.04"></p>
-<p>![Screen Shot 2022-06-14 at 15.30.25](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-14 at 15.30.25.png)</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6a5k3wj20s30k4djk.jpg" alt="Screen Shot 2022-06-14 at 15.33.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6u8t2pj20sb0ko0z8.jpg" alt="Screen Shot 2022-06-14 at 15.34.19"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t8ezz9rj20rz0ksq5j.jpg" alt="Screen Shot 2022-06-14 at 15.35.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t9gbctmj20s60jywi0.jpg" alt="Screen Shot 2022-06-14 at 15.36.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ta38d9rj20rk0kpwh8.jpg" alt="Screen Shot 2022-06-14 at 15.37.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tako948j20ro0kpwhc.jpg" alt="Screen Shot 2022-06-14 at 15.37.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tbhesnxj20rw0ir422.jpg" alt="Screen Shot 2022-06-14 at 15.38.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tby9ksnj20qy0l3n20.jpg" alt="Screen Shot 2022-06-14 at 15.39.14"></p>
-<hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37kkhyhvpj20u013zgrl.jpg" alt="WechatIMG5366"></p>
+    <url>/2022/06/02/Seminar/0602-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0602-IPCC-冰冻圈变化-洪宇、鞠汶姗"><a href="#0602-IPCC-冰冻圈变化-洪宇、鞠汶姗" class="headerlink" title="0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗"></a>0602 IPCC 冰冻圈变化 - 洪宇、鞠汶姗</h2><h4 id="北极海冰"><a href="#北极海冰" class="headerlink" title="北极海冰"></a>北极海冰</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx0drf6gj224q0saqbp.jpg" alt="Screen Shot 2022-06-02 at 15.07.55"></p>
+<p>2℃增暖，北极夏季无冰，但可恢复</p>
+<h4 id="南极海冰"><a href="#南极海冰" class="headerlink" title="南极海冰"></a>南极海冰</h4><p>没有明显趋势，不同海区趋势不一致</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx1h7876j22440u0aij.jpg" alt="Screen Shot 2022-06-02 at 15.09.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx3c2a5lj22600o87cs.jpg" alt="Screen Shot 2022-06-02 at 15.11.18"></p>
+<p>动力作用对海冰的生成重要</p>
+<h3 id="冰盖"><a href="#冰盖" class="headerlink" title="冰盖"></a>冰盖</h3><p>只有穿过grounding line的冰盖才会对海平面造成影响</p>
+<p>冰架对海平面没有影响</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txs8y7x8j21n00u0jxu.jpg" alt="Screen Shot 2022-06-02 at 15.35.18"></p>
+<h4 id="格陵兰冰盖"><a href="#格陵兰冰盖" class="headerlink" title="格陵兰冰盖"></a>格陵兰冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx7mk0suj21um0u0do2.jpg" alt="Screen Shot 2022-06-02 at 15.15.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tx97jy08j21or0u0n6i.jpg" alt="Screen Shot 2022-06-02 at 15.16.49"></p>
+<h4 id="南极冰盖"><a href="#南极冰盖" class="headerlink" title="南极冰盖"></a>南极冰盖</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txaj1m8mj21p40u0qbf.jpg" alt="Screen Shot 2022-06-02 at 15.17.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txbzpkyyj223i0j4q8j.jpg" alt="Screen Shot 2022-06-02 at 15.19.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txds5rvej22440hedkk.jpg" alt="Screen Shot 2022-06-02 at 15.20.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txdvpreoj21860laads.jpg" alt="Screen Shot 2022-06-02 at 15.21.35"></p>
+<p>次表层海水增暖，溶解底部的冰盖</p>
+<h3 id="冰川"><a href="#冰川" class="headerlink" title="冰川"></a>冰川</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txff89a7j21xw0ien1z.jpg" alt="Screen Shot 2022-06-02 at 15.23.04"></p>
+<h2 id="Sea-Level-change"><a href="#Sea-Level-change" class="headerlink" title="Sea Level change"></a>Sea Level change</h2><h4 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2txybbre6j21p70u0grn.jpg" alt="Screen Shot 2022-06-02 at 15.40.57"></p>
+<h4 id="Pre-satellite-era"><a href="#Pre-satellite-era" class="headerlink" title="Pre-satellite era"></a>Pre-satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty2zfe09j22480u0472.jpg" alt="Screen Shot 2022-06-02 at 15.45.09"></p>
+<p>冰川主导</p>
+<h4 id="Satellite-era"><a href="#Satellite-era" class="headerlink" title="Satellite era"></a>Satellite era</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty3tnk6yj223g0s4woa.jpg" alt="Screen Shot 2022-06-02 at 15.46.19"></p>
+<p>冰盖主导</p>
+<h4 id="Regional-budget"><a href="#Regional-budget" class="headerlink" title="Regional budget"></a>Regional budget</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2ty51go36j22440pu0zk.jpg" alt="Screen Shot 2022-06-02 at 15.47.28"></p>
+<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyfst95tj21xj0u0gu9.jpg" alt="Screen Shot 2022-06-02 at 15.52.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyf059n7j21mm0u0jyz.jpg" alt="Screen Shot 2022-06-02 at 15.56.58"></p>
+<h4 id="Drivers"><a href="#Drivers" class="headerlink" title="Drivers"></a>Drivers</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyhhpxj7j20z70u0afx.jpg" alt="Screen Shot 2022-06-02 at 15.59.23"></p>
+<p>another perspective on uncertainties: 达到对应海平面变化的出现时间的跨度</p>
+<h4 id="Extreme-sea-level-Tides-surges-and-waves"><a href="#Extreme-sea-level-Tides-surges-and-waves" class="headerlink" title="Extreme sea level: Tides, surges and waves"></a>Extreme sea level: Tides, surges and waves</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tytleyhrj21pm0u0qc1.jpg" alt="Screen Shot 2022-06-02 at 16.03.26"></p>
+<h4 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h4><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h2tyqhvqkyj21s90u046t.jpg" alt="Screen Shot 2022-06-02 at 16.05.17"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -583,6 +510,97 @@
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3hbyq2n9cj21a60ng40d.jpg" alt="Screen Shot 2022-06-22 at 21.14.02"></p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3hc0yv0q2j20q40vaq6f.jpg" alt="Screen Shot 2022-06-22 at 21.16.09"></p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3hc17sy04j214e0qqwgo.jpg" alt="Screen Shot 2022-06-22 at 21.16.27"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>王林</title>
+    <url>/2022/06/14/Seminar/0614-%E7%8E%8B%E6%9E%97/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0614-王林-南极平流层爆发性增温-中科院大气所"><a href="#0614-王林-南极平流层爆发性增温-中科院大气所" class="headerlink" title="0614 王林 南极平流层爆发性增温  中科院大气所"></a>0614 王林 南极平流层爆发性增温  中科院大气所</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhlzipzj20we0nmn0b.jpg" alt="Screen Shot 2022-06-14 at 14.34.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rhojbogj21460u0jzq.jpg" alt="Screen Shot 2022-06-14 at 14.35.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rkq73vqj21400u0dlc.jpg" alt="Screen Shot 2022-06-14 at 14.38.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ro5x1rpj20o7052t9e.jpg" alt="Screen Shot 2022-06-14 at 14.41.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37roqetfoj20ot0h3q51.jpg" alt="Screen Shot 2022-06-14 at 14.42.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rqkzthcj20ot0hbdi9.jpg" alt="Screen Shot 2022-06-14 at 14.44.08"></p>
+<h3 id="南极SSW的特征、机制和影响"><a href="#南极SSW的特征、机制和影响" class="headerlink" title="南极SSW的特征、机制和影响"></a>南极SSW的特征、机制和影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rrqltnfj20os0f6gnm.jpg" alt="Screen Shot 2022-06-14 at 14.45.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ruwv8qyj20om0hg0vo.jpg" alt="Screen Shot 2022-06-14 at 14.47.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rvwsjrcj20oi0hsmzp.jpg" alt="Screen Shot 2022-06-14 at 14.49.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rykiuobj20oi0i9dj8.jpg" alt="Screen Shot 2022-06-14 at 14.51.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37rzdyjtwj20oe0hon0m.jpg" alt="Screen Shot 2022-06-14 at 14.52.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s0j4t71j20oh0hlq5w.jpg" alt="Screen Shot 2022-06-14 at 14.53.42"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s1538t6j20op0epq5f.jpg" alt="Screen Shot 2022-06-14 at 14.54.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s2n19nej20ol0hywim.jpg" alt="Screen Shot 2022-06-14 at 14.55.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s6kewr4j20oi0hwdiy.jpg" alt="Screen Shot 2022-06-14 at 14.59.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37s8oa5m1j20oh0idn0f.jpg" alt="Screen Shot 2022-06-14 at 15.01.33"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sbcpa4sj20ni0hojuc.jpg" alt="Screen Shot 2022-06-14 at 15.04.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si3okwjj20ol0g7gn9.jpg" alt="Screen Shot 2022-06-14 at 15.07.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37si6h926j20or0fh771.jpg" alt="Screen Shot 2022-06-14 at 15.10.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37skwj9vdj20oo0fs77m.jpg" alt="Screen Shot 2022-06-14 at 15.13.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37slm15upj20ov0foju1.jpg" alt="Screen Shot 2022-06-14 at 15.13.53"></p>
+<h3 id="气候影响"><a href="#气候影响" class="headerlink" title="气候影响"></a>气候影响</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sn5fmnuj20od0hywhn.jpg" alt="Screen Shot 2022-06-14 at 15.15.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sp1awbxj20oo0flgo8.jpg" alt="Screen Shot 2022-06-14 at 15.17.16"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sqftu96j20oj0ibn01.jpg" alt="Screen Shot 2022-06-14 at 15.18.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ssnv6l3j20o90g2wgr.jpg" alt="Screen Shot 2022-06-14 at 15.20.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37st8y74yj20ol0efdih.jpg" alt="Screen Shot 2022-06-14 at 15.21.14"></p>
+<h3 id="2019年南极SSW的个例分析"><a href="#2019年南极SSW的个例分析" class="headerlink" title="2019年南极SSW的个例分析"></a>2019年南极SSW的个例分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sutnocgj20oh0i5dii.jpg" alt="Screen Shot 2022-06-14 at 15.22.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37swm8jnwj20ot0h241q.jpg" alt="Screen Shot 2022-06-14 at 15.24.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37sy6fbr2j20p00i70vr.jpg" alt="Screen Shot 2022-06-14 at 15.26.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t0mgb7kj20p20ij0wq.jpg" alt="Screen Shot 2022-06-14 at 15.27.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t2cbe3ij20ot0ihtcu.jpg" alt="Screen Shot 2022-06-14 at 15.30.04"></p>
+<p>![Screen Shot 2022-06-14 at 15.30.25](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screen Shot 2022-06-14 at 15.30.25.png)</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6a5k3wj20s30k4djk.jpg" alt="Screen Shot 2022-06-14 at 15.33.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t6u8t2pj20sb0ko0z8.jpg" alt="Screen Shot 2022-06-14 at 15.34.19"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t8ezz9rj20rz0ksq5j.jpg" alt="Screen Shot 2022-06-14 at 15.35.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37t9gbctmj20s60jywi0.jpg" alt="Screen Shot 2022-06-14 at 15.36.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37ta38d9rj20rk0kpwh8.jpg" alt="Screen Shot 2022-06-14 at 15.37.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tako948j20ro0kpwhc.jpg" alt="Screen Shot 2022-06-14 at 15.37.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tbhesnxj20rw0ir422.jpg" alt="Screen Shot 2022-06-14 at 15.38.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37tby9ksnj20qy0l3n20.jpg" alt="Screen Shot 2022-06-14 at 15.39.14"></p>
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h37kkhyhvpj20u013zgrl.jpg" alt="WechatIMG5366"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Group Study</title>
+    <url>/2022/06/21/Seminar/0621-%E7%BB%84%E4%BC%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0621-环流动力工作总结-夏一凡"><a href="#0621-环流动力工作总结-夏一凡" class="headerlink" title="0621 环流动力工作总结 夏一凡"></a>0621 环流动力工作总结 夏一凡</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1a1jlm2j217s0u0thk.jpg" alt="Screen Shot 2022-06-22 at 15.02.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1a9k3t4j21ab0u010m.jpg" alt="Screen Shot 2022-06-22 at 15.03.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1arpnyej21di0u0q9r.jpg" alt="Screen Shot 2022-06-22 at 15.05.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1bodjdsj21e80u044v.jpg" alt="Screen Shot 2022-06-22 at 15.05.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1cy6710j21ce0u077s.jpg" alt="Screen Shot 2022-06-22 at 15.06.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1e0qjedj21890u0wjs.jpg" alt="Screen Shot 2022-06-22 at 15.08.00"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h1qtx05hj219s0u0jwa.jpg" alt="Screen Shot 2022-06-22 at 15.19.51"></p>
+<h2 id="东南印度洋海表盐度对IOD的非对称响应-孙启伟"><a href="#东南印度洋海表盐度对IOD的非对称响应-孙启伟" class="headerlink" title="东南印度洋海表盐度对IOD的非对称响应  孙启伟"></a>东南印度洋海表盐度对IOD的非对称响应  孙启伟</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3oabrghj21qt0u0tgs.jpg" alt="Screen Shot 2022-06-22 at 16.26.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3vh9vmxj21ns0u0agj.jpg" alt="Screen Shot 2022-06-22 at 16.28.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3h3vki7z0j21cx0u0n9b.jpg" alt="Screen Shot 2022-06-22 at 16.33.18"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>魏云涛</title>
+    <url>/2022/06/09/Seminar/0609-%E9%AD%8F%E4%BA%91%E6%B6%9B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学"><a href="#0609-魏云涛-Modulation-of-ENSO-on-MJO-Eastward-Propagation-and-Vertical-Structure-复旦大学" class="headerlink" title="0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学"></a>0609 魏云涛 Modulation of ENSO on MJO Eastward Propagation and Vertical Structure 复旦大学</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qnrk0euj20ql0j2797.jpg" alt="Screen Shot 2022-06-09 at 09.33.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpt83w9j20qb0j2whp.jpg" alt="Screen Shot 2022-06-09 at 09.34.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qpbfxllj20ql0jdq79.jpg" alt="Screen Shot 2022-06-09 at 09.34.56"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qqg9xigj20qe0ipjx2.jpg" alt="Screen Shot 2022-06-09 at 09.35.58"></p>
+<h3 id="ENSO-modulation-on-MJO-propagation"><a href="#ENSO-modulation-on-MJO-propagation" class="headerlink" title="ENSO modulation on MJO propagation"></a>ENSO modulation on MJO propagation</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qryxnckj20pl09m766.jpg" alt="Screen Shot 2022-06-09 at 09.37.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qtaqvamj20q00j5gra.jpg" alt="Screen Shot 2022-06-09 at 09.38.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31quz5x6mj20ow0h043n.jpg" alt="Screen Shot 2022-06-09 at 09.40.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h31qzkgi1uj20mw0jfgo7.jpg" alt="Screen Shot 2022-06-09 at 09.42.44"></p>
+<hr>
+<p><strong>报告人简介</strong></p>
+<p>魏云涛，博士毕业于中科院海洋研究所，先后在美国犹他大学从事博士后研究工作，中国气象科学研究院担任研究助理。研究方向主要涉及：热带次季节变率机理及预测、多尺度相互作用、日变化、对流触发，中尺度和气候数值模拟。在Journal of Climate, Geophysical Research Letters, Climate Dynamics等国际SCI刊物发表论文15篇。担任Bulletin of the American Meteorological Society等十余种SCI杂志同行评审。</p>
+<p><strong>报告题目</strong></p>
+<p>Modulation of ENSO on MJO Eastward Propagation and Vertical Structure</p>
+<p><strong>报告摘要</strong></p>
+<p>Madden-Julian Oscillation (MJO) and El Niño-Southern Oscillation (ENSO) are the two dominant modes of tropical intraseasonal (20–100-day) and interannual (2–7-year) variabilities, respectively. There are profound two-way interactions between them and exploring how ENSO affects MJO is of great importance for the subseasonal to seasonal (S2S) scale predictions of global weather and climate. Unlike previous studies that often focus on MJO strength, this study explore how ENSO exerts diversified modulation effects on MJO propagation speed and vertical structure. The results reveal that: under the warm phase of ENSO, the MJO is relatively fast, shows evident westward energy dispersion, and the moisture disturbances in the lower troposphere grow more rapidly than that in the mid troposphere; on the contrary, under the cold phase of ENSO, the propagation speed of MJO is slow without significant energy dispersion and the rapid moisture growth is elevated towards the mid troposphere, leading to a “top-heavy” MJO. The underlying mechanisms mainly involve the multiscale interactions in the maritime continent-western Pacific regions among high-frequency synoptic weather, low-frequency background mean state, and intraseasonal scales. In particular, ENSO acts to regulate the horizontal tilt extent of tropical depression-type disturbances that rectify the vertical structures of MJO by influencing mid-tropospheric nonlinear moist dynamics. Implications for S2S prediction and open questions deserved future studies will be also discussed.</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -676,53 +694,51 @@
       </categories>
   </entry>
   <entry>
-    <title>郑佳喻+何超</title>
-    <url>/2022/06/30/Seminar/0630-%E9%83%91%E4%BD%B3%E5%96%BB+%E4%BD%95%E8%B6%85/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="郑佳喻-Influences-of-three-oceans-on-record-breaking-rainfall-over-the-Yangtze-River-Vally-in-June-202-中科院南海所"><a href="#郑佳喻-Influences-of-three-oceans-on-record-breaking-rainfall-over-the-Yangtze-River-Vally-in-June-202-中科院南海所" class="headerlink" title="郑佳喻  Influences of three oceans on record-breaking rainfall over the Yangtze River Vally in June 202 中科院南海所"></a>郑佳喻  Influences of three oceans on record-breaking rainfall over the Yangtze River Vally in June 202 中科院南海所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9wyninpj20o40i50u7.jpg" alt="Screen Shot 2022-06-30 at 14.46.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9rzmjy6j20o70i30ww.jpg" alt="Screen Shot 2022-06-30 at 14.47.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9s09203j20o70i4whu.jpg" alt="Screen Shot 2022-06-30 at 14.48.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ukibq7j20oa0i376o.jpg" alt="Screen Shot 2022-06-30 at 14.48.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ulw8dmj20o70i2q6c.jpg" alt="Screen Shot 2022-06-30 at 14.49.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ulhyw2j20o40i177o.jpg" alt="Screen Shot 2022-06-30 at 14.49.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ujsjccj20nt0gfwhz.jpg" alt="Screen Shot 2022-06-30 at 14.50.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9v23s5cj20nx0hk0ve.jpg" alt="Screen Shot 2022-06-30 at 14.51.19"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9wbicrsj20o20guacx.jpg" alt="Screen Shot 2022-06-30 at 14.52.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ww4nwaj20mw0h277c.jpg" alt="Screen Shot 2022-06-30 at 14.52.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9z0vtasj20n60hnwha.jpg" alt="Screen Shot 2022-06-30 at 14.55.13"></p>
-<h2 id="何超-东亚夏季风对COVID-19和全球变暖的响应机制-暨南大学"><a href="#何超-东亚夏季风对COVID-19和全球变暖的响应机制-暨南大学" class="headerlink" title="何超  东亚夏季风对COVID-19和全球变暖的响应机制  暨南大学"></a>何超  东亚夏季风对COVID-19和全球变暖的响应机制  暨南大学</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qajtnyvbj20o10hztc0.jpg" alt="Screen Shot 2022-06-30 at 15.14.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qal5xh5dj20nz0i3gph.jpg" alt="Screen Shot 2022-06-30 at 15.16.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qan1t6y2j20nx0hz0x1.jpg" alt="Screen Shot 2022-06-30 at 15.17.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qaqgtkh5j20ob0i0789.jpg" alt="Screen Shot 2022-06-30 at 15.18.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qarfziklj20o30hvwh3.jpg" alt="Screen Shot 2022-06-30 at 15.22.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qassf1t7j20nk0i6jvv.jpg" alt="Screen Shot 2022-06-30 at 15.23.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qaum1vjrj20o90hpq7a.jpg" alt="Screen Shot 2022-06-30 at 15.25.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qawp1nwjj20o20hwafc.jpg" alt="Screen Shot 2022-06-30 at 15.27.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qax0x6qpj20o70gbdkc.jpg" alt="Screen Shot 2022-06-30 at 15.27.54"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qayrrk28j20nn0i1djv.jpg" alt="Screen Shot 2022-06-30 at 15.29.14"></p>
-<p><strong>EASM对COVID-19的响应幅度达到了EASM自然年际年率幅度的1&#x2F;3左右</strong></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb08leggj20o30hzn2o.jpg" alt="Screen Shot 2022-06-30 at 15.30.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb3q57a1j20o90hqdk1.jpg" alt="Screen Shot 2022-06-30 at 15.33.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb3qs859j20ny0i0ads.jpg" alt="Screen Shot 2022-06-30 at 15.34.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8fe0y0j20o30hxack.jpg" alt="Screen Shot 2022-06-30 at 15.36.21"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8ekww6j20o60hsq5r.jpg" alt="Screen Shot 2022-06-30 at 15.36.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8geuv0j20nq0hegp6.jpg" alt="Screen Shot 2022-06-30 at 15.38.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8wfiuoj20nh0httcy.jpg" alt="Screen Shot 2022-06-30 at 15.39.16"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb9t7c8vj20o40i1wj4.jpg" alt="Screen Shot 2022-06-30 at 15.39.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbbo4glgj20nz0ho0vo.jpg" alt="Screen Shot 2022-06-30 at 15.41.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbdehxduj20o20i5ae0.jpg" alt="Screen Shot 2022-06-30 at 15.43.34"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbdqkgyvj20no0hvjua.jpg" alt="Screen Shot 2022-06-30 at 15.43.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbfgtnp2j20nj0hzdi0.jpg" alt="Screen Shot 2022-06-30 at 15.45.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbg5nqmuj20oa0huq6l.jpg" alt="Screen Shot 2022-06-30 at 15.46.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbh91xq7j20o20i6tc6.jpg" alt="Screen Shot 2022-06-30 at 15.47.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbktbxo6j20np0hygp9.jpg" alt="Screen Shot 2022-06-30 at 15.50.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbpjhfk9j20np0i078h.jpg" alt="Screen Shot 2022-06-30 at 15.54.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbx4sit6j20o30hswid.jpg" alt="Screen Shot 2022-06-30 at 15.59.46"><img src="/" alt="Screen Shot 2022-06-30 at 15.55.04"></p>
-<p>西太副高：快的正响应+慢的负响应</p>
-<p>青藏高原：稳步发展的正响应</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbvx8n9mj20ni0hv42n.jpg" alt="Screen Shot 2022-06-30 at 16.01.18"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbyqcbmgj20nz0ht76p.jpg" alt="Screen Shot 2022-06-30 at 16.03.05"></p>
+    <title>赵俊虎</title>
+    <url>/2022/06/30/Seminar/0630-%E8%B5%B5%E4%BF%8A%E8%99%8E/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例-赵俊虎-国家气候中心"><a href="#三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例-赵俊虎-国家气候中心" class="headerlink" title="三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例   赵俊虎   国家气候中心"></a>三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例   赵俊虎   国家气候中心</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0s5q641j20wv0ijae8.jpg" alt="Screen Shot 2022-06-30 at 09.37.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0tizmmoj20x40ikgp7.jpg" alt="Screen Shot 2022-06-30 at 09.38.02"></p>
+<h3 id="2020年江淮流域超强梅雨的驱动因子分析"><a href="#2020年江淮流域超强梅雨的驱动因子分析" class="headerlink" title="2020年江淮流域超强梅雨的驱动因子分析"></a>2020年江淮流域超强梅雨的驱动因子分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0v3mzkbj20t30i40wd.jpg" alt="Screen Shot 2022-06-30 at 09.39.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0vv9fg7j20x40imgqx.jpg" alt="Screen Shot 2022-06-30 at 09.40.33"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0yorb34j20x30igq74.jpg" alt="Screen Shot 2022-06-30 at 09.41.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0ynyfckj20wv0ijjvk.jpg" alt="Screen Shot 2022-06-30 at 09.42.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0ze2mfij20wt0ifacr.jpg" alt="Screen Shot 2022-06-30 at 09.44.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15gtp7bj20wx0gwn0w.jpg" alt="Screen Shot 2022-06-30 at 09.45.18"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15ik6l6j20vn0hujxe.jpg" alt="Screen Shot 2022-06-30 at 09.48.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15jjsvvj20v90i47ak.jpg" alt="Screen Shot 2022-06-30 at 09.48.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15hfiwtj20tp0gd0w9.jpg" alt="Screen Shot 2022-06-30 at 09.49.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15vgfkej20ws0hx7ah.jpg" alt="Screen Shot 2022-06-30 at 09.50.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q167id6kj20vd0hcafy.jpg" alt="Screen Shot 2022-06-30 at 09.50.44"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q16wullcj20wb0hnwk6.jpg" alt="Screen Shot 2022-06-30 at 09.51.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19mes3mj20un0hn411.jpg" alt="Screen Shot 2022-06-30 at 09.52.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19mvuwej20wu0he0vz.jpg" alt="Screen Shot 2022-06-30 at 09.53.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19lpmnoj20ur0hgtc7.jpg" alt="Screen Shot 2022-06-30 at 09.53.26"></p>
+<h3 id="2021年长江流域“倒黄梅”驱动因子分析"><a href="#2021年长江流域“倒黄梅”驱动因子分析" class="headerlink" title="2021年长江流域“倒黄梅”驱动因子分析"></a>2021年长江流域“倒黄梅”驱动因子分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1a21nq0j20vo0gtwhr.jpg" alt="Screen Shot 2022-06-30 at 09.54.19"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ah1npcj20v40hwn11.jpg" alt="Screen Shot 2022-06-30 at 09.54.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1bp4zaqj20tv0i8aeh.jpg" alt="Screen Shot 2022-06-30 at 09.55.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1cbmzx3j20wy0hhaeu.jpg" alt="Screen Shot 2022-06-30 at 09.56.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ebqn5wj20wq0ibn3l.jpg" alt="Screen Shot 2022-06-30 at 09.58.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1fmyf7nj20tv0huq65.jpg" alt="Screen Shot 2022-06-30 at 09.59.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1gpwkr2j20ux0i10vw.jpg" alt="Screen Shot 2022-06-30 at 10.00.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1hvymwtj20uh0i4n0x.jpg" alt="Screen Shot 2022-06-30 at 10.01.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1jreh3fj20vo0fxq52.jpg" alt="Screen Shot 2022-06-30 at 10.03.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1keaod9j20sd0hn0vf.jpg" alt="Screen Shot 2022-06-30 at 10.04.14"></p>
+<h3 id="三大洋对东北盛夏降水年际变率的影响及机理"><a href="#三大洋对东北盛夏降水年际变率的影响及机理" class="headerlink" title="三大洋对东北盛夏降水年际变率的影响及机理"></a>三大洋对东北盛夏降水年际变率的影响及机理</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1kts5q9j20wb0hhq7i.jpg" alt="Screen Shot 2022-06-30 at 10.04.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1lb6r4kj20v00i8jwf.jpg" alt="Screen Shot 2022-06-30 at 10.05.12"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1mwact0j20to0i643q.jpg" alt="Screen Shot 2022-06-30 at 10.06.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1nwt5d1j20u70hk42o.jpg" alt="Screen Shot 2022-06-30 at 10.07.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1nyhi1aj20v30i0436.jpg" alt="Screen Shot 2022-06-30 at 10.07.39"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1oivd1bj20wj0ijq9k.jpg" alt="Screen Shot 2022-06-30 at 10.08.07"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ppxn5qj20vq0i20z0.jpg" alt="Screen Shot 2022-06-30 at 10.09.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1qt84yxj20vo0hr788.jpg" alt="Screen Shot 2022-06-30 at 10.10.32"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1rltyaxj20wv0ihwjb.jpg" alt="Screen Shot 2022-06-30 at 10.11.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1wf7bpcj20wz0ictd7.jpg" alt="Screen Shot 2022-06-30 at 10.12.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1wa1w5uj20wv0ieafr.jpg" alt="Screen Shot 2022-06-30 at 10.15.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1y0dlboj20wj0hs79n.jpg" alt="Screen Shot 2022-06-30 at 10.17.18"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q20abzk0j20x50i6gqj.jpg" alt="Screen Shot 2022-06-30 at 10.19.26"></p>
 <hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9sa2b6uj20u0140amu.jpg" alt="WechatIMG2774"></p>
+<h4 id="报告人简介"><a href="#报告人简介" class="headerlink" title="报告人简介"></a>报告人简介</h4><p>赵俊虎，2009年中山大学本科毕业，2014年兰州大学博士毕业，获首届国家博士奖学金、兰州大学“三好研究生”、“优秀毕业研究生”荣誉称号；博导为封国林教授。研究方向为短期气候预测和极端事件机理等。承担了2019&#x2F;2020年全国年度气候趋势预测主班、2021年全国汛期气候趋势预测主班，获2021年中国气象局重大气象服务优秀个人通报表扬、国家气候中心先进个人和突出贡献嘉奖。主持了国家自然科学基金项目3项，骨干参加两项重大研发计划。发表学术论文70余篇，其中第一和通讯作者论文34篇，出版专著《中国汛期降水动力-统计预测研究》（第2作者）。研究成果获“教育部科学技术进步”二等奖和中国气象学会“气象科学技术进步成果奖”二等奖2项奖励。入选国家气象科技创新工程“次季节至季节气候预测和气候系统模式”攻关团队骨干成员。</p>
+<h4 id="报告摘要"><a href="#报告摘要" class="headerlink" title="报告摘要"></a>报告摘要</h4><p>汛期降水预测是我国气象部门一项重要的科研和业务工作。准确认识海温异常对汛期降水的影响，有助于我们更加准确地预测汛期降水。采用观测诊断和数值模拟相结合的手段，研究了三大洋对我国东部汛期降水的影响及物理机制：1）揭示了2020年夏季江淮流域超强梅雨年际异常的驱动因子及其物理机制；2）探讨了2021年汛期降水季节内变化的成因，并揭示了热带北大西洋暖海温和第二次拉尼娜发展等多因子对8月长江中下游倒黄梅的共同作用；3）研究了三大洋海温异常对东北盛夏降水年际变率的影响，建立了基于海温驱动的经验预测模型，大幅度地改进了东北夏季降水的预测技巧。</p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -775,151 +791,9 @@
       </categories>
   </entry>
   <entry>
-    <title>赵俊虎</title>
-    <url>/2022/06/30/Seminar/0630-%E8%B5%B5%E4%BF%8A%E8%99%8E/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例-赵俊虎-国家气候中心"><a href="#三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例-赵俊虎-国家气候中心" class="headerlink" title="三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例   赵俊虎   国家气候中心"></a>三大洋对我国汛期降水的影响及物理机制——以2020年和2021年为例   赵俊虎   国家气候中心</h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0s5q641j20wv0ijae8.jpg" alt="Screen Shot 2022-06-30 at 09.37.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0tizmmoj20x40ikgp7.jpg" alt="Screen Shot 2022-06-30 at 09.38.02"></p>
-<h3 id="2020年江淮流域超强梅雨的驱动因子分析"><a href="#2020年江淮流域超强梅雨的驱动因子分析" class="headerlink" title="2020年江淮流域超强梅雨的驱动因子分析"></a>2020年江淮流域超强梅雨的驱动因子分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0v3mzkbj20t30i40wd.jpg" alt="Screen Shot 2022-06-30 at 09.39.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0vv9fg7j20x40imgqx.jpg" alt="Screen Shot 2022-06-30 at 09.40.33"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0yorb34j20x30igq74.jpg" alt="Screen Shot 2022-06-30 at 09.41.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0ynyfckj20wv0ijjvk.jpg" alt="Screen Shot 2022-06-30 at 09.42.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q0ze2mfij20wt0ifacr.jpg" alt="Screen Shot 2022-06-30 at 09.44.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15gtp7bj20wx0gwn0w.jpg" alt="Screen Shot 2022-06-30 at 09.45.18"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15ik6l6j20vn0hujxe.jpg" alt="Screen Shot 2022-06-30 at 09.48.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15jjsvvj20v90i47ak.jpg" alt="Screen Shot 2022-06-30 at 09.48.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15hfiwtj20tp0gd0w9.jpg" alt="Screen Shot 2022-06-30 at 09.49.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q15vgfkej20ws0hx7ah.jpg" alt="Screen Shot 2022-06-30 at 09.50.24"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q167id6kj20vd0hcafy.jpg" alt="Screen Shot 2022-06-30 at 09.50.44"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q16wullcj20wb0hnwk6.jpg" alt="Screen Shot 2022-06-30 at 09.51.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19mes3mj20un0hn411.jpg" alt="Screen Shot 2022-06-30 at 09.52.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19mvuwej20wu0he0vz.jpg" alt="Screen Shot 2022-06-30 at 09.53.11"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q19lpmnoj20ur0hgtc7.jpg" alt="Screen Shot 2022-06-30 at 09.53.26"></p>
-<h3 id="2021年长江流域“倒黄梅”驱动因子分析"><a href="#2021年长江流域“倒黄梅”驱动因子分析" class="headerlink" title="2021年长江流域“倒黄梅”驱动因子分析"></a>2021年长江流域“倒黄梅”驱动因子分析</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1a21nq0j20vo0gtwhr.jpg" alt="Screen Shot 2022-06-30 at 09.54.19"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ah1npcj20v40hwn11.jpg" alt="Screen Shot 2022-06-30 at 09.54.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1bp4zaqj20tv0i8aeh.jpg" alt="Screen Shot 2022-06-30 at 09.55.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1cbmzx3j20wy0hhaeu.jpg" alt="Screen Shot 2022-06-30 at 09.56.34"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ebqn5wj20wq0ibn3l.jpg" alt="Screen Shot 2022-06-30 at 09.58.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1fmyf7nj20tv0huq65.jpg" alt="Screen Shot 2022-06-30 at 09.59.40"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1gpwkr2j20ux0i10vw.jpg" alt="Screen Shot 2022-06-30 at 10.00.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1hvymwtj20uh0i4n0x.jpg" alt="Screen Shot 2022-06-30 at 10.01.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1jreh3fj20vo0fxq52.jpg" alt="Screen Shot 2022-06-30 at 10.03.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1keaod9j20sd0hn0vf.jpg" alt="Screen Shot 2022-06-30 at 10.04.14"></p>
-<h3 id="三大洋对东北盛夏降水年际变率的影响及机理"><a href="#三大洋对东北盛夏降水年际变率的影响及机理" class="headerlink" title="三大洋对东北盛夏降水年际变率的影响及机理"></a>三大洋对东北盛夏降水年际变率的影响及机理</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1kts5q9j20wb0hhq7i.jpg" alt="Screen Shot 2022-06-30 at 10.04.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1lb6r4kj20v00i8jwf.jpg" alt="Screen Shot 2022-06-30 at 10.05.12"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1mwact0j20to0i643q.jpg" alt="Screen Shot 2022-06-30 at 10.06.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1nwt5d1j20u70hk42o.jpg" alt="Screen Shot 2022-06-30 at 10.07.22"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1nyhi1aj20v30i0436.jpg" alt="Screen Shot 2022-06-30 at 10.07.39"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1oivd1bj20wj0ijq9k.jpg" alt="Screen Shot 2022-06-30 at 10.08.07"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1ppxn5qj20vq0i20z0.jpg" alt="Screen Shot 2022-06-30 at 10.09.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1qt84yxj20vo0hr788.jpg" alt="Screen Shot 2022-06-30 at 10.10.32"></p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1rltyaxj20wv0ihwjb.jpg" alt="Screen Shot 2022-06-30 at 10.11.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1wf7bpcj20wz0ictd7.jpg" alt="Screen Shot 2022-06-30 at 10.12.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1wa1w5uj20wv0ieafr.jpg" alt="Screen Shot 2022-06-30 at 10.15.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q1y0dlboj20wj0hs79n.jpg" alt="Screen Shot 2022-06-30 at 10.17.18"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q20abzk0j20x50i6gqj.jpg" alt="Screen Shot 2022-06-30 at 10.19.26"></p>
-<hr>
-<h4 id="报告人简介"><a href="#报告人简介" class="headerlink" title="报告人简介"></a>报告人简介</h4><p>赵俊虎，2009年中山大学本科毕业，2014年兰州大学博士毕业，获首届国家博士奖学金、兰州大学“三好研究生”、“优秀毕业研究生”荣誉称号；博导为封国林教授。研究方向为短期气候预测和极端事件机理等。承担了2019&#x2F;2020年全国年度气候趋势预测主班、2021年全国汛期气候趋势预测主班，获2021年中国气象局重大气象服务优秀个人通报表扬、国家气候中心先进个人和突出贡献嘉奖。主持了国家自然科学基金项目3项，骨干参加两项重大研发计划。发表学术论文70余篇，其中第一和通讯作者论文34篇，出版专著《中国汛期降水动力-统计预测研究》（第2作者）。研究成果获“教育部科学技术进步”二等奖和中国气象学会“气象科学技术进步成果奖”二等奖2项奖励。入选国家气象科技创新工程“次季节至季节气候预测和气候系统模式”攻关团队骨干成员。</p>
-<h4 id="报告摘要"><a href="#报告摘要" class="headerlink" title="报告摘要"></a>报告摘要</h4><p>汛期降水预测是我国气象部门一项重要的科研和业务工作。准确认识海温异常对汛期降水的影响，有助于我们更加准确地预测汛期降水。采用观测诊断和数值模拟相结合的手段，研究了三大洋对我国东部汛期降水的影响及物理机制：1）揭示了2020年夏季江淮流域超强梅雨年际异常的驱动因子及其物理机制；2）探讨了2021年汛期降水季节内变化的成因，并揭示了热带北大西洋暖海温和第二次拉尼娜发展等多因子对8月长江中下游倒黄梅的共同作用；3）研究了三大洋海温异常对东北盛夏降水年际变率的影响，建立了基于海温驱动的经验预测模型，大幅度地改进了东北夏季降水的预测技巧。</p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>周天军</title>
-    <url>/2022/07/01/Seminar/0701-%E5%91%A8%E5%A4%A9%E5%86%9B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="季风降水变化的检测归因和预测研究——以2020年和2021年为例-周天军-中科院大气所"><a href="#季风降水变化的检测归因和预测研究——以2020年和2021年为例-周天军-中科院大气所" class="headerlink" title="季风降水变化的检测归因和预测研究——以2020年和2021年为例   周天军   中科院大气所"></a>季风降水变化的检测归因和预测研究——以2020年和2021年为例   周天军   中科院大气所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r85glxd2j21ht0u078g.jpg" alt="Screen Shot 2022-07-01 at 10.32.26"></p>
-<h3 id="为什么要做归因检测"><a href="#为什么要做归因检测" class="headerlink" title="为什么要做归因检测"></a>为什么要做归因检测</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7fxu3g2j21hd0u0ag3.jpg" alt="Screen Shot 2022-07-01 at 10.10.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7fz5zaaj21h80u0thx.jpg" alt="Screen Shot 2022-07-01 at 10.11.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7hwwtz1j21he0u00z8.jpg" alt="Screen Shot 2022-07-01 at 10.15.04"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7icbkobj21h90u07a2.jpg" alt="Screen Shot 2022-07-01 at 10.15.33"></p>
-<h3 id="季风区降水变化的检测归因"><a href="#季风区降水变化的检测归因" class="headerlink" title="季风区降水变化的检测归因"></a>季风区降水变化的检测归因</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7jd2vd6j21hg0u078o.jpg" alt="Screen Shot 2022-07-01 at 10.16.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7kun19ij21hb0u044r.jpg" alt="Screen Shot 2022-07-01 at 10.17.00"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7kvf8ckj21hc0u0437.jpg" alt="Screen Shot 2022-07-01 at 10.17.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7lh090aj21hd0u00z5.jpg" alt="Screen Shot 2022-07-01 at 10.18.33"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7m50bqcj21hc0u0jzz.jpg" alt="Screen Shot 2022-07-01 at 10.19.12"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7mlq2nyj21hd0u0q8b.jpg" alt="Screen Shot 2022-07-01 at 10.19.37"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7ng7yn9j21he0u0jxb.jpg" alt="Screen Shot 2022-07-01 at 10.20.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7nv8yn7j21ha0u0gt3.jpg" alt="Screen Shot 2022-07-01 at 10.20.47"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7oxiqxej21hi0u0tdt.jpg" alt="Screen Shot 2022-07-01 at 10.21.21"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7oyjr4qj21h80u0jwd.jpg" alt="Screen Shot 2022-07-01 at 10.21.36"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7pqijchj21fu0u041x.jpg" alt="Screen Shot 2022-07-01 at 10.22.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s82hw6j21gh0u07ak.jpg" alt="Screen Shot 2022-07-01 at 10.22.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s6birnj21hn0u0qa6.jpg" alt="Screen Shot 2022-07-01 at 10.23.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s5asctj21f30u00zf.jpg" alt="Screen Shot 2022-07-01 at 10.24.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s76jo3j21fm0u0dmg.jpg" alt="Screen Shot 2022-07-01 at 10.24.57"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7snmm1sj21gc0u010r.jpg" alt="Screen Shot 2022-07-01 at 10.25.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7tlsj91j21hc0u046m.jpg" alt="Screen Shot 2022-07-01 at 10.26.21"></p>
-<h3 id="为什么要做预测预估"><a href="#为什么要做预测预估" class="headerlink" title="为什么要做预测预估"></a>为什么要做预测预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7vv8y5ej21h90u0jy8.jpg" alt="Screen Shot 2022-07-01 at 10.27.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7vvw75aj21n60t2aef.jpg" alt="Screen Shot 2022-07-01 at 10.28.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7wbw1cjj21i60u042t.jpg" alt="Screen Shot 2022-07-01 at 10.28.59"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7wnmq3qj21l60tkafq.jpg" alt="Screen Shot 2022-07-01 at 10.29.18"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7x1to3uj21k10u0ahe.jpg" alt="Screen Shot 2022-07-01 at 10.29.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7xc21hqj21lf0u0q8x.jpg" alt="Screen Shot 2022-07-01 at 10.29.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7ydk783j21he0u00z9.jpg" alt="Screen Shot 2022-07-01 at 10.30.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7yyzebhj21hg0u0jwn.jpg" alt="Screen Shot 2022-07-01 at 10.31.31"></p>
-<h3 id="近期年代际预测"><a href="#近期年代际预测" class="headerlink" title="近期年代际预测"></a>近期年代际预测</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r80sqg1pj21iy0u0jyq.jpg" alt="Screen Shot 2022-07-01 at 10.32.57"></p>
-<h3 id="近期气候预估"><a href="#近期气候预估" class="headerlink" title="近期气候预估"></a>近期气候预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83sbd8dj21iy0u0jyq.jpg" alt="Screen Shot 2022-07-01 at 10.32.57"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83qgwdjj21jl0u0grc.jpg" alt="Screen Shot 2022-07-01 at 10.34.33"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83t5nj4j21hr0u00zf.jpg" alt="Screen Shot 2022-07-01 at 10.35.06"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83rabpdj21ht0u0gro.jpg" alt="Screen Shot 2022-07-01 at 10.35.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r84g9j7rj21i70u07bz.jpg" alt="Screen Shot 2022-07-01 at 10.36.42"></p>
-<h3 id="中期气候预估"><a href="#中期气候预估" class="headerlink" title="中期气候预估"></a>中期气候预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r86kwppgj21l60t878r.jpg" alt="Screen Shot 2022-07-01 at 10.38.50"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r88ggdw1j21hl0u0q9e.jpg" alt="Screen Shot 2022-07-01 at 10.40.31"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8a2qxiej21h10u0qch.jpg" alt="Screen Shot 2022-07-01 at 10.42.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8bo5hlej21h80u044q.jpg" alt="Screen Shot 2022-07-01 at 10.43.43"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8d4lg3fj217w0oqgst.jpg" alt="Screen Shot 2022-07-01 at 10.45.07"></p>
-<h3 id="长期预估"><a href="#长期预估" class="headerlink" title="长期预估"></a>长期预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8dlov0bj217y0omq7k.jpg" alt="Screen Shot 2022-07-01 at 10.45.30"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8dzqfcoj21ku0u0wi5.jpg" alt="Screen Shot 2022-07-01 at 10.45.57"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8f9fjecj21hd0u0wkn.jpg" alt="Screen Shot 2022-07-01 at 10.46.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8gkr2bmj21io0u0q8o.jpg" alt="Screen Shot 2022-07-01 at 10.48.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8jdaajlj21kq0u079t.jpg" alt="Screen Shot 2022-07-01 at 10.51.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8kkkqsxj21ge0u00zt.jpg" alt="Screen Shot 2022-07-01 at 10.52.17"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8m5iutgj21h40u0dlz.jpg" alt="Screen Shot 2022-07-01 at 10.53.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8nv2oucj21hf0u0afy.jpg" alt="Screen Shot 2022-07-01 at 10.55.25"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8p76yrcj21hj0u0n5a.jpg" alt="Screen Shot 2022-07-01 at 10.56.42"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8pn017zj21er0u0dmf.jpg" alt="Screen Shot 2022-07-01 at 10.57.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8rsa4j8j21dt0u0q8z.jpg" alt="Screen Shot 2022-07-01 at 10.59.13"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8tlj532j21g70u0gvy.jpg" alt="Screen Shot 2022-07-01 at 11.00.31"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8u3n4lmj21gn0u0dnl.jpg" alt="Screen Shot 2022-07-01 at 11.01.19"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8vdjb08j21h40u0gsw.jpg" alt="Screen Shot 2022-07-01 at 11.02.35"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8wuhq9zj21gn0u0tf8.jpg" alt="Screen Shot 2022-07-01 at 11.04.03"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8y2f1o0j21hw0u0jwc.jpg" alt="Screen Shot 2022-07-01 at 11.05.14"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8z0r0kpj21iz0u0alz.jpg" alt="Screen Shot 2022-07-01 at 11.06.10"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8zbyq1ej21hs0u07e9.jpg" alt="Screen Shot 2022-07-01 at 11.06.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r92yppxgj21hj0u0ah5.jpg" alt="Screen Shot 2022-07-01 at 11.09.55"></p>
-<hr>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7f0bhyjj20u0116wmz.jpg" alt="WechatIMG5676"></p>
-]]></content>
-      <categories>
-        <category>Seminar</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>组会</title>
-    <url>/2022/07/13/Seminar/0713-%E7%BB%84%E4%BC%9A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45cn5khg0j21hb0u0n4a.jpg" alt="Screen Shot 2022-07-13 at 15.50.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj3uvoyj21a40u077p.jpg" alt="Screen Shot 2022-07-13 at 16.19.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj3g1e1j21ab0u0dix.jpg" alt="Screen Shot 2022-07-13 at 16.20.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj2mxhqj21b40u079n.jpg" alt="Screen Shot 2022-07-13 at 16.20.48"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj1sb37j214j0u0wkh.jpg" alt="Screen Shot 2022-07-13 at 16.21.23"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dkmgp96j217a0u0q9i.jpg" alt="Screen Shot 2022-07-13 at 16.22.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e520bc3j21a00u045f.jpg" alt="Screen Shot 2022-07-13 at 16.24.46"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e517wsqj21cz0u047x.jpg" alt="Screen Shot 2022-07-13 at 16.25.52"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5318v3j21an0u0qa0.jpg" alt="Screen Shot 2022-07-13 at 16.27.41"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e566co6j21990u0wl9.jpg" alt="Screen Shot 2022-07-13 at 16.29.51"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e582snuj217y0u0jxq.jpg" alt="Screen Shot 2022-07-13 at 16.31.38"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e58y7txj21b80u0tga.jpg" alt="Screen Shot 2022-07-13 at 16.34.32"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5a4l8dj213o0u0dot.jpg" alt="Screen Shot 2022-07-13 at 16.38.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e579dzij214y0u07bg.jpg" alt="Screen Shot 2022-07-13 at 16.39.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5aoajwj21a10u0dld.jpg" alt="Screen Shot 2022-07-13 at 16.40.28"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epjf6s2j21370u0dlv.jpg" alt="Screen Shot 2022-07-13 at 16.50.09"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epguhafj213s0u0gro.jpg" alt="Screen Shot 2022-07-13 at 16.51.17"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45ephphf2j21370u0n50.jpg" alt="Screen Shot 2022-07-13 at 16.58.27"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epl9np1j21780u0q7v.jpg" alt="Screen Shot 2022-07-13 at 16.59.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epi80s8j21bm0u0q74.jpg" alt="Screen Shot 2022-07-13 at 17.01.45"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45f9r7htpj21520u00zh.jpg" alt="Screen Shot 2022-07-13 at 17.03.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45f9rmdfaj21mk0rggq4.jpg" alt="Screen Shot 2022-07-13 at 17.10.12"></p>
+    <title>复旦</title>
+    <url>/2022/07/04/Seminar/0704-%E5%A4%8D%E6%97%A6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="The-second-Fudan-International-Workshop-on-Atmospheric-Science-Frontier-FIWAS"><a href="#The-second-Fudan-International-Workshop-on-Atmospheric-Science-Frontier-FIWAS" class="headerlink" title="The second Fudan International Workshop on Atmospheric Science Frontier (FIWAS)"></a>The second Fudan International Workshop on Atmospheric Science Frontier (FIWAS)</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3umme5l6qj20u0461h0n.jpg" alt="WechatIMG888"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1005,25 +879,30 @@
       </categories>
   </entry>
   <entry>
-    <title>读书会</title>
-    <url>/2022/07/01/Seminar/0701-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Weather-and-Climate-extreme-events-in-a-chaning-climate"><a href="#Weather-and-Climate-extreme-events-in-a-chaning-climate" class="headerlink" title="Weather and Climate extreme events in a chaning climate"></a>Weather and Climate extreme events in a chaning climate</h2><h3 id="陈云帆"><a href="#陈云帆" class="headerlink" title="陈云帆"></a>陈云帆</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rfz8g8axj21c80r6af3.jpg" alt="Screen Shot 2022-07-01 at 15.05.56"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rfz99ffoj21c60r4q9r.jpg" alt="Screen Shot 2022-07-01 at 15.07.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rg3xg12wj21by0qc0xt.jpg" alt="Screen Shot 2022-07-01 at 15.11.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rga8jr0zj21gx0u0n3r.jpg" alt="Screen Shot 2022-07-01 at 15.16.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rga7sldgj21km0u07an.jpg" alt="Screen Shot 2022-07-01 at 15.18.53"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rgcq1eoej21kw0u0ahg.jpg" alt="Screen Shot 2022-07-01 at 15.19.38"></p>
-<h3 id="张莹"><a href="#张莹" class="headerlink" title="张莹"></a>张莹</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rgykbnfgj21hi0u0n55.jpg" alt="Screen Shot 2022-07-01 at 15.42.15"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rh7zv8zvj21h50u0tgp.jpg" alt="Screen Shot 2022-07-01 at 15.51.26"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rhb6nrhkj21gb0u0wms.jpg" alt="Screen Shot 2022-07-01 at 15.54.29"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri95xog3j21lt0u0gtp.jpg" alt="Screen Shot 2022-07-01 at 16.17.05"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri2ltbmjj21h40lagr4.jpg" alt="Screen Shot 2022-07-01 at 16.20.49"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri6v49x8j21gg0t47dy.jpg" alt="Screen Shot 2022-07-01 at 16.25.02"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri894701j21g40lowl9.jpg" alt="Screen Shot 2022-07-01 at 16.25.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri8zcnbjj21fo0qk114.jpg" alt="Screen Shot 2022-07-01 at 16.26.55"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rie4n6ipj21gi0q47be.jpg" alt="Screen Shot 2022-07-01 at 16.31.20"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rie5nj8ij21ga0setio.jpg" alt="Screen Shot 2022-07-01 at 16.31.58"></p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rigcwh5bj21g80r4n60.jpg" alt="Screen Shot 2022-07-01 at 16.34.03"></p>
+    <title>组会</title>
+    <url>/2022/07/13/Seminar/0713-%E7%BB%84%E4%BC%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45cn5khg0j21hb0u0n4a.jpg" alt="Screen Shot 2022-07-13 at 15.50.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj3uvoyj21a40u077p.jpg" alt="Screen Shot 2022-07-13 at 16.19.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj3g1e1j21ab0u0dix.jpg" alt="Screen Shot 2022-07-13 at 16.20.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj2mxhqj21b40u079n.jpg" alt="Screen Shot 2022-07-13 at 16.20.48"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dj1sb37j214j0u0wkh.jpg" alt="Screen Shot 2022-07-13 at 16.21.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45dkmgp96j217a0u0q9i.jpg" alt="Screen Shot 2022-07-13 at 16.22.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e520bc3j21a00u045f.jpg" alt="Screen Shot 2022-07-13 at 16.24.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e517wsqj21cz0u047x.jpg" alt="Screen Shot 2022-07-13 at 16.25.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5318v3j21an0u0qa0.jpg" alt="Screen Shot 2022-07-13 at 16.27.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e566co6j21990u0wl9.jpg" alt="Screen Shot 2022-07-13 at 16.29.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e582snuj217y0u0jxq.jpg" alt="Screen Shot 2022-07-13 at 16.31.38"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e58y7txj21b80u0tga.jpg" alt="Screen Shot 2022-07-13 at 16.34.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5a4l8dj213o0u0dot.jpg" alt="Screen Shot 2022-07-13 at 16.38.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e579dzij214y0u07bg.jpg" alt="Screen Shot 2022-07-13 at 16.39.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45e5aoajwj21a10u0dld.jpg" alt="Screen Shot 2022-07-13 at 16.40.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epjf6s2j21370u0dlv.jpg" alt="Screen Shot 2022-07-13 at 16.50.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epguhafj213s0u0gro.jpg" alt="Screen Shot 2022-07-13 at 16.51.17"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45ephphf2j21370u0n50.jpg" alt="Screen Shot 2022-07-13 at 16.58.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epl9np1j21780u0q7v.jpg" alt="Screen Shot 2022-07-13 at 16.59.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45epi80s8j21bm0u0q74.jpg" alt="Screen Shot 2022-07-13 at 17.01.45"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45f9r7htpj21520u00zh.jpg" alt="Screen Shot 2022-07-13 at 17.03.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h45f9rmdfaj21mk0rggq4.jpg" alt="Screen Shot 2022-07-13 at 17.10.12"></p>
 ]]></content>
       <categories>
         <category>Seminar</category>
@@ -1067,6 +946,185 @@
       </categories>
   </entry>
   <entry>
+    <title>郑佳喻+何超</title>
+    <url>/2022/06/30/Seminar/0630-%E9%83%91%E4%BD%B3%E5%96%BB+%E4%BD%95%E8%B6%85/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="郑佳喻-Influences-of-three-oceans-on-record-breaking-rainfall-over-the-Yangtze-River-Vally-in-June-202-中科院南海所"><a href="#郑佳喻-Influences-of-three-oceans-on-record-breaking-rainfall-over-the-Yangtze-River-Vally-in-June-202-中科院南海所" class="headerlink" title="郑佳喻  Influences of three oceans on record-breaking rainfall over the Yangtze River Vally in June 202 中科院南海所"></a>郑佳喻  Influences of three oceans on record-breaking rainfall over the Yangtze River Vally in June 202 中科院南海所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9wyninpj20o40i50u7.jpg" alt="Screen Shot 2022-06-30 at 14.46.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9rzmjy6j20o70i30ww.jpg" alt="Screen Shot 2022-06-30 at 14.47.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9s09203j20o70i4whu.jpg" alt="Screen Shot 2022-06-30 at 14.48.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ukibq7j20oa0i376o.jpg" alt="Screen Shot 2022-06-30 at 14.48.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ulw8dmj20o70i2q6c.jpg" alt="Screen Shot 2022-06-30 at 14.49.28"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ulhyw2j20o40i177o.jpg" alt="Screen Shot 2022-06-30 at 14.49.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ujsjccj20nt0gfwhz.jpg" alt="Screen Shot 2022-06-30 at 14.50.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9v23s5cj20nx0hk0ve.jpg" alt="Screen Shot 2022-06-30 at 14.51.19"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9wbicrsj20o20guacx.jpg" alt="Screen Shot 2022-06-30 at 14.52.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9ww4nwaj20mw0h277c.jpg" alt="Screen Shot 2022-06-30 at 14.52.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9z0vtasj20n60hnwha.jpg" alt="Screen Shot 2022-06-30 at 14.55.13"></p>
+<h2 id="何超-东亚夏季风对COVID-19和全球变暖的响应机制-暨南大学"><a href="#何超-东亚夏季风对COVID-19和全球变暖的响应机制-暨南大学" class="headerlink" title="何超  东亚夏季风对COVID-19和全球变暖的响应机制  暨南大学"></a>何超  东亚夏季风对COVID-19和全球变暖的响应机制  暨南大学</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qajtnyvbj20o10hztc0.jpg" alt="Screen Shot 2022-06-30 at 15.14.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qal5xh5dj20nz0i3gph.jpg" alt="Screen Shot 2022-06-30 at 15.16.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qan1t6y2j20nx0hz0x1.jpg" alt="Screen Shot 2022-06-30 at 15.17.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qaqgtkh5j20ob0i0789.jpg" alt="Screen Shot 2022-06-30 at 15.18.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qarfziklj20o30hvwh3.jpg" alt="Screen Shot 2022-06-30 at 15.22.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qassf1t7j20nk0i6jvv.jpg" alt="Screen Shot 2022-06-30 at 15.23.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qaum1vjrj20o90hpq7a.jpg" alt="Screen Shot 2022-06-30 at 15.25.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qawp1nwjj20o20hwafc.jpg" alt="Screen Shot 2022-06-30 at 15.27.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qax0x6qpj20o70gbdkc.jpg" alt="Screen Shot 2022-06-30 at 15.27.54"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qayrrk28j20nn0i1djv.jpg" alt="Screen Shot 2022-06-30 at 15.29.14"></p>
+<p><strong>EASM对COVID-19的响应幅度达到了EASM自然年际年率幅度的1&#x2F;3左右</strong></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb08leggj20o30hzn2o.jpg" alt="Screen Shot 2022-06-30 at 15.30.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb3q57a1j20o90hqdk1.jpg" alt="Screen Shot 2022-06-30 at 15.33.32"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb3qs859j20ny0i0ads.jpg" alt="Screen Shot 2022-06-30 at 15.34.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8fe0y0j20o30hxack.jpg" alt="Screen Shot 2022-06-30 at 15.36.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8ekww6j20o60hsq5r.jpg" alt="Screen Shot 2022-06-30 at 15.36.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8geuv0j20nq0hegp6.jpg" alt="Screen Shot 2022-06-30 at 15.38.11"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb8wfiuoj20nh0httcy.jpg" alt="Screen Shot 2022-06-30 at 15.39.16"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qb9t7c8vj20o40i1wj4.jpg" alt="Screen Shot 2022-06-30 at 15.39.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbbo4glgj20nz0ho0vo.jpg" alt="Screen Shot 2022-06-30 at 15.41.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbdehxduj20o20i5ae0.jpg" alt="Screen Shot 2022-06-30 at 15.43.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbdqkgyvj20no0hvjua.jpg" alt="Screen Shot 2022-06-30 at 15.43.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbfgtnp2j20nj0hzdi0.jpg" alt="Screen Shot 2022-06-30 at 15.45.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbg5nqmuj20oa0huq6l.jpg" alt="Screen Shot 2022-06-30 at 15.46.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbh91xq7j20o20i6tc6.jpg" alt="Screen Shot 2022-06-30 at 15.47.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbktbxo6j20np0hygp9.jpg" alt="Screen Shot 2022-06-30 at 15.50.24"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbpjhfk9j20np0i078h.jpg" alt="Screen Shot 2022-06-30 at 15.54.46"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbx4sit6j20o30hswid.jpg" alt="Screen Shot 2022-06-30 at 15.59.46"><img src="/" alt="Screen Shot 2022-06-30 at 15.55.04"></p>
+<p>西太副高：快的正响应+慢的负响应</p>
+<p>青藏高原：稳步发展的正响应</p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbvx8n9mj20ni0hv42n.jpg" alt="Screen Shot 2022-06-30 at 16.01.18"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3qbyqcbmgj20nz0ht76p.jpg" alt="Screen Shot 2022-06-30 at 16.03.05"></p>
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h3q9sa2b6uj20u0140amu.jpg" alt="WechatIMG2774"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Chen et al 2020 JC</title>
+    <url>/2020/12/01/Research/Chen_et_al_2020_JC/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm1YQVpiU3Z4ZWFY" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Chen et al 2017 JGR</title>
+    <url>/2017/07/08/Research/Chen_et_al_2017_JGR/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkd6cXdWcnVmUXVD" data-height="1000px"></div>
+
+
+
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>周天军</title>
+    <url>/2022/07/01/Seminar/0701-%E5%91%A8%E5%A4%A9%E5%86%9B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="季风降水变化的检测归因和预测研究——以2020年和2021年为例-周天军-中科院大气所"><a href="#季风降水变化的检测归因和预测研究——以2020年和2021年为例-周天军-中科院大气所" class="headerlink" title="季风降水变化的检测归因和预测研究——以2020年和2021年为例   周天军   中科院大气所"></a>季风降水变化的检测归因和预测研究——以2020年和2021年为例   周天军   中科院大气所</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r85glxd2j21ht0u078g.jpg" alt="Screen Shot 2022-07-01 at 10.32.26"></p>
+<h3 id="为什么要做归因检测"><a href="#为什么要做归因检测" class="headerlink" title="为什么要做归因检测"></a>为什么要做归因检测</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7fxu3g2j21hd0u0ag3.jpg" alt="Screen Shot 2022-07-01 at 10.10.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7fz5zaaj21h80u0thx.jpg" alt="Screen Shot 2022-07-01 at 10.11.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7hwwtz1j21he0u00z8.jpg" alt="Screen Shot 2022-07-01 at 10.15.04"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7icbkobj21h90u07a2.jpg" alt="Screen Shot 2022-07-01 at 10.15.33"></p>
+<h3 id="季风区降水变化的检测归因"><a href="#季风区降水变化的检测归因" class="headerlink" title="季风区降水变化的检测归因"></a>季风区降水变化的检测归因</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7jd2vd6j21hg0u078o.jpg" alt="Screen Shot 2022-07-01 at 10.16.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7kun19ij21hb0u044r.jpg" alt="Screen Shot 2022-07-01 at 10.17.00"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7kvf8ckj21hc0u0437.jpg" alt="Screen Shot 2022-07-01 at 10.17.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7lh090aj21hd0u00z5.jpg" alt="Screen Shot 2022-07-01 at 10.18.33"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7m50bqcj21hc0u0jzz.jpg" alt="Screen Shot 2022-07-01 at 10.19.12"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7mlq2nyj21hd0u0q8b.jpg" alt="Screen Shot 2022-07-01 at 10.19.37"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7ng7yn9j21he0u0jxb.jpg" alt="Screen Shot 2022-07-01 at 10.20.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7nv8yn7j21ha0u0gt3.jpg" alt="Screen Shot 2022-07-01 at 10.20.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7oxiqxej21hi0u0tdt.jpg" alt="Screen Shot 2022-07-01 at 10.21.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7oyjr4qj21h80u0jwd.jpg" alt="Screen Shot 2022-07-01 at 10.21.36"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7pqijchj21fu0u041x.jpg" alt="Screen Shot 2022-07-01 at 10.22.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s82hw6j21gh0u07ak.jpg" alt="Screen Shot 2022-07-01 at 10.22.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s6birnj21hn0u0qa6.jpg" alt="Screen Shot 2022-07-01 at 10.23.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s5asctj21f30u00zf.jpg" alt="Screen Shot 2022-07-01 at 10.24.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7s76jo3j21fm0u0dmg.jpg" alt="Screen Shot 2022-07-01 at 10.24.57"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7snmm1sj21gc0u010r.jpg" alt="Screen Shot 2022-07-01 at 10.25.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7tlsj91j21hc0u046m.jpg" alt="Screen Shot 2022-07-01 at 10.26.21"></p>
+<h3 id="为什么要做预测预估"><a href="#为什么要做预测预估" class="headerlink" title="为什么要做预测预估"></a>为什么要做预测预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7vv8y5ej21h90u0jy8.jpg" alt="Screen Shot 2022-07-01 at 10.27.23"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7vvw75aj21n60t2aef.jpg" alt="Screen Shot 2022-07-01 at 10.28.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7wbw1cjj21i60u042t.jpg" alt="Screen Shot 2022-07-01 at 10.28.59"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7wnmq3qj21l60tkafq.jpg" alt="Screen Shot 2022-07-01 at 10.29.18"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7x1to3uj21k10u0ahe.jpg" alt="Screen Shot 2022-07-01 at 10.29.41"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7xc21hqj21lf0u0q8x.jpg" alt="Screen Shot 2022-07-01 at 10.29.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7ydk783j21he0u00z9.jpg" alt="Screen Shot 2022-07-01 at 10.30.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7yyzebhj21hg0u0jwn.jpg" alt="Screen Shot 2022-07-01 at 10.31.31"></p>
+<h3 id="近期年代际预测"><a href="#近期年代际预测" class="headerlink" title="近期年代际预测"></a>近期年代际预测</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r80sqg1pj21iy0u0jyq.jpg" alt="Screen Shot 2022-07-01 at 10.32.57"></p>
+<h3 id="近期气候预估"><a href="#近期气候预估" class="headerlink" title="近期气候预估"></a>近期气候预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83sbd8dj21iy0u0jyq.jpg" alt="Screen Shot 2022-07-01 at 10.32.57"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83qgwdjj21jl0u0grc.jpg" alt="Screen Shot 2022-07-01 at 10.34.33"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83t5nj4j21hr0u00zf.jpg" alt="Screen Shot 2022-07-01 at 10.35.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r83rabpdj21ht0u0gro.jpg" alt="Screen Shot 2022-07-01 at 10.35.52"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r84g9j7rj21i70u07bz.jpg" alt="Screen Shot 2022-07-01 at 10.36.42"></p>
+<h3 id="中期气候预估"><a href="#中期气候预估" class="headerlink" title="中期气候预估"></a>中期气候预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r86kwppgj21l60t878r.jpg" alt="Screen Shot 2022-07-01 at 10.38.50"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r88ggdw1j21hl0u0q9e.jpg" alt="Screen Shot 2022-07-01 at 10.40.31"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8a2qxiej21h10u0qch.jpg" alt="Screen Shot 2022-07-01 at 10.42.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8bo5hlej21h80u044q.jpg" alt="Screen Shot 2022-07-01 at 10.43.43"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8d4lg3fj217w0oqgst.jpg" alt="Screen Shot 2022-07-01 at 10.45.07"></p>
+<h3 id="长期预估"><a href="#长期预估" class="headerlink" title="长期预估"></a>长期预估</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8dlov0bj217y0omq7k.jpg" alt="Screen Shot 2022-07-01 at 10.45.30"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8dzqfcoj21ku0u0wi5.jpg" alt="Screen Shot 2022-07-01 at 10.45.57"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8f9fjecj21hd0u0wkn.jpg" alt="Screen Shot 2022-07-01 at 10.46.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8gkr2bmj21io0u0q8o.jpg" alt="Screen Shot 2022-07-01 at 10.48.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8jdaajlj21kq0u079t.jpg" alt="Screen Shot 2022-07-01 at 10.51.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8kkkqsxj21ge0u00zt.jpg" alt="Screen Shot 2022-07-01 at 10.52.17"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8m5iutgj21h40u0dlz.jpg" alt="Screen Shot 2022-07-01 at 10.53.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8nv2oucj21hf0u0afy.jpg" alt="Screen Shot 2022-07-01 at 10.55.25"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8p76yrcj21hj0u0n5a.jpg" alt="Screen Shot 2022-07-01 at 10.56.42"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8pn017zj21er0u0dmf.jpg" alt="Screen Shot 2022-07-01 at 10.57.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8rsa4j8j21dt0u0q8z.jpg" alt="Screen Shot 2022-07-01 at 10.59.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8tlj532j21g70u0gvy.jpg" alt="Screen Shot 2022-07-01 at 11.00.31"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8u3n4lmj21gn0u0dnl.jpg" alt="Screen Shot 2022-07-01 at 11.01.19"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8vdjb08j21h40u0gsw.jpg" alt="Screen Shot 2022-07-01 at 11.02.35"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8wuhq9zj21gn0u0tf8.jpg" alt="Screen Shot 2022-07-01 at 11.04.03"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8y2f1o0j21hw0u0jwc.jpg" alt="Screen Shot 2022-07-01 at 11.05.14"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8z0r0kpj21iz0u0alz.jpg" alt="Screen Shot 2022-07-01 at 11.06.10"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r8zbyq1ej21hs0u07e9.jpg" alt="Screen Shot 2022-07-01 at 11.06.27"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r92yppxgj21hj0u0ah5.jpg" alt="Screen Shot 2022-07-01 at 11.09.55"></p>
+<hr>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3r7f0bhyjj20u0116wmz.jpg" alt="WechatIMG5676"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Huang et al 2017a JGR</title>
+    <url>/2017/01/06/Research/Huang_et_al_2017a_JGR/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkNzQW5OZmFpT0ZZ" data-height="1000px"></div>
+
+]]></content>
+      <categories>
+        <category>Research</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>读书会</title>
+    <url>/2022/07/01/Seminar/0701-%E8%AF%BB%E4%B9%A6%E4%BC%9A/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Weather-and-Climate-extreme-events-in-a-chaning-climate"><a href="#Weather-and-Climate-extreme-events-in-a-chaning-climate" class="headerlink" title="Weather and Climate extreme events in a chaning climate"></a>Weather and Climate extreme events in a chaning climate</h2><h3 id="陈云帆"><a href="#陈云帆" class="headerlink" title="陈云帆"></a>陈云帆</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rfz8g8axj21c80r6af3.jpg" alt="Screen Shot 2022-07-01 at 15.05.56"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rfz99ffoj21c60r4q9r.jpg" alt="Screen Shot 2022-07-01 at 15.07.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rg3xg12wj21by0qc0xt.jpg" alt="Screen Shot 2022-07-01 at 15.11.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rga8jr0zj21gx0u0n3r.jpg" alt="Screen Shot 2022-07-01 at 15.16.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rga7sldgj21km0u07an.jpg" alt="Screen Shot 2022-07-01 at 15.18.53"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rgcq1eoej21kw0u0ahg.jpg" alt="Screen Shot 2022-07-01 at 15.19.38"></p>
+<h3 id="张莹"><a href="#张莹" class="headerlink" title="张莹"></a>张莹</h3><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rgykbnfgj21hi0u0n55.jpg" alt="Screen Shot 2022-07-01 at 15.42.15"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rh7zv8zvj21h50u0tgp.jpg" alt="Screen Shot 2022-07-01 at 15.51.26"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rhb6nrhkj21gb0u0wms.jpg" alt="Screen Shot 2022-07-01 at 15.54.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri95xog3j21lt0u0gtp.jpg" alt="Screen Shot 2022-07-01 at 16.17.05"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri2ltbmjj21h40lagr4.jpg" alt="Screen Shot 2022-07-01 at 16.20.49"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri6v49x8j21gg0t47dy.jpg" alt="Screen Shot 2022-07-01 at 16.25.02"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri894701j21g40lowl9.jpg" alt="Screen Shot 2022-07-01 at 16.25.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3ri8zcnbjj21fo0qk114.jpg" alt="Screen Shot 2022-07-01 at 16.26.55"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rie4n6ipj21gi0q47be.jpg" alt="Screen Shot 2022-07-01 at 16.31.20"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rie5nj8ij21ga0setio.jpg" alt="Screen Shot 2022-07-01 at 16.31.58"></p>
+<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3rigcwh5bj21g80r4n60.jpg" alt="Screen Shot 2022-07-01 at 16.34.03"></p>
+]]></content>
+      <categories>
+        <category>Seminar</category>
+      </categories>
+  </entry>
+  <entry>
     <title>CDO User Guide</title>
     <url>/2022/05/01/Tool/CDO%20User%20Guide.md/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSndkWlBMck5NZUJo" data-height="1000px"></div>
@@ -1085,12 +1143,13 @@
       </categories>
   </entry>
   <entry>
-    <title>复旦</title>
-    <url>/2022/07/04/Seminar/0704-%E5%A4%8D%E6%97%A6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="The-second-Fudan-International-Workshop-on-Atmospheric-Science-Frontier-FIWAS"><a href="#The-second-Fudan-International-Workshop-on-Atmospheric-Science-Frontier-FIWAS" class="headerlink" title="The second Fudan International Workshop on Atmospheric Science Frontier (FIWAS)"></a>The second Fudan International Workshop on Atmospheric Science Frontier (FIWAS)</h2><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h3umme5l6qj20u0461h0n.jpg" alt="WechatIMG888"></p>
+    <title>Huang et al 2017b JGR</title>
+    <url>/2017/09/07/Research/Huang_et_al_2017b_JGR/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmlFSHBaT1dYbG9m" data-height="1000px"></div>
+
 ]]></content>
       <categories>
-        <category>Seminar</category>
+        <category>Research</category>
       </categories>
   </entry>
   <entry>
@@ -1160,6 +1219,15 @@
       </categories>
   </entry>
   <entry>
+    <title>Cite Figures</title>
+    <url>/2022/05/01/Tool/Cite%20Figures/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>Chrome</title>
     <url>/2022/05/01/Tool/Chrome/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="FasterHosts"><a href="#FasterHosts" class="headerlink" title="FasterHosts"></a>FasterHosts</h2><p><code>FasterHosts</code> 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 <code>domain</code> 替换成访问速度较快的那个。</p>
@@ -1176,30 +1244,6 @@
 <li>这就安装好了，关闭「开发这模式」</li>
 </ol>
 </blockquote>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Cite Figures</title>
-    <url>/2022/05/01/Tool/Cite%20Figures/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmdpU0RYUnNTWGlv" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>ERA5</title>
-    <url>/2022/05/01/Tool/ERA5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
-<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1262,6 +1306,50 @@
     <url>/2022/05/01/Tool/Gitee/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm3kpi7j207a047aa0.jpg" alt="Screen Shot 2022-05-07 at 15.32.29"></p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zvm62vjqj20p00f4gn8.jpg" alt="Screen Shot 2022-05-07 at 15.32.18"></p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>ERA5</title>
+    <url>/2022/05/01/Tool/ERA5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="Download-ERA5-data"><a href="#Download-ERA5-data" class="headerlink" title="Download ERA5 data"></a>Download ERA5 data</h3><h4 id="How-to-use-the-CDS-API"><a href="#How-to-use-the-CDS-API" class="headerlink" title="How to use the CDS API"></a>How to use the CDS API</h4><p><a href="https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access">https://cds.climate.copernicus.eu/api-how-to#use-the-cds-api-client-for-data-access</a></p>
+<h4 id="LHF-py"><a href="#LHF-py" class="headerlink" title="LHF.py"></a>LHF.py</h4><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">#!/usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> cdsapi</span><br><span class="line"></span><br><span class="line">c = cdsapi.Client()</span><br><span class="line"></span><br><span class="line">c.retrieve(</span><br><span class="line">    <span class="string">&#x27;reanalysis-era5-land&#x27;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">&#x27;format&#x27;</span>: <span class="string">&#x27;netcdf&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;year&#x27;</span>: <span class="string">&#x27;XYEARX&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;month&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;day&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;01&#x27;</span>, <span class="string">&#x27;02&#x27;</span>, <span class="string">&#x27;03&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;04&#x27;</span>, <span class="string">&#x27;05&#x27;</span>, <span class="string">&#x27;06&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;07&#x27;</span>, <span class="string">&#x27;08&#x27;</span>, <span class="string">&#x27;09&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;10&#x27;</span>, <span class="string">&#x27;11&#x27;</span>, <span class="string">&#x27;12&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;13&#x27;</span>, <span class="string">&#x27;14&#x27;</span>, <span class="string">&#x27;15&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;16&#x27;</span>, <span class="string">&#x27;17&#x27;</span>, <span class="string">&#x27;18&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;19&#x27;</span>, <span class="string">&#x27;20&#x27;</span>, <span class="string">&#x27;21&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;22&#x27;</span>, <span class="string">&#x27;23&#x27;</span>, <span class="string">&#x27;24&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;25&#x27;</span>, <span class="string">&#x27;26&#x27;</span>, <span class="string">&#x27;27&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;28&#x27;</span>, <span class="string">&#x27;29&#x27;</span>, <span class="string">&#x27;30&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;31&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;time&#x27;</span>: [</span><br><span class="line">            <span class="string">&#x27;00:00&#x27;</span>, <span class="string">&#x27;01:00&#x27;</span>, <span class="string">&#x27;02:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;03:00&#x27;</span>, <span class="string">&#x27;04:00&#x27;</span>, <span class="string">&#x27;05:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;06:00&#x27;</span>, <span class="string">&#x27;07:00&#x27;</span>, <span class="string">&#x27;08:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;09:00&#x27;</span>, <span class="string">&#x27;10:00&#x27;</span>, <span class="string">&#x27;11:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;12:00&#x27;</span>, <span class="string">&#x27;13:00&#x27;</span>, <span class="string">&#x27;14:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;15:00&#x27;</span>, <span class="string">&#x27;16:00&#x27;</span>, <span class="string">&#x27;17:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;18:00&#x27;</span>, <span class="string">&#x27;19:00&#x27;</span>, <span class="string">&#x27;20:00&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;21:00&#x27;</span>, <span class="string">&#x27;22:00&#x27;</span>, <span class="string">&#x27;23:00&#x27;</span>,</span><br><span class="line">        ],</span><br><span class="line">        <span class="string">&#x27;variable&#x27;</span>: <span class="string">&#x27;surface_latent_heat_flux&#x27;</span>,</span><br><span class="line">        <span class="string">&#x27;area&#x27;</span>: [</span><br><span class="line">            <span class="number">30</span>, -<span class="number">180</span>, -<span class="number">30</span>,</span><br><span class="line">            <span class="number">180</span>,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&#x27;ERA5_lhf_hourly_30S-30N_XYEARX.nc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="loop-sh"><a href="#loop-sh" class="headerlink" title="loop.sh"></a>loop.sh</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1950</span><br><span class="line">yend=2021</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">  <span class="keyword">do</span>  </span><br><span class="line">  <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">  <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">   sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g LHF.py &gt; getdata.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">   python ./getdata.py</span><br><span class="line">   <span class="built_in">rm</span> getdata.py</span><br><span class="line"><span class="keyword">done</span> </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Github</title>
+    <url>/2022/05/01/Tool/GitHub/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
+<li>搜索老大项目</li>
+<li>点击Fork将项目复制到小弟的仓库中</li>
+<li>进行相应修改</li>
+<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
+<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
+</ol>
+<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
+
+
+
+<p>参考：</p>
+<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1422,35 +1510,6 @@
 <li><p>编辑主题配置文件，启用本地搜索功能：</p>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"># <span class="keyword">Local</span> <span class="keyword">search</span></span><br><span class="line"></span><br><span class="line">local_search:</span><br><span class="line">  enable: <span class="literal">true</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Github</title>
-    <url>/2022/05/01/Tool/GitHub/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git init				<span class="comment"># 在本地初始化git</span></span><br><span class="line">touch README		<span class="comment"># 为该仓库新建一个README文件</span></span><br><span class="line">git add README	<span class="comment"># 将该文件添加到git缓冲区</span></span><br><span class="line">git commit -m <span class="string">&#x27;add readme&#x27;</span>	<span class="comment"># 提交到缓冲区，-m表示message，后面接的是提交信息</span></span><br><span class="line">git remote add origin https://github.com/user_name/epo_name.git <span class="comment"># 添加远程源repo</span></span><br><span class="line">git push origin master	<span class="comment"># 将更新同步到master分支，此处将README文件同步到远程的repo中</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="上传本地代码"><a href="#上传本地代码" class="headerlink" title="上传本地代码"></a>上传本地代码</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git status <span class="comment"># 显示更改</span></span><br><span class="line">git add * </span><br><span class="line">git commit -m ‘first commit’</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="小弟获取老大的项目"><a href="#小弟获取老大的项目" class="headerlink" title="小弟获取老大的项目"></a>小弟获取老大的项目</h2><ol>
-<li>搜索老大项目</li>
-<li>点击Fork将项目复制到小弟的仓库中</li>
-<li>进行相应修改</li>
-<li>小弟提交修改：Pull request - New pull request : 与原文件进行比对 - create pull request - create pull request</li>
-<li>老大审核：pull request - 查看修改 - merge pull request - confirm merge</li>
-</ol>
-<h2 id="Git-pull失败之refusing-to-merge-unrelated-histories"><a href="#Git-pull失败之refusing-to-merge-unrelated-histories" class="headerlink" title="Git pull失败之refusing to merge unrelated histories"></a>Git pull失败之refusing to merge unrelated histories</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">git reset origin/master --hard</span><br></pre></td></tr></table></figure>
-
-
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/dreamjay1997/article/details/82145461">https://blog.csdn.net/dreamjay1997/article/details/82145461</a><br><a href="https://blog.csdn.net/larry233/article/details/83899797">https://blog.csdn.net/larry233/article/details/83899797</a></p>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -1724,6 +1783,64 @@
       </categories>
   </entry>
   <entry>
+    <title>LaTex Notes</title>
+    <url>/2022/05/01/Tool/LaTex%20Notes/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Journal-Abbreviation"><a href="#Journal-Abbreviation" class="headerlink" title="Journal Abbreviation"></a>Journal Abbreviation</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">&#123;Geophys.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Environ.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Mon.<span class="keyword">\ </span>Wea.<span class="keyword">\ </span>Rev.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Atmos.<span class="keyword">\ </span>Sci.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Climate&#125;</span><br><span class="line"></span><br><span class="line">&#123;Climate Dyn.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Geophys.<span class="keyword">\ </span>Res.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Bull.<span class="keyword">\ </span>Amer.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Quart.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Roy.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Taylor <span class="built_in">&amp;</span> Francis&#125;</span><br><span class="line"></span><br><span class="line">&#123;Theor.<span class="keyword">\ </span>Appl.<span class="keyword">\ </span>Climatol.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Phys.<span class="keyword">\ </span>Oceanogr.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Int.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Climatol.&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Special-Symbol"><a href="#Special-Symbol" class="headerlink" title="Special Symbol"></a>Special Symbol</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">El Ni<span class="keyword">\~</span>&#123;n&#125;o</span><br><span class="line"></span><br><span class="line">165<span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>E</span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>C</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="count"><a href="#count" class="headerlink" title="count"></a>count</h4><p><code>texcount file-name1.tex file-name2.tex</code></p>
+<h4 id="Include-Figures"><a href="#Include-Figures" class="headerlink" title="Include Figures"></a>Include Figures</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\centering</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>,angle=90]&#123;R1-Asymetry.pdf&#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\caption</span>&#123;XXXX&#125;<span class="keyword">\label</span>&#123;R-AsySig&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="latexdiff功能"><a href="#latexdiff功能" class="headerlink" title="latexdiff功能"></a>latexdiff功能</h4><p>在使用latex编辑完成一版tex文件后，如果后续进行了修改，并且想知道修改的具体位置，可以使用latexdiff命令产生一个新的tex文件，通过编译该文件就能得到一个新的包含具体改动的pdf文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">latexdiff oldFile.tex newFile.tex &gt; diff.tex</span><br></pre></td></tr></table></figure>
+
+<p>这里生成diff.tex的时候最好先手动验证一下新旧两个tex文件在对方的文件夹内都能正常编译，否则无法正常编译产生的diff.tex</p>
+<h5 id="newFile-tex文件中新增了参考文献时，编译时报错"><a href="#newFile-tex文件中新增了参考文献时，编译时报错" class="headerlink" title="newFile.tex文件中新增了参考文献时，编译时报错"></a>newFile.tex文件中新增了参考文献时，编译时报错</h5><p>这里我参考了这位大神的方法，成功解决了问题。大神给出了三种解决方法，我使用的是第三种，也就是删除文中所有的\hspace{0pt}，当然，只需要删除编译时报错部分的\hspace{0pt}就行了。<br>应该是\DIFadd中使用的花括号{}和\hspace{0pt}中的花括号起了冲突，删除了就没问题了。<br>这里这总结一下这位大神推荐的三种方法</p>
+<p>在latexdiff中加入-t CFONT，我没有尝试这种方法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">latexdiff -t CFONT temp.tex temp2.tex &gt; diff.tex</span><br></pre></td></tr></table></figure>
+
+
+<p>在diff.tex文件的开头手动添加一下代码，我仍然没有尝试这种方法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\RequirePackage[2019/11/18]&#123;latexrelease&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>删除文中所有的\hspace{0pt}，亲测能解决问题，YYDS</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Pandas Cheatsheet</title>
+    <url>/2022/05/01/Tool/Pandas%20Cheatsheet/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PDF</title>
+    <url>/2022/05/01/Tool/PDF/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
+<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
+<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
+<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
+<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
+<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+  </entry>
+  <entry>
     <title>NCL</title>
     <url>/2022/05/01/Tool/NCL/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>℃     </p>
@@ -1864,50 +1981,6 @@
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ncl_convert2nc ced1.lf00.t00z.eta.grb</span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>LaTex Notes</title>
-    <url>/2022/05/01/Tool/LaTex%20Notes/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Journal-Abbreviation"><a href="#Journal-Abbreviation" class="headerlink" title="Journal Abbreviation"></a>Journal Abbreviation</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">&#123;Geophys.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Environ.<span class="keyword">\ </span>Res.<span class="keyword">\ </span>Lett.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Mon.<span class="keyword">\ </span>Wea.<span class="keyword">\ </span>Rev.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Atmos.<span class="keyword">\ </span>Sci.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Climate&#125;</span><br><span class="line"></span><br><span class="line">&#123;Climate Dyn.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Geophys.<span class="keyword">\ </span>Res.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Bull.<span class="keyword">\ </span>Amer.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Quart.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Roy.<span class="keyword">\ </span>Meteor.<span class="keyword">\ </span>Soc.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Taylor <span class="built_in">&amp;</span> Francis&#125;</span><br><span class="line"></span><br><span class="line">&#123;Theor.<span class="keyword">\ </span>Appl.<span class="keyword">\ </span>Climatol.&#125;</span><br><span class="line"></span><br><span class="line">&#123;J.<span class="keyword">\ </span>Phys.<span class="keyword">\ </span>Oceanogr.&#125;</span><br><span class="line"></span><br><span class="line">&#123;Int.<span class="keyword">\ </span>J.<span class="keyword">\ </span>Climatol.&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="Special-Symbol"><a href="#Special-Symbol" class="headerlink" title="Special Symbol"></a>Special Symbol</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line">El Ni<span class="keyword">\~</span>&#123;n&#125;o</span><br><span class="line"></span><br><span class="line">165<span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>E</span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">^</span>&#123;<span class="keyword">\circ</span>&#125;<span class="built_in">$</span>C</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="count"><a href="#count" class="headerlink" title="count"></a>count</h4><p><code>texcount file-name1.tex file-name2.tex</code></p>
-<h4 id="Include-Figures"><a href="#Include-Figures" class="headerlink" title="Include Figures"></a>Include Figures</h4><figure class="highlight latex"><table><tr><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;figure&#125;[H]</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\centering</span></span><br><span class="line"></span><br><span class="line"> <span class="keyword">\includegraphics</span>[width=0.5<span class="keyword">\textwidth</span>,angle=90]&#123;R1-Asymetry.pdf&#125;</span><br><span class="line"></span><br><span class="line"> <span class="keyword">\caption</span>&#123;XXXX&#125;<span class="keyword">\label</span>&#123;R-AsySig&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\end</span>&#123;figure&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="latexdiff功能"><a href="#latexdiff功能" class="headerlink" title="latexdiff功能"></a>latexdiff功能</h4><p>在使用latex编辑完成一版tex文件后，如果后续进行了修改，并且想知道修改的具体位置，可以使用latexdiff命令产生一个新的tex文件，通过编译该文件就能得到一个新的包含具体改动的pdf文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">latexdiff oldFile.tex newFile.tex &gt; diff.tex</span><br></pre></td></tr></table></figure>
-
-<p>这里生成diff.tex的时候最好先手动验证一下新旧两个tex文件在对方的文件夹内都能正常编译，否则无法正常编译产生的diff.tex</p>
-<h5 id="newFile-tex文件中新增了参考文献时，编译时报错"><a href="#newFile-tex文件中新增了参考文献时，编译时报错" class="headerlink" title="newFile.tex文件中新增了参考文献时，编译时报错"></a>newFile.tex文件中新增了参考文献时，编译时报错</h5><p>这里我参考了这位大神的方法，成功解决了问题。大神给出了三种解决方法，我使用的是第三种，也就是删除文中所有的\hspace{0pt}，当然，只需要删除编译时报错部分的\hspace{0pt}就行了。<br>应该是\DIFadd中使用的花括号{}和\hspace{0pt}中的花括号起了冲突，删除了就没问题了。<br>这里这总结一下这位大神推荐的三种方法</p>
-<p>在latexdiff中加入-t CFONT，我没有尝试这种方法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">latexdiff -t CFONT temp.tex temp2.tex &gt; diff.tex</span><br></pre></td></tr></table></figure>
-
-
-<p>在diff.tex文件的开头手动添加一下代码，我仍然没有尝试这种方法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">\RequirePackage[2019/11/18]&#123;latexrelease&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>删除文中所有的\hspace{0pt}，亲测能解决问题，YYDS</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Pandas Cheatsheet</title>
-    <url>/2022/05/01/Tool/Pandas%20Cheatsheet/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSlhOc2FRV213ZkRM" data-height="1000px"></div>
 ]]></content>
       <categories>
         <category>Tool</category>
@@ -2361,20 +2434,6 @@
       </categories>
   </entry>
   <entry>
-    <title>PDF</title>
-    <url>/2022/05/01/Tool/PDF/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="解密PDF"><a href="#解密PDF" class="headerlink" title="解密PDF"></a>解密PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/unlock_pdf">https://www.ilovepdf.com/zh-cn/unlock_pdf</a></p>
-<p>如果pdf被加密的话进行此步操作，无加密直接去水印即可</p>
-<h4 id="PDF去水印"><a href="#PDF去水印" class="headerlink" title="PDF去水印"></a>PDF去水印</h4><p><a href="https://www.douyacun.com/pdf/remove-watermark">https://www.douyacun.com/pdf/remove-watermark</a></p>
-<p>需要关注人家公众号获取个验证码，一个关注不用交钱，还是划算的</p>
-<h4 id="在线修复PDF"><a href="#在线修复PDF" class="headerlink" title="在线修复PDF"></a>在线修复PDF</h4><p><a href="https://www.ilovepdf.com/zh-cn/repair-pdf">https://www.ilovepdf.com/zh-cn/repair-pdf</a></p>
-<p>第二步中生成的pdf，可能会出现部分复杂的页面在pdf阅读器打开报错，进行在线修复</p>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Parameters</title>
     <url>/2022/05/01/Tool/Parameters/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="Constants"><a href="#Constants" class="headerlink" title="Constants"></a>Constants</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">rad = 4.0*atan(1.0)/180.0</span><br><span class="line"></span><br><span class="line">density of water: 997 kg/m³</span><br><span class="line"></span><br><span class="line">acceleration due to gravity: 9.80665 m/s2</span><br></pre></td></tr></table></figure>
@@ -2699,21 +2758,6 @@
 ]]></content>
       <categories>
         <category>Tool</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>TED Talks</title>
-    <url>/2022/05/01/Recharge/TED%20Talks/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="color:green"><strong>Need the access to YouTube</strong></span></p>
-<h3 id="3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen"><a href="#3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen" class="headerlink" title="3 Ways to Make Flying More Climate-Friendly | Ryah Whalen"></a>3 Ways to Make Flying More Climate-Friendly | Ryah Whalen</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JY-_GRi56KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<br/>
-
-<h3 id="A-Brain-Implant-That-Turns-Your-Thoughts-Into-Text-Tom-Oxley"><a href="#A-Brain-Implant-That-Turns-Your-Thoughts-Into-Text-Tom-Oxley" class="headerlink" title="A Brain Implant That Turns Your Thoughts Into Text | Tom Oxley"></a>A Brain Implant That Turns Your Thoughts Into Text | Tom Oxley</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/7Fiaew7nDmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-]]></content>
-      <categories>
-        <category>Recharge</category>
       </categories>
   </entry>
   <entry>
@@ -3139,47 +3183,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Chen et al 2017 JGR</title>
-    <url>/2017/07/08/Research/Chen_et_al_2017_JGR/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkd6cXdWcnVmUXVD" data-height="1000px"></div>
-
-
-
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Chen et al 2020 JC</title>
-    <url>/2020/12/01/Research/Chen_et_al_2020_JC/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSm1YQVpiU3Z4ZWFY" data-height="1000px"></div>
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Huang et al 2017a JGR</title>
-    <url>/2017/01/06/Research/Huang_et_al_2017a_JGR/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSkNzQW5OZmFpT0ZZ" data-height="1000px"></div>
-
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Huang et al 2017b JGR</title>
-    <url>/2017/09/07/Research/Huang_et_al_2017b_JGR/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><div class="pdfobject-container" data-target="https://docs.qq.com/pdf/DSmlFSHBaT1dYbG9m" data-height="1000px"></div>
-
-]]></content>
-      <categories>
-        <category>Research</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CHLA</title>
     <url>/2022/05/24/Paper/CHLA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="color:green">Marzeion, B., Timmermann, A., Murtugudde, R. &amp; Jin, F.-F. Biophysical Feedbacks in the Tropical Pacific. <em>J Climate</em> <strong>18</strong>, 58–70 (2005). </span></p>
@@ -3244,31 +3247,18 @@
       </categories>
   </entry>
   <entry>
-    <title>Nature News</title>
-    <url>/2022/06/23/Paper/20220623-Nature%20News/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Rare-‘triple’-La-Nina-climate-event-looks-likely-—-what-does-the-future-hold"><a href="#Rare-‘triple’-La-Nina-climate-event-looks-likely-—-what-does-the-future-hold" class="headerlink" title="Rare ‘triple’ La Niña climate event looks likely — what does the future hold?"></a>Rare ‘triple’ La Niña climate event looks likely — what does the future hold?</h1><p>Meteorologists are forecasting a third consecutive year of La Niña. Some researchers say similar conditions could become more common as the planet warms.</p>
-<p><img src="https://media.nature.com/lw800/magazine-assets/d41586-022-01668-1/d41586-022-01668-1_23164456.jpg" alt="Rubbish and damaged furniture piled up on a flooded road on March 03, 2022 in Brisbane, Australia."></p>
-<p>La Niña contributed to flooding in eastern Australia earlier this year.Credit: Peter Wallis&#x2F;Getty</p>
-<p>An ongoing La Niña event that has contributed to flooding in eastern Australia and exacerbated droughts in the United States and East Africa could persist into 2023, according to the latest forecasts. The occurrence of two consecutive La Niña winters in the Northern Hemisphere is common, but having three in a row is relatively rare. A ‘triple dip’ La Niña — lasting three years in a row — has happened only twice since 1950.</p>
-<p>This particularly long La Niña is probably just a random blip in the climate, scientists say. But some researchers are warning that climate change could make La Niña-like conditions more likely in future. “We are stacking the odds higher for these triple events coming along,” says Matthew England, a physical oceanographer at the University of New South Wales in Sydney, Australia. England and others are now working to reconcile discrepancies between climate data and the output of major climate models — efforts that could clarify what is in store for the planet.</p>
-<p>More La Niña events would increase the chance of flooding in southeast Asia, boost the risk of droughts and wildfires in the southwestern United States, and create a different pattern of hurricanes, cyclones and monsoons across the Pacific and Atlantic oceans, as well as give rise to other regional changes.</p>
-<p>La Niña and its counterpart, El Niño, are phases of the El Niño–Southern Oscillation (ENSO) that occur every two to seven years, with neutral years in between. During El Niño events, the usual Pacific winds that blow east to west along the Equator weaken or reverse, causing warm water to gush into the eastern Pacific Ocean, increasing the amount of rain in the region. During La Niña, those winds strengthen, warm water shifts west and the eastern Pacific becomes cooler and drier.</p>
-<p>The impacts are far reaching. “The tropical Pacific is huge. If you shift its rainfall, it has a ripple effect on the rest of the world,” says Michelle L’Heureux, a physical scientist at the National Oceanic and Atmospheric Administration (NOAA) Climate Prediction Centre in College Park, Maryland. During La Niña years, the ocean absorbs heat into its depths, so global air temperatures tend to be cooler.</p>
-<h2 id="Cold-snap"><a href="#Cold-snap" class="headerlink" title="Cold snap"></a>Cold snap</h2><p>The current La Niña started around September 2020 and has been mild-to-moderate most of the time since then. As of April 2022, it intensified, leading to a cold snap over the eastern equatorial Pacific Ocean not seen at that time of year since 1950. “That’s pretty impressive,” says England.</p>
-<p>The latest forecast from the World Meteorological Organization, issued on 10 June, gives a 50–60% chance of La Niña persisting until July or September. This will probably increase Atlantic hurricane activity, which buffets eastern North America until November, and decrease the Pacific hurricane season, which mainly affects Mexico. NOAA’s Climate Prediction Centre has forecast a 51% chance of La Niña in early 2023.</p>
-<p>The weird thing about it, says L’Heureux, is that this prolonged La Niña, unlike previous triple dips, hasn’t come after a strong El Niño, which tends to build up a lot of ocean heat that takes a year or two to dissipate<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR1">1</a>. “I keep wondering, where’s the dynamics for this?” says L’Heureux.</p>
-<h2 id="Climate-correlation"><a href="#Climate-correlation" class="headerlink" title="Climate correlation"></a>Climate correlation</h2><p>The big questions that remain are whether climate change is altering the ENSO, and whether La Niña conditions will become more common in future.</p>
-<p>Researchers have noticed a shift in the ENSO in recent decades: the <a href="https://www.ipcc.ch/report/ar6/wg1/#FullReport">latest report by the Intergovernmental Panel on Climate Change (IPCC)</a> shows that strong El Niño and La Niña events have been more frequent and stronger since 1950 than they were in the centuries before that, but the panel couldn’t tell whether this was caused by natural variability or by climate change. Overall, the IPCC models indicate a shift to more El Niño-like states as climate change warms the oceans, says climate modeller Richard Seager at the Lamont–Doherty Earth Observatory of Columbia University in Palisades, New York. Puzzlingly, Seager says, observations have shown the opposite over the past half-century: as the climate has warmed, a tongue of upwelling waters in the eastern equatorial Pacific Ocean has stayed cold, creating more La Niña-like conditions<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR2">2</a>.</p>
-<p>Some researchers argue that the record is simply too sparse to show clearly what is going on, or that there is too much natural variability in the system for researchers to spot long-term trends. But it could also be that the IPCC models are missing something big, says L’Heureux, “which is a more serious issue”. Seager thinks the models are indeed wrong, and that the planet will experience more La Niña-like patterns in future<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR3">3</a>. “More and more people are taking this a bit seriously that maybe the models are biased,” because they don’t capture this cold eastern Pacific water, says Seager.</p>
-<h2 id="Cold-water-injection"><a href="#Cold-water-injection" class="headerlink" title="Cold-water injection"></a>Cold-water injection</h2><p>England has another possible explanation for why the IPCC models could be getting future La Niña-like conditions wrong. As the world warms and the Greenland ice sheet melts, its fresh cold water is expected to slow down a dominant conveyor belt of ocean currents: the Atlantic Meridional Overturning Circulation (AMOC). Scientists mostly agree that the AMOC current has slowed down in <a href="https://www.nature.com/articles/d41586-018-04322-x">recent decades</a><a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR4">4</a>, but don’t agree on why, or how much it will slow in future.</p>
-<p>In a study published in <em>Nature Climate Change</em> on 6 June<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR5">5</a>, England and his colleagues model how an AMOC collapse would leave an excess of heat in the tropical South Atlantic, which would trigger a series of air-pressure changes that ultimately strengthen the Pacific trade winds. These winds push warm water to the west, thus creating more La Niña-like conditions. But England says that the current IPCC models don’t reflect this trend because they don’t include the complex interactions between ice-sheet melt, freshwater injections, ocean currents and atmospheric circulation. “We keep adding bells and whistles to these models. But we need to add in the ice sheets,” he says.</p>
-<p>Michael Mann, a climatologist at Pennsylvania State University in State College, has also argued<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR2">2</a> that climate change will both slow the AMOC and create more La Niña-like conditions. He says the study shows how these two factors can reinforce each other. Getting the models to better reflect what’s going on in the ocean, says Seager, “remains a very active research topic”.</p>
-<p>“We need to better understand what’s going on,” agrees L’Heureux. For now, she adds, whether, how and why the ENSO might change “is a very interesting mystery”.</p>
-<p><em>doi: <a href="https://doi.org/10.1038/d41586-022-01668-1">https://doi.org/10.1038/d41586-022-01668-1</a></em></p>
-<hr>
+    <title>TED Talks</title>
+    <url>/2022/05/01/Recharge/TED%20Talks/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><span style="color:green"><strong>Need the access to YouTube</strong></span></p>
+<h3 id="3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen"><a href="#3-Ways-to-Make-Flying-More-Climate-Friendly-Ryah-Whalen" class="headerlink" title="3 Ways to Make Flying More Climate-Friendly | Ryah Whalen"></a>3 Ways to Make Flying More Climate-Friendly | Ryah Whalen</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/JY-_GRi56KQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<br/>
+
+<h3 id="A-Brain-Implant-That-Turns-Your-Thoughts-Into-Text-Tom-Oxley"><a href="#A-Brain-Implant-That-Turns-Your-Thoughts-Into-Text-Tom-Oxley" class="headerlink" title="A Brain Implant That Turns Your Thoughts Into Text | Tom Oxley"></a>A Brain Implant That Turns Your Thoughts Into Text | Tom Oxley</h3><iframe width="560" height="315" src="https://www.youtube.com/embed/7Fiaew7nDmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ]]></content>
       <categories>
-        <category>Paper</category>
+        <category>Recharge</category>
       </categories>
   </entry>
   <entry>
@@ -3340,6 +3330,34 @@
 <li><a href="https://www.tandfonline.com/doi/abs/10.1080/01969727308546046">Fuzzy C-Means Clustering</a> enables the data points to participate in multiple clusters to varying degrees. It replaces hard cluster assignments with degrees of membership depending on distance from the centroids.</li>
 </ul>
 <p><strong>Revelry in *n* dimensions:</strong> Nonetheless, the algorithm in its original form remains widely useful — especially because, as an unsupervised algorithm, it doesn’t require gathering potentially expensive labeled data. It’s also ever faster to use. For instance, machine learning libraries including scikit-learn benefit from the 2002 addition of <a href="http://www.cs.umd.edu/~mount/Papers/pami02.pdf">kd-trees</a> that partition high-dimensional data extremely quickly. By the way, if you throw any high-dimensional parties, we’d love to be on the guest list.</p>
+]]></content>
+      <categories>
+        <category>Paper</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Nature News</title>
+    <url>/2022/06/23/Paper/20220623-Nature%20News/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Rare-‘triple’-La-Nina-climate-event-looks-likely-—-what-does-the-future-hold"><a href="#Rare-‘triple’-La-Nina-climate-event-looks-likely-—-what-does-the-future-hold" class="headerlink" title="Rare ‘triple’ La Niña climate event looks likely — what does the future hold?"></a>Rare ‘triple’ La Niña climate event looks likely — what does the future hold?</h1><p>Meteorologists are forecasting a third consecutive year of La Niña. Some researchers say similar conditions could become more common as the planet warms.</p>
+<p><img src="https://media.nature.com/lw800/magazine-assets/d41586-022-01668-1/d41586-022-01668-1_23164456.jpg" alt="Rubbish and damaged furniture piled up on a flooded road on March 03, 2022 in Brisbane, Australia."></p>
+<p>La Niña contributed to flooding in eastern Australia earlier this year.Credit: Peter Wallis&#x2F;Getty</p>
+<p>An ongoing La Niña event that has contributed to flooding in eastern Australia and exacerbated droughts in the United States and East Africa could persist into 2023, according to the latest forecasts. The occurrence of two consecutive La Niña winters in the Northern Hemisphere is common, but having three in a row is relatively rare. A ‘triple dip’ La Niña — lasting three years in a row — has happened only twice since 1950.</p>
+<p>This particularly long La Niña is probably just a random blip in the climate, scientists say. But some researchers are warning that climate change could make La Niña-like conditions more likely in future. “We are stacking the odds higher for these triple events coming along,” says Matthew England, a physical oceanographer at the University of New South Wales in Sydney, Australia. England and others are now working to reconcile discrepancies between climate data and the output of major climate models — efforts that could clarify what is in store for the planet.</p>
+<p>More La Niña events would increase the chance of flooding in southeast Asia, boost the risk of droughts and wildfires in the southwestern United States, and create a different pattern of hurricanes, cyclones and monsoons across the Pacific and Atlantic oceans, as well as give rise to other regional changes.</p>
+<p>La Niña and its counterpart, El Niño, are phases of the El Niño–Southern Oscillation (ENSO) that occur every two to seven years, with neutral years in between. During El Niño events, the usual Pacific winds that blow east to west along the Equator weaken or reverse, causing warm water to gush into the eastern Pacific Ocean, increasing the amount of rain in the region. During La Niña, those winds strengthen, warm water shifts west and the eastern Pacific becomes cooler and drier.</p>
+<p>The impacts are far reaching. “The tropical Pacific is huge. If you shift its rainfall, it has a ripple effect on the rest of the world,” says Michelle L’Heureux, a physical scientist at the National Oceanic and Atmospheric Administration (NOAA) Climate Prediction Centre in College Park, Maryland. During La Niña years, the ocean absorbs heat into its depths, so global air temperatures tend to be cooler.</p>
+<h2 id="Cold-snap"><a href="#Cold-snap" class="headerlink" title="Cold snap"></a>Cold snap</h2><p>The current La Niña started around September 2020 and has been mild-to-moderate most of the time since then. As of April 2022, it intensified, leading to a cold snap over the eastern equatorial Pacific Ocean not seen at that time of year since 1950. “That’s pretty impressive,” says England.</p>
+<p>The latest forecast from the World Meteorological Organization, issued on 10 June, gives a 50–60% chance of La Niña persisting until July or September. This will probably increase Atlantic hurricane activity, which buffets eastern North America until November, and decrease the Pacific hurricane season, which mainly affects Mexico. NOAA’s Climate Prediction Centre has forecast a 51% chance of La Niña in early 2023.</p>
+<p>The weird thing about it, says L’Heureux, is that this prolonged La Niña, unlike previous triple dips, hasn’t come after a strong El Niño, which tends to build up a lot of ocean heat that takes a year or two to dissipate<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR1">1</a>. “I keep wondering, where’s the dynamics for this?” says L’Heureux.</p>
+<h2 id="Climate-correlation"><a href="#Climate-correlation" class="headerlink" title="Climate correlation"></a>Climate correlation</h2><p>The big questions that remain are whether climate change is altering the ENSO, and whether La Niña conditions will become more common in future.</p>
+<p>Researchers have noticed a shift in the ENSO in recent decades: the <a href="https://www.ipcc.ch/report/ar6/wg1/#FullReport">latest report by the Intergovernmental Panel on Climate Change (IPCC)</a> shows that strong El Niño and La Niña events have been more frequent and stronger since 1950 than they were in the centuries before that, but the panel couldn’t tell whether this was caused by natural variability or by climate change. Overall, the IPCC models indicate a shift to more El Niño-like states as climate change warms the oceans, says climate modeller Richard Seager at the Lamont–Doherty Earth Observatory of Columbia University in Palisades, New York. Puzzlingly, Seager says, observations have shown the opposite over the past half-century: as the climate has warmed, a tongue of upwelling waters in the eastern equatorial Pacific Ocean has stayed cold, creating more La Niña-like conditions<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR2">2</a>.</p>
+<p>Some researchers argue that the record is simply too sparse to show clearly what is going on, or that there is too much natural variability in the system for researchers to spot long-term trends. But it could also be that the IPCC models are missing something big, says L’Heureux, “which is a more serious issue”. Seager thinks the models are indeed wrong, and that the planet will experience more La Niña-like patterns in future<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR3">3</a>. “More and more people are taking this a bit seriously that maybe the models are biased,” because they don’t capture this cold eastern Pacific water, says Seager.</p>
+<h2 id="Cold-water-injection"><a href="#Cold-water-injection" class="headerlink" title="Cold-water injection"></a>Cold-water injection</h2><p>England has another possible explanation for why the IPCC models could be getting future La Niña-like conditions wrong. As the world warms and the Greenland ice sheet melts, its fresh cold water is expected to slow down a dominant conveyor belt of ocean currents: the Atlantic Meridional Overturning Circulation (AMOC). Scientists mostly agree that the AMOC current has slowed down in <a href="https://www.nature.com/articles/d41586-018-04322-x">recent decades</a><a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR4">4</a>, but don’t agree on why, or how much it will slow in future.</p>
+<p>In a study published in <em>Nature Climate Change</em> on 6 June<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR5">5</a>, England and his colleagues model how an AMOC collapse would leave an excess of heat in the tropical South Atlantic, which would trigger a series of air-pressure changes that ultimately strengthen the Pacific trade winds. These winds push warm water to the west, thus creating more La Niña-like conditions. But England says that the current IPCC models don’t reflect this trend because they don’t include the complex interactions between ice-sheet melt, freshwater injections, ocean currents and atmospheric circulation. “We keep adding bells and whistles to these models. But we need to add in the ice sheets,” he says.</p>
+<p>Michael Mann, a climatologist at Pennsylvania State University in State College, has also argued<a href="https://www.nature.com/articles/d41586-022-01668-1?utm_medium=social&utm_source=wechat&utm_content=organic&utm_term=null&utm_campaign=CONR_NBRIE_ENGM_CN_CNCM_NFHCN_NatBrieCN#ref-CR2">2</a> that climate change will both slow the AMOC and create more La Niña-like conditions. He says the study shows how these two factors can reinforce each other. Getting the models to better reflect what’s going on in the ocean, says Seager, “remains a very active research topic”.</p>
+<p>“We need to better understand what’s going on,” agrees L’Heureux. For now, she adds, whether, how and why the ENSO might change “is a very interesting mystery”.</p>
+<p><em>doi: <a href="https://doi.org/10.1038/d41586-022-01668-1">https://doi.org/10.1038/d41586-022-01668-1</a></em></p>
+<hr>
 ]]></content>
       <categories>
         <category>Paper</category>
