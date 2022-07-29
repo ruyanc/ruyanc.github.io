@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="面向地学领域的Python库汇总https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;dbg4cFHZxJOeLLhx9Fc28w 数据处理NetCDF格式 : netCDF4-python，h5py，h5netcdf，xarray等。除了上述简单的数据处理库之外，python还提供了NCO和CDO工具的封装，pynco和cdo，提供了更多的便捷操作。 Grib格式：xarray，Iris，pyg">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python Library">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Python%20Library/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="面向地学领域的Python库汇总https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;dbg4cFHZxJOeLLhx9Fc28w 数据处理NetCDF格式 : netCDF4-python，h5py，h5netcdf，xarray等。除了上述简单的数据处理库之外，python还提供了NCO和CDO工具的封装，pynco和cdo，提供了更多的便捷操作。 Grib格式：xarray，Iris，pyg">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-07-29T08:03:50.852Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Python%20Library/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Python Library | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-paper">
+
+    <a href="/categories/Paper/" rel="section"><i class="fa fa-archive fa-fw"></i>Paper</a>
+
+  </li>
+        <li class="menu-item menu-item-research">
+
+    <a href="/categories/Research" rel="section"><i class="fa fa-archive fa-fw"></i>Research</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Python%20Library/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Python Library
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-07-29 16:03:50" itemprop="dateModified" datetime="2022-07-29T16:03:50+08:00">2022-07-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="面向地学领域的Python库汇总"><a href="#面向地学领域的Python库汇总" class="headerlink" title="面向地学领域的Python库汇总"></a>面向地学领域的Python库汇总</h1><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/dbg4cFHZxJOeLLhx9Fc28w">https://mp.weixin.qq.com/s/dbg4cFHZxJOeLLhx9Fc28w</a></p>
+<h3 id="数据处理"><a href="#数据处理" class="headerlink" title="数据处理"></a>数据处理</h3><p><strong>NetCDF格式</strong> : <code>netCDF4-python</code>，<code>h5py</code>，<code>h5netcdf</code>，<code>xarray</code>等。<br>除了上述简单的数据处理库之外，python还提供了<code>NCO</code>和<code>CDO</code>工具的封装，<code>pynco</code>和<code>cdo</code>，提供了更多的便捷操作。</p>
+<p><strong>Grib格式</strong>：<code>xarray</code>，<code>Iris</code>，<code>pygrib</code>等，有些仅支持类Unix系统。<br>ECWMF提供了<code>cfgrib</code>工具可将grib格式转换为NetCDF格式，<code>cfgrib</code>库支持Mac，Linux和windows系统。</p>
+<p><strong>csv, xlsx等格式</strong>：<code>pandas</code>你值得拥有，无论是气象还是其他领域的类似格式数据，使用<code>pandas</code>可以解决你的常用操作。</p>
+<p><strong>HDF格式</strong>：<code>pandas</code>和<code>h5py</code>可以处理hdf5格式，<code>PyHDF</code>可以处理hdf4格式。</p>
+<p><strong>二进制</strong>：<code>numpy</code>可以处理二进制数据，同时借助python内置<code>struct</code>模块可以非常方便的处理二进制格式数据。</p>
+<p>上述介绍的一些库，很多仅支持简单的数据读取和写入操作，不支持更多计算操作。如果要对空间数据进行插值，可能就无法满足了。</p>
+<h3 id="数据插值"><a href="#数据插值" class="headerlink" title="数据插值"></a>数据插值</h3><p><code>xESMF</code>和<code>ESMPy</code>：气象数据空间插值，尤其是对于模式网格数据而言，提供了一些便捷的命令可对网格数据进行一些列插值操作</p>
+<p><code>python-stratify</code>：针对大气和海洋数据进行垂直插值</p>
+<p><code>scipy.interpolate</code>模块提供了大量插值函数</p>
+<p><code>python-geotiepoints</code>：针对地理网格数据的空间插值</p>
+<p>说到地球科学领域的数据处理，最离不开的应该也是模式输出数据了。Python中有很多处理模式输出的库，功能都比较完善。</p>
+<h3 id="模式输出处理"><a href="#模式输出处理" class="headerlink" title="模式输出处理"></a>模式输出处理</h3><p><code>wrf-python</code>：对于使用WRF模式的来说使用最为频繁的模式输出后处理工具之一。</p>
+<p><code>salem</code>：这个库包含了数据处理和可视化几乎所有功能，也提供了不少WRF模式后处理和前处理的函数。除此以外还是做掩膜的利器，之前的文章也有提到<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzA3MDQ1NDA4Mw==&mid=2247488432&idx=2&sn=a3eb213e4ffe844070866ef310a97208&chksm=9f3dcd9ca84a448ad68450701fbb15ece93ef2c717f63f3d44cf0ba110904c0c720aa5453c62&scene=21#wechat_redirect">python绘图 | salem一招解决所有可视化中的掩膜(Mask)问题</a>。</p>
+<p><code>CESM_postprocessing</code>：针对<code>CESM</code>地球模式的后处理工具</p>
+<p><code>CAMxTools</code>：提供了CAMx和CMAQ模型的前处理和后处理功能</p>
+<p><code>PseudoNetCDF</code>：类似处理NetCDF的工具，可用于处理CMAQ等模式输出结果</p>
+<p><code>MONET</code>：模式和观测评估工具，然而我非常喜欢的一款类似工具还没有python版&#x3D;&#x3D;</p>
+<h3 id="雷达和卫星数据处理"><a href="#雷达和卫星数据处理" class="headerlink" title="雷达和卫星数据处理"></a>雷达和卫星数据处理</h3><p><code>PyART</code>，<code>wradlib</code>可用于处理国外常见格式的雷达数据。改进后的PyART[1]和PyART[2]提供国内常用的S波段雷达数据处理方式，还有这个PyCINRAD[3]。此外，Python中还提供了不少雷达数据处理和反演库。</p>
+<p><code>satpy</code>，<code>PyCAMA</code>，<code>pys5p</code>，<code>pyresample</code>等库可处理常见的卫星数据</p>
+<p>说到数据处理，当然少不了Micaps的多种数据格式了，下面介绍一款国内大神基于Python开发的Micaps数据处理和可视化库：</p>
+<h3 id="Micaps数据处理"><a href="#Micaps数据处理" class="headerlink" title="Micaps数据处理"></a>Micaps数据处理</h3><p><code>PyMICAPS</code>：PyMICAPS[4]是由国内某气象局一位大神开源的Micaps输出处理和可视化工具(发布在知名同性交友平台–Github)，功能相对齐全，而且也在不断完善。感兴趣的可以下载使用，并反馈意见，帮助持续完善(打个广告~~)。</p>
+<p>数据处理完成之后，当然是要进一步进行分析，python中提供了相当多的分析工具，以下仅列出一小部分：</p>
+<h3 id="数据分析"><a href="#数据分析" class="headerlink" title="数据分析"></a>数据分析</h3><p><code>EOFS</code>：Python EOF分析库</p>
+<p><code>statsmodels</code>：Python统计分析库，提供了大量的统计分析函数</p>
+<p><code>scikit-learn</code>：Python中较为热门的机器学习库，其中也提供了相当多的统计学方法<code>metpy</code>，<code>sharppy</code>，<code>atmos</code>等库可计算大气科学领域常用的一些参数，其中<code>metpy</code>还提供了一些可视化和数据处理函数。</p>
+<p>数据处理完成后，当然也要画图看一下了，要不然怎么发paper呢？&lt;手动狗头&gt;</p>
+<h3 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h3><p><code>matplotlib</code>：<code>matplotlib</code>可以说是python中最为基础的绘图库了</p>
+<p><code>seaborn</code>：针对统计分析的可视化库•<code>Basemap</code>和<code>Cartopy</code>：针对地理信息的可视化库</p>
+<p><code>EarthSim</code>：针对环境模拟(比如水文气象等)的后处理可视化工具，包含了交互式可视化。</p>
+<p><code>calmap</code>：可以绘制日历图</p>
+<p>除了上面列出来的之外，还有很多绘图工具，不再赘述。当然还有一些库不知道该怎么分类，因为分析画图的时候会用到，就放到这边吧：</p>
+<p><code>geopandas</code>：地理空间数据处理和可视化神器</p>
+<p><code>pyshp</code>，<code>fiona</code>等可处理常规的shapefile文件，常在画图的时候添加海岸线和边界线使用</p>
+<p>上述介绍的可视化库大多是非交互式可视化库，关于Python中更多的可视化库分类，见<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU0NTk2NTgwNQ==&mid=2247483727&idx=1&sn=c59818a0d4818ec0eeb6243a981bbb1a&chksm=fb6592cdcc121bdbb35710a42214a3158388954bceb1114e038e90a2c390c34728b2f9705ac9&scene=21#wechat_redirect">Python可视化工具概览</a></p>
+<p>画图当然少不了配色，以下介绍一些Python中的配色库：</p>
+<p><code>cmocean</code>：海洋科学领域的配色库，除了python版之外，还有matlab及其他版本</p>
+<p><code>colorcet</code>，<code>palettable</code>，<code>colour</code>：提供了很多可选的colormap</p>
+<p><code>colormap</code>：提供了一些颜色转换基础操作和创建colormap的函数</p>
+<p><code>cmaps</code>：提供了NCL中所有的colormap</p>
+<p>除了上面提到的之外，Python中还有很多可用的库，比如网络数据获取<code>requests</code>和<code>bs4</code>等，而且很多国外很多机构都提供了python版的获取数据的API接口工具。</p>
+<h3 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h3><p><code>sklearn</code>：前面已经介绍，可以用这个框架完成常用的机器学习流程，从数据预处理，特征工程，建模到评估，非常方便，但不支持深度学习的模型。</p>
+<p><code>TensorFlow</code>：大家都耳熟能详的深度学习框架，是Google brain 开发和维护的，在工业界和学术界都有广泛的使用。</p>
+<p><code>Pytorch</code>：与TensorFlow相比，Pytorch更加方便实现简单灵活的实验，它的前身是Torch，用的是lua语言，从Torch到Pytorch可以看成是lua到python的迁移。</p>
+<p><code>Keras</code>：是建立在 Tensorflow 和 Theano 之上的更高级的 封装，非常容易上手，适合进行简单的试验。具体可以看<a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU0NTk2NTgwNQ==&mid=2247483778&idx=1&sn=c37186dd50ff6b87e119539ce927e81c&chksm=fb659200cc121b160e89698cad6fdd6a965b29b1f211b4c27b18f1ed2f807ac9bcc073ecade3&scene=21#wechat_redirect">铁柱同学的系列文章</a>。</p>
+<p><code>XGBoost</code>：被称为机器学习大杀器的XGBoost(eXtreme Gradient Boosting)，想必大家都有所耳闻，很多比赛的top solutions大多数都用了这个算法。</p>
+<p><code>lightgbm</code>：微软推出的gbm算法模型，更加轻量，一些测试表明其可以实现类似xgboost的效果，但是可以极大节约时间成本。</p>
+<p><code>CatBoost</code>：CatBoost是Yandex在17年开源的机器学习框架，对类别特征支持较好，可以理解为基于类别特征优化的GBM算法。</p>
+<p><code>Hyperopt</code>：强大的调参库，支持贝叶斯优化。</p>
+<p>上面仅对仅列出了一些气象或者机器学习常用库，当然还有很多库有待挖掘。当你有一个想法的时候，可以在Google或者Github搜索一下，说不定Python就能满足你呢！</p>
+<p>之前和朋友们整合了这些资源，觉得对大家还是很有帮助的，不过新来的小伙伴可能没看到过，所以再发一次，希望对大家有所帮助，了解过的盆友们就当温故而知新吧。</p>
+<p>另外因为开源库总是在不断更新，好的工具总在不断出现，为此在Github上开了一个项目<a target="_blank" rel="noopener" href="https://github.com/MeteoAI/awesome-atmos%EF%BC%8C%E5%A4%A7%E5%AE%B6%E5%8F%AF%E4%BB%A5%E6%8A%8A%E8%87%AA%E5%B7%B1%E8%A7%89%E5%BE%97%E6%9C%89%E7%94%A8%E7%9A%84%E5%BA%93%E4%B8%80%E8%B5%B7%E5%8A%A0%E8%BF%9B%E6%9D%A5%E4%B8%8D%E6%96%AD%E4%B8%B0%E5%AF%8C%E6%95%B4%E4%B8%AA%E9%A1%B9%E7%9B%AE%E3%80%82">https://github.com/MeteoAI/awesome-atmos，大家可以把自己觉得有用的库一起加进来不断丰富整个项目。</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Python/" rel="prev" title="Python">
+      <i class="fa fa-chevron-left"></i> Python
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Parameters/" rel="next" title="Parameters">
+      Parameters <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%9C%B0%E5%AD%A6%E9%A2%86%E5%9F%9F%E7%9A%84Python%E5%BA%93%E6%B1%87%E6%80%BB"><span class="nav-number">1.</span> <span class="nav-text">面向地学领域的Python库汇总</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">1.0.1.</span> <span class="nav-text">数据处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E6%8F%92%E5%80%BC"><span class="nav-number">1.0.2.</span> <span class="nav-text">数据插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%A1%E5%BC%8F%E8%BE%93%E5%87%BA%E5%A4%84%E7%90%86"><span class="nav-number">1.0.3.</span> <span class="nav-text">模式输出处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%B7%E8%BE%BE%E5%92%8C%E5%8D%AB%E6%98%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">1.0.4.</span> <span class="nav-text">雷达和卫星数据处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Micaps%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">1.0.5.</span> <span class="nav-text">Micaps数据处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90"><span class="nav-number">1.0.6.</span> <span class="nav-text">数据分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="nav-number">1.0.7.</span> <span class="nav-text">数据可视化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-number">1.0.8.</span> <span class="nav-text">机器学习</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">78</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
