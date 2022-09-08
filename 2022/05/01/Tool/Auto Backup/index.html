@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="gitee在linux下自动备份1.生产密钥 ssh-keygen -t rsa -C “&amp;#49;&amp;#x32;&amp;#x31;&amp;#51;&amp;#49;&amp;#55;&amp;#57;&amp;#x34;&amp;#49;&amp;#54;&amp;#64;&amp;#x71;&amp;#113;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;“ 2.查看密钥 Your identification has been saved in &#x2F;root&amp;#x2">
+  <meta name="description" content="gitee在linux下自动备份1.生产密钥 ssh-keygen -t rsa -C “&amp;#49;&amp;#50;&amp;#49;&amp;#x33;&amp;#x31;&amp;#55;&amp;#x39;&amp;#52;&amp;#x31;&amp;#54;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;“ 2.查看密钥 Your identification has been saved in &#x2F;root&amp;#x2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Auto Backup">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/Auto%20Backup/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="gitee在linux下自动备份1.生产密钥 ssh-keygen -t rsa -C “&amp;#49;&amp;#x32;&amp;#x31;&amp;#51;&amp;#49;&amp;#55;&amp;#57;&amp;#x34;&amp;#49;&amp;#54;&amp;#64;&amp;#x71;&amp;#113;&amp;#x2e;&amp;#x63;&amp;#111;&amp;#109;“ 2.查看密钥 Your identification has been saved in &#x2F;root&amp;#x2">
+<meta property="og:description" content="gitee在linux下自动备份1.生产密钥 ssh-keygen -t rsa -C “&amp;#49;&amp;#50;&amp;#49;&amp;#x33;&amp;#x31;&amp;#55;&amp;#x39;&amp;#52;&amp;#x31;&amp;#54;&amp;#x40;&amp;#x71;&amp;#x71;&amp;#46;&amp;#99;&amp;#111;&amp;#x6d;“ 2.查看密钥 Your identification has been saved in &#x2F;root&amp;#x2">
 <meta property="og:locale">
 <meta property="og:image" content="https://img2020.cnblogs.com/blog/466512/202109/466512-20210924180931677-851805710.png">
 <meta property="og:image" content="https://img2020.cnblogs.com/blog/466512/202109/466512-20210924180243669-1053763082.png">
@@ -264,7 +264,7 @@
 
       
         <h2 id="gitee在linux下自动备份"><a href="#gitee在linux下自动备份" class="headerlink" title="gitee在linux下自动备份"></a>gitee在linux下自动备份</h2><p><strong>1.生产密钥</strong></p>
-<p>ssh-keygen -t rsa -C “<a href="mailto:&#49;&#x32;&#x31;&#51;&#49;&#55;&#57;&#x34;&#49;&#54;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;">&#49;&#x32;&#x31;&#51;&#49;&#55;&#57;&#x34;&#49;&#54;&#64;&#x71;&#113;&#x2e;&#x63;&#111;&#109;</a>“</p>
+<p>ssh-keygen -t rsa -C “<a href="mailto:&#49;&#50;&#49;&#x33;&#x31;&#55;&#x39;&#52;&#x31;&#54;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#49;&#50;&#49;&#x33;&#x31;&#55;&#x39;&#52;&#x31;&#54;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a>“</p>
 <p><strong>2.查看密钥</strong></p>
 <p>Your identification has been saved in &#x2F;root&#x2F;.ssh&#x2F;id_rsa.<br>Your public key has been saved in &#x2F;root&#x2F;.ssh&#x2F;id_rsa.pub.</p>
 <p>到&#x2F;root&#x2F;.ssh&#x2F;查看 cat id_rsa.pub 复制里面的内容。是以ssh-rsa 开头的。</p>
@@ -272,7 +272,7 @@
 <p><strong>3.更改gitee的提交方式</strong></p>
 <p>git remote -v 查看原来的提交方式，这里不能用https的方式提交，需要改为ssh的</p>
 <p>git remote rm origin</p>
-<p>git remote add origin <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#101;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#101;&#46;&#99;&#111;&#109;</a>:sdgtxuyong&#x2F;zhouyi2-sql.git</p>
+<p>git remote add origin <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#x65;&#x2e;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#x69;&#116;&#101;&#x65;&#x2e;&#x63;&#111;&#109;</a>:sdgtxuyong&#x2F;zhouyi2-sql.git</p>
 <p><strong>4.添加密钥到gitee网站，可信任</strong></p>
 <p>打开gitee网址，添加cat的id_rsa.pub 里面的内容。</p>
 <p><img src="https://img2020.cnblogs.com/blog/466512/202109/466512-20210924180243669-1053763082.png" alt="img"></p>
@@ -314,12 +314,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/LaTex%20Sheet/" rel="prev" title="LaTex Sheet">
-      <i class="fa fa-chevron-left"></i> LaTex Sheet
+    <a href="/2022/05/01/Tool/CDO%20Ref%20Card/" rel="prev" title="CDO Ref Card">
+      <i class="fa fa-chevron-left"></i> CDO Ref Card
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/How%20to%20publish%20a%20paper/" rel="next" title="How to publish a paper">
-      How to publish a paper <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/OcnSci/URL/" rel="next" title="URL">
+      URL <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
