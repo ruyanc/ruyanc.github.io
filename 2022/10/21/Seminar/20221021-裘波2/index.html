@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Lecture 2: Recirculation gyre &amp; Multiple equilibria:meandering vs.straight paths of Kuroshio off Japan 裘波     通过南北的涡旋交换，使得西边界流的vorticity得到耗散     与ENSO无关的intrisinc振荡特征  理论一：由上游的流量决定   该理论认为上游流量小的时候">
+<meta property="og:type" content="article">
+<meta property="og:title" content="裘波2">
+<meta property="og:url" content="http://example.com/2022/10/21/Seminar/20221021-%E8%A3%98%E6%B3%A22/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Lecture 2: Recirculation gyre &amp; Multiple equilibria:meandering vs.straight paths of Kuroshio off Japan 裘波     通过南北的涡旋交换，使得西边界流的vorticity得到耗散     与ENSO无关的intrisinc振荡特征  理论一：由上游的流量决定   该理论认为上游流量小的时候">
+<meta property="og:locale">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgst7qvj31080qg42e.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgrossaj310a0qyjve.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgs8fobj30x20oon04.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr2b7fdj30xi0nyq7l.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr32m6vj30xq0fojud.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr1byy4j30xe0p4gpr.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxyrbk1jj30xi0p2n10.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxyql3wlj30xe0paaem.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy1f13hqj30w60nqwiq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3dlldlj30xi0n0jvo.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3cwsbgj30xk0nw42l.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3hs806j30xk0ncwi0.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy4eh6d0j30xe0p4ad2.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy4dqe0kj30xe0ou437.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy6re8mdj30xg0p0aeq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy6uobxej30ww0oywjg.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cycniw58j30xk0ougoh.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cye5uadsj30xm0i2774.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyfa1574j30xc0ou42a.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyh6l6wpj30xm0omdk9.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyi3cuw4j30xm0ouwlz.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyiu1e0fj30xm0pe43l.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cylkbzs9j30x40m442w.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cywh5v2zj30xq0p4tdw.jpg">
+<meta property="article:published_time" content="2022-10-21T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-21T08:48:41.585Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgst7qvj31080qg42e.jpg">
+
+<link rel="canonical" href="http://example.com/2022/10/21/Seminar/20221021-%E8%A3%98%E6%B3%A22/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>裘波2 | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/10/21/Seminar/20221021-%E8%A3%98%E6%B3%A22/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          裘波2
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2022-10-21 12:00:00 / Modified: 16:48:41" itemprop="dateCreated datePublished" datetime="2022-10-21T12:00:00+08:00">2022-10-21</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Seminar/" itemprop="url" rel="index"><span itemprop="name">Seminar</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Lecture-2-Recirculation-gyre-amp-Multiple-equilibria-meandering-vs-straight-paths-of-Kuroshio-off-Japan-裘波"><a href="#Lecture-2-Recirculation-gyre-amp-Multiple-equilibria-meandering-vs-straight-paths-of-Kuroshio-off-Japan-裘波" class="headerlink" title="Lecture 2: Recirculation gyre &amp; Multiple equilibria:meandering vs.straight paths of Kuroshio off Japan 裘波"></a>Lecture 2: Recirculation gyre &amp; Multiple equilibria:meandering vs.straight paths of Kuroshio off Japan 裘波</h2><p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgst7qvj31080qg42e.jpg" alt="Screen Shot 2022-10-21 at 15.03.06"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgrossaj310a0qyjve.jpg" alt="Screen Shot 2022-10-21 at 15.03.34"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxgs8fobj30x20oon04.jpg" alt="Screen Shot 2022-10-21 at 15.11.22"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr2b7fdj30xi0nyq7l.jpg" alt="Screen Shot 2022-10-21 at 15.19.27"></p>
+<ul>
+<li>通过南北的涡旋交换，使得西边界流的vorticity得到耗散</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr32m6vj30xq0fojud.jpg" alt="Screen Shot 2022-10-21 at 15.19.51"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxr1byy4j30xe0p4gpr.jpg" alt="Screen Shot 2022-10-21 at 15.21.08"></p>
+<ul>
+<li>与ENSO无关的intrisinc振荡特征</li>
+</ul>
+<p>理论一：由上游的流量决定</p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxyrbk1jj30xi0p2n10.jpg" alt="Screen Shot 2022-10-21 at 15.26.29"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cxyql3wlj30xe0paaem.jpg" alt="Screen Shot 2022-10-21 at 15.28.36"></p>
+<p>该理论认为上游流量小的时候容易产生meander，但与实际观测的匹配度不够</p>
+<p>理论二：sulf-sustained</p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy1f13hqj30w60nqwiq.jpg" alt="Screen Shot 2022-10-21 at 15.31.12"></p>
+<p>试验一：即使使用climatological的wind forcing（没有interannal的variability），仍然可以存在large meander</p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3dlldlj30xi0n0jvo.jpg" alt="Screen Shot 2022-10-21 at 15.32.13"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3cwsbgj30xk0nw42l.jpg" alt="Screen Shot 2022-10-21 at 15.32.21"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy3hs806j30xk0ncwi0.jpg" alt="Screen Shot 2022-10-21 at 15.32.47"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy4eh6d0j30xe0p4ad2.jpg" alt="Screen Shot 2022-10-21 at 15.33.40"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy4dqe0kj30xe0ou437.jpg" alt="Screen Shot 2022-10-21 at 15.33.53"></p>
+<ul>
+<li>南北的eddy交换后，耗散了风能的输入</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy6re8mdj30xg0p0aeq.jpg" alt="Screen Shot 2022-10-21 at 15.36.09"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cy6uobxej30ww0oywjg.jpg" alt="Screen Shot 2022-10-21 at 15.36.27"></p>
+<ul>
+<li>低纬度地区为低位涡水</li>
+</ul>
+<p>风场在变，耗散在变，导致了出现的频率难以预测</p>
+<p>试验二：减弱风场输入</p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cycniw58j30xk0ougoh.jpg" alt="Screen Shot 2022-10-21 at 15.41.44"></p>
+<ul>
+<li>不再需要eddy来耗散</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cye5uadsj30xm0i2774.jpg" alt="Screen Shot 2022-10-21 at 15.43.28"></p>
+<ul>
+<li>黑潮的状态很难预测，类比地震的不稳定</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyfa1574j30xc0ou42a.jpg" alt="Screen Shot 2022-10-21 at 15.44.36"></p>
+<ul>
+<li>OFS很难再现黑潮的 large meander 特征</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyh6l6wpj30xm0omdk9.jpg" alt="Screen Shot 2022-10-21 at 15.46.21"></p>
+<ul>
+<li>与东海的流量无关</li>
+</ul>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyi3cuw4j30xm0ouwlz.jpg" alt="Screen Shot 2022-10-21 at 15.47.18"></p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cyiu1e0fj30xm0pe43l.jpg" alt="Screen Shot 2022-10-21 at 15.47.51"></p>
+<p>-模式中：PV influx很好, 但eddy dissipation很小，eddy flux太大，导致meander的频率太高</p>
+<p>关键点：需要改进模式对于dissipation的模拟</p>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cylkbzs9j30x40m442w.jpg" alt="Screen Shot 2022-10-21 at 15.49.56"></p>
+<p>西边界流相关的主要研究角度：</p>
+<ol>
+<li>内在的非线性和dissipation的理解</li>
+<li>海气耦合的角度：中尺度涡和亚中尺度对大气边界层的作用</li>
+</ol>
+<p><img src="https://tva1.sinaimg.cn/large/008vxvgGgy1h7cywh5v2zj30xq0p4tdw.jpg" alt="Screen Shot 2022-10-21 at 16.00.02"></p>
+<ul>
+<li><p>延伸体在35°N左右开始往东走，而非supoloar gyre所在的40°N，由于eddy的存在</p>
+</li>
+<li><p>雷诺数，涡旋的作用在模式中究竟如何表现</p>
+</li>
+<li><p>Climate model 中，西边界流的变化，模态水的变化在没有很好resolve eddy的情况下，其未来预估的可靠性问题</p>
+</li>
+</ul>
+<p>Comments on 潮汐的影响：</p>
+<ol>
+<li><p>有潮汐的情况下，模式dissipation更强，eddy作用减弱，理论上meander将减弱</p>
+</li>
+<li><p>Large meander 不能用 regional model 来做: 除了质量守恒外，还有PV守恒的问题，边界条件的影响太大；用regional model来研究西边界流的合理性问题；</p>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/10/19/Seminar/20221019-%E7%94%98%E5%89%91%E5%B9%B3/" rel="prev" title="甘剑平">
+      <i class="fa fa-chevron-left"></i> 甘剑平
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2050/01/01/Welcome/" rel="next" title="Welcome to my blog">
+      Welcome to my blog <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Lecture-2-Recirculation-gyre-amp-Multiple-equilibria-meandering-vs-straight-paths-of-Kuroshio-off-Japan-%E8%A3%98%E6%B3%A2"><span class="nav-number">1.</span> <span class="nav-text">Lecture 2: Recirculation gyre &amp; Multiple equilibria:meandering vs.straight paths of Kuroshio off Japan 裘波</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">103</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
