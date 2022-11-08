@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源：https:&#x2F;&#x2F;ohshitgit.com&#x2F;#magic-time-machine Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Git/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源：https:&#x2F;&#x2F;ohshitgit.com&#x2F;#magic-time-machine Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-02T11:57:00.575Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Git/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Git | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-11-02 19:57:00" itemprop="dateModified" datetime="2022-11-02T19:57:00+08:00">2022-11-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a target="_blank" rel="noopener" href="https://ohshitgit.com/#magic-time-machine">https://ohshitgit.com/#magic-time-machine</a></p>
+<p>Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where you can’t search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem.</p>
+<p>So here are some bad situations I’ve gotten myself into, and how I eventually got myself out of them in plain english.</p>
+<h4 id="I-did-something-terribly-wrong-please-tell-me-git-has-a-magic-time-machine"><a href="#I-did-something-terribly-wrong-please-tell-me-git-has-a-magic-time-machine" class="headerlink" title="I did something terribly wrong, please tell me git has a magic time machine!?!"></a>I did something terribly wrong, please tell me git has a magic time machine!?!</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git reflog</span><br><span class="line"><span class="comment"># you will see a list of every thing you&#x27;ve</span></span><br><span class="line"><span class="comment"># done in git, across all branches!</span></span><br><span class="line"><span class="comment"># each one has an index HEAD@&#123;index&#125;</span></span><br><span class="line"><span class="comment"># find the one before you broke everything</span></span><br><span class="line">git reset HEAD@&#123;index&#125;</span><br><span class="line"><span class="comment"># magic time machine</span></span><br></pre></td></tr></table></figure>
+
+<p>You can use this to get back stuff you accidentally deleted, or just to remove some stuff you tried that broke the repo, or to recover after a bad merge, or just to go back to a time when things actually worked. I use <code>reflog</code> A LOT. Mega hat tip to the many many many many many people who suggested adding it!</p>
+<h4 id="I-committed-and-immediately-realized-I-need-to-make-one-small-change"><a href="#I-committed-and-immediately-realized-I-need-to-make-one-small-change" class="headerlink" title="I committed and immediately realized I need to make one small change!"></a>I committed and immediately realized I need to make one small change!</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># make your change</span></span><br><span class="line">git add . <span class="comment"># or add individual files</span></span><br><span class="line">git commit --amend --no-edit</span><br><span class="line"><span class="comment"># now your last commit contains that change!</span></span><br><span class="line"><span class="comment"># WARNING: never amend public commits</span></span><br></pre></td></tr></table></figure>
+
+<p>This usually happens to me if I commit, then run tests&#x2F;linters… and FML, I didn’t put a space after an equals sign. You could also make the change as a new commit and then do <code>rebase -i</code> in order to squash them both together, but this is about a million times faster.</p>
+<p><em>Warning: You should never amend commits that have been pushed up to a public&#x2F;shared branch! Only amend commits that only exist in your local copy or you’re gonna have a bad time</em></p>
+<h4 id="I-need-to-change-the-message-on-my-last-commit"><a href="#I-need-to-change-the-message-on-my-last-commit" class="headerlink" title="I need to change the message on my last commit!"></a>I need to change the message on my last commit!</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit --amend</span><br><span class="line"># follow prompts to change the commit message</span><br></pre></td></tr></table></figure>
+
+<p>Stupid commit message formatting requirements.</p>
+<h4 id="I-accidentally-committed-something-to-master-that-should-have-been-on-a-brand-new-branch"><a href="#I-accidentally-committed-something-to-master-that-should-have-been-on-a-brand-new-branch" class="headerlink" title="I accidentally committed something to master that should have been on a brand new branch!"></a>I accidentally committed something to master that should have been on a brand new branch!</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># create a new branch from the current state of master</span><br><span class="line">git branch some-new-branch-name</span><br><span class="line"># remove the last commit from the master branch</span><br><span class="line">git reset HEAD~ --hard</span><br><span class="line">git checkout some-new-branch-name</span><br><span class="line"># your commit lives in this branch now :)</span><br></pre></td></tr></table></figure>
+
+<p>Note: this doesn’t work if you’ve already pushed the commit to a public&#x2F;shared branch, and if you tried other things first, you might need to <code>git reset HEAD@&#123;number-of-commits-back&#125;</code> instead of <code>HEAD~</code>. Infinite sadness. Also, many many many people suggested an awesome way to make this shorter that I didn’t know myself. Thank you all!</p>
+<h4 id="I-accidentally-committed-to-the-wrong-branch"><a href="#I-accidentally-committed-to-the-wrong-branch" class="headerlink" title="I accidentally committed to the wrong branch!"></a>I accidentally committed to the wrong branch!</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># undo the last commit, but leave the changes available</span><br><span class="line">git reset HEAD~ --soft</span><br><span class="line">git stash</span><br><span class="line"># move to the correct branch</span><br><span class="line">git checkout name-of-the-correct-branch</span><br><span class="line">git stash pop</span><br><span class="line">git add . # or add individual files</span><br><span class="line">git commit -m &quot;your message here&quot;;</span><br><span class="line"># now your changes are on the correct branch</span><br></pre></td></tr></table></figure>
+
+<p>A lot of people have suggested using <code>cherry-pick</code> for this situation too, so take your pick on whatever one makes the most sense to you!</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git checkout name-of-the-correct-branch</span><br><span class="line"># grab the last commit to master</span><br><span class="line">git cherry-pick master</span><br><span class="line"># delete it from master</span><br><span class="line">git checkout master</span><br><span class="line">git reset HEAD~ --hard</span><br></pre></td></tr></table></figure>
+
+<h4 id="I-tried-to-run-a-diff-but-nothing-happened"><a href="#I-tried-to-run-a-diff-but-nothing-happened" class="headerlink" title="I tried to run a diff but nothing happened?!"></a>I tried to run a diff but nothing happened?!</h4><p>If you know that you made changes to files, but <code>diff</code> is empty, you probably <code>add</code>-ed your files to staging and you need to use a special flag.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git diff --staged</span><br></pre></td></tr></table></figure>
+
+<p>File under ¯_(ツ)_&#x2F;¯ (yes, I know this is a feature, not a bug, but it’s fucking baffling and non-obvious the first time it happens to you!)</p>
+<h4 id="I-need-to-undo-a-commit-from-like-5-commits-ago"><a href="#I-need-to-undo-a-commit-from-like-5-commits-ago" class="headerlink" title="I need to undo a commit from like 5 commits ago!"></a>I need to undo a commit from like 5 commits ago!</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># find the commit you need to undo</span><br><span class="line">git log</span><br><span class="line"># use the arrow keys to scroll up and down in history</span><br><span class="line"># once you&#x27;ve found your commit, save the hash</span><br><span class="line">git revert [saved hash]</span><br><span class="line"># git will create a new commit that undoes that commit</span><br><span class="line"># follow prompts to edit the commit message</span><br><span class="line"># or just save and commit</span><br></pre></td></tr></table></figure>
+
+<p>Turns out you don’t have to track down and copy-paste the old file contents into the existing file in order to undo changes! If you committed a bug, you can undo the commit all in one go with <code>revert</code>.</p>
+<p>You can also revert a single file instead of a full commit! But of course, in true git fashion, it’s a completely different set of fucking commands…</p>
+<h4 id="I-need-to-undo-my-changes-to-a-file"><a href="#I-need-to-undo-my-changes-to-a-file" class="headerlink" title="I need to undo my changes to a file!"></a>I need to undo my changes to a file!</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># find a hash for a commit before the file was changed</span><br><span class="line">git log</span><br><span class="line"># use the arrow keys to scroll up and down in history</span><br><span class="line"># once you&#x27;ve found your commit, save the hash</span><br><span class="line">git checkout [saved hash] -- path/to/file</span><br><span class="line"># the old version of the file will be in your index</span><br><span class="line">git commit -m &quot;Wow, you don&#x27;t have to copy-paste to undo&quot;</span><br></pre></td></tr></table></figure>
+
+<p>When I finally figured this out it was HUGE. HUGE. H-U-G-E. But seriously though, on what fucking planet does <code>checkout --</code> make sense as the best way to undo a file? :shakes-fist-at-linus-torvalds:</p>
+<h4 id="I-give-up"><a href="#I-give-up" class="headerlink" title="I give up."></a>I give up.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">sudo rm -r fucking-git-repo-dir</span><br><span class="line">git clone https://some.github.url/fucking-git-repo-dir.git</span><br><span class="line">cd fucking-git-repo-dir</span><br></pre></td></tr></table></figure>
+
+<p>Thanks to Eric V. for this one. All complaints about the use of <code>sudo</code> in this joke can be directed to him.</p>
+<p>For real though, if your branch is sooo borked that you need to reset the state of your repo to be the same as the remote repo in a “git-approved” way, try this, but beware these are destructive and unrecoverable actions!</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># get the lastest state of origin</span><br><span class="line">git fetch origin</span><br><span class="line">git checkout master</span><br><span class="line">git reset --hard origin/master</span><br><span class="line"># delete untracked files and directories</span><br><span class="line">git clean -d --force</span><br><span class="line"># repeat checkout/reset/clean for each borked branch</span><br></pre></td></tr></table></figure>
+
+<p>*Disclaimer: This site is not intended to be an exhaustive reference. And yes, there are other ways to do these same things with more theoretical purity or whatever, but I’ve come to these steps through trial and error and lots of swearing and table flipping, and I had this crazy idea to share them with a healthy dose of levity and profanity. Take it or leave it as you will!</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Latex%20Symbols/" rel="prev" title="Latex Symbols">
+      <i class="fa fa-chevron-left"></i> Latex Symbols
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/LaTex%20Notes/" rel="next" title="LaTex Notes">
+      LaTex Notes <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#I-did-something-terribly-wrong-please-tell-me-git-has-a-magic-time-machine"><span class="nav-number">1.</span> <span class="nav-text">I did something terribly wrong, please tell me git has a magic time machine!?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-committed-and-immediately-realized-I-need-to-make-one-small-change"><span class="nav-number">2.</span> <span class="nav-text">I committed and immediately realized I need to make one small change!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-change-the-message-on-my-last-commit"><span class="nav-number">3.</span> <span class="nav-text">I need to change the message on my last commit!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-something-to-master-that-should-have-been-on-a-brand-new-branch"><span class="nav-number">4.</span> <span class="nav-text">I accidentally committed something to master that should have been on a brand new branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-to-the-wrong-branch"><span class="nav-number">5.</span> <span class="nav-text">I accidentally committed to the wrong branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-tried-to-run-a-diff-but-nothing-happened"><span class="nav-number">6.</span> <span class="nav-text">I tried to run a diff but nothing happened?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-a-commit-from-like-5-commits-ago"><span class="nav-number">7.</span> <span class="nav-text">I need to undo a commit from like 5 commits ago!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-my-changes-to-a-file"><span class="nav-number">8.</span> <span class="nav-text">I need to undo my changes to a file!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-give-up"><span class="nav-number">9.</span> <span class="nav-text">I give up.</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">107</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
