@@ -27,15 +27,15 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="ssh Automatic Login Linux下生成密钥 生成linux下的密钥要用到 ssh-keygen 命令，一般执行完这个命令公钥和私钥会生成到 .ssh 的隐藏目录。在执行这个命令之前我们先检查一下这个目录是否存在，因为有些linux如果没有这个目录的话是不会生成key的。然后我们再执行 ssh-keygen -t rsa，进入“.ssh”会生成以下几个文件：id_rsa : 生成的">
 <meta property="og:locale">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/06/1_151733904241.png">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/06/file-llls22.jpg">
-<meta property="og:image" content="https://www.runoob.com/wp-content/uploads/2014/06/363003_1227493859FdXT.png">
-<meta property="og:image" content="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zwfjvruqj210o0sqjw1.jpg">
+<meta property="og:image" content="https://p.ipic.vip/0vi3t9.png">
+<meta property="og:image" content="https://p.ipic.vip/qrkay0.jpg">
+<meta property="og:image" content="https://p.ipic.vip/o5rvks.png">
+<meta property="og:image" content="https://p.ipic.vip/95a3xt.jpg">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T02:06:27.330Z">
+<meta property="article:modified_time" content="2022-12-30T03:20:07.198Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://www.runoob.com/wp-content/uploads/2014/06/1_151733904241.png">
+<meta name="twitter:image" content="https://p.ipic.vip/0vi3t9.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/Linux/">
 
@@ -235,7 +235,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-12-30 10:06:27" itemprop="dateModified" datetime="2022-12-30T10:06:27+08:00">2022-12-30</time>
+                <time title="Modified: 2022-12-30 11:20:07" itemprop="dateModified" datetime="2022-12-30T11:20:07+08:00">2022-12-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -377,7 +377,7 @@
 <li>chmod (change mode) ： 修改用户的权限。</li>
 </ul>
 <p>下图中通过 chown 来授权用户，通过 chmod 为用户设置可以开门的权限。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2014/06/1_151733904241.png" alt="img"></p>
+<p><img src="https://p.ipic.vip/0vi3t9.png" alt="img"></p>
 <p>在 Linux 中我们可以使用 <strong>ll</strong> 或者 <strong>ls –l</strong> 命令来显示一个文件的属性以及文件所属的用户和组，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@www /]# ls -l</span><br><span class="line">total 64</span><br><span class="line">dr-xr-xr-x   2 root root 4096 Dec 14  2012 bin</span><br><span class="line">dr-xr-xr-x   4 root root 4096 Apr 19  2012 boot</span><br><span class="line">……</span><br></pre></td></tr></table></figure>
 
@@ -391,9 +391,9 @@
 <li>若是 <strong>c</strong> 则表示为装置文件里面的串行端口设备，例如键盘、鼠标(一次性读取装置)。</li>
 </ul>
 <p>接下来的字符中，以三个为一组，且均为 <strong>rwx</strong> 的三个参数的组合。其中， <strong>r</strong> 代表可读(read)、 <strong>w</strong> 代表可写(write)、 <strong>x</strong> 代表可执行(execute)。 要注意的是，这三个权限的位置不会改变，如果没有权限，就会出现减号 <strong>-</strong> 而已。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2014/06/file-llls22.jpg" alt="img"></p>
+<p><img src="https://p.ipic.vip/qrkay0.jpg" alt="img"></p>
 <p>每个文件的属性由左边第一部分的 10 个字符来确定（如下图）。</p>
-<p><img src="https://www.runoob.com/wp-content/uploads/2014/06/363003_1227493859FdXT.png" alt="363003_1227493859FdXT"></p>
+<p><img src="https://p.ipic.vip/o5rvks.png" alt="363003_1227493859FdXT"></p>
 <p>从左至右用 <strong>0-9</strong> 这些数字来表示。</p>
 <p>第 <strong>0</strong> 位确定文件类型，第 <strong>1-3</strong> 位确定属主（该文件的所有者）拥有该文件的权限。</p>
 <p>第4-6位确定属组（所有者的同组用户）拥有该文件的权限，第7-9位确定其他用户拥有该文件的权限。</p>
@@ -538,7 +538,7 @@
 <p><code>module load ncl</code></p>
 <p><a target="_blank" rel="noopener" href="https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots">https://www2.cisl.ucar.edu/resources/storage-and-file-systems/glade/recovering-files-snapshots</a></p>
 <p>To see if your current directory is present in any snapshots, just run <strong>snapls</strong> on your command line. You can also specify a directory by executing <strong>snapls -ldhtr directory_name</strong>.</p>
-<p><img src="https://tva1.sinaimg.cn/large/e6c9d24egy1h1zwfjvruqj210o0sqjw1.jpg" alt="File space"></p>
+<p><img src="https://p.ipic.vip/95a3xt.jpg" alt="File space"></p>
 <h2 id="shell"><a href="#shell" class="headerlink" title="shell"></a>shell</h2><p><a target="_blank" rel="noopener" href="https://explainshell.com/">https://explainshell.com/</a></p>
 <h2 id="添加环境变量"><a href="#添加环境变量" class="headerlink" title="添加环境变量"></a>添加环境变量</h2><p>- 添加 Homebrew 到 &#x2F;home&#x2F;rychen&#x2F;.bash_profile 文件的 PATH 中，执行下面命令即可:</p>
  <figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">&#x27;eval &quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)&quot;&#x27;</span> &gt;&gt; /home/rychen/.bash_profile</span><br><span class="line"></span><br><span class="line">eval <span class="string">&quot;$(/home/rychen/.linuxbrew/bin/brew shellenv)</span></span><br></pre></td></tr></table></figure>
@@ -585,12 +585,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Writting/" rel="prev" title="Writting">
-      <i class="fa fa-chevron-left"></i> Writting
+    <a href="/2022/05/01/Tool/MAC/" rel="prev" title="MAC">
+      <i class="fa fa-chevron-left"></i> MAC
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Vim/" rel="next" title="Vim">
-      Vim <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Linux%20CMD/" rel="next" title="Linux CMD">
+      Linux CMD <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
