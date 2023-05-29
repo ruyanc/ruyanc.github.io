@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Amos S. Lawless  Data Assimilation Research Center  University of ReadingLecture 1 An introduction to data assimilationWhat is data assimilation?Data assimilation is the process of estimating the stat">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Assimilation">
+<meta property="og:url" content="http://example.com/2022/05/01/AtmoSci/Data%20Assimilation/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Amos S. Lawless  Data Assimilation Research Center  University of ReadingLecture 1 An introduction to data assimilationWhat is data assimilation?Data assimilation is the process of estimating the stat">
+<meta property="og:locale">
+<meta property="og:image" content="https://p.ipic.vip/3pmao1.png">
+<meta property="og:image" content="https://p.ipic.vip/26z9pi.png">
+<meta property="og:image" content="https://p.ipic.vip/9u1lqe.png">
+<meta property="og:image" content="https://p.ipic.vip/ywharx.png">
+<meta property="og:image" content="https://p.ipic.vip/fzhfw5.png">
+<meta property="og:image" content="https://p.ipic.vip/1aqg22.png">
+<meta property="og:image" content="https://p.ipic.vip/jt6sah.png">
+<meta property="og:image" content="https://p.ipic.vip/y83h95.png">
+<meta property="og:image" content="https://p.ipic.vip/9yedqf.png">
+<meta property="og:image" content="https://p.ipic.vip/mm0p3r.png">
+<meta property="og:image" content="https://p.ipic.vip/uf156f.png">
+<meta property="og:image" content="https://p.ipic.vip/dsxilq.png">
+<meta property="og:image" content="https://p.ipic.vip/cbru13.png">
+<meta property="og:image" content="https://p.ipic.vip/ynxr9l.png">
+<meta property="og:image" content="https://p.ipic.vip/oanfuf.png">
+<meta property="og:image" content="https://p.ipic.vip/04ovqy.png">
+<meta property="og:image" content="https://p.ipic.vip/za3fef.png">
+<meta property="og:image" content="https://p.ipic.vip/oxjudn.png">
+<meta property="og:image" content="https://p.ipic.vip/dhoabh.png">
+<meta property="og:image" content="https://p.ipic.vip/d3a2l8.png">
+<meta property="og:image" content="https://p.ipic.vip/grzuih.png">
+<meta property="og:image" content="https://p.ipic.vip/uwdijj.png">
+<meta property="og:image" content="https://p.ipic.vip/npmw1g.png">
+<meta property="og:image" content="https://p.ipic.vip/04i6l6.png">
+<meta property="og:image" content="https://p.ipic.vip/deuazb.png">
+<meta property="og:image" content="https://p.ipic.vip/gb1o6o.png">
+<meta property="og:image" content="https://p.ipic.vip/pcnrzh.png">
+<meta property="og:image" content="https://p.ipic.vip/z34i08.png">
+<meta property="og:image" content="https://p.ipic.vip/09i4ob.png">
+<meta property="og:image" content="https://p.ipic.vip/d4a338.png">
+<meta property="og:image" content="https://p.ipic.vip/btuby7.png">
+<meta property="og:image" content="https://p.ipic.vip/qclzvb.png">
+<meta property="og:image" content="https://p.ipic.vip/o0i70u.png">
+<meta property="og:image" content="https://p.ipic.vip/4simig.png">
+<meta property="og:image" content="https://p.ipic.vip/t7hnmb.png">
+<meta property="og:image" content="https://p.ipic.vip/x1s271.png">
+<meta property="og:image" content="https://p.ipic.vip/hyuzo7.png">
+<meta property="og:image" content="https://p.ipic.vip/m1xvxw.png">
+<meta property="og:image" content="https://p.ipic.vip/q5bdet.png">
+<meta property="og:image" content="https://p.ipic.vip/gq8q0d.png">
+<meta property="og:image" content="https://p.ipic.vip/xw3wge.png">
+<meta property="og:image" content="https://p.ipic.vip/ttjwcy.png">
+<meta property="og:image" content="https://p.ipic.vip/5jf2eq.png">
+<meta property="og:image" content="https://p.ipic.vip/a1srf7.png">
+<meta property="og:image" content="https://p.ipic.vip/wjpw8p.png">
+<meta property="og:image" content="https://p.ipic.vip/l2as2t.png">
+<meta property="og:image" content="https://p.ipic.vip/xox4td.png">
+<meta property="og:image" content="https://p.ipic.vip/i2t47s.png">
+<meta property="og:image" content="https://p.ipic.vip/eo2q6n.png">
+<meta property="og:image" content="https://p.ipic.vip/zlq1j8.png">
+<meta property="og:image" content="https://p.ipic.vip/49h38e.png">
+<meta property="og:image" content="https://p.ipic.vip/p383ag.png">
+<meta property="og:image" content="https://p.ipic.vip/kskyyc.png">
+<meta property="og:image" content="https://p.ipic.vip/m8s5ml.png">
+<meta property="og:image" content="https://p.ipic.vip/1e6zf2.png">
+<meta property="og:image" content="https://p.ipic.vip/2j5x3x.png">
+<meta property="og:image" content="https://p.ipic.vip/3lmw0s.png">
+<meta property="og:image" content="https://p.ipic.vip/ayxpyd.png">
+<meta property="og:image" content="https://p.ipic.vip/7s8zgm.png">
+<meta property="og:image" content="https://p.ipic.vip/ftjel1.png">
+<meta property="og:image" content="https://p.ipic.vip/vtuw1o.png">
+<meta property="og:image" content="https://p.ipic.vip/wcl82p.png">
+<meta property="og:image" content="https://p.ipic.vip/jnf7m0.png">
+<meta property="og:image" content="https://p.ipic.vip/4weus3.png">
+<meta property="og:image" content="https://p.ipic.vip/0r421l.png">
+<meta property="og:image" content="https://p.ipic.vip/gjsqig.png">
+<meta property="og:image" content="https://p.ipic.vip/99zao0.png">
+<meta property="og:image" content="https://p.ipic.vip/ezzst4.png">
+<meta property="og:image" content="https://p.ipic.vip/f1pmvx.png">
+<meta property="og:image" content="https://p.ipic.vip/wahuxy.png">
+<meta property="og:image" content="https://p.ipic.vip/lwhy7v.png">
+<meta property="og:image" content="https://p.ipic.vip/uwyvrc.png">
+<meta property="og:image" content="https://p.ipic.vip/426cjo.png">
+<meta property="og:image" content="https://p.ipic.vip/pjbcam.png">
+<meta property="og:image" content="https://p.ipic.vip/xokva8.png">
+<meta property="og:image" content="https://p.ipic.vip/mb8stp.png">
+<meta property="og:image" content="https://p.ipic.vip/lgfod8.png">
+<meta property="og:image" content="https://p.ipic.vip/2ekirg.png">
+<meta property="og:image" content="https://p.ipic.vip/vvtld0.png">
+<meta property="og:image" content="https://p.ipic.vip/fykekv.png">
+<meta property="og:image" content="https://p.ipic.vip/p0vqgs.png">
+<meta property="og:image" content="https://p.ipic.vip/nz0ruc.png">
+<meta property="og:image" content="https://p.ipic.vip/6lgvb4.png">
+<meta property="og:image" content="https://p.ipic.vip/uekm1v.png">
+<meta property="og:image" content="https://p.ipic.vip/1mjztd.png">
+<meta property="og:image" content="https://p.ipic.vip/jaurmn.png">
+<meta property="og:image" content="https://p.ipic.vip/ldgi3f.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-29T01:47:42.702Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/3pmao1.png">
+
+<link rel="canonical" href="http://example.com/2022/05/01/AtmoSci/Data%20Assimilation/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Data Assimilation | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/AtmoSci/Data%20Assimilation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Data Assimilation
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-29 09:47:42" itemprop="dateModified" datetime="2023-05-29T09:47:42+08:00">2023-05-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AtmSci/" itemprop="url" rel="index"><span itemprop="name">AtmSci</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Amos-S-Lawless-Data-Assimilation-Research-Center-University-of-Reading"><a href="#Amos-S-Lawless-Data-Assimilation-Research-Center-University-of-Reading" class="headerlink" title="Amos S. Lawless  Data Assimilation Research Center  University of Reading"></a>Amos S. Lawless  Data Assimilation Research Center  University of Reading</h2><h3 id="Lecture-1-An-introduction-to-data-assimilation"><a href="#Lecture-1-An-introduction-to-data-assimilation" class="headerlink" title="Lecture 1 An introduction to data assimilation"></a>Lecture 1 An introduction to data assimilation</h3><h4 id="What-is-data-assimilation"><a href="#What-is-data-assimilation" class="headerlink" title="What is data assimilation?"></a>What is data assimilation?</h4><p>Data assimilation is the process of estimating the state of a dynamical system by combing observational data with a priori estimate of the state (often from a numerical model forecast)</p>
+<h4 id="Why-not-just-use-the-observations"><a href="#Why-not-just-use-the-observations" class="headerlink" title="Why not just use the observations?"></a>Why not just use the observations?</h4><ul>
+<li>We may only observe part of the state</li>
+</ul>
+<p><img src="https://p.ipic.vip/3pmao1.png" alt="Screenshot 2023-05-13 at 11.57.02"></p>
+<ul>
+<li>We may observe a nonlinear function of the state, e.g. satellite radiances</li>
+</ul>
+<p><img src="https://p.ipic.vip/26z9pi.png" alt="Screenshot 2023-05-13 at 12.06.40"></p>
+<p>观测算子：从模式变量到观测变量   （可能非常复杂）</p>
+<ul>
+<li>We need to allow for uncertainties in the observations (and in the a prior estimate)</li>
+</ul>
+<p>观测和模式均存在误差</p>
+<p><img src="https://p.ipic.vip/9u1lqe.png" alt="Screenshot 2023-05-13 at 19.38.51"></p>
+<p>Unbiased: 误差的平均值为0</p>
+<p>Uncorrelated: 观测误差和模式误差不相关</p>
+<p>两个未知变量，需要两个条件：</p>
+<p><img src="https://p.ipic.vip/ywharx.png" alt="Screenshot 2023-05-13 at 19.46.17"></p>
+<p><img src="https://p.ipic.vip/fzhfw5.png" alt="Screenshot 2023-05-13 at 19.52.29"></p>
+<p><img src="https://p.ipic.vip/1aqg22.png" alt="Screenshot 2023-05-13 at 19.57.25"></p>
+<p>当观测和模式的方差相等时，分析场等于二分之一的观测+二分之一的模式</p>
+<p>当观测（模式）方差较大时，模式（观测）的权重较大；</p>
+<p><img src="https://p.ipic.vip/jt6sah.png" alt="Screenshot 2023-05-13 at 20.02.22"></p>
+<p><img src="https://p.ipic.vip/y83h95.png" alt="Screenshot 2023-05-13 at 20.02.47"></p>
+<p>p(x|y)  当有观测y时模式x的最佳估算</p>
+<p><img src="https://p.ipic.vip/9yedqf.png" alt="Screenshot 2023-05-13 at 20.05.23"></p>
+<p><img src="https://p.ipic.vip/mm0p3r.png" alt="Screenshot 2023-05-13 at 20.07.17"></p>
+<p><img src="https://p.ipic.vip/uf156f.png" alt="Screenshot 2023-05-13 at 20.09.09"></p>
+<p>more weight for the observation because of less uncertainty</p>
+<p><img src="https://p.ipic.vip/dsxilq.png" alt="Screenshot 2023-05-13 at 20.10.17"></p>
+<p><img src="https://p.ipic.vip/cbru13.png" alt="Screenshot 2023-05-13 at 20.12.23"></p>
+<p>无法获取PDF：1. 抽样；2. 统计特征（平均值、模态）</p>
+<p><img src="https://p.ipic.vip/ynxr9l.png" alt="Screenshot 2023-05-13 at 20.15.52"></p>
+<p>covariance matrix: 1d variance —&gt; multiple dimension</p>
+<p><img src="https://p.ipic.vip/oanfuf.png" alt="Screenshot 2023-05-13 at 20.35.00"></p>
+<p><img src="https://p.ipic.vip/04ovqy.png" alt="Screenshot 2023-05-13 at 20.36.56"></p>
+<p>based on the assumption that H is linear</p>
+<p><img src="https://p.ipic.vip/za3fef.png" alt="Screenshot 2023-05-13 at 20.39.50"></p>
+<p>变分法</p>
+<p><img src="https://p.ipic.vip/oxjudn.png" alt="Screenshot 2023-05-13 at 20.41.24"></p>
+<p><img src="https://p.ipic.vip/dhoabh.png" alt="Screenshot 2023-05-13 at 20.42.55"></p>
+<p><img src="https://p.ipic.vip/d3a2l8.png" alt="Screenshot 2023-05-13 at 20.43.43"></p>
+<p><img src="https://p.ipic.vip/grzuih.png" alt="Screenshot 2023-05-13 at 20.44.57"></p>
+<p>Kalman Filter use this ^</p>
+<p><img src="https://p.ipic.vip/uwdijj.png" alt="Screenshot 2023-05-13 at 20.45.32"></p>
+<p><img src="https://p.ipic.vip/npmw1g.png" alt="Screenshot 2023-05-13 at 20.46.19"></p>
+<h3 id="Lecture-2-Data-Assimilation-variational-data-assimilation-and-the-ensemble-Kalman-filter"><a href="#Lecture-2-Data-Assimilation-variational-data-assimilation-and-the-ensemble-Kalman-filter" class="headerlink" title="Lecture 2 Data Assimilation variational data assimilation and the ensemble Kalman filter"></a>Lecture 2 Data Assimilation variational data assimilation and the ensemble Kalman filter</h3><p><img src="https://p.ipic.vip/04i6l6.png" alt="Screenshot 2023-05-16 at 18.34.32"></p>
+<p><img src="https://p.ipic.vip/deuazb.png" alt="Screenshot 2023-05-16 at 18.37.40"></p>
+<p><img src="https://p.ipic.vip/gb1o6o.png" alt="Screenshot 2023-05-17 at 14.53.38"></p>
+<p><img src="https://p.ipic.vip/pcnrzh.png" alt="Screenshot 2023-05-17 at 14.54.59"></p>
+<p><img src="https://p.ipic.vip/z34i08.png" alt="Screenshot 2023-05-17 at 14.58.02"></p>
+<p><img src="https://p.ipic.vip/09i4ob.png" alt="Screenshot 2023-05-17 at 14.58.43"></p>
+<p>Xi+1 &#x3D; Mi(Xi) means need to run the model within the time window and compare with the observation</p>
+<p><img src="https://p.ipic.vip/d4a338.png" alt="Screenshot 2023-05-17 at 15.03.45"></p>
+<p>已有很多有效算法来计算</p>
+<p>the problem is how to calculate the gradient (with respect to thoundsands of X) in an efficient way</p>
+<p><img src="https://p.ipic.vip/btuby7.png" alt="Screenshot 2023-05-17 at 15.07.33"></p>
+<p><img src="https://p.ipic.vip/qclzvb.png" alt="Screenshot 2023-05-17 at 15.10.35"></p>
+<p>Adjoint model: nonlinear model —&gt; linearlize the model —&gt; take the transpose</p>
+<p>allow us to get the gradient at each iteration</p>
+<p><img src="https://p.ipic.vip/o0i70u.png" alt="Screenshot 2023-05-17 at 15.21.43"></p>
+<p><img src="https://p.ipic.vip/4simig.png" alt="Screenshot 2023-05-17 at 15.22.44"></p>
+<p><img src="https://p.ipic.vip/t7hnmb.png" alt="Screenshot 2023-05-17 at 15.24.02"></p>
+<p><img src="https://p.ipic.vip/x1s271.png" alt="Screenshot 2023-05-17 at 15.28.37"></p>
+<p><img src="https://p.ipic.vip/hyuzo7.png" alt="Screenshot 2023-05-17 at 15.28.51"></p>
+<p><img src="https://p.ipic.vip/m1xvxw.png" alt="Screenshot 2023-05-17 at 15.30.44"></p>
+<p><img src="https://p.ipic.vip/q5bdet.png" alt="Screenshot 2023-05-17 at 15.31.34"></p>
+<p>not evolve with time, but still get some dynamics</p>
+<p><img src="https://p.ipic.vip/gq8q0d.png" alt="Screenshot 2023-05-17 at 15.37.51"></p>
+<p><img src="https://p.ipic.vip/xw3wge.png" alt="Screenshot 2023-05-17 at 15.41.10"></p>
+<p><img src="https://p.ipic.vip/ttjwcy.png" alt="Screenshot 2023-05-17 at 15.41.33"></p>
+<p><img src="https://p.ipic.vip/5jf2eq.png" alt="Screenshot 2023-05-17 at 15.43.08"></p>
+<p><img src="https://p.ipic.vip/a1srf7.png" alt="Screenshot 2023-05-17 at 15.46.38"></p>
+<p>at each time step: calculate the analyses, calculate the uncertainty of the analyses, forcast the the both in other to get the prior and uncertainty for the next step</p>
+<p><img src="https://p.ipic.vip/wjpw8p.png" alt="Screenshot 2023-05-17 at 15.48.58"></p>
+<p><img src="https://p.ipic.vip/l2as2t.png" alt="Screenshot 2023-05-17 at 15.49.23"></p>
+<p>For large model (many variables), it is impractical, even if your model is linear</p>
+<p><img src="https://p.ipic.vip/xox4td.png" alt="Screenshot 2023-05-17 at 15.54.01"></p>
+<p><img src="https://p.ipic.vip/i2t47s.png" alt="Screenshot 2023-05-17 at 15.54.26"></p>
+<p><img src="https://p.ipic.vip/eo2q6n.png" alt="Screenshot 2023-05-17 at 15.55.11"></p>
+<p><img src="https://p.ipic.vip/zlq1j8.png" alt="Screenshot 2023-05-17 at 15.55.55"></p>
+<p><img src="https://p.ipic.vip/49h38e.png" alt="Screenshot 2023-05-17 at 15.56.55"></p>
+<p><img src="https://p.ipic.vip/p383ag.png" alt="Screenshot 2023-05-17 at 15.59.18"></p>
+<p><img src="https://p.ipic.vip/kskyyc.png" alt="Screenshot 2023-05-17 at 16.00.07"></p>
+<p><img src="https://p.ipic.vip/m8s5ml.png" alt="Screenshot 2023-05-17 at 16.00.39"></p>
+<p><img src="https://p.ipic.vip/1e6zf2.png" alt="Screenshot 2023-05-17 at 16.02.17"></p>
+<p><img src="https://p.ipic.vip/2j5x3x.png" alt="Screenshot 2023-05-17 at 16.04.07"></p>
+<p>no trust the obs anymore as the time evolves</p>
+<p><img src="https://p.ipic.vip/3lmw0s.png" alt="Screenshot 2023-05-17 at 16.06.41"></p>
+<h3 id="Lecture-3-Applications-of-data-assimilation-and-current-challenges"><a href="#Lecture-3-Applications-of-data-assimilation-and-current-challenges" class="headerlink" title="Lecture 3 Applications of data assimilation and current challenges"></a>Lecture 3 Applications of data assimilation and current challenges</h3><h4 id="Applications"><a href="#Applications" class="headerlink" title="Applications"></a>Applications</h4><p><img src="https://p.ipic.vip/ayxpyd.png" alt="Screenshot 2023-05-14 at 16.37.04"></p>
+<p>data assimilation make better use of satellite data in the Southern Hemisphere</p>
+<p><img src="https://p.ipic.vip/7s8zgm.png" alt="Screenshot 2023-05-14 at 16.39.35"></p>
+<p>shaping the increments according to the local dynamics</p>
+<p><img src="https://p.ipic.vip/ftjel1.png" alt="Screenshot 2023-05-14 at 16.43.24"></p>
+<p><img src="https://p.ipic.vip/vtuw1o.png" alt="Screenshot 2023-05-14 at 16.44.22"></p>
+<p>combine the varitational method with the ensemble method can get the flow-dependent varitions at the start of the window</p>
+<p><img src="https://p.ipic.vip/wcl82p.png" alt="Screenshot 2023-05-14 at 16.48.00"></p>
+<p>increase ensemble member can get rid of noise without localisation</p>
+<p>and get true correlation (flow-dependent)   but hard to have enough ensemble numbers in practice !</p>
+<p><img src="https://p.ipic.vip/jnf7m0.png" alt="Screenshot 2023-05-14 at 16.51.08"></p>
+<p><img src="https://p.ipic.vip/4weus3.png" alt="Screenshot 2023-05-14 at 16.52.05"></p>
+<p><img src="https://p.ipic.vip/0r421l.png" alt="Screenshot 2023-05-14 at 16.53.09"></p>
+<p><img src="https://p.ipic.vip/gjsqig.png" alt="Screenshot 2023-05-14 at 16.54.03"></p>
+<p>the difference between the SST mesurement: ocean model - 1 meter below the surface</p>
+<p>Satallite data: skin temperature</p>
+<p>Caution: think about the structure </p>
+<p><img src="https://p.ipic.vip/99zao0.png" alt="Screenshot 2023-05-14 at 16.58.32"></p>
+<p><img src="https://p.ipic.vip/ezzst4.png" alt="Screenshot 2023-05-14 at 17.00.18"></p>
+<p><img src="https://p.ipic.vip/f1pmvx.png" alt="Screenshot 2023-05-14 at 17.03.50"></p>
+<p><img src="https://p.ipic.vip/wahuxy.png" alt="Screenshot 2023-05-14 at 17.05.54"></p>
+<p>improvement due to time-correlated observations</p>
+<p>same algorithm at the beginning, but need to think hard about what is the model background and what is the observation, as well as how to better combine the two, by adapting the algorithm.</p>
+<p><img src="https://p.ipic.vip/lwhy7v.png" alt="Screenshot 2023-05-14 at 17.13.55"></p>
+<p><img src="https://p.ipic.vip/uwyvrc.png" alt="Screenshot 2023-05-14 at 17.16.58"></p>
+<p><img src="https://p.ipic.vip/426cjo.png" alt="Screenshot 2023-05-14 at 17.18.02"></p>
+<p><img src="https://p.ipic.vip/pjbcam.png" alt="Screenshot 2023-05-14 at 19.21.06"></p>
+<p><img src="https://p.ipic.vip/xokva8.png" alt="Screenshot 2023-05-14 at 19.21.37"></p>
+<p>more satellite data get around 1970</p>
+<p><img src="https://p.ipic.vip/mb8stp.png" alt="Screenshot 2023-05-14 at 19.23.31"></p>
+<p><img src="https://p.ipic.vip/lgfod8.png" alt="Screenshot 2023-05-14 at 19.25.42"></p>
+<h4 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h4><p><img src="https://p.ipic.vip/2ekirg.png" alt="Screenshot 2023-05-14 at 19.27.38"></p>
+<p><img src="https://p.ipic.vip/vvtld0.png" alt="Screenshot 2023-05-14 at 19.28.38"></p>
+<p><img src="https://p.ipic.vip/fykekv.png" alt="Screenshot 2023-05-14 at 19.29.40"></p>
+<p><img src="https://p.ipic.vip/p0vqgs.png" alt="Screenshot 2023-05-14 at 19.31.33"></p>
+<p>highly correlated means non-independent, less information from the observation</p>
+<p><img src="https://p.ipic.vip/nz0ruc.png" alt="Screenshot 2023-05-14 at 19.32.13"></p>
+<p><img src="https://p.ipic.vip/6lgvb4.png" alt="Screenshot 2023-05-14 at 19.34.03"></p>
+<p>to make the window longer in 4DVar</p>
+<p><img src="https://p.ipic.vip/uekm1v.png" alt="Screenshot 2023-05-14 at 19.36.26"></p>
+<p><img src="https://p.ipic.vip/1mjztd.png" alt="Screenshot 2023-05-14 at 19.38.05"></p>
+<p><img src="https://p.ipic.vip/jaurmn.png" alt="Screenshot 2023-05-14 at 19.39.20"></p>
+<p>Best algorithm to use dependent on your applications</p>
+<p><img src="https://p.ipic.vip/ldgi3f.png" alt="Screenshot 2023-05-14 at 19.43.21"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/AtmoSci/Conversions%20and%20Constants/" rel="prev" title="Conversions and Constants">
+      <i class="fa fa-chevron-left"></i> Conversions and Constants
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/AtmoSci/URL/" rel="next" title="URL">
+      URL <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Amos-S-Lawless-Data-Assimilation-Research-Center-University-of-Reading"><span class="nav-number">1.</span> <span class="nav-text">Amos S. Lawless  Data Assimilation Research Center  University of Reading</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-1-An-introduction-to-data-assimilation"><span class="nav-number">1.1.</span> <span class="nav-text">Lecture 1 An introduction to data assimilation</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#What-is-data-assimilation"><span class="nav-number">1.1.1.</span> <span class="nav-text">What is data assimilation?</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Why-not-just-use-the-observations"><span class="nav-number">1.1.2.</span> <span class="nav-text">Why not just use the observations?</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-2-Data-Assimilation-variational-data-assimilation-and-the-ensemble-Kalman-filter"><span class="nav-number">1.2.</span> <span class="nav-text">Lecture 2 Data Assimilation variational data assimilation and the ensemble Kalman filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Lecture-3-Applications-of-data-assimilation-and-current-challenges"><span class="nav-number">1.3.</span> <span class="nav-text">Lecture 3 Applications of data assimilation and current challenges</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Applications"><span class="nav-number">1.3.1.</span> <span class="nav-text">Applications</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Challenges"><span class="nav-number">1.3.2.</span> <span class="nav-text">Challenges</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">127</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
