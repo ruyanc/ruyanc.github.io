@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果">
+<meta property="og:type" content="article">
+<meta property="og:title" content="张昕">
+<meta property="og:url" content="http://example.com/2021/09/24/Seminar/20210924-%E5%BC%A0%E6%98%95/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果">
+<meta property="og:locale">
+<meta property="og:image" content="https://p.ipic.vip/ynoqbv.png">
+<meta property="og:image" content="https://p.ipic.vip/uy2m0r.png">
+<meta property="og:image" content="https://p.ipic.vip/qhnrwl.png">
+<meta property="og:image" content="https://p.ipic.vip/k8v3rq.png">
+<meta property="og:image" content="https://p.ipic.vip/6dzduk.png">
+<meta property="og:image" content="https://p.ipic.vip/k3p8bz.png">
+<meta property="og:image" content="https://p.ipic.vip/nplvg8.png">
+<meta property="og:image" content="https://p.ipic.vip/l11fvx.png">
+<meta property="og:image" content="https://p.ipic.vip/zh89on.png">
+<meta property="og:image" content="https://p.ipic.vip/furt90.png">
+<meta property="og:image" content="https://p.ipic.vip/qq5dkw.png">
+<meta property="og:image" content="https://p.ipic.vip/420l6v.png">
+<meta property="og:image" content="https://p.ipic.vip/1bu8xt.png">
+<meta property="og:image" content="https://p.ipic.vip/i66uq3.png">
+<meta property="og:image" content="https://p.ipic.vip/d5ht7e.png">
+<meta property="og:image" content="https://p.ipic.vip/e5ox0l.png">
+<meta property="og:image" content="https://p.ipic.vip/5pwo1r.png">
+<meta property="og:image" content="https://p.ipic.vip/uvqzg3.png">
+<meta property="og:image" content="https://p.ipic.vip/ntvwmy.png">
+<meta property="og:image" content="https://p.ipic.vip/keuy95.png">
+<meta property="og:image" content="https://p.ipic.vip/0dviln.png">
+<meta property="og:image" content="https://p.ipic.vip/2qtsjc.png">
+<meta property="og:image" content="https://p.ipic.vip/tiqe4q.png">
+<meta property="og:image" content="https://p.ipic.vip/l0dy88.png">
+<meta property="og:image" content="https://p.ipic.vip/9up3zl.png">
+<meta property="og:image" content="https://p.ipic.vip/0w2kgz.png">
+<meta property="og:image" content="https://p.ipic.vip/8hdmss.png">
+<meta property="og:image" content="https://p.ipic.vip/nofzi6.png">
+<meta property="og:image" content="https://p.ipic.vip/p4fnc7.png">
+<meta property="article:published_time" content="2021-09-24T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-05-30T09:41:25.920Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/ynoqbv.png">
+
+<link rel="canonical" href="http://example.com/2021/09/24/Seminar/20210924-%E5%BC%A0%E6%98%95/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>张昕 | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/24/Seminar/20210924-%E5%BC%A0%E6%98%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          张昕
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2021-09-24 12:00:00" itemprop="dateCreated datePublished" datetime="2021-09-24T12:00:00+08:00">2021-09-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-05-30 17:41:25" itemprop="dateModified" datetime="2023-05-30T17:41:25+08:00">2023-05-30</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Seminar/" itemprop="url" rel="index"><span itemprop="name">Seminar</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果"><a href="#张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果" class="headerlink" title="张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果"></a>张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果</h2><p><img src="https://p.ipic.vip/ynoqbv.png" alt="Screenshot 2023-05-30 at 16.11.50"></p>
+<p><img src="https://p.ipic.vip/uy2m0r.png" alt="Screenshot 2023-05-30 at 16.15.46"></p>
+<p><img src="https://p.ipic.vip/qhnrwl.png" alt="Screenshot 2023-05-30 at 16.18.27"></p>
+<p><img src="https://p.ipic.vip/k8v3rq.png" alt="Screenshot 2023-05-30 at 16.21.58"></p>
+<p><img src="https://p.ipic.vip/6dzduk.png" alt="Screenshot 2023-05-30 at 16.24.18"></p>
+<p><img src="https://p.ipic.vip/k3p8bz.png" alt="Screenshot 2023-05-30 at 16.24.41"></p>
+<p><img src="https://p.ipic.vip/nplvg8.png" alt="Screenshot 2023-05-30 at 16.28.28"></p>
+<p><img src="https://p.ipic.vip/l11fvx.png" alt="Screenshot 2023-05-30 at 16.29.29"></p>
+<p><img src="https://p.ipic.vip/zh89on.png" alt="Screenshot 2023-05-30 at 16.29.29"></p>
+<p><img src="https://p.ipic.vip/furt90.png" alt="Screenshot 2023-05-30 at 16.35.01"></p>
+<p><img src="https://p.ipic.vip/qq5dkw.png" alt="Screenshot 2023-05-30 at 16.39.00"></p>
+<p><img src="https://p.ipic.vip/420l6v.png" alt="Screenshot 2023-05-30 at 16.39.59"></p>
+<p><img src="https://p.ipic.vip/1bu8xt.png" alt="Screenshot 2023-05-30 at 16.40.55"></p>
+<p><img src="https://p.ipic.vip/i66uq3.png" alt="Screenshot 2023-05-30 at 16.42.47"></p>
+<p><img src="https://p.ipic.vip/d5ht7e.png" alt="Screenshot 2023-05-30 at 16.43.10"></p>
+<p><img src="https://p.ipic.vip/e5ox0l.png" alt="Screenshot 2023-05-30 at 16.43.28"></p>
+<p><img src="https://p.ipic.vip/5pwo1r.png" alt="Screenshot 2023-05-30 at 16.43.56"></p>
+<p><img src="https://p.ipic.vip/uvqzg3.png" alt="Screenshot 2023-05-30 at 16.45.45"></p>
+<p><img src="https://p.ipic.vip/ntvwmy.png" alt="Screenshot 2023-05-30 at 16.46.13"></p>
+<p><img src="https://p.ipic.vip/keuy95.png" alt="Screenshot 2023-05-30 at 16.46.58"></p>
+<p><img src="https://p.ipic.vip/0dviln.png" alt="Screenshot 2023-05-30 at 16.47.21"></p>
+<p><img src="https://p.ipic.vip/2qtsjc.png" alt="Screenshot 2023-05-30 at 16.47.43"></p>
+<p><img src="https://p.ipic.vip/tiqe4q.png" alt="Screenshot 2023-05-30 at 16.49.50"></p>
+<p><img src="https://p.ipic.vip/l0dy88.png" alt="Screenshot 2023-05-30 at 16.49.58"></p>
+<p><img src="https://p.ipic.vip/9up3zl.png" alt="Screenshot 2023-05-30 at 16.50.20"></p>
+<p><img src="https://p.ipic.vip/0w2kgz.png" alt="Screenshot 2023-05-30 at 16.51.07"></p>
+<p><img src="https://p.ipic.vip/8hdmss.png" alt="Screenshot 2023-05-30 at 16.51.25"></p>
+<p><img src="https://p.ipic.vip/nofzi6.png" alt="Screenshot 2023-05-30 at 16.51.55"></p>
+<p><img src="https://p.ipic.vip/p4fnc7.png" alt="Screenshot 2023-05-30 at 16.53.00"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/12/01/Publication/Chen_et_al_2020_JC/" rel="prev" title="Chen et al 2020 JC">
+      <i class="fa fa-chevron-left"></i> Chen et al 2020 JC
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/10/20/Seminar/20211020-%E8%B0%A2%E5%85%83%E5%AF%8C/" rel="next" title="谢元富">
+      谢元富 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%A0%E6%98%95%E5%8F%91%E5%B1%95%E4%B8%80%E4%B8%AA%E2%80%9C%E8%87%AA%E4%B8%BB%E5%8F%AF%E6%8E%A7%E2%80%9D%E7%9A%84%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%9F%E4%B8%80%E8%B5%84%E6%96%99%E5%90%8C%E5%8C%96%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%B1%95%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%88%9D%E6%AD%A5%E7%BB%93%E6%9E%9C"><span class="nav-number">1.</span> <span class="nav-text">张昕发展一个“自主可控”的面向对象的统一资料同化系统进展介绍和初步结果</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">132</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
