@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Cross-Validation（交叉验证）详解在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法： 1.The Validation Set Approach第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Machine Learning">
+<meta property="og:url" content="http://example.com/2022/05/01/Recharge/Machine%20Learning/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Cross-Validation（交叉验证）详解在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法： 1.The Validation Set Approach第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（t">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-577bb114a1073273452cc1c73045e274_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-27f8c5989dd7790ccf6b626e6854e06c_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c6a79e230f946da8aefd793ed57c0454_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-ec72b82d605902ddfa060c2fb5777a05_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-fcb843dd06c15a515d03a543864bbb77_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-daf077823e7faa57c6f4014389fe12b9_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-7302b5c15dcfc6746b51830b65debf62_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-44a2d750251c54e0471ce073fc21607a_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-003b9933dc4a0ff6ae1716270d760531_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-f9478d30112a1f76f9745b3c09f9739a_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c4b66fed30622a0d5d6032918baf6838_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-ecdf00751c34bdac741e715caaacc703_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-b2b56757d4bb9d0f869d9d12491a0f04_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-3fc8cc39375fb250a53bf3cb88b91fe1_1440w.webp">
+<meta property="og:image" content="https://p.ipic.vip/h8gs2d.png">
+<meta property="og:image" content="https://p.ipic.vip/mrrxt1.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190821192552318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXdlaXl1eGlhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://p.ipic.vip/3qg5la.png">
+<meta property="og:image" content="https://p.ipic.vip/ry75un.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-09T03:01:24.787Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Recharge/Machine%20Learning/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Machine Learning | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Recharge/Machine%20Learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Machine Learning
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-06-09 11:01:24" itemprop="dateModified" datetime="2023-06-09T11:01:24+08:00">2023-06-09</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Recharge/" itemprop="url" rel="index"><span itemprop="name">Recharge</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Cross-Validation（交叉验证）详解"><a href="#Cross-Validation（交叉验证）详解" class="headerlink" title="Cross-Validation（交叉验证）详解"></a>Cross-Validation（交叉验证）详解</h2><p>在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法：</p>
+<h3 id="1-The-Validation-Set-Approach"><a href="#1-The-Validation-Set-Approach" class="headerlink" title="1.The Validation Set Approach"></a>1.The Validation Set Approach</h3><p>第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（training set）和测试集（test set）。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp" alt="img"></p>
+<p>例如，如上图所示，我们可以将蓝色部分的数据作为训练集（包含7、22、13等数据），将右侧的数据作为测试集（包含91等），这样通过在蓝色的训练集上训练模型，在测试集上观察不同模型不同参数对应的MSE的大小，就可以合适选择模型和参数了。</p>
+<p>不过，这个简单的方法存在两个弊端。</p>
+<p>1.最终模型与参数的选取将极大程度依赖于你对训练集和测试集的划分方法。什么意思呢？我们再看一张图：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-577bb114a1073273452cc1c73045e274_1440w.webp" alt="img"></p>
+<p>右边是十种不同的训练集和测试集划分方法得到的test MSE，可以看到，在不同的划分方法下，test MSE的变动是很大的，而且对应的最优degree也不一样。所以如果我们的训练集和测试集的划分方法不够好，很有可能无法选择到最好的模型与参数。</p>
+<p>2.该方法只用了部分数据进行模型的训练</p>
+<p>我们都知道，当用于模型训练的数据量越大时，训练出来的模型通常效果会越好。所以训练集和测试集的划分意味着我们无法充分利用我们手头已有的数据，所以得到的模型效果也会受到一定的影响。</p>
+<p>基于这样的背景，有人就提出了Cross-Validation方法，也就是交叉验证。</p>
+<h3 id="2-Cross-Validation"><a href="#2-Cross-Validation" class="headerlink" title="2.Cross-Validation"></a>2.Cross-Validation</h3><p><em><strong>2.1 LOOCV</strong></em></p>
+<p>首先，我们先介绍LOOCV方法，即（Leave-one-out cross-validation）。像Test set approach一样，LOOCV方法也包含将数据集分为训练集和测试集这一步骤。但是不同的是，我们现在只用一个数据作为测试集，其他的数据都作为训练集，并将此步骤重复N次（N为数据集的数据数量）。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-27f8c5989dd7790ccf6b626e6854e06c_1440w.webp" alt="img"></p>
+<p>如上图所示，假设我们现在有n个数据组成的数据集，那么LOOCV的方法就是每次取出一个数据作为测试集的唯一元素，而其他n-1个数据都作为训练集用于训练模型和调参。结果就是我们最终训练了n个模型，每次都能得到一个MSE。而计算最终test MSE则就是将这n个MSE取平均。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-c6a79e230f946da8aefd793ed57c0454_1440w.webp" alt="img"></p>
+<p>��比起test set approach，LOOCV有很多优点。首先它不受测试集合训练集划分方法的影响，因为每一个数据都单独的做过测试集。同时，其用了n-1个数据训练模型，也几乎用到了所有的数据，保证了模型的bias更小。不过LOOCV的缺点也很明显，那就是计算量过于大，是test set approach耗时的n-1倍。</p>
+<p>为了解决计算成本太大的弊端，又有人提供了下面的式子，使得LOOCV计算成本和只训练一个模型一样快。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-ec72b82d605902ddfa060c2fb5777a05_1440w.webp" alt="img"></p>
+<p>其中��^表示第i个拟合值，而ℎ�则表示leverage。关于ℎ�的计算方法详见线性回归的部分（以后会涉及）。</p>
+<p><em><strong>2.2 K-fold Cross Validation</strong></em></p>
+<p>另外一种折中的办法叫做K折交叉验证，和LOOCV的不同在于，我们每次的测试集将不再只包含一个数据，而是多个，具体数目将根据K的选取决定。比如，如果K&#x3D;5，那么我们利用五折交叉验证的步骤就是：</p>
+<p>1.将所有数据集分成5份</p>
+<p>2.不重复地每次取其中一份做测试集，用其他四份做训练集训练模型，之后计算该模型在测试集上的����</p>
+<p>3.将5次的����取平均得到最后的MSE</p>
+<p><img src="https://pic4.zhimg.com/80/v2-fcb843dd06c15a515d03a543864bbb77_1440w.webp" alt="img"></p>
+<p>不难理解，其实LOOCV是一种特殊的K-fold Cross Validation（K&#x3D;N）。再来看一组图：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-daf077823e7faa57c6f4014389fe12b9_1440w.webp" alt="img"></p>
+<p>每一幅图种蓝色表示的真实的test MSE，而黑色虚线和橙线则分贝表示的是LOOCV方法和10-fold CV方法得到的test MSE。我们可以看到事实上LOOCV和10-fold CV对test MSE的估计是很相似的，但是相比LOOCV，10-fold CV的计算成本却小了很多，耗时更少。</p>
+<p><strong><em>2.3 Bias-Variance Trade-Off for* *k*</em>-Fold Cross-Validation*</strong></p>
+<p>最后，我们要说说K的选取。事实上，和开头给出的文章里的部分内容一样，K的选取是一个Bias和Variance的trade-off。</p>
+<p>K越大，每次投入的训练集的数据越多，模型的Bias越小。但是K越大，又意味着每一次选取的训练集之前的相关性越大（考虑最极端的例子，当k&#x3D;N，也就是在LOOCV里，每次都训练数据几乎是一样的）。而这种大相关性会导致最终的test error具有更大的Variance。</p>
+<p>一般来说，根据经验我们一般选择k&#x3D;5或10。</p>
+<p><em><strong>2.4 Cross-Validation on Classification Problems</strong></em></p>
+<p>上面我们讲的都是回归问题，所以用MSE来衡量test error。如果是分类问题，那么我们可以用以下式子来衡量Cross-Validation的test error：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-7302b5c15dcfc6746b51830b65debf62_1440w.webp" alt="img"></p>
+<p>其中Erri表示的是第i个模型在第i组测试集上的分类错误的个数。</p>
+<p>图片来源：《An Introduction to Statistical Learning with Applications in R》</p>
+<h2 id="不平衡数据处理"><a href="#不平衡数据处理" class="headerlink" title="不平衡数据处理"></a>不平衡数据处理</h2><p>本文作者用python代码示例解释了3种处理不平衡数据集的可选方法，包括数据层面上的2种重采样数据集方法和算法层面上的1个集成分类器方法。</p>
+<p>分类是机器学习最常见的问题之一，处理它的最佳方法是从分析和探索数据集开始，即从探索式数据分析（Exploratory Data Analysis， EDA）开始。除了生成尽可能多的数据见解和信息，它还用于查找数据集中可能存在的任何问题。在分析用于分类的数据集时，类别不平衡是常见问题之一。</p>
+<h3 id="什么是数据不平衡（类别不平衡）？"><a href="#什么是数据不平衡（类别不平衡）？" class="headerlink" title="什么是数据不平衡（类别不平衡）？"></a>什么是数据不平衡（类别不平衡）？</h3><p>数据不平衡通常反映了数据集中类别的不均匀分布。例如，在信用卡欺诈检测数据集中，大多数信用卡交易类型都不是欺诈，仅有很少一部分类型是欺诈交易，如此以来，非欺诈交易和欺诈交易之间的比率达到50:1。本文中，我将使用来自Kaggle的信用卡欺诈交易数据数据集，你可以从这里下载。</p>
+<p><strong>这里</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://www.kaggle.com/mlg-ulb/creditcardfraud">https://www.kaggle.com/mlg-ulb/creditcardfraud</a></p>
+<p>首先，我们先绘制类分布图，查看不平衡情况。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-44a2d750251c54e0471ce073fc21607a_1440w.webp" alt="img"></p>
+<p>如你所见，非欺诈交易类型数据数量远远超过欺诈交易类型。如果我们在不解决这个类别不平衡问题的情况下训练了一个二分类模型，那么这个模型完全是有偏差的，稍后我还会向你演示它影响特征相关性的过程并解释其中的原因。</p>
+<p>现在，我们来介绍一些解决类别不平衡问题的技巧，你可以在这里找到完整代码的notebook。</p>
+<p><strong>这里</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://github.com/wmlba/innovate2019/blob/master/Credit_Card_Fraud_Detection.ipynb">https://github.com/wmlba/innovate2019/blob/master/Credit_Card_Fraud_Detection.ipynb</a></p>
+<h3 id="重采样（过采样和欠采样）"><a href="#重采样（过采样和欠采样）" class="headerlink" title="重采样（过采样和欠采样）"></a>重采样（过采样和欠采样）</h3><p><img src="https://pic2.zhimg.com/80/v2-003b9933dc4a0ff6ae1716270d760531_1440w.webp" alt="img"></p>
+<p>这听起来很直接。欠采样就是一个随机删除一部分多数类（数量多的类型）数据的过程，这样可以使多数类数据数量可以和少数类（数量少的类型）相匹配。一个简单实现代码如下：</p>
+<p># Shuffle the Dataset.</p>
+<p>shuffled_df &#x3D; credit_df.sample(frac&#x3D;1,random_state&#x3D;4)</p>
+<p># Put all the fraud class in a separate dataset.</p>
+<p>fraud_df &#x3D; shuffled_df.loc[shuffled_df[‘Class’] &#x3D;&#x3D; 1]</p>
+<p>#Randomly select 492 observations from the non-fraud (majority class)</p>
+<p>non_fraud_df&#x3D;shuffled_df.loc[shuffled_df[‘Class’]&#x3D;&#x3D; 0].sample(n&#x3D;492,random_state&#x3D;42)</p>
+<p># Concatenate both dataframes again</p>
+<p>normalized_df &#x3D; pd.concat([fraud_df, non_fraud_df])</p>
+<p>#plot the dataset after the undersampling</p>
+<p>plt.figure(figsize&#x3D;(8, 8))</p>
+<p>sns.countplot(‘Class’, data&#x3D;normalized_df)</p>
+<p>plt.title(‘Balanced Classes’)</p>
+<p>plt.show()</p>
+<p><strong>对多数类进行欠采样</strong></p>
+<p>对数据集进行欠采样之后，我重新画出了类型分布图（如下），可见两个类型的数量相等。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-f9478d30112a1f76f9745b3c09f9739a_1440w.webp" alt="img"></p>
+<p><strong>平衡数据集（欠采样）</strong></p>
+<p>第二种重采样技术叫过采样，这个过程比欠采样复杂一点。它是一个生成合成数据的过程，试图学习少数类样本特征随机地生成新的少数类样本数据。对于典型的分类问题，有许多方法对数据集进行过采样，最常见的技术是SMOTE（Synthetic Minority Over-sampling Technique，合成少数类过采样技术）。简单地说，就是在少数类数据点的特征空间里，根据随机选择的一个K最近邻样本随机地合成新样本。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-c4b66fed30622a0d5d6032918baf6838_1440w.webp" alt="img"></p>
+<p><strong>来源</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://imbalanced-learn.readthedocs.io/en/stable/over_sampling.html">https://imbalanced-learn.readthedocs.io/en/stable/over_sampling.html</a></p>
+<p>为了用python编码，我调用了imbalanced-learn 库（或imblearn），实现SMOTE的代码如下：</p>
+<p>imbalanced-learn</p>
+<p><a href="https://link.zhihu.com/?target=https://imbalanced-learn.readthedocs.io/en/stable/index.html">https://imbalanced-learn.readthedocs.io/en/stable/index.html</a></p>
+<p>from imblearn.over_sampling import SMOTE</p>
+<p># Resample the minority class. You can change the strategy to ‘auto’ if you are not sure.</p>
+<p>sm &#x3D; SMOTE(sampling_strategy&#x3D;’minority’, random_state&#x3D;7)</p>
+<p># Fit the model to generate the data.</p>
+<p>oversampled_trainX,oversampled_trainY&#x3D;sm.fit_sample(credit_df.drop(‘Class’, axis&#x3D;1), credit_df[‘Class’])</p>
+<p>oversampled_train&#x3D;pd.concat([pd.DataFrame(oversampled_trainY), pd.DataFrame(oversampled_trainX)], axis&#x3D;1)</p>
+<p>oversampled_train.columns &#x3D; normalized_df.columns</p>
+<p>还记得我说过不平衡的数据会影响特征相关性吗？让我向您展示处理不平衡类问题前后的特征相关性。</p>
+<p><strong>重采样之前：</strong></p>
+<p>下面的代码用来绘制所有特征之间的相关矩阵：</p>
+<p># Sample figsize in inches</p>
+<p>fig, ax &#x3D; plt.subplots(figsize&#x3D;(20,10))</p>
+<p># Imbalanced DataFrame Correlation</p>
+<p>corr &#x3D; credit_df.corr()</p>
+<p>sns.heatmap(corr, cmap&#x3D;’YlGnBu’, annot_kws&#x3D;{‘size’:30}, ax&#x3D;ax)</p>
+<p>ax.set_title(“Imbalanced Correlation Matrix”, fontsize&#x3D;14)</p>
+<p>plt.show()</p>
+<p><img src="https://pic4.zhimg.com/80/v2-ecdf00751c34bdac741e715caaacc703_1440w.webp" alt="img"></p>
+<p><strong>重采样之后：</strong></p>
+<p><img src="https://pic1.zhimg.com/80/v2-b2b56757d4bb9d0f869d9d12491a0f04_1440w.webp" alt="img"></p>
+<p>请注意，现在特征相关性更明显了。在解决不平衡问题之前，大多数特征并没有显示出相关性，这肯定会影响模型的性能。除了会关系到整个模型的性能，特征性相关性还会影响ML模型的性能，因此修复类别不平衡问题非常重要。</p>
+<p><strong>会关系到整个模型的性能</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4">https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4</a></p>
+<h3 id="集成方法（采样器集成）"><a href="#集成方法（采样器集成）" class="headerlink" title="集成方法（采样器集成）"></a>集成方法（采样器集成）</h3><p>在机器学习中，集成方法会使用多种学习算法和技术，以获得比单独使用其中一个算法更好的性能（是的，就像一个民主投票系统）。当使用集合分类器时，bagging方法变得流行起来，它通过构建多个分类器在随机选择的不同数据集上进行训练。在scikit-learn库中，有一个名叫“BaggingClassifier”的集成分类器，然而这个分类器不能训练不平衡数据集。当训练不平衡数据集时，这个分类器将会偏向多数类，从而创建一个有偏差的模型。</p>
+<p>为了解决这个问题，我们可以使用imblearn库中的BalancedBaggingClassifier。它允许在训练集成分类器中每个子分类器之前对每个子数据集进行重采样。</p>
+<p><strong>BalancedBaggingClassifier</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=10&isMul=1&isNew=1&lang=zh_CN&token=89565677%23imblearn.ensemble.BalancedBaggingClassifier">https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&amp;action&#x3D;edit&amp;type&#x3D;10&amp;isMul&#x3D;1&amp;isNew&#x3D;1&amp;lang&#x3D;zh_CN&amp;token&#x3D;89565677#imblearn.ensemble.BalancedBaggingClassifier</a></p>
+<p>因此，BalancedBaggingClassifier除了需要和Scikit Learn BaggingClassifier相同的参数以外，还需要2个参数sampling_strategy和replacement来控制随机采样器的执行。下面是具体的执行代码：</p>
+<p>from imblearn.ensemble import BalancedBaggingClassifier</p>
+<p>from sklearn.tree import DecisionTreeClassifier</p>
+<p>#Create an object of the classifier.</p>
+<p>bbc &#x3D; BalancedBaggingClassifier(base_estimator&#x3D;DecisionTreeClassifier(),</p>
+<p>sampling_strategy&#x3D;’auto’,</p>
+<p>replacement&#x3D;False,</p>
+<p>random_state&#x3D;0)</p>
+<p>y_train &#x3D; credit_df[‘Class’]</p>
+<p>X_train &#x3D; credit_df.drop([‘Class’], axis&#x3D;1, inplace&#x3D;False)</p>
+<p>#Train the classifier.</p>
+<p>bbc.fit(X_train, y_train)</p>
+<p>preds &#x3D; bbc.predict(X_train)</p>
+<p><strong>使用集合采样器训练不平衡数据集</strong></p>
+<p>这样，您就可以训练一个分类器来处理类别不平衡问题，而不必在训练前手动进行欠采样或过采样。</p>
+<p>总之，每个人都应该知道，建立在不平衡数据集上的ML模型会难以准确预测稀有点和少数点，整体性能会受到限制。因此，识别和解决这些点的不平衡对生成模型的质量和性能是至关重要的。</p>
+<p>原文标题：</p>
+<p>How to fix an Unbalanced Dataset</p>
+<p>原文链接：</p>
+<p><a href="https://link.zhihu.com/?target=https://www.kdnuggets.com/2019/05/fix-unbalanced-dataset.html">https://www.kdnuggets.com/2019/05/f</a></p>
+<h2 id="Bagging-算法"><a href="#Bagging-算法" class="headerlink" title="Bagging 算法"></a>Bagging 算法</h2><p>Bagging算法 （英语：Bootstrap aggregating，引导聚集算法），又称装袋算法，是机器学习领域的一种团体学习算法。最初由Leo Breiman于1996年提出。Bagging算法可与其他分类、回归算法结合，提高其准确率、稳定性的同时，通过降低结果的方差，避免过拟合的发生。</p>
+<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>Bagging [Breiman, 1996a] 是井行式集成学习方法最著名的代表.从名字即可看出，它直接基于自助采样法(bootstrap sampling).给定包含m 个样本的数据集，我们先随机取出一个样本放入采样集中，再把该样本放回初始数据集，使得下次采样时该样本仍有可能被选中，这样，经过m次随机采样操作，我们得到含m 个样本的采样集，初始训练集中有的样本在采样集里多次出现，有的则从未出现，初始训练集中约有63.2%的样本出现在来样集中.<br>照这样，我们可采样出T 个含m 个训练样本的采样集，然后基于每个采样集训练出一个基学习器，再将这些基学习器进行结合.这就是Bagging 的基本流程.在对预测输出进行结合时， Bagging 通常对分类任务使用简单投票法，对回归任务使用简单平均法.若分类预测时出现两个类收到同样票数的情形，则最简单的做法是随机选择一个，也可进一步考察学习器投票的置信度来确定最终胜者.<br>Bagging是通过结合几个模型降低泛化误差的技术。主要想法是分别训练几个不同的模型，然后让所有模型表决测试样例的输出。 这是机器学习中常规策略的一个例子，被称为模型平均（modelaveraging）。采用这种策略的技术被称为集成方法。模型平均（model averaging）奏效的原因是不同的模型通常不会在测试集上产生完全相同的误差。模型平均是一个减少泛化误差的非常强大可靠的方法。</p>
+<h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>1.给定一个弱学习算法,和一个训练集;</p>
+<p>2.单个弱学习算法准确率不高;</p>
+<p>3.将该学习算法使用多次,得出预测函数序列,进行投票;</p>
+<p>4.最后结果准确率将得到提高.</p>
+<p>大致过程如下：</p>
+<ol>
+<li>对于给定的训练样本S,每轮从训练样本S中采用有放回抽样(Booststraping)的方式抽取M个训练样本,共进行n轮，得到了n个样本集合，需要注意的是这里的n个训练集之间是相互独立的。</li>
+<li>在获取了样本集合之后，每次使用一个样本集合得到一个预测模型，对于n个样本集合来说，我们总共可以得到n个预测模型。</li>
+<li>如果我们需要解决的是分类问题，那么我们可以对前面得到的n个模型采用投票的方式得到分类的结果，对于回归问题来说，我们可以采用计算模型均值的方法来作为最终预测的结果。</li>
+</ol>
+<p><img src="https://pic2.zhimg.com/80/v2-3fc8cc39375fb250a53bf3cb88b91fe1_1440w.webp" alt="img"></p>
+<p>特点在于随机采样，那么什么是随机采样（自组采样）呢？<br><strong>随机采样（bootstrap sample）从n个数据点中有放回</strong>地<strong>重复随机抽取</strong>一个样本（即同一个样本可被多次抽取），共抽取n次。创建一个与原数据大小相同得数据集，但有些数据点会缺失（大约1&#x2F;3），有些会重复。<br>举例说明：<br>原数据集：[‘a’, ‘b’, ‘c’, ‘d’]<br>随机采样1：[‘c’, ‘d’, ‘c’, ‘a’]<br>随机采样2：[‘d’, ‘d’, ‘a’, ‘b’]<br>…<br>对于缺失得数据点我们常常称之为袋外数据(Out Of Bag, 简称OOB)。这些数据没有参与训练集模型的拟合，因此可以用来检测模型的泛化能力。</p>
+<p><strong>bagging的集合策略</strong>也比较简单，对于分类问题，通常使用简单投票法，得到最多票数的类别或者类别之一为最终的模型输出。对于回归问题，通常使用简单平均法，对T个弱学习器得到的回归结果进行算术平均得到最终的模型输出。</p>
+<h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><h3 id="正则化的作用"><a href="#正则化的作用" class="headerlink" title="正则化的作用"></a>正则化的作用</h3><p>正则化的主要作用是防止过拟合，对模型添加正则化项可以限制模型的复杂度，使得模型在复杂度和性能达到平衡。<br>常用的正则化方法有L1正则化和L2正则化。L1正则化和L2正则化可以看做是损失函数的惩罚项。所谓『惩罚』是指对损失函数中的某些参数做一些限制。 L1正则化的模型建叫做Lasso回归，使用L2正则化的模型叫做Ridge回归（岭回归。但是使用正则化来防止过拟合的原理是什么？L1和L2正则化有什么区别呢？</p>
+<h3 id="L1正则化和L2正则化"><a href="#L1正则化和L2正则化" class="headerlink" title="L1正则化和L2正则化"></a>L1正则化和L2正则化</h3><p>![Screenshot 2023-06-09 at 10.46.02](&#x2F;Users&#x2F;ruyanc&#x2F;Desktop&#x2F;Screenshot 2023-06-09 at 10.46.02.png)</p>
+<h4 id="L1和L2正则化的作用："><a href="#L1和L2正则化的作用：" class="headerlink" title="L1和L2正则化的作用："></a>L1和L2正则化的作用：</h4><p>L1正则化可以产生稀疏权值矩阵，即产生一个稀疏模型，可以用于特征选择，一定程度上，L1也可以防止过拟合<br>L2正则化可以防止模型过拟合（overfitting）<br>下面看李飞飞在CS2312中给的更为详细的解释：</p>
+<p>L2正则化可以直观理解为它对于大数值的权重向量进行严厉惩罚，倾向于更加分散的权重向量。由于输入和权重之间的乘法操作，这样就有了一个优良的特性：使网络更倾向于使用所有输入特征，而不是严重依赖输入特征中某些小部分特征。 L2惩罚倾向于更小更分散的权重向量，这就会鼓励分类器最终将所有维度上的特征都用起来，而不是强烈依赖其中少数几个维度。这样做可以提高模型的泛化能力，降低过拟合的风险。</p>
+<p>L1正则化有一个有趣的性质，它会让权重向量在最优化的过程中变得稀疏（即非常接近0）。也就是说，使用L1正则化的神经元最后使用的是它们最重要的输入数据的稀疏子集，同时对于噪音输入则几乎是不变的了。相较L1正则化，L2正则化中的权重向量大多是分散的小数字。</p>
+<p>在实践中，如果不是特别关注某些明确的特征选择，一般说来L2正则化都会比L1正则化效果好。</p>
+<h3 id="L1和L2正则化的原理"><a href="#L1和L2正则化的原理" class="headerlink" title="L1和L2正则化的原理"></a>L1和L2正则化的原理</h3><p>上面讲到L1倾向于学得稀疏的权重矩阵，L2倾向于学得更小更分散的权重？但是L1和L2是怎样起到这样的作用的呢？背后的数学原理是什么呢？</p>
+<p>模型的学习优化的目标是最小化损失函数，学习的结果是模型参数。在原始目标函数的基础上添加正则化相当于，在参数原始的解空间添加了额外的约束。</p>
+<p><img src="https://p.ipic.vip/h8gs2d.png" alt="Screenshot 2023-06-09 at 10.49.27"></p>
+<p><img src="https://p.ipic.vip/mrrxt1.png" alt="Screenshot 2023-06-09 at 10.49.42"></p>
+<p>在二维平面上绘制以上两个式子的图像，可得L1约束的范围是一个顶点在坐标轴上的菱形，L2约束的范围是一个圆形。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190821192552318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXdlaXl1eGlhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>上面的图，左面是L2约束下解空间的图像，右面是L1约束下解空间的图像。</p>
+<p>蓝色的圆圈表示损失函数的等值线。同一个圆上的损失函数值相等的，圆的半径越大表示损失值越大，由外到内，损失函数值越来越小，中间最小。</p>
+<p>如果没有L1和L2正则化约束的话，w1和w2是可以任意取值的，损失函数可以优化到中心的最小值的，此时中心对应的w1和w2的取值就是模型最终求得的参数。</p>
+<p>但是填了L1和L2正则化约束就把解空间约束在了黄色的平面内。黄色图像的边缘与损失函数等值线的交点，便是满足约束条件的损失函数最小化的模型的参数的解。 由于L1正则化约束的解空间是一个菱形，所以等值线与菱形端点相交的概率比与线的中间相交的概率要大很多，端点在坐标轴上，一些参数的取值便为0。L2正则化约束的解空间是圆形，所以等值线与圆的任何部分相交的概率都是一样的，所以也就不会产生稀疏的参数。</p>
+<p><img src="https://p.ipic.vip/3qg5la.png" alt="Screenshot 2023-06-09 at 10.51.51"></p>
+<h3 id="正则化参数λ"><a href="#正则化参数λ" class="headerlink" title="正则化参数λ"></a>正则化参数λ</h3><p><img src="https://p.ipic.vip/ry75un.png" alt="Screenshot 2023-06-09 at 10.53.07"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>添加正则化相当于参数的解空间添加了约束，限制了模型的复杂度</p>
+<p>L1正则化的形式是添加参数的绝对值之和作为结构风险项，L2正则化的形式添加参数的平方和作为结构风险项</p>
+<p>L1正则化鼓励产生稀疏的权重，即使得一部分权重为0，用于特征选择；L2鼓励产生小而分散的权重，鼓励让模型做决策的时候考虑更多的特征，而不是仅仅依赖强依赖某几个特征，可以增强模型的泛化能力，防止过拟合。</p>
+<p>正则化参数 λ越大，约束越严格，太大容易产生欠拟合。正则化参数 λ越小，约束宽松，太小起不到约束作用，容易产生过拟合。</p>
+<p>如果不是为了进行特征选择，一般使用L2正则化模型效果更好。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Recharge/News/" rel="prev" title="News">
+      <i class="fa fa-chevron-left"></i> News
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Recharge/Kalman%20Filter/" rel="next" title="Kalman Filter">
+      Kalman Filter <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Validation%EF%BC%88%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">Cross-Validation（交叉验证）详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-The-Validation-Set-Approach"><span class="nav-number">1.1.</span> <span class="nav-text">1.The Validation Set Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Cross-Validation"><span class="nav-number">1.2.</span> <span class="nav-text">2.Cross-Validation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">不平衡数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%88%E7%B1%BB%E5%88%AB%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%89%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">什么是数据不平衡（类别不平衡）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E9%87%87%E6%A0%B7%EF%BC%88%E8%BF%87%E9%87%87%E6%A0%B7%E5%92%8C%E6%AC%A0%E9%87%87%E6%A0%B7%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">重采样（过采样和欠采样）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%96%B9%E6%B3%95%EF%BC%88%E9%87%87%E6%A0%B7%E5%99%A8%E9%9B%86%E6%88%90%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">集成方法（采样器集成）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bagging-%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">Bagging 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">3.2.</span> <span class="nav-text">基本思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">正则化的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E6%AD%A3%E5%88%99%E5%8C%96%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">L1正则化和L2正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="nav-number">4.2.1.</span> <span class="nav-text">L1和L2正则化的作用：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.3.</span> <span class="nav-text">L1和L2正则化的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E5%8F%82%E6%95%B0%CE%BB"><span class="nav-number">4.4.</span> <span class="nav-text">正则化参数λ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

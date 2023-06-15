@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="到底它为什么叫做 ChatGPT 呢？先说 GPT：Generative Pre-Training Transformer Generative 生成式虽然我们已经习惯了话唠的机器人絮絮叨叨的说个不停，但这只是众多的人工智能模型的一种方式。比如还有识别类的（Congnition）：人脸识别，车牌识别这些，还有语音识别，文字识别各种识别任务。（在提到模型的时候，也常常被叫做判别模型，discrimi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="chatGPT">
+<meta property="og:url" content="http://example.com/2023/05/01/Recharge/Transformer/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="到底它为什么叫做 ChatGPT 呢？先说 GPT：Generative Pre-Training Transformer Generative 生成式虽然我们已经习惯了话唠的机器人絮絮叨叨的说个不停，但这只是众多的人工智能模型的一种方式。比如还有识别类的（Congnition）：人脸识别，车牌识别这些，还有语音识别，文字识别各种识别任务。（在提到模型的时候，也常常被叫做判别模型，discrimi">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-1a4f5b236563d6307acb58cc5a95b2b7_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-8bf3b3ac8836ef1a9f16e1669fb29511_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-739d9498e0a36296240741be909d35f7_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-8c63aaf7e71b94fdb5d6df89abdaf118_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-15142b393f03a309c926754f00307d46_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-42ccd93ac7540619b02ef03faef21c15_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-8a98e66c20fb25e96e1f690309ae6166_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-1701b674a3e09ae91301d6cd9727f912_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-c18a30a6b8738af5cd1b5c0e2080e695_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-3577071e71ccfa49a4f60f4a5187f0ce_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-0190eb46d1c46efc04926821e69fd377_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-dc386abf38141384c43918689b0bbb64_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-1be30f537678c89b2768ed31ff5bb491_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-7394f6eb418b403588b0ca5a6751749f_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-5e32534b9a651289cb3eb2b409d5996b_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-6d0a0d38ab824914942121d1ae78cd0b_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-a671b951ef42d09c349db12c35175998_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c17ebc4594bd0c0d01fab289abde5ec4_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-1d9129c9c0d5367591bd093f79155e40_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-8fbde14eac35db43cfe1734d4714a7db_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-981880051b73b35f68db5ccf1277917e_1440w.webp">
+<meta property="article:published_time" content="2023-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-15T08:32:54.021Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-1a4f5b236563d6307acb58cc5a95b2b7_1440w.webp">
+
+<link rel="canonical" href="http://example.com/2023/05/01/Recharge/Transformer/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>chatGPT | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/Recharge/Transformer/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          chatGPT
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2023-05-01T12:00:00+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-06-15 16:32:54" itemprop="dateModified" datetime="2023-06-15T16:32:54+08:00">2023-06-15</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Recharge/" itemprop="url" rel="index"><span itemprop="name">Recharge</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="到底它为什么叫做-ChatGPT-呢？"><a href="#到底它为什么叫做-ChatGPT-呢？" class="headerlink" title="到底它为什么叫做 ChatGPT 呢？"></a>到底它为什么叫做 ChatGPT 呢？</h2><p>先说 GPT：Generative Pre-Training Transformer</p>
+<h3 id="Generative-生成式"><a href="#Generative-生成式" class="headerlink" title="Generative 生成式"></a>Generative 生成式</h3><p>虽然我们已经习惯了话唠的机器人絮絮叨叨的说个不停，但这只是众多的人工智能模型的一种方式。比如还有识别类的（Congnition）：人脸识别，车牌识别这些，还有语音识别，文字识别各种识别任务。（在提到模型的时候，也常常被叫做判别模型，discriminative）。Generative 这个大的种类里面有几个小分支，DALLE 的画图的用的是对抗网络方式 GAN （这个晚些可以分析），现在最火的Stable Diffusion， MidJourney 走向了另外一个分支，叫做 Difusion，而 ChatGPT 又是一个分支，就是转换器 Transformer。</p>
+<p>而 Transformer Generative 的语言模型的核心，通俗的说就是「顺口溜」。</p>
+<p>当看了足够多的文本以后，发现有一些语言模式是反复出现的。它之所以可以准确的填补「锄禾日当__ 」的空格，不是因为它在自己的大脑子里面重构了一副农民劳动的场景，仅仅是不过脑子，顺口溜出来的。</p>
+<p>你问它： 3457 * 43216 &#x3D; ，它回答 149575912 （这是错的。正确结果是 149397712）。之所以结果的 2 是对的，仅仅因为它读了太多的文字资料以后，隐约感觉到</p>
+<p>7 结尾的文字，乘号，6 结尾的文字，和 2 结尾的文字比较「押韵」</p>
+<p>从语感上比较像一首诗，所以它就学会了这样的文字，而不是学会了计算。</p>
+<p>生成式模型努力解决的问题，就是给定一些字，预测如果是人类会写什么字。</p>
+<p>在 BERT 那个年代，为了训练，大家常常把一句话中随机几个单词遮起来，让计算机用现有的模型预测那几个单词，如果预测准了，就继续加强，如果预测错了，就调整模型，直到上百万上亿次训练之后越来越准。只不过 ChatGPT 的 Generative 的部分，不仅仅把文字，还把上下文、intention（意图）也放进去做训练和预测。</p>
+<h3 id="Pre-Training-预训练"><a href="#Pre-Training-预训练" class="headerlink" title="Pre-Training 预训练"></a>Pre-Training 预训练</h3><p>以前很多的人工智能模型都是为了一个目标训练的。比如给我 1000 张猫的照片，我就很容易的可以训练出来一个模型，判断一个图片是有猫还是没有猫。这些都是专用的模型。</p>
+<p>而 Pre-Training 模型不是为了特定的目标训练，而是预先训练一个通用的模型。如果我有特定的需求，我可以在这个基础上进行第二次训练，基于原来已经预训练的模型，进行微调（Fine- Tuning）。</p>
+<p>这事儿就像家里请了个阿姨，她已经被劳务公司预训练了整理家务的知识，在此之前已经被小学老师预训练了中文对话，到了我家里面我只要稍微 fine tune 一些我家里特定的要求就好了，而不需要给我一个「空白」的人，让我从教汉语开始把她彻底教一遍才能让她干活。</p>
+<p>ChatGPT 的预训练就是给了我们所有人（尤其是创业者，程序员）一个预先训练好的模型。这个模型里面语言是强项，它提供的内容无论多么的胡说八道，至少我们必须承认它的行文通畅程度无可挑剔。这就是他 pre-training 的部分，而回答的内容部分，正是我们需要 fine tuning 的。我们不能买了个 Apache 服务器回来，不灌内容，就说他输出的内容不够呀。</p>
+<h3 id="Transformer-转换器"><a href="#Transformer-转换器" class="headerlink" title="Transformer 转换器"></a>Transformer 转换器</h3><p>变电器就是一种 transformer：220伏电进，12伏出。</p>
+<p>语言的转换器就是把语言的序列作为输入，然后用一个叫做编码器 encoder 的东西变成数字的表现（比如 GPT 就用 1536 个浮点数（也叫 1536 维向量）表示任何的单词，或者句子，段落，篇章等），然后经过转化，变成一串新的序列，最后再用 decoder 把它输出。这个转换器，是这个自然语言处理的核心。</p>
+<p>比如如果给 ChatGPT 输入「Apple」这个词，它给你返回</p>
+<p>[ 0.0077999732, -0.02301609, -0.007416143, -0.027813964, -0.0045648348, 0.012954261,…..0.021905724, -0.012022103, -0.013550568, -0.01565478, 0.006107009]</p>
+<p>这 1536 个浮点数字来表示 Apple（其中一个或着多个维度的组合表达了「甜」的含义，另外一堆表达了「圆」的含义，还有一大堆共同表达了「红」等等属性组合，至于具体哪些表达了这些，不得而知）</p>
+<p>然后这堆数字，再交给 decoder，并且限定中文的话，它会解码成为「苹果」，限定西班牙语的话，它会解码成「manzana」，限定为 emoji 的话，就输出「 」。总之，通过编码，转换，解码，它就完成了从 Apple 到目标输出语言的转化。</p>
+<p>ChatGPT 所做的事情远远多于翻译。但核心上，它就是把一个语言序列，转换为了另外一堆语言序列，这个任务完成得如此的好，以至于让人产生了它有思想的错觉。</p>
+<h3 id="GPT-生成式预训练转化器"><a href="#GPT-生成式预训练转化器" class="headerlink" title="GPT 生成式预训练转化器"></a>GPT 生成式预训练转化器</h3><p>把上面三段话加在一起，GPT 就是</p>
+<p>一个预先训练好的，用生成的方式，把输入文字转化成输出文字的翻译</p>
+<p>除了这个以外的各种能力和各种定义，大多数是这个翻译官的应用场景而不是它本身。</p>
+<h3 id="ChatGPT-是啥？"><a href="#ChatGPT-是啥？" class="headerlink" title="ChatGPT 是啥？"></a>ChatGPT 是啥？</h3><p>刚才解释了 GPT，那 ChatGPT 呢？</p>
+<p>OpenAI 用这个名字描述他们正在做的这个模型，历史的版本包括 GPT-1， GPT-2（这个模型是开源的），GPT-3（这个就是传说中 175B 参数的大模型）。而这些都是生成式的，也就是给的 prompt（提示词），它负责补全（completion）。但是这个东西用于聊天不是很好用，因为本来就不是为聊天这个场景准备的。</p>
+<p>所以在 GPT-3 基础上发展出了下一代模型 InstructGPT，专注于让这个模型可以听懂指令。在上面继续发展出了 ChatGPT，就是对于对话场景，比如多轮对话，还有一些安全边界设定等，进行了加强。但这个模型是基于 GPT-3 上面的，可以说严格意义是 GPT-3 模型上面的一个微调（Fine Tuning）的产物。</p>
+<p>希望这样梳理可以帮助大家了解这个奇怪的名字背后的思考。从这个角度来说，这是少有的几个准确的描述了它是什么的一个名字（和 <a href="https://link.zhihu.com/?target=http://mp.weixin.qq.com/s?__biz=MjM5NzI0Mjg0MA==&mid=2652374640&idx=1&sn=b082857d819af15a31ab724b4e81eba1&chksm=bd3054c78a47ddd139907ae07b4d4412a6097935c83db4ef6739053e116929351034ac9a3f71&scene=21%23wechat_redirect">Web3 这个名字</a>产生鲜明对比）</p>
+<p>欢迎转发给对 ChatGPT 感兴趣的朋友。欢迎专业人士指正（我其实不懂自然语言处理里面的细节）</p>
+<p>原文链接：<a href="https://link.zhihu.com/?target=https://mp.weixin.qq.com/s/vXoYeA7w6l_WiKmDHogdTA">https://mp.weixin.qq.com/s/vXoYeA7w6l_WiKmDHogdTA</a></p>
+<h2 id="十分钟理解Transformer"><a href="#十分钟理解Transformer" class="headerlink" title="十分钟理解Transformer"></a>十分钟理解Transformer</h2><p>Transformer是一个利用注意力机制来提高模型训练速度的模型。关于注意力机制可以参看<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/52119092">这篇文章</a>，trasnformer可以说是完全基于自注意力机制的一个深度学习模型，因为它适用于并行化计算，和它本身模型的复杂程度导致它在精度和性能上都要高于之前流行的RNN循环神经网络。</p>
+<p>那什么是transformer呢？</p>
+<p>你可以简单理解为它是一个黑盒子，当我们在做文本翻译任务是，我输入进去一个中文，经过这个黑盒子之后，输出来翻译过后的英文。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-1a4f5b236563d6307acb58cc5a95b2b7_1440w.webp" alt="img"></p>
+<p>那么在这个黑盒子里面都有什么呢？</p>
+<p>里面主要有两部分组成：Encoder 和 Decoder</p>
+<p><img src="https://pic2.zhimg.com/80/v2-8bf3b3ac8836ef1a9f16e1669fb29511_1440w.webp" alt="img"></p>
+<p>当我输入一个文本的时候，该文本数据会先经过一个叫Encoders的模块，对该文本进行编码，然后将编码后的数据再传入一个叫Decoders的模块进行解码，解码后就得到了翻译后的文本，对应的我们称Encoders为编码器，Decoders为解码器。</p>
+<p>那么编码器和解码器里边又都是些什么呢？</p>
+<p>细心的同学可能已经发现了，上图中的Decoders后边加了个s，那就代表有多个编码器了呗，没错，这个编码模块里边，有很多小的编码器，一般情况下，Encoders里边有6个小编码器，同样的，Decoders里边有6个小解码器。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-739d9498e0a36296240741be909d35f7_1440w.webp" alt="img"></p>
+<p>我们看到，在编码部分，每一个的小编码器的输入是前一个小编码器的输出，而每一个小解码器的输入不光是它的前一个解码器的输出，还包括了整个编码部分的输出。</p>
+<p>那么你可能又该问了，那每一个小编码器里边又是什么呢？</p>
+<p>我们放大一个encoder，发现里边的结构是一个自注意力机制加上一个前馈神经网络。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-8c63aaf7e71b94fdb5d6df89abdaf118_1440w.webp" alt="img"></p>
+<p>我们先来看下self-attention是什么样子的。</p>
+<p>我们通过几个步骤来解释：</p>
+<p>1、首先，self-attention的输入就是词向量，即整个模型的最初的输入是词向量的形式。那自注意力机制呢，顾名思义就是自己和自己计算一遍注意力，即对每一个输入的词向量，我们需要构建self-attention的输入。在这里，transformer首先将词向量乘上三个矩阵，得到三个新的向量，之所以乘上三个矩阵参数而不是直接用原本的词向量是因为这样增加更多的参数，提高模型效果。对于输入X1(机器)，乘上三个矩阵后分别得到Q1,K1,V1，同样的，对于输入X2(学习)，也乘上三个不同的矩阵得到Q2,K2,V2。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-15142b393f03a309c926754f00307d46_1440w.webp" alt="img"></p>
+<p>2、那接下来就要计算注意力得分了，这个得分是通过计算Q与各个单词的K向量的点积得到的。我们以X1为例，分别将Q1和K1、K2进行点积运算，假设分别得到得分112和96。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-42ccd93ac7540619b02ef03faef21c15_1440w.webp" alt="img"></p>
+<p>3、将得分分别除以一个特定数值8（K向量的维度的平方根，通常K向量的维度是64）这能让梯度更加稳定，则得到结果如下：</p>
+<p><img src="https://pic3.zhimg.com/80/v2-8a98e66c20fb25e96e1f690309ae6166_1440w.webp" alt="img"></p>
+<p>4、将上述结果进行softmax运算得到，softmax主要将分数标准化，使他们都是正数并且加起来等于1。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-1701b674a3e09ae91301d6cd9727f912_1440w.webp" alt="img"></p>
+<p>5、将V向量乘上softmax的结果，这个思想主要是为了保持我们想要关注的单词的值不变，而掩盖掉那些不相关的单词（例如将他们乘上很小的数字）</p>
+<p><img src="https://pic2.zhimg.com/80/v2-c18a30a6b8738af5cd1b5c0e2080e695_1440w.webp" alt="img"></p>
+<p>6、将带权重的各个V向量加起来，至此，产生在这个位置上（第一个单词）的self-attention层的输出，其余位置的self-attention输出也是同样的计算方式。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-3577071e71ccfa49a4f60f4a5187f0ce_1440w.webp" alt="img"></p>
+<p>将上述的过程总结为一个公式就可以用下图表示：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-0190eb46d1c46efc04926821e69fd377_1440w.webp" alt="img"></p>
+<p>self-attention层到这里就结束了吗？</p>
+<p>还没有，论文为了进一步细化自注意力机制层，增加了“多头注意力机制”的概念，这从两个方面提高了自注意力层的性能。</p>
+<p>第一个方面，他扩展了模型关注不同位置的能力，这对翻译一下句子特别有用，因为我们想知道“it”是指代的哪个单词。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-dc386abf38141384c43918689b0bbb64_1440w.webp" alt="img"></p>
+<p>第二个方面，他给了自注意力层多个“表示子空间”。对于多头自注意力机制，我们不止有一组Q&#x2F;K&#x2F;V权重矩阵，而是有多组（论文中使用8组），所以每个编码器&#x2F;解码器使用8个“头”（可以理解为8个互不干扰自的注意力机制运算），每一组的Q&#x2F;K&#x2F;V都不相同。然后，得到8个不同的权重矩阵Z，每个权重矩阵被用来将输入向量投射到不同的表示子空间。</p>
+<p>经过多头注意力机制后，就会得到多个权重矩阵Z，我们将多个Z进行拼接就得到了self-attention层的输出：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-1be30f537678c89b2768ed31ff5bb491_1440w.webp" alt="img"></p>
+<p>上述我们经过了self-attention层，我们得到了self-attention的输出，self-attention的输出即是前馈神经网络层的输入，然后前馈神经网络的输入只需要一个矩阵就可以了，不需要八个矩阵，所以我们需要把这8个矩阵压缩成一个，我们怎么做呢？只需要把这些矩阵拼接起来然后用一个额外的权重矩阵与之相乘即可。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-7394f6eb418b403588b0ca5a6751749f_1440w.webp" alt="img"></p>
+<p>最终的Z就作为前馈神经网络的输入。</p>
+<p>接下来就进入了小编码器里边的前馈神经网模块了，关于前馈神经网络，网上已经有很多资料，在这里就不做过多讲解了，只需要知道，前馈神经网络的输入是self-attention的输出，即上图的Z,是一个矩阵，矩阵的维度是（序列长度×D词向量），之后前馈神经网络的输出也是同样的维度。</p>
+<p>以上就是一个小编码器的内部构造了，一个大的编码部分就是将这个过程重复了6次，最终得到整个编码部分的输出。</p>
+<p>然后再transformer中使用了6个encoder，为了解决梯度消失的问题，在Encoders和Decoder中都是用了残差神经网络的结构，即每一个前馈神经网络的输入不光包含上述self-attention的输出Z，还包含最原始的输入。</p>
+<p>上述说到的encoder是对输入（机器学习）进行编码，使用的是自注意力机制+前馈神经网络的结构，同样的，在decoder中使用的也是同样的结构。也是首先对输出（machine learning）计算自注意力得分，不同的地方在于，进行过自注意力机制后，将self-attention的输出再与Decoders模块的输出计算一遍注意力机制得分，之后，再进入前馈神经网络模块。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-5e32534b9a651289cb3eb2b409d5996b_1440w.webp" alt="img"></p>
+<p>以上，就讲完了Transformer编码和解码两大模块，那么我们回归最初的问题，将“机器学习”翻译成“machine learing”，解码器输出本来是一个浮点型的向量，怎么转化成“machine learing”这两个词呢？</p>
+<p>是个工作是最后的线性层接上一个softmax，其中线性层是一个简单的全连接神经网络，它将解码器产生的向量投影到一个更高维度的向量（logits）上，假设我们模型的词汇表是10000个词，那么logits就有10000个维度，每个维度对应一个惟一的词的得分。之后的softmax层将这些分数转换为概率。选择概率最大的维度，并对应地生成与之关联的单词作为此时间步的输出就是最终的输出啦！！</p>
+<p>假设词汇表维度是6，那么输出最大概率词汇的过程如下：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-6d0a0d38ab824914942121d1ae78cd0b_1440w.webp" alt="img"></p>
+<p>以上就是Transformer的框架了，但是还有最后一个问题，我们都是到RNN中的每个输入是时序的，是又先后顺序的，但是Transformer整个框架下来并没有考虑顺序信息，这就需要提到另一个概念了：“位置编码”。</p>
+<p>Transformer中确实没有考虑顺序信息，那怎么办呢，我们可以在输入中做手脚，把输入变得有位置信息不就行了，那怎么把词向量输入变成携带位置信息的输入呢？</p>
+<p>我们可以给每个词向量加上一个有顺序特征的向量，发现sin和cos函数能够很好的表达这种特征，所以通常位置向量用以下公式来表示：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-a671b951ef42d09c349db12c35175998_1440w.webp" alt="img"></p>
+<p><img src="https://pic1.zhimg.com/80/v2-c17ebc4594bd0c0d01fab289abde5ec4_1440w.webp" alt="img"></p>
+<p>最后祭出这张经典的图，最初看这张图的时候可能难以理解，希望大家在深入理解Transformer后再看这张图能够有更深刻的认识。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-1d9129c9c0d5367591bd093f79155e40_1440w.webp" alt="img"></p>
+<p><img src="https://pic4.zhimg.com/80/v2-8fbde14eac35db43cfe1734d4714a7db_1440w.webp" alt="img"></p>
+<p><img src="https://pic3.zhimg.com/80/v2-981880051b73b35f68db5ccf1277917e_1440w.webp" alt="img"></p>
+<p>Transformer就介绍到这里了，后来的很多经典的模型比如BERT、GPT-2都是基于Transformer的思想。我们有机会再详细介绍这两个刷新很多记录的经典模型。</p>
+<p><strong>引用：</strong></p>
+<p><a href="https://link.zhihu.com/?target=https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a> 原论文</p>
+<p><a href="https://link.zhihu.com/?target=https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html">https://ai.googleblog.com/2017/08/transformer-novel-neural-network.html</a></p>
+<p><a href="https://link.zhihu.com/?target=http://jalammar.github.io/illustrated-transformer/">http://jalammar.github.io/illustrated-transformer/</a></p>
+<p>编辑于 2023-02-13 15:51・IP 属地广东</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/01/Recharge/%E6%B0%94%E8%B1%A1%E5%AD%A6%E6%8A%A5%E7%99%BE%E5%B9%B4%E9%A3%8E%E4%BA%91%E8%AE%B2%E5%9D%9B/" rel="prev" title="气象学报百年风云讲坛">
+      <i class="fa fa-chevron-left"></i> 气象学报百年风云讲坛
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/17/Publication/Chen_et_al_2023_ERC/" rel="next" title="Chen et al 2023 ERC">
+      Chen et al 2023 ERC <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%B0%E5%BA%95%E5%AE%83%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8F%AB%E5%81%9A-ChatGPT-%E5%91%A2%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">到底它为什么叫做 ChatGPT 呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generative-%E7%94%9F%E6%88%90%E5%BC%8F"><span class="nav-number">1.1.</span> <span class="nav-text">Generative 生成式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pre-Training-%E9%A2%84%E8%AE%AD%E7%BB%83"><span class="nav-number">1.2.</span> <span class="nav-text">Pre-Training 预训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Transformer-%E8%BD%AC%E6%8D%A2%E5%99%A8"><span class="nav-number">1.3.</span> <span class="nav-text">Transformer 转换器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPT-%E7%94%9F%E6%88%90%E5%BC%8F%E9%A2%84%E8%AE%AD%E7%BB%83%E8%BD%AC%E5%8C%96%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">GPT 生成式预训练转化器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChatGPT-%E6%98%AF%E5%95%A5%EF%BC%9F"><span class="nav-number">1.5.</span> <span class="nav-text">ChatGPT 是啥？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%81%E5%88%86%E9%92%9F%E7%90%86%E8%A7%A3Transformer"><span class="nav-number">2.</span> <span class="nav-text">十分钟理解Transformer</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">136</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
