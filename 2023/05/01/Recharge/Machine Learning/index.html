@@ -23,7 +23,7 @@
   <meta name="description" content="Cross-Validation（交叉验证）详解在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法： 1.The Validation Set Approach第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Machine Learning">
-<meta property="og:url" content="http://example.com/2022/05/01/Recharge/Machine%20Learning/index.html">
+<meta property="og:url" content="http://example.com/2023/05/01/Recharge/Machine%20Learning/index.html">
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Cross-Validation（交叉验证）详解在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法： 1.The Validation Set Approach第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（t">
 <meta property="og:locale">
@@ -54,6 +54,22 @@
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbfcYYk6iauCtNzNgwDq3k3JQYewiaumUTBkSwxbU3uib8NIWUPZ2z5EBpQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHVPFamTWpahINzqcuXGBn32AeiczJYwBLy3aOXJdf4eBkzGAKzY8uKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibb6svMyq82iasFdTmQxicN6BkYUwc85V69e9IVA50ib0Xpsn9DjqmyKaYdA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/heS6wRSHVMmH3ouv8WpUtDrkE8FMOazoyrVbB6fkXHSib0iaHWsjbibljk1bZlCMdUAuaQNicvnjZxgHprza9tzysQ/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvQCwmvYeDSkMXU6xcrzWLHHI9KwE5aZh068ezeBykjRlb3hy6vqicbFg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvicGkxhiag7vDSp26PXZXTuIMibs2cGfesmsQwvF9BBqODemBSgpA0fSHw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSmfk9yGTNmucSMlfayulmNMeiaSW2y27EgPq7EMsgosLuaWSNJmItnA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv10BZHcojun9nIuGf6QFO9Q1Xib8mCDQeZJdqYQWrVFFYnZesN2k9KcA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5icy4IIztD4jphicLZlXP12sbe2EMqiaPy1xWMqlITNKFNY8bVzowPW3Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSv5X65Ccr7dgpydNrvJucTkvtjlVlL7MNzVsfzfKuVP6kNWibKP95Xw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv7ocmZWkUZem3rFibUzicZTfwRXazzEbhqCJ76dsx5z2OvXbAqkPKIibMg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5L0QDswhHqJXw7JUSKgwgKRTdlvaMHfPcXTeE2eKq7Uetxz36n0ic2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvjrnhdZHyOEohuiaszeDJw32mEKbJovnDQGRytnicfEsd73VH22BrRD6A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv9nmmoEfibtUSfichMZ0sGEvwnxk1FxnssYeicnLvic0C9g95qxlxicicicEUw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv644QLmL0IyENo4lOqX1JuCDVXAQbBxjCfnM3S5oYA9DAfz0Flt2KMA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv4mQthMcDDnib868aP7S53LhpfWvpghIbtEicGXRFCy1YDaYxx3VDeNyg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvHKSibwBM92A3XeXibA00whQrqqQK3w0MiaxwKuqZDZLbowYPriam4oDYibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvMVNianEJia2wm6OyeXwOWia2vqNkCWAf2waQlHic8aAcpicjeEibDiaibyaBgA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvZPHuDIe940ouryeicCcjhyCu2KUwByHmDkz2ZphPESGM22efs37T1jg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SrtJSVicpaROia6fMV9KvMnHQKslicMnibIu9tic1bhksfx5kDzHVFRag0lw/640?wx_fmt=png&wxfrom=13&tp=wxpic">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SCTZPptdBugNHKrUySXZQ1ho7aGL85hvPOj5BC0bqsPicBZG2h6ia7iaCw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2S6bycOEDCJU2AbHD7oI0cSkQflHZ9ibNo3TtIq67FVP8FQibXdss49ALA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
@@ -61,13 +77,13 @@
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2Sc0SuZqkgbgje9jBOWW2OM0Yk20ULhI6GhY3Po9ADRycnCn09G3mHUg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SsI4NLEfWSXTg2waJB0QIlPUggZm0uT8yBcRah6CF0HemTTHYYZicia4A/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SElQbgxSUkzTAwSbU7bpLlnM1nnNWGHrTRibgNqicfRAOxmZfz3uuN4vQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-04T12:34:29.789Z">
+<meta property="article:published_time" content="2023-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-06T07:13:44.914Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp">
 
-<link rel="canonical" href="http://example.com/2022/05/01/Recharge/Machine%20Learning/">
+<link rel="canonical" href="http://example.com/2023/05/01/Recharge/Machine%20Learning/">
 
 
 <script id="page-configurations">
@@ -235,7 +251,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Recharge/Machine%20Learning/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/Recharge/Machine%20Learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -258,14 +274,14 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+              <time title="Created: 2023-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2023-05-01T12:00:00+08:00">2023-05-01</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-04 20:34:29" itemprop="dateModified" datetime="2023-07-04T20:34:29+08:00">2023-07-04</time>
+                <time title="Modified: 2023-07-06 15:13:44" itemprop="dateModified" datetime="2023-07-06T15:13:44+08:00">2023-07-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -477,6 +493,155 @@
 <p>参考文献：张福浩,朱月月,赵习枝等.地理因子支持下的滑坡隐患点空间分布特征及识别研究[J].武汉大学学报(信息科学版),2020,45(08).</p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHVPFamTWpahINzqcuXGBn32AeiczJYwBLy3aOXJdf4eBkzGAKzY8uKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibb6svMyq82iasFdTmQxicN6BkYUwc85V69e9IVA50ib0Xpsn9DjqmyKaYdA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<h2 id="LightGBM模型详解"><a href="#LightGBM模型详解" class="headerlink" title="LightGBM模型详解"></a>LightGBM模型详解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">来源：数据科学与人工智能本文约4500字，建议阅读8分钟本文介绍了LightGBM的模型详解。</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.showmeai.tech/article-detail/195">https://www.showmeai.tech/article-detail/195</a></p>
+</blockquote>
+<blockquote>
+<p>之前 ShowMeAI 对强大的 boosting 模型工具 XGBoost 做了介绍 『XGBoost模型』详解，本篇我们来学习 GBDT模型 模型的另一个进化版本：LightGBM。</p>
+</blockquote>
+<p>LightGBM 是微软开发的 boosting 集成模型，和 XGBoost 一样是对 GBDT 的优化和高效实现，原理有一些相似之处，但它很多方面比 XGBoost 有着更为优秀的表现。官方给出的这个工具库模型的优势如下：</p>
+<ul>
+<li>更快的训练效率</li>
+<li>低内存使用</li>
+<li>更高的准确率</li>
+<li>支持并行化学习</li>
+<li>可处理大规模数据</li>
+<li>支持直接使用category特征</li>
+</ul>
+<p>下图是一组实验数据，在这份实验中，LightGBM 比 XGBoost 快将近 10 倍，内存占用率大约为 XGBoost 的 1&#x2F;6，准确率也略有提升。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/heS6wRSHVMmH3ouv8WpUtDrkE8FMOazoyrVbB6fkXHSib0iaHWsjbibljk1bZlCMdUAuaQNicvnjZxgHprza9tzysQ/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<h3 id="1-LightGBM动机"><a href="#1-LightGBM动机" class="headerlink" title="1. LightGBM动机"></a>1. LightGBM动机</h3><p>互联网领域的算法应用，通常背后都有海量的大数据。深度学习中一系列神经网络算法，都是以mini-batch的方式喂数据迭代训练的，总训练数据量不受内存限制。</p>
+<p>但我们用到的机器学习算法，比如 GBDT在每一次迭代的时候，都需要遍历整个训练数据多次。</p>
+<ul>
+<li>如果把整个训练数据一次性装进内存，会明显限制训练数据的大小。</li>
+<li>如果不装进内存，反复地读写训练数据又会消耗非常大的时间。</li>
+</ul>
+<p>面对工业级海量的数据，普通的 GBDT 算法无法满足需求。LightGBM 提出的主要原因之一，就是为了解决上述大数据量级下的 GBDT 训练问题，以便工业实践中能支撑大数据量并保证效率。</p>
+<h3 id="2-XGBoost优缺点"><a href="#2-XGBoost优缺点" class="headerlink" title="2. XGBoost优缺点"></a>2. XGBoost优缺点</h3><p>我们之前介绍过强大的 XGBoost，但 XGBoost 也依旧存在一些缺点，LightGBM 针对其中的一部分进行了调整优化。XGB 优缺点归纳如下：</p>
+<h4 id="1）精确贪心算法"><a href="#1）精确贪心算法" class="headerlink" title="1）精确贪心算法"></a>1）精确贪心算法</h4><p>轮迭代时，都需要遍历整个训练数据多次。如果把整个训练数据装进内存则会限制训练数据的大小；如果不装进内存，反复地读写训练数据又会消耗非常大的时间。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvQCwmvYeDSkMXU6xcrzWLHHI9KwE5aZh068ezeBykjRlb3hy6vqicbFg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<ul>
+<li>优点：可以找到精确的划分条件。</li>
+<li>缺点：计算量巨大、内存占用巨大、易产生过拟合。</li>
+</ul>
+<h4 id="2）Level-wise生长方式"><a href="#2）Level-wise生长方式" class="headerlink" title="2）Level-wise生长方式"></a>2）Level-wise生长方式</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvicGkxhiag7vDSp26PXZXTuIMibs2cGfesmsQwvF9BBqODemBSgpA0fSHw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>XGBoost 采用 Level-wise 的增长策略：基于层进行生长，直到达到停止条件。这种增长策略方便并行计算每一层的分裂节点，提高了训练速度，但同时也因为节点增益过小增加了很多不必要的分裂，增加了计算量。</p>
+<ul>
+<li>优点：可以使用多线程、可以加速精确贪心算法。</li>
+<li>缺点：效率低下，可能产生不必要的叶结点。</li>
+</ul>
+<h4 id="3）对cache优化不友好"><a href="#3）对cache优化不友好" class="headerlink" title="3）对cache优化不友好"></a>3）对cache优化不友好</h4><p>在预排序后，特征对梯度的访问是一种随机访问，并且不同的特征访问的顺序不一样，无法对 cache 进行优化。同时，在每一层长树的时候，需要随机访问一个行索引到叶子索引的数组，并且不同特征访问的顺序也不一样，也会造成较大的 cache miss。</p>
+<h3 id="3-LightGBM优化点"><a href="#3-LightGBM优化点" class="headerlink" title="3.LightGBM优化点"></a>3.LightGBM优化点</h3><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSmfk9yGTNmucSMlfayulmNMeiaSW2y27EgPq7EMsgosLuaWSNJmItnA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>上个部分其实也是 LightGBM 作者们，构建新算法时着重优化的点。概括来说，LightGBM 主要有以下特点：</p>
+<ul>
+<li>基于 Histogram 的决策树算法</li>
+<li>带深度限制的 Leaf-wise 的叶子生长策略</li>
+<li>直方图做差加速</li>
+<li>直接支持类别特征（Categorical Feature）</li>
+<li>Cache 命中率优化</li>
+<li>基于直方图的稀疏特征优化</li>
+<li>多线程优化</li>
+</ul>
+<h3 id="4-决策树算法"><a href="#4-决策树算法" class="headerlink" title="4.决策树算法"></a>4.决策树算法</h3><h4 id="1）XGBoost：Pre-sorted算法"><a href="#1）XGBoost：Pre-sorted算法" class="headerlink" title="1）XGBoost：Pre-sorted算法"></a>1）XGBoost：Pre-sorted算法</h4><p>XGBoost 使用的是 Pre-sorted 算法，能够更精确的找到数据分隔点。</p>
+<ul>
+<li>首先，对所有特征按数值进行预排序。</li>
+<li>其次，在每次的样本分割时，用 O(#data) 的代价找到每个特征的最优分割点。</li>
+<li>最后，找到最后的特征以及分割点，将数据分裂成左右两个子节点。</li>
+</ul>
+<p>这种 pre-sorting 算法能够准确找到分裂点，但是在空间和时间上有很大的开销。</p>
+<ul>
+<li>由于需要对特征进行预排序并且需要保存排序后的索引值（为了后续快速的计算分裂点），因此内存需要训练数据的两倍。</li>
+<li>在遍历每一个分割点的时候，都需要进行分裂增益的计算，消耗的代价大。</li>
+</ul>
+<h4 id="2）LightGBM：直方图算法"><a href="#2）LightGBM：直方图算法" class="headerlink" title="2）LightGBM：直方图算法"></a>2）LightGBM：直方图算法</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv10BZHcojun9nIuGf6QFO9Q1Xib8mCDQeZJdqYQWrVFFYnZesN2k9KcA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>LightGBM 使用的是直方图算法（histogram algorithm），占用的内存更低，数据分割的复杂度更低。直方图算法思想是：</p>
+<ul>
+<li>将连续的浮点特征离散成 k 个离散值，并构造宽度为 k 的 Histogram。</li>
+<li>遍历训练数据，统计每个离散值在直方图中的累计统计量。</li>
+<li>在进行特征选择时，只需要根据直方图的离散值，遍历寻找最优的分割点。</li>
+</ul>
+<p><strong>（1）内存优化</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5icy4IIztD4jphicLZlXP12sbe2EMqiaPy1xWMqlITNKFNY8bVzowPW3Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>直方图算法可以很大程度降低内存消耗，它不仅不需要额外存储预排序的结果，还可以只保存特征离散化后的值（一般用8位整型存储就足够了）。</p>
+<p>如图所示，用8位整型存储，内存消耗可以降低为原来的1&#x2F;8。</p>
+<p><strong>（2）计算量优化</strong></p>
+<p>应用直方图算法，计算代价也大幅降低，预排序算法每遍历一个特征值就需要计算一次分裂的增益，而直方图算法只需要计算 k 次（k可以认为是常数），时间复杂度从 O(#data*#feature) 直接优化到 O(k#*features)。</p>
+<p><strong>（3）注意点</strong></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSv5X65Ccr7dgpydNrvJucTkvtjlVlL7MNzVsfzfKuVP6kNWibKP95Xw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>直方图算法的理解和注意点如下：</p>
+<ul>
+<li>使用分桶 bin 替代原始数据相当于增加了正则化。</li>
+<li>使用分桶 bin 意味着很多数据的细节特征丢失，相似的数据如果划分到相同的桶中，数据之间的差异就无法捕获了。</li>
+<li>分桶 bin 数量决定了正则化的程度， bin 越少惩罚越严重，欠拟合风险越高。</li>
+<li>因为预先设定了 bin 的范围，构建直方图时不需要对数据进行排序。</li>
+<li>直方图保存『划分阈值』、『当前bin内样本数』、『当前bin内所有样本的一阶梯度和』。</li>
+<li>阈值的选取是按照直方图从小到大遍历，使用了上面的一阶梯度和，目的是得到划分之后△loss最大的特征及阈值。</li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>（4）直方图算法优缺点</strong></p>
+<ul>
+<li>Histogram算法并不是完美的。由于特征被离散化后，找到的并不是很精确的分割点，所以会对结果产生影响。但在实际的数据集上表明，离散化的分裂点对最终的精度影响并不大，甚至会好一些。原因在于decision tree本身就是一个弱学习器，采用Histogram算法会起到正则化的效果，有效地防止模型的过拟合。</li>
+<li>时间上的开销由原来的O(#data*#features)降到O(k*#features)。由于离散化，#bin远小于#data，因此时间上有很大的提升。</li>
+</ul>
+<p>Histogram 算法还可以进一步加速。一个叶子节点的 Histogram 可以直接由父节点的 Histogram 和兄弟节点的 Histogram 做差得到。一般情况下，构造 Histogram 需要遍历该叶子上的所有数据，通过该方法，只需要遍历 Histogram 的 k 个捅。速度提升了一倍。</p>
+<h3 id="5-决策树生长策略"><a href="#5-决策树生长策略" class="headerlink" title="5.决策树生长策略"></a>5.决策树生长策略</h3><h4 id="1）树生长策略调整"><a href="#1）树生长策略调整" class="headerlink" title="1）树生长策略调整"></a>1）树生长策略调整</h4><p>直方图算法之上，LightGBM 进行进一步的优化。它没有使用大多数GBDT工具使用的按层生长（Level-wise）的决策树生长策略，而使用了带有深度限制的按叶子生长（Leaf-wise）算法。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv7ocmZWkUZem3rFibUzicZTfwRXazzEbhqCJ76dsx5z2OvXbAqkPKIibMg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<h4 id="2）XGBoost：Level-wise"><a href="#2）XGBoost：Level-wise" class="headerlink" title="2）XGBoost：Level-wise"></a>2）XGBoost：Level-wise</h4><p>XGBoost采用的是Level-wise（按层生长）策略生长的，能够同时分裂同一层的叶子，从而进行多线程优化，不容易过拟合。</p>
+<p>但不加区分的对待同一层的叶子，带来了很多没必要的开销。因为实际上很多叶子的分裂增益较低，没必要进行搜索和分裂。</p>
+<h4 id="3）LightGBM：Leaf-wise"><a href="#3）LightGBM：Leaf-wise" class="headerlink" title="3）LightGBM：Leaf-wise"></a>3）LightGBM：Leaf-wise</h4><p>LightGBM采用Leaf-wise（按叶子生长）生长策略，每次从当前所有叶子中找到分裂增益最大（一般也是数据量最大）的一个叶子，然后分裂，如此循环。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5L0QDswhHqJXw7JUSKgwgKRTdlvaMHfPcXTeE2eKq7Uetxz36n0ic2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>同Level-wise相比，在分裂次数相同的情况下，Leaf-wise可以降低更多的误差，得到更好的精度。Leaf-wise的缺点是可能会长出比较深的决策树，产生过拟合。因此LightGBM在Leaf-wise之上增加了一个最大深度的限制，在保证高效率的同时防止过拟合。</p>
+<h3 id="6-直方图差加速"><a href="#6-直方图差加速" class="headerlink" title="6.直方图差加速"></a>6.直方图差加速</h3><p>LightGBM 另一个优化是 Histogram（直方图）做差加速。整个构建过程中可以观察到：一个叶子的直方图可以由它的父亲节点的直方图与它兄弟的直方图做差得到。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvjrnhdZHyOEohuiaszeDJw32mEKbJovnDQGRytnicfEsd73VH22BrRD6A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>一般来说构造直方图，需要遍历该叶子上的所有数据，但直方图做差仅需遍历直方图的 k 个桶。利用上述特征，LightGBM 可以在构造一个叶子的直方图后，可以用非常微小的代价得到它兄弟叶子的直方图，在速度上可以提升一倍。</p>
+<h3 id="7-类别型特征支持"><a href="#7-类别型特征支持" class="headerlink" title="7.类别型特征支持"></a>7.类别型特征支持</h3><p>大多数机器学习工具都无法直接支持类别型特征，我们会先将其编码再做后续建模，如果使用 one-hot 这种编码方式还会降低空间和时间效率。</p>
+<p>LightGBM优化了对类别型特征的支持，可以直接输入类别特征，不需要额外的编码或 one-hot 0&#x2F;1 展开。并在决策树算法上增加了类别型特征的决策规则。</p>
+<h4 id="1）树模型与one-hot编码"><a href="#1）树模型与one-hot编码" class="headerlink" title="1）树模型与one-hot编码"></a>1）树模型与one-hot编码</h4><p>one-hot 编码是处理类别特征的一个通用方法，然而在树模型中，这可能并不一定是一个好的方法，尤其当类别特征中类别个数很多的情况下，主要的问题是：</p>
+<p><strong>问题1：可能无法在这个类别特征上进行切分。</strong></p>
+<p>使用one-hot编码的话，意味着在每一个决策节点上只能使用one vs rest（例如是不是男性，是不是一线城市等）的切分方式。当类别值很多时，每个类别上的数据可能会比较少，这时候切分会产生不平衡，这意味着切分增益也会很小。</p>
+<p><strong>问题2：影响决策树的学习。</strong></p>
+<p>就算可以在这个类别特征进行切分，也会把数据切分到很多零碎的小空间上，如下左图所示。而决策树学习时利用的是统计信息，在这些数据量小的空间上，统计信息不准确，学习会变差。但如果使用下右图的分裂方式，数据会被切分到两个比较大的空间，进一步的学习也会更好。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv9nmmoEfibtUSfichMZ0sGEvwnxk1FxnssYeicnLvic0C9g95qxlxicicicEUw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>圈中的数值表示该结点内的数据。右图中叶子节点 X&#x3D;A || X&#x3D;C 的含义是 X&#x3D;A 或者 X&#x3D;C 放到左孩子，其余放到右孩子。</p>
+<h4 id="2）LightGBM类别型特征处理方式"><a href="#2）LightGBM类别型特征处理方式" class="headerlink" title="2）LightGBM类别型特征处理方式"></a>2）LightGBM类别型特征处理方式</h4><p>LightGBM 采用了 Many vs Many 的切分方式解决 one-hot 编码带来的问题，实现了类别特征的最优切分。用LightGBM可以直</p>
+<p>接输入类别特征，并产生上右图的效果。在 1 个 维的类别特征中寻找最优切分，朴素的枚举算法的复杂度是 ，而 LightGBM 采用了如 On Grouping For Maximum Homogeneity 的方法实现了 的算法。</p>
+<p>算法流程如图所示：</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv644QLmL0IyENo4lOqX1JuCDVXAQbBxjCfnM3S5oYA9DAfz0Flt2KMA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<ul>
+<li>①在枚举分割点之前，先把直方图按每个类别的均值进行排序。</li>
+<li>②接着按照均值的结果依次枚举最优分割点。</li>
+</ul>
+<p>从下图可以看到，Sum(y)&#x2F;Count(y)为类别的均值。当然，这个方法很容易过拟合，所以在 LightGBM中 加入了很多对这个方法的约束和正则化。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv4mQthMcDDnib868aP7S53LhpfWvpghIbtEicGXRFCy1YDaYxx3VDeNyg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>求解类别型特征的最优切分的具体流程如下：</p>
+<p>① 离散特征建立直方图的过程</p>
+<p>统计该特征下每一种离散值出现的次数，并从高到低排序，并过滤掉出现次数较少的特征值。然后为每一个特征值，建立一个 bin 容器，对于在bin容器内出现次数较少的特征值直接过滤掉，不建立 bin 容器。</p>
+<p>② 计算分裂阈值的过程</p>
+<ul>
+<li>先看该特征下划分出的 bin 容器的个数，如果 bin 容器的数量小于4，直接使用 one vs other 方式，逐个扫描每一个 bin 容器，找出最佳分裂点。</li>
+<li>对于 bin 容器较多的情况，先进行过滤，只让子集合较大的 bin 容器参加划分阈值计算，对每一个符合条件的bin容器进行公式计算，得到一个值，根据该值对 bin 容器从小到大进行排序，然后分从左到右、从右到左进行搜索，得到最优分裂阈值。公式如下：</li>
+</ul>
+<p>这里为什么不是 label 的均值呢？其实上例中只是为了便于理解，只针对了学习一棵树且是回归问题的情况。这时候一阶导数是 ，二阶导数是 ），</p>
+<ul>
+<li><p>没有搜索所有的 bin 容器，而是设定了一个搜索 bin 容器数量的上限值，程序中设定是 ，即参数 <code>max_num_cat</code>。</p>
+</li>
+<li><p>LightGBM 中对离散特征实行的是 many vs many 策略，这32个 bin 中最优划分的阈值的左边或者右边所有的 bin 容器就是一个 many集合，而其他的 bin 容器就是另一个 many 集合。</p>
+</li>
+</ul>
+<p>③ 对于连续特征，划分阈值只有一个。对于离散值可能会有多个划分阈值，每一个划分阈值对应着一个bin容器编号。</p>
+<p>当使用离散特征进行分裂时，只要数据样本对应的 bin 容器编号在这些阈值对应的 bin 集合之中，这条数据就加入分裂后的左子树，否则加入分裂后的右子树。</p>
+<h3 id="8-并行支持与优化"><a href="#8-并行支持与优化" class="headerlink" title="8.并行支持与优化"></a>8.并行支持与优化</h3><p>LightGBM 原生支持并行学习，目前支持『特征并行』和『数据并行』的两种，LightGBM 针对这两种并行方法都做了优化。</p>
+<ul>
+<li>特征并行：在不同机器在不同的特征集合上分别寻找最优的分割点，然后在机器间同步最优的分割点。</li>
+<li>数据并行：让不同的机器先在本地构造直方图，然后进行全局的合并，最后在合并的直方图上面寻找最优分割点。</li>
+</ul>
+<h4 id="1）特征并行"><a href="#1）特征并行" class="headerlink" title="1）特征并行"></a>1）特征并行</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvHKSibwBM92A3XeXibA00whQrqqQK3w0MiaxwKuqZDZLbowYPriam4oDYibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>LightGBM 在特征并行算法中，通过在本地保存全部数据避免对数据切分结果的通信。</p>
+<h4 id="2）数据并行"><a href="#2）数据并行" class="headerlink" title="2）数据并行"></a>2）数据并行</h4><p>Lightgbm 在数据并行中使用分散规约（Reduce scatter）把直方图合并的任务分摊到不同的机器，降低通信和计算，并利用直方图做差，进一步减少了一半的通信量。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvMVNianEJia2wm6OyeXwOWia2vqNkCWAf2waQlHic8aAcpicjeEibDiaibyaBgA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p>基于投票的数据并行则进一步优化数据并行中的通信代价，使通信代价变成常数级别。在数据量很大的时候，使用投票并行可以得到非常好的加速效果。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvZPHuDIe940ouryeicCcjhyCu2KUwByHmDkz2ZphPESGM22efs37T1jg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
 <h2 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h2><p>在整个注意力过程中，模型会学习了三个权重:查询、键和值。查询、键和值的思想来源于信息检索系统。所以我们先理解数据库查询的思想。</p>
 <p>假设有一个数据库，里面有所有一些作家和他们的书籍信息。现在我想读一些Rabindranath写的书：</p>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SrtJSVicpaROia6fMV9KvMnHQKslicMnibIu9tic1bhksfx5kDzHVFRag0lw/640?wx_fmt=png&wxfrom=13&tp=wxpic" alt="Image"></p>
@@ -534,12 +699,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Recharge/Atmospheric%20Dynamics/" rel="prev" title="Atmospheric Dynamics">
-      <i class="fa fa-chevron-left"></i> Atmospheric Dynamics
+    <a href="/2023/05/01/Recharge/Pangu-Weather/" rel="prev" title="Pangu-Weather">
+      <i class="fa fa-chevron-left"></i> Pangu-Weather
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Recharge/MIT%20Deep%20Learning%20course/" rel="next" title="MIT Deep Learning course">
-      MIT Deep Learning course <i class="fa fa-chevron-right"></i>
+    <a href="/2023/05/17/Publication/Chen_et_al_2023_ERC/" rel="next" title="Chen et al 2023 ERC">
+      Chen et al 2023 ERC <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -599,7 +764,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Validation%EF%BC%88%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">Cross-Validation（交叉验证）详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-The-Validation-Set-Approach"><span class="nav-number">1.1.</span> <span class="nav-text">1.The Validation Set Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Cross-Validation"><span class="nav-number">1.2.</span> <span class="nav-text">2.Cross-Validation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">不平衡数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%88%E7%B1%BB%E5%88%AB%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%89%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">什么是数据不平衡（类别不平衡）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E9%87%87%E6%A0%B7%EF%BC%88%E8%BF%87%E9%87%87%E6%A0%B7%E5%92%8C%E6%AC%A0%E9%87%87%E6%A0%B7%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">重采样（过采样和欠采样）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%96%B9%E6%B3%95%EF%BC%88%E9%87%87%E6%A0%B7%E5%99%A8%E9%9B%86%E6%88%90%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">集成方法（采样器集成）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bagging-%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">Bagging 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">3.2.</span> <span class="nav-text">基本思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">正则化的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E6%AD%A3%E5%88%99%E5%8C%96%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">L1正则化和L2正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="nav-number">4.2.1.</span> <span class="nav-text">L1和L2正则化的作用：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.3.</span> <span class="nav-text">L1和L2正则化的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E5%8F%82%E6%95%B0%CE%BB"><span class="nav-number">4.4.</span> <span class="nav-text">正则化参数λ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XGBoost%E5%9C%A8%E5%9C%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%8F%8A%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">XGBoost在地学中的应用及原理解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">5.1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90"><span class="nav-number">5.1.1.</span> <span class="nav-text">原理解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B8%AD%E5%85%B8%E5%9E%8B%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">5.1.2.</span> <span class="nav-text">在地理学中典型的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6"><span class="nav-number">6.</span> <span class="nav-text">注意力机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A7%A3"><span class="nav-number">6.0.1.</span> <span class="nav-text">可视化图解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.0.2.</span> <span class="nav-text">简单代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%A4%B4%E6%B3%A8%E6%84%8F%E5%8A%9B"><span class="nav-number">6.0.3.</span> <span class="nav-text">多头注意力</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%A4%B4%E6%B3%A8%E6%84%8F%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">6.0.4.</span> <span class="nav-text">多头注意代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">6.0.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cross-Validation%EF%BC%88%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="nav-number">1.</span> <span class="nav-text">Cross-Validation（交叉验证）详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-The-Validation-Set-Approach"><span class="nav-number">1.1.</span> <span class="nav-text">1.The Validation Set Approach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Cross-Validation"><span class="nav-number">1.2.</span> <span class="nav-text">2.Cross-Validation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">不平衡数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%88%E7%B1%BB%E5%88%AB%E4%B8%8D%E5%B9%B3%E8%A1%A1%EF%BC%89%EF%BC%9F"><span class="nav-number">2.1.</span> <span class="nav-text">什么是数据不平衡（类别不平衡）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E9%87%87%E6%A0%B7%EF%BC%88%E8%BF%87%E9%87%87%E6%A0%B7%E5%92%8C%E6%AC%A0%E9%87%87%E6%A0%B7%EF%BC%89"><span class="nav-number">2.2.</span> <span class="nav-text">重采样（过采样和欠采样）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%96%B9%E6%B3%95%EF%BC%88%E9%87%87%E6%A0%B7%E5%99%A8%E9%9B%86%E6%88%90%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">集成方法（采样器集成）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bagging-%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">Bagging 算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">3.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="nav-number">3.2.</span> <span class="nav-text">基本思想</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">4.1.</span> <span class="nav-text">正则化的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E6%AD%A3%E5%88%99%E5%8C%96%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="nav-number">4.2.</span> <span class="nav-text">L1正则化和L2正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E4%BD%9C%E7%94%A8%EF%BC%9A"><span class="nav-number">4.2.1.</span> <span class="nav-text">L1和L2正则化的作用：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L1%E5%92%8CL2%E6%AD%A3%E5%88%99%E5%8C%96%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">4.3.</span> <span class="nav-text">L1和L2正则化的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%AD%A3%E5%88%99%E5%8C%96%E5%8F%82%E6%95%B0%CE%BB"><span class="nav-number">4.4.</span> <span class="nav-text">正则化参数λ</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">4.5.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#XGBoost%E5%9C%A8%E5%9C%B0%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8%E5%8F%8A%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90"><span class="nav-number">5.</span> <span class="nav-text">XGBoost在地学中的应用及原理解析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80"><span class="nav-number">5.1.</span> <span class="nav-text">引言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E7%90%86%E8%A7%A3%E6%9E%90"><span class="nav-number">5.1.1.</span> <span class="nav-text">原理解析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B8%AD%E5%85%B8%E5%9E%8B%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-number">5.1.2.</span> <span class="nav-text">在地理学中典型的应用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LightGBM%E6%A8%A1%E5%9E%8B%E8%AF%A6%E8%A7%A3"><span class="nav-number">6.</span> <span class="nav-text">LightGBM模型详解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-LightGBM%E5%8A%A8%E6%9C%BA"><span class="nav-number">6.1.</span> <span class="nav-text">1. LightGBM动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-XGBoost%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="nav-number">6.2.</span> <span class="nav-text">2. XGBoost优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89%E7%B2%BE%E7%A1%AE%E8%B4%AA%E5%BF%83%E7%AE%97%E6%B3%95"><span class="nav-number">6.2.1.</span> <span class="nav-text">1）精确贪心算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89Level-wise%E7%94%9F%E9%95%BF%E6%96%B9%E5%BC%8F"><span class="nav-number">6.2.2.</span> <span class="nav-text">2）Level-wise生长方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%EF%BC%89%E5%AF%B9cache%E4%BC%98%E5%8C%96%E4%B8%8D%E5%8F%8B%E5%A5%BD"><span class="nav-number">6.2.3.</span> <span class="nav-text">3）对cache优化不友好</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-LightGBM%E4%BC%98%E5%8C%96%E7%82%B9"><span class="nav-number">6.3.</span> <span class="nav-text">3.LightGBM优化点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%86%B3%E7%AD%96%E6%A0%91%E7%AE%97%E6%B3%95"><span class="nav-number">6.4.</span> <span class="nav-text">4.决策树算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89XGBoost%EF%BC%9APre-sorted%E7%AE%97%E6%B3%95"><span class="nav-number">6.4.1.</span> <span class="nav-text">1）XGBoost：Pre-sorted算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89LightGBM%EF%BC%9A%E7%9B%B4%E6%96%B9%E5%9B%BE%E7%AE%97%E6%B3%95"><span class="nav-number">6.4.2.</span> <span class="nav-text">2）LightGBM：直方图算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link"><span class="nav-number">6.5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%86%B3%E7%AD%96%E6%A0%91%E7%94%9F%E9%95%BF%E7%AD%96%E7%95%A5"><span class="nav-number">6.6.</span> <span class="nav-text">5.决策树生长策略</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89%E6%A0%91%E7%94%9F%E9%95%BF%E7%AD%96%E7%95%A5%E8%B0%83%E6%95%B4"><span class="nav-number">6.6.1.</span> <span class="nav-text">1）树生长策略调整</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89XGBoost%EF%BC%9ALevel-wise"><span class="nav-number">6.6.2.</span> <span class="nav-text">2）XGBoost：Level-wise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%EF%BC%89LightGBM%EF%BC%9ALeaf-wise"><span class="nav-number">6.6.3.</span> <span class="nav-text">3）LightGBM：Leaf-wise</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%B7%AE%E5%8A%A0%E9%80%9F"><span class="nav-number">6.7.</span> <span class="nav-text">6.直方图差加速</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E7%B1%BB%E5%88%AB%E5%9E%8B%E7%89%B9%E5%BE%81%E6%94%AF%E6%8C%81"><span class="nav-number">6.8.</span> <span class="nav-text">7.类别型特征支持</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89%E6%A0%91%E6%A8%A1%E5%9E%8B%E4%B8%8Eone-hot%E7%BC%96%E7%A0%81"><span class="nav-number">6.8.1.</span> <span class="nav-text">1）树模型与one-hot编码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89LightGBM%E7%B1%BB%E5%88%AB%E5%9E%8B%E7%89%B9%E5%BE%81%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F"><span class="nav-number">6.8.2.</span> <span class="nav-text">2）LightGBM类别型特征处理方式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%B9%B6%E8%A1%8C%E6%94%AF%E6%8C%81%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="nav-number">6.9.</span> <span class="nav-text">8.并行支持与优化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89%E7%89%B9%E5%BE%81%E5%B9%B6%E8%A1%8C"><span class="nav-number">6.9.1.</span> <span class="nav-text">1）特征并行</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89%E6%95%B0%E6%8D%AE%E5%B9%B6%E8%A1%8C"><span class="nav-number">6.9.2.</span> <span class="nav-text">2）数据并行</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6"><span class="nav-number">7.</span> <span class="nav-text">注意力机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E5%9B%BE%E8%A7%A3"><span class="nav-number">7.0.1.</span> <span class="nav-text">可视化图解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">7.0.2.</span> <span class="nav-text">简单代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%A4%B4%E6%B3%A8%E6%84%8F%E5%8A%9B"><span class="nav-number">7.0.3.</span> <span class="nav-text">多头注意力</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E5%A4%B4%E6%B3%A8%E6%84%8F%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">7.0.4.</span> <span class="nav-text">多头注意代码实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BB%93-1"><span class="nav-number">7.0.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -614,7 +779,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-count">143</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
