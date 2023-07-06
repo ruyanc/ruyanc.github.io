@@ -28,7 +28,7 @@
 <meta property="og:description" content="1234567891011121314151617181920212223242526272829cdo seltimestep,1&#x2F;31 1_WP_1d_00010101_00010629_grid_T.nc MOD_ocn_1mon.ncncks -d time,0,9 infile outfilecdo select,name&#x3D;tos,sos,mldr10_1 1_WP_1d_0001010">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T03:20:07.190Z">
+<meta property="article:modified_time" content="2023-07-06T02:58:04.021Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-12-30 11:20:07" itemprop="dateModified" datetime="2022-12-30T11:20:07+08:00">2022-12-30</time>
+                <time title="Modified: 2023-07-06 10:58:04" itemprop="dateModified" datetime="2023-07-06T10:58:04+08:00">2023-07-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -277,6 +277,23 @@
 <h4 id="NCO"><a href="#NCO" class="headerlink" title="NCO"></a>NCO</h4><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ncrcat -v ts -d lev,<span class="number">0</span> /nfs2/Models/FGOALS-gc-script/dataall/data_ocn/MMEAN0001-??.nc ts.nc</span><br><span class="line"></span><br><span class="line">ncrcat -d plev,<span class="number">5</span> *.nc zg_Amon_bcc-csm1-<span class="number">1_000101</span>-<span class="number">050012.</span>nc</span><br><span class="line"></span><br><span class="line">ncatted -a coordinates,sst,c,c,<span class="string">&quot;nav_lon nav_lat&quot;</span> sst_data.nc</span><br></pre></td></tr></table></figure>
 
 
+
+
+
+<h2 id="二进制文件批量转换NC"><a href="#二进制文件批量转换NC" class="headerlink" title="二进制文件批量转换NC"></a>二进制文件批量转换NC</h2><p><strong>以下全文代码和数据均已发布至和鲸社区，阅读原文前往，可一键fork跑通</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.heywhale.com/mw/project/6427dda534db799a8ad3ce32">https://www.heywhale.com/mw/project/6427dda534db799a8ad3ce32</a></p>
+</blockquote>
+<p>气象中很多计算通过fortran来实现，通常输出为二进制文件，但是绘图（如NCL和python）读取nc文件更方便。xgrads或者CDO都可以根据ctl文件快速地将二进制文件转为nc文件。以下代码从文件名中解析时间，动态创建ctl文件用于转换文件格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">import os</span><br><span class="line">import glob</span><br><span class="line">from datetime import datetime</span><br><span class="line"></span><br><span class="line">def Bin2Nc(full_path):</span><br><span class="line">   </span><br><span class="line">    _, fn = os.path.split(full_path)</span><br><span class="line">    fn, _  = os.path.splitext(_fn)</span><br><span class="line">    valid = datetime.strptime(fn[1:], &quot;%Y%m%d%H&quot;)</span><br><span class="line">    print(valid.strftime(&quot;%HZ%d%b%Y&quot;))</span><br><span class="line">   </span><br><span class="line">    ctl = f&#x27;&#x27;&#x27;\</span><br><span class="line">dset &#123;full_path&#125;</span><br><span class="line">undef 9.999E+20</span><br><span class="line">options yrev byteswapped</span><br><span class="line">title grided sample  </span><br><span class="line">xdef 241 linear 60.0 0.25</span><br><span class="line">ydef 241 linear 0.00 0.25  </span><br><span class="line">tdef 1 linear &#123;valid.strftime(&quot;%HZ%d%b%Y&quot;)&#125; 3hr</span><br><span class="line">zdef 19 levels 1000 950 925 900 850 800 700 600 500 400 300 250 200 150 100 70 50 20 10</span><br><span class="line">vars 5  </span><br><span class="line">gh   19 99 geopotential high [m]</span><br><span class="line">t    19 99 temperature       [k]</span><br><span class="line">rh   19 99 relative humidity [%]</span><br><span class="line">u    19 99 U wind            [m/s]</span><br><span class="line">v    19 99 V wind            [m/s]</span><br><span class="line">endvars &#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    with open(f&quot;&#123;fn&#125;.ctl&quot;,&#x27;w&#x27;) as f:</span><br><span class="line">        f.write(ctl)</span><br><span class="line"></span><br><span class="line">    # cdo</span><br><span class="line">    os.system(f&quot;cdo -f nc import_binary &#123;fn&#125;.ctl &#123;fn&#125;.nc&quot;)</span><br><span class="line">   </span><br><span class="line">    # xgrads</span><br><span class="line">    # from xgrads import open_CtlDataset</span><br><span class="line">    # dset = open_CtlDataset(f&#x27;./&#123;fn&#125;.ctl&#x27;)</span><br><span class="line">    # dset.to_netcdf(f&quot;&#123;fn&#125;.nc&quot;)</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">data_root = &quot;/public/home/test/data&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">files = os.listdir(data_root)</span><br><span class="line">for file in files[:1]:</span><br><span class="line">    print(file)</span><br><span class="line">    Bin2Nc(f&quot;&#123;data_root&#125;/&#123;file&#125;&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>tips：</p>
+<ul>
+<li>• ctl模板好像不行，需要具体到文件</li>
+<li>• xgrads库的导入速度比较慢，推荐优先使用cdo</li>
+<li>• 如果时间分辨率需要精确到分钟，tdef那一行可以改为<code> tdef 1 linear &#123;valid.strftime(&quot;%H:%MZ%d%b%Y&quot;)&#125; 10MN</code></li>
+</ul>
+
     </div>
 
     
@@ -295,8 +312,8 @@
       <i class="fa fa-chevron-left"></i> CESM
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/CDO%20User%20Guide.md/" rel="next" title="CDO User Guide">
-      CDO User Guide <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Auto%20Backup/" rel="next" title="Auto Backup">
+      Auto Backup <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -356,7 +373,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#txt-to-nc"><span class="nav-number">1.</span> <span class="nav-text">txt to nc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NCO"><span class="nav-number">2.</span> <span class="nav-text">NCO</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#txt-to-nc"><span class="nav-number">1.</span> <span class="nav-text">txt to nc</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NCO"><span class="nav-number">2.</span> <span class="nav-text">NCO</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E6%89%B9%E9%87%8F%E8%BD%AC%E6%8D%A2NC"><span class="nav-number"></span> <span class="nav-text">二进制文件批量转换NC</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -371,7 +388,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">141</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

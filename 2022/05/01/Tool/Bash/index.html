@@ -28,7 +28,7 @@
 <meta property="og:description" content="循环年月下载数据（月份保持两位数显示）1234567891011121314151617181920212223242526272829#!&#x2F;bin&#x2F;bashystart&#x3D;1959yend&#x3D;2020mstart&#x3D;1mend&#x3D;12let nyears&#x3D;$&amp;#123;yend&amp;#125;-$&amp;#123;ystart&amp;#125;let nmonths&#x3D;$&amp;#123;mend&amp;#125;-$&amp;#123;m">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T12:58:47.846Z">
+<meta property="article:modified_time" content="2023-07-06T02:03:38.805Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-12-30 20:58:47" itemprop="dateModified" datetime="2022-12-30T20:58:47+08:00">2022-12-30</time>
+                <time title="Modified: 2023-07-06 10:03:38" itemprop="dateModified" datetime="2023-07-06T10:03:38+08:00">2023-07-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,6 +263,31 @@
         <h2 id="循环年月下载数据（月份保持两位数显示）"><a href="#循环年月下载数据（月份保持两位数显示）" class="headerlink" title="循环年月下载数据（月份保持两位数显示）"></a>循环年月下载数据（月份保持两位数显示）</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">ystart=1959</span><br><span class="line">yend=2020</span><br><span class="line"></span><br><span class="line">mstart=1</span><br><span class="line">mend=12</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> nyears=<span class="variable">$&#123;yend&#125;</span>-<span class="variable">$&#123;ystart&#125;</span></span><br><span class="line"><span class="built_in">let</span> nmonths=<span class="variable">$&#123;mend&#125;</span>-<span class="variable">$&#123;mstart&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nyears&#125;</span>`</span><br><span class="line">   <span class="keyword">do</span>  </span><br><span class="line">   <span class="keyword">for</span> j <span class="keyword">in</span> `<span class="built_in">seq</span> 0 <span class="variable">$&#123;nmonths&#125;</span>`</span><br><span class="line">      <span class="keyword">do</span>  </span><br><span class="line">      <span class="built_in">let</span> year=<span class="variable">$&#123;ystart&#125;</span>+<span class="variable">$&#123;i&#125;</span></span><br><span class="line">      <span class="built_in">let</span> var=<span class="variable">$&#123;mstart&#125;</span>+<span class="variable">$&#123;j&#125;</span></span><br><span class="line">      month=$(<span class="built_in">printf</span> <span class="string">&quot;%02d&quot;</span> <span class="string">&quot;<span class="variable">$&#123;var&#125;</span>&quot;</span>)</span><br><span class="line">      <span class="built_in">echo</span> <span class="variable">$year</span></span><br><span class="line">      <span class="built_in">echo</span> <span class="variable">$month</span></span><br><span class="line">      sed s/XYEARX/<span class="variable">$&#123;year&#125;</span>/g SST_new.py &gt; getdata_temp.py</span><br><span class="line">      sed s/XMONTHX/<span class="variable">$&#123;month&#125;</span>/g getdata_temp.py &gt; getdata_new.py</span><br><span class="line">   <span class="comment">#chmod a+x getdata.py</span></span><br><span class="line">      python ./getdata_new.py</span><br><span class="line">      <span class="built_in">rm</span> getdata_new.py</span><br><span class="line">      <span class="built_in">rm</span> getdata_temp.py</span><br><span class="line">   <span class="keyword">done</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 
 
+
+<h2 id="Bash-Shell-常用的三种并行方法"><a href="#Bash-Shell-常用的三种并行方法" class="headerlink" title="Bash Shell 常用的三种并行方法"></a>Bash Shell 常用的三种并行方法</h2><p><strong>以下全文代码和数据均已发布至和鲸社区，阅读原文前往，可一键fork跑通</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.heywhale.com/mw/project/6469f61a19ec36f57f821e84">https://www.heywhale.com/mw/project/6469f61a19ec36f57f821e84</a></p>
+</blockquote>
+<p>在 shell 脚本中，可以使用并行的方式来执行多个任务，以减少任务执行时间和提高系统资源利用率。通过并行执行任务，可以充分利用系统的 CPU 和 IO 资源，以提高任务的速度和效率。先定义待执行函数、参数和进程数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"># 定义待执行的任务函数</span><br><span class="line">run_task () &#123;</span><br><span class="line">    # 需要执行的任务命令</span><br><span class="line">    command=$1</span><br><span class="line">    # 执行任务</span><br><span class="line">    </span><br><span class="line">    xx=$((RANDOM % 10))  # 随机数，用于模拟任务执行时间</span><br><span class="line">    sleep $xx</span><br><span class="line">    echo $1 $xx</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># 定义一个数组，存储要执行的任务命令</span><br><span class="line">commands=(</span><br><span class="line">    &quot;command1&quot;</span><br><span class="line">    &quot;command2&quot;</span><br><span class="line">    &quot;command3&quot;</span><br><span class="line">    &quot;command4&quot;</span><br><span class="line">    &quot;command5&quot;</span><br><span class="line">    &quot;command6&quot;</span><br><span class="line">    &quot;command7&quot;</span><br><span class="line">    &quot;command8&quot;</span><br><span class="line">    &quot;command9&quot;</span><br><span class="line">    &quot;command10&quot;</span><br><span class="line">    &quot;command11&quot;</span><br><span class="line">    &quot;command12&quot;</span><br><span class="line">    &quot;command13&quot;</span><br><span class="line">    &quot;command14&quot;</span><br><span class="line">    &quot;command15&quot;</span><br><span class="line">    &quot;command16&quot;</span><br><span class="line">    &quot;command17&quot;</span><br><span class="line">    &quot;command18&quot;</span><br><span class="line">    &quot;command19&quot;</span><br><span class="line">    &quot;command20&quot;</span><br><span class="line">    &quot;command21&quot;</span><br><span class="line">    &quot;command22&quot;</span><br><span class="line">    &quot;command23&quot;</span><br><span class="line">    &quot;command24&quot;</span><br><span class="line">    &quot;command25&quot;</span><br><span class="line">    &quot;command26&quot;</span><br><span class="line">    &quot;command27&quot;</span><br><span class="line">    &quot;command28&quot;</span><br><span class="line">    &quot;command29&quot;</span><br><span class="line">    &quot;command30&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 定义变量来存储要启动的进程数</span><br><span class="line">max_processes=5</span><br></pre></td></tr></table></figure>
+
+<p>下面是几种常用的并行方法</p>
+<h2 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 初始化计数器</span><br><span class="line">count=0</span><br><span class="line"></span><br><span class="line"># 遍历数组，逐个执行任务</span><br><span class="line">for command in &quot;$&#123;commands[@]&#125;&quot;; do</span><br><span class="line">    # 同时运行的进程数超过了最大值，则等待一个进程完成</span><br><span class="line">    ((++count)) &amp;&amp; ((count==$max_processes)) &amp;&amp; wait -n &amp;&amp; ((count--))</span><br><span class="line">    # 执行函数，并将任务命令传递给它</span><br><span class="line">    run_task &quot;$command&quot; &amp;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 等待所有任务完成</span><br><span class="line">wait</span><br></pre></td></tr></table></figure>
+
+<p>wait -n 命令会等待任意一个子进程结束并返回其状态。与 wait 命令不同的是，wait -n 命令可以让父进程在等待期间继续执行其他任务，而不必阻塞等待所有子进程执行完毕。</p>
+<p>注意，bash版本需要高于4.3</p>
+<h2 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">for i in $(seq 0 $(($&#123;#commands[@]&#125; - 1))); do</span><br><span class="line">    # 同时运行的进程数超过了最大值，则等待一个进程完成</span><br><span class="line">    if ((i % max_processes == 0)); then</span><br><span class="line">        wait # 此时会等待任务中的任何一个完成。</span><br><span class="line">        pids=() # 清除 pids 数组</span><br><span class="line">    fi</span><br><span class="line"></span><br><span class="line">    command=&quot;$&#123;commands[$i]&#125;&quot;</span><br><span class="line">    # 执行函数，并将任务命令传递给它</span><br><span class="line">    run_task &quot;$command&quot; &amp;</span><br><span class="line">    # 将 fork 的进程号（PID）保存到 $pids 数组中</span><br><span class="line">    pids+=($!)</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"># 等待所有任务完成</span><br><span class="line">wait</span><br></pre></td></tr></table></figure>
+
+<p>该方法按5条任务一组分批运行</p>
+<h2 id="方法3"><a href="#方法3" class="headerlink" title="方法3"></a>方法3</h2><p>使用 GNU parallel 工具来实现在 shell 中同时执行多个进程。</p>
+<p>创建一个包含 30 个任务的文件 tasks.txt，每行一个任务。使用 parallel 命令来执行任务。使用 –jobs 参数指定使用 5 个进程来执行任务。使用 –joblog 参数指定记录任务执行的日志。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat tasks.txt | parallel -j 5 --joblog joblog.txt ./run_task.sh &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
     </div>
 
     
@@ -277,12 +302,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Chrome/" rel="prev" title="Chrome">
-      <i class="fa fa-chevron-left"></i> Chrome
+    <a href="/2022/05/01/Tool/Author%20Guide/" rel="prev" title="Author Guide">
+      <i class="fa fa-chevron-left"></i> Author Guide
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/CESM/" rel="next" title="CESM">
-      CESM <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Recharge/StatQuest%20with%20Josh%20Starmer/" rel="next" title="StatQuest with Josh Starmer">
+      StatQuest with Josh Starmer <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -342,7 +367,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E5%B9%B4%E6%9C%88%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%EF%BC%88%E6%9C%88%E4%BB%BD%E4%BF%9D%E6%8C%81%E4%B8%A4%E4%BD%8D%E6%95%B0%E6%98%BE%E7%A4%BA%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">循环年月下载数据（月份保持两位数显示）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E5%B9%B4%E6%9C%88%E4%B8%8B%E8%BD%BD%E6%95%B0%E6%8D%AE%EF%BC%88%E6%9C%88%E4%BB%BD%E4%BF%9D%E6%8C%81%E4%B8%A4%E4%BD%8D%E6%95%B0%E6%98%BE%E7%A4%BA%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">循环年月下载数据（月份保持两位数显示）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bash-Shell-%E5%B8%B8%E7%94%A8%E7%9A%84%E4%B8%89%E7%A7%8D%E5%B9%B6%E8%A1%8C%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Bash Shell 常用的三种并行方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%951"><span class="nav-number">3.</span> <span class="nav-text">方法1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%952"><span class="nav-number">4.</span> <span class="nav-text">方法2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%953"><span class="nav-number">5.</span> <span class="nav-text">方法3</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -357,7 +382,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">141</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

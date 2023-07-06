@@ -28,7 +28,7 @@
 <meta property="og:description" content="℃      1~F34~0~F~ C  Function123456789101112131415161718192021222324252627282930undef(&quot;ttest_TLL&quot;)function ttest_TLL(x:numeric,y:numeric,sig:numeric)begin    dimXY &#x3D; dimsizes(x)    ntim  &#x3D; d">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-04T15:49:25.012Z">
+<meta property="article:modified_time" content="2023-07-06T02:58:00.897Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-04 23:49:25" itemprop="dateModified" datetime="2023-07-04T23:49:25+08:00">2023-07-04</time>
+                <time title="Modified: 2023-07-06 10:58:00" itemprop="dateModified" datetime="2023-07-06T10:58:00+08:00">2023-07-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -434,6 +434,49 @@
 <p>This is useful if you find yourself getting an error message from NCL that looks like this:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fatal:ContourPlotPreDraw: Workspace reallocation would exceed maximum size 100000000</span><br><span class="line">fatal:ContourPlotDraw: draw error</span><br><span class="line">warning:WorkstationDeactivate: workstation not active or not opened</span><br></pre></td></tr></table></figure>
 
+
+
+
+
+<h2 id="向NCL脚本传递参数"><a href="#向NCL脚本传递参数" class="headerlink" title="向NCL脚本传递参数"></a>向NCL脚本传递参数</h2><h3 id="Shell-版本"><a href="#Shell-版本" class="headerlink" title="Shell 版本"></a>Shell 版本</h3><h4 id="1-传递环境变量"><a href="#1-传递环境变量" class="headerlink" title="1. 传递环境变量"></a>1. 传递环境变量</h4><p>通过环境变量传递的是字符串，传递经纬度等数值型变量需要先转换为字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">set -x </span><br><span class="line"></span><br><span class="line">export FILENAME=&quot;gfs.2022022300f150&quot;</span><br><span class="line">export LAT=40</span><br><span class="line"></span><br><span class="line">ncl Run.ncl</span><br></pre></td></tr></table></figure>
+
+<p>在NCL中获取变量需要将字符串转为浮点数</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">    fn = getenv(&quot;FILENAME&quot;)</span><br><span class="line">    print(fn)    </span><br><span class="line">    </span><br><span class="line">    lat = tofloat(getenv(&quot;LAT&quot;))</span><br><span class="line">    print(lat)</span><br><span class="line"></span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-命令行参数"><a href="#2-命令行参数" class="headerlink" title="2. 命令行参数"></a>2. 命令行参数</h4><p>通过命令行传递参数，等号两侧没有空格，数值类型的直接以lat&#x3D;40传递即可，字符串变量需要在最外层添加单引号，具体变量值添加双引号。(详见：<a target="_blank" rel="noopener" href="https://www.ncl.ucar.edu/Document/Manuals/">https://www.ncl.ucar.edu/Document/Manuals/</a>)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncl lat=40 &#x27;fn=&quot;gfs.2022022300f150&quot;&#x27;  Run.ncl</span><br></pre></td></tr></table></figure>
+
+<p>NCL脚本中可以直接使用命令行中传递的变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">begin    </span><br><span class="line">print(fn)        </span><br><span class="line">print(lat)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-动态生成临时脚本"><a href="#3-动态生成临时脚本" class="headerlink" title="3. 动态生成临时脚本"></a>3. 动态生成临时脚本</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">set -x </span><br><span class="line"></span><br><span class="line">FILENAME=&quot;gfs.2022022300f150&quot;</span><br><span class="line">LAT=40</span><br><span class="line"></span><br><span class="line">cat &lt;&lt; EOF &gt; Run.ncl       # &gt;表示覆盖</span><br><span class="line">begin</span><br><span class="line">    a = addfile(&quot;$&#123;FILENAME&#125;&quot;, &quot;r&quot;)</span><br><span class="line">    </span><br><span class="line">    res@mpMinLatF  = $&#123;LAT&#125;</span><br><span class="line"></span><br><span class="line">end</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Python-版本"><a href="#Python-版本" class="headerlink" title="Python 版本"></a>Python 版本</h3><h4 id="1-传递环境变量-1"><a href="#1-传递环境变量-1" class="headerlink" title="1. 传递环境变量"></a>1. 传递环境变量</h4><p>通过环境变量传递的是字符串，传递经纬度等数值型变量需要先转换为字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"></span><br><span class="line">os.environ[<span class="string">&#x27;FILENAME&#x27;</span>] = <span class="string">&quot;gfs.2022022300f150&quot;</span></span><br><span class="line">os.environ[<span class="string">&#x27;LAT&#x27;</span>]      = <span class="built_in">str</span>(<span class="number">40</span>)</span><br><span class="line">os.system(<span class="string">&quot;ncl Run.ncl&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>在NCL中获取变量需要将字符串转为浮点数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">    fn = getenv(<span class="string">&quot;FILENAME&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(fn)    </span><br><span class="line">    lat = tofloat(getenv(<span class="string">&quot;LAT&quot;</span>))</span><br><span class="line">    <span class="built_in">print</span>(lat)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="2-命令行参数-1"><a href="#2-命令行参数-1" class="headerlink" title="2. 命令行参数"></a>2. 命令行参数</h4><p>通过命令行传递参数，等号两侧没有空格，数值类型的直接以lat&#x3D;40传递即可，字符串变量需要在最外层添加单引号，具体变量值添加双引号。(详见：<a target="_blank" rel="noopener" href="https://www.ncl.ucar.edu/Document/Manuals/">https://www.ncl.ucar.edu/Document/Manuals/</a>)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line">cmd = <span class="string">f&#x27;&#x27;&#x27; ncl lat=40 &#x27;fn=&quot;gfs.2022022300f150&quot;&#x27;  Run.ncl &#x27;&#x27;&#x27;</span></span><br><span class="line">os.system(cmd)</span><br></pre></td></tr></table></figure>
+
+<p>NCL脚本中可以直接使用命令行中传递的变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">begin</span><br><span class="line">    print(fn)    </span><br><span class="line">    print(lat)</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-动态生成临时脚本-1"><a href="#3-动态生成临时脚本-1" class="headerlink" title="3. 动态生成临时脚本"></a>3. 动态生成临时脚本</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量</span></span><br><span class="line">lat = <span class="number">40</span></span><br><span class="line">fn  = <span class="string">&quot;gfs.2022022300f150&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 完整脚本</span></span><br><span class="line">src = <span class="string">f&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">begin</span></span><br><span class="line"><span class="string">    a = addfile(&quot;<span class="subst">&#123;fn&#125;</span>&quot;, &quot;r&quot;)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    res@mpMinLatF  = <span class="subst">&#123;lat&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出到临时文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;Run.ncl&quot;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(src)</span><br><span class="line"></span><br><span class="line">os.system(<span class="string">&quot;ncl Run.ncl&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -448,12 +491,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Nice%20Website/" rel="prev" title="Nice Website">
-      <i class="fa fa-chevron-left"></i> Nice Website
+    <a href="/2022/05/01/Tool/Mac%20Cron/" rel="prev" title="Mac Cron">
+      <i class="fa fa-chevron-left"></i> Mac Cron
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Linux/" rel="next" title="Linux">
-      Linux <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/LaTex%20Notes/" rel="next" title="LaTex Notes">
+      LaTex Notes <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -513,7 +556,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">2.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NAN%E5%80%BC"><span class="nav-number">3.</span> <span class="nav-text">处理NAN值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">4.</span> <span class="nav-text">plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calculation"><span class="nav-number">5.</span> <span class="nav-text">Calculation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Function"><span class="nav-number">6.</span> <span class="nav-text">System_Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%89%B2%E6%A0%87"><span class="nav-number">7.</span> <span class="nav-text">自定义色标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Workspace-reallocation-would-exceed-maximum-size-100000000"><span class="nav-number">8.</span> <span class="nav-text">Error: Workspace reallocation would exceed maximum size 100000000</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">2.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NAN%E5%80%BC"><span class="nav-number">3.</span> <span class="nav-text">处理NAN值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">4.</span> <span class="nav-text">plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calculation"><span class="nav-number">5.</span> <span class="nav-text">Calculation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Function"><span class="nav-number">6.</span> <span class="nav-text">System_Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%89%B2%E6%A0%87"><span class="nav-number">7.</span> <span class="nav-text">自定义色标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Workspace-reallocation-would-exceed-maximum-size-100000000"><span class="nav-number">8.</span> <span class="nav-text">Error: Workspace reallocation would exceed maximum size 100000000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91NCL%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">向NCL脚本传递参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell-%E7%89%88%E6%9C%AC"><span class="nav-number">9.1.</span> <span class="nav-text">Shell 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">9.1.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="nav-number">9.1.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC"><span class="nav-number">9.1.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E7%89%88%E6%9C%AC"><span class="nav-number">9.2.</span> <span class="nav-text">Python 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="nav-number">9.2.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0-1"><span class="nav-number">9.2.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC-1"><span class="nav-number">9.2.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -528,7 +571,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">141</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

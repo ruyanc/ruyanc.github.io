@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;582285853?utm_campaign&#x3D;shareopn&amp;utm_medium&#x3D;social&amp;utm_oi&#x3D;684003931882000384&amp;utm_psn&#x3D;1576470760872431616&amp;utm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Pangu-Weather">
+<meta property="og:url" content="http://example.com/2023/05/01/Recharge/Pangu-Weather/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;582285853?utm_campaign&#x3D;shareopn&amp;utm_medium&#x3D;social&amp;utm_oi&#x3D;684003931882000384&amp;utm_psn&#x3D;1576470760872431616&amp;utm">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-1f113f7f928e64a6e70ca6e58bca71d3_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-d2989e7007f5c80e71bc76d40e3b962f_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-bb74ae2b3386b51655c76b1d8bc4c91e_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-3a5161f465e2345eebed99d7e1fcd88b_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-57e6c1c3482faa3b9d6d08092205666f_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-de6b99a8be3f98cd829e82e3b6d5f461_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c9c45434d3a21e29a2483f89f798e360_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-6e56f4563adf1cdcd3d12ffa50128020_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-4a5c56392f3c97271a5c912651adeab6_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-f34cbc9bd78953a420fa25050d248ff2_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-9f14a4cdfccf774bca4b7befdb0f158a_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-1daebf7e6e5b84da2c15d98a0ad938de_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-af4e5f60349e35ce400f0aabf6a978ca_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-3185f3eca3590b30efb78447b1ef7f2a_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-474defcfa15a305c8a7e7725d1f969ea_1440w.webp">
+<meta property="article:published_time" content="2023-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-06T02:48:17.019Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-1f113f7f928e64a6e70ca6e58bca71d3_1440w.webp">
+
+<link rel="canonical" href="http://example.com/2023/05/01/Recharge/Pangu-Weather/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Pangu-Weather | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/05/01/Recharge/Pangu-Weather/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Pangu-Weather
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2023-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2023-05-01T12:00:00+08:00">2023-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-07-06 10:48:17" itemprop="dateModified" datetime="2023-07-06T10:48:17+08:00">2023-07-06</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Recharge/" itemprop="url" rel="index"><span itemprop="name">Recharge</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上"><a href="#华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上" class="headerlink" title="华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上"></a>华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上</h2><p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=684003931882000384&amp;utm_psn=1576470760872431616&amp;utm_source=wechat_session">https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&amp;utm_medium=social&amp;utm_oi=684003931882000384&amp;utm_psn=1576470760872431616&amp;utm_source=wechat_session</a></p>
+<p>上世纪20年代以来，特别是近三十年随着算力的迅速发展，数值天气预报在每日天气预报、极端灾害预警、气候变化预测等领域取得了巨大的成功。但是随着算力增长的趋缓和物理模型的逐渐复杂化，传统数值预报的瓶颈日益突出。研究者们开始挖掘新的气象预报范式如使用深度学习方法预测未来天气。在数值方法应用最广泛的领域如中长期预报中，现有的AI预报方法精度仍然显著低于数值预报方法，并受到可解释性欠缺，极端天气预测不准等问题的制约。</p>
+<p>来自华为云的研究人员提出了一种新的高分辨率全球AI气象预报系统：盘古气象大模型。盘古气象大模型是首个精度超过传统数值预报方法的AI方法，1小时-7天预测精度均高于传统数值方法（欧洲气象中心的operational IFS[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_1">1]</a>），同时预测速度提升10000倍，能够提供秒级的全球气象预报，包括位势、湿度、风速、温度、海平面气压等。盘古气象模型的水平空间分辨率达到 0.25∘×0.25∘ ，时间分辨率为1小时，覆盖13层垂直高度，可以精准地预测细粒度气象特征。作为基础模型，盘古气象大模型还能够直接应用于多个下游场景。例如，在热带风暴预测任务中，盘古气象大模型的预测精度显著超过欧洲气象中心的高精度预报（ECMWF HRES Forecast）结果。</p>
+<p>本文主要介绍盘古气象大模型的技术要点和代表性预测结果。关于技术细节，可以参考发布在arXiv上的完整论文：<a href="https://link.zhihu.com/?target=https://arxiv.org/abs/2211.02556">Pangu-Weather: A 3D High-Resolution Model for Fast and Accurate Global Weather Forecast</a>。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-1f113f7f928e64a6e70ca6e58bca71d3_1440w.webp" alt="img"></p>
+<p><strong>【转载声明】</strong>转载此文章请注明出处，并且注明：文章所有内容均只代表作者观点，其中涉及的前沿内容均有可能被推翻。二次转载务必连同声明一起转载。此中文稿的主要作者为毕恺峰、谢凌曦，转载时请标注。</p>
+<p>盘古气象大模型由盘古团队发布，主要完成人为毕恺峰、谢凌曦、张恒亨、陈鑫、顾晓韬以及田奇老师。</p>
+<h3 id="引言：AI气象预报方法能不能超过数值气象预报方法？"><a href="#引言：AI气象预报方法能不能超过数值气象预报方法？" class="headerlink" title="引言：AI气象预报方法能不能超过数值气象预报方法？"></a>引言：AI气象预报方法能不能超过数值气象预报方法？</h3><p>气象预报是科学计算领域最重要的场景之一，对未来天气变化的预测特别是对极端天气如暴雨、台风、干旱、寒潮的预测至关重要。传统数值预报使用数学物理方程建模大气状态并使用计算机仿真方法求解方程得到未来天气状态，在过去三十年取得了令人瞩目的成功。但是，随着算力增长的趋缓和物理模型的日益复杂，数值气象预报方法也逐渐遇到了瓶颈：一方面，传统数值预报对算力的消耗非常大，如 0.25∘×0.25∘ 精度的未来10天数值预报，需在超过3000个节点的超级计算机上花费数小时进行仿真；另一方面，复杂的参数化物理模型始终是不完备的，对物理过程的参数化，不可避免地向数值预报引入系统误差。</p>
+<p>AI气象预报首先在短临预报取得了巨大的成功。这得益于AI预报在预测速度上的巨大优势：数值预报方法无法给出分钟级的气象预测，而AI方法拟合雷达回波数据的能力，超过了光流法等外插方法。当把AI预报方法应用于中长期气象预报时（数值气象预报应用最成功的领域之一），尽管AI方法能够大幅提升预测速度，AI预报方法的分辨率和精度均明显落后于数值气象预报方法。2022年3月，英伟达推出FourCastNet模型[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_2">2]</a>，首次把预报水平分辨率提升到了和数值预报相比拟的水平即 0.25∘×0.25∘ ，但是其预报精度仍然大幅落后于数值预报方法。例如，FourCastNet的5天位势预测的均方根误差（RMSE）为484.5，即使使用100个模型进行集成预报，其均方根误差依然高达462.5，远高于欧洲气象中心operational IFS报告的333.7。在盘古气象模型提出之前，AI气象预报主要是作为数值预报的快速替代模型，并不能直接替代传统数值预报方法。甚至有气象学家指出，AI预报方法超越传统数值方法，还需要一段时间[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_3">3]</a>。</p>
+<p><strong>盘古气象大模型首次在中长期气象预报上超过了传统数值方法。</strong>训练和测试均在ERA5数据集上进行，其包括43年（1979-2021年）的全球实况气象数据。其中，1979-2017年数据作为训练集，2019年数据作为验证集，2018、2020、2021年数据作为测试集。盘古大模型使用的数据，包括垂直高度上13个不同气压层，每层五种气象要素（温度、湿度、位势、经度和纬度方向的风速），以及地球表面的四种气象要素（2米温度、经度和纬度方向的10米风速、海平面气压）。图1展示了盘古气象大模型的一些结果。我们可以看到，盘古气象大模型全方位地超过了现有的数值预报方法（欧洲气象中心的operational IFS）。例如，盘古气象大模型提供的Z500五天预报均方根误差为296.7，显著低于之前最好的数值预报方法（operational IFS：333.7）和AI方法（FourCastNet：462.5）。同时，盘古气象大模型在一张V100显卡上只需要1.4秒就能完成24小时的全球气象预报，相比传统数值预报提速10000倍以上。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-d2989e7007f5c80e71bc76d40e3b962f_1440w.webp" alt="img"></p>
+<p>图1a　盘古气象大模型在不同要素、不同预测月份的预测精度，都显著超过数值预报方法（欧洲气象中心的operational IFS）和AI预报方法（英伟达的FourCastNet）</p>
+<p><img src="https://pic3.zhimg.com/80/v2-bb74ae2b3386b51655c76b1d8bc4c91e_1440w.webp" alt="img"></p>
+<p>图1b　盘古气象大模型在两个变量上的3天预报结果的可视化以及与真实值对比</p>
+<p><img src="https://pic4.zhimg.com/80/v2-3a5161f465e2345eebed99d7e1fcd88b_1440w.webp" alt="img"></p>
+<p>图1c　盘古气象大模型对2018年两个超强台风康雷和玉兔的路径预测，准确度远超传统方法——尤其对于台风玉兔，盘古相较于传统方法提前48小时（比登陆时间提前6天以上）判断出玉兔的正确登陆位置：菲律宾马里亚纳群岛</p>
+<h3 id="方法：3D神经网络结合层次化时域聚合"><a href="#方法：3D神经网络结合层次化时域聚合" class="headerlink" title="方法：3D神经网络结合层次化时域聚合"></a>方法：3D神经网络结合层次化时域聚合</h3><p>盘古气象大模型的思路十分明确：气象数据和图像数据具有很多相似之处，能否利用当前CV领域的大模型，对于气象数据进行分析？在前人工作（如英伟达的FourCastNet）的基础上，盘古研究团队发现：AI气象预报模型的精度不足，主要有两个原因。第一，现有的AI气象预报模型都是基于2D神经网络，无法很好地处理不均匀的3D气象数据。第二，AI方法缺少数学物理机理约束，因此在迭代的过程中会不断积累迭代误差。为此，本文提出了3D Earth-Specific Transformer（3DEST）来处理复杂的不均匀3D气象数据，并且使用层次化时域聚合策略来减少预报迭代次数，从而减少迭代误差。</p>
+<h4 id="神经网络：3D-Earth-Specific-Transformer"><a href="#神经网络：3D-Earth-Specific-Transformer" class="headerlink" title="神经网络：3D Earth-Specific Transformer"></a>神经网络：<strong>3D Earth-Specific Transformer</strong></h4><p>图2为本文提出的3D Earth-Specific Transformer的示意图。其主要思想是使用一个视觉transformer[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_4">4]</a>的3D变种来处理复杂的不均匀的气象要素。由于气象数据分辨率很大，因而相比于常见的vision transformer方法，研究人员将网络的encoder和decoder减少到2级（8个block），同时采用Swin transformer[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_5">5]</a>的滑窗注意力机制，以减少网络的计算量。需要注意的是，即使采用了这些方法，当前网络的总体FLOPs依然超过3000G。未来，在算力充足的条件下，可以使用更大的网络以进一步提升预报精度。</p>
+<p><img src="https://pic4.zhimg.com/80/v2-57e6c1c3482faa3b9d6d08092205666f_1440w.webp" alt="img"></p>
+<p>图2　3D Earth-Specific Transformer的架构示意图</p>
+<p>在每一个网络block里，最重要的改进是引入了Earth-Specific位置编码。这是团队在对气象数据性质进行仔细分析后，所做出的改进。气象预报数据和普通图像数据最大的区别在于，特征图上的每个像素都对应于地球上的一个绝对位置，而图像上的像素往往只包含相对位置信息。同时，如图3所示，气象要素数据对应的经纬度网格是不均匀的，而不同的要素在不同纬度、高度的分布也是不均匀的。对这些不均匀性的建模，有利于学习气象数据背后潜藏着的复杂物理规律，如科里奥利力等。为此，本文在每一个transformer模块中引入和纬度、高度相关的绝对位置编码来学习每一次空间运算的不规则分量。这样改动后的transformer模块，被称为3D Earth-Specific Transformer。关于更多的技术细节，请参阅论文。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-de6b99a8be3f98cd829e82e3b6d5f461_1440w.webp" alt="img"></p>
+<p>图3　使用Earth-Specific位置编码的原因——左边：地球表面的经纬度网格是空间不均匀的；中间：位势高度和纬度、高度紧密相关；右边：平均风速和温度和垂直高度紧密相关</p>
+<h4 id="层次化时域聚合策略"><a href="#层次化时域聚合策略" class="headerlink" title="层次化时域聚合策略"></a>层次化时域聚合策略</h4><p>中长期气象预报需要多次迭代模型得到预报结果。例如，FourCastNet需要调用6小时预测间隔的AI模型共计28次，以得到7天的预测结果。由于缺少数学物理机理约束，AI模型的迭代误差随着迭代次数的增加而迅速上升。如图4所示，把盘古气象预报的6小时模型迭代了28次得到的7天预报结果，精度明显低于24小时模型迭代7次的预报结果；而如果使用1小时模型迭代168次，预报误差则呈现超线性上升趋势。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-c9c45434d3a21e29a2483f89f798e360_1440w.webp" alt="img"></p>
+<p>图4　不同基础模型的7天预报精度对比</p>
+<p>为了缓解迭代误差，本文提出一个简单而有效的策略。研究人员训练了4个不同预报间隔的模型，分别为1小时间隔、3小时间隔、6小时间隔、24小时间隔。进而，研究人员使用贪心算法调用这些模型，使得预测特定时间气象状况的迭代次数最小。例如，对于24小时预测，只需要调用一次24小时间隔的模型；而对于23小时预测，则需要调用三次6小时预报，一次3小时预报和两次1小时预报。通过使用多个不同时间间隔模型捕捉不同时序关系，盘古气象大模型不仅减少了迭代误差，并且避免了由递归训练带来的训练资源消耗。在训练过程中，盘古气象大模型只需要使用单一时间的天气状况监督模型训练，而之前的方法（如FourCastNet）往往监督多个时间点的天气状况以降低迭代误差，从而成倍地增加了显存消耗和训练时间，并且使得训练过程的稳定性下降。</p>
+<p>【算力消耗】为了训练每个模型，研究人员使用1979-2021年的气象数据，以小时为单位采样，训练了100个epoch。每个模型需要在192块V100显卡上训练16天。事实上，即使经历100个epoch，这些模型依旧没有完全收敛。也就是说，在计算资源更加充足的情况下，AI预报的精度还能够进一步提升。推理时，盘古气象大模型仅需在一张V100显卡上运行1.4秒，即可完成24小时全球气象预报。相比传统数值预报，计算速度的提升超过10000倍。</p>
+<h3 id="实验结果展示"><a href="#实验结果展示" class="headerlink" title="实验结果展示"></a>实验结果展示</h3><p>本文主要在两个数据集上测试盘古气象大模型。一是从ERA5数据集[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_6">6]</a>中划分出的测试集（2018、2020、2021年数据），主要用来测试盘古气象大模型的整体预报精度。二是IBTrACS热带风暴观测数据[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_7">7]</a>，主要用来测试盘古气象大模型在特定极端天气场景（热带风暴轨迹预测）上的准确度。盘古气象大模型的比较对象，包括当前最先进的数值预报方法（从TIGGE存档下载的欧洲气象中心operational IFS预报结果）和AI方法（英伟达的FourCastNet论文中报告的精度）。</p>
+<h4 id="确定性预报结果"><a href="#确定性预报结果" class="headerlink" title="确定性预报结果"></a>确定性预报结果</h4><p><strong>【高空气象变量】</strong>如图1和图5所示，盘古气象大模型在高空气象变量Z500、T850、T500、Q500、U500、V500上的测试精度，在所有预测时间均领先于欧洲气象中心的operational IFS。例如，对于Z500，3天和5天operational IFS的预测均方根误差（单位： m2&#x2F;s2 ）为152.8和333.7，盘古气象大模型把误差减少到134.5和296.7。对于T850，3天和5天operational IFS的预测均方根误差（单位： K ）为1.37和2.06，盘古气象大模型把误差减少到1.14和1.79 。在所有场景中，盘古气象大模型相比operational IFS的均方根误差相对降低都超过10%。使用同等精度下的预报时间间隔来衡量，盘古气象大模型相对欧洲气象中心的operational IFS的精度提升相当于超过10-15小时的“预测时间收益”（即，盘古的预测时间比IFS多10-15小时时，预测精度与IFS相当）。与英伟达的FourCastNet相比，盘古气象大模型有更大的精度优势——在所有场景中，均方根误差相对降低超过30%，“预测时间增益”也扩大到36小时以上。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-6e56f4563adf1cdcd3d12ffa50128020_1440w.webp" alt="img"></p>
+<p>图5　左侧：四个高空气象变量的量化对比结果；右侧：三个地表气象变量的量化对比结果</p>
+<p><strong>【地表气象变量】</strong>如图5所示，盘古气象大模型在地表气象变量2m温度（T2M），10m经度方向和纬度方向风速（U10和V10）上测试精度稳定的高于欧洲气象中心的operational IFS和英伟达的FourCastNet。使用“预测时间收益”来衡量，盘古气象大模型相对于operational IFS的精度提升相当于超过18小时的“预测时间收益”。例如，对于2m温度（T2M），3天和5天operational IFS的预测均方根误差（单位： K ）为1.34和1.75，FourCastNet的均方根误差为1.39和 2.00，盘古气象大模型把误差减少到1.05 和1.53。对于10米经度方向风速，3天和5天operational IFS的预测均方根误差（单位： m&#x2F;s ）为1.94和2.90，FourCastNet的均方根误差为2.24和 3.41，盘古气象大模型把误差减少到1.61和2.53 。</p>
+<p><strong>【可视化】</strong>如图1和图6所示，盘古气象大模型可以很好地预测细粒度气象特征。同时，在可视化中可以观察到，AI预报的结果通常更加平滑，而数值预报则更经常地预测出一些不存在的特征。这反映出AI气象预报和传统气象预报间存在差异性和互补性。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-4a5c56392f3c97271a5c912651adeab6_1440w.webp" alt="img"></p>
+<p>图6　盘古气象大模型在另外两个变量上的3天预报结果的可视化以及与传统数值预报结果以及真实值的对比</p>
+<p><strong>【诊断实验】</strong>本文提供两个诊断实验。</p>
+<ul>
+<li>如图1所示，盘古气象大模型在一年的不同月份预测ACC均高于欧洲气象中心的operational IFS。盘古气象大模型的精度优势在“难度最高”的月份更大，这意味着AI方法能够在传统数值方法失效的情况下从数据中学出大气演进的规律。</li>
+<li>如图7所示，盘古气象大模型另一个独特的优势是能够提供逐小时的预报结果。与之相对，之前的高分辨率AI预测方法（如FourCastNet）只能提供逐6小时的预报结果。</li>
+</ul>
+<p><img src="https://pic3.zhimg.com/80/v2-f34cbc9bd78953a420fa25050d248ff2_1440w.webp" alt="img"></p>
+<p>图7　盘古气象大模型的逐小时预报结果</p>
+<h4 id="极端天气预报结果"><a href="#极端天气预报结果" class="headerlink" title="极端天气预报结果"></a>极端天气预报结果</h4><p><strong>【总体极端天气预测趋势】</strong>与FourCastNet一样，盘古气象大模型计算了RQE值来衡量不同预报方法的极端天气预测趋势（具体数学定义参见论文）。RQE值小于0表示模型倾向于低估极端天气影响，RQE值大于0表示模型倾向于高估极端天气影响，RQE值接近0表示模型预报更准确。从图8中可以看出，AI方法和数值方法都倾向于低估极端天气影响。盘古气象大模型在Q500上表现的比operational IFS强（低估得更少），在U500上表现的比operational IFS弱（低估得更多），在U10上一开始表现的比operational强，最后表现的比operational IFS略弱。得益于高效的层次化时域聚合算法，盘古气象大模型在U10上的RQE结果明显高于FourCastNet（低估得更少），这也对应于盘古气象大模型在确定性预报上精度更高的事实。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-9f14a4cdfccf774bca4b7befdb0f158a_1440w.webp" alt="img"></p>
+<p>图8　三种气象变量的RQE值随时间变化趋势</p>
+<p><strong>【热带风暴路径预测】</strong>如图9所示，通过计算海平面气压、850hPa旋度、10米风速和200hPa-850hPa厚度，盘古气象大模型可以准确地预测热带风暴的路径（具体方法参见论文）。研究人员将预报方法运用于2018年的88个热带风暴（IBTrACS数据集和TIGGE里 ECMWF HRES热带风暴预报的交集）后发现，盘古的预测精度明显高于传统方法。和ECMWF HRES比较，盘古气象大模型在不同地区、不同热带风暴强度、不同预测时间上台风路径预测准确度都有明显优势。例如，盘古气象大模型对88个热带风暴路径预测的三天&#x2F;五天平均误差为120.29公里&#x2F;195.65公里，明显低于ECMWF HRES的162.28公里&#x2F;272.10公里。如图1和图10所示，盘古气象大模型在2018年著名的台风康雷和玉兔（其轨迹被被多个气象预报长时间误判）上，都报告了很高的准确度。特别是台风玉兔，盘古领先传统方法超过48小时，即判断出玉兔的正确登陆地点：菲律宾马里亚纳群岛。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-1daebf7e6e5b84da2c15d98a0ad938de_1440w.webp" alt="img"></p>
+<p>图9　通过追踪几个重点变量，盘古气象大模型能够准确地实现热带风暴轨迹预测</p>
+<p><img src="https://pic3.zhimg.com/80/v2-af4e5f60349e35ce400f0aabf6a978ca_1440w.webp" alt="img"></p>
+<p>图10　台风康雷的动态预报结果，可见盘古相较于传统方法的领先幅度</p>
+<h4 id="集成气象预报结果"><a href="#集成气象预报结果" class="headerlink" title="集成气象预报结果"></a>集成气象预报结果</h4><p>最后，本文还探索了使用盘古气象大模型进行集成预报的简单方法。研究人员向模型的输入中加入随机珀林噪声，得到99组输入扰动的预报和1组输入未扰动的预报。如图11所示，简单的输入扰动形成的集成预报，其短期（&lt;2天）预报精度略低于未经扰动的确定性预报，而其长期（&gt;5天）预报精度明显高于未经扰动的确定性预报。例如，集成预报的平均值把Z500和U10的7天预测均方根误差从500.3和3.48降低至450.6和2.96，相对下降达到10%和15%以上。结合气象知识使用相似的方法可以得到更加有效的集成预报，例如使用奇异向量法扰动盘古气象大模型的输入。受限于作者有限的气象知识，研究人员期待，在经验更丰富的气象专家介入之后，盘古气象大模型的集成预报效果能够得到进一步的提升。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-3185f3eca3590b30efb78447b1ef7f2a_1440w.webp" alt="img"></p>
+<p>图11　盘古气象大模型的集成预报结果，及其与确定性预报结果的对比</p>
+<h3 id="总结与展望"><a href="#总结与展望" class="headerlink" title="总结与展望"></a>总结与展望</h3><p>本文介绍了一个基于人工智能的数值天气预报系统：盘古气象大模型。本文的主要技术贡献包括（i）设计3D Earth-Specific（3DEST）网络结构和（ii）应用层次化时域聚合策略。通过在39年的全球天气数据上训练深度神经网络，盘古气象大模型首次在精度和速度方面超越了传统的NWP方法。盘古气象大模型具有极高的预报速度，为气象学家将他们的知识整合到基于人工智能方法中提供了便利。</p>
+<p>展望未来，计算资源将成为进一步提高AI气象预报准确性的关键要素。根据本文得到的实验，在（i）使用更多的气象要素训练网络模型，（ii）加入时间维度来训练4D深度神经网络，以及（iii）简单地使用更大的神经网络等方面，AI预报方法还有很大的提升空间。所有这些都需要更多的算力资源：更强力的GPU，更大的内存，更高的浮点数运算能力，等等。</p>
+<h3 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h3><p>作者感谢欧洲气象中心和美国NOAA国家环境信息中心，他们无私地分享了ERA5和IBTrACS数据集，使得本研究能够顺利进行。作者同时感谢盘古团队的其他成员，以及华为云EI集成验证团队成员在算力上的支持。</p>
+<h3 id="11月15日更新"><a href="#11月15日更新" class="headerlink" title="11月15日更新"></a>11月15日更新</h3><p>文章发布几天以来，许多气象学专业的朋友给我们留下了不少评论。非常感谢大家的关注！以下，我简单回应几个提及比较多的问题。</p>
+<p><strong>1. 关于“AI方法能够超过传统NWP方法”的论断</strong></p>
+<p>这可能是引起争议最大的一句话，原文是“We end the debate on whether AI-based methods can surpass NWP for global weather forecast”。有气象学专家指出，盘古只是完成了在ERA5（再分析数据）数据上的拟合。而产生ERA5数据的过程很复杂，需要用到同化等技术。在没有覆盖这些技术的情况下，声称盘古超越了NWP方法，有过度宣传之嫌。我们接受这个意见。由于专业所限，我们之前阅读的文章主要是英伟达的FourCastNet以及引用里的几篇文献。在盘古文章中，我们将NWP限定为“基于同化数据进行预测的方法”，而不是指代“整个数值气象预报领域”。盘古确实首次在同化数据上超越了传统方法：我们使用了与英伟达FourCastNet完全相同的测试环境，确保对比的公平性和结论的可信度。</p>
+<p><strong>2. 再分析数据也许不能实时获得，因而此类AI算法可能不实用</strong></p>
+<p>这是一个很好的问题。ERA5数据集的质量，确实比大部分分析数据集都要好。然而我们看到，英伟达测试过FourCastNet（在ERA5数据上训练）迁移到GFS分析数据的结果[<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_8">8]</a>。结果显示，在5天预报上，迁移对于预报精度的影响小于“6小时间隔”（见下图），而盘古领先operational IFS的时间在所有变量上都达到10小时以上，说明盘古确实在预报精度上具有优势。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-474defcfa15a305c8a7e7725d1f969ea_1440w.webp" alt="img"></p>
+<p>英伟达研究表明，ERA5上训练的模型迁移到GFS数据上，预报精度损失并不很大</p>
+<p><strong>3. 为什么我们坚信AI方法一定是气象预报的未来趋势</strong></p>
+<p>AI已经不是新鲜事物，但是对于不从事AI研发的人而言，也许还无法准确地回答“AI究竟强在什么方面”这个问题。总的来说，AI主要擅长做两件事：处理重复任务、拟合未知数据关系——前者对于气象领域或许不太重要（除非将来AI系统被用于各个垂直领域、各个地区，进行精细化的预报），而后者非常重要。当前，气象预报的输入和输出之间，关系非常复杂。气象学家花费了大量的时间，创造了一套复杂度惊人的物理系统来做仿真，但是这套系统并不是完美的：不仅各种观测数据可能有缺陷、有误差，而且许多物理过程也建立在近似的基础上。在这种复杂环境下，人工构建的仿真系统，不仅精度受到限制，而且迭代代价极高。相比而言，AI不需要任何数理假设，只是暴力地学习数据中的关系，完成预报任务。因此，传统仿真方法和AI方法，各有优缺点。当数据噪声小、关系简单、仿真误差低时，确实没必要强行让AI方法介入；但是当数据噪声大、关系复杂、仿真误差高时，AI方法就一定会体现出优势来。换句更简单的话说，人类对于一个领域的认识越不足，AI就越有发挥的空间。很明显，气象预报完美符合AI方法的优势场景，因此AI一旦超越传统方法，就势必会一直领先下去，直到某个划时代的新理论出现（概率很低）。</p>
+<p><strong>4. AI方法是否会取代传统方法？</strong></p>
+<p>AI进入任何一个领域时，都会有类似的声音和担忧。举例说，AI与医学影像分析已经结合了10年以上，至今AI方法还是起到辅助作用，无法替代医生，特别是高水平专家。在气象领域也是一样：盘古虽然在全球预报上超越了传统方法，但是它也存在一些弊病，例如总是低估台风强度（路径准确、中心气压预估偏高），又例如可解释性不足。因此，我们的结论是明显的。第一，AI在量化评测上超过传统方法，已是不争的事实。第二，AI方法短期内无法彻底取代传统方法，两者需要深度融合。我呼吁气象学家们与AI领域深度合作，共同探索这一激动人心的新方向。</p>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_1_0">^</a>P. Bougeault, Z. Toth, C. Bishop, B. Brown, D. Burridge, D. H.Chen, B. Ebert, M. Fuentes, T. M. Hamill, K. Mylne et al., “The thorpex interactive grand global ensemble,” Bulletin of the American Meteorological Society, vol. 91, no. 8, pp. 1059–1072, 2010.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_2_0">^</a>J. Pathak, S. Subramanian, P. Harrington, S. Raja, A. Chattopadhyay, M. Mardani, T. Kurth, D. Hall, Z. Li, K. Azizzadenesheli et al., “Fourcastnet: A global data-driven high-resolution weather model using adaptive fourier neural operators,” arXiv preprint arXiv:2202.11214, 2022.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_3_0">^</a>M. G. Schultz, C. Betancourt, B. Gong, F. Kleinert, M. Langguth, L. H. Leufen, A. Mozaffari, and S. Stadtler, “Can deep learning beat numerical weather prediction?” Philosophical Transactions of the Royal Society A, vol. 379, no. 2194, p. 20200097, 2021.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_4_0">^</a>A. Dosovitskiy, L. Beyer, A. Kolesnikov, D. Weissenborn, X. Zhai, T. Unterthiner, M. Dehghani, M. Minderer, G. Heigold, S. Gelly et al., “An image is worth 16x16 words: Transformers for image recognition at scale,” arXiv preprint arXiv:2010.11929, 2020.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_5_0">^</a>Z. Liu, Y. Lin, Y. Cao, H. Hu, Y. Wei, Z. Zhang, S. Lin, and B. Guo,“Swin transformer: Hierarchical vision transformer using shifted windows,” in Proceedings of the IEEE&#x2F;CVF International Conference on Computer Vision, 2021, pp. 10 012–10 022.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_6_0">^</a>H. Hersbach, B. Bell, P. Berrisford, S. Hirahara, A. Horanyi, ´J. Munoz-Sabater, J. Nicolas, C. Peubey, R. Radu, D. Schepers ˜ et al., “The era5 global reanalysis,” Quarterly Journal of the Royal Meteorological Society, vol. 146, no. 730, pp. 1999–2049, 2020.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_7_0">^</a>K. R. Knapp, M. C. Kruk, D. H. Levinson, H. J. Diamond, and C. J. Neumann, “The international best track archive for climate stewardship (ibtracs) unifying tropical cyclone data,” Bulletin of the American Meteorological Society, vol. 91, no. 3, pp. 363–376, 2010.</li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/582285853?utm_campaign=shareopn&utm_medium=social&utm_oi=684003931882000384&utm_psn=1576470760872431616&utm_source=wechat_session#ref_8_0">^</a><a target="_blank" rel="noopener" href="https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41326/">https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41326/</a></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023/05/01/Seminar/20230501-%E7%99%BE%E5%B9%B4%E9%A3%8E%E4%BA%91%E8%AE%B2%E5%9D%9B%E5%9B%9E%E6%94%BE%E8%A7%86%E9%A2%91/" rel="prev" title="百年风云讲坛回放视频">
+      <i class="fa fa-chevron-left"></i> 百年风云讲坛回放视频
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2023/05/01/Recharge/ChatGPT/" rel="next" title="ChatGPT">
+      ChatGPT <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8E%E4%B8%BA%E4%BA%91%E6%8F%90%E5%87%BA%E7%9B%98%E5%8F%A4%E6%B0%94%E8%B1%A1%E5%A4%A7%E6%A8%A1%E5%9E%8B%EF%BC%9A%E4%B8%AD%E9%95%BF%E6%9C%9F%E6%B0%94%E8%B1%A1%E9%A2%84%E6%8A%A5%E7%B2%BE%E5%BA%A6%E9%A6%96%E6%AC%A1%E8%B6%85%E8%BF%87%E4%BC%A0%E7%BB%9F%E6%95%B0%E5%80%BC%E6%96%B9%E6%B3%95%EF%BC%8C%E9%80%9F%E5%BA%A6%E6%8F%90%E5%8D%8710000%E5%80%8D%E4%BB%A5%E4%B8%8A"><span class="nav-number">1.</span> <span class="nav-text">华为云提出盘古气象大模型：中长期气象预报精度首次超过传统数值方法，速度提升10000倍以上</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E8%A8%80%EF%BC%9AAI%E6%B0%94%E8%B1%A1%E9%A2%84%E6%8A%A5%E6%96%B9%E6%B3%95%E8%83%BD%E4%B8%8D%E8%83%BD%E8%B6%85%E8%BF%87%E6%95%B0%E5%80%BC%E6%B0%94%E8%B1%A1%E9%A2%84%E6%8A%A5%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">引言：AI气象预报方法能不能超过数值气象预报方法？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%EF%BC%9A3D%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%BB%93%E5%90%88%E5%B1%82%E6%AC%A1%E5%8C%96%E6%97%B6%E5%9F%9F%E8%81%9A%E5%90%88"><span class="nav-number">1.2.</span> <span class="nav-text">方法：3D神经网络结合层次化时域聚合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%EF%BC%9A3D-Earth-Specific-Transformer"><span class="nav-number">1.2.1.</span> <span class="nav-text">神经网络：3D Earth-Specific Transformer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%8C%96%E6%97%B6%E5%9F%9F%E8%81%9A%E5%90%88%E7%AD%96%E7%95%A5"><span class="nav-number">1.2.2.</span> <span class="nav-text">层次化时域聚合策略</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="nav-number">1.3.</span> <span class="nav-text">实验结果展示</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AE%E5%AE%9A%E6%80%A7%E9%A2%84%E6%8A%A5%E7%BB%93%E6%9E%9C"><span class="nav-number">1.3.1.</span> <span class="nav-text">确定性预报结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9E%81%E7%AB%AF%E5%A4%A9%E6%B0%94%E9%A2%84%E6%8A%A5%E7%BB%93%E6%9E%9C"><span class="nav-number">1.3.2.</span> <span class="nav-text">极端天气预报结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9B%86%E6%88%90%E6%B0%94%E8%B1%A1%E9%A2%84%E6%8A%A5%E7%BB%93%E6%9E%9C"><span class="nav-number">1.3.3.</span> <span class="nav-text">集成气象预报结果</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93%E4%B8%8E%E5%B1%95%E6%9C%9B"><span class="nav-number">1.4.</span> <span class="nav-text">总结与展望</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%87%B4%E8%B0%A2"><span class="nav-number">1.5.</span> <span class="nav-text">致谢</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11%E6%9C%8815%E6%97%A5%E6%9B%B4%E6%96%B0"><span class="nav-number">1.6.</span> <span class="nav-text">11月15日更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">1.7.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">141</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

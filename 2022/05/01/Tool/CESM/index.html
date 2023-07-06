@@ -27,10 +27,14 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="4.5 The Four Run TypesThe environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘cont">
 <meta property="og:locale">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEpQhvl7CDXB8IRYh6Cibr7ozlc6TVZ5H77cy0SU40juomvWXJSbCZGicQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEXIz8Ayib6qfFWrcUSCEIfph4B6cmGSDwLCVPQYzuybVjbBialrmaSo5Q/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T03:20:07.177Z">
+<meta property="article:modified_time" content="2023-07-06T02:53:06.803Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/CESM/">
 
@@ -230,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-12-30 11:20:07" itemprop="dateModified" datetime="2022-12-30T11:20:07+08:00">2022-12-30</time>
+                <time title="Modified: 2023-07-06 10:53:06" itemprop="dateModified" datetime="2023-07-06T10:53:06+08:00">2023-07-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -294,6 +298,65 @@
 <p>【CESM related】</p>
 <p>Supported Grids: <a target="_blank" rel="noopener" href="http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html">http://www.cesm.ucar.edu/models/cesm1.0/cesm/cesm_doc_1_0_4/a3714.html</a></p>
 <p>【GFDL idealized model】<a target="_blank" rel="noopener" href="https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview">https://www.gfdl.noaa.gov/idealized-spectral-models-quickstart/#Overview</a></p>
+<h2 id="CESM2-运行简明教程"><a href="#CESM2-运行简明教程" class="headerlink" title="CESM2 运行简明教程"></a>CESM2 运行简明教程</h2><h3 id="一般来说CESM2运行分为以下几个步骤："><a href="#一般来说CESM2运行分为以下几个步骤：" class="headerlink" title="一般来说CESM2运行分为以下几个步骤："></a>一般来说CESM2运行分为以下几个步骤：</h3><ol>
+<li>新建case</li>
+<li>设置使用核数、跑多少年、重新提交多少次、reset文件输出频次等设置</li>
+<li>修改各个分量的namelist（可选项）</li>
+<li>修改源代码（可选项）</li>
+<li>编译与提交</li>
+</ol>
+<p>下面我将分别对以上几步进行介绍</p>
+<h4 id="1-新建case"><a href="#1-新建case" class="headerlink" title="1.新建case"></a>1.新建case</h4><p>这里假定CESM2已经成功的安装到了电脑上，且config等文件都已经在$HOME&#x2F;.cime&#x2F;路径下面配置好了，那么新建case的脚本在</p>
+<p>{CESM_HOME}&#x2F;cime&#x2F;scripts 路径下 其中{CESM_HOME}是cesm2软件根目录所在的位置，该路径下的create_newcase即为运行创建case的脚本，关于此脚本详细的使用说明可以输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./create_newcase --help</span><br></pre></td></tr></table></figure>
+
+<p>来进行查看。</p>
+<p>这里举一个示例来说明用法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./create_newcase --case test_1 --res f09_t061 --compset B1850MOM --run-unsupported --compiler intel --mach oneapi</span><br></pre></td></tr></table></figure>
+
+<p>–case 后面跟的是你给这个case所取的名字，这里我取名为test1</p>
+<p>–res 告诉脚本你想给这个case使用什么样的分辨率，CESM2里面提供了各种各样的分辨率配置，所有的分辨率及详细介绍可见CESM2.2.0 Grid Resolution Definitions (ucar.edu)常见情况是下划线前面是大气与陆面（这俩常用同一个）的格点，下划线后面是海洋的格点，这里我选用的是f09_t061，在前面的网页中搜索，结果如下，嗯大气与陆面大约是1°的分辨率，海洋分辨率大约是0.66°</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p>–compset 命令是设置使用什么样的模式组合，CESM2软件本身给我们提供了多种多样的模式配置，很多时候我们进行试验只需要其中几个分量模式运转，亦或者想让所有分量模式都参与运转。比如有时候我们希望只跑陆气耦合实验，海洋模式让它不运转，或者我们想跑全耦合实验，等等配置通过设置compset的值我们可以达到目的，正如它的全称所示：compset &#x3D; component set。详细的compset介绍可见CESM2.2.0 Component Sets Definitions (ucar.edu)。通过缩略名的首字母我们可以判断在这个compset中有哪些模式参与了工作，这里引一张官方示意图</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEpQhvl7CDXB8IRYh6Cibr7ozlc6TVZ5H77cy0SU40juomvWXJSbCZGicQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p>根据这张图，回到我们的示例，这里我们用的是B1850MOM，可知用的是全耦合的实验。如果开头是F的话，那么海洋海冰模式是不参与运转的，需要海表面的物理量了模式就会去读取现成的SST文件。</p>
+<p>–run-unsupported 的作用是：因为cesm2会给某些compsets设置“官方的”分辨率，表示这个分辨率是经过他们验证，充分可靠的，譬如FHIST的官方支持分辨率为f09_f09_mg17，但假如你就是想用f09_g17这个分辨率呢，也是可以跑。在创建case的时候不加–run-unsupported后面是会报错的。因此这个设置我理解的意思就是官方说“你小子用这个分辨率跑出来奇怪的结果可别找我，谁让你不用官方的分辨率”，哈哈开个玩笑。</p>
+<p>后面两个–compiler 与 –mach 是与你在一直模式过程中设置的config文件有关的，以–mach为例，指定了值后模式会进入~&#x2F;.cime&#x2F;config_machines.xml文件中读取与这个值相匹配的设置，并用到case的创建中，–compiler与之同理。这些应归于移植模式的设置，这里就不做讨论了。</p>
+<p>以上是关于第一步创建case的介绍，输入上述命令后如果不报错，成功出现以case名的文件夹，就说明成功了。</p>
+<h4 id="2-核数、年份等设置"><a href="#2-核数、年份等设置" class="headerlink" title="2.核数、年份等设置"></a>2.核数、年份等设置</h4><p>新建完case，那么就要开始对模式进行设置，此时模式的状态如下：</p>
+<p>因此我们要告诉模式都要让他干什么，进入新创建的case文件夹后，对变量的修改推荐使用文件夹下的.&#x2F;xmlchange与.&#x2F;xmlquery脚本</p>
+<p>这里列举几个常用到的设置示例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">./xmlchange NTASKS=-10</span><br><span class="line">./xmlchange STOP_OPTION=nyears</span><br><span class="line">./xmlchange STOP_N=2</span><br><span class="line">./xmlchange RESUBMIT=6</span><br><span class="line">./xmlchange REST_N=2</span><br><span class="line">./xmlchange REST_OPTION=nyears</span><br></pre></td></tr></table></figure>
+
+<p>下面分点对上述的命令进行讲解：</p>
+<ol>
+<li>关于核数的设置，一般cesm2在超算上跑，需要对模式使用的核数进行设置，这里我给NTASKS的值为-10，复数表示节点数，假如一个节点有28个核，那么最后我调用的总核数就是28*10&#x3D;280核。如果仅设置NTASKS的话，那么所有的分量都使用这个配置，若想对不同的分量模式给予不同的设置，可以分别设置NTASKS_ATM NTASKS_OCN等等。直接对NTASKS进行设置固然省事，但合理地对不同分量模式设置核数可以提高运算速度+节约计算时间（钱），这里推荐一篇文章里面比较详细地介绍了核数的设置，因本文旨在介绍运行的一般流程，故不做展开 CESM2 实验笔记_一株草的世界的博客-CSDN博客</li>
+<li>STOP_OPTION应该跟STOP_N配合着来看，STOP_N+STOP_OPTION告诉模式运转 X（单位），这里我给STOP_N &#x3D; 2, STOP_OPTION&#x3D;nyears，因此模式就运转两年，但如果STOP_OPTION&#x3D;nmonths，那么就是模式运行2个月，ndays就是2天。</li>
+<li>关于RESUBMIT，一般在超算上单次任务是有时间限制的，比如12个小时，超过这个值了就给你kill掉，因此我们要结合模式模拟的时间对任务进行分割并多次提交。这里我设置RESUBMIT为6，那么在模式跑完第一个2年后，模式会自动提交，接着跑两年，结束后再次自动提交，那么最终我们的模式跑了2+（6*2）&#x3D;14年。</li>
+<li>REST_N和REST_OPTION这两个量也是配合起来看的，因为模式再重新提交之后它需要读取restart文件，才可以继续往下跑。这两个设置就是设置restart文件的输出频率，这里我设置的含义即为每2年输出一次start文件。</li>
+</ol>
+<p>以上是关于模式设置几个常用到的量，但是不能覆盖所有情况，所有的量以及介绍可以在CESM2 Driver Caseroot Variable Definitions (ucar.edu)中找到。</p>
+<p>上述变量设置完毕后就可以执行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./case.setup</span><br></pre></td></tr></table></figure>
+
+<p>上述变量就被读入模式设置里了</p>
+<h4 id="3-namelist的设置"><a href="#3-namelist的设置" class="headerlink" title="3.namelist的设置"></a>3.namelist的设置</h4><p>执行上述命令以后，模式会在当前文件夹下生成下面几个文件，格式均为user_nl_ + 分量名</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEXIz8Ayib6qfFWrcUSCEIfph4B6cmGSDwLCVPQYzuybVjbBialrmaSo5Q/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p>如果不去修改这些文件，那么在编译的过程中模式会读取默认的设置，但如果你想对某些设置进行修改，那么就在这个文件下进行替换。那样的话模式在编译的过程中就会将你新给的量替换掉默认的设置。这里改哪个分量模式就去修改哪个namelist文件，譬如我要对大气模式进行修改那么就去改user_nl_cam文件</p>
+<p>官方主页有关于所有设置的介绍，这里分享链接CESM2 Component Configuration Settings (ucar.edu)</p>
+<p>譬如你想增加输出的变量，那么就在user_nl_cam文件中的空白处加一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fincl2         = &#x27;U:A&#x27;,&#x27;V:A&#x27;,&#x27;OMEGA:A&#x27;,&#x27;T:A&#x27;,&#x27;PRECT:A&#x27;,&#x27;SHFLX:A&#x27;,&#x27;LHFLX:A&#x27;,&#x27;Q:A&#x27;,&#x27;TS:A&#x27;</span><br><span class="line">nhtfrq         = 0,-24</span><br><span class="line">mfilt          = 12,1</span><br></pre></td></tr></table></figure>
+
+<p>那么模式在运行过程中输出变量就会有一组新的变量，等号右边的这些量。’:A’表示’平均的意思‘，nhtfrq意思为输出频率，负数代表“小时”，0表示“月平均”，mfilt表示一个文件里有几个时间样本。</p>
+<p>那么上述三行综合起来看就是，在我新增加的这些变量，每24小时输出一次（-24），得到的值为在这24小时内的平均值，每个文件包含1个时次。nhtfrq的0和mfilt的12是对大气模式默认的输出进行设置。后面的（-24，1）则是对应fincl2的设置。</p>
+<h4 id="4-源代码的修改"><a href="#4-源代码的修改" class="headerlink" title="4. 源代码的修改"></a>4. 源代码的修改</h4><p>有时候需要对模式进行深层次的修改，那么就需要修改源代码。模式源代码位置在{CESM_HOME}&#x2F;component下面，一般是不在这里进行模式代码的修改的。如果需要修改的话就找到相应的模式代码把它拷贝到case目录下面的SourceMods对应位置，在编译的时候就自动会将新的代码覆盖掉旧的代码了。</p>
+<h4 id="5-编译"><a href="#5-编译" class="headerlink" title="5. 编译"></a>5. 编译</h4><p>如果不需要进行源代码的修改，再进行完第三步就可以输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./case.build</span><br></pre></td></tr></table></figure>
+
+<p>进行编译了，编译成功后.&#x2F;case.submit脚本是提交运算的脚本，但如果在超算上面提交的话是需要写一个提交脚本再提交的，以上就是cesm2运行的一般流程。</p>
+<p>参考：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cesm.ucar.edu/models/cesm2/config/compsets.html">https://www.cesm.ucar.edu/models/cesm2/config/compsets.html</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_38607066/article/details/109445839">https://blog.csdn.net/qq_38607066/article/details/109445839</a></p>
 
     </div>
 
@@ -309,8 +372,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Bash/" rel="prev" title="Bash">
-      <i class="fa fa-chevron-left"></i> Bash
+    <a href="/2022/05/01/Tool/CDO%20User%20Guide.md/" rel="prev" title="CDO User Guide">
+      <i class="fa fa-chevron-left"></i> CDO User Guide
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/05/01/Tool/CDO/" rel="next" title="CDO">
@@ -374,7 +437,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-The-Four-Run-Types"><span class="nav-number">1.</span> <span class="nav-text">4.5 The Four Run Types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-Startup-Runs"><span class="nav-number">2.</span> <span class="nav-text">4.5.1 Startup Runs</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><span class="nav-number">2.1.</span> <span class="nav-text">4.5.1.1 Using Initial Conditions from within CSIM4</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><span class="nav-number">2.1.1.</span> <span class="nav-text">4.5.1.2 Using Initial Conditions from Input Data Files</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-2-Hybrid-Runs"><span class="nav-number">3.</span> <span class="nav-text">4.5.2 Hybrid Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-3-Continue-Runs"><span class="nav-number">4.</span> <span class="nav-text">4.5.3 Continue Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-4-Branch-Runs"><span class="nav-number">5.</span> <span class="nav-text">4.5.4 Branch Runs</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-The-Four-Run-Types"><span class="nav-number">1.</span> <span class="nav-text">4.5 The Four Run Types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-1-Startup-Runs"><span class="nav-number">2.</span> <span class="nav-text">4.5.1 Startup Runs</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#4-5-1-1-Using-Initial-Conditions-from-within-CSIM4"><span class="nav-number">2.1.</span> <span class="nav-text">4.5.1.1 Using Initial Conditions from within CSIM4</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#4-5-1-2-Using-Initial-Conditions-from-Input-Data-Files"><span class="nav-number">2.1.1.</span> <span class="nav-text">4.5.1.2 Using Initial Conditions from Input Data Files</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-2-Hybrid-Runs"><span class="nav-number">3.</span> <span class="nav-text">4.5.2 Hybrid Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-3-Continue-Runs"><span class="nav-number">4.</span> <span class="nav-text">4.5.3 Continue Runs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-4-Branch-Runs"><span class="nav-number">5.</span> <span class="nav-text">4.5.4 Branch Runs</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CESM2-%E8%BF%90%E8%A1%8C%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">CESM2 运行简明教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E8%88%AC%E6%9D%A5%E8%AF%B4CESM2%E8%BF%90%E8%A1%8C%E5%88%86%E4%B8%BA%E4%BB%A5%E4%B8%8B%E5%87%A0%E4%B8%AA%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">一般来说CESM2运行分为以下几个步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%96%B0%E5%BB%BAcase"><span class="nav-number">1.</span> <span class="nav-text">1.新建case</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%A0%B8%E6%95%B0%E3%80%81%E5%B9%B4%E4%BB%BD%E7%AD%89%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">2.核数、年份等设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-namelist%E7%9A%84%E8%AE%BE%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">3.namelist的设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%BA%90%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="nav-number">4.</span> <span class="nav-text">4. 源代码的修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%BC%96%E8%AF%91"><span class="nav-number">5.</span> <span class="nav-text">5. 编译</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -389,7 +452,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">139</span>
+          <span class="site-state-item-count">141</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
