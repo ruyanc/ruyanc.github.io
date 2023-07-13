@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="数值模式基础献给数值模式新手入坑前的小结 气象海洋数值基础：从0至1编写浅水方程模式 关于数值模式spin up的一些说明 大气海洋资料同化科普篇 大气模式WRF系列教程1：WRF如何得到更好的模拟结果？ WRF系列教程2：物理参数化方案 WRF系列教程3：嵌套方式总结 WRF系列教程4：WRF并行核数如何确定？ WRF系列教程5：WPS前处理的一些利器 WRF模式后处理总结 WRF后处理：模拟结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Model Tutorial">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Model%20Tutorial/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="数值模式基础献给数值模式新手入坑前的小结 气象海洋数值基础：从0至1编写浅水方程模式 关于数值模式spin up的一些说明 大气海洋资料同化科普篇 大气模式WRF系列教程1：WRF如何得到更好的模拟结果？ WRF系列教程2：物理参数化方案 WRF系列教程3：嵌套方式总结 WRF系列教程4：WRF并行核数如何确定？ WRF系列教程5：WPS前处理的一些利器 WRF模式后处理总结 WRF后处理：模拟结">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-13T10:01:42.727Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Model%20Tutorial/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Model Tutorial | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Model%20Tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail:ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Model Tutorial
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-07-13 18:01:42" itemprop="dateModified" datetime="2023-07-13T18:01:42+08:00">2023-07-13</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="数值模式基础"><a href="#数值模式基础" class="headerlink" title="数值模式基础"></a>数值模式基础</h2><p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484155&idx=1&sn=aed91cdc45d2f17aeb39992637cc43fd&chksm=fc10e7eecb676ef83a54f46a764d8037a699f8fbe1531811f52910377e22236052d5bb9eb5ff&scene=21#wechat_redirect">献给数值模式新手入坑前的小结</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484093&idx=1&sn=f9ce823403ac6d2e6568ca530c99af7c&chksm=fc10e7a8cb676ebe4d7fff8dfba9dfffa96b70f1ad9c646ba537c37d6e722897cf062c82fb19&scene=21#wechat_redirect">气象海洋数值基础：从0至1编写浅水方程模式</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485371&idx=1&sn=6fe1cb895cebce128e67906c23219960&chksm=fc10e2aecb676bb86ccb0066bb610286ffff4d1fdb4dce6e7119468a91af750443259af5b66a&scene=21#wechat_redirect">关于数值模式spin up的一些说明</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485381&idx=1&sn=38009a650bb799deba5526aae65847e9&chksm=fc10e2d0cb676bc69af784d6a44f1285620ef5bb66210a9825e14e0b39184417ba686867b0a9&scene=21#wechat_redirect">大气海洋资料同化科普篇</a></p>
+<h2 id="大气模式"><a href="#大气模式" class="headerlink" title="大气模式"></a>大气模式</h2><p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484059&idx=2&sn=810eea76db7595a0d58eecf3edd04ac4&chksm=fc10e78ecb676e981768258f271cacf637cef31625f21cb80e04e57d052160d7c9676908a97d&scene=21#wechat_redirect">WRF系列教程1：WRF如何得到更好的模拟结果？</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483960&idx=1&sn=2ab6510d01b52304ea5b4f944598b800&chksm=fc10e72dcb676e3b837d35c021d5242eabd10622958413ea309dbc589e48ba97b3d231c9a57e&scene=21#wechat_redirect">WRF系列教程2：物理参数化方案</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483982&idx=1&sn=825037c8a43c60229d526ed6b34d6701&chksm=fc10e75bcb676e4d6dce9885b31c48ec32abe7c504c90f869bf9f1cd563224e0a201140c5be1&scene=21#wechat_redirect">WRF系列教程3：嵌套方式总结</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484079&idx=2&sn=1893e47637d79f2fe522df649eba5141&chksm=fc10e7bacb676eac0e41bdf0ab49ce284643a19296e9db4b9a7d0417b421b8047fe5023ab63b&scene=21#wechat_redirect">WRF系列教程4：WRF并行核数如何确定？</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484274&idx=1&sn=61b3d7fc2b91e0fedc3710c83a89975f&chksm=fc10e667cb676f7140ff134650db9e21ce3b0d3ac786fafc7192047aaf326c6d3336ca3ff438&scene=21#wechat_redirect">WRF系列教程5：WPS前处理的一些利器</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484678&idx=1&sn=0c8b89bff1bebcb884f60c053e47473a&chksm=fc10e013cb6769059f7f350a3fa7d19c064e769ff06c6e5c916625c7a4ad2c0550ef6007d990&scene=21#wechat_redirect">WRF模式后处理总结</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483963&idx=1&sn=772e591cd1740192da23f92ebdd49a50&chksm=fc10e72ecb676e38e50712109be0a497d280c1d9ea6ec1eedccebd2636eb888a5e847206777c&scene=21#wechat_redirect">WRF后处理：模拟结果插值到站点(python版)</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483820&idx=1&sn=8fc18006f70e99d74c3cde2b6acf93b4&chksm=fc10e4b9cb676daf516361bf430dda5ca62af488fad91632007cb72d662a2b41722b79235b8e&scene=21#wechat_redirect">WRF后处理：模拟结果插值到站点</a>(ncl)</p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483937&idx=1&sn=2956e28fa71d9160c43ae235bf4b411f&chksm=fc10e734cb676e226411f97e3c1377888ae9864ef6a9a9a358c22254a58c2477705c5c56f104&scene=21#wechat_redirect">WRF后处理：WRF风旋转到地球相对坐标</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483897&idx=2&sn=fc4324f708204859795f29621b3b360b&chksm=fc10e4eccb676dfa089f47e67da1f85066ed429e168720af999eb08a6b6e3efd397092e58fa5&scene=21#wechat_redirect">WRF后处理：降雨量的说明以及降雨的绘制</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483786&idx=1&sn=49de4aa0fb4ce2551fa029435adfbe5b&chksm=fc10e49fcb676d894f04ae32867e5d3155b7af713a1148f2c3456c08c85760a23856c93544d7&scene=21#wechat_redirect">WRF模式使用NetCDF压缩格式，节约存储空间</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483752&idx=1&sn=0ddea58c505eacae7764441dcbe71f06&chksm=fc10e47dcb676d6b5aae41289b80371a5b950e6c500b5d0c63698ca42b25e339aed120e13ede&scene=21#wechat_redirect">WRF中使用SRTM高分辨率的地形资料</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483672&idx=1&sn=bcad424f8ee7d7ab9a9a6db2a61c4fe1&chksm=fc10e40dcb676d1ba7005cdcdcae166440244bbd28bc957021f5fe5aac4bf5d0cef796561b35&scene=21#wechat_redirect">WRF模式安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483849&idx=2&sn=d566cb9787c0adf67c80dc96f1987616&chksm=fc10e4dccb676dca13426afa2cfb2a1455c78ce9dc45cf0482ad70b8f672206e198193dbf489&scene=21#wechat_redirect">WRFChem的安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484568&idx=1&sn=997ec690da99f1f09ff9c199d1e5645f&chksm=fc10e18dcb67689bbad6c41747b92cb8bd5a846e65363350df370150696844f5834fd9a92306&scene=21#wechat_redirect">WRF模式预报冰雹</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484456&idx=1&sn=17aa1108851236f49598291d1565d105&chksm=fc10e13dcb67682b7ae6ad88524dd909b650d10bb123c455374139a1b0c9996e903664b6a64e&scene=21#wechat_redirect">光伏发电预测——WRF-Solar</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484062&idx=1&sn=43bb2ca88d1ffd9eef00b4cf8c7e84ab&chksm=fc10e78bcb676e9de3206d4aac0624bca95517f3e03c12cdc4babf637c6ddff66d825263bebf&scene=21#wechat_redirect">MPAS-A模式的介绍</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485315&idx=1&sn=0ba31e383472cc7f9d25790144095d93&chksm=fc10e296cb676b80909ae5b404301f21a54500ce210d67124b79e7162f67e6d0702a7e6cf503&scene=21#wechat_redirect">MPAS-A模式的安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485339&idx=1&sn=6ba5d8ca0490e4e6be509baf3e0f5f75&chksm=fc10e28ecb676b989f6f096a3936cd61f0fe102ead15314fb84491e5f13cab0565ca9eae0d2f&scene=21#wechat_redirect">MPAS-A模式的运行</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483791&idx=1&sn=242d4a8d922ef48d4666db101a4a98bc&chksm=fc10e49acb676d8c2e4a86ebaa3deb61113f1bb8f25f98712696c6457a625f2c59b09276a2fe&scene=21#wechat_redirect">MPAS模式后处理，寻找距离观测站点最近的网格点</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484323&idx=1&sn=27f20756e34d74da9eb8675dd745f274&chksm=fc10e6b6cb676fa02e705a68334219b2b09b72173f2981953e9cba09451a46da99323d22f9cc&scene=21#wechat_redirect">大涡模拟，你还可以选择这个模式</a>（PALM）</p>
+<h2 id="海洋模式"><a href="#海洋模式" class="headerlink" title="海洋模式"></a>海洋模式</h2><p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483830&idx=1&sn=9af1c5ffbf723d3b9e8b492596ecd759&chksm=fc10e4a3cb676db5385f7cf1bbb6aa9acd8df0aa67229c9c6ae7d2e7dbd6ab3d43ff41f2f2b8&scene=21#wechat_redirect">POM海洋模式简介、安装和运行</a></p>
+<p>COAWST耦合模式介绍及其安装</p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484616&idx=3&sn=957114539ac4135fe0e5db295fac7c10&chksm=fc10e1ddcb6768cb824e17493b4f9752b21fde2d7969b0d95ec68f0267d5a8562649cab63062&scene=21#wechat_redirect">ROMS区域海洋模式的安装和运行</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484784&idx=1&sn=9d8c74d3321001a3524b9ec83a3d8810&chksm=fc10e065cb6769731b5c0beea9ccd0afc04bfe8877214027f6017e2f1f1f917b3288d19c852b&scene=21#wechat_redirect">但愿每个人都能感受到不用装环境就能跑ROMS模式的快乐</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484125&idx=3&sn=4cf958f74807d08065827bb2482b57e7&chksm=fc10e7c8cb676ede4ed0927a72bf398155491577c4e053b0df064998d37ccbdcde9f6b94cfbf&scene=21#wechat_redirect">SWAN海浪模式介绍及其安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484383&idx=4&sn=0c35d2ff3255bd2c6ecc9fcdbf118d15&chksm=fc10e6cacb676fdc5b4f30e1b69968ddbe6a33df9fc475df27c0afd7ac0a086216389690a7e0&scene=21#wechat_redirect">ADCIRC模式简介和安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485062&idx=3&sn=44be53fded41337b11f94ad2c055556d&chksm=fc10e393cb676a851d6a8381f4efd9cf672d835d035ca1d24c92d2739ec7d67d935b5dfbfc91&scene=21#wechat_redirect">ADCIRC模式架构</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485032&idx=1&sn=bb121e8c5be1a7e38ace53cc447499ac&chksm=fc10e37dcb676a6bbbd514b859867857ef782805ec64fd104e93c9711304f8e60a6b3577f86b&scene=21#wechat_redirect">ADCIRC专题| 网格文件解读与制作方法</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485062&idx=1&sn=bddf970174824a9bf41f31209cc7ab63&chksm=fc10e393cb676a851f3289c5aa1569537479bd8621ecb1c43f524be993db4ef708cd34484133&scene=21#wechat_redirect">ADCIRC专题2| 常用文件格式说明</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485032&idx=3&sn=bf1bff4da7d12f158c803eab52b11f47&chksm=fc10e37dcb676a6bee0b4f5eee8cf3c714ab004d31f2f24ec54f8648f433f42fa713d23d03b7&scene=21#wechat_redirect">ADCIRC模式运行—控制文件说明</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485331&idx=1&sn=b170261955e07f8ae4167a230680a2e3&chksm=fc10e286cb676b9054c9b25486722216de4e1b5ce2ae1151232b81269ba28b92c6383a49caab&scene=21#wechat_redirect">ADCIRC | 属性文件fort13的介绍与制作方法</a></p>
+<p><strong>资料同化</strong></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483836&idx=2&sn=4a2b9127816919daf9fae60539c43f6f&chksm=fc10e4a9cb676dbfb7d4bd0a08636ba78c8ab40c43480f9998cf2d911dfcaa067265b57e78a5&scene=21#wechat_redirect">同化，你从哪里来，要到哪里去</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483882&idx=1&sn=906a8b051d2bff15abe20dd2b16ab1b1&chksm=fc10e4ffcb676de971870191d718fc9ebd6b65caec1c76ef8dd7cb68949909722de5b89586bb&scene=21#wechat_redirect">资料同化简介和WRFDA的安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483897&idx=1&sn=5a03fc2d628c7878fd46bd04ba3711d1&chksm=fc10e4eccb676dfa0a41def9c39579c845a6c2663adb1fd1269937c75f2bc3700237a0a80d66&scene=21#wechat_redirect">资料同化简介及GSI的安装</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484684&idx=1&sn=fe4d488837ffb25f37b5c8b8b085ed1d&chksm=fc10e019cb67690f464d04be554c1e3f835816f7c9825127768aacaab3dc4da1df2bc2608634&scene=21#wechat_redirect">WRFDA教程：三维变分同化</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484767&idx=1&sn=35ede4d8fca5491554f3396d27f56795&chksm=fc10e04acb67695cd61438fe5e66721ae1f73ad7e88c9a17fea1a553de4f4f8bc520d7553eb5&scene=21#wechat_redirect">WRFDA教程：四维变分同化</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484816&idx=1&sn=62277cc1054b5c64f7c08e83440d60e7&chksm=fc10e085cb6769935b164bb055ef602f3ef6b0fce2457f4346773485d096e53a2b74041db9a3&scene=21#wechat_redirect">WRFDA教程：3DVar同化卫星辐射率资料</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247485074&idx=1&sn=58f789a2016f0371a9e7987b106191f8&chksm=fc10e387cb676a912a8c299231ab9883aaf30b29ca2eb1d71ce146ef22dc89d7d1d87b16f1ee&scene=21#wechat_redirect">WRFDA教程：背景误差的介绍以及gen_be生成背景误差</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484303&idx=2&sn=c260ff286fb379b2204cecb23f5cb43e&chksm=fc10e69acb676f8c40864f74c7d7214dac0629e3976caf892ef12966d4565fd2ac3df430a745&scene=21#wechat_redirect">python实现逐步订正法</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484263&idx=4&sn=41198d3f640a97e37aaa04deb849d490&chksm=fc10e672cb676f64bd9f94a411203643fefae7df8f697410032a433f96c55f048fe080ff749d&scene=21#wechat_redirect">WRFDA的Little R格式介绍</a></p>
+<p><strong>人工智能</strong></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484616&idx=2&sn=87b91b63a0412a5c0ec40e097dfcf53e&chksm=fc10e1ddcb6768cb9b95047ba708749ea9c8f3e91703e8fc5e6c55814bc0925afd22ae26d086&scene=21#wechat_redirect">深度学习降尺度技术</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484432&idx=1&sn=b4d5e55e0b76031d1779840c8edd90ed&chksm=fc10e105cb6768139488303727a721c2d8ec6c08b0e585563c721cce0bfb567500e5ac65cd6e&scene=21#wechat_redirect">PINN——加入物理约束的神经网络</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247484417&idx=4&sn=06b0aab1b25faa35c1d68d5ad717d090&chksm=fc10e114cb676802f7a5816ec4ba14a44e1054c4e2b620d91215cbc91ccc0e8b15c3d51f18f5&scene=21#wechat_redirect">AI订正CMA台风预报，“烟花”预报误差降低80%以上</a></p>
+<p><a target="_blank" rel="noopener" href="http://mp.weixin.qq.com/s?__biz=MzU1OTgwNTU2Mg==&mid=2247483890&idx=2&sn=20536eeb859190aad45ee9db0e9e089c&chksm=fc10e4e7cb676df136b9da2ec4fbea26ec229e5b9bc3f40da7075ac9d8667ee30cd8d9edd4d2&scene=21#wechat_redirect">BP神经网络进行分类任务</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Mac%20convert%20picture/" rel="prev" title="Mac convert picture">
+      <i class="fa fa-chevron-left"></i> Mac convert picture
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Linux/" rel="next" title="Linux">
+      Linux <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E5%80%BC%E6%A8%A1%E5%BC%8F%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">数值模式基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E6%B0%94%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">大气模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%B7%E6%B4%8B%E6%A8%A1%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">海洋模式</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail:ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">146</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
