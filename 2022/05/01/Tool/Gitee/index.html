@@ -29,8 +29,11 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://p.ipic.vip/6v3arg.jpg">
 <meta property="og:image" content="https://p.ipic.vip/v3fsco.jpg">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/1163452910422880/l">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/1163453163108928/l">
+<meta property="og:image" content="https://www.liaoxuefeng.com/files/attachments/1163453517527296/l">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-15T09:22:46.026Z">
+<meta property="article:modified_time" content="2023-09-07T03:32:54.134Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p.ipic.vip/6v3arg.jpg">
@@ -233,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-15 17:22:46" itemprop="dateModified" datetime="2023-03-15T17:22:46+08:00">2023-03-15</time>
+                <time title="Modified: 2023-09-07 11:32:54" itemprop="dateModified" datetime="2023-09-07T11:32:54+08:00">2023-09-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -291,6 +294,66 @@
 
 
 
+<h3 id="廖雪峰教程"><a href="#廖雪峰教程" class="headerlink" title="廖雪峰教程"></a>廖雪峰教程</h3><p>使用GitHub时，国内的用户经常遇到的问题是访问速度太慢，有时候还会出现无法连接的情况（原因你懂的）。</p>
+<p>如果我们希望体验Git飞一般的速度，可以使用国内的Git托管服务——<a target="_blank" rel="noopener" href="https://gitee.com/?utm_source=blog_lxf">Gitee</a>（<a target="_blank" rel="noopener" href="https://gitee.com/?utm_source=blog_lxf">gitee.com</a>）。</p>
+<p>和GitHub相比，Gitee也提供免费的Git仓库。此外，还集成了代码质量检测、项目演示等功能。对于团队协作开发，Gitee还提供了项目管理、代码托管、文档管理的服务，5人以下小团队免费。</p>
+<p> Gitee的免费版本也提供私有库功能，只是有5人的成员上限。</p>
+<p>使用Gitee和使用GitHub类似，我们在Gitee上注册账号并登录后，需要先上传自己的SSH公钥。选择右上角用户头像 -&gt; 菜单“修改资料”，然后选择“SSH公钥”，填写一个便于识别的标题，然后把用户主目录下的<code>.ssh/id_rsa.pub</code>文件的内容粘贴进去：</p>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/1163452910422880/l" alt="gitee-add-ssh-key"></p>
+<p>点击“确定”即可完成并看到刚才添加的Key：</p>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/1163453163108928/l" alt="gitee-key"></p>
+<p>如果我们已经有了一个本地的git仓库（例如，一个名为learngit的本地库），如何把它关联到Gitee的远程库上呢？</p>
+<p>首先，我们在Gitee上创建一个新的项目，选择右上角用户头像 -&gt; 菜单“控制面板”，然后点击“创建项目”：</p>
+<p><img src="https://www.liaoxuefeng.com/files/attachments/1163453517527296/l" alt="gitee-new-repo"></p>
+<p>项目名称最好与本地库保持一致：</p>
+<p>然后，我们在本地库上使用命令<code>git remote add</code>把它和Gitee的远程库关联：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@gitee.com:liaoxuefeng/learngit.git</span><br></pre></td></tr></table></figure>
+
+<p>之后，就可以正常地用<code>git push</code>和<code>git pull</code>推送了！</p>
+<p>如果在使用命令<code>git remote add</code>时报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@gitee.com:liaoxuefeng/learngit.git</span><br><span class="line">fatal: remote origin already exists.</span><br></pre></td></tr></table></figure>
+
+<p>这说明本地库已经关联了一个名叫<code>origin</code>的远程库，此时，可以先用<code>git remote -v</code>查看远程库信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin	git@github.com:michaelliao/learngit.git (fetch)</span><br><span class="line">origin	git@github.com:michaelliao/learngit.git (push)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，本地库已经关联了<code>origin</code>的远程库，并且，该远程库指向GitHub。</p>
+<p>我们可以删除已有的GitHub远程库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>再关联Gitee的远程库（注意路径中需要填写正确的用户名）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@gitee.com:liaoxuefeng/learngit.git</span><br></pre></td></tr></table></figure>
+
+<p>此时，我们再查看远程库信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin	git@gitee.com:liaoxuefeng/learngit.git (fetch)</span><br><span class="line">origin	git@gitee.com:liaoxuefeng/learngit.git (push)</span><br></pre></td></tr></table></figure>
+
+<p>现在可以看到，origin已经被关联到Gitee的远程库了。通过<code>git push</code>命令就可以把本地库推送到Gitee上。</p>
+<p>有的小伙伴又要问了，一个本地库能不能既关联GitHub，又关联Gitee呢？</p>
+<p>答案是肯定的，因为git本身是分布式版本控制系统，可以同步到另外一个远程库，当然也可以同步到另外两个远程库。</p>
+<p>使用多个远程库时，我们要注意，git给远程库起的默认名称是<code>origin</code>，如果有多个远程库，我们需要用不同的名称来标识不同的远程库。</p>
+<p>仍然以<code>learngit</code>本地库为例，我们先删除已关联的名为<code>origin</code>的远程库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin</span><br></pre></td></tr></table></figure>
+
+<p>然后，先关联GitHub的远程库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add github git@github.com:michaelliao/learngit.git</span><br></pre></td></tr></table></figure>
+
+<p>注意，远程库的名称叫<code>github</code>，不叫<code>origin</code>了。</p>
+<p>接着，再关联Gitee的远程库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add gitee git@gitee.com:liaoxuefeng/learngit.git</span><br></pre></td></tr></table></figure>
+
+<p>同样注意，远程库的名称叫<code>gitee</code>，不叫<code>origin</code>。</p>
+<p>现在，我们用<code>git remote -v</code>查看远程库信息，可以看到两个远程库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">gitee	git@gitee.com:liaoxuefeng/learngit.git (fetch)</span><br><span class="line">gitee	git@gitee.com:liaoxuefeng/learngit.git (push)</span><br><span class="line">github	git@github.com:michaelliao/learngit.git (fetch)</span><br><span class="line">github	git@github.com:michaelliao/learngit.git (push)</span><br></pre></td></tr></table></figure>
+
+<p>如果要推送到GitHub，使用命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push github master</span><br></pre></td></tr></table></figure>
+
+<p>如果要推送到Gitee，使用命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push gitee master</span><br></pre></td></tr></table></figure>
+
+<p>这样一来，我们的本地库就可以同时与多个远程库互相同步：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">┌─────────┐ ┌─────────┐</span><br><span class="line">│ GitHub  │ │  Gitee  │</span><br><span class="line">└─────────┘ └─────────┘</span><br><span class="line">     ▲           ▲</span><br><span class="line">     └─────┬─────┘</span><br><span class="line">           │</span><br><span class="line">    ┌─────────────┐</span><br><span class="line">    │ Local Repo  │</span><br><span class="line">    └─────────────┘</span><br></pre></td></tr></table></figure>
+
+<p>Gitee也同样提供了Pull request功能，可以让其他小伙伴参与到开源项目中来。你可以通过Fork我的仓库：<a target="_blank" rel="noopener" href="https://gitee.com/liaoxuefeng/learngit?utm_source=blog_lxf">https://gitee.com/liaoxuefeng/learngit</a>，创建一个<code>your-gitee-id.txt</code>的文本文件， 写点自己学习Git的心得，然后推送一个pull request给我，这个仓库会在Gitee和GitHub做双向同步。</p>
 
     </div>
 
@@ -306,12 +369,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Hexo/" rel="prev" title="Hexo">
-      <i class="fa fa-chevron-left"></i> Hexo
+    <a href="/2022/05/01/Tool/LaTex%20Sheet/" rel="prev" title="LaTex Sheet">
+      <i class="fa fa-chevron-left"></i> LaTex Sheet
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/How%20to%20publish%20a%20paper/" rel="next" title="How to publish a paper">
-      How to publish a paper <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Git/" rel="next" title="Git">
+      Git <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -371,7 +434,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#remote%EF%BC%9APlease-remove-the-file-from-history-and-try-again-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%B6%85%E5%87%BA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">remote：Please remove the file from history and try again. 上传文件超出远程仓库的限制</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#remote%EF%BC%9APlease-remove-the-file-from-history-and-try-again-%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E8%B6%85%E5%87%BA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-number">1.</span> <span class="nav-text">remote：Please remove the file from history and try again. 上传文件超出远程仓库的限制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BB%96%E9%9B%AA%E5%B3%B0%E6%95%99%E7%A8%8B"><span class="nav-number"></span> <span class="nav-text">廖雪峰教程</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -386,7 +449,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">158</span>
+          <span class="site-state-item-count">159</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
