@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="ONNX来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;346511883 背景最近看了一些ONNX的资料，一个最大的感受就是这些资料太凌乱了。大多数都是在介绍ONNX模型转换中碰到的坑点以及解决办法。很少有文章可以系统的介绍ONNX的背景，分析ONNX格式，ONNX简化方法等。所以，综合了相当多资料之后我准备写一篇ONNX相关的文章，希望对大家有用。 什么是ONNX？简单描述一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ONNX">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/ONNX/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="ONNX来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;346511883 背景最近看了一些ONNX的资料，一个最大的感受就是这些资料太凌乱了。大多数都是在介绍ONNX模型转换中碰到的坑点以及解决办法。很少有文章可以系统的介绍ONNX的背景，分析ONNX格式，ONNX简化方法等。所以，综合了相当多资料之后我准备写一篇ONNX相关的文章，希望对大家有用。 什么是ONNX？简单描述一下">
+<meta property="og:locale">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-d21635b818ed67dfdb4c834324fa1555_720w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-d584a5cd1163cbc5ba6a57b7aef90ba5_720w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-59b6de77babbecfaca6012c65cd69b93_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-fc50aae30dd42d3400afc8abaaf2d53d_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-ef7f09be65cba35cc650207fcd634e91_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-f45877b180ef5009b816e33bc06ab218_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-0c91ffed282154a0efd1652dd2c3d345_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-4b9f5715724fc4e71ab6258141a97280_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-3661ffbff61c92adb5cf8c3450d63470_1440w.webp">
+<meta property="og:image" content="https://pic3.zhimg.com/80/v2-60f8e0f3a994296088a696a4843de5ae_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-3728342cdb46d90a008f5461dae6be28_1440w.webp">
+<meta property="og:image" content="https://pic1.zhimg.com/80/v2-88f078117c8ff35e463ec0b721afb32c_1440w.webp">
+<meta property="og:image" content="https://pic4.zhimg.com/80/v2-446a54d3fd16a234e84b175d3f108a4f_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-2c92bcb71347a94f88185d7c4876ed29_1440w.webp">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-61bf577d7254130a736e7bd9bea1bc45_1440w.webp">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-09-07T09:01:44.368Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-d21635b818ed67dfdb4c834324fa1555_720w.webp">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/ONNX/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>ONNX | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/ONNX/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          ONNX
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-09-07 17:01:44" itemprop="dateModified" datetime="2023-09-07T17:01:44+08:00">2023-09-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="ONNX"><a href="#ONNX" class="headerlink" title="ONNX"></a>ONNX</h2><p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/346511883">https://zhuanlan.zhihu.com/p/346511883</a></p>
+<h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>最近看了一些ONNX的资料，一个最大的感受就是这些资料太凌乱了。大多数都是在介绍ONNX模型转换中碰到的坑点以及解决办法。很少有文章可以系统的介绍ONNX的背景，分析ONNX格式，ONNX简化方法等。所以，综合了相当多资料之后我准备写一篇ONNX相关的文章，希望对大家有用。</p>
+<h3 id="什么是ONNX？"><a href="#什么是ONNX？" class="headerlink" title="什么是ONNX？"></a>什么是ONNX？</h3><p>简单描述一下官方介绍，开放神经网络交换（Open Neural Network Exchange）简称ONNX是微软和Facebook提出用来表示深度学习模型的<strong>开放</strong>格式。所谓开放就是ONNX定义了一组和环境，平台均无关的标准格式，来增强各种AI模型的可交互性。</p>
+<p>换句话说，无论你使用何种训练框架训练模型（比如TensorFlow&#x2F;Pytorch&#x2F;OneFlow&#x2F;Paddle），在训练完毕后你都可以将这些框架的模型统一转换为ONNX这种统一的格式进行存储。注意ONNX文件不仅仅存储了神经网络模型的权重，同时也存储了模型的结构信息以及网络中每一层的输入输出和一些其它的辅助信息。我们直接从onnx的官方模型仓库拉一个yolov3-tiny的onnx模型（地址为：<code>https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov3/model</code>）用Netron可视化一下看看ONNX模型长什么样子。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-d21635b818ed67dfdb4c834324fa1555_720w.webp" alt="img"></p>
+<p>yolov3-tiny onnx的可视化结果</p>
+<p>这里我们可以看到ONNX的版本信息，这个ONNX模型是由Keras导出来的，以及模型的输入输出等信息，如果你对模型的输入输出有疑问可以直接看：<code>https://github.com/onnx/models/blob/master/vision/object_detection_segmentation/tiny-yolov3/README.md</code>。</p>
+<p>在获得ONNX模型之后，模型部署人员自然就可以将这个模型部署到兼容ONNX的运行环境中去。这里一般还会设计到额外的模型转换工作，典型的比如在Android端利用NCNN部署ONNX格式模型，那么就需要将ONNX利用NCNN的转换工具转换到NCNN所支持的<code>bin</code>和<code>param</code>格式。</p>
+<p>但在实际使用ONNX的过程中，大多数人对ONNX了解得并不多，仅仅认为它只是一个完成模型转换和部署工具人而已，我们可以利用它完成模型转换和部署。正是因为对ONNX的不了解，在模型转换过程中出现的各种不兼容或者不支持让很多人浪费了大量时间。这篇文章将从理论和实践2个方面谈一谈ONNX。</p>
+<h3 id="ProtoBuf-简介"><a href="#ProtoBuf-简介" class="headerlink" title="ProtoBuf 简介"></a>ProtoBuf 简介</h3><p>在分析ONNX组织格式前我们需要了解Protobuf, 如果你比较了解Protobuf可以略过此节。 ONNX作为一个文件格式，我们自然需要一定的规则去读取我们想要的信息或者是写入我们需要保存信息。ONNX使用的是Protobuf这个序列化数据结构去存储神经网络的权重信息。熟悉Caffe或者Caffe2的同学应该知道，它们的模型存储数据结构协议也是Protobuf。这个从安装ONNX包的时候也可以看到：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-d584a5cd1163cbc5ba6a57b7aef90ba5_720w.webp" alt="img"></p>
+<p>安装onnx时依赖了protobuf</p>
+<p>Protobuf是一种轻便高效的结构化数据存储格式，可以用于结构化数据串行化，或者说序列化。它很适合做数据存储或数据交换格式。可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。目前提供了 C++、Java、Python 三种语言的 API（摘自官方介绍）。</p>
+<p>Protobuf协议是一个以<code>*.proto</code>后缀文件为基础的，这个文件描述了用户自定义的数据结构。如果需要了解更多细节请参考0x7节的资料3，这里只是想表达ONNX是基于Protobuf来做数据存储和传输，那么自然<code>onnx.proto</code>就是ONNX格式文件了，接下来我们就分析一下ONNX格式。</p>
+<h3 id="ONNX-格式分析"><a href="#ONNX-格式分析" class="headerlink" title="ONNX 格式分析"></a>ONNX 格式分析</h3><p>这一节我们来分析一下ONNX的组织格式，上面提到ONNX中最核心的部分就是<code>onnx.proto</code>（<code>https://github.com/onnx/onnx/blob/master/onnx/onnx.proto</code>）这个文件了，它定义了ONNX这个数据协议的规则和一些其它信息。现在是2021年1月，这个文件有700多行，我们没有必要把这个文件里面的每一行都贴出来，我们只要搞清楚里面的核心部分即可。在这个文件里面以<code>message</code>关键字开头的对象是我们需要关心的。我们列一下最核心的几个对象并解释一下它们之间的关系。</p>
+<ul>
+<li><code>ModelProto</code></li>
+<li><code>GraphProto</code></li>
+<li><code>NodeProto</code></li>
+<li><code>ValueInfoProto</code></li>
+<li><code>TensorProto</code></li>
+<li><code>AttributeProto</code></li>
+</ul>
+<p>当我们加载了一个ONNX之后，我们获得的就是一个<code>ModelProto</code>，它包含了一些版本信息，生产者信息和一个<code>GraphProto</code>。在<code>GraphProto</code>里面又包含了四个<code>repeated</code>数组，它们分别是<code>node</code>(<code>NodeProto</code>类型)，<code>input</code>(<code>ValueInfoProto</code>类型)，<code>output</code>(<code>ValueInfoProto</code>类型)和<code>initializer</code>(<code>TensorProto</code>类型)，其中<code>node</code>中存放了模型中所有的计算节点，<code>input</code>存放了模型的输入节点，<code>output</code>存放了模型中所有的输出节点，<code>initializer</code>存放了模型的所有权重参数。</p>
+<p>我们知道要完整的表达一个神经网络，不仅仅要知道网络的各个节点信息，还要知道它们的拓扑关系。这个拓扑关系在ONNX中是如何表示的呢？ONNX的每个计算节点都会有<code>input</code>和<code>output</code>两个数组，这两个数组是string类型，通过<code>input</code>和<code>output</code>的指向关系，我们就可以利用上述信息快速构建出一个深度学习模型的拓扑图。这里要注意一下，<code>GraphProto</code>中的<code>input</code>数组不仅包含我们一般理解中的图片输入的那个节点，还包含了模型中所有的权重。例如，<code>Conv</code>层里面的<code>W</code>权重实体是保存在<code>initializer</code>中的，那么相应的会有一个同名的输入在<code>input</code>中，其背后的逻辑应该是把权重也看成模型的输入，并通过<code>initializer</code>中的权重实体来对这个输入做初始化，即一个赋值的过程。</p>
+<p>最后，每个计算节点中还包含了一个<code>AttributeProto</code>数组，用来描述该节点的属性，比如<code>Conv</code>节点或者说卷积层的属性包含<code>group</code>，<code>pad</code>，<code>strides</code>等等，每一个计算节点的属性，输入输出信息都详细记录在<code>https://github.com/onnx/onnx/blob/master/docs/Operators.md</code>。</p>
+<h3 id="onnx-helper"><a href="#onnx-helper" class="headerlink" title="onnx.helper"></a>onnx.helper</h3><p>现在我们知道ONNX是把一个网络的每一层或者说一个算子当成节点<code>node</code>，使用这些<code>Node</code>去构建一个<code>Graph</code>，即一个网络。最后将<code>Graph</code>和其它的生产者信息，版本信息等合并在一起生成一个<code>Model</code>，也即是最终的ONNX模型文件。 在构建ONNX模型的时候，<code>https://github.com/onnx/onnx/blob/master/onnx/helper.py</code>这个文件非常重要，我们可以利用它提供的<code>make_node</code>，<code>make_graph</code>，<code>make_tensor</code>等等接口完成一个ONNX模型的构建，一个示例如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">import onnx</span><br><span class="line">from onnx import helper</span><br><span class="line">from onnx import AttributeProto, TensorProto, GraphProto</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># The protobuf definition can be found here:</span><br><span class="line"># https://github.com/onnx/onnx/blob/master/onnx/onnx.proto</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Create one input (ValueInfoProto)</span><br><span class="line">X = helper.make_tensor_value_info(&#x27;X&#x27;, TensorProto.FLOAT, [3, 2])</span><br><span class="line">pads = helper.make_tensor_value_info(&#x27;pads&#x27;, TensorProto.FLOAT, [1, 4])</span><br><span class="line"></span><br><span class="line">value = helper.make_tensor_value_info(&#x27;value&#x27;, AttributeProto.FLOAT, [1])</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Create one output (ValueInfoProto)</span><br><span class="line">Y = helper.make_tensor_value_info(&#x27;Y&#x27;, TensorProto.FLOAT, [3, 4])</span><br><span class="line"></span><br><span class="line"># Create a node (NodeProto) - This is based on Pad-11</span><br><span class="line">node_def = helper.make_node(</span><br><span class="line">    &#x27;Pad&#x27;, # node name</span><br><span class="line">    [&#x27;X&#x27;, &#x27;pads&#x27;, &#x27;value&#x27;], # inputs</span><br><span class="line">    [&#x27;Y&#x27;], # outputs</span><br><span class="line">    mode=&#x27;constant&#x27;, # attributes</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># Create the graph (GraphProto)</span><br><span class="line">graph_def = helper.make_graph(</span><br><span class="line">    [node_def],</span><br><span class="line">    &#x27;test-model&#x27;,</span><br><span class="line">    [X, pads, value],</span><br><span class="line">    [Y],</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># Create the model (ModelProto)</span><br><span class="line">model_def = helper.make_model(graph_def, producer_name=&#x27;onnx-example&#x27;)</span><br><span class="line"></span><br><span class="line">print(&#x27;The model is:\n&#123;&#125;&#x27;.format(model_def))</span><br><span class="line">onnx.checker.check_model(model_def)</span><br><span class="line">print(&#x27;The model is checked!&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>这个官方示例为我们演示了如何使用<code>onnx.helper</code>的<code>make_tensor</code>，<code>make_tensor_value_info</code>，<code>make_attribute</code>，<code>make_node</code>，<code>make_graph</code>，<code>make_node</code>等方法来完整构建了一个ONNX模型。需要注意的是在上面的例子中，输入数据是一个一维Tensor，初始维度为<code>[2]</code>，这也是为什么经过维度为<code>[1,4]</code>的Pad操作之后获得的输出Tensor维度为<code>[3,4]</code>。另外由于Pad操作是没有带任何权重信息的，所以当你打印ONNX模型时，<code>ModelProto</code>的<code>GraphProto</code>是没有<code>initializer</code>这个属性的。</p>
+<h3 id="onnx-simplifie"><a href="#onnx-simplifie" class="headerlink" title="onnx-simplifie"></a>onnx-simplifie</h3><p>原本这里是要总结一些使用ONNX进行模型部署经常碰到一些因为版本兼容性，或者各种框架OP没有对齐等原因导致的各种BUG。但是这样会显得文章很长，所以这里以一个经典的Pytorch转ONNX的reshape问题为例子，来尝试讲解一下大老师的onnx-simplifier是怎么处理的，个人认为这个问题是基于ONNX进行模型部署最经典的问题。希望在解决这个问题的过程中大家能有所收获。</p>
+<p>问题发生在当我们想把下面这段代码导出ONNX模型时：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import torch</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class JustReshape(torch.nn.Module):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        super(JustReshape, self).__init__()</span><br><span class="line"></span><br><span class="line">    def forward(self, x):</span><br><span class="line">        return x.view((x.shape[0], x.shape[1], x.shape[3], x.shape[2]))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">net = JustReshape()</span><br><span class="line">model_name = &#x27;just_reshape.onnx&#x27;</span><br><span class="line">dummy_input = torch.randn(2, 3, 4, 5)</span><br><span class="line">torch.onnx.export(net, dummy_input, model_name, input_names=[&#x27;input&#x27;], output_names=[&#x27;output&#x27;])</span><br></pre></td></tr></table></figure>
+
+<p>由于这个模型输入维度是固定的，所以我们期望模型是这样的：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-59b6de77babbecfaca6012c65cd69b93_1440w.webp" alt="img"></p>
+<p>我们期待的ONNX模型</p>
+<p>但是，即使使用了ONNX的<code>polished</code>工具也只能获得下面的模型：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-fc50aae30dd42d3400afc8abaaf2d53d_1440w.webp" alt="img"></p>
+<p>实际上转出来的ONNX模型</p>
+<p>要解决这个问题，有两种方法，第一种是做一个强制类型转换，将<code>x.shape[0]</code>类似的变量强制转换为常量即<code>int(x.shape[0])</code>，或者使用大老师的onnx-simplifer来解决这一问题。</p>
+<p>之前一直好奇onnx-simplifer是怎么做的，最近对ONNX有了一些理解之后也能逐步看懂做法了。我来尝试解释一下。onnx-simplifer的核心思路就是利用onnxruntime推断一遍ONNX的计算图，然后使用常量输出替代冗余的运算OP。主体代码为：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">def simplify(model: Union[str, onnx.ModelProto], check_n: int = 0, perform_optimization: bool = True,</span><br><span class="line">             skip_fuse_bn: bool = False, input_shapes: Optional[TensorShapes] = None, skipped_optimizers: Optional[Sequence[str]] = None, skip_shape_inference=False) \</span><br><span class="line">        -&gt; Tuple[onnx.ModelProto, bool]:</span><br><span class="line">    if input_shapes is None:</span><br><span class="line">        input_shapes = &#123;&#125;</span><br><span class="line">    if type(model) == str:</span><br><span class="line">        # 加载ONNX模型</span><br><span class="line">        model = onnx.load(model)</span><br><span class="line">    # 检查ONNX模型格式是否正确，图结构是否完整，节点是否正确等</span><br><span class="line">    onnx.checker.check_model(model)</span><br><span class="line">    # 深拷贝一份原始ONNX模型</span><br><span class="line">    model_ori = copy.deepcopy(model)</span><br><span class="line">    if not skip_shape_inference:</span><br><span class="line">        # 获取ONNX模型中特征图的尺寸</span><br><span class="line">        model = infer_shapes(model)</span><br><span class="line"></span><br><span class="line">    input_shapes = check_and_update_input_shapes(model, input_shapes)</span><br><span class="line"></span><br><span class="line">    if perform_optimization:</span><br><span class="line">        model = optimize(model, skip_fuse_bn, skipped_optimizers)</span><br><span class="line"></span><br><span class="line">    const_nodes = get_constant_nodes(model)</span><br><span class="line">    res = forward_for_node_outputs(</span><br><span class="line">        model, const_nodes, input_shapes=input_shapes)</span><br><span class="line">    const_nodes = clean_constant_nodes(const_nodes, res)</span><br><span class="line">    model = eliminate_const_nodes(model, const_nodes, res)</span><br><span class="line">    onnx.checker.check_model(model)</span><br><span class="line"></span><br><span class="line">    if not skip_shape_inference:</span><br><span class="line">        model = infer_shapes(model)</span><br><span class="line">    if perform_optimization:</span><br><span class="line">        model = optimize(model, skip_fuse_bn, skipped_optimizers)</span><br><span class="line"></span><br><span class="line">    check_ok = check(model_ori, model, check_n, input_shapes=input_shapes)</span><br><span class="line"></span><br><span class="line">    return model, check_ok</span><br></pre></td></tr></table></figure>
+
+<p>上面有一行：<code>model = infer_shapes(model)</code> 是获取ONNX模型中特征图的尺寸，它的具体实现如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">def infer_shapes(model: onnx.ModelProto) -&gt; onnx.ModelProto:</span><br><span class="line">    try:</span><br><span class="line">        model = onnx.shape_inference.infer_shapes(model)</span><br><span class="line">    except:</span><br><span class="line">        pass</span><br><span class="line">    return model</span><br></pre></td></tr></table></figure>
+
+<p>我们保存一下调用了这个接口之后的ONNX模型，并将其可视化看一下：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-ef7f09be65cba35cc650207fcd634e91_1440w.webp" alt="img"></p>
+<p>相比于原始的ONNX模型，现在我们知道了每一层特征图的shape信息</p>
+<p>相对于原始的ONNX模型，现在每一条线都新增了一个shape信息，代表它的前一个特征图的shape是怎样的。</p>
+<p>接着，程序使用到了<code>check_and_update_input_shapes</code>接口，这个接口的代码示例如下，它可以用来判断输入的格式是否正确以及输入模型是否存在所有的指定输入节点。</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">def check_and_update_input_shapes(model: onnx.ModelProto, input_shapes: TensorShapes) -&gt; TensorShapes:</span><br><span class="line">    input_names = get_input_names(model)</span><br><span class="line">    if None in input_shapes:</span><br><span class="line">        if len(input_names) == 1:</span><br><span class="line">            input_shapes[input_names[0]] = input_shapes[None]</span><br><span class="line">            del input_shapes[None]</span><br><span class="line">        else:</span><br><span class="line">            raise RuntimeError(</span><br><span class="line">                &#x27;The model has more than 1 inputs, please use the format &quot;input_name:dim0,dim1,...,dimN&quot; in --input-shape&#x27;)</span><br><span class="line">    for x in input_shapes:</span><br><span class="line">        if x not in input_names:</span><br><span class="line">            raise RuntimeError(</span><br><span class="line">                &#x27;The model doesn\&#x27;t have input named &quot;&#123;&#125;&quot;&#x27;.format(x))</span><br><span class="line">    return input_shapes</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，如果我们指定<code>input_shapes</code>为：<code>&#123;&#39;input&#39;: [2, 3, 4, 5]&#125;</code>，那么这个函数的输出也为<code>&#123;&#39;input&#39;: [2, 3, 4, 5]&#125;</code>。如果不指定，输出就是<code>&#123;&#125;</code>。验证这个函数的调用代码如下所示：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-f45877b180ef5009b816e33bc06ab218_1440w.webp" alt="img"></p>
+<p>构造input_shapes参数，传入simplify</p>
+<p>确定了输入没有问题之后，程序会根据用户指定是否优化ONNX模型进入优化函数，函数定义如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">def optimize(model: onnx.ModelProto, skip_fuse_bn: bool, skipped_optimizers: Optional[Sequence[str]]) -&gt; onnx.ModelProto:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    :model参数: 待优化的ONXX模型.</span><br><span class="line">    :return: 优化之后的ONNX模型.</span><br><span class="line">    简化之前, 使用这个方法产生会在&#x27;forward_all&#x27;用到的ValueInfo</span><br><span class="line">    简化之后，使用这个方法去折叠前一步产生的常量到initializer中并且消除没被使用的常量</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">    onnx.checker.check_model(model)</span><br><span class="line">    onnx.helper.strip_doc_string(model)</span><br><span class="line">    optimizers_list = [</span><br><span class="line">        &#x27;eliminate_deadend&#x27;,</span><br><span class="line">        &#x27;eliminate_nop_dropout&#x27;,</span><br><span class="line">        &#x27;eliminate_nop_cast&#x27;,</span><br><span class="line">        &#x27;eliminate_nop_monotone_argmax&#x27;, &#x27;eliminate_nop_pad&#x27;,</span><br><span class="line">        &#x27;extract_constant_to_initializer&#x27;, &#x27;eliminate_unused_initializer&#x27;,</span><br><span class="line">        &#x27;eliminate_nop_transpose&#x27;,</span><br><span class="line">        &#x27;eliminate_nop_flatten&#x27;, &#x27;eliminate_identity&#x27;,</span><br><span class="line">        &#x27;fuse_add_bias_into_conv&#x27;,</span><br><span class="line">        &#x27;fuse_consecutive_concats&#x27;,</span><br><span class="line">        &#x27;fuse_consecutive_log_softmax&#x27;,</span><br><span class="line">        &#x27;fuse_consecutive_reduce_unsqueeze&#x27;, &#x27;fuse_consecutive_squeezes&#x27;,</span><br><span class="line">        &#x27;fuse_consecutive_transposes&#x27;, &#x27;fuse_matmul_add_bias_into_gemm&#x27;,</span><br><span class="line">        &#x27;fuse_pad_into_conv&#x27;, &#x27;fuse_transpose_into_gemm&#x27;, &#x27;eliminate_duplicate_initializer&#x27;</span><br><span class="line">    ]</span><br><span class="line">    if not skip_fuse_bn:</span><br><span class="line">        optimizers_list.append(&#x27;fuse_bn_into_conv&#x27;)</span><br><span class="line">    if skipped_optimizers is not None:</span><br><span class="line">        for opt in skipped_optimizers:</span><br><span class="line">            try:</span><br><span class="line">                optimizers_list.remove(opt)</span><br><span class="line">            except ValueError:</span><br><span class="line">                pass</span><br><span class="line"></span><br><span class="line">    model = onnxoptimizer.optimize(model, optimizers_list,</span><br><span class="line">                                   fixed_point=True)</span><br><span class="line">    onnx.checker.check_model(model)</span><br><span class="line">    return model</span><br></pre></td></tr></table></figure>
+
+<p>这个函数的功能是对原始的ONNX模型做一些图优化工作，比如merge_bn，fuse_add_bias_into_conv等等。我们使用<code>onnx.save</code>保存一下这个例子中图优化后的模型，可以发现它和优化前的可视化效果是一样的，如下图所示：</p>
+<p><img src="https://pic2.zhimg.com/80/v2-0c91ffed282154a0efd1652dd2c3d345_1440w.webp" alt="img"></p>
+<p>optimize 之后的ONNX模型可视化</p>
+<p>这是因为在这个模型中是没有上面列举到的那些可以做图优化的情况，但是当我们打印一下ONNX模型我们会发现optimize过后的ONNX模型多出一些<code>initializer</code>数组：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-4b9f5715724fc4e71ab6258141a97280_1440w.webp" alt="img"></p>
+<p>相比optimize前的模型多出了一些initializer数组</p>
+<p>这些数组存储的就是这个图中那些常量OP的具体值，通过这个处理我们就可以调用<code>get_constant_nodes</code>函数来获取ONNX模型的常量OP了，这个函数的详细解释如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">def get_constant_nodes(m: onnx.ModelProto) -&gt; List[onnx.NodeProto]:</span><br><span class="line">    const_nodes = []</span><br><span class="line">    # 如果节点的name在ONNX的GraphProto的initizlizer数组里面，它就是静态的tensor</span><br><span class="line">    const_tensors = [x.name for x in m.graph.initializer]</span><br><span class="line">    # 显示的常量OP也加进来</span><br><span class="line">    const_tensors.extend([node.output[0]</span><br><span class="line">                          for node in m.graph.node if node.op_type == &#x27;Constant&#x27;])</span><br><span class="line">    # 一些节点的输出shape是由输入节点决定的，我们认为这个节点的输出shape并不是常量，</span><br><span class="line">    # 所以我们不需要简化这种节点</span><br><span class="line">    dynamic_tensors = []</span><br><span class="line">    # 判断是否为动态OP</span><br><span class="line">    def is_dynamic(node):</span><br><span class="line">        if node.op_type in [&#x27;NonMaxSuppression&#x27;, &#x27;NonZero&#x27;, &#x27;Unique&#x27;] and node.input[0] not in const_tensors:</span><br><span class="line">            return True</span><br><span class="line">        if node.op_type in [&#x27;Reshape&#x27;, &#x27;Expand&#x27;, &#x27;Upsample&#x27;, &#x27;ConstantOfShape&#x27;] and len(node.input) &gt; 1 and node.input[1] not in const_tensors:</span><br><span class="line">            return True</span><br><span class="line">        if node.op_type in [&#x27;Resize&#x27;] and ((len(node.input) &gt; 2 and node.input[2] not in const_tensors) or (len(node.input) &gt; 3 and node.input[3] not in const_tensors)):</span><br><span class="line">            return True</span><br><span class="line">        return False</span><br><span class="line">    for node in m.graph.node:</span><br><span class="line">        if any(x in dynamic_tensors for x in node.input):</span><br><span class="line">            dynamic_tensors.extend(node.output)</span><br><span class="line">        elif node.op_type == &#x27;Shape&#x27;:</span><br><span class="line">            const_nodes.append(node)</span><br><span class="line">            const_tensors.extend(node.output)</span><br><span class="line">        elif is_dynamic(node):</span><br><span class="line">            dynamic_tensors.extend(node.output)</span><br><span class="line">        elif all([x in const_tensors for x in node.input]):</span><br><span class="line">            const_nodes.append(node)</span><br><span class="line">            const_tensors.extend(node.output)</span><br><span class="line">    # 深拷贝</span><br><span class="line">    return copy.deepcopy(const_nodes)</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，我们打印一下执行这个获取常量OP函数之后，Graph中有哪些OP被看成了常量OP。</p>
+<p><img src="https://pic1.zhimg.com/80/v2-3661ffbff61c92adb5cf8c3450d63470_1440w.webp" alt="img"></p>
+<p>红色框中的所有节点都是常量节点</p>
+<p>获取了模型中所有的常量OP之后，我们需要把所有的静态节点扩展到ONNX Graph的输出节点列表中，然后利用onnxruntme执行一次forward：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">def forward_for_node_outputs(model: onnx.ModelProto, nodes: List[onnx.NodeProto],</span><br><span class="line">                             input_shapes: Optional[TensorShapes] = None) -&gt; Dict[str, np.ndarray]:</span><br><span class="line">    if input_shapes is None:</span><br><span class="line">        input_shapes = &#123;&#125;</span><br><span class="line">    model = copy.deepcopy(model)</span><br><span class="line">    # nodes 是Graph中所有的静态OP</span><br><span class="line">    add_features_to_output(model, nodes)</span><br><span class="line">    res = forward(model, input_shapes=input_shapes)</span><br><span class="line">    return res</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>add_features_to_output</code>的定义如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">def add_features_to_output(m: onnx.ModelProto, nodes: List[onnx.NodeProto]) -&gt; None:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    Add features to output in pb, so that ONNX Runtime will output them.</span><br><span class="line">    :param m: the model that will be run in ONNX Runtime</span><br><span class="line">    :param nodes: nodes whose outputs will be added into the graph outputs</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    # ONNX模型的graph扩展输出节点，获取所有静态OP的输出和原始输出节点的输出</span><br><span class="line">    for node in nodes:</span><br><span class="line">        for output in node.output:</span><br><span class="line">            m.graph.output.extend([onnx.ValueInfoProto(name=output)])</span><br></pre></td></tr></table></figure>
+
+<p>最后的<code>forward</code>函数就是利用onnxruntime推理获得我们指定的输出节点的值。这个函数这里不进行解释。推理完成之后，进入下一个函数<code>clean_constant_nodes</code>，这个函数的定义如下：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">def clean_constant_nodes(const_nodes: List[onnx.NodeProto], res: Dict[str, np.ndarray]):</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    It seems not needed since commit 6f2a72, but maybe it still prevents some unknown bug</span><br><span class="line">    :param const_nodes: const nodes detected by `get_constant_nodes`</span><br><span class="line">    :param res: The dict containing all tensors, got by `forward_all`</span><br><span class="line">    :return: The constant nodes which have an output in res</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    return [node for node in const_nodes if node.output[0] in res]</span><br></pre></td></tr></table></figure>
+
+<p>这个函数是用来清洗那些没有被onnxruntime推理的静态节点，但通过上面的optimize逻辑，我们的graph中其实已经不存在这个情况了（没有被onnxruntime推理的静态节点在图优化阶段会被<strong>优化掉</strong>），因此这个函数理论上是可以删除的。这个地方是为了避免删除掉有可能引发其它问题就保留了。</p>
+<p>不过从一些实际经验来看，还是保留吧，毕竟不能保证ONNX的图优化就完全正确，前段时间刚发现了TensorRT图优化出了一个BUG。保留这个函数可以提升一些程序的稳定性。</p>
+<p><img src="https://pic3.zhimg.com/80/v2-60f8e0f3a994296088a696a4843de5ae_1440w.webp" alt="img"></p>
+<p>TensorRT存在一个BUG，这个结构的relu会被tensorrt的优化器给移动到eltwise之后</p>
+<p>接下来就是这个onnx-simplifier最核心的步骤了，即将常量节点从原始的ONNX Graph中移除，函数接口为<code>eliminate_const_nodes</code>：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">def eliminate_const_nodes(model: onnx.ModelProto, const_nodes: List[onnx.NodeProto],</span><br><span class="line">                          res: Dict[str, np.ndarray]) -&gt; onnx.ModelProto:</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    :model参数: 原始ONNX模型</span><br><span class="line">    :const_nodes参数: 使用`get_constant_nodes`获得的静态OP</span><br><span class="line">    :res参数: 包含所有输出Tensor的字典</span><br><span class="line">    :return: 简化后的模型. 所有冗余操作都已删除.</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    for i, node in enumerate(model.graph.node):</span><br><span class="line">        if node in const_nodes:</span><br><span class="line">            for output in node.output:</span><br><span class="line">                new_node = copy.deepcopy(node)</span><br><span class="line">                new_node.name = &quot;node_&quot; + output</span><br><span class="line">                new_node.op_type = &#x27;Constant&#x27;</span><br><span class="line">                new_attr = onnx.helper.make_attribute(</span><br><span class="line">                    &#x27;value&#x27;,</span><br><span class="line">                    onnx.numpy_helper.from_array(res[output], name=output)</span><br><span class="line">                )</span><br><span class="line">                del new_node.input[:]</span><br><span class="line">                del new_node.attribute[:]</span><br><span class="line">                del new_node.output[:]</span><br><span class="line">                new_node.output.extend([output])</span><br><span class="line">                new_node.attribute.extend([new_attr])</span><br><span class="line">                insert_elem(model.graph.node, i + 1, new_node)</span><br><span class="line">            del model.graph.node[i]</span><br><span class="line"></span><br><span class="line">    return model</span><br></pre></td></tr></table></figure>
+
+<p>运行这个函数之后我们获得的ONNX模型可视化结果是这样子的：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-3728342cdb46d90a008f5461dae6be28_1440w.webp" alt="img"></p>
+<p>将常量节点从原始的ONNX删除后</p>
+<p>注意，这里获得的ONNX模型中虽然常量节点已经从Graph中断开了，即相当于这个DAG里面多了一些单独的点，但是这些点还是存在的。因此，我们再执行一次<code>optimize</code>就可以获得最终简化后的ONNX模型了。最终简化后的ONNX模型如下图所示：</p>
+<p><img src="https://pic1.zhimg.com/80/v2-88f078117c8ff35e463ec0b721afb32c_1440w.webp" alt="img"></p>
+<p>简化后的ONNX模型</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>介于篇幅原因，介绍ONNX的第一篇文章就介绍到这里了,后续可能会结合更多实践的经验来谈谈ONNX了，例如OneFlow模型导出ONNX进行部署？。总之，文章很长，谢谢你的观看，希望这篇文章有帮助到你。最后欢迎star大老师的onnx-simplifier。</p>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
+<li>【1】<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/86867138">https://zhuanlan.zhihu.com/p/86867138</a></li>
+<li>【2】<a href="https://link.zhihu.com/?target=https://oldpan.me/archives/talk-about-onnx">https://oldpan.me/archives/talk-about-onnx</a></li>
+<li>【3】<a href="https://link.zhihu.com/?target=https://blog.csdn.net/chengzi_comm/article/details/53199278">https://blog.csdn.net/chengzi_comm&#x2F;article&#x2F;details&#x2F;53199278</a></li>
+<li>【4】<a href="https://link.zhihu.com/?target=https://www.jianshu.com/p/a24c88c0526a">https://www.jianshu.com/p/a24c88c0526a</a></li>
+<li>【5】<a href="https://link.zhihu.com/?target=https://bindog.github.io/blog/2020/03/13/deep-learning-model-convert-and-depoly/">https://bindog.github.io/blog/2020/03/13/deep-learning-model-convert-and-depoly/</a></li>
+<li>【6】 <a href="https://link.zhihu.com/?target=https://github.com/daquexian/onnx-simplifier">https://github.com/daquexian/onnx-simplifier</a></li>
+</ul>
+<h2 id="Netron"><a href="#Netron" class="headerlink" title="Netron"></a>Netron</h2><p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/431445882">https://zhuanlan.zhihu.com/p/431445882</a></p>
+<p>本文介绍如何利用netron进行深度学习模型的可视化。其优点在于适用性广，支持大部分深度学习框架的模型导出文件，本文以pytorch为例讲解netron具体的使用流程。</p>
+<h3 id="netron介绍"><a href="#netron介绍" class="headerlink" title="netron介绍"></a>netron介绍</h3><p>netron是一个深度学习模型可视化库，其支持以下格式的模型存储文件：</p>
+<ul>
+<li>ONNX (.onnx, .pb)</li>
+<li>Keras (.h5, .keras)</li>
+<li>CoreML (.mlmodel)</li>
+<li>TensorFlow Lite (.tflite)</li>
+</ul>
+<p>netron并不支持pytorch通过torch.save方法导出的模型文件，因此在pytorch保存模型的时候，需要将其导出为onnx格式的模型文件，可以利用torch.onnx模块实现这一目标。</p>
+<p>整体的流程分为两步，第一步，pytorch导出onnx格式的模型文件。第二步，netron载入模型文件，进行可视化。接下来按照这两步进行实践。</p>
+<h3 id="pytorch导出onnx格式模型文件"><a href="#pytorch导出onnx格式模型文件" class="headerlink" title="pytorch导出onnx格式模型文件"></a>pytorch导出onnx格式模型文件</h3><p>pytorch导出onnx格式模型文件直接使用torch.onnx中相关方法即可，除了定义一个模型外，还需要传入一个数据样例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import torchvision.models as models</span><br><span class="line">import torch</span><br><span class="line"></span><br><span class="line"># 定义样例数据+网络</span><br><span class="line">data = torch.randn(2, 3, 256, 256)</span><br><span class="line">net = models.resnet34()</span><br><span class="line"></span><br><span class="line"># 导出为onnx格式</span><br><span class="line">torch.onnx.export(</span><br><span class="line">    net,</span><br><span class="line">    data,</span><br><span class="line">    &#x27;model.onnx&#x27;,</span><br><span class="line">    export_params=True,</span><br><span class="line">    opset_version=8,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>导出的模型文件为model.onnx。</p>
+<h3 id="netron载入模型文件"><a href="#netron载入模型文件" class="headerlink" title="netron载入模型文件"></a>netron载入模型文件</h3><p>netron提供了两种运行方式。</p>
+<p>第一种是以软件的方式安装netron，然后打开软件载入模型，下载地址见github主页<a href="https://link.zhihu.com/?target=https://github.com/lutzroeder/netron">https://github.com/lutzroeder/netron</a>。</p>
+<p>第二种是将netron作为python库进行安装，在python代码调用netron库来载入模型进行可视化。 可以通过 pip install netron进行安装。</p>
+<p>如果你既不想安装netron软件，也不想安装netron库，netron作者很贴心地做了一个在线demo网站，可以直接上传模型文件查看可视化结果。网站链接<a href="https://link.zhihu.com/?target=https://netron.app/">https://netron.app/</a>。网站页面如下</p>
+<p><img src="https://pic4.zhimg.com/80/v2-446a54d3fd16a234e84b175d3f108a4f_1440w.webp" alt="img"></p>
+<p>点击页面中的Open Model即可上传模型文件</p>
+<p>将刚才的model.onnx进行上传，结果如下</p>
+<p><img src="https://pic2.zhimg.com/80/v2-2c92bcb71347a94f88185d7c4876ed29_1440w.webp" alt="img"></p>
+<p>可视化结果可以下载为图片</p>
+<p>点击模块可以在右侧查看模块信息，例如卷积核的大小，卷积核的具体参数等。如果仔细看下结果，可以发现图中没有特征图的维度，只有输入数据的维度（3，256，256）。在netron中，如果想看到特征图的维度，需要在导出为onnx的时候，同时加上特征图维度信息。这个操作需要onnx库的帮助，可以通过pip install onnx进行安装。具体代码如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">import torchvision.models as models</span><br><span class="line">import torch</span><br><span class="line"></span><br><span class="line">import onnx</span><br><span class="line">import onnx.utils</span><br><span class="line">import onnx.version_converter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 定义数据+网络</span><br><span class="line">data = torch.randn(2, 3, 256, 256)</span><br><span class="line">net = models.resnet34()</span><br><span class="line"></span><br><span class="line"># 导出</span><br><span class="line">torch.onnx.export(</span><br><span class="line">    net,</span><br><span class="line">    data,</span><br><span class="line">    &#x27;model.onnx&#x27;,</span><br><span class="line">    export_params=True,</span><br><span class="line">    opset_version=8,</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"># 增加维度信息</span><br><span class="line">model_file = &#x27;model.onnx&#x27;</span><br><span class="line">onnx_model = onnx.load(model_file)</span><br><span class="line">onnx.save(onnx.shape_inference.infer_shapes(onnx_model), model_file)</span><br></pre></td></tr></table></figure>
+
+<p>相比之前的代码，多了一个增加维度信息的步骤。此时可视化图中就能完整显示所有特征图的维度了。</p>
+<p><img src="https://pic2.zhimg.com/80/v2-61bf577d7254130a736e7bd9bea1bc45_1440w.webp" alt="img"></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Pandas%20Cheatsheet/" rel="prev" title="Pandas Cheatsheet">
+      <i class="fa fa-chevron-left"></i> Pandas Cheatsheet
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Linux/" rel="next" title="Linux">
+      Linux <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ONNX"><span class="nav-number">1.</span> <span class="nav-text">ONNX</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFONNX%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">什么是ONNX？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ProtoBuf-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.3.</span> <span class="nav-text">ProtoBuf 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ONNX-%E6%A0%BC%E5%BC%8F%E5%88%86%E6%9E%90"><span class="nav-number">1.4.</span> <span class="nav-text">ONNX 格式分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onnx-helper"><span class="nav-number">1.5.</span> <span class="nav-text">onnx.helper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#onnx-simplifie"><span class="nav-number">1.6.</span> <span class="nav-text">onnx-simplifie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">1.8.</span> <span class="nav-text">参考资料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Netron"><span class="nav-number">2.</span> <span class="nav-text">Netron</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#netron%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">netron介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pytorch%E5%AF%BC%E5%87%BAonnx%E6%A0%BC%E5%BC%8F%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="nav-number">2.2.</span> <span class="nav-text">pytorch导出onnx格式模型文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netron%E8%BD%BD%E5%85%A5%E6%A8%A1%E5%9E%8B%E6%96%87%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">netron载入模型文件</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">160</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

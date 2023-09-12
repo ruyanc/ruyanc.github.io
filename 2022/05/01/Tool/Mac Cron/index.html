@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="MAC cron 不自动执行解决办法重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。 最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍 为什么crontab不执行 - SegmentFault 思否 还是不行，再找答案，发现这个 Mac 自动任务 crontab 不执行 看起来写得不咋地，但是">
+  <meta name="description" content="Schedule Python Scripts As Cron Jobs With Crontab (Mac&#x2F;Linux)Learn about cron jobs and how to schedule commands and Python scripts in the terminal via crontab (for Linux and Mac) CrontabWe can sc">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac Cron">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/Mac%20Cron/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="MAC cron 不自动执行解决办法重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。 最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍 为什么crontab不执行 - SegmentFault 思否 还是不行，再找答案，发现这个 Mac 自动任务 crontab 不执行 看起来写得不咋地，但是">
+<meta property="og:description" content="Schedule Python Scripts As Cron Jobs With Crontab (Mac&#x2F;Linux)Learn about cron jobs and how to schedule commands and Python scripts in the terminal via crontab (for Linux and Mac) CrontabWe can sc">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-12-30T03:20:07.191Z">
+<meta property="article:modified_time" content="2023-09-12T02:00:05.198Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-12-30 11:20:07" itemprop="dateModified" datetime="2022-12-30T11:20:07+08:00">2022-12-30</time>
+                <time title="Modified: 2023-09-12 10:00:05" itemprop="dateModified" datetime="2023-09-12T10:00:05+08:00">2023-09-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,7 +260,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h3><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
+        <h1 id="Schedule-Python-Scripts-As-Cron-Jobs-With-Crontab-Mac-x2F-Linux"><a href="#Schedule-Python-Scripts-As-Cron-Jobs-With-Crontab-Mac-x2F-Linux" class="headerlink" title="Schedule Python Scripts As Cron Jobs With Crontab (Mac&#x2F;Linux)"></a>Schedule Python Scripts As Cron Jobs With Crontab (Mac&#x2F;Linux)</h1><p><strong>Learn about cron jobs and how to schedule commands and Python scripts in the terminal via crontab (for Linux and Mac)</strong></p>
+<h3 id="Crontab"><a href="#Crontab" class="headerlink" title="Crontab"></a>Crontab</h3><p>We can schedule jobs with the <code>crontab</code> command. A crontab file is a simple text file containing a list of commands meant to be run at specified times. It is edited using the crontab command. The commands in the crontab file are checked by the cron daemon, which executes them in the system background.</p>
+<p>List all scheduled cron jobs with:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ crontab -l</span><br></pre></td></tr></table></figure>
+
+<p>Edit the file by using the command:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ crontab -e</span><br></pre></td></tr></table></figure>
+
+<p>Then use the following syntax to schedule a job</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * command</span><br></pre></td></tr></table></figure>
+
+<p>For example to run a python script use:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * python my_script.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="The-syntax"><a href="#The-syntax" class="headerlink" title="The syntax"></a>The syntax</h3><p>To check the syntax I recommend to visit the free website <a target="_blank" rel="noopener" href="https://crontab.guru/">crontab.guru</a>.</p>
+<p>The syntax is this: <code>&#39;minute hour day-of-month month day-of-week&#39;</code></p>
+<p>The 5 items are used to specify minute, hour, day in the month, month, and day in the week (in this order).</p>
+<p><strong>Allowed values are</strong>:</p>
+<ul>
+<li><code>0-59</code> for minute</li>
+<li><code>0-23</code> for hour</li>
+<li><code>1-31</code> for day-of-month</li>
+<li><code>1-12</code> for month</li>
+<li><code>0-6</code> for day-of-week (0 &#x3D; Sunday)</li>
+</ul>
+<p><strong>The following characters can be used for more complex timing</strong>:</p>
+<ul>
+<li><code>*</code> any value</li>
+<li><code>,</code> value list separator</li>
+<li><code>-</code> range of values</li>
+<li><code>/</code> step values</li>
+</ul>
+<p><strong>Some examples</strong>:</p>
+<ul>
+<li><code>* * * * *</code>: At every minute (every minute, every hour, every day, every month, every weekday)</li>
+<li><code>0 10 * * *</code>: At 10:00 AM each day</li>
+<li><code>0 10 * * 0</code>: At 10:00 AM on each Monday</li>
+<li><code>0 0 1,15 * *</code> At 00:00 on 1st and 15th each month</li>
+<li><code>0 0 * * 1-3</code>: At 00:00 from Monday through Wednesday</li>
+<li><code>0 0 1/2 * *</code>: At 00:00 on every 2nd day from 1 through 31</li>
+</ul>
+<h3 id="Pitfalls-when-running-Python-scripts"><a href="#Pitfalls-when-running-Python-scripts" class="headerlink" title="Pitfalls when running Python scripts"></a>Pitfalls when running Python scripts</h3><h4 id="Use-the-full-path-to-your-file-e-g"><a href="#Use-the-full-path-to-your-file-e-g" class="headerlink" title="Use the full path to your file, e.g.:"></a>Use the full path to your file, e.g.:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">* * * * * python ~/code/python-task-automation/test.py</span><br></pre></td></tr></table></figure>
+
+<h4 id="When-logging-into-files-specify-the-full-path-for-the-filename-in-the-Python-file-Otherwise-the-file-just-ends-up-in-your-home-directory"><a href="#When-logging-into-files-specify-the-full-path-for-the-filename-in-the-Python-file-Otherwise-the-file-just-ends-up-in-your-home-directory" class="headerlink" title="When logging into files, specify the full path for the filename in the Python file. Otherwise the file just ends up in your home directory."></a>When logging into files, specify the full path for the filename in the Python file. Otherwise the file just ends up in your home directory.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import logging</span><br><span class="line">import os</span><br><span class="line"></span><br><span class="line">dir_path = os.path.dirname(os.path.realpath(__file__))</span><br><span class="line">filename = os.path.join(dir_path, &#x27;test_log.log&#x27;)</span><br><span class="line"></span><br><span class="line"># Logger</span><br><span class="line">logger = logging.getLogger(__name__)</span><br><span class="line">logger.setLevel(logging.INFO)</span><br><span class="line"></span><br><span class="line">file_handler = logging.FileHandler(filename)</span><br><span class="line">file_handler.setLevel(logging.INFO)</span><br><span class="line">file_handler.setFormatter(logging.Formatter(&#x27;%(asctime)s - %(levelname)s - %(message)s&#x27;))</span><br><span class="line">logger.addHandler(file_handler)</span><br></pre></td></tr></table></figure>
+
+<h4 id="When-a-virtual-environment-is-used-specify-the-full-path-to-the-python-executable-e-g"><a href="#When-a-virtual-environment-is-used-specify-the-full-path-to-the-python-executable-e-g" class="headerlink" title="When a virtual environment is used, specify the full path to the python executable, e.g.:"></a>When a virtual environment is used, specify the full path to the python executable, e.g.:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* * * * * ~/opt/miniconda3/envs/py38/bin/python ~/code/python-task-automation/fetch_github.py</span><br><span class="line">or</span><br><span class="line">* * * * * ~/code/python-task-automation/venv/bin/python ~/code/python-task-automation/fetch_github.py</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="MAC-cron-不自动执行解决办法"><a href="#MAC-cron-不自动执行解决办法" class="headerlink" title="MAC cron 不自动执行解决办法"></a>MAC cron 不自动执行解决办法</h2><p>重点请看后面斜体字。重点请看后面斜体字。重点请看后面斜体字。</p>
 <p>最怕的就是定时任务不执行，还没半点可参考信息，搜了很多答案，都说环境变量问题，我试了很多解决方案都不行，对，看这个文章写得不错，按照其走了一遍</p>
 <p><a href="https://link.zhihu.com/?target=https://segmentfault.com/a/1190000020850932">为什么crontab不执行 - SegmentFault 思否</a></p>
 <p>还是不行，再找答案，发现这个</p>
@@ -313,8 +364,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Nice%20Website/" rel="prev" title="Nice Website">
-      <i class="fa fa-chevron-left"></i> Nice Website
+    <a href="/2022/05/01/Tool/Model%20Tutorial/" rel="prev" title="Model Tutorial">
+      <i class="fa fa-chevron-left"></i> Model Tutorial
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/05/01/Tool/Mac%20convert%20picture/" rel="next" title="Mac convert picture">
@@ -378,7 +429,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC-cron-%E4%B8%8D%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">MAC cron 不自动执行解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0x00-%E5%8F%AF%E8%83%BD%E4%B9%8B%E4%B8%80"><span class="nav-number">1.1.</span> <span class="nav-text">0x00 可能之一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0x01-%E5%8F%AF%E8%83%BD%E4%B9%8B%E4%BA%8C"><span class="nav-number">1.2.</span> <span class="nav-text">0x01 可能之二</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Schedule-Python-Scripts-As-Cron-Jobs-With-Crontab-Mac-x2F-Linux"><span class="nav-number">1.</span> <span class="nav-text">Schedule Python Scripts As Cron Jobs With Crontab (Mac&#x2F;Linux)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Crontab"><span class="nav-number">1.0.1.</span> <span class="nav-text">Crontab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-syntax"><span class="nav-number">1.0.2.</span> <span class="nav-text">The syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pitfalls-when-running-Python-scripts"><span class="nav-number">1.0.3.</span> <span class="nav-text">Pitfalls when running Python scripts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Use-the-full-path-to-your-file-e-g"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">Use the full path to your file, e.g.:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#When-logging-into-files-specify-the-full-path-for-the-filename-in-the-Python-file-Otherwise-the-file-just-ends-up-in-your-home-directory"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">When logging into files, specify the full path for the filename in the Python file. Otherwise the file just ends up in your home directory.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#When-a-virtual-environment-is-used-specify-the-full-path-to-the-python-executable-e-g"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">When a virtual environment is used, specify the full path to the python executable, e.g.:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC-cron-%E4%B8%8D%E8%87%AA%E5%8A%A8%E6%89%A7%E8%A1%8C%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-number">1.1.</span> <span class="nav-text">MAC cron 不自动执行解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0x00-%E5%8F%AF%E8%83%BD%E4%B9%8B%E4%B8%80"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">0x00 可能之一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#0x01-%E5%8F%AF%E8%83%BD%E4%B9%8B%E4%BA%8C"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">0x01 可能之二</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -393,7 +444,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">159</span>
+          <span class="site-state-item-count">160</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
