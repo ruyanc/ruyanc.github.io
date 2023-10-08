@@ -22,53 +22,53 @@
 
   <meta name="description" content="利用 GPU 加速 WRF预测风能准确的天气模型对于企业正确预测可再生能源的生产和制定自然灾害预案至关重要。仅 2022 年，无效和无法预测的天气就造成了约 7140 亿 美元的损失。为了避免这种情况，企业需要更快、更便宜、更精准的天气模型。 在 GTC23 上，微软和 TempoQuest 详细介绍了他们如何与 NVIDIA 合作一起解决这个能源和气候问题。NVIDIA 初创加速计划成员 Tem">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git">
+<meta property="og:title" content="GPU">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/GPU/index.html">
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="利用 GPU 加速 WRF预测风能准确的天气模型对于企业正确预测可再生能源的生产和制定自然灾害预案至关重要。仅 2022 年，无效和无法预测的天气就造成了约 7140 亿 美元的损失。为了避免这种情况，企业需要更快、更便宜、更精准的天气模型。 在 GTC23 上，微软和 TempoQuest 详细介绍了他们如何与 NVIDIA 合作一起解决这个能源和气候问题。NVIDIA 初创加速计划成员 Tem">
 <meta property="og:locale">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeJ9qjIJGNqianuibPnQOPOmCem2ySibPbyML1vcuhTt9GcM0QwrXZ8icwvQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeNFhyibvdYGI3yprRQXslZOgHg27J75ibPGTwFgR3yDh64XX0HTod1lsg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeTztZTSOnQoFS0g44H1kTk9ORP1U5kW9M59XGBx3PJc52FicjZ16stwQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_jpg/1zicvPbtwicK6dO3aaMppL9AhlO8SIvadgFRPBqX1ic3TJZbNIZiaFESaia83L3wPlxUsvicZibWaHhZoIuLdCJh3SPGw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNKM2picpyoLMciajrjG2v0AZ7MfqBfnp8RAojyYn0fDqEiaLTVoiaZP0oTA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN4WWjREyTlPB5C1qOR5fhqPSYicLcGp0Suvia82RbUPDgLQLicN3CUp7Vg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNNuicic8Xs07rddicSPQbIEbbGdULwiaK7pwQrf8KwbT1Gibofic8r0ojXfjA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/rczxbn.png">
+<meta property="og:image" content="https://p.ipic.vip/gdzu6c.png">
+<meta property="og:image" content="https://p.ipic.vip/0v1xvp.png">
+<meta property="og:image" content="https://p.ipic.vip/31ynll.jpg">
+<meta property="og:image" content="https://p.ipic.vip/33mf9s.png">
+<meta property="og:image" content="https://p.ipic.vip/qjhzxj.png">
+<meta property="og:image" content="https://p.ipic.vip/5zs5y0.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNND8bsoHD8XqoPsHKRc0oibk99kdA2DicVoXU9K9GQKQ6EcghHrZ4cDNyw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNjcRuKia4wTgNFoAsUulUZKbaTFSCQYhVnL66d3GsfoCvFHEUlicHVPEA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN1o9y794sumicabbMGw0lCxMKIeTiaR1eYnmWRVALBPCBYibXDia4Yzuianw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNFIiclWdrRicJzZJn9hUz3dse6rSpvemeVuYEJh0xia9KHsqpiaRLMicIngw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNhdmyvYXg2CPO4ZqAgmJPfBaO7FCkNtmfibkFr1CMpICkoEHZztMafEQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNklmTyIKTE9yULEO0ic3ic1qcNlJ0rCXctCNUgjvPoDENicBGW60iahrcJA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNF49r43j50RKBOPJTsibSWBFI2KwQtXN0ubhZGn68nGF5o8qHW5dxA0A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/tk6gzu.png">
+<meta property="og:image" content="https://p.ipic.vip/aio2no.png">
+<meta property="og:image" content="https://p.ipic.vip/uc0ola.png">
+<meta property="og:image" content="https://p.ipic.vip/ofrv1y.png">
+<meta property="og:image" content="https://p.ipic.vip/3vn0x1.png">
+<meta property="og:image" content="https://p.ipic.vip/h94u9a.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNZB11ob29dWKSdHw09SjrzuqUZ7QzTpK2Oyvgs0mgKc2ZTy0JDaibdaA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNRvfHWeoDQ6ZWIKDYqpqfGK6YsASKMUTFFAFIibxRQZ7XFVA2RpCowVg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNpsicwbSSXFibfRib0KkRPLJw04zBS7GhQOZPEXJO6Mic9JYzhY25hCJGxQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/tabag5.png">
+<meta property="og:image" content="https://p.ipic.vip/3gpyrh.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNHJRqfEZPyM9QUicJJV35k2qOichobyf9689WHyKhZolb9Dvic7vIJVYIg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNRSDKVmhfolNQH8xfW5SmiaSjiavcdJt89ibicbibpSOicib2okbCofTYNyA9Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNEicBglG24rb5ArUDJuLBlxksqWjWIhACJBnEzicWibbmPrIU3FScjNXdQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNMQSmhibbRwHowAfoXic8Mqlqdnw8HXUM63AzLjAO6hM9o1MXt9Cy3QMQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/xe4bca.png">
+<meta property="og:image" content="https://p.ipic.vip/n08w9h.png">
+<meta property="og:image" content="https://p.ipic.vip/vpib7l.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNV9YJKjkibWU9kAV0TwhicEDN6MVubrknib6joicheDemfV8HupCzL3QIGg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNut7wfyJYQZqcgTPibr1ZHAEwdhTtKkN5k3UBU3gDCOqprbiarwMEm7Zw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN3XBakprTsic0s4gCPjZcdkzmFRHFrp0miaibgx6GByOA5mLS5BoVAibvSg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNu51mqEnGz8PY6QNQIC54Eq4IYUGzylxCXqBVh1gmH5h7V5RNnnu76w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNySWWTru29uXAMeHafqyxVZibxyfyXeO5Y5kGTBpWnoIN6s6aKxeIdiaA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNtvAySZajGYJHXHO0vImZAWhEVhkcibWn9sfQ0rHkTLLPcXBWWyibahNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNXIIrNerS1n9P5Ykic6ibR5iaJBWeSJkpjdEAdhzfiaIicTXSrstg0qBLJXQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/chyanc.png">
+<meta property="og:image" content="https://p.ipic.vip/o2exur.png">
+<meta property="og:image" content="https://p.ipic.vip/0q2lo9.png">
+<meta property="og:image" content="https://p.ipic.vip/gjfwwp.png">
+<meta property="og:image" content="https://p.ipic.vip/vz3vo7.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN1hCCbft4DQ1dI0XxicibSX4n49I5myQicIQvCgdW3Bs0wawhHohvZHReg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNcH54Yia5dM4zh1rx2J2wf9QVTERJ5gt2yVaLMVFnuCF0hfrg6G3mJibA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/6r5887.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN4aT0cP4loYqPMIcw2qpfFBnUvBnPmjj4eic6iaQwmMibtIlsPFLAhD5Hw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNNbLOwCFRwicmOxQm7MgTJrlN2FIGA2nEL0Cj6SmicqZ7ve6L8jTxdVKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNVLsZyQkLwFut19Zj3icJXe8oPakE0gL2er0eNTuQSe9ZhibRQSiaacGVQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN65jEtUOa9SAt2YpFdPp9hTPib0um3OJibgmgsY56bL3nWGyIAfWFyluw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNcPqmwlzhFDIY5ZKTJlppcmvBuYYX2bpuYjmhZAUibRicfvf4ia8F89NMQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNriaGb2gib80xLdHSPkYPx5YxVkx4jibpMliaS1lzavibFeDKrYmv3ALPAqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/j7jkip.png">
+<meta property="og:image" content="https://p.ipic.vip/opi0wg.png">
+<meta property="og:image" content="https://p.ipic.vip/1qqum3.png">
+<meta property="og:image" content="https://p.ipic.vip/4tu593.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNN3rICZLGjZfHobiaa459C4M6pPqYgxwviczKxYibzhFk5UCscCCDJJypw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-06T06:47:49.460Z">
+<meta property="article:modified_time" content="2023-10-08T03:29:29.924Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeJ9qjIJGNqianuibPnQOPOmCem2ySibPbyML1vcuhTt9GcM0QwrXZ8icwvQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta name="twitter:image" content="https://p.ipic.vip/rczxbn.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/GPU/">
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title>Git | ruyanc</title>
+  <title>GPU | ruyanc</title>
   
 
 
@@ -251,7 +251,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Git
+          GPU
         </h1>
 
         <div class="post-meta">
@@ -268,7 +268,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-06 14:47:49" itemprop="dateModified" datetime="2023-07-06T14:47:49+08:00">2023-07-06</time>
+                <time title="Modified: 2023-10-08 11:29:29" itemprop="dateModified" datetime="2023-10-08T11:29:29+08:00">2023-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -308,7 +308,7 @@
 <p>本文中将介绍 TempoQuest 如何利用微软 Azure 上的 NVIDIA 加速计算，将传统的天气研究和预报（WRF）软件移植到 GPU 上、提供高于 1 公里的分辨率以及 1 分钟至 1 小时的时间分辨率并加快对可再生风能和太阳能资源发电的预测。</p>
 <p><strong>公用事业单位在整合可再生能源过程中所面临的挑战</strong></p>
 <p>公用事业单位在他们的电网中使用可再生能源（主要是风能和太阳能）是具有挑战性的。这些能源因环境因素而异，比如云层覆盖和风速等。如果可再生能源的发电量不足以满足需求，公用事业单位必须使用“旋转备用”，即由发电机生产的碳基电力来弥补缺口。为了更好地预测可再生能源发电，需要快速、准确、经济的天气预报。</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeJ9qjIJGNqianuibPnQOPOmCem2ySibPbyML1vcuhTt9GcM0QwrXZ8icwvQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/rczxbn.png" alt="Image"></p>
 <p>图 1 标准电网基础设施示意图，包括发电、输电和配电</p>
 <p>能源行业需要实现三个关键功能：发电、输电和配电。发电目前主要使用碳基燃料，但正在向包括风能和太阳能在内的可再生能源过渡，以实现净零排放。输电指的是产生的电力通过升压变压器后经高压线传输。在遥远的电网边缘，电力经变压器和变电站“降压”后，输送给家庭和企业的用电者（240 V &#x2F; 120 V）。</p>
 <p>如果要在电网中增加更多可再生能源，公用事业单位不仅要整合新的发电站，还要建造更多高压输电线路和塔架。这就给电网维护带来了更高的复杂性和成本，包括投资和运营费用。高分辨率的 GPU 加速 WRF 可以通过减少对碳基电力的依赖和优化可再生能源的使用帮助实现这一目标。</p>
@@ -344,11 +344,11 @@
 <li>40 TiB 存储 Azure 代管容量</li>
 <li>10000 MB&#x2F;s 最大吞吐量</li>
 </ul>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeNFhyibvdYGI3yprRQXslZOgHg27J75ibPGTwFgR3yDh64XX0HTod1lsg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/gdzu6c.png" alt="Image"></p>
 <p>图 2 基于 CPU 的 WRF 与 TempoQuest AceCAST 的性能价格比较分析</p>
 <p>结果显示，与一个节点上基于 CPU 的 WRF 相比，一个节点上的 GPU 加速 WRF（AceCAST）的速度加快了约 9 倍，而要实现与一个 GPU 节点类似的性能，需要 18 个 CPU 节点。这些结果至关重要，因为更快、更低成本的天气预报使公用事业单位能够更加准确地预测可再生能源发电、提供稳定可靠的电力并避免过长时间的停电。</p>
 <p>AceCAST 3.0.1 上的进一步测试显示其可继续提升性能。团队使用了一个嵌套域，外域由 500 万个网格点（430x331x38v）和 15 公里的网格间距组成，内域由 8000 万个网格点（1551x1361x38v）和 3 公里的网格间距组成。</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/1zicvPbtwicK7V7qQ1rM72ibQ22LU4GrLYeTztZTSOnQoFS0g44H1kTk9ORP1U5kW9M59XGBx3PJc52FicjZ16stwQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/0v1xvp.png" alt="Image"></p>
 <p>图 3 TempoQuest AceCAST 以最佳配置运行一项作业的性能成本图</p>
 <p>结果显示，AceCAST 在 1xNDmA100V4（8 个 GPU）上的内域计算和通信时间比 1xHBv3（64 个CPU）快 16.8 倍。单个作业的最佳配置是在 16 个 HBv3（CPU）虚拟机上运行 WRF，在 1 个包含 8 个 GPU 的 NDmA100（GPU）虚拟机上运行 AceCAST。<strong>在这种情况下，AceCAST 比基于 CPU 的 WRF 运行速度快 7%，成本低 75%。</strong></p>
 <p><strong>可再生发电功率预测</strong></p>
@@ -357,39 +357,39 @@
 <p>随着发电资产从集中化的碳基技术过渡到清洁的分布式能源资源，电网面临着实时管理供需的挑战。通过预测可再生资产的性能，电力公司能够提高电网的可靠性和弹性。<strong>NVIDIA、微软和 TempoQuest 正在联手帮助解决这一重大的社会及全球挑战。</strong></p>
 <p>凭借 AceCAST 这一 GPU 加速 WRF，TempoQuest 正在以更低的成本加速风能和太阳能可再生资源的发电功率预测。这有助于优化负载和发电的平衡、减少公用事业单位的运营成本、管理可再生能源输出的波动并产生更加可靠的预测，进而减少对碳基电力储备的依赖。</p>
 <p><strong>扫描下方海报二维码</strong>，观看 NVIDIA 创始人兼 CEO 黄仁勋在 COMPUTEX 2023 的主题演讲直播回放，主题演讲中文字幕版已上线，了解 AI、图形及其他领域的最新进展！</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_jpg/1zicvPbtwicK6dO3aaMppL9AhlO8SIvadgFRPBqX1ic3TJZbNIZiaFESaia83L3wPlxUsvicZibWaHhZoIuLdCJh3SPGw/640?wx_fmt=jpeg&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNKM2picpyoLMciajrjG2v0AZ7MfqBfnp8RAojyYn0fDqEiaLTVoiaZP0oTA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN4WWjREyTlPB5C1qOR5fhqPSYicLcGp0Suvia82RbUPDgLQLicN3CUp7Vg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNNuicic8Xs07rddicSPQbIEbbGdULwiaK7pwQrf8KwbT1Gibofic8r0ojXfjA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/31ynll.jpg" alt="Image"></p>
+<p><img src="https://p.ipic.vip/33mf9s.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/qjhzxj.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/5zs5y0.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNND8bsoHD8XqoPsHKRc0oibk99kdA2DicVoXU9K9GQKQ6EcghHrZ4cDNyw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNjcRuKia4wTgNFoAsUulUZKbaTFSCQYhVnL66d3GsfoCvFHEUlicHVPEA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN1o9y794sumicabbMGw0lCxMKIeTiaR1eYnmWRVALBPCBYibXDia4Yzuianw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNFIiclWdrRicJzZJn9hUz3dse6rSpvemeVuYEJh0xia9KHsqpiaRLMicIngw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNhdmyvYXg2CPO4ZqAgmJPfBaO7FCkNtmfibkFr1CMpICkoEHZztMafEQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNklmTyIKTE9yULEO0ic3ic1qcNlJ0rCXctCNUgjvPoDENicBGW60iahrcJA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNF49r43j50RKBOPJTsibSWBFI2KwQtXN0ubhZGn68nGF5o8qHW5dxA0A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/tk6gzu.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/aio2no.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/uc0ola.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/ofrv1y.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/3vn0x1.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/h94u9a.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNZB11ob29dWKSdHw09SjrzuqUZ7QzTpK2Oyvgs0mgKc2ZTy0JDaibdaA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNRvfHWeoDQ6ZWIKDYqpqfGK6YsASKMUTFFAFIibxRQZ7XFVA2RpCowVg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNpsicwbSSXFibfRib0KkRPLJw04zBS7GhQOZPEXJO6Mic9JYzhY25hCJGxQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/tabag5.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/3gpyrh.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNHJRqfEZPyM9QUicJJV35k2qOichobyf9689WHyKhZolb9Dvic7vIJVYIg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNRSDKVmhfolNQH8xfW5SmiaSjiavcdJt89ibicbibpSOicib2okbCofTYNyA9Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNEicBglG24rb5ArUDJuLBlxksqWjWIhACJBnEzicWibbmPrIU3FScjNXdQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNMQSmhibbRwHowAfoXic8Mqlqdnw8HXUM63AzLjAO6hM9o1MXt9Cy3QMQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/xe4bca.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/n08w9h.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/vpib7l.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNV9YJKjkibWU9kAV0TwhicEDN6MVubrknib6joicheDemfV8HupCzL3QIGg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNut7wfyJYQZqcgTPibr1ZHAEwdhTtKkN5k3UBU3gDCOqprbiarwMEm7Zw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN3XBakprTsic0s4gCPjZcdkzmFRHFrp0miaibgx6GByOA5mLS5BoVAibvSg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNu51mqEnGz8PY6QNQIC54Eq4IYUGzylxCXqBVh1gmH5h7V5RNnnu76w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNySWWTru29uXAMeHafqyxVZibxyfyXeO5Y5kGTBpWnoIN6s6aKxeIdiaA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNtvAySZajGYJHXHO0vImZAWhEVhkcibWn9sfQ0rHkTLLPcXBWWyibahNg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNXIIrNerS1n9P5Ykic6ibR5iaJBWeSJkpjdEAdhzfiaIicTXSrstg0qBLJXQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/chyanc.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/o2exur.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/0q2lo9.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/gjfwwp.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/vz3vo7.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN1hCCbft4DQ1dI0XxicibSX4n49I5myQicIQvCgdW3Bs0wawhHohvZHReg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNcH54Yia5dM4zh1rx2J2wf9QVTERJ5gt2yVaLMVFnuCF0hfrg6G3mJibA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/6r5887.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN4aT0cP4loYqPMIcw2qpfFBnUvBnPmjj4eic6iaQwmMibtIlsPFLAhD5Hw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNNbLOwCFRwicmOxQm7MgTJrlN2FIGA2nEL0Cj6SmicqZ7ve6L8jTxdVKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNVLsZyQkLwFut19Zj3icJXe8oPakE0gL2er0eNTuQSe9ZhibRQSiaacGVQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNN65jEtUOa9SAt2YpFdPp9hTPib0um3OJibgmgsY56bL3nWGyIAfWFyluw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNcPqmwlzhFDIY5ZKTJlppcmvBuYYX2bpuYjmhZAUibRicfvf4ia8F89NMQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNriaGb2gib80xLdHSPkYPx5YxVkx4jibpMliaS1lzavibFeDKrYmv3ALPAqg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/j7jkip.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/opi0wg.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/1qqum3.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/4tu593.png" alt="Image"></p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/CvyYyd33agvxI4HMok4kjoBpn0cRnBNNN3rICZLGjZfHobiaa459C4M6pPqYgxwviczKxYibzhFk5UCscCCDJJypw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
 
     </div>
