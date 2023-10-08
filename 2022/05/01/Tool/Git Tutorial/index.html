@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Git 基本操作git commit提交修改 git branch 创建分支 新创建的分支会指向的当前提交记录。 注意：在新创建的分支中进行commit提交的时候需确认当前所在分支 git checkout 切换到某一分支 git merge 把BrachName分支合并到当前分支里，是将其他分支merge过来，即“合并过来” git rebase 把当前分支里的工作直接移到BrachName分支">
+  <meta name="description" content="Git 基本操作git commit提交修改 git branch &lt;NewBrachName&gt;创建分支 新创建的分支会指向的当前提交记录。 注意：在新创建的分支中进行commit提交的时候需确认当前所在分支 git checkout &lt;BranchName&gt;切换到某一分支 git merge &lt;BrachName&gt;把BrachName分支合并到当前分支里，是将">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git Tutorial">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/Git%20Tutorial/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="Git 基本操作git commit提交修改 git branch 创建分支 新创建的分支会指向的当前提交记录。 注意：在新创建的分支中进行commit提交的时候需确认当前所在分支 git checkout 切换到某一分支 git merge 把BrachName分支合并到当前分支里，是将其他分支merge过来，即“合并过来” git rebase 把当前分支里的工作直接移到BrachName分支">
+<meta property="og:description" content="Git 基本操作git commit提交修改 git branch &lt;NewBrachName&gt;创建分支 新创建的分支会指向的当前提交记录。 注意：在新创建的分支中进行commit提交的时候需确认当前所在分支 git checkout &lt;BranchName&gt;切换到某一分支 git merge &lt;BrachName&gt;把BrachName分支合并到当前分支里，是将">
 <meta property="og:locale">
 <meta property="og:image" content="https://p.ipic.vip/80oacz.png">
 <meta property="og:image" content="https://p.ipic.vip/yx1vf1.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://p.ipic.vip/s48a0u.png">
 <meta property="og:image" content="https://p.ipic.vip/t21hsf.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-07T03:43:45.344Z">
+<meta property="article:modified_time" content="2023-10-08T06:18:29.880Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p.ipic.vip/80oacz.png">
@@ -239,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-07 11:43:45" itemprop="dateModified" datetime="2023-10-07T11:43:45+08:00">2023-10-07</time>
+                <time title="Modified: 2023-10-08 14:18:29" itemprop="dateModified" datetime="2023-10-08T14:18:29+08:00">2023-10-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -270,35 +270,35 @@
 
       
         <h2 id="Git-基本操作"><a href="#Git-基本操作" class="headerlink" title="Git 基本操作"></a>Git 基本操作</h2><h3 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h3><p>提交修改</p>
-<h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch "></a>git branch <NewBrachName></h3><p>创建分支</p>
+<h3 id="git-branch-lt-NewBrachName-gt"><a href="#git-branch-lt-NewBrachName-gt" class="headerlink" title="git branch &lt;NewBrachName&gt;"></a>git branch <code>&lt;NewBrachName&gt;</code></h3><p>创建分支</p>
 <p>新创建的分支会指向的当前提交记录。</p>
 <p><strong>注意：在新创建的分支中进行commit提交的时候需确认当前所在分支</strong></p>
-<h3 id="git-checkout"><a href="#git-checkout" class="headerlink" title="git checkout "></a>git checkout <BranchName></h3><p>切换到某一分支</p>
-<h3 id="git-merge"><a href="#git-merge" class="headerlink" title="git merge "></a>git merge <BrachName></h3><p>把BrachName分支合并到当前分支里，<strong>是将其他分支merge过来，即“合并过来”</strong></p>
-<h3 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase "></a>git rebase <BrachName></h3><p>把当前分支里的工作直接移到BrachName分支上，<strong>是对当前分支的rebase，即“合并过去”</strong></p>
+<h3 id="git-checkout-lt-BranchName-gt"><a href="#git-checkout-lt-BranchName-gt" class="headerlink" title="git checkout &lt;BranchName&gt;"></a>git checkout <code>&lt;BranchName&gt;</code></h3><p>切换到某一分支</p>
+<h3 id="git-merge-lt-BrachName-gt"><a href="#git-merge-lt-BrachName-gt" class="headerlink" title="git merge &lt;BrachName&gt;"></a>git merge <code>&lt;BrachName&gt;</code></h3><p>把BrachName分支合并到当前分支里，<strong>是将其他分支merge过来，即“合并过来”</strong></p>
+<h3 id="git-rebase-lt-BrachName-gt"><a href="#git-rebase-lt-BrachName-gt" class="headerlink" title="git rebase &lt;BrachName&gt;"></a>git rebase <code>&lt;BrachName&gt;</code></h3><p>把当前分支里的工作直接移到BrachName分支上，<strong>是对当前分支的rebase，即“合并过去”</strong></p>
 <p>优点：取出一系列的提交记录，“复制”它们，然后在另外一个地方逐个的放下去，创造更线性的提交历史</p>
 <p><strong>注意：是通过创建“副本”的方式进行的，最后需要切换到主分支，并且再次 git rebase 一下完成最终合并</strong></p>
 <h3 id="HEAD"><a href="#HEAD" class="headerlink" title="HEAD"></a>HEAD</h3><p>HEAD 总是指向当前分支上最近一次提交记录，随着提交向前移动</p>
 <p>如果想看 HEAD 指向，可以通过 <code>cat .git/HEAD</code> 查看</p>
 <p><strong>分离的 HEAD ：就是让其指向了某个具体的提交记录而不是分支名</strong></p>
 <h3 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h3><p>查看提交记录的哈希值</p>
-<h3 id="git-checkout-1"><a href="#git-checkout-1" class="headerlink" title="git checkout ^"></a>git checkout <BrabchName>^</h3><p>切换到BranchName的父节点</p>
-<h3 id="git-checkout-2"><a href="#git-checkout-2" class="headerlink" title="git checkout ~"></a>git checkout <BranchName>~<number></h3><p>切换到BranchName的上<number>个节点，<strong>即“移动节点”</strong></p>
-<h3 id="git-branch-f-HEAD"><a href="#git-branch-f-HEAD" class="headerlink" title="git branch -f  HEAD~"></a>git branch -f <BranchName> HEAD~<number></h3><p>将 BranchName 分支强制指向 HEAD 的第 3 级父提交，<strong>即“移动分支”</strong></p>
+<h3 id="git-checkout-lt-BrabchName-gt"><a href="#git-checkout-lt-BrabchName-gt" class="headerlink" title="git checkout &lt;BrabchName&gt;^"></a>git checkout <code>&lt;BrabchName&gt;</code>^</h3><p>切换到BranchName的父节点</p>
+<h3 id="git-checkout-lt-BranchName-gt-96-96"><a href="#git-checkout-lt-BranchName-gt-96-96" class="headerlink" title="git checkout &lt;BranchName&gt;~&#96;&#96;"></a>git checkout <code>&lt;BranchName&gt;</code>~&#96;<number>&#96;</h3><p>切换到BranchName的上<code>&lt;number&gt;</code>个节点，<strong>即“移动节点”</strong></p>
+<h3 id="git-branch-f-lt-BranchName-gt-HEAD-96-96"><a href="#git-branch-f-lt-BranchName-gt-HEAD-96-96" class="headerlink" title="git branch -f &lt;BranchName&gt; HEAD~&#96;&#96;"></a>git branch -f <code>&lt;BranchName&gt;</code> HEAD~&#96;<number>&#96;</h3><p>将 BranchName 分支强制指向 HEAD 的第 3 级父提交，<strong>即“移动分支”</strong></p>
 <p><strong>注意：此时HEAD 和 分支的分离</strong></p>
-<h3 id="或-git-branch-f"><a href="#或-git-branch-f" class="headerlink" title="或 git branch -f   "></a>或 git branch -f <BranchName1>  <BranchName2></h3><p>将 BranchName1 分支强制指向 BranchName2 分支</p>
-<h3 id="git-reset-HEAD"><a href="#git-reset-HEAD" class="headerlink" title="git reset HEAD~"></a>git reset HEAD~<number></h3><p>向上移动分支，原来指向的提交记录就跟从来没有提交过一样</p>
+<h3 id="或-git-branch-f-lt-BranchName1-gt-lt-BranchName2-gt"><a href="#或-git-branch-f-lt-BranchName1-gt-lt-BranchName2-gt" class="headerlink" title="或 git branch -f &lt;BranchName1&gt;  &lt;BranchName2&gt;"></a>或 git branch -f <code>&lt;BranchName1&gt;</code>  <code>&lt;BranchName2&gt;</code></h3><p>将 BranchName1 分支强制指向 BranchName2 分支</p>
+<h3 id="git-reset-HEAD-96-96"><a href="#git-reset-HEAD-96-96" class="headerlink" title="git reset HEAD~&#96;&#96;"></a>git reset HEAD~&#96;<number>&#96;</h3><p>向上移动分支，原来指向的提交记录就跟从来没有提交过一样</p>
 <p><strong>注意：在reset后， 之前所做的变更还在，但是处于未加入暂存区状态</strong></p>
-<h3 id="git-revert-HEAD-或-git-revert"><a href="#git-revert-HEAD-或-git-revert" class="headerlink" title="git revert HEAD 或 git revert "></a>git revert HEAD 或 git revert <BranchName></h3><p>git reset 对大家一起使用的远程分支是无效的，此时需要使用 git revert</p>
+<h3 id="git-revert-HEAD-或-git-revert-lt-BranchName-gt"><a href="#git-revert-HEAD-或-git-revert-lt-BranchName-gt" class="headerlink" title="git revert HEAD 或 git revert &lt;BranchName&gt;"></a>git revert HEAD 或 git revert <code>&lt;BranchName&gt;</code></h3><p>git reset 对大家一起使用的远程分支是无效的，此时需要使用 git revert</p>
 <p>revert 之后就可以把你的更改推送到远程仓库与别人分享</p>
 <p><strong>注意与reset的区别：不需要指定向上移动几级</strong></p>
-<h3 id="git-cherry-pick-…"><a href="#git-cherry-pick-…" class="headerlink" title="git cherry-pick   …"></a>git cherry-pick <CommitNumber1> <CommitNumber2> …</h3><p>将 CommitNumber1、CommitNumber2 复制到当前分支下</p>
+<h3 id="git-cherry-pick-lt-CommitNumber1-gt-lt-CommitNumber2-gt-…"><a href="#git-cherry-pick-lt-CommitNumber1-gt-lt-CommitNumber2-gt-…" class="headerlink" title="git cherry-pick &lt;CommitNumber1&gt; &lt;CommitNumber2&gt; …"></a>git cherry-pick <code>&lt;CommitNumber1&gt;</code> <code>&lt;CommitNumber2&gt;</code> …</h3><p>将 CommitNumber1、CommitNumber2 复制到当前分支下</p>
 <p><strong>当你知道你所需要的提交记录（并且还知道这些提交记录的哈希值）时, 用 cherry-pick 再好不过了 —— 没有比这更简单的方式了</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-picl C2</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://p.ipic.vip/80oacz.png" alt="Screenshot 2023-10-01 at 19.53.33"></p>
 <p>将提交树上的提交记录取过来追加到 HEAD 上（只要不是 HEAD 上游的提交就没问题）。</p>
-<h3 id="git-rebase-i-HEAD"><a href="#git-rebase-i-HEAD" class="headerlink" title="git rebase -i HEAD~"></a>git rebase -i HEAD~<number></h3><p>Git 会打开一个 UI 界面并列出将要被复制到目标分支的备选提交记录，它还会显示每个提交记录的哈希值和提交说明，提交说明有助于你理解这个提交进行了哪些更改。</p>
+<h3 id="git-rebase-i-HEAD-96-96"><a href="#git-rebase-i-HEAD-96-96" class="headerlink" title="git rebase -i HEAD~&#96;&#96;"></a>git rebase -i HEAD~&#96;<number>&#96;</h3><p>Git 会打开一个 UI 界面并列出将要被复制到目标分支的备选提交记录，它还会显示每个提交记录的哈希值和提交说明，提交说明有助于你理解这个提交进行了哪些更改。</p>
 <p>在实际使用时，所谓的 UI 窗口一般会在文本编辑器 —— 如 Vim —— 中打开一个文件。</p>
 <ul>
 <li>调整提交记录的顺序（通过鼠标拖放来完成）</li>
@@ -308,15 +308,15 @@
 <h3 id="git-commit-–amend"><a href="#git-commit-–amend" class="headerlink" title="git commit –amend"></a>git commit –amend</h3><p>以“复制”的方式修改当前提交</p>
 <h3 id="git-tag-v1-C1"><a href="#git-tag-v1-C1" class="headerlink" title="git tag v1 C1"></a>git tag v1 C1</h3><p>建立一个标签命名为 <code>v1</code>，并且明确地让它指向提交记录 <code>C1</code></p>
 <p>如果你不指定提交记录，Git 会用 <code>HEAD</code> 所指向的位置</p>
-<h3 id="git-describe"><a href="#git-describe" class="headerlink" title="git describe "></a>git describe <ref></h3><p>由于标签在代码库中起着“锚点”的作用，Git 还为此专门设计了一个命令用来<strong>描述</strong>离你最近的锚点（也就是标签），它就是 <code>git describe</code>！</p>
+<h3 id="git-describe-lt-ref-gt"><a href="#git-describe-lt-ref-gt" class="headerlink" title="git describe &lt;ref&gt;"></a>git describe <code>&lt;ref&gt;</code></h3><p>由于标签在代码库中起着“锚点”的作用，Git 还为此专门设计了一个命令用来<strong>描述</strong>离你最近的锚点（也就是标签），它就是 <code>git describe</code>！</p>
 <p>git describe 能帮你在提交历史中移动了多次以后找到方向；当你用 <code>git bisect</code>（一个查找产生 Bug 的提交记录的指令）找到某个提交记录时，或者是当你坐在你那刚刚度假回来的同事的电脑前时， 可能会用到这个命令。</p>
 <p><code>&lt;ref&gt;</code> 可以是任何能被 Git 识别成提交记录的引用，如果你没有指定的话，Git 会以HEAD所在位置</p>
 <p>它输出的结果是这样的：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;tag&gt;_&lt;numCommits&gt;_g&lt;hash&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`&lt;tag&gt;`_`&lt;numCommits&gt;`_g`&lt;hash&gt;`</span><br></pre></td></tr></table></figure>
 
 <p><code>tag</code> 表示的是离 <code>ref</code> 最近的标签， <code>numCommits</code> 是表示这个 <code>ref</code> 与 <code>tag</code> 相差有多少个提交记录， <code>hash</code> 表示的是你所给定的 <code>ref</code> 所表示的提交记录哈希值的前几位。</p>
 <p>当 <code>ref</code> 提交记录上有某个标签时，则只输出标签名称</p>
-<h3 id="git-checkout-master"><a href="#git-checkout-master" class="headerlink" title="git checkout master^"></a>git checkout master^<num></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout mater^2</span><br></pre></td></tr></table></figure>
+<h3 id="git-checkout-master-lt-num-gt"><a href="#git-checkout-master-lt-num-gt" class="headerlink" title="git checkout master^&lt;num&gt;"></a>git checkout master^<code>&lt;num&gt;</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout mater^2</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://p.ipic.vip/yx1vf1.png" alt="Screenshot 2023-10-01 at 20.19.00"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout HEAD~^2~2</span><br></pre></td></tr></table></figure>
@@ -341,7 +341,7 @@
 <p>理解这一点很重要，因为许多开发人员误以为执行了 <code>git fetch</code> 以后，他们本地仓库就与远程仓库同步了。它可能已经将进行这一操作所需的所有数据都下载了下来，但是<strong>并没有</strong>修改你本地的文件。</p>
 <p>所以, 你可以将 <code>git fetch</code> 的理解为单纯的下载操作。</p>
 <h3 id="git-pull"><a href="#git-pull" class="headerlink" title="git pull"></a>git pull</h3><p>由于先抓取更新再合并到本地分支这个流程很常用，因此 Git 提供了一个专门的命令来完成这两个操作</p>
-<p><strong>可以认为 git pull 是 git fetch 和 git merge <just-fetched-branch> 的缩写</strong></p>
+<p><strong>可以认为 git pull 是 git fetch 和 git merge <code>&lt;just-fetched-branch&gt;</code> 的缩写</strong></p>
 <p>git pull 唯一关注的是提交最终合并到哪里（也就是为 git fetch 所提供的 destination 参数）</p>
 <h3 id="git-push"><a href="#git-push" class="headerlink" title="git push"></a>git push</h3><p>负责将<strong>你的</strong>变更上传到指定的远程仓库，并在远程仓库上合并你的新提交记录。一旦 <code>git push</code> 完成, 你的朋友们就可以从这个远程仓库下载你分享的成果了</p>
 <p><strong>你可以将 <code>git push</code> 想象成发布你成果的命令</strong></p>
@@ -382,7 +382,7 @@
 
 
 
-<h3 id="git-push-e-g-git-push-origin-master"><a href="#git-push-e-g-git-push-origin-master" class="headerlink" title="git push    e.g. git push origin master"></a>git push <remote> <place>  e.g. git push origin master</h3><p>切到本地仓库中的 master 分支，获取所有的提交，再到远程仓库 origin 中找到 master 分支，将远程仓库中没有的提交记录都添加上去</p>
+<h3 id="git-push-lt-remote-gt-lt-place-gt-e-g-git-push-origin-master"><a href="#git-push-lt-remote-gt-lt-place-gt-e-g-git-push-origin-master" class="headerlink" title="git push &lt;remote&gt; &lt;place&gt;  e.g. git push origin master"></a>git push <code>&lt;remote&gt;</code> <code>&lt;place&gt;</code>  e.g. git push origin master</h3><p>切到本地仓库中的 master 分支，获取所有的提交，再到远程仓库 origin 中找到 master 分支，将远程仓库中没有的提交记录都添加上去</p>
 <p>我们通过 place 参数来告诉 Git 提交记录来自于 master, 要推送到远程仓库中的 master。它实际就是要同步的两个仓库的位置。</p>
 <p><strong>注意：因为我们通过指定参数告诉了 Git 所有它需要的信息, 所以它就忽略了我们所检出的分支的属性</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout C0; git push</span><br></pre></td></tr></table></figure>
@@ -390,7 +390,7 @@
 <p><img src="https://p.ipic.vip/s48a0u.png" alt="Screenshot 2023-09-28 at 18.46.46"></p>
 <p>失败原因：checkout 的 HEAD 没有跟踪任何分支。</p>
 <p>要同时为源和目的地指定 <code>&lt;place&gt;</code> 的话，只需要用冒号 <code>:</code> 将二者连起来就可以了：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin &lt;source&gt;:&lt;destination&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin `&lt;source&gt;`:`&lt;destination&gt;`</span><br></pre></td></tr></table></figure>
 
 <p>这个参数实际的值是git可以识别的位置（比如分支 <code>foo</code> 或者 <code>HEAD~1</code>）</p>
 <p>一旦你指定了独立的来源和目的地，就可以组织出言简意赅的远程操作命令了，让我们看看演示！</p>
@@ -411,11 +411,11 @@
 <ul>
 <li><code>git push origin :side</code></li>
 </ul>
-<p>如果 push 空 <source> 到远程仓库，它会删除远程仓库中的分支</p>
+<p>如果 push 空 <code>&lt;source&gt;</code> 到远程仓库，它会删除远程仓库中的分支</p>
 <ul>
 <li><code>git fetch origin :bugFix</code></li>
 </ul>
-<p>如果 fetch 空 <source> 到本地，会在本地创建一个新分支。</p>
+<p>如果 fetch 空 <code>&lt;source&gt;</code> 到本地，会在本地创建一个新分支。</p>
 
     </div>
 
@@ -431,8 +431,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Git/" rel="prev" title="Git">
-      <i class="fa fa-chevron-left"></i> Git
+    <a href="/2022/05/01/Tool/Gitee/" rel="prev" title="Gitee">
+      <i class="fa fa-chevron-left"></i> Gitee
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/05/01/Tool/GPU/" rel="next" title="GPU">
@@ -496,7 +496,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">Git 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">1.1.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch"><span class="nav-number">1.2.</span> <span class="nav-text">git branch </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout"><span class="nav-number">1.3.</span> <span class="nav-text">git checkout </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-merge"><span class="nav-number">1.4.</span> <span class="nav-text">git merge </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-rebase"><span class="nav-number">1.5.</span> <span class="nav-text">git rebase </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEAD"><span class="nav-number">1.6.</span> <span class="nav-text">HEAD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-log"><span class="nav-number">1.7.</span> <span class="nav-text">git log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-1"><span class="nav-number">1.8.</span> <span class="nav-text">git checkout ^</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-2"><span class="nav-number">1.9.</span> <span class="nav-text">git checkout ~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch-f-HEAD"><span class="nav-number">1.10.</span> <span class="nav-text">git branch -f  HEAD~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%96-git-branch-f"><span class="nav-number">1.11.</span> <span class="nav-text">或 git branch -f   </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-HEAD"><span class="nav-number">1.12.</span> <span class="nav-text">git reset HEAD~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-revert-HEAD-%E6%88%96-git-revert"><span class="nav-number">1.13.</span> <span class="nav-text">git revert HEAD 或 git revert </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-cherry-pick-%E2%80%A6"><span class="nav-number">1.14.</span> <span class="nav-text">git cherry-pick   …</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-rebase-i-HEAD"><span class="nav-number">1.15.</span> <span class="nav-text">git rebase -i HEAD~</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit-%E2%80%93amend"><span class="nav-number">1.16.</span> <span class="nav-text">git commit –amend</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-tag-v1-C1"><span class="nav-number">1.17.</span> <span class="nav-text">git tag v1 C1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-describe"><span class="nav-number">1.18.</span> <span class="nav-text">git describe </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-master"><span class="nav-number">1.19.</span> <span class="nav-text">git checkout master^</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Git%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E5%8D%8F%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">利用Git进行远程协作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-clone"><span class="nav-number">2.1.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-fetch"><span class="nav-number">2.2.</span> <span class="nav-text">git fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-pull"><span class="nav-number">2.3.</span> <span class="nav-text">git pull</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push"><span class="nav-number">2.4.</span> <span class="nav-text">git push</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E5%81%8F%E7%A6%BB%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">历史偏离问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-pull-%E2%80%93rebase-git-push"><span class="nav-number">2.6.</span> <span class="nav-text">git pull –rebase; git push</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rebase-%E4%B8%8E-merge"><span class="nav-number">2.7.</span> <span class="nav-text">rebase 与 merge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E5%85%B3%E8%81%94"><span class="nav-number">2.8.</span> <span class="nav-text">远程关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push-e-g-git-push-origin-master"><span class="nav-number">2.9.</span> <span class="nav-text">git push    e.g. git push origin master</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-fetch-origin-foo"><span class="nav-number">2.10.</span> <span class="nav-text">git fetch origin foo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push-origin-side-%E4%B8%8Egit-fetch-origin-bugFix"><span class="nav-number">2.11.</span> <span class="nav-text">git push origin :side 与git fetch origin :bugFix</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">1.</span> <span class="nav-text">Git 基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit"><span class="nav-number">1.1.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch-lt-NewBrachName-gt"><span class="nav-number">1.2.</span> <span class="nav-text">git branch &lt;NewBrachName&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-lt-BranchName-gt"><span class="nav-number">1.3.</span> <span class="nav-text">git checkout &lt;BranchName&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-merge-lt-BrachName-gt"><span class="nav-number">1.4.</span> <span class="nav-text">git merge &lt;BrachName&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-rebase-lt-BrachName-gt"><span class="nav-number">1.5.</span> <span class="nav-text">git rebase &lt;BrachName&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HEAD"><span class="nav-number">1.6.</span> <span class="nav-text">HEAD</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-log"><span class="nav-number">1.7.</span> <span class="nav-text">git log</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-lt-BrabchName-gt"><span class="nav-number">1.8.</span> <span class="nav-text">git checkout &lt;BrabchName&gt;^</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-lt-BranchName-gt-96-96"><span class="nav-number">1.9.</span> <span class="nav-text">git checkout &lt;BranchName&gt;~&#96;&#96;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch-f-lt-BranchName-gt-HEAD-96-96"><span class="nav-number">1.10.</span> <span class="nav-text">git branch -f &lt;BranchName&gt; HEAD~&#96;&#96;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%96-git-branch-f-lt-BranchName1-gt-lt-BranchName2-gt"><span class="nav-number">1.11.</span> <span class="nav-text">或 git branch -f &lt;BranchName1&gt;  &lt;BranchName2&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-HEAD-96-96"><span class="nav-number">1.12.</span> <span class="nav-text">git reset HEAD~&#96;&#96;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-revert-HEAD-%E6%88%96-git-revert-lt-BranchName-gt"><span class="nav-number">1.13.</span> <span class="nav-text">git revert HEAD 或 git revert &lt;BranchName&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-cherry-pick-lt-CommitNumber1-gt-lt-CommitNumber2-gt-%E2%80%A6"><span class="nav-number">1.14.</span> <span class="nav-text">git cherry-pick &lt;CommitNumber1&gt; &lt;CommitNumber2&gt; …</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-rebase-i-HEAD-96-96"><span class="nav-number">1.15.</span> <span class="nav-text">git rebase -i HEAD~&#96;&#96;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-commit-%E2%80%93amend"><span class="nav-number">1.16.</span> <span class="nav-text">git commit –amend</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-tag-v1-C1"><span class="nav-number">1.17.</span> <span class="nav-text">git tag v1 C1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-describe-lt-ref-gt"><span class="nav-number">1.18.</span> <span class="nav-text">git describe &lt;ref&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-master-lt-num-gt"><span class="nav-number">1.19.</span> <span class="nav-text">git checkout master^&lt;num&gt;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8Git%E8%BF%9B%E8%A1%8C%E8%BF%9C%E7%A8%8B%E5%8D%8F%E4%BD%9C"><span class="nav-number">2.</span> <span class="nav-text">利用Git进行远程协作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-clone"><span class="nav-number">2.1.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-fetch"><span class="nav-number">2.2.</span> <span class="nav-text">git fetch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-pull"><span class="nav-number">2.3.</span> <span class="nav-text">git pull</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push"><span class="nav-number">2.4.</span> <span class="nav-text">git push</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8E%86%E5%8F%B2%E5%81%8F%E7%A6%BB%E9%97%AE%E9%A2%98"><span class="nav-number">2.5.</span> <span class="nav-text">历史偏离问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-pull-%E2%80%93rebase-git-push"><span class="nav-number">2.6.</span> <span class="nav-text">git pull –rebase; git push</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rebase-%E4%B8%8E-merge"><span class="nav-number">2.7.</span> <span class="nav-text">rebase 与 merge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E5%85%B3%E8%81%94"><span class="nav-number">2.8.</span> <span class="nav-text">远程关联</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push-lt-remote-gt-lt-place-gt-e-g-git-push-origin-master"><span class="nav-number">2.9.</span> <span class="nav-text">git push &lt;remote&gt; &lt;place&gt;  e.g. git push origin master</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-fetch-origin-foo"><span class="nav-number">2.10.</span> <span class="nav-text">git fetch origin foo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-push-origin-side-%E4%B8%8Egit-fetch-origin-bugFix"><span class="nav-number">2.11.</span> <span class="nav-text">git push origin :side 与git fetch origin :bugFix</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -511,7 +511,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">164</span>
+          <span class="site-state-item-count">165</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
