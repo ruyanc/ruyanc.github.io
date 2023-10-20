@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Anaconda 环境迁移conda可以很方便地管理不同项目的环境，避免相互污染，常用命令如下： 123456789101112# 创建环境conda create -n py36 python&#x3D;3.6# 激活环境 source activate py36# 退出环境 source deactivate# 删除环境 conda remove -n py36 --all# 查看所有环境 conda">
+  <meta name="description" content="Conda软件环境迁移1234567891011121314151617# 更新conda$ conda update -n base -c conda-forge conda# 创建py3环境并安装python$ conda create -n py3 python&#x3D;3.12# 打包conda下的环境进行移植$ conda pack -n envsname -o conda_envsname.t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Conda">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/Conda/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="Anaconda 环境迁移conda可以很方便地管理不同项目的环境，避免相互污染，常用命令如下： 123456789101112# 创建环境conda create -n py36 python&#x3D;3.6# 激活环境 source activate py36# 退出环境 source deactivate# 删除环境 conda remove -n py36 --all# 查看所有环境 conda">
+<meta property="og:description" content="Conda软件环境迁移1234567891011121314151617# 更新conda$ conda update -n base -c conda-forge conda# 创建py3环境并安装python$ conda create -n py3 python&#x3D;3.12# 打包conda下的环境进行移植$ conda pack -n envsname -o conda_envsname.t">
 <meta property="og:locale">
+<meta property="og:image" content="https://pic2.zhimg.com/80/v2-3db1eb4779203684c59e35555dcb45ad_720w.webp">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-06T02:53:05.469Z">
+<meta property="article:modified_time" content="2023-10-19T06:29:59.535Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-3db1eb4779203684c59e35555dcb45ad_720w.webp">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/Conda/">
 
@@ -230,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-06 10:53:05" itemprop="dateModified" datetime="2023-07-06T10:53:05+08:00">2023-07-06</time>
+                <time title="Modified: 2023-10-19 14:29:59" itemprop="dateModified" datetime="2023-10-19T14:29:59+08:00">2023-10-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -260,11 +262,89 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Anaconda-环境迁移"><a href="#Anaconda-环境迁移" class="headerlink" title="Anaconda 环境迁移"></a>Anaconda 环境迁移</h2><p>conda可以很方便地管理不同项目的环境，避免相互污染，常用命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建环境</span></span><br><span class="line">conda create -n py36 python=3.6</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">激活环境</span> </span><br><span class="line">source activate py36</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">退出环境</span> </span><br><span class="line">source deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除环境</span> </span><br><span class="line">conda remove -n py36 --all</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看所有环境</span> </span><br><span class="line">conda env list</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前环境安装包</span> </span><br><span class="line">conda list</span><br></pre></td></tr></table></figure>
+        <h2 id="Conda软件环境迁移"><a href="#Conda软件环境迁移" class="headerlink" title="Conda软件环境迁移"></a>Conda软件环境迁移</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新conda</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda update -n base -c conda-forge conda</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建py3环境并安装python</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda create -n py3 python=3.12</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打包conda下的环境进行移植</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda pack -n envsname -o conda_envsname.tar.gz</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前所有软件环境</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda <span class="built_in">env</span> list</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前环境安装包</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda list</span></span><br></pre></td></tr></table></figure>
 
-<p>在日常的工作和学习中，可能手头有很多服务器，在一台服务器上搭建了合适的开发环境，如何高效地复制到所有机器上呢？这里主要以目标服务器是否可以联网，介绍了如何方便地迁移虚拟环境。</p>
-<h3 id="目标机器可以访问互联网"><a href="#目标机器可以访问互联网" class="headerlink" title="目标机器可以访问互联网:"></a>目标机器可以访问互联网:</h3><ul>
+
+
+<h2 id="Conda-环境启动与退出"><a href="#Conda-环境启动与退出" class="headerlink" title="Conda 环境启动与退出"></a>Conda 环境启动与退出</h2><p>conda可以很方便地管理不同项目的环境，避免相互污染，常用命令如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">激活环境</span> </span><br><span class="line">source activate py36</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">退出环境</span> </span><br><span class="line">source deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除环境</span> </span><br><span class="line">conda remove -n py36 --all</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="linux服务器离线安装conda-无网络迁移conda环境"><a href="#linux服务器离线安装conda-无网络迁移conda环境" class="headerlink" title="linux服务器离线安装conda-无网络迁移conda环境"></a>linux服务器离线安装conda-无网络迁移conda环境</h2><p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/602012820">https://zhuanlan.zhihu.com/p/602012820</a></p>
+<h3 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h3><p>服务器在无法联网的情况下，安装anaconda</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="下载安装包"><a href="#下载安装包" class="headerlink" title="下载安装包"></a>下载安装包</h4><p><a href="https://link.zhihu.com/?target=https://docs.conda.io/en/latest/miniconda.html%23linux-installers">https://docs.conda.io/en/latest/miniconda.html#linux-installers</a></p>
+<h3 id="上传到服务器"><a href="#上传到服务器" class="headerlink" title="上传到服务器"></a>上传到服务器</h3><h4 id="执行安装脚本"><a href="#执行安装脚本" class="headerlink" title="执行安装脚本"></a>执行安装脚本</h4><p>sh Anaconda3-2021.11-Linux-x86_64.sh</p>
+<p>可以自定义Anaconda的安装路径</p>
+<h4 id="迁出机器部分——打包环境"><a href="#迁出机器部分——打包环境" class="headerlink" title="迁出机器部分——打包环境"></a>迁出机器部分——打包环境</h4><p>迁出机器安装打包工具</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge conda-pack</span><br></pre></td></tr></table></figure>
+
+<p>安装好之后打包需要迁出的环境（-n 之后为 虚拟环境名字 -o 之后为打包出来的文件名）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda pack -n envsname -o conda_envsname.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>如图所示 是一个压缩文件，包含了你环境本身以及所有的包</p>
+<p><img src="https://pic2.zhimg.com/80/v2-3db1eb4779203684c59e35555dcb45ad_720w.webp" alt="img"></p>
+<p>将打包的环境通过 ftp 传输到迁入机器中</p>
+<p>迁出机器部分结束</p>
+<h4 id="迁入机器部分——解压、部署环境"><a href="#迁入机器部分——解压、部署环境" class="headerlink" title="迁入机器部分——解压、部署环境"></a>迁入机器部分——解压、部署环境</h4><p>在你的 anaconda 目录下创建文件夹 名称（envs）即为你迁过来的环境名称</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /root/anaconda3/envs/envsname</span><br></pre></td></tr></table></figure>
+
+<p>解压环境（-C 之前为打包压缩文件路径 -C 之后为迁入机器 anaconda3 文件夹下 envs 目录 + 环境名）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzf /root/tempfile/conda_envsname.tar.gz -C /root/anaconda3/envs/envsname</span><br></pre></td></tr></table></figure>
+
+<p>执行后完成 cd 进 envs 目录中已经可以看到环境拷贝完成</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/root/anaconda3/envs/envsname</span><br></pre></td></tr></table></figure>
+
+<p>检查环境是否完全复制</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda activate envsname</span><br><span class="line"></span><br><span class="line">pip list</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="无联网转移依赖包如下："><a href="#无联网转移依赖包如下：" class="headerlink" title="无联网转移依赖包如下："></a>无联网转移依赖包如下：</h3><p><a href="https://link.zhihu.com/?target=https://blog.csdn.net/Lsy_0408/article/details/122216652">conda虚拟环境的离线迁移_Lsy_0408的博客-CSDN博客_conda环境迁移</a></p>
+<p>假定A为能上网的需要迁移出环境的机器；B为不能上网的需要迁移入环境的机器。</p>
+<h4 id="方法一：直接拷贝envs下的整个已有环境"><a href="#方法一：直接拷贝envs下的整个已有环境" class="headerlink" title="方法一：直接拷贝envs下的整个已有环境"></a>方法一：直接拷贝envs下的整个已有环境</h4><p>先下载A机中envs目录下的已有环境文件夹，并将其上传至B机上</p>
+<p>然后使用以下命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n [new_envs_name] --clone[path to envs_names] --offline</span><br></pre></td></tr></table></figure>
+
+<p>注：</p>
+<p>-n [new_envs_name]：和正常创建conda的一样，创建新的虚拟环境的名字</p>
+<p>–clone [path to envs_names]：需要迁移的虚拟环境文件夹的地址</p>
+<p>–offline：离线安装的指令</p>
+<p>但实际操作后发现会有RunTimeError，提示信息如下：</p>
+<p>可能的解决方案（待测试）：</p>
+<p>需要传至B机的不只有envs目录下的已有环境文件夹，还有anaconda下的pkgs文件夹。</p>
+<p>所以需要用上传的pkgs文件夹替换B机原有的anaconda&#x2F;pkgs目录，或者将文件夹里的内容复制到B机原有的pkgs文件夹里面。然后再使用</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda create -n [name] --<span class="built_in">clone</span> [filepath] --offline</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h4><p><strong>1. 导出依赖清单</strong></p>
+<p>进入A机的anaconda环境，使用conda导出：</p>
+<p>conda env export &gt; copytest.yaml</p>
+<p>得到的yaml文件如下：</p>
+<p>在A机上建立一个txt文件，命名为conda.yaml，其中复制入dependencies:内的部分，并将“ - ”替换为“”（把空格和‘-’替换为空）。如果不修改，安装时报错。记事本编辑\替换可以完成这个操作。修改完成的清单如下：</p>
+<p>在A机上再建立一个txt文件，命名为pip.txt，其中复制入pip:内的部分。替换要求同上，修改完成的清单如下：</p>
+<p><strong>2. 获取依赖安装包</strong></p>
+<p>获取conda依赖安装包：</p>
+<p>进入A机anaconda安装根目录中的pkgs（注意不是环境中的），拷贝出所有的“.conda”，“.tar.bz2”</p>
+<p>下载pip依赖安装包：</p>
+<p>在A机上利用pip根据pip.txt中的清单下载依赖包。-r表示依赖清单，-d表示存储依赖的路径。（此处cd到了Desktop）</p>
+<p>pip download -r pip.txt -d piplib</p>
+<p>注：若使用 pip freeze &gt; pip.txt 命令，其中部分导出的模块会显示 @ file:&#x2F;&#x2F;&#x2F;…，并非具体的版本号，会导致报错。</p>
+<p>最终需要从A机传至B机的共有以下四个文件： conda.yaml，pip.txt，conda安装包文件夹（名为condafile），pip安装包文件夹（名为pipfile）</p>
+<p><strong>3. B机安装</strong></p>
+<p>进入B机已创建的环境</p>
+<p>conda安装：</p>
+<p>将condafile里面的所有文件拷贝到B机的anaconda&#x2F;pkgs目录，Cd 到conda.yaml 的目录下，并执行命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">Conda install --file conda.yaml –offline</span></span><br></pre></td></tr></table></figure>
+
+<p>若出现报错，可能是由于安装了其他python版本的包，或者是其依赖库没有找到，需要下载相对应的库。</p>
+<p>pip安装：</p>
+<p>同上，Cd 到pip.txt 的目录下，并执行命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">Pip install -r pip.txt --no-index --find-links=. --user</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="目标机器可以访问互联网"><a href="#目标机器可以访问互联网" class="headerlink" title="目标机器可以访问互联网:"></a>目标机器可以访问互联网:</h3><p>参考：<a target="_blank" rel="noopener" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file">https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file</a></p>
+<ul>
 <li>激活需要迁移的环境，通过conda env export &gt; pyn_env.yml导出当前环境的一些配置信息</li>
 <li>将pyn_env.yml文件拷贝到目标机器上，执行conda env create -f pyn_env.yml（确保目标机器已经安装了Anaconda，下同）。</li>
 </ul>
@@ -276,7 +356,6 @@
 <li>此时conda env list就可以看到该环境了；</li>
 <li>activate wrfpy激活环境，执行conda-unpack，大功告成！</li>
 </ul>
-<p>参考：<a target="_blank" rel="noopener" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file">https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#create-env-from-file</a></p>
 
     </div>
 
@@ -357,7 +436,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Anaconda-%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB"><span class="nav-number">1.</span> <span class="nav-text">Anaconda 环境迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-number">1.1.</span> <span class="nav-text">目标机器可以访问互联网:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">目标机器不可以访问互联网：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Conda-Pack%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E8%BF%81%E7%A7%BB"><span class="nav-number">1.2.1.</span> <span class="nav-text">使用Conda-Pack来进行环境的打包和迁移</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB"><span class="nav-number">1.</span> <span class="nav-text">Conda软件环境迁移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda-%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%80%80%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">Conda 环境启动与退出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85conda-%E6%97%A0%E7%BD%91%E7%BB%9C%E8%BF%81%E7%A7%BBconda%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">linux服务器离线安装conda-无网络迁移conda环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="nav-number">3.1.</span> <span class="nav-text">问题背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">3.2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">3.2.1.</span> <span class="nav-text">下载安装包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">上传到服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">3.3.1.</span> <span class="nav-text">执行安装脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%87%BA%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E6%89%93%E5%8C%85%E7%8E%AF%E5%A2%83"><span class="nav-number">3.3.2.</span> <span class="nav-text">迁出机器部分——打包环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%85%A5%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E8%A7%A3%E5%8E%8B%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-number">3.3.3.</span> <span class="nav-text">迁入机器部分——解压、部署环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%81%94%E7%BD%91%E8%BD%AC%E7%A7%BB%E4%BE%9D%E8%B5%96%E5%8C%85%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">3.4.</span> <span class="nav-text">无联网转移依赖包如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E7%9B%B4%E6%8E%A5%E6%8B%B7%E8%B4%9Denvs%E4%B8%8B%E7%9A%84%E6%95%B4%E4%B8%AA%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83"><span class="nav-number">3.4.1.</span> <span class="nav-text">方法一：直接拷贝envs下的整个已有环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A"><span class="nav-number">3.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-number">3.5.</span> <span class="nav-text">目标机器可以访问互联网:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%9A"><span class="nav-number">3.6.</span> <span class="nav-text">目标机器不可以访问互联网：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Conda-Pack%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E8%BF%81%E7%A7%BB"><span class="nav-number">3.6.1.</span> <span class="nav-text">使用Conda-Pack来进行环境的打包和迁移</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -372,7 +451,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">165</span>
+          <span class="site-state-item-count">168</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

@@ -20,17 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="E-mail: ruyan1810@gmail.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ruyanc">
-<meta property="og:url" content="http://example.com/archives/2023/06/index.html">
+  <meta name="description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#114;&amp;#111;&amp;#111;&amp;#116;&amp;#64">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SCP">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/SCP/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="E-mail: ruyan1810@gmail.com">
+<meta property="og:description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#114;&amp;#111;&amp;#111;&amp;#116;&amp;#64">
 <meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-19T00:52:47.669Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/archives/2023/06/">
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/SCP/">
 
 
 <script id="page-configurations">
@@ -38,12 +40,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-Hans'
   };
 </script>
 
-  <title>Archive | ruyanc</title>
+  <title>SCP | ruyanc</title>
   
 
 
@@ -191,51 +193,118 @@
         <div class="content-wrap">
           
 
-          <div class="content archive">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        
-        <span class="collection-header">Great! 165 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/SCP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SCP
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-19 08:52:47" itemprop="dateModified" datetime="2023-10-19T08:52:47+08:00">2023-10-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2023</span>
+        <h2 id="scp时报错"><a href="#scp时报错" class="headerlink" title="scp时报错"></a>scp时报错</h2><p><strong>scp: Received message too long 220204320</strong></p>
+<p><strong>scp: Ensure the remote shell produces no output for non-interactive sessions.</strong></p>
+<h4 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h4><p>ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议)</p>
+<p>使用命令行sftp <a href="mailto:&#114;&#111;&#111;&#116;&#64;&#49;&#48;&#x31;&#46;&#51;&#x35;&#46;&#x78;&#120;&#x2e;&#x78;&#120;">&#114;&#111;&#111;&#116;&#64;&#49;&#48;&#x31;&#46;&#51;&#x35;&#46;&#x78;&#120;&#x2e;&#x78;&#120;</a>连接时，返回了这个错误：Received message too long 1763729773 Ensure the remote shell produces no output for non-interactive sessions. (收到的信息太长 1763729773 确保远程shell对非交互式会话不产生输出)</p>
+<p>坑点在于使用Tabby(一个终端模拟器)连接sftp并不会报错，而是一直没反应。只有使用命令行连接时，才得知了这个错误，但平时很少人会尝试用命令行连接。</p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>原因是：~&#x2F;.bashrc 或 ~&#x2F;.bashrc等Shell启动文件中存在echo，printf等输出语句，导致sftp不能建立连接。<br>(这两是bash的启动文件，如果你用的是zsh等其他Shell，需要找与你用的Shell对应的启动文件。)<br>(关于shell启动文件详见：【Linux基础】理解并善用Shell – Shell精讲)</p>
+<p>————<br>根据这篇文章 Received message too long Ensure the remote shell produces no output for non-interactive sessions.<br>所说：经过实验：</p>
+<p>如果在 &#x2F;etc&#x2F;bashrc 或 <del>&#x2F;.bashrc 中有echo等输出语句, 则无法远程用scp, sftp 传文件<br>如果在 &#x2F;etc&#x2F;profile 或 ~&#x2F;.bash_profile 中有echo等输出语句, 不影响用scp, sftp 传文件<br>这里有一些小问题，&#x2F;etc&#x2F;profile和</del>&#x2F;.bash_profile是交互式登录式shell加载的，&#x2F;etc&#x2F;bashrc 或 ~&#x2F;.bashrc是交互式非登录式Shell加载的。而命令行连接sftp报的错是… produces no output for non-interactive sessions，说的是非交互式Shell。这里就有点矛盾，按说非交互式Shell不会加载Shell的启动文件，而sftp明显需要登录。<br>说这些仅做了解即可，具体就不深究了，这都是小问题。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p><strong>方法一：</strong> 移除Shell启动文件中的输出语句。<br>移除 ~&#x2F;.bashrc 或 ~&#x2F;.bashrc等启动文件中的输出语句。<br>其实这些文件本身是没有输出语句的，所以基本上是使用者自己写的，具体写在哪些文件里应该会有印象。并且这些语句会在建立ssh连接的时候打印出来，真的不好找的话，可以在所有启动文件中搜索打印的内容，就能找到啦。<strong>（验证通过该方法可以解决）</strong></p>
+<p><strong>方法二：</strong> 修改sftp服务为内部的sftp。<br>编辑<code>/etc/ssh/sshd_config</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$</span><span class="language-bash">vim /etc/ssh/sshd_config</span></span><br></pre></td></tr></table></figure>
+
+<p>找到<code>Subsystem</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">override default of no subsystems</span></span><br><span class="line">Subsystem sftp  /usr/libexec/openssh/sftp-server</span><br></pre></td></tr></table></figure>
+
+<p>注释掉，并新增一行 <code>Subsystem sftp internal-sftp</code> , 表示使用内部sftp<br>(修改后, 即便Shell启动文件中有输出语句，也不再影响sftp的使用)</p>
+<p>然后重新连接ssh，或重启sshd服务即可</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2023-06-01T12:00:00+08:00"
-              content="2023-06-01">
-          06-01
-        </time>
-      </div>
+      <footer class="post-footer">
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2023/06/01/Recharge/2023%20WeChat%20News%20Jun/" itemprop="url">
-            <span itemprop="name">WeChat News</span>
-          </a>
-      </div>
+        
 
-    </header>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Python%20Library/" rel="prev" title="Python Library">
+      <i class="fa fa-chevron-left"></i> Python Library
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Python%20Color/" rel="next" title="Python Color">
+      Python Color <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
   </article>
-
-
-    </div>
-  </div>
   
   
-  
-
   
 
 
@@ -288,6 +357,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#scp%E6%97%B6%E6%8A%A5%E9%94%99"><span class="nav-number">1.</span> <span class="nav-text">scp时报错</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%B0%E8%B1%A1"><span class="nav-number">1.0.1.</span> <span class="nav-text">现象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.0.2.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">1.0.3.</span> <span class="nav-text">解决方法</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -302,7 +372,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">165</span>
+          <span class="site-state-item-count">168</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

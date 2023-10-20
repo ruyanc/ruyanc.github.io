@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Environment Modules 简明教程来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;50725572 Modules 简介在 Linux 超算平台上，通常会安装有不同版本的多种编译器和其他软件等，如常用的编译器有 intel 和 gnu，常用的 MPI 并行库包括 intel mpi，openmpi，mpich2 等，而且对于同一软件，还包含不同的版本或采用不同编译设置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Module">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Module/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Environment Modules 简明教程来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;50725572 Modules 简介在 Linux 超算平台上，通常会安装有不同版本的多种编译器和其他软件等，如常用的编译器有 intel 和 gnu，常用的 MPI 并行库包括 intel mpi，openmpi，mpich2 等，而且对于同一软件，还包含不同的版本或采用不同编译设置">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-20T03:14:31.255Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Module/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Module | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Module/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Module
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-20 11:14:31" itemprop="dateModified" datetime="2023-10-20T11:14:31+08:00">2023-10-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Environment-Modules-简明教程"><a href="#Environment-Modules-简明教程" class="headerlink" title="Environment Modules 简明教程"></a>Environment Modules 简明教程</h2><p>来源：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/50725572">https://zhuanlan.zhihu.com/p/50725572</a></p>
+<h3 id="Modules-简介"><a href="#Modules-简介" class="headerlink" title="Modules 简介"></a>Modules 简介</h3><p>在 Linux 超算平台上，通常会安装有不同版本的多种编译器和其他软件等，如常用的编译器有 intel 和 gnu，常用的 MPI 并行库包括 intel mpi，openmpi，mpich2 等，而且对于同一软件，还包含不同的版本或采用不同编译设置得到的可执行程序和链接库等。在使用这些程序时，经常需要对环境变量进行修改。并且由于程序编译时会调用不同类型编译器或第三库，这时程序之间还存在着依赖关系。这使得当执行某个特定版本的程序时，环境变量的修改变得十分复杂。</p>
+<p>Environment Modules 包是一个简化 shell 初始化的工具，它允许用户在使用 modulefiles 进行会话期间轻松修改其环境。每个模块文件都包含为应用程序配置 shell 所需的信息。模块文件可以由系统上的许多用户共享，并且用户可以拥有自己的集合来补充或替换共享模块文件。</p>
+<h3 id="Modules-安装"><a href="#Modules-安装" class="headerlink" title="Modules 安装"></a>Modules 安装</h3><p>Modules 可直接采用源码安装方式，在<a href="https://link.zhihu.com/?target=http://modules.sourceforge.net/"> Modules 官网</a>下载最新4.2.1版本的源代码。在 Terminal 中输入如下命令安装 Modules 软件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># modules 安装目录</span></span><br><span class="line">INSTALL_PATH=<span class="variable">$&#123;HOME&#125;</span>/opt/modules-4.2.1/</span><br><span class="line"></span><br><span class="line">tar -xvf modules-4.2.1.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入 modules 目录</span></span><br><span class="line"><span class="built_in">cd</span> modules-4.2.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装 modules 软件</span></span><br><span class="line">./configure --prefix=<span class="variable">$&#123;INSTALL_PATH&#125;</span></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<p>在安装完毕后我们将 modules 设置脚本添加入环境变量中。注意，modules 中包含多种 shell 设置脚本，可以根据不同情况设置。这里由于我们用的是 zsh，输入如下命令即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;souce <span class="variable">$&#123;HOME&#125;</span>/opt/modules-4.2.1/init/zsh&quot;</span> &gt;&gt; ~/.zshrc</span><br><span class="line">souce ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>输入如下命令，查看当前包含的模块并加载用户模块</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜  ~ module avail</span><br><span class="line">------------------------------------------ /usr/share/Modules/modulefiles ------------------------------------------</span><br><span class="line">dot  module-git  module-info  modules  null  use.own</span><br><span class="line">➜  ~ module load use.own</span><br><span class="line">➜  ~ module list</span><br><span class="line">Currently Loaded Modulefiles:</span><br><span class="line"> 1) use.own</span><br></pre></td></tr></table></figure>
+
+<p>此时，用户目录下会出现 <code>privatemodules</code> 文件夹，用户可以直接在此文件夹中添加自定义模块文件添加环境变量。</p>
+<h3 id="Modules-使用"><a href="#Modules-使用" class="headerlink" title="Modules 使用"></a>Modules 使用</h3><p>Modules 使用包括 shell 命令和 modulefile 文件定义两部分内容，下面将分别进行介绍。</p>
+<h4 id="Modules-指令"><a href="#Modules-指令" class="headerlink" title="Modules 指令"></a>Modules 指令</h4><p>module 安装好后，即可调用 module [command] 来查看或加载模块，主要指令如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">➜ ~ module avail <span class="comment"># 列出当前 module path 中的所有可用模块文件</span></span><br><span class="line">------------------------------------------ /usr/share/Modules/modulefiles ------------------------------------------</span><br><span class="line">dot  module-git  module-info  modules  null  use.own  </span><br><span class="line"></span><br><span class="line">----------------------------------------- /home/lilongxiang/privatemodules -----------------------------------------</span><br><span class="line">cmake/3.8.0</span><br><span class="line"></span><br><span class="line">➜ ~ module load cmake/3.8.0 <span class="comment"># 加载模块文件/类</span></span><br><span class="line"></span><br><span class="line">➜ ~ module list <span class="comment"># 显示已经加载的模块</span></span><br><span class="line">Currently Loaded Modulefiles:</span><br><span class="line"> 1) use.own   2) cmake/3.8.0 </span><br><span class="line"></span><br><span class="line">➜ ~ module unload cmake <span class="comment"># 卸载模块文件/类</span></span><br><span class="line"></span><br><span class="line">➜ ~ module list <span class="comment"># 显示已经加载的模块</span></span><br><span class="line">Currently Loaded Modulefiles:</span><br><span class="line"> 1) use.own</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="Modules-脚本内容"><a href="#Modules-脚本内容" class="headerlink" title="Modules 脚本内容"></a>Modules 脚本内容</h4><p>采用 module load 命令时，可用的模块其实都是安装在 module path 目录下的 modulefile 文件。一个基本 modulefile 内容如下</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#%Module -*- tcl -*-</span></span><br><span class="line"><span class="comment">## This is a module to access something</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示 module help 主要内容</span></span><br><span class="line"><span class="keyword">proc</span><span class="title"> ModulesHelp</span> &#123; &#125; &#123;</span><br><span class="line">        <span class="keyword">puts</span> stderr <span class="string">&quot;This module sets up access to something&quot;</span> </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示 module whatis 显示主要内容</span></span><br><span class="line">module-whatis <span class="string">&quot;sets up access to something&quot;</span></span><br><span class="line"><span class="comment"># module 加载前需要模块类</span></span><br><span class="line">prereq module_flag</span><br><span class="line"><span class="comment"># module 加载冲突模块类</span></span><br><span class="line">conflict another_module_flag</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载其他模块</span></span><br><span class="line">module <span class="keyword">load</span> gcc</span><br><span class="line"><span class="comment"># 设置环境变量</span></span><br><span class="line">setenv       SOMEVERION       <span class="number">0.95</span></span><br><span class="line"><span class="comment"># 添加环境变量</span></span><br><span class="line"><span class="keyword">append</span>-path  PATH             /home/[user]/[somedir]/bin</span><br><span class="line"><span class="keyword">append</span>-path  MANPATH          /home/[user]/[somedir]/man</span><br><span class="line"><span class="keyword">append</span>-path  LD_LIBRARY_PATH  /home/[user]/[somedir]/lib</span><br></pre></td></tr></table></figure>
+
+<p>其中包含的设置关键字有以下几个</p>
+<ul>
+<li><code>prereq</code> 指示加载此脚本需要预先加载的模块名，当这些模块没有预先加载时，module load 此模块会报错；</li>
+<li><code>conflict</code> 指示与此模块冲突的其他模块类，注意这里不仅可以添加 modulefile 文件名称，也可添加 modulefile 所在路径文件名，此时代表模块和文件内所有模块类都会产生冲突；</li>
+<li><code>module load</code> 指示加载此模块同时自动加载的模块，注意其和 <code>prereq</code> 命令的不同；</li>
+<li><code>setenv</code> 设定环境变量；</li>
+<li><code>append-path</code> 添加环境变量；</li>
+</ul>
+<h4 id="Modules-脚本配置"><a href="#Modules-脚本配置" class="headerlink" title="Modules 脚本配置"></a>Modules 脚本配置</h4><p>modulefile 文件可以按照相关功能添加到不同目录中，下面显示了 privatemodules 文件夹内所有 modulefile 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── cmake</span><br><span class="line">│   └── 3.8.0</span><br><span class="line">├── compiler</span><br><span class="line">│   └── intel</span><br><span class="line">│       └── 2018.1.163</span><br><span class="line">└── mpi</span><br><span class="line">    ├── gnu</span><br><span class="line">    │   ├── mpich2</span><br><span class="line">    │   │   └── 3.2.1</span><br><span class="line">    │   └── openmpi</span><br><span class="line">    │       └── 3.1.3</span><br><span class="line">    ├── intel</span><br><span class="line">    │   ├── intel_mpi</span><br><span class="line">    │   │   └── 2018.1.163</span><br><span class="line">    │   ├── mpich2</span><br><span class="line">    │   └── openmpi</span><br><span class="line">    │       └── 3.1.3</span><br><span class="line">    └── mpich2</span><br></pre></td></tr></table></figure>
+
+<p>调用 module avail 命令，对应显示内容如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜ ~ module avail</span><br><span class="line">------------------------------------------ /usr/share/Modules/modulefiles ------------------------------------------</span><br><span class="line">dot  module-git  module-info  modules  null  use.own  </span><br><span class="line"></span><br><span class="line">----------------------------------------- /home/lilongxiang/privatemodules -----------------------------------------</span><br><span class="line">cmake/3.8.0                mpi/gnu/mpich2/3.2.1   mpi/intel/intel_mpi/2018.1.163  </span><br><span class="line">compiler/intel/2018.1.163  mpi/gnu/openmpi/3.1.3  mpi/intel/openmpi/3.1.3</span><br></pre></td></tr></table></figure>
+
+<p>在此用户配置文件中，所有与 mpi 库相关的 modulefile 文件都放在了目录 privatemodules&#x2F;mpi 内，并且根据编译时所调用的编译器种类分为 gnu 和 intel 两个文件夹。 按照这种设置方法可以方便的对 modulefile 文件进行配置，在每个 modulefile 文件内添加 <code>conflict mpi</code>，即可避免用户加载不同的 mpi 配置文件，当加载多个时 module 程序会直接报错</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">➜ ~ module load mpi/intel/openmpi/3.1.3</span><br><span class="line">Loading mpi/intel/openmpi/3.1.3</span><br><span class="line">  Loading requirement: compiler/intel/2018.1.163</span><br><span class="line">➜ ~ module load mpi/gnu/openmpi/3.1.3</span><br><span class="line">Loading mpi/gnu/openmpi/3.1.3</span><br><span class="line">  ERROR: mpi/gnu/openmpi/3.1.3 cannot be loaded due to a conflict.</span><br><span class="line">    HINT: Might try &quot;module unload mpi/intel/openmpi/3.1.3&quot; first.</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Modules-示例"><a href="#Modules-示例" class="headerlink" title="Modules 示例"></a>Modules 示例</h3><h4 id="Intel-编译器环境变量设置"><a href="#Intel-编译器环境变量设置" class="headerlink" title="Intel 编译器环境变量设置"></a>Intel 编译器环境变量设置</h4><p>intel 编译器安装后提供了 compilervars.sh 脚本文件自动为用户添加环境变量设置，但是这种方法不适用于 module 脚本，因为 modulefile 实际为 tcl 脚本文件，因此无法运行 shell 命令。</p>
+<p>为了获取 intel 脚本内 设定的环境变量，可以采用 <a href="https://link.zhihu.com/?target=https://sourceforge.net/projects/env2/">env2</a> 脚本来方便的直接获取。下载 env2 脚本，运行</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl ./env2 -from bash -to modulecmd &quot;&lt;path to intel shell script&gt; intel64&quot; &gt;&gt; intell_module_file.log</span><br></pre></td></tr></table></figure>
+
+<p>即可在 intell_module_file.log 中查看 compilervars.sh 总定义的所有环境变量。将 intell_module_file.log 文件放置到 <code>~/privatemodules/compiler/intel/</code> 路径下，文件名用具体版本号 <code>2018.1.163</code> 替代，随后便可用</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module load compiler/intel/2018.1.163</span><br></pre></td></tr></table></figure>
+
+<p>命令添加 intel 编译器环境变量。</p>
+<h4 id="openmpi-环境变量设置"><a href="#openmpi-环境变量设置" class="headerlink" title="openmpi 环境变量设置"></a>openmpi 环境变量设置</h4><p>在设置好 intel 编译器环境后，编译 openmpi 库并安装到 <code>$&#123;HOME&#125;/opt/openmpi-3.1.3-intel</code> 目录下。 在 <code>privatemodules/mpi/intel/openmpi/3.1.3</code> 文件内添加</p>
+<figure class="highlight tcl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#%Module -*- tcl -*-</span></span><br><span class="line"><span class="comment">## This is a module to access cmake-3.8.0-rc1</span></span><br><span class="line"><span class="keyword">proc</span><span class="title"> ModulesHelp</span> &#123; &#125; &#123;</span><br><span class="line">        <span class="keyword">puts</span> stderr <span class="string">&quot;This module sets up access to openmpi-3.1.3 built with intel compiler&quot;</span> </span><br><span class="line">&#125;</span><br><span class="line">module-whatis <span class="string">&quot;sets up access to openmpi-3.1.3 with intel compiler&quot;</span></span><br><span class="line"><span class="comment">#prereq intel_2018</span></span><br><span class="line">conflict mpi</span><br><span class="line">module <span class="keyword">load</span> compiler/intel/<span class="number">2018.1</span><span class="number">.163</span></span><br><span class="line">setenv       SOMEVERION       <span class="number">3.1</span><span class="number">.3</span></span><br><span class="line"><span class="keyword">append</span>-path  PATH             <span class="variable">$&#123;HOME&#125;</span>/opt/openmpi<span class="number">-3.1</span><span class="number">.3</span>-intel/bin</span><br><span class="line"><span class="keyword">append</span>-path  LD_LIBRARY_PATH  <span class="variable">$&#123;HOME&#125;</span>/opt/openmpi<span class="number">-3.1</span><span class="number">.3</span>-intel/lib</span><br></pre></td></tr></table></figure>
+
+<p>即可通过命令 <code>module load mpi/intel/openmpi/3.1.3</code> 来加载编译后的 openmpi 环境。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/NCL/" rel="prev" title="NCL">
+      <i class="fa fa-chevron-left"></i> NCL
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Mac%20Cron/" rel="next" title="Mac Cron">
+      Mac Cron <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Environment-Modules-%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B"><span class="nav-number">1.</span> <span class="nav-text">Environment Modules 简明教程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text">Modules 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules-%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">Modules 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules-%E4%BD%BF%E7%94%A8"><span class="nav-number">1.3.</span> <span class="nav-text">Modules 使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Modules-%E6%8C%87%E4%BB%A4"><span class="nav-number">1.3.1.</span> <span class="nav-text">Modules 指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Modules-%E8%84%9A%E6%9C%AC%E5%86%85%E5%AE%B9"><span class="nav-number">1.3.2.</span> <span class="nav-text">Modules 脚本内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Modules-%E8%84%9A%E6%9C%AC%E9%85%8D%E7%BD%AE"><span class="nav-number">1.3.3.</span> <span class="nav-text">Modules 脚本配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Modules-%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.4.</span> <span class="nav-text">Modules 示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Intel-%E7%BC%96%E8%AF%91%E5%99%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.1.</span> <span class="nav-text">Intel 编译器环境变量设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#openmpi-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.4.2.</span> <span class="nav-text">openmpi 环境变量设置</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
