@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）来源：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43750300&#x2F;article&#x2F;details&#x2F;125741208 过段时间就要进所打工了，说到回所，肯定要用所里的服务器学着跑模式，然而身为小白的我，对这块还是云里雾里，老样子，先搞理论，把整个流程理清楚，不然回所上手又是一脸懵逼，浪费时间。首先">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WRF-HPC">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/WRF-HPC/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）来源：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43750300&#x2F;article&#x2F;details&#x2F;125741208 过段时间就要进所打工了，说到回所，肯定要用所里的服务器学着跑模式，然而身为小白的我，对这块还是云里雾里，老样子，先搞理论，把整个流程理清楚，不然回所上手又是一脸懵逼，浪费时间。首先">
+<meta property="og:locale">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/abd5d04e91a3406c85e1589be41f2fa0.png">
+<meta property="og:image" content="https://p.ipic.vip/iir5oy.png">
+<meta property="og:image" content="https://p.ipic.vip/e2v8v9.png">
+<meta property="og:image" content="https://p.ipic.vip/ys73f7.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:29.484Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF-HPC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>WRF-HPC | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/WRF-HPC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WRF-HPC
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-23 19:12:29" itemprop="dateModified" datetime="2023-10-23T19:12:29+08:00">2023-10-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）"><a href="#大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）" class="headerlink" title="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）"></a>大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）</h2><p>来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43750300/article/details/125741208">https://blog.csdn.net/weixin_43750300/article/details/125741208</a></p>
+<p>过段时间就要进所打工了，说到回所，肯定要用所里的服务器学着跑模式，然而身为小白的我，对这块还是云里雾里，老样子，先搞理论，把整个流程理清楚，不然回所上手又是一脸懵逼，浪费时间。<br>首先应当指出的是，我的标题取得并不严谨，一般来说，我们的数值预报并不是用大型计算机来计算的，而是使用超算计算的，而超算严格来讲也和我们印象中的“计算机”有所差异，更接近于一个操作平台。平时所说的”使用大型机跑模式“，是一种口语化的表达，而这些表达往往会给初学者带来一些误解，致使在初次接触模式运行时，经常会无从下手。<br>“工欲善其事，必先利其器”，在开始学习模式时，除了对整个流程有所了解外，也应当适当了解我们所使用的平台本身，理清一些底层逻辑，这样我们在实际应用时，将会更加顺手与灵活。<br>在本文，我会首先给出一些基本概念，简单总结超算工作原理，之后我会给出运行WRF时Linux系统需要用到的一些操作，最后，我会给出WRF示例，并回顾总结整个流程。<br>注意：本篇文章的仅为入门内容，笔者无意教各位许多深入的知识，而是更想构建一个框架，以便各位在学习时能形成更加系统的知识框架，便于更好理解、应用、纠错。</p>
+<p><img src="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png" alt="在这里插入图片描述"></p>
+<h4 id="大型机"><a href="#大型机" class="headerlink" title="大型机"></a>大型机</h4><p>大型机（mainframe)最初是指装在非常大的带框铁盒子里的大型计算机系统，随着科技的发展，目前的大型机已经不再是最初定义，从核心而言， 大型机是高性能的计算机，具有大量内存和处理器，能够实时处理数以十亿计的计算和事务。<br>目前来说，mainframe有了新的意义，已经由我们印象里“大型主机”变成了一种大型商业服务器的代称，不过，最常见的大型机指代的仍然是由IBM所制造的以可靠性、可伸缩性、兼容性和安全性作为核心设计价值的计算机，主要用于商业数据的保存、传输、管理。<br>从以上我们可以看出，大型机并的主要用户并不是科研运算，它更倾向于商业数据的管理，更加注重安全、兼容与隐私问题，而在使用科学数值模拟时，我们会更注重计算机的运算速度、内存等，这些并不是大型机应用范围，而是超算使用的领域。</p>
+<h4 id="超算集群-Cluster"><a href="#超算集群-Cluster" class="headerlink" title="超算集群(Cluster)"></a>超算集群(Cluster)</h4><p>超算并不是我们一般理解的一台占地极大，运算效率极强的计算机，而是一批性能强大的计算机组成的集群，更接近于一个多用户共享服务平台。<br>什么是集群？顾名思义，将多个独立计算机，利用高速通信技术，将它们联系起来，这样，这一批高性能计算机服务器与计算能力便集合起来，运算效率提高的同时，也降低了成本。<br>集群分为许多中，本文所介绍的便是高性能计算集群，也称并行运算，高性能计算集群就是我们一般指代的超级计算机，内部由数十至上万个独立服务器组成，并且在公共消息传递层上进行通信以并行运行应用程序。在生产环境中实际就是把任务切成蛋糕，然后下发到集群节点计算，计算后返回结果，然后继续领新任务计算，如此往复。<br>用最耳熟能详的一句话来概括超算集群的原理便是“集中力量办大事”，在天气预报、核试验模拟等运算量极大的应用中，一个计算能力强大的计算机是不够的。不过，与这种朴素的原理应用于计算机技术中，仍然需要与现实对应的一套运筹管理方案，我们下面来简单讲解以下。</p>
+<h4 id="基本架构"><a href="#基本架构" class="headerlink" title="基本架构"></a>基本架构</h4><p>下图是普林斯顿大学的超算集群结构，集群中每一个计算机称为节点(node），节点分为两种：头节点（head node)和计算节点（compute node)。</p>
+<p><img src="https://img-blog.csdnimg.cn/abd5d04e91a3406c85e1589be41f2fa0.png" alt="在这里插入图片描述"></p>
+<p>典型的普林斯顿研究计算集群的通用架构。图由Mukarramahmad绘制，Jon Halverson修改。来源：<a target="_blank" rel="noopener" href="https://researchcomputing.princeton.edu/faq/what-is-a-cluster">https://researchcomputing.princeton.edu/faq/what-is-a-cluster</a><br>所谓头节点就是用户使用的计算机，在这台计算机上，我们主要编译代码、撰写脚本与提交任务。<br>计算节点：是运行任务的了计算机，在计算节点上运行作业，我们必须通过作业调度器。通过将作业提交给作业调度器，一旦请求的资源可用，这些作业将自动在计算节点上运行。<br>在运行模式时，用户应当使用软件将需要的数据、文件上传至cluster上，在撰写相应的脚本进行提交任务，并等待作业运算</p>
+<h3 id="系统：Linux"><a href="#系统：Linux" class="headerlink" title="系统：Linux"></a>系统：Linux</h3><p>目前超算使用的系统以Linux系统为主，再入门前我们必然要了解一些Linux基础知识，在本节我会介绍一些使用中需要Linux基本知识，如果想要更加系统了解相关Linux知识的话，推荐b站课程：尚硅谷Linux教程</p>
+<h4 id="远程登陆与文件传输"><a href="#远程登陆与文件传输" class="headerlink" title="远程登陆与文件传输"></a>远程登陆与文件传输</h4><p>我们已经知道了超算的架构是由多个计算机构成的集群，在实际使用时，用户自然不可能到超算集群所在的机房中使用，为了方便在各地的用户都能使用超算资源，我们首先需要远程登陆到超算的服务器上，以便我们能在自己的计算机上远程操作并使用超算系统。<br>远程登陆一般使用基于SSH网络协议实现两台计算机间的连接，通过相应的软件远程登陆与操作，许多软件可以完成：mobaxterm ssh secure shell xshell putty SecureCRT等，可以根据喜好选择。<br>在远程登陆后，我们还需要用基于FTP&#x2F;SFTP的安全协议完成两个电脑间的文件传输，用来实现自己的电脑和远程服务器之间文件的上传下载。<br>一般而言，远程登陆软件都带有与自己配套的文件传输软件，如xshell和xftp，在这里我推荐一款比较全能的终端软件：mobaxterm。<br>mobaxterm是一款增强型的终端软件，功能强大，且带有许多插件、操作方便，其下载安装与使用参考：MobaXterm</p>
+<h4 id="基础命令与文本编辑"><a href="#基础命令与文本编辑" class="headerlink" title="基础命令与文本编辑"></a>基础命令与文本编辑</h4><p>与Windows以图形界面交互完成各种操作不同，Linux系统需要使用各种命令来完成对应的操作。<br>对于Linux的基础命令，网上随处可见，按我的理解来看，使用超算运行模式常用的基础命令无非为：目录操作、文件创建于删改、文件连接与查看、文件压缩输出等，初学者在使用时可直接搜索相关命令。<br>在Windows系统中，记事本可谓是十分强大且方便的文本编辑与查看工具，Linux也有着对应的文本编辑器vi。<br>许多 Linux 上面的指令都默认使用 vi 作为数据编辑的接口，因此vi的使用是必须掌握的。<br>vim则是vi文本编辑器的进阶，它类似于我们一般使用的程序编辑器，在相关脚本代码时，vim会根据代码内容与语法使用颜色来突出一些特殊信息，此外vim还加入了多档案编辑、区块复制等功能。</p>
+<h4 id="vi-x2F-vim使用"><a href="#vi-x2F-vim使用" class="headerlink" title="vi&#x2F;vim使用"></a>vi&#x2F;vim使用</h4><p>vi&#x2F;vim有三种模式：</p>
+<p>命令模式（command mode）：一般打开vi的默认模式，在该模式下，你可以：移动光标（键盘按键）、复制粘贴、删除字、字符、整行内容，你不可以：输入、编辑文字。<br>插入模式（Insert mode）：按i可进入该模式，只有在该模式下，才可以做文字输入与编辑，按Esc键可回到命令行模式。<br>底行模式（last line mode）：按“：”进入该模式，该模式下，光标将移至编辑器最低行，该模式下，你可以保存文本、退出vi编辑器，进行字符查找等。</p>
+<p><img src="https://p.ipic.vip/iir5oy.png" alt="在这里插入图片描述"></p>
+<p>三种模式关系，来源：<a target="_blank" rel="noopener" href="https://nscc.mrzhenggang.com/supercomputer-courses/vim/#vim%E4%BD%BF%E7%94%A8%E5%88%9D%E7%BA%A7">https://nscc.mrzhenggang.com/supercomputer-courses/vim/#vim%E4%BD%BF%E7%94%A8%E5%88%9D%E7%BA%A7</a><br>了解了vi的三种模式后，可以在不同模式下进行相关的操作，vi&#x2F;vim的操作主要依靠键盘，需要在键盘上按下相应按键实现操作。<br>vi相关命令见：vi常见命令或自行搜索。</p>
+<h4 id="Shell脚本"><a href="#Shell脚本" class="headerlink" title="Shell脚本"></a>Shell脚本</h4><p>计算机的硬件由系统的核心(Kernel)，而Shell则意为核心的外壳，这层外壳连接了用户和核心，允许用户操作应用程序。实现对计算机的控制。Linux的许多命令如：ls、cd、pwd就属于Shell命令。<br>程序化脚本shell scriptsShell命令组成的执行文件，将一些命令整合到一个文件中，进行处理业务逻辑，脚本不需要编译，通过解释器解释运行，速度相对来说比较慢，脚本最重要的是理解变量、赋值和条件判断。<br>Shell脚本最大的用处，在于**批处理文件（batch)**的使用，在运行WRF时，我们不需要撰写复杂的Shell脚本，不过我们仍然应当了解一些Shell的基本命令和脚本调试命令，若想继续探寻Shell脚本的编写，可参考：一篇教会你写90%的shell脚本</p>
+<h4 id="Moduel（模块）"><a href="#Moduel（模块）" class="headerlink" title="Moduel（模块）"></a>Moduel（模块）</h4><p>按照个人理解与Linux中的moduel与R语言中的Package类似，是可以完成一个独立功能的一组函数的集合，当需要使用该功能时，需要加载相应的模块。<br>模块命令 来源：<a target="_blank" rel="noopener" href="https://nscc.mrzhenggang.com/supercomputer-courses/module/#_1-%E4%BB%80%E4%B9%88%E6%98%AFmodule">https://nscc.mrzhenggang.com/supercomputer-courses/module/#_1-%E4%BB%80%E4%B9%88%E6%98%AFmodule</a><br>在使用超算运行WRF时，我们需要配置相应的环境，加载需要的模块才能运行,一般使用Envrionment modules工具加载和卸载modulefile文件可直接改变用户的环境变量。</p>
+<h3 id="作业调度-x2F-任务提交"><a href="#作业调度-x2F-任务提交" class="headerlink" title="作业调度&#x2F;任务提交"></a>作业调度&#x2F;任务提交</h3><p>前面提到超算集群往往用于计算量极大的科学与军事应用中，并且是一个共享的服务平台，任何拥有平台账户的登陆后即可提交作业使用。<br>但并不是简单的将所有的计算机用来处理一个任务， 而往往是按需所取，用户需要等调度系统分配好相应的计算资源，才能开始运行，调度系统则是通过这种一些规则分配资源，以达到提高科研利用效率的目的。这与经典问题中的“排队论”似乎异曲同工之妙，对于作业调度通常由专门的作业调度器来安排，这里以Slurm为例简单介绍。</p>
+<h4 id="Slurm"><a href="#Slurm" class="headerlink" title="Slurm"></a>Slurm</h4><p>Slurm是一个开源，容错，高度可扩展的集群管理和作业调度系统，适用于大型和小型Linux集群。Slurm不需要对其操作进行内核修改，并且相对独立。作为集群工作负载管理器，Slurm有三个关键功能。首先，它在一段时间内为用户分配对资源（计算节点）的独占和&#x2F;或非独占访问，以便他们可以执行工作。其次，它提供了一个框架，用于在分配的节点集上启动，执行和监视工作（通常是并行作业）。最后，它通过管理待处理工作的队列来仲裁资源争用。</p>
+<p><strong>基本架构</strong><br>Slurm包含在每个计算节点上运行的slurmd守护程序和在管理节点上运行的中央slurmctld守护程序。<br>slurmctld:控制进程，相当于整个系统的中枢，负责资源状态维护、资源分配、作业调度、作业管理控制等。<br>slurmd：节点监控进程，负责收集节点上的资源状态并向控制进程报告。slurmd 接收来自控制进程与用户命令的请求，进行作业步任务加载、作业取消等操作。<br>**slurmstepd ：作业管理进程，由 slurmd 在加载作业步任务或批处理作业时派生。 负责计算任务启动、标准 I&#x2F;O 转发、信号传递、记账信息收集以及并行环境初始化等功能。<br>** slurmdbd：记录存储进程，命令工具与控制进程访问记账数据库的中间层。它提供访问记账数据与关联信息的统一接口，并起到用户认证与安全隔离的作用。<br>Slurm主要通过这些程序管理作业的分配、存储、执行与监视等内容。</p>
+<p><img src="https://p.ipic.vip/e2v8v9.png" alt="在这里插入图片描述"></p>
+<p>这些Slurm程序管理对象包括我们前文所说的节点(node)、计算资源， 分区（Partition），将节点分组， 作业(Job)或分配给用户的指定数量的资源分配时间和 工作步骤(Job Step)。<br>为了提高效率，Slurm会进行分区，这个分区类似于排队的队列，每个队列具有不同的特性，如：作业大小限制，作业时间限制，允许使用它的用户，不同队列用以完成不同的任务，队列间并不相互干扰。用户在提交作业时，应当指定作业所属调度器队列，随后，调度器会给对应队列的作业按优先级排序，并分配相应的节点与计算资源进行工作，如对应分区的资源耗尽，则用户作业需要排队等候。</p>
+<p><strong>基础命令</strong><br>关于Sliurm的简介与安装配置，可以查看：Slurm资源管理与作业调度系统安装配置，此处不再赘述，在安装配置好Slurm后，我们可以使用相应的命令进行作业调度、提交等功能，其基本命令概括如下：<br>sacct用于报告有关活动或已完成作业的作业或作业步骤会计信息。<br>salloc用于实时为作业分配资源。通常，这用于分配资源并生成shell。然后使用shell执行srun命令以启动并行任务。<br>sattach用于将标准输入，输出和错误加信号功能附加到当前正在运行的作业或作业步骤。可以多次附加和分离作业。<br>sbatch用于提交作业脚本以供以后执行。该脚本通常包含一个或多个用于启动并行任务的srun命令。<br>sbcast用于将文件从本地磁盘传输到分配给作业的节点上的本地磁盘。这可用于有效地使用无盘计算节点或相对于共享文件系统提供改进的性能。<br>scancel用于取消挂起或正在运行的作业或作业步骤。它还可用于向与正在运行的作业或作业步骤相关联的所有进程发送任意信号。<br>scontrol是用于查看和&#x2F;或修改Slurm状态的管理工具。请注意，许多 scontrol 命令只能以root用户身份执行。<br>sinfo报告由Slurm管理的分区和节点的状态。它具有各种过滤，排序和格式选项。<br>smap报告由Slurm管理的作业，分区和节点的状态信息，但以图形方式显示反映网络拓扑的信息。<br>squeue报告工作或工作步骤的状态。它具有各种过滤，排序和格式选项。默认情况下，它按优先级顺序报告正在运行的作业，然后按优先级顺序报告挂起的作业。<br>srun用于提交作业以便实时执行或启动作业步骤。 srun 有多种选项来指定资源要求，包括：最小和最大节点数，处理器数，要使用或不使用的特定节点，以及特定节点特征（如此多的内存，磁盘空间，某些必需的功能等） 。作业可以包含在作业节点分配中的独立或共享资源上顺序或并行执行的多个作业步骤。<br>strigger用于设置，获取或查看事件触发器。事件触发器包括节点关闭或作业接近其时间限制等事件。<br>sview是一个图形用户界面，用于获取和更新Slurm管理的作业，分区和节点的状态信息。<br>用户可以使用help来查看这些命令的基本描述。</p>
+<p>作业提交与运行<br>当然，在实际运用过程中，我们通常只会用到上述命令中的几个：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">sinfo#</span><span class="language-bash">查看节点与分区状态</span></span><br><span class="line"></span><br><span class="line">squeue3查看队列状态</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">scancel#</span><span class="language-bash">取消作业</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">sacct#</span><span class="language-bash">查看历史作业信息</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">salloc#</span><span class="language-bash">分配资源</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">sbatch#</span><span class="language-bash">提交批处理作业</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">scontrol#</span><span class="language-bash">系统控制</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">srun#</span><span class="language-bash">执行作业</span></span><br></pre></td></tr></table></figure>
+
+<p>首先，在上传任务之前，我们应当先使用sinfo命令查看系统状况，看看分区与节点状态以便选择作业上传的分区。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sinfo</span></span><br><span class="line">PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST</span><br><span class="line">debug*      up      30:00     100  drain  cn[1-100]</span><br><span class="line">debug*      up      30:00     100  alloc  cn[101-200]</span><br><span class="line">batch       up      30:00     100  idle   cn[200-300]</span><br><span class="line">batch       uo      30:00     100  down*  cn[300-400]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p.ipic.vip/ys73f7.png" alt="在这里插入图片描述"></p>
+<p>关键词说明，图表来源： <a target="_blank" rel="noopener" href="https://nscc.mrzhenggang.com/supercomputer-courses/slurm/#%E6%9F%A5%E7%9C%8B%E5%8F%AF%E7%94%A8%E8%8A%82%E7%82%B9-yhi">slurm作业管理系统使用教学</a><br>从上例可以看出，此超算有两个分区，debug和batch，表示提交作业的默认分区，对于相同的分区，可以用多行信息表示，以此来表示不同节点的状态。也就是说，在同一分区中，不同的节点状态也是不同的，如down表示节点不可用，则我们在选择时也可以选择对应分区的对应节点（使用公共前缀adev和标识的数字范围或特定数字来选择），这样在管理可以更加集中。<br>选择对应的分区节点后，我们开始提交作业。作业提交分为两种交互式作业任务与批处理任务。<br>交互式任务提交<br>交互式任务允许用户实时监测程序的输出与运行并允许用户直接调试程序，在对于任务数据处于探索阶段时，或者使用R或python等交互式平台工具时，可以考虑使用交互式任务提交。<br>交互式任务提交童超就要通过salloc申请到计算节点，再ssh连接到计算节点，srun命令直接执行任务，该模式下，用户可以直接登录到计算节点，此后 所有的操作都在这个节点上进行。<br>先使用salloc命令申请资源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">salloc -p C032M0128G -N1 -n6 -q low -t 2:00:0</span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">% -N &lt;节点数量&gt;</span></span><br><span class="line">--cpus-per-task=&lt;单进程 CPU 核心数&gt;</span><br><span class="line">--gres=gpu:&lt;单节点 GPU 卡数&gt;</span><br><span class="line">-t &lt;最长运行时间&gt;</span><br><span class="line">-p &lt;使用的分区&gt;</span><br><span class="line">--qos=&lt;使用的 QoS&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在执行salloc命令成功后，会出现新的shell，返回申请到的节点和作业ID等信息，之后用户可直接连接到节点使用srun执行任务，srun常用选项有：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-n 指定运行任务数</span><br><span class="line">-c 每个任务所需要的任务器核数</span><br><span class="line">-N 作业分配节点数</span><br><span class="line">-p 指定分区</span><br></pre></td></tr></table></figure>
+
+<p>上述示例表示在三个节点（-N3）上执行 &#x2F;bin&#x2F;hostname任务，并在输出（-l）上包含任务编号。将使用默认分区。默认情况下，每个任务一个节点。<br>交互式计算使用完毕后，先使用 exit 退出节点，再执行 exit 退出 SLURM 分配 的 Shell，可结束这次交互式任务。SLURM 会提示你交互式任务的资源已经被释放。<br>批处理任务<br>一般情况下，我们会撰写脚本再进行执行，再通过Sbatch命令执行脚本。<br>使用vim等文本编辑器创建后缀为,sh的脚本，如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vim myjob.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>之后开始撰写脚本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash <span class="comment">#固定行，使脚本作为bash  script执行</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">所有SBATCH 为头的命令用来设置Slurmd调度中需要的参数，可以不进行设置，使用默认值</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -J <span class="built_in">test</span>                   <span class="comment"># 作业名为 test</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -o test.out               <span class="comment"># 屏幕上的输出文件重定向到 test.out</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -p gpu                    <span class="comment"># 作业提交的分区为 cpu</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --qos=debug               <span class="comment"># 作业使用的 QoS 为 debug</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -N 1                      <span class="comment"># 作业申请 1 个节点</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --ntasks-per-node=1       <span class="comment"># 单节点启动的进程数为 1</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --cpus-per-task=4         <span class="comment"># 单任务使用的 CPU 核心数为 4</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH -t 1:00:00                <span class="comment"># 任务运行的最长时间为 1 小时</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --gres=gpu:1              <span class="comment"># 单个节点使用 1 块 GPU 卡</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCh -w comput6                <span class="comment"># 指定运行作业的节点是 comput6，若不填写系统自动分配节点</span></span></span><br><span class="line">run your command</span><br></pre></td></tr></table></figure>
+
+<p>比如，若要执行某一python脚本，可在命令行写上：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">python &lt;脚本名&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>即可。<br>将 SLURM 脚本编写完毕并上传工作站后（或直接在工作站编辑），进入SLURM 脚本的目录，直接</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sbatch myjob.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>提交即可。</p>
+<h4 id="任务状态查询与取消"><a href="#任务状态查询与取消" class="headerlink" title="任务状态查询与取消"></a>任务状态查询与取消</h4><p>通常使用squeue和sacct来监控在SLURM中的作业活动，squeue查看当前运行作业队列情况，sacct查看已结束任务情况。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">squeue</span></span><br><span class="line">JOBID    PARTITION  NAME     USER       ST  TIME      NODES NODELIST(REASON)</span><br><span class="line">1454916  debug      sub.sh   zhenggang  R   00:05:00  2     cn[5-6]</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">以上分别代表作业号，分区，作业名，用户，作业状态，运行时间，节点数量，运行节点REASON表示正在排队的原因</span></span><br></pre></td></tr></table></figure>
+
+<p>squeue常见参数有：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">--help    # 显示squeue命令的使用帮助信息；</span><br><span class="line">-A &lt;account_list&gt;    # 显示指定账户下所有用户的作业，如果是多个账户的话用逗号隔开；</span><br><span class="line">-i &lt;seconds&gt;     # 每隔相应的秒数，对输出的作业信息进行刷新</span><br><span class="line">-j &lt;job_id_list&gt; # 显示指定作业号的作业信息，如果是多个作业号的话用逗号隔开；</span><br><span class="line">-n &lt;name_list&gt;     # 显示指定节点上的作业信息，如果指定多个节点的话用逗号隔开；</span><br><span class="line">-t &lt;state_list&gt;     # 显示指定状态的作业信息，如果指定多个状态的话用逗号隔开；</span><br><span class="line">-u &lt;user_list&gt;     # 显示指定用户的作业信息，如果是多个用户的话用逗号隔开；</span><br><span class="line">-w &lt;hostlist&gt;     # 显示指定节点上运行的作业，如果是多个节点的话用逗号隔开；</span><br></pre></td></tr></table></figure>
+
+<p>过使用aact查询特定任务的细节</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sacct -j JOBID</span><br><span class="line">输出：JobID    JobName  Partition    Account  AllocCPUS      State ExitCode</span><br><span class="line">作业号，作业名，分区，计费账户，申请的CPU数量，状态，结束代码</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="WRF安装与运行"><a href="#WRF安装与运行" class="headerlink" title="WRF安装与运行"></a>WRF安装与运行</h3><h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p>在自定义安装软件的时候，经常需要配置环境变量，只有在特定环境下，Linux才能运行相应的软件。环境变量可分为：<br>永久变量：通过修改配置文件，配置之后变量永久生效。<br>临时性变量：使用命令如export等命令设置，设置之后马上生效。当关闭shell的时候失效（这种主要用于测试比较多）。<br>在安装WRF时，我们必须将其编译，形成相应的可执行文件，而在编译与运行过程中，我们就需要许多变量的设置</p>
+<h4 id="WRF安装"><a href="#WRF安装" class="headerlink" title="WRF安装"></a>WRF安装</h4><p>首先你当然应该先安装WRF，但相关教程实在太多，我不想过多赘述，请自行搜索。<br>我这里总结以下WRF的安装步骤，请各位在安装时一步步对照，以便安装出现错误时便于查找。<br>1、Window下的Linux系统安装（多种方式，自行选择）<br>2、安装编译器与系统环境：WRF代码是由C与Fortran写成，使用WRF也安装需要各种各样相关的编译器，可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42372313/article/details/121849142?spm=1001.2014.3001.5502">WRF环境与编译器安装</a><br>Linux中编译代码只需要：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">令[compiler] -flag [sourcefile] -o [executive]。</span><br><span class="line">compiler为编译器名，flag为编译过程中的参数设</span><br><span class="line">置，sourcefile为源代码文件，executive为编译成的可执行文件，默认的文 件是a.out</span><br></pre></td></tr></table></figure>
+
+<p>3、安装库，WRF要实现nc文件的读取、编译WPS，需要装一大堆库，参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42372313/article/details/121870313">WRF三方库安装</a><br>4、安装与编译WRF。<br>编译WRF前你需要导入相应的环境变量，如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">module load oneapi</span><br><span class="line">export CC=icc</span><br><span class="line">export FC=ifort</span><br><span class="line">export F90=ifort</span><br><span class="line">export CXX=icpc</span><br><span class="line">export DIR=/dssg/home/acct-hpc/hpchgc/software/wrf/WRF_4.1.1_Intel/library</span><br><span class="line">export LD_LIBRARY_PATH=$DIR/wrf_libs_intel/lib:$LD_LIBRARY_PATH</span><br><span class="line">export LDFLAGS=-L$DIR/wrf_libs_intel/lib</span><br><span class="line">export CPPFLAGS=-I$DIR/wrf_libs_intel/include</span><br><span class="line">export NETCDF=$DIR/wrf_libs_intel/</span><br><span class="line">export HDF5=$DIR/wrf_libs_intel/</span><br><span class="line">export NETCDF=$DIR/wrf_libs_intel/</span><br><span class="line">export HDF5=$DIR/wrf_libs_intel/</span><br></pre></td></tr></table></figure>
+
+<p>然后，解压下载的WRF安装包，进入WRF文件夹，开始编译：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar Wrf v4.0.1.tar.gz</span><br><span class="line">cd WRF-4.0.1/</span><br><span class="line">./configure</span><br></pre></td></tr></table></figure>
+
+<p>然后，出现一大堆东西让你选择相应参数，即选择编译器、构建 WRF 的方式（即，串行或并行），官方给了三种不同类型的并行（smpar、dmpar 和 dm+sm）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Please select from among the following Linux x86_64 options:</span><br><span class="line"></span><br><span class="line">  1. (serial)   2. (smpar)   3. (dmpar)   4. (dm+sm)   PGI (pgf90/gcc)</span><br><span class="line">  5. (serial)   6. (smpar)   7. (dmpar)   8. (dm+sm)   PGI (pgf90/pgcc): SGI MPT</span><br><span class="line">  9. (serial)  10. (smpar)  11. (dmpar)  12. (dm+sm)   PGI (pgf90/gcc): PGI accelerator</span><br><span class="line"> 13. (serial)  14. (smpar)  15. (dmpar)  16. (dm+sm)   INTEL (ifort/icc)</span><br><span class="line">                                         17. (dm+sm)   INTEL (ifort/icc): Xeon Phi (MIC architecture)</span><br><span class="line"> 18. (serial)  19. (smpar)  20. (dmpar)  21. (dm+sm)   INTEL (ifort/icc): Xeon (SNB with AVX mods)</span><br><span class="line"> 22. (serial)  23. (smpar)  24. (dmpar)  25. (dm+sm)   INTEL (ifort/icc): SGI MPT</span><br><span class="line"> 26. (serial)  27. (smpar)  28. (dmpar)  29. (dm+sm)   INTEL (ifort/icc): IBM POE</span><br><span class="line"> 30. (serial)               31. (dmpar)                PATHSCALE (pathf90/pathcc)</span><br><span class="line"> 32. (serial)  33. (smpar)  34. (dmpar)  35. (dm+sm)   GNU (gfortran/gcc)</span><br><span class="line"> 36. (serial)  37. (smpar)  38. (dmpar)  39. (dm+sm)   IBM (xlf90_r/cc_r)</span><br><span class="line"> 40. (serial)  41. (smpar)  42. (dmpar)  43. (dm+sm)   PGI (ftn/gcc): Cray XC CLE</span><br><span class="line"> 44. (serial)  45. (smpar)  46. (dmpar)  47. (dm+sm)   CRAY CCE (ftn $(NOOMP)/cc): Cray XE and XC</span><br><span class="line"> 48. (serial)  49. (smpar)  50. (dmpar)  51. (dm+sm)   INTEL (ftn/icc): Cray XC</span><br><span class="line"> 52. (serial)  53. (smpar)  54. (dmpar)  55. (dm+sm)   PGI (pgf90/pgcc)</span><br><span class="line"> 56. (serial)  57. (smpar)  58. (dmpar)  59. (dm+sm)   PGI (pgf90/gcc): -f90=pgf90</span><br><span class="line"> 60. (serial)  61. (smpar)  62. (dmpar)  63. (dm+sm)   PGI (pgf90/pgcc): -f90=pgf90</span><br><span class="line"> 64. (serial)  65. (smpar)  66. (dmpar)  67. (dm+sm)   INTEL (ifort/icc): HSW/BDW</span><br><span class="line"> 68. (serial)  69. (smpar)  70. (dmpar)  71. (dm+sm)   INTEL (ifort/icc): KNL MIC</span><br><span class="line"> 72. (serial)  73. (smpar)  74. (dmpar)  75. (dm+sm)   FUJITSU (frtpx/fccpx): FX10/FX100 SPARC64 IXfx/Xlfx</span><br><span class="line"></span><br><span class="line">Enter selection [1-75] :</span><br></pre></td></tr></table></figure>
+
+<p>根据编译器及电脑配置选择 即可。<br>之后会出现第二给选择，选择1basic，执行完成后，输入：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./compile em_real &gt;＆ log.compile   %屏幕输出与执行日志</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./compile em_real  %将执行时输出的内容直接输出到屏幕</span></span><br></pre></td></tr></table></figure>
+
+<p>开始编译，等待一段时间，在WRF文件夹main目录下将会生成4个可执行文件，使用<br>ls -ls main&#x2F;*.exe<br>命令查找main文件夹下的4个可执行文件，如果都有的话，WRF安装成功。<br>如果编译未成功，大概是在选择configure类型时你选错了，系统里没有你选择的编译器或者环境变量出错了，检查编译器电脑配置。<br>如果想使用MPI编译的话，configure类型选择无编译器的那几个编号，然后修改configure。wrf文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DM_FC           =       mpiifort</span><br><span class="line">DM_CC           =       mpiicc</span><br></pre></td></tr></table></figure>
+
+<p>5、安装与编译WPS，WPS是WRF的前处理部分，安装它主要是获得3个可执行文件：geogrid.exe,ungrib.exe 和 metgrid.exe。必须在安装WRF后安装。<br>以防万一，先加载个环境变量，确保JASPERLIB&#x2F;路径下有libjasper.a,libpng.a和libz.a这三个文件，且JASPERINC&#x2F; 路径下有 jasper&#x2F; 目录， png.h 和 zlib.h两个文件。</p>
+<p><a target="_blank" rel="noopener" href="https://xg1990.com/blog/archives/190%EF%BC%9A">https://xg1990.com/blog/archives/190：</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export DIR=/usr/local/wrf/LIBRARIES</span><br><span class="line">export PATH=$DIR/mpich/bin:$PATH</span><br><span class="line">export PATH=$DIR/grib2/bin:$PATH</span><br><span class="line">export JASPERLIB=$DIR/grib2/lib</span><br><span class="line">export JASPERINC=$DIR/grib2/include</span><br><span class="line">export NETCDF=$DIR/netcdf</span><br><span class="line">export WRF_DIR=/usr/local/wrf/WRFV3/4</span><br></pre></td></tr></table></figure>
+
+<p>把你下载好的WPS压缩包（记得与WRF版本对应）解压至WRF的安装目录，然后进入WPS目录。.&#x2F;configure<br>和编译WRF时一样，会出现多种configure类型选择，根据编译器选择即可。<br>修改configure.wps文件中的，zlib、jasper、libpng文件路径，否则可能没有ungrib.exe执行文件。<br>之后步骤与编译WRF类似，安装成功后会出现3个可执行文件。<br>之后就可以试着跑了，当然为了方便后处理你也可以装NCL、Anacoda、NCviewer之类的，看需求吧。</p>
+<h3 id="WRF运行"><a href="#WRF运行" class="headerlink" title="WRF运行"></a>WRF运行</h3><p>安装好WRF后运行流程与namelist的修改可以可以查看我之前的博客：WRF模式入门(Cygwin版），我这里主要讲一下超算上多出来的一些步骤，一般来说，超算服务器上是有安装好的WRF的，你可以跳过安装步骤直接运行。<br>以天河为例，你可以使用：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module avail wrf</span><br></pre></td></tr></table></figure>
+
+<p>查看当前服务器上的WRF。<br>之后，创建一个文件夹，用于WRF的运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/data &amp;&amp; cd ~/data</span><br></pre></td></tr></table></figure>
+
+<p>把你的数据通过fttp上传至创建的文件夹中，把数据拷贝到WPS的目录中，接下来步骤就不讲了，各位可参考我给的博客。WRF入门(cygwin版）<br>虽然是Cygwin版，但运行步骤是类似的，不同的是Cygwin版本是将WRF整个打包好，在安装上省略了一些步骤。<br>可以将运行WRF(包括前处理）的所有命令写成一个脚本文件，脚本文件sub.sh，之后：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line">yhrun -N 1 -n 28 -pTH_HPC1 wrf.exe</span><br><span class="line"></span><br><span class="line">`-N 节点数</span><br><span class="line">-n 总核数</span><br><span class="line">-p 计算分区名</span><br><span class="line">wrf.exe 可执行程序名称</span><br></pre></td></tr></table></figure>
+
+<p>运行结束可以查看结果，通过前文介绍的Slurm可以查看作业进程，若rsl文件中有SUCCESS COMPLETE WRF则表示运行成功。</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>接下来我们可以总结一下：在超算中运行WRF，我们应当知道什么？<br>首先是超算集群的基础构造与基本运行原理，让我们明白自己是在什么样的东西上运行程序。<br>其次是Linux系统的命令，系统帮助我们让计算机实现各种功能。<br>然后是一些在运行时我们需要了解到知识：运行WRF时，我们需要安装压缩包与数据，这就需要我们学会远程登陆与数据传输。<br>运行WRF时整个操作都是在Linux上进行，所以需要基础命令。<br>配置WPS与WRF的namelist文件需要文本编辑，所以需要vi知识。<br>我们可以撰写Shell脚本来方便WRF的运行，最后，WRF的运行在服务器上要以任务形式提交，我们自然需要学到作业调度，便于管理我们的WRF任务状态。<br>以上便是我个人认为在超算上需要了解到知识，当然不止WRF，任何在超算上的模式运行都需要了解一些以上这些知识点。<br>————————————————<br>版权声明：本文为CSDN博主「什么都不会的张同学」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43750300/article/details/125741208">https://blog.csdn.net/weixin_43750300/article/details/125741208</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Wget/" rel="prev" title="Wget">
+      <i class="fa fa-chevron-left"></i> Wget
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/WRF%20Offline%20Install/" rel="next" title="WRF Offline Install">
+      WRF Offline Install <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%A7%E5%9E%8B%E6%9C%BA%E4%B8%8A%E5%A6%82%E4%BD%95%E8%BF%90%E8%A1%8CWRF%E6%A8%A1%E5%BC%8F%EF%BC%9F%E4%B8%80%E6%96%87%E6%80%BB%E7%BB%93%EF%BC%88%E5%B9%B6%E8%A1%8C%E8%BF%90%E7%AE%97%E3%80%81Linux%E5%9F%BA%E7%A1%80%E3%80%81%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6%E3%80%81WRF%E8%BF%90%E8%A1%8C%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%A7%E5%9E%8B%E6%9C%BA"><span class="nav-number">1.0.1.</span> <span class="nav-text">大型机</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%B6%85%E7%AE%97%E9%9B%86%E7%BE%A4-Cluster"><span class="nav-number">1.0.2.</span> <span class="nav-text">超算集群(Cluster)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84"><span class="nav-number">1.0.3.</span> <span class="nav-text">基本架构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%EF%BC%9ALinux"><span class="nav-number">1.1.</span> <span class="nav-text">系统：Linux</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E7%99%BB%E9%99%86%E4%B8%8E%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93"><span class="nav-number">1.1.1.</span> <span class="nav-text">远程登陆与文件传输</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4%E4%B8%8E%E6%96%87%E6%9C%AC%E7%BC%96%E8%BE%91"><span class="nav-number">1.1.2.</span> <span class="nav-text">基础命令与文本编辑</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vi-x2F-vim%E4%BD%BF%E7%94%A8"><span class="nav-number">1.1.3.</span> <span class="nav-text">vi&#x2F;vim使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Shell%E8%84%9A%E6%9C%AC"><span class="nav-number">1.1.4.</span> <span class="nav-text">Shell脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Moduel%EF%BC%88%E6%A8%A1%E5%9D%97%EF%BC%89"><span class="nav-number">1.1.5.</span> <span class="nav-text">Moduel（模块）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E4%B8%9A%E8%B0%83%E5%BA%A6-x2F-%E4%BB%BB%E5%8A%A1%E6%8F%90%E4%BA%A4"><span class="nav-number">1.2.</span> <span class="nav-text">作业调度&#x2F;任务提交</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Slurm"><span class="nav-number">1.2.1.</span> <span class="nav-text">Slurm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%BB%E5%8A%A1%E7%8A%B6%E6%80%81%E6%9F%A5%E8%AF%A2%E4%B8%8E%E5%8F%96%E6%B6%88"><span class="nav-number">1.2.2.</span> <span class="nav-text">任务状态查询与取消</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WRF%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%90%E8%A1%8C"><span class="nav-number">1.3.</span> <span class="nav-text">WRF安装与运行</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">1.3.1.</span> <span class="nav-text">环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WRF%E5%AE%89%E8%A3%85"><span class="nav-number">1.3.2.</span> <span class="nav-text">WRF安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WRF%E8%BF%90%E8%A1%8C"><span class="nav-number">1.4.</span> <span class="nav-text">WRF运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

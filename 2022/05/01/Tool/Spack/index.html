@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Spack：超算上最好的包管理器来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;zfhB9is4RQ5JkSYyHG0j5w Spack是一个包管理工具，它为大型超级计算中心设计，支持各种平台和环境上的软件的多个版本和配置。 用户可在集群中安装多种版本的软件，且可以相互隔离、无特权需求，用户可在集群中安装一个软件的不同版本来使用。 更重要的是，它可以在没有网络的情况下，一键解析依赖，并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spack">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Spack/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Spack：超算上最好的包管理器来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;zfhB9is4RQ5JkSYyHG0j5w Spack是一个包管理工具，它为大型超级计算中心设计，支持各种平台和环境上的软件的多个版本和配置。 用户可在集群中安装多种版本的软件，且可以相互隔离、无特权需求，用户可在集群中安装一个软件的不同版本来使用。 更重要的是，它可以在没有网络的情况下，一键解析依赖，并">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:19.906Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Spack/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Spack | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Spack/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Spack
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-10-23 19:12:19" itemprop="dateModified" datetime="2023-10-23T19:12:19+08:00">2023-10-23</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Spack：超算上最好的包管理器"><a href="#Spack：超算上最好的包管理器" class="headerlink" title="Spack：超算上最好的包管理器"></a>Spack：超算上最好的包管理器</h1><p>来源：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/zfhB9is4RQ5JkSYyHG0j5w">https://mp.weixin.qq.com/s/zfhB9is4RQ5JkSYyHG0j5w</a></p>
+<p><code>Spack</code>是一个包管理工具，它为大型超级计算中心设计，支持各种平台和环境上的软件的多个版本和配置。</p>
+<p>用户可在集群中安装多种版本的软件，且可以相互隔离、无特权需求，用户可在集群中安装一个软件的不同版本来使用。</p>
+<p>更重要的是，它可以在没有网络的情况下，一键解析依赖，并安装库。通常情况下，这些库的编译都是很复杂的，但<code>spack</code>却可以轻松地解决这些编译上的问题。</p>
+<p>注：本文大量参考了<code>spack</code>官方文档内容，并在一些地方添加了自己的注释与理解。希望这篇文章能对所有超算用户有所帮助。</p>
+<h2 id="1-安装Spack"><a href="#1-安装Spack" class="headerlink" title="1. 安装Spack"></a>1. 安装Spack</h2><p><code>Spack</code>安装十分简单，您可以在<code>github</code>上，将<code>spack</code>仓库克隆到本地，然后将spack环境变量导入现有窗口中。</p>
+<h2 id="1-1-下载Spack包管理器文件"><a href="#1-1-下载Spack包管理器文件" class="headerlink" title="1.1 下载Spack包管理器文件"></a>1.1 下载Spack包管理器文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ~  ## 也可以打开到任何你想把spack安装到的目录</span><br><span class="line">git clone https://github.com/spack/spack.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-2-导入Spack环境"><a href="#1-2-导入Spack环境" class="headerlink" title="1.2 导入Spack环境"></a>1.2 导入Spack环境</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 注意，前面的点号不要忘了输入</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">. spack/share/spack/setup-env.sh</span></span><br></pre></td></tr></table></figure>
+
+<p>您也可以将<code>Spack</code>环境放入<code>.bashrc</code>中，这样在每次加载shell时可默认加载<code>spack</code>环境。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;source /opt/spack/share/spack/setup-env.sh&quot; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-3-检查安装情况"><a href="#1-3-检查安装情况" class="headerlink" title="1.3 检查安装情况"></a>1.3 检查安装情况</h2><p>当完成安装和导入<code>spack</code>的步骤后，您可以试着使用一些<code>spack</code>命令，来测试功能是否正常执行，从而判断<code>spack</code>是否正确安装。 本次测试使用<code>spec</code>模块来做测试。<code>spec</code>可用于查询安装此软件包需要的依赖项。 下列命令为使用现有<code>gcc</code>版本为<code>7.5.0</code>的编译器来编译<code>gcc-10.2.0</code>版本，如可以出现下面类似输出，则说明<code>spack</code>环境搭建完成。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack spec gcc@10.2.0%gcc@7.5.0</span></span><br><span class="line">Input spec</span><br><span class="line">--------------------------------</span><br><span class="line">gcc@10.2.0%gcc@7.5.0</span><br><span class="line"></span><br><span class="line">Concretized</span><br><span class="line">--------------------------------</span><br><span class="line">gcc@10.2.0%gcc@7.5.0~binutils~bootstrap~nvptx~piclibs~strip languages=c,c++,fortran patches=2c18531a23623596e1daf6f0dd963cf72c208945ecad90515640c3ab23991159 arch=linux-ubuntu18.04-skylake</span><br><span class="line">    ^gmp@6.1.2%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">        ^autoconf@2.69%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">            ^m4@1.4.18%gcc@7.5.0+sigsegv patches=3877ab548f88597ab2327a2230ee048d2d07ace1062efe81fc92e91b7f39cd00,fc9b61654a3ba1a8d6cd78ce087e7c96366c290bc8d2c299f09828d793b853c8 arch=linux-ubuntu18.04-skylake</span><br><span class="line">                ^libsigsegv@2.12%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">            ^perl@5.30.3%gcc@7.5.0+cpanm+shared+threads arch=linux-ubuntu18.04-skylake</span><br><span class="line">                ^berkeley-db@18.1.40%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">                ^gdbm@1.18.1%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">                    ^readline@8.0%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">                        ^ncurses@6.2%gcc@7.5.0~symlinks+termlib arch=linux-ubuntu18.04-skylake</span><br><span class="line">                            ^pkgconf@1.7.3%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">        ^automake@1.16.2%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">        ^libtool@2.4.6%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">    ^isl@0.21%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">    ^mpc@1.1.0%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">        ^mpfr@4.0.2%gcc@7.5.0 patches=3f80b836948aa96f8d1cb9cc7f3f55973f19285482a96f9a4e1623d460bcccf0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">            ^autoconf-archive@2019.01.06%gcc@7.5.0 arch=linux-ubuntu18.04-skylake</span><br><span class="line">    ^zlib@1.2.11%gcc@7.5.0+optimize+pic+shared arch=linux-ubuntu18.04-skylake</span><br><span class="line">    ^zstd@1.4.5%gcc@7.5.0+pic arch=linux-ubuntu18.04-skylake</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-4-编译器配置"><a href="#1-4-编译器配置" class="headerlink" title="1.4 编译器配置"></a>1.4 编译器配置</h2><blockquote>
+<p>默认情况下，spack在第一次加载环境时会自动发现当前可用的编译器</p>
+</blockquote>
+<h3 id="1-4-1-spack-compilers"><a href="#1-4-1-spack-compilers" class="headerlink" title="1.4.1 spack compilers"></a>1.4.1 spack compilers</h3><p>您可以通过运行<code>spack compilers</code> 或者 <code>spack compiler list</code>来查看<code>spack</code>在你的超算上所能够发现的所有编译器。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack compilers</span>                                               </span><br><span class="line">==&gt; Available compilers</span><br><span class="line">-- gcc ubuntu18.04-x86_64 ---------------------------------------</span><br><span class="line">gcc@10.2.0  gcc@7.5.0  gcc@5.4.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-2-spack-compiler-find"><a href="#1-4-2-spack-compiler-find" class="headerlink" title="1.4.2 spack compiler find"></a>1.4.2 spack compiler find</h3><p>您可以通过运行<code>spack compiler find</code>或者<code>spack compiler add</code>来自动发现或手动添加编译器路径。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 这里假设了你的超算使用了module环境管理工具</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 这一步把管理员安装的hpc_sdk套件导入了你的环境</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">module load hpc_sdk</span> </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># 于是，你就可以自动找到了新增的nvhpc编译器</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack compiler find</span></span><br><span class="line">==&gt; Added 1 new compiler to /home/nfs/admin0/user/.spack/linux/compilers.yaml</span><br><span class="line">    nvhpc@20.9</span><br><span class="line">==&gt; Compilers are defined in the following files:</span><br><span class="line">    /home/nfs/admin0/user/.spack/linux/compilers.yaml</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-3-spack-compiler-info"><a href="#1-4-3-spack-compiler-info" class="headerlink" title="1.4.3 spack compiler info"></a>1.4.3 spack compiler info</h3><p>如果你想查看详细的编译器信息，您可以使用如下命令。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack compiler info nvhpc</span>                                                        </span><br><span class="line">             </span><br><span class="line">nvhpc@20.9:</span><br><span class="line">        paths:</span><br><span class="line">                cc = /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvc</span><br><span class="line">                cxx = /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvc++</span><br><span class="line">                f77 = /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvfortran</span><br><span class="line">                fc = /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvfortran</span><br><span class="line">        modules  = []</span><br><span class="line">        operating system  = ubuntu18.04</span><br></pre></td></tr></table></figure>
+
+<p>如果有多个版本的软件包，您可以在软件包名称后添加@,例如<code>spack compiler info gcc@10.2.0</code></p>
+<h3 id="1-4-4-手动配置可用编译器（可选）"><a href="#1-4-4-手动配置可用编译器（可选）" class="headerlink" title="1.4.4 手动配置可用编译器（可选）"></a>1.4.4 手动配置可用编译器（可选）</h3><p>如果您有兴趣手动指定<code>cc</code>|<code>cxx</code>|<code>f77</code>|<code>fc</code>，您可以以如下两种方式来配置<code>compilers.yaml</code></p>
+<ul>
+<li>EDIT ~&#x2F;.spack&#x2F;linux&#x2F;compilers.yaml ## 这里的EDIT可以为任何linux上的文本编译器，如vim、emacs等</li>
+<li>spack config edit compilers</li>
+</ul>
+<p>编译器配置文件如下所示:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- compiler:</span><br><span class="line">    spec: nvhpc@20.9</span><br><span class="line">    paths:</span><br><span class="line">      cc: /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvc</span><br><span class="line">      cxx: /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvc++</span><br><span class="line">      f77: /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvfortran</span><br><span class="line">      fc: /home/nfs/admin0/apps/hpc_sdk/Linux_x86_64/20.9/compilers/bin/nvfortran</span><br><span class="line">    flags: &#123;&#125;</span><br><span class="line">    operating_system: ubuntu18.04</span><br><span class="line">    target: x86_64</span><br><span class="line">    modules: []</span><br><span class="line">    environment: &#123;&#125;</span><br><span class="line">    extra_rpaths: []</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-5-指定默认编译器版本（可选）"><a href="#1-4-5-指定默认编译器版本（可选）" class="headerlink" title="1.4.5 指定默认编译器版本（可选）"></a>1.4.5 指定默认编译器版本（可选）</h3><p>在您安装新软件包时，<code>spack</code>需要使用一个编译器来编译环境，如果您对编译器版本有要求，您可以通过以下两种方式来指定编译器：</p>
+<ul>
+<li>EDIT ~&#x2F;.spack&#x2F;packages.yaml</li>
+<li>spack config edit packages</li>
+</ul>
+<p>包配置文件如下所示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">packages:</span><br><span class="line">  all:</span><br><span class="line">    compiler: [gcc@10.2.0]     </span><br></pre></td></tr></table></figure>
+
+<h1 id="2-基础使用教程"><a href="#2-基础使用教程" class="headerlink" title="2. 基础使用教程"></a>2. 基础使用教程</h1><p><code>spack</code>有许多子命令可以使用，您需要了解一些基础 命令以便更好的使用<code>spack</code>来安装和使用软件</p>
+<p>例如，我们要查找当前<code>spack</code>环境中安装的软件包，可以使用<code>spack find</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span>                                                                                                                                                                                                    </span><br><span class="line">==&gt; 93 installed packages</span><br><span class="line"></span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">autoconf@2.69                bzip2@1.0.8    gcc@7.5.0     gmp@6.1.2      libedit@3.1-20191231  libtool@2.4.6        lua@5.3.5                  mpc@1.1.0   ncurses@6.2     perl@5.30.3    tcl@8.6.10   zstd@1.4.5</span><br><span class="line">autoconf-archive@2019.01.06  curl@7.72.0    gdbm@1.18.1   isl@0.18       libiconv@1.16         libunistring@0.9.10  lua-luafilesystem@1_7_0_2  mpc@1.1.0   openssh@8.4p1   pkgconf@1.7.3  unzip@6.0</span><br><span class="line">automake@1.16.2              diffutils@3.7  gettext@0.21  isl@0.21       libidn2@2.3.0         libxml2@2.9.10       lua-luaposix@33.4.0        mpfr@3.1.6  openssl@1.1.1h  readline@8.0   xz@5.2.5</span><br><span class="line">berkeley-db@18.1.40          expat@2.2.9    git@2.29.0    libbsd@0.10.0  libsigsegv@2.12       lmod@8.3             m4@1.4.18                  mpfr@4.0.2  pcre2@10.35     tar@1.32       zlib@1.2.11</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-列出spack可安装的软件包"><a href="#2-1-列出spack可安装的软件包" class="headerlink" title="2.1 列出spack可安装的软件包"></a>2.1 列出spack可安装的软件包</h2><p>当您准备安装某一个软件时，需要先确认软件包是否存在于<code>spack</code>软件包列表中。您可以使用<code>spack list</code>命令来查找可用软件，或者可以打开Package List网页来查找软件包信息。</p>
+<p>注意！<code>spack</code>可安装的软件包非常多！因此这一步可能不是太快。</p>
+<h3 id="2-1-1-spack-list"><a href="#2-1-1-spack-list" class="headerlink" title="2.1.1 spack list"></a>2.1.1 spack list</h3><p>此命令可以查询spack可安装的软件包,截至2021年10月18日，目前可用软件包为5945个。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack list</span>                                                                                                                  </span><br><span class="line">==&gt; 5021 packages.                                                                                                                                                                                                 </span><br><span class="line">3proxy                     icu4c                            perl-set-intervaltree                     py-pyfftw                                       r-popgenome                                                  </span><br><span class="line">abduco                     id3lib                           perl-set-intspan                          py-pyfits                                       r-popvar                                                     </span><br><span class="line">abi-compliance-checker     idba                             perl-set-scalar                           py-pyflakes                                     r-powerlaw                                                   </span><br><span class="line">abi-dumper                 idl                              perl-soap-lite                            py-pygdal                                       r-prabclus                                                   </span><br><span class="line">abinit                     iegenlib                         perl-star-fusion                          py-pygdbmi                                      r-praise                                                     </span><br><span class="line">abseil-cpp                 ignite                           perl-statistics-basic                     py-pygelf                                       r-preprocesscore                                             </span><br><span class="line">abyss                      igraph                           perl-statistics-descriptive               py-pygit2                                       r-prettyunits                                                </span><br><span class="line">accfft                     igv                              perl-statistics-pca                       py-pyglet                                       r-processx    </span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+
+<p>在执行<code>spack list</code>命令时，由于相关库太多，在命令行上，我们会用引号隐藏一些包文件。您可以使用<code>spack list</code>命令来查找可用软件，或者可以打开Package List网页来查找软件包信息。</p>
+<p>如果想寻找可安装包中的名称来匹配您想要安装的软件，可以使用<code>*</code>或<code>？</code>进行匹配。</p>
+<p><code>*</code>代表开始和结束的匹配，<code>mpi</code>意思和<code>*mpi*</code>相同;</p>
+<p>下列示例为查找<code>mpi</code>相关的软件包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack list mpi</span></span><br><span class="line">==&gt; 23 packages.</span><br><span class="line">compiz       intel-mpi             mpi-bash  mpifileutils  mpileaks  mpir               openmpi  phylobayesmpi  py-mpi4py  rempi         sst-dumpi  vampirtrace</span><br><span class="line">fujitsu-mpi  intel-mpi-benchmarks  mpich     mpilander     mpip      mpix-launch-swift  pbmpi    pnmpi          r-rmpi     spectrum-mpi  umpire</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-2-spack-info"><a href="#2-1-2-spack-info" class="headerlink" title="2.1.2 spack info"></a>2.1.2 spack info</h3><p>当您已经明确需要安装的软件包时，此时您可以使用spack info <package>来查看此软件包的更多信息。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">[~] spack info openmpi                                                                                                                                                                                             </span><br><span class="line">AutotoolsPackage:   openmpi                                                                                                                                                                                        </span><br><span class="line"></span><br><span class="line">Description:                                                                                                                                                                                                       </span><br><span class="line">    An open source Message Passing Interface implementation. The Open MPI                                                                                                                                          </span><br><span class="line">    Project is an open source Message Passing Interface implementation that                                                                                                                                        </span><br><span class="line">    is developed and maintained by a consortium of academic, research, and                                                                                                                                         </span><br><span class="line">    industry partners. Open MPI is therefore able to combine the expertise,                                                                                                                                        </span><br><span class="line">    technologies, and resources from all across the High Performance                                                                                                                                               </span><br><span class="line">    Computing community in order to build the best MPI library available.                                                                                                                                          </span><br><span class="line">    Open MPI offers advantages for system and software vendors, application                                                                                                                                        </span><br><span class="line">    developers and computer science researchers.                                                                                                                                                                   </span><br><span class="line"></span><br><span class="line">Homepage: http://www.open-mpi.org                                                                                                                                                                                  </span><br><span class="line"></span><br><span class="line">Maintainers: @hppritcha                                                                                                                                                                                            </span><br><span class="line"></span><br><span class="line">Tags:                                                                                                                                                                                                              </span><br><span class="line">    None                                                                                                                                                                                                           </span><br><span class="line"></span><br><span class="line">Preferred version:                                                                                                                                                                                                 </span><br><span class="line">    3.1.6     http://www.open-mpi.org/software/ompi/v3.1/downloads/openmpi-3.1.6.tar.bz2                                                                                                                           </span><br><span class="line"></span><br><span class="line">Safe versions:                                                                                                                                                                                                     </span><br><span class="line">    master    [git] https://github.com/open-mpi/ompi.git on branch master                                                                                                                                          </span><br><span class="line">    4.0.5     http://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.5.tar.bz2                                                                                                                           </span><br><span class="line">    4.0.4     http://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.4.tar.bz2                                                                                                                           </span><br><span class="line">    4.0.3     http://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.3.tar.bz2                                                                                                                           </span><br><span class="line">    4.0.2     http://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.2.tar.bz2                                                                                                                           </span><br><span class="line">    4.0.1     http://www.open-mpi.org/software/ompi/v4.0/downloads/openmpi-4.0.1.tar.bz2</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">Variants:</span><br><span class="line">    Name [Default]           Allowed values          Description</span><br><span class="line">    =====================    ====================    ==============================================================================</span><br><span class="line"></span><br><span class="line">    atomics [off]            on, off                 Enable built-in atomics</span><br><span class="line">    cuda [off]               on, off                 Enable CUDA support</span><br><span class="line">    cxx [off]                on, off                 Enable C++ MPI bindings</span><br><span class="line">    cxx_exceptions [off]     on, off                 Enable C++ Exception support</span><br><span class="line">    fabrics [none]           none, auto, fca,        List of fabrics that are enabled; &#x27;auto&#x27; lets openmpi determine</span><br><span class="line">                             knem, hcoll, verbs,</span><br><span class="line">                             psm2, psm, xpmem,</span><br><span class="line">                             ucx, mxm, cma, ofi</span><br><span class="line">    gpfs [on]                on, off                 Enable GPFS support (if present)</span><br><span class="line">    java [off]               on, off                 Build Java support</span><br><span class="line"></span><br><span class="line">    ......</span><br><span class="line"></span><br><span class="line">Installation Phases:</span><br><span class="line">    autoreconf    configure    build    install</span><br><span class="line"></span><br><span class="line">Build Dependencies:</span><br><span class="line">    autoconf  binutils  hcoll  java  libfabric  lsf     m4   numactl   openpbs  pkgconfig  singularity  sqlite  valgrind  zlib</span><br><span class="line">    automake  fca       hwloc  knem  libtool    lustre  mxm  opa-psm2  perl     rdma-core  slurm        ucx     xpmem</span><br><span class="line"></span><br><span class="line">Link Dependencies:</span><br><span class="line">    binutils  fca  hcoll  hwloc  java  knem  libfabric  lsf  lustre  mxm  numactl  opa-psm2  openpbs  rdma-core  singularity  slurm  sqlite  ucx  valgrind  xpmem  zlib</span><br><span class="line"></span><br><span class="line">Run Dependencies:</span><br><span class="line">    None</span><br><span class="line"></span><br><span class="line">Virtual Packages: </span><br><span class="line">    openmpi@2.0.0: provides mpi@:3.1</span><br><span class="line">    openmpi@1.7.5: provides mpi@:3.0</span><br><span class="line">    openmpi@1.6.5 provides mpi@:2.2</span><br><span class="line">    openmpi provides mpi</span><br></pre></td></tr></table></figure>
+
+<p>通过查询软件包信息，您可以了解可添加的编译项以便更好的编译需要的软件。</p>
+<h3 id="2-1-3-spack-versions"><a href="#2-1-3-spack-versions" class="headerlink" title="2.1.3 spack versions"></a>2.1.3 spack versions</h3><p>通过使用<code>spack versions</code>，您可以找到某一个软件包的可用版本。</p>
+<p>这里以安装<code>openmpi</code>为例，我们可以看到<code>openmpi</code>的版本号，我们可以找到需要的版本号来执行<code>install</code>的操作。</p>
+<p>输出中<code>Safe version</code>代表<code>spack</code>已经校验过<code>sum</code>值，不会在安装时遭受黑客攻击和篡改；</p>
+<p><code>Remote version</code>为未校验过<code>sum</code>值的软件包。<code>spack</code>无法确认其安全性，使用者需要自己加以注意。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack versions openmpi</span>                                                                                                                                                                                        </span><br><span class="line">==&gt; Safe versions (already checksummed):</span><br><span class="line">  master  4.0.2  3.1.5  3.1.1  3.0.3  2.1.6  2.1.2  2.0.3  1.10.7  1.10.3  1.8.8  1.8.4  1.8    1.7.2  1.6.4  1.6    1.5.2  1.4.4  1.4    1.3.1  1.2.7  1.2.3  1.1.5  1.1.1  1.0</span><br><span class="line">  4.0.5   4.0.1  3.1.4  3.1.0  3.0.2  2.1.5  2.1.1  2.0.2  1.10.6  1.10.2  1.8.7  1.8.3  1.7.5  1.7.1  1.6.3  1.5.5  1.5.1  1.4.3  1.3.4  1.3    1.2.6  1.2.2  1.1.4  1.1</span><br><span class="line">  4.0.4   4.0.0  3.1.3  3.0.5  3.0.1  2.1.4  2.1.0  2.0.1  1.10.5  1.10.1  1.8.6  1.8.2  1.7.4  1.7    1.6.2  1.5.4  1.5    1.4.2  1.3.3  1.2.9  1.2.5  1.2.1  1.1.3  1.0.2</span><br><span class="line">  4.0.3   3.1.6  3.1.2  3.0.4  3.0.0  2.1.3  2.0.4  2.0.0  1.10.4  1.10.0  1.8.5  1.8.1  1.7.3  1.6.5  1.6.1  1.5.3  1.4.5  1.4.1  1.3.2  1.2.8  1.2.4  1.2    1.1.2  1.0.1</span><br><span class="line">==&gt; Remote versions (not yet checksummed):</span><br><span class="line">==&gt; Warning: Found no unchecksummed versions for openmpi</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-1-4-spack-arch"><a href="#2-1-4-spack-arch" class="headerlink" title="2.1.4 spack arch"></a>2.1.4 spack arch</h3><p>通过执行spack arch命令来了解当前机器的CPU架构</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">arch</span></span>                                                                                                                                                                                                    </span><br><span class="line">linux-ubuntu18.04-cascadelake</span><br></pre></td></tr></table></figure>
+
+<p>你也可以通过使用<code>spack arch --known-targets</code>命令来显示所有CPU架构</p>
+<h2 id="2-2-软件包参数指定"><a href="#2-2-软件包参数指定" class="headerlink" title="2.2 软件包参数指定"></a>2.2 软件包参数指定</h2><p>在安装时您可以使用：</p>
+<ul>
+<li>使用<code>@</code>来指定需要安装的版本；</li>
+<li>使用<code>%</code>来选择需要使用的编译器；</li>
+<li>使用<code>+</code>或<code>-</code>或<code>~</code>来指定此软件的布尔值变量依赖（通过spack info <package>）来查找；</li>
+<li>使用<code>name=&lt;value&gt;</code>来指定此此软件的非布尔值环境依赖;</li>
+<li>使用<code>target=&lt;value&gt; os=&lt;value&gt;</code>指定CPU架构和系统（例如，<code>target=skylake_avx512 os=linux</code>）</li>
+<li>使用<code>^</code>指定依赖的软件(例如，<code>^callpath@1.1</code>)</li>
+</ul>
+<h2 id="2-3-安装和卸载软件"><a href="#2-3-安装和卸载软件" class="headerlink" title="2.3 安装和卸载软件"></a>2.3 安装和卸载软件</h2><h3 id="2-3-1-spack-install"><a href="#2-3-1-spack-install" class="headerlink" title="2.3.1 spack install"></a>2.3.1 spack install</h3><p><code>spack install</code>可以从<code>spack list</code>中找到的软件中来安装软件包。</p>
+<p>我们以<code>gcc</code>为例，</p>
+<ol>
+<li>如果<code>gcc</code>依赖其他的软件包，spack将会先将依赖包安装，</li>
+<li>然后校验下载的包文件没有错误，构建并安装到目录<code>SPACK_ROOT/opt</code></li>
+</ol>
+<p>在安装完成后，您可以看到成功安装的输出。<code>arch=skylake_avx512</code>为指定平台，具体可以参考<code>spack arch</code>这一节的内容。</p>
+<p>在执行过程中出现的<code>[+]</code>,意味着依赖项已经相关安装完成，无须重新编译。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack install gcc@10.2.0 target=skylake_avx512</span></span><br><span class="line">[+] /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/libsigsegv-2.12-65cvzrqkbruz3jwexeg7r44ovcz6zml5</span><br><span class="line">[+] /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/berkeley-db-18.1.40-6zahi2waipcqbqepcscqyc52alhv6bxw</span><br><span class="line">[+] /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/pkgconf-1.7.3-idmzwmyvgrql5cvpdof7tldya6jldl2g</span><br><span class="line">[+] /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/autoconf-archive-2019.01.06-zpx5jjtsx5qwkdoytknoqncsyaja7ryf</span><br><span class="line">......</span><br><span class="line">==&gt; Installing gcc</span><br><span class="line">==&gt; No binary for gcc found: installing from source</span><br><span class="line">==&gt; Using cached archive: /home/user/spack/var/spack/cache/_source-cache/archive/b8/b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c.tar.xz</span><br><span class="line">==&gt; gcc: Executing phase: &#x27;autoreconf&#x27;</span><br><span class="line">==&gt; gcc: Executing phase: &#x27;configure&#x27;</span><br><span class="line">==&gt; gcc: Executing phase: &#x27;build&#x27;</span><br><span class="line">==&gt; gcc: Executing phase: &#x27;install&#x27;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$</span><span class="language-bash">spack find gcc</span>                                                                                                                                                                                                </span><br><span class="line">==&gt; 2 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0  gcc@10.2.0</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-2-spack-uninstall"><a href="#2-3-2-spack-uninstall" class="headerlink" title="2.3.2 spack uninstall"></a>2.3.2 spack uninstall</h3><p>卸载安装的软件包，您可以使用<code>spack uninstall &lt;package&gt;</code>来卸载目前已经安装的软件。</p>
+<p>已经安装的软件可以通过<code>spack find</code>找到。</p>
+<p><code>--dependents</code>可以将依赖此软件的其他软件一起卸载。</p>
+<p>如果您需要卸载所有软件，可以使用<code>--all</code>来实现</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[~] spack uninstall --dependents openmpi%gcc@10.2.0</span><br><span class="line">==&gt; The following packages will be uninstalled:</span><br><span class="line"></span><br><span class="line">    -- linux-ubuntu18.04-cascadelake / gcc@10.2.0 -------------------</span><br><span class="line">    w2atmjq hdf5@1.10.7  sehyo5r netcdf-c@4.7.4  a4w6sg6 openmpi@3.1.6</span><br><span class="line"></span><br><span class="line">==&gt; Do you want to proceed? [y/N] y</span><br><span class="line">==&gt; Successfully uninstalled netcdf-c@4.7.4%gcc@10.2.0~dap~hdf4~jna+mpi~parallel-netcdf+pic+shared arch=linux-ubuntu18.04-cascadelake/sehyo5r</span><br><span class="line">==&gt; Successfully uninstalled hdf5@1.10.7%gcc@10.2.0~cxx~debug~fortran+hl~java+mpi+pic+shared~szip~threadsafe api=none arch=linux-ubuntu18.04-cascadelake/w2atmjq</span><br><span class="line">==&gt; Successfully uninstalled openmpi@3.1.6%gcc@10.2.0~atomics~cuda~cxx~cxx_exceptions+gpfs~java~legacylaunchers~lustre~memchecker~pmi~singularity~sqlite3+static~thread_multiple+vt+wrapper-rpath fabrics=none sche</span><br><span class="line">dulers=none arch=linux-ubuntu18.04-cascadelake/a4w6sg6</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-3-spack-gc"><a href="#2-3-3-spack-gc" class="headerlink" title="2.3.3 spack gc"></a>2.3.3 spack gc</h3><p><code>gc</code>全称为（”Garbage Collector”，即垃圾回收），当您完成编译后，剩余一些目前不被其他软件依赖的项目可以被清理。</p>
+<p>您可以通过使用<code>spack gc</code>来清理掉不需要的软件包。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack gc</span>                                                                                                                                                                                                       </span><br><span class="line">==&gt; The following packages will be uninstalled:                                                                                                                                                                    </span><br><span class="line"></span><br><span class="line">    -- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------                                                                                                                                              </span><br><span class="line">    ayxupwc autoconf@2.69                nnarbli curl@7.72.0    wmcteof git@2.29.0            7vlbp2m libidn2@2.3.0        bhtzjl5 libxml2@2.9.10  66vt3mk perl@5.30.3         te3i3a5 xz@5.2.5                    </span><br><span class="line">    zpx5jjt autoconf-archive@2019.01.06  zorqtw7 diffutils@3.7  h6rui4l hwloc@2.2.0           vhckpte libpciaccess@0.16    lj57qtx m4@1.4.18       idmzwmy pkgconf@1.7.3                                           </span><br><span class="line">    oa4lssz automake@1.16.2              gqtxtgk expat@2.2.9    bez7ort libbsd@0.10.0         65cvzrq libsigsegv@2.12      phtjrqd openssh@8.4p1   mzpdmwj tar@1.32                                                </span><br><span class="line">    6zahi2w berkeley-db@18.1.40          sz3iurw gdbm@1.18.1    upr5h3c libedit@3.1-20191231  smnwhui libtool@2.4.6        fcemob6 openssl@1.1.1h  nwu2trb texinfo@6.5                                             </span><br><span class="line">    oukbgll bzip2@1.0.8                  4bstie7 gettext@0.21   qzdhx3t libiconv@1.16         2khexru libunistring@0.9.10  24pllrg pcre2@10.35     ozhfnrm util-macros@1.19.1                                      </span><br><span class="line"></span><br><span class="line">==&gt; Do you want to proceed? [y/N] y                                                                                                                                                                                </span><br><span class="line">==&gt; Successfully uninstalled pkgconf@1.7.3%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/idmzwmy                                                                                                                 </span><br><span class="line">==&gt; Successfully uninstalled libtool@2.4.6%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/smnwhui                                                                                                                 </span><br><span class="line">==&gt; Successfully uninstalled autoconf@2.69%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/ayxupwc                                                                                                                 </span><br><span class="line">==&gt; Successfully uninstalled automake@1.16.2%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/oa4lssz                                                                                                               </span><br><span class="line">==&gt; Successfully uninstalled autoconf-archive@2019.01.06%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/zpx5jjt</span><br><span class="line">==&gt; Successfully uninstalled diffutils@3.7%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/zorqtw7</span><br><span class="line">==&gt; Successfully uninstalled git@2.29.0%gcc@7.5.0~tcltk arch=linux-ubuntu18.04-skylake_avx512/wmcteof</span><br><span class="line">==&gt; Successfully uninstalled util-macros@1.19.1%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512/ozhfnrm</span><br><span class="line">==&gt; Successfully uninstalled hwloc@2.2.0%gcc@7.5.0~cairo~cuda~gl~libudev+libxml2~netloc~nvml+pci+shared arch=linux-ubuntu18.04-skylake_avx512/h6rui4l</span><br><span class="line">......</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span></span><br><span class="line">==&gt; 19 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0   gmp@6.1.2  isl@0.21  lua@5.3.5                  lua-luaposix@33.4.0  mpc@1.1.0   mpfr@4.0.2   readline@8.0  unzip@6.0    zstd@1.4.5</span><br><span class="line">gcc@10.2.0  isl@0.18   lmod@8.3  lua-luafilesystem@1_7_0_2  mpc@1.1.0            mpfr@3.1.6  ncurses@6.2  tcl@8.6.10    zlib@1.2.11</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-4-编译无法下载的软件包"><a href="#2-3-4-编译无法下载的软件包" class="headerlink" title="2.3.4 编译无法下载的软件包"></a>2.3.4 编译无法下载的软件包</h3><p>Spack有一些软件包不能自动下载，原因可能有以下情况：</p>
+<ul>
+<li>软件包作者需要用户在下载安装包前手动同意License（如jdk和galahd）</li>
+<li>软件包无法在互联网上下载</li>
+</ul>
+<p>如果需要编译这些软件包，您可能需要用到<code>spack mirrors</code></p>
+<p>创建<code>Mirror</code>的步骤如下：</p>
+<ol>
+<li>为<code>mirror</code>创建一个目录</li>
+</ol>
+<p>您可以在任何目录创建，如<code>~/spackmirrors</code>。注意，这个文件夹所在硬盘的剩余空间最好可以大一些。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> ~/spackmirrors</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>在<code>mirrors.yaml</code>文件中注册此路径,您可以通过<code>spack config edit mirrors</code>打开此文件</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mirrors:</span><br><span class="line">  manual: file://~/spackmirrors</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>将软件的二进制或源码压缩包放到此目录下，以<code>&lt;package&gt;/&lt;package&gt;-&lt;version&gt;.tar.gz</code>来命名。</li>
+</ol>
+<p>例如，<code>Oracle</code>下载安装包需要手动同意<code>License</code>，我们放置<code>Oracle</code>的<code>jdk</code>的<code>tar</code>包到<code>mirrors</code>目录下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ~/spackmirrors/jdk/</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mv</span> jdk-14_linux-x64_bin.tar.gz jdk-14.tar.gz</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tree spackmirrors</span>                                                                                                                                                                                             </span><br><span class="line">spackmirrors</span><br><span class="line">└── jdk</span><br><span class="line">    └── jdk-14.tar.gz</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>通过使用<code>&lt;package&gt;@&lt;version&gt;</code>来安装软件</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack install jdk@14 target=skylake_avx512</span></span><br><span class="line">==&gt; Warning: Missing a source id for jdk@14</span><br><span class="line">==&gt; Installing jdk</span><br><span class="line">==&gt; No binary for jdk found: installing from source</span><br><span class="line">==&gt; Warning: There is no checksum on file to fetch jdk@14 safely.</span><br><span class="line">==&gt;   Fetch anyway? [y/N] y</span><br><span class="line">==&gt; Fetching file:///home/user/spackmirrors/jdk/jdk-14.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">####################################################################################################################################################################################################################################################################################################################################################################################################################### 100.0%</span></span></span><br><span class="line">==&gt; jdk: Executing phase: &#x27;install&#x27;</span><br><span class="line">[+] /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/jdk-14-ctoqgkgu4qvmbbjvdewpdsx4hb4qawki</span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find jdk</span>                                                                                                                                                                                              </span><br><span class="line">==&gt; 1 installed package</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">jdk@14</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-spack-mirror-create"><a href="#2-4-spack-mirror-create" class="headerlink" title="2.4 spack mirror create"></a>2.4 spack mirror create</h2><p>您可以使用<code>spack mirror</code>命令, 创建一个spack镜像（假设您在可以访问 Internet 的计算机上）。</p>
+<p>该命令将遍历 Spack 的所有包，并将安全的包下载到上述目录结构中,像这样：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack mirror create libelf libdwarf</span></span><br><span class="line">==&gt; Created new mirror in spack-mirror-2014-06-24</span><br><span class="line">==&gt; Trying to fetch from http://www.mr511.de/software/libelf-0.8.13.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">###################################################################################################################                81.6%</span></span></span><br><span class="line">==&gt; Checksum passed for libelf@0.8.13</span><br><span class="line">==&gt; Added libelf@0.8.13</span><br><span class="line">==&gt; Trying to fetch from http://www.mr511.de/software/libelf-0.8.12.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">###########################################################################################################################################    98.6%</span></span></span><br><span class="line">==&gt; Checksum passed for libelf@0.8.12</span><br><span class="line">==&gt; Added libelf@0.8.12</span><br><span class="line">==&gt; Trying to fetch from http://www.prevanders.net/libdwarf-20130207.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">###########################################################################################################################################    97.3%</span></span></span><br><span class="line">==&gt; Checksum passed for libdwarf@20130207</span><br><span class="line">==&gt; Added libdwarf@20130207</span><br><span class="line">==&gt; Trying to fetch from http://www.prevanders.net/libdwarf-20130126.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">###############################################################################################################                  78.9%</span></span></span><br><span class="line">==&gt; Checksum passed for libdwarf@20130126</span><br><span class="line">==&gt; Added libdwarf@20130126</span><br><span class="line">==&gt; Trying to fetch from http://www.prevanders.net/libdwarf-20130729.tar.gz</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">#########################################################################################################################             84.7%</span></span></span><br><span class="line">==&gt; Added libdwarf@20130729</span><br><span class="line">==&gt; Added spack-mirror-2014-06-24/libdwarf/libdwarf-20130729.tar.gz to mirror</span><br><span class="line">==&gt; Added python@2.7.8.</span><br><span class="line">==&gt; Successfully updated mirror in spack-mirror-2015-02-24.</span><br><span class="line">  Archive stats:</span><br><span class="line">    0    already present</span><br><span class="line">    5    added</span><br><span class="line">    0    failed to fetch.</span><br></pre></td></tr></table></figure>
+
+<p>完成此操作后，您可以对 spack-mirror-2014-06-24 目录进行 tar 压缩并将其复制到您希望它托管的机器上。</p>
+<h2 id="2-5-查询已安装的软件包"><a href="#2-5-查询已安装的软件包" class="headerlink" title="2.5 查询已安装的软件包"></a>2.5 查询已安装的软件包</h2><p>当您将软件完成安装时，您需要了解哪些软件是已经安装的，您可以通过下列命令来了解。</p>
+<h3 id="2-5-1-spack-find"><a href="#2-5-1-spack-find" class="headerlink" title="2.5.1 spack find"></a>2.5.1 spack find</h3><p>通过使用<code>spack find</code>可以找到已经安装的软件。</p>
+<p>安装的软件包由名称、版本、编译器、架构和构建选项来分组。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span>                                                                                                                 </span><br><span class="line">==&gt; 20 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0   gmp@6.1.2  isl@0.21  lmod@8.3   lua-luafilesystem@1_7_0_2  mpc@1.1.0  mpfr@3.1.6  ncurses@6.2   tcl@8.6.10  zlib@1.2.11</span><br><span class="line">gcc@10.2.0  isl@0.18   jdk@14    lua@5.3.5  lua-luaposix@33.4.0        mpc@1.1.0  mpfr@4.0.2  readline@8.0  unzip@6.0   zstd@1.4.5</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5-2-查询find更多信息"><a href="#2-5-2-查询find更多信息" class="headerlink" title="2.5.2 查询find更多信息"></a>2.5.2 查询find更多信息</h3><p>通过拓展查找选项可以了解安装软件的详细信息</p>
+<h4 id="2-5-2-1-spack-find-–deps"><a href="#2-5-2-1-spack-find-–deps" class="headerlink" title="2.5.2.1 spack find –deps"></a>2.5.2.1 spack find –deps</h4><p>通过使用spack find –deps您可以查找安装软件包所需要的依赖条件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">[~] spack find --deps gcc</span>                                           </span><br><span class="line">==&gt; 2 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0</span><br><span class="line">    gmp@6.1.2</span><br><span class="line">    isl@0.18</span><br><span class="line">    mpc@1.1.0</span><br><span class="line">        mpfr@3.1.6</span><br><span class="line">    zlib@1.2.11</span><br><span class="line"></span><br><span class="line">gcc@10.2.0</span><br><span class="line">    gmp@6.1.2</span><br><span class="line">    isl@0.21</span><br><span class="line">    mpc@1.1.0</span><br><span class="line">        mpfr@4.0.2</span><br><span class="line">    zlib@1.2.11</span><br><span class="line">    zstd@1.4.5</span><br></pre></td></tr></table></figure>
+
+<p>现在我们可以看到gcc不同版本依赖软件的版本不同。</p>
+<h4 id="2-5-2-2-spack-find-–paths"><a href="#2-5-2-2-spack-find-–paths" class="headerlink" title="2.5.2.2 spack find –paths"></a>2.5.2.2 spack find –paths</h4><p>通过使用spack find –paths您可以了解软件安装的位置。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[~] spack find --paths gcc@10.2.0                                                                                                           </span><br><span class="line">==&gt; 1 installed package</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@10.2.0  /home/user/spack/opt/spack/linux-ubuntu18.04-skylake_avx512/gcc-7.5.0/gcc-10.2.0-7s57lgiv24lajskfc4aqf2npajnnweao</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-6-使用已安装的软件包"><a href="#2-6-使用已安装的软件包" class="headerlink" title="2.6 使用已安装的软件包"></a>2.6 使用已安装的软件包</h2><p>当您在系统中安装完成软件包，软件包会使用<code>hash</code>值来命名一个长路径。如果您想使用这个软件包，您可以使用<code>spack load</code>命令导入当前窗口的环境变量中。</p>
+<h3 id="2-6-1-spack-load"><a href="#2-6-1-spack-load" class="headerlink" title="2.6.1 spack load"></a>2.6.1 spack load</h3><p>当您执行安装操作后，通过<code>spack find</code>可以找到需要的软件包。</p>
+<p>例如，如果我们需要导入<code>gcc</code>环境来使用，我们可以这样做</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">gcc --version</span>                                                           </span><br><span class="line">gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0</span><br><span class="line">Copyright (C) 2017 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find gcc</span>                                                          </span><br><span class="line">==&gt; 2 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0  gcc@10.2.0</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack load gcc@10.2.0</span>                                                   </span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">gcc --version</span>                                                           </span><br><span class="line">gcc (Spack GCC) 10.2.0</span><br><span class="line">Copyright (C) 2020 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
+
+<p>当使用<code>spack load</code>命令后，<code>spack</code>将会将此软件的环境变量加载到环境变量<code>PATH</code>、<code>MANPATH</code>、<code>CPATH</code>和<code>LD_LIBRARY_PATH</code>中。</p>
+<p>我们来做一个实验，用新安装的<code>gcc@10.2.0</code>来编译一个2048小游戏</p>
+<p>项目地址： <a target="_blank" rel="noopener" href="https://github.com/plibither8/2048.cpp">https://github.com/plibither8/2048.cpp</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find gcc</span></span><br><span class="line">==&gt; 2 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0  gcc@10.2.0</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack load gcc@10.2.0</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/plibither8/2048.cpp</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> 2048.cpp</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">mkdir</span> build &amp;&amp; <span class="built_in">cd</span> build</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">cmake ../</span>         </span><br><span class="line">......</span><br><span class="line">-- Build files have been written to: /home/nfs/admin0/qizewen/2048.cpp/build</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">cmake --build .</span>        </span><br><span class="line">Scanning dependencies of target 2048</span><br><span class="line">......</span><br><span class="line"><span class="meta prompt_">[100%</span><span class="language-bash">] Linking CXX executable 2048</span></span><br><span class="line"><span class="meta prompt_">[100%</span><span class="language-bash">] Built target 2048</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./2048</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-2-spack-unload"><a href="#2-6-2-spack-unload" class="headerlink" title="2.6.2 spack unload"></a>2.6.2 spack unload</h3><p>当您不希望在某个窗口中使用<code>load</code>后的软件，您可以通过<code>spack unload</code>来将环境变量已加载的环境变量取消。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[~] spack unload gcc                                                       </span><br><span class="line">==&gt; Warning: Reversing `Set` environment operation may lose original value                                                                                                                                         </span><br><span class="line">==&gt; Warning: Reversing `Set` environment operation may lose original value</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-6-3-多版本共存问题"><a href="#2-6-3-多版本共存问题" class="headerlink" title="2.6.3 多版本共存问题"></a>2.6.3 多版本共存问题</h3><p>当您在<code>load</code>环境时可能会出现以下情况,您可以参考 软件包参数指定 章节指定更多参数来明确需要加载的软件包。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack load gcc</span>                                    </span><br><span class="line">==&gt; Error: gcc matches multiple packages.</span><br><span class="line">  Matching packages:</span><br><span class="line">    o7522oj gcc@7.5.0%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512</span><br><span class="line">    7s57lgi gcc@10.2.0%gcc@7.5.0 arch=linux-ubuntu18.04-skylake_avx512</span><br><span class="line">  Use a more specific spec.</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack load gcc@7.5.0 target=skylake_avx512</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-Spack-ENV环境"><a href="#3-Spack-ENV环境" class="headerlink" title="3. Spack ENV环境"></a>3. Spack ENV环境</h1><p>假设我们在做一个项目，但是在<code>spack find</code>列出的软件有多个版本，且不能迅速找到所需要的软件依赖。</p>
+<p>那看起来是不是特别不方便？</p>
+<p>这里<code>Spack</code>引入了<code>ENV</code>环境来创建一个干净的环境，您可以理解为类似<code>Conda</code>或<code>Python Environment</code>，您可以使用项目名称来命名<code>ENV</code>环境。</p>
+<h2 id="3-1-spack-env-create"><a href="#3-1-spack-env-create" class="headerlink" title="3.1 spack env create"></a>3.1 spack env create</h2><p>您可以使用<code>spack env create &lt;envname&gt;</code>创建虚拟环境。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">env</span> create emenv</span></span><br><span class="line"></span><br><span class="line">==&gt; Updating view at /home/user/spack/var/spack/environments/emenv/.spack-env/view</span><br><span class="line">==&gt; Created environment &#x27;emenv&#x27; in /home/user/spack/var/spack/environments/emenv</span><br><span class="line">==&gt; You can activate this environment with:</span><br><span class="line">==&gt;   spack env activate emenv</span><br></pre></td></tr></table></figure>
+
+<p>所有的命名的环境存储位置在<code>spack安装目录/spack/var/spack/environments</code>中</p>
+<p>虚拟环境最大的好处就是可以迁移环境，您可以通过<code>spack/var/spack/environments</code>目录下的<code>spack.yaml</code>或<code>spack.lock</code>来创建新的虚拟环境。</p>
+<p>以下示例通过一个已经创建的<code>spack.yaml</code>来创建新的虚拟环境<code>newenv</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">pwd</span></span>                                                                                       </span><br><span class="line">/home/user/spack/var/spack/environments/emenv</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">ls</span></span>                                                                                        </span><br><span class="line">spack.lock  spack.yaml</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">env</span> create newenv spack.yaml</span>                                                        </span><br><span class="line">==&gt; Updating view at /home/user/spack/var/spack/environments/newenv/.spack-env/view</span><br><span class="line">==&gt; Created environment &#x27;newenv&#x27; in /home/user/spack/var/spack/environments/newenv</span><br><span class="line">==&gt; You can activate this environment with:</span><br><span class="line">==&gt;   spack env activate newenv</span><br></pre></td></tr></table></figure>
+
+<p>您也可以通过使用<code>spack.lock</code>创建环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">env</span> create myenv spack.lock</span></span><br><span class="line">spack env activate &lt;envname&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在您创建完成虚拟环境后，您可以通过使用<code>spack env activate &lt;envname&gt;</code>激活环境;</p>
+<p>在新环境中，您可以看到一个干净的<code>env</code>环境，那么您就可以只安装和此项目相关的软件包了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">env</span> activate newenv</span>         </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span>                        </span><br><span class="line"></span><br><span class="line">==&gt; In environment emenv</span><br><span class="line">==&gt; No root specs</span><br><span class="line">==&gt; 0 installed packages</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2-spack-env-deactive"><a href="#3-2-spack-env-deactive" class="headerlink" title="3.2 spack env deactive"></a>3.2 spack env deactive</h2><p>在使用完成虚拟环境时，您可以使用<code>spack env deactive</code>来取消使用虚拟环境。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span>            </span><br><span class="line">==&gt; In environment emenv</span><br><span class="line">==&gt; No root specs</span><br><span class="line">==&gt; 0 installed packages</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack <span class="built_in">env</span> deactivate</span>                                                                                                                                                                         </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">spack find</span>                                                                                                                                                                                   </span><br><span class="line">==&gt; 15 installed packages</span><br><span class="line">-- linux-ubuntu18.04-skylake_avx512 / gcc@7.5.0 -----------------</span><br><span class="line">gcc@7.5.0  gmp@6.1.2  isl@0.18  jdk@14  lmod@8.3  lua@5.3.5  lua-luafilesystem@1_7_0_2  lua-luaposix@33.4.0  mpc@1.1.0  mpfr@3.1.6  ncurses@6.2  readline@8.0  tcl@8.6.10  unzip@6.0  zlib@1.2.11</span><br></pre></td></tr></table></figure>
+
+<p>您也可以使用despacktivate来取消环境，效果与spack env deactive相同。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">despacktivate</span></span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/WRF%20Offline%20Install/" rel="prev" title="WRF Offline Install">
+      <i class="fa fa-chevron-left"></i> WRF Offline Install
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Vim/" rel="next" title="Vim">
+      Vim <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spack%EF%BC%9A%E8%B6%85%E7%AE%97%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">Spack：超算上最好的包管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85Spack"><span class="nav-number">1.1.</span> <span class="nav-text">1. 安装Spack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E4%B8%8B%E8%BD%BDSpack%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 下载Spack包管理器文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%AF%BC%E5%85%A5Spack%E7%8E%AF%E5%A2%83"><span class="nav-number">1.3.</span> <span class="nav-text">1.2 导入Spack环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85%E6%83%85%E5%86%B5"><span class="nav-number">1.4.</span> <span class="nav-text">1.3 检查安装情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E7%BC%96%E8%AF%91%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="nav-number">1.5.</span> <span class="nav-text">1.4 编译器配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-1-spack-compilers"><span class="nav-number">1.5.1.</span> <span class="nav-text">1.4.1 spack compilers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-2-spack-compiler-find"><span class="nav-number">1.5.2.</span> <span class="nav-text">1.4.2 spack compiler find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-3-spack-compiler-info"><span class="nav-number">1.5.3.</span> <span class="nav-text">1.4.3 spack compiler info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-4-%E6%89%8B%E5%8A%A8%E9%85%8D%E7%BD%AE%E5%8F%AF%E7%94%A8%E7%BC%96%E8%AF%91%E5%99%A8%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">1.5.4.</span> <span class="nav-text">1.4.4 手动配置可用编译器（可选）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-5-%E6%8C%87%E5%AE%9A%E9%BB%98%E8%AE%A4%E7%BC%96%E8%AF%91%E5%99%A8%E7%89%88%E6%9C%AC%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">1.5.5.</span> <span class="nav-text">1.4.5 指定默认编译器版本（可选）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">2. 基础使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%88%97%E5%87%BAspack%E5%8F%AF%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 列出spack可安装的软件包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-spack-list"><span class="nav-number">2.1.1.</span> <span class="nav-text">2.1.1 spack list</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-spack-info"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.1.2 spack info</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-spack-versions"><span class="nav-number">2.1.3.</span> <span class="nav-text">2.1.3 spack versions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-4-spack-arch"><span class="nav-number">2.1.4.</span> <span class="nav-text">2.1.4 spack arch</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E8%BD%AF%E4%BB%B6%E5%8C%85%E5%8F%82%E6%95%B0%E6%8C%87%E5%AE%9A"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 软件包参数指定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%AE%89%E8%A3%85%E5%92%8C%E5%8D%B8%E8%BD%BD%E8%BD%AF%E4%BB%B6"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 安装和卸载软件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-spack-install"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1 spack install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-spack-uninstall"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2 spack uninstall</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-spack-gc"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3 spack gc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-%E7%BC%96%E8%AF%91%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.4 编译无法下载的软件包</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-spack-mirror-create"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 spack mirror create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-5-%E6%9F%A5%E8%AF%A2%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 查询已安装的软件包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-1-spack-find"><span class="nav-number">2.5.1.</span> <span class="nav-text">2.5.1 spack find</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-2-%E6%9F%A5%E8%AF%A2find%E6%9B%B4%E5%A4%9A%E4%BF%A1%E6%81%AF"><span class="nav-number">2.5.2.</span> <span class="nav-text">2.5.2 查询find更多信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-1-spack-find-%E2%80%93deps"><span class="nav-number">2.5.2.1.</span> <span class="nav-text">2.5.2.1 spack find –deps</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-2-2-spack-find-%E2%80%93paths"><span class="nav-number">2.5.2.2.</span> <span class="nav-text">2.5.2.2 spack find –paths</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-6-%E4%BD%BF%E7%94%A8%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%8C%85"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 使用已安装的软件包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-1-spack-load"><span class="nav-number">2.6.1.</span> <span class="nav-text">2.6.1 spack load</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-2-spack-unload"><span class="nav-number">2.6.2.</span> <span class="nav-text">2.6.2 spack unload</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-3-%E5%A4%9A%E7%89%88%E6%9C%AC%E5%85%B1%E5%AD%98%E9%97%AE%E9%A2%98"><span class="nav-number">2.6.3.</span> <span class="nav-text">2.6.3 多版本共存问题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-Spack-ENV%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">3. Spack ENV环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-spack-env-create"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 spack env create</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-spack-env-deactive"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 spack env deactive</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

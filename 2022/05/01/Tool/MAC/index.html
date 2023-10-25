@@ -27,18 +27,18 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Mac 装机123456789101112131415基础：Chrome*通讯：微信+QQ+网易邮箱大师会议：腾讯会议+ZOOM科研：Omnigraffle+Panoply+Mathpix Snip+MacTex+VSCode+Typora+Sublime Tex+PDF Reader Pro+XQuartz+Global Protect+有道词典+字体拷贝娱乐：爱奇艺+网易云音乐 解压：The">
 <meta property="og:locale">
-<meta property="og:image" content="https://pic4.zhimg.com/80/v2-abba1f28d7ec17595ff7b92a06ff8547_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-3bf81a77e9c2b4c1330bb6c004881ba8_1440w.webp">
-<meta property="og:image" content="https://pic4.zhimg.com/80/v2-1da12b6de5e9d7b213f2c5cd136da923_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-79cd30cd97aef81537c2ac8929310688_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-8b085616ad1fd93e4d2a3359ec335cd8_1440w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-f82677b5b2e8cdb16239ef7cbec2bef9_1440w.webp">
+<meta property="og:image" content="https://p.ipic.vip/rxp3om.png">
+<meta property="og:image" content="https://p.ipic.vip/c89rpm.png">
+<meta property="og:image" content="https://p.ipic.vip/ml4o1x.png">
+<meta property="og:image" content="https://p.ipic.vip/uqdkqi.png">
+<meta property="og:image" content="https://p.ipic.vip/zcvgoe.png">
+<meta property="og:image" content="https://p.ipic.vip/ijtn41.png">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-73780678e401af99239ffd6733b4b417_1440w.webp">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-28T13:18:52.065Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:19.999Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic4.zhimg.com/80/v2-abba1f28d7ec17595ff7b92a06ff8547_1440w.webp">
+<meta name="twitter:image" content="https://p.ipic.vip/rxp3om.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/MAC/">
 
@@ -238,7 +238,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-08-28 21:18:52" itemprop="dateModified" datetime="2023-08-28T21:18:52+08:00">2023-08-28</time>
+                <time title="Modified: 2023-10-23 19:12:19" itemprop="dateModified" datetime="2023-10-23T19:12:19+08:00">2023-10-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,7 +292,7 @@
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ xcode-select --install</span><br><span class="line">xcode-select: note: install requested for command line developer tools</span><br></pre></td></tr></table></figure>
 
 <p>回车之后会出现如下的弹窗，点击”安装”即可</p>
-<p><img src="https://pic4.zhimg.com/80/v2-abba1f28d7ec17595ff7b92a06ff8547_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/rxp3om.png" alt="img"></p>
 <p>原因是升级 macOS后需要重新安装 <code>Xcode command line tools</code></p>
 <h4 id="macOS-Ventura-写入-NTFS-格式移动硬盘的方法"><a href="#macOS-Ventura-写入-NTFS-格式移动硬盘的方法" class="headerlink" title="macOS Ventura 写入 NTFS 格式移动硬盘的方法"></a>macOS Ventura 写入 NTFS 格式移动硬盘的方法</h4><p><a href="https://link.zhihu.com/?target=https://techsviewer.com/how-to-write-ntfs-drives-on-macos-ventura/">How to Write NTFS Drives on macOS Ventura (techsviewer.com)</a></p>
 <p>大概看了下，用的是另外提到的一种方法，不是系统自带的 mount_ntfs 而是 NTFS-3G 的 mount_ntfs 来实现的方法。</p>
@@ -305,7 +305,7 @@
 <p><strong>3、下面理论是安装 NTFS-3G</strong></p>
 <p>但是这里出问题了。</p>
 <p>见图，这个时候提示用的系统是 macOS 13，ntfs-3g-mac 不支持</p>
-<p><img src="https://pic1.zhimg.com/80/v2-3bf81a77e9c2b4c1330bb6c004881ba8_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/c89rpm.png" alt="img"></p>
 <p>网上没有找到方法来解决，后来我死马当活马医，试着用了其他命令行命令常见的参数 「– force」，居然可以继续安装了。</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install --force ntfs-3g-mac</span><br></pre></td></tr></table></figure>
 
@@ -314,7 +314,7 @@
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diskutil list</span><br></pre></td></tr></table></figure>
 
 <p>下面是我的移动硬盘的设备好，是 &#x2F;dev&#x2F;disk6 ，标识符是 disk6s1。</p>
-<p><img src="https://pic4.zhimg.com/80/v2-1da12b6de5e9d7b213f2c5cd136da923_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/ml4o1x.png" alt="img"></p>
 <p>因此卸载的命令是下面的，注意把黑色部分替换为你自己的设备标识符</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo umount /dev/disk6s1</span><br></pre></td></tr></table></figure>
 
@@ -325,11 +325,11 @@
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/local/sbin/mount_ntfs /dev/disk6s1 ~/Desktop/MobileDisk/</span><br></pre></td></tr></table></figure>
 
 <p>理论上，这个时候会弹出来一个窗口提示你需要权限。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-79cd30cd97aef81537c2ac8929310688_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/uqdkqi.png" alt="img"></p>
 <p>根据提示，在「隐私与安全性」的页面，超下翻，在「安全性」的大标题下面，会有一个类似「<strong>部分系统软件需要你注意才能使用</strong>」，上面的第一个就是上图提示需要权限的软件，打开授权。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-8b085616ad1fd93e4d2a3359ec335cd8_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/zcvgoe.png" alt="img"></p>
 <p>然后会提示你重启，重启后，重复第 4 步，注意重启后设备标识可能改变，然后到了 mount 那一步，就不会提示你授权了（刚刚重启就是为了授权成功），随后，你会发现 Finder 里面的移动硬盘，可以拷贝东西进去了。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-f82677b5b2e8cdb16239ef7cbec2bef9_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/ijtn41.png" alt="img"></p>
 <h3 id="2-2-一个问题"><a href="#2-2-一个问题" class="headerlink" title="2.2 一个问题"></a>2.2 一个问题</h3><p>你会发现东西能拷贝进去了，但是删不掉，删除会提示，这可不行啊，拷贝错了就麻烦了。</p>
 <p><img src="https://pic4.zhimg.com/80/v2-73780678e401af99239ffd6733b4b417_1440w.webp" alt="img"></p>
 <p>当前发现删除方法还是进命令行，然后用「rm」命令删除。</p>
@@ -350,12 +350,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Paper%20Submission/" rel="prev" title="Paper submission">
-      <i class="fa fa-chevron-left"></i> Paper submission
+    <a href="/2022/05/01/Tool/Mac%20Cron/" rel="prev" title="Mac Cron">
+      <i class="fa fa-chevron-left"></i> Mac Cron
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Pandas%20Cheatsheet/" rel="next" title="Pandas Cheatsheet">
-      Pandas Cheatsheet <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Latex%20Symbols/" rel="next" title="Latex Symbols">
+      Latex Symbols <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -430,7 +430,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">175</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

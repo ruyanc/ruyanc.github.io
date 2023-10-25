@@ -27,19 +27,19 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Git 基本操作git commit提交修改 git branch &lt;NewBrachName&gt;创建分支 新创建的分支会指向的当前提交记录。 注意：在新创建的分支中进行commit提交的时候需确认当前所在分支 git checkout &lt;BranchName&gt;切换到某一分支 git merge &lt;BrachName&gt;把BrachName分支合并到当前分支里，是将">
 <meta property="og:locale">
-<meta property="og:image" content="https://p.ipic.vip/80oacz.png">
-<meta property="og:image" content="https://p.ipic.vip/yx1vf1.png">
-<meta property="og:image" content="https://p.ipic.vip/namwxi.png">
-<meta property="og:image" content="https://p.ipic.vip/7r4oyz.png">
+<meta property="og:image" content="https://p.ipic.vip/9kb0lg.png">
+<meta property="og:image" content="https://p.ipic.vip/spdluh.png">
+<meta property="og:image" content="https://p.ipic.vip/tih38w.png">
+<meta property="og:image" content="https://p.ipic.vip/mbc744.png">
 <meta property="og:image" content="https://p.ipic.vip/x2xklo.png">
 <meta property="og:image" content="https://p.ipic.vip/gtwkq9.png">
-<meta property="og:image" content="https://p.ipic.vip/s48a0u.png">
-<meta property="og:image" content="https://p.ipic.vip/t21hsf.png">
+<meta property="og:image" content="https://p.ipic.vip/athgnf.png">
+<meta property="og:image" content="https://p.ipic.vip/p8mlz3.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-08T06:18:29.880Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:20.313Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.ipic.vip/80oacz.png">
+<meta name="twitter:image" content="https://p.ipic.vip/9kb0lg.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/Git%20Tutorial/">
 
@@ -239,7 +239,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-08 14:18:29" itemprop="dateModified" datetime="2023-10-08T14:18:29+08:00">2023-10-08</time>
+                <time title="Modified: 2023-10-23 19:12:20" itemprop="dateModified" datetime="2023-10-23T19:12:20+08:00">2023-10-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -296,7 +296,7 @@
 <p><strong>当你知道你所需要的提交记录（并且还知道这些提交记录的哈希值）时, 用 cherry-pick 再好不过了 —— 没有比这更简单的方式了</strong></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-picl C2</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/80oacz.png" alt="Screenshot 2023-10-01 at 19.53.33"></p>
+<p><img src="https://p.ipic.vip/9kb0lg.png" alt="Screenshot 2023-10-01 at 19.53.33"></p>
 <p>将提交树上的提交记录取过来追加到 HEAD 上（只要不是 HEAD 上游的提交就没问题）。</p>
 <h3 id="git-rebase-i-HEAD-96-96"><a href="#git-rebase-i-HEAD-96-96" class="headerlink" title="git rebase -i HEAD~&#96;&#96;"></a>git rebase -i HEAD~&#96;<number>&#96;</h3><p>Git 会打开一个 UI 界面并列出将要被复制到目标分支的备选提交记录，它还会显示每个提交记录的哈希值和提交说明，提交说明有助于你理解这个提交进行了哪些更改。</p>
 <p>在实际使用时，所谓的 UI 窗口一般会在文本编辑器 —— 如 Vim —— 中打开一个文件。</p>
@@ -318,11 +318,11 @@
 <p>当 <code>ref</code> 提交记录上有某个标签时，则只输出标签名称</p>
 <h3 id="git-checkout-master-lt-num-gt"><a href="#git-checkout-master-lt-num-gt" class="headerlink" title="git checkout master^&lt;num&gt;"></a>git checkout master^<code>&lt;num&gt;</code></h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout mater^2</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/yx1vf1.png" alt="Screenshot 2023-10-01 at 20.19.00"></p>
+<p><img src="https://p.ipic.vip/spdluh.png" alt="Screenshot 2023-10-01 at 20.19.00"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout HEAD~^2~2</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/namwxi.png" alt="Screenshot 2023-10-01 at 20.20.03"></p>
-<h2 id="利用Git进行远程协作"><a href="#利用Git进行远程协作" class="headerlink" title="利用Git进行远程协作"></a>利用Git进行远程协作</h2><h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p><img src="https://p.ipic.vip/7r4oyz.png" alt="Screenshot 2023-09-27 at 19.55.41"></p>
+<p><img src="https://p.ipic.vip/tih38w.png" alt="Screenshot 2023-10-01 at 20.20.03"></p>
+<h2 id="利用Git进行远程协作"><a href="#利用Git进行远程协作" class="headerlink" title="利用Git进行远程协作"></a>利用Git进行远程协作</h2><h3 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h3><p><img src="https://p.ipic.vip/mbc744.png" alt="Screenshot 2023-09-27 at 19.55.41"></p>
 <p>在本地仓库多了一个名为 <code>o/master</code> 的分支, 这种类型的分支就叫<strong>远程分支</strong></p>
 <p>例如一个名为 <code>origin/master</code> 的分支，那么这个分支就叫 <code>master</code>，远程仓库的名称就是 <code>origin</code></p>
 <p>远程分支反映了远程仓库在你<strong>最后一次与它通信时</strong>的状态</p>
@@ -387,7 +387,7 @@
 <p><strong>注意：因为我们通过指定参数告诉了 Git 所有它需要的信息, 所以它就忽略了我们所检出的分支的属性</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout C0; git push</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/s48a0u.png" alt="Screenshot 2023-09-28 at 18.46.46"></p>
+<p><img src="https://p.ipic.vip/athgnf.png" alt="Screenshot 2023-09-28 at 18.46.46"></p>
 <p>失败原因：checkout 的 HEAD 没有跟踪任何分支。</p>
 <p>要同时为源和目的地指定 <code>&lt;place&gt;</code> 的话，只需要用冒号 <code>:</code> 将二者连起来就可以了：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin `&lt;source&gt;`:`&lt;destination&gt;`</span><br></pre></td></tr></table></figure>
@@ -403,7 +403,7 @@
 
 
 <h3 id="git-fetch-origin-foo"><a href="#git-fetch-origin-foo" class="headerlink" title="git fetch origin foo"></a>git fetch origin foo</h3><p>Git 会到远程仓库的 <code>foo</code> 分支上，然后获取所有本地不存在的提交，放到本地的 <code>o/foo</code> 上。</p>
-<p><img src="https://p.ipic.vip/t21hsf.png" alt="Screenshot 2023-09-28 at 19.00.04"></p>
+<p><img src="https://p.ipic.vip/p8mlz3.png" alt="Screenshot 2023-09-28 at 19.00.04"></p>
 <p><strong>注意：为何 Git 会将新提交放到 <code>o/foo</code> 而不是放到我本地的 foo 分支呢？</strong></p>
 <p>因为你可能在 foo 分支上的工作还未完成，你也不想弄乱它。 <code>git fetch</code> 不会更新你的本地的非远程分支, 只是下载提交记录（这样, 你就可以对远程分支进行检查或者合并了）。</p>
 <p>如果 <code>git fetch</code> 没有参数，它会下载所有的提交记录到各个远程分支</p>
@@ -431,12 +431,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Gitee/" rel="prev" title="Gitee">
-      <i class="fa fa-chevron-left"></i> Gitee
+    <a href="/2022/05/01/Tool/GitHub/" rel="prev" title="Github">
+      <i class="fa fa-chevron-left"></i> Github
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/GitHub/" rel="next" title="Github">
-      Github <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/GPU/" rel="next" title="GPU">
+      GPU <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -511,7 +511,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">175</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

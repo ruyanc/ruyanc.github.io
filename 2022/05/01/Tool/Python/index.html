@@ -27,21 +27,21 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Install Python https:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;b9eac8419c8d 下载anaconda 查看帮助conda -h 基于python3.8版本创建一个名字为python38的环境conda create --name python38 python&#x3D;3.8 激活此环境activate python38 再来检查python版本，显示是 3.8python -">
 <meta property="og:locale">
-<meta property="og:image" content="https://p.ipic.vip/v7kkot.png">
-<meta property="og:image" content="https://p.ipic.vip/hp7qjc.png">
-<meta property="og:image" content="https://p.ipic.vip/jccjmf.png">
-<meta property="og:image" content="https://p.ipic.vip/j8giy8.png">
-<meta property="og:image" content="https://p.ipic.vip/he0lg4.png">
-<meta property="og:image" content="https://p.ipic.vip/1qeo8d.png">
-<meta property="og:image" content="https://p.ipic.vip/oij628.png">
+<meta property="og:image" content="https://p.ipic.vip/fkkvug.png">
+<meta property="og:image" content="https://p.ipic.vip/gem10a.png">
+<meta property="og:image" content="https://p.ipic.vip/4tmpwe.png">
+<meta property="og:image" content="https://p.ipic.vip/9q17yk.png">
+<meta property="og:image" content="https://p.ipic.vip/pw1sxx.png">
+<meta property="og:image" content="https://p.ipic.vip/70wg4j.png">
+<meta property="og:image" content="https://p.ipic.vip/cpfacp.png">
 <meta property="og:image" content="https://p.ipic.vip/rimhy5.png">
-<meta property="og:image" content="https://p.ipic.vip/m82bjj.png">
-<meta property="og:image" content="https://p.ipic.vip/xfwwdj.png">
+<meta property="og:image" content="https://p.ipic.vip/ihmwhb.png">
+<meta property="og:image" content="https://p.ipic.vip/hci66q.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-16T06:17:58.536Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:19.882Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.ipic.vip/v7kkot.png">
+<meta name="twitter:image" content="https://p.ipic.vip/fkkvug.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/Python/">
 
@@ -241,7 +241,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-16 14:17:58" itemprop="dateModified" datetime="2023-07-16T14:17:58+08:00">2023-07-16</time>
+                <time title="Modified: 2023-10-23 19:12:19" itemprop="dateModified" datetime="2023-10-23T19:12:19+08:00">2023-10-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -477,7 +477,7 @@
 <p>  pandas的读取效率又要高于上述的numpy包，这部分得益于pandas常用的两种数据结构：Series和DataFrame，顾名思义，区别在于Series为一维数据，而DataFrame为两维数据。</p>
 <p>读取文件时，pandas针对不同文件有不同的函数，具体可在下列官网中找到：</p>
 <p><a target="_blank" rel="noopener" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html">https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html</a></p>
-<p><img src="https://p.ipic.vip/v7kkot.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/fkkvug.png" alt="Image"></p>
 <p>截张不完全的图感受一下pandas针对读取和写入文件施工的函数数量。</p>
 <p>因为函数实在太多，此处仅简单举例，例如使用read_table函数读入txt文件：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_table(&#x27;filename.txt&#x27;,sep=&#x27;\t&#x27;,header=2)</span><br></pre></td></tr></table></figure>
@@ -515,19 +515,19 @@
 <p><strong>#step1： 查看.nc文件的全部变量，及该变量的全部信息（维度大小，单位等）</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">all_vars = f.variables.keys()   #获取所有变量名称</span><br><span class="line">print(len(all_vars))  #长度为18</span><br><span class="line"></span><br><span class="line">all_vars_info = f.variables.items()  #获取所有变量信息</span><br><span class="line">print(type(all_vars_info))   #输出为： odict_items 。这里将其转化为 list列表</span><br><span class="line">print(len(all_vars_info))   #长度为18</span><br><span class="line">all_vars_info = list(all_vars_info)  #此时每个变量的信息为其中一个列表</span><br></pre></td></tr></table></figure>
 
-<p>如图：包含经纬度、时间、等变量名称<br><img src="https://p.ipic.vip/hp7qjc.png" alt="在这里插入图片描述"><br>看看 all_vars_info的前两个变量的信息，如下，显示了 shape unit name float32 fillvalue等信息</p>
-<p><img src="https://p.ipic.vip/jccjmf.png" alt="在这里插入图片描述"></p>
+<p>如图：包含经纬度、时间、等变量名称<br><img src="https://p.ipic.vip/gem10a.png" alt="在这里插入图片描述"><br>看看 all_vars_info的前两个变量的信息，如下，显示了 shape unit name float32 fillvalue等信息</p>
+<p><img src="https://p.ipic.vip/4tmpwe.png" alt="在这里插入图片描述"></p>
 <p><strong>#step2： 查看.nc文件的单个变量，及该变量的全部信息（维度大小，单位等）</strong><br>如果对某个变量感兴趣（已知变量名)，想查看这个变量的信息，获取这个变量的数据，方法如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#我们要查看  ’u‘的信息</span><br><span class="line">var = &#x27;u&#x27;</span><br><span class="line">var_info = f.variables[var]   #获取变量信息</span><br><span class="line">var_data = f[var][:]   #获取变量的数据</span><br><span class="line">print(var_info)</span><br><span class="line">print(var_data.shape)  </span><br><span class="line"></span><br><span class="line">#很方便转化为array数组</span><br><span class="line">print(type(var_data))    #&lt;class &#x27;numpy.ma.core.MaskedArray&#x27;&gt;  .nc文件的变量数组都为Masked array</span><br><span class="line">var_data = np.array(var_data)  #转化为np.array数组</span><br><span class="line"></span><br><span class="line"># 读取数据</span><br><span class="line">data = nc.variables[&#x27;air&#x27;][:]</span><br><span class="line"></span><br><span class="line">print(data)</span><br></pre></td></tr></table></figure>
 
-<p>输出如下：<br><img src="https://p.ipic.vip/j8giy8.png" alt="在这里插入图片描述"></p>
+<p>输出如下：<br><img src="https://p.ipic.vip/9q17yk.png" alt="在这里插入图片描述"></p>
 <p><strong>#step3： 列表形式记录所有变量信息</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">###最直接的办法，获取每个变量的缩写名字，标准名字(long_name),units和shape大小。这样很方便后续操作</span><br><span class="line">all_vars_name = []</span><br><span class="line">all_vars_long_name = []</span><br><span class="line">all_vars_units = []</span><br><span class="line">all_vars_shape = []</span><br><span class="line"></span><br><span class="line">for key in f1.variables.keys():</span><br><span class="line">    </span><br><span class="line">    all_vars_name.append(key)</span><br><span class="line">    all_vars_long_name.append(f1.variables[key].long_name)</span><br><span class="line">    all_vars_units.append(f1.variables[key].units)</span><br><span class="line">    all_vars_shape.append(f1.variables[key].shape)</span><br></pre></td></tr></table></figure>
 
-<p>结果如下：<br><img src="https://p.ipic.vip/he0lg4.png" alt="在这里插入图片描述"></p>
+<p>结果如下：<br><img src="https://p.ipic.vip/pw1sxx.png" alt="在这里插入图片描述"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#做成表格</span><br><span class="line">a_vars_info = pd.DataFrame(all_vars_name,columns = [&#x27;name&#x27;])</span><br><span class="line">a_vars_info[&#x27;long_name&#x27;] = all_vars_long_name</span><br><span class="line">a_vars_info[&#x27;units&#x27;] = all_vars_units</span><br><span class="line">a_vars_info[&#x27;shape&#x27;] = all_vars_shape</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/1qeo8d.png" alt="在这里插入图片描述"></p>
+<p><img src="https://p.ipic.vip/70wg4j.png" alt="在这里插入图片描述"></p>
 <p><strong>注意：</strong>完成上述操作之后，记得关掉该文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.close()  #关闭文件。如果文件关闭后，再使用f.variabels.items()等操作是行不通的。</span><br></pre></td></tr></table></figure>
 
@@ -542,16 +542,16 @@
 <p>关闭文件</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f_w.close()</span><br></pre></td></tr></table></figure>
 
-<p>还可以写入fill_value等信息<br><img src="https://p.ipic.vip/oij628.png" alt="在这里插入图片描述"><br><img src="https://p.ipic.vip/rimhy5.png" alt="在这里插入图片描述"><br>按照上述方式创建完成后，用一些可视化软件打开，结果如上图。</p>
+<p>还可以写入fill_value等信息<br><img src="https://p.ipic.vip/cpfacp.png" alt="在这里插入图片描述"><br><img src="https://p.ipic.vip/rimhy5.png" alt="在这里插入图片描述"><br>按照上述方式创建完成后，用一些可视化软件打开，结果如上图。</p>
 <p><strong>#step3： 创建群组</strong></p>
 <p>如上图，所以变量都是平行的位置，如果变量特别多，将相同类型的变量放进同一个group中，会更加方便。<br>来看一个示例：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">f_w = nc.Dataset(&#x27;haha4.nc&#x27;,&#x27;w&#x27;,format = &#x27;NETCDF4&#x27;)</span><br><span class="line"></span><br><span class="line">f_w.createDimension(&#x27;time&#x27;,12)</span><br><span class="line">f_w.createDimension(&#x27;level&#x27;,37)</span><br><span class="line">f_w.createDimension(&#x27;lat&#x27;,161)  </span><br><span class="line">f_w.createDimension(&#x27;lon&#x27;,177)</span><br><span class="line"></span><br><span class="line">f_w.createVariable(&#x27;time&#x27;,np.int,(&#x27;time&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;level&#x27;,np.int,(&#x27;level&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;lat&#x27;,np.float32,(&#x27;lat&#x27;))</span><br><span class="line">f_w.createVariable(&#x27;lon&#x27;,np.float32,(&#x27;lon&#x27;))</span><br><span class="line"></span><br><span class="line">time = np.array([0,6,12,18,0,6,12,18,0,6,12,18])</span><br><span class="line"></span><br><span class="line">f_w.variables[&#x27;time&#x27;][:] = time</span><br><span class="line">f_w.variables[&#x27;level&#x27;][:] = level</span><br><span class="line"></span><br><span class="line">f_w.createVariable( &#x27;q&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.ones(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">f_w.variables[&#x27;q&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">#创建一个群组，名字为&#x27;wind&#x27;</span><br><span class="line">group1 = f_w.createGroup(&#x27;wind&#x27;) </span><br><span class="line"></span><br><span class="line">group1.createVariable( &#x27;u&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.ones(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">group1.variables[&#x27;u&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">group1.createVariable( &#x27;v&#x27;, np.float32, (&#x27;time&#x27;,&#x27;level&#x27;,&#x27;lat&#x27;,&#x27;lon&#x27;))</span><br><span class="line">var_data = np.zeros(shape=(12,37,161,177), dtype = np.float32)</span><br><span class="line">group1.variables[&#x27;v&#x27;][:] = var_data </span><br><span class="line"></span><br><span class="line">group1.close  # 关闭群组， 注意，这里没有括号</span><br><span class="line"></span><br><span class="line">f_w.close()</span><br></pre></td></tr></table></figure>
 
-<p>创建结果如下：<br><img src="https://p.ipic.vip/m82bjj.png" alt="在这里插入图片描述"><br>看，group的信息出来了</p>
+<p>创建结果如下：<br><img src="https://p.ipic.vip/ihmwhb.png" alt="在这里插入图片描述"><br>看，group的信息出来了</p>
 <p>**#step4：查看带有group的.nc文件的信息 **</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f1 = nc.Dataset(&#x27;haha5.nc&#x27;)</span><br><span class="line">vars = f1.variables.keys()  #odict_keys([&#x27;time&#x27;, &#x27;level&#x27;, &#x27;lat&#x27;, &#x27;lon&#x27;, &#x27;q&#x27;])  看不到groups信息</span><br><span class="line">#通过以下命令</span><br><span class="line">group_name = f1.groups.keys()  #获取组名,输出为：odict_keys([&#x27;wind&#x27;])</span><br></pre></td></tr></table></figure>
 
-<p>使用如下命令都能看到group内的变量的信息。<br><img src="https://p.ipic.vip/xfwwdj.png" alt="在这里插入图片描述"></p>
+<p>使用如下命令都能看到group内的变量的信息。<br><img src="https://p.ipic.vip/hci66q.png" alt="在这里插入图片描述"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#获取group内的变量的数据</span><br><span class="line">group_var_data = f1[&#x27;wind&#x27;][&#x27;u&#x27;][:]  </span><br><span class="line">print(group_var_data.shape)  #(12, 37, 161, 177)</span><br></pre></td></tr></table></figure>
 
 <p><em><strong>4. 总结</strong></em></p>
@@ -693,8 +693,8 @@
       <i class="fa fa-chevron-left"></i> SCP
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/ONNX/" rel="next" title="ONNX">
-      ONNX <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Python%20Color/" rel="next" title="Python Color">
+      Python Color <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -769,7 +769,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">175</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

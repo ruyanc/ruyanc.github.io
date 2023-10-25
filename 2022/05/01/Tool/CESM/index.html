@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="4.5 The Four Run TypesThe environment variable $RUNTYPE set in the main setup script specifies the state in which the model will begin a run. This variable has four options, ‘startup’, ‘hybrid’, ‘cont">
 <meta property="og:locale">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEpQhvl7CDXB8IRYh6Cibr7ozlc6TVZ5H77cy0SU40juomvWXJSbCZGicQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEXIz8Ayib6qfFWrcUSCEIfph4B6cmGSDwLCVPQYzuybVjbBialrmaSo5Q/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/1a9q1b.png">
+<meta property="og:image" content="https://p.ipic.vip/qkut3r.png">
+<meta property="og:image" content="https://p.ipic.vip/gea9n6.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-06T02:53:06.803Z">
+<meta property="article:modified_time" content="2023-10-23T11:12:19.852Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta name="twitter:image" content="https://p.ipic.vip/1a9q1b.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/CESM/">
 
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-06 10:53:06" itemprop="dateModified" datetime="2023-07-06T10:53:06+08:00">2023-07-06</time>
+                <time title="Modified: 2023-10-23 19:12:19" itemprop="dateModified" datetime="2023-10-23T19:12:19+08:00">2023-10-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -316,9 +316,9 @@
 
 <p>–case 后面跟的是你给这个case所取的名字，这里我取名为test1</p>
 <p>–res 告诉脚本你想给这个case使用什么样的分辨率，CESM2里面提供了各种各样的分辨率配置，所有的分辨率及详细介绍可见CESM2.2.0 Grid Resolution Definitions (ucar.edu)常见情况是下划线前面是大气与陆面（这俩常用同一个）的格点，下划线后面是海洋的格点，这里我选用的是f09_t061，在前面的网页中搜索，结果如下，嗯大气与陆面大约是1°的分辨率，海洋分辨率大约是0.66°</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEUcEQdEfU55ia7xUJGnFqqHfEgKRLKXWicdzjCNwcE0W1AYcseznaJNAg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/1a9q1b.png" alt="Image"></p>
 <p>–compset 命令是设置使用什么样的模式组合，CESM2软件本身给我们提供了多种多样的模式配置，很多时候我们进行试验只需要其中几个分量模式运转，亦或者想让所有分量模式都参与运转。比如有时候我们希望只跑陆气耦合实验，海洋模式让它不运转，或者我们想跑全耦合实验，等等配置通过设置compset的值我们可以达到目的，正如它的全称所示：compset &#x3D; component set。详细的compset介绍可见CESM2.2.0 Component Sets Definitions (ucar.edu)。通过缩略名的首字母我们可以判断在这个compset中有哪些模式参与了工作，这里引一张官方示意图</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEpQhvl7CDXB8IRYh6Cibr7ozlc6TVZ5H77cy0SU40juomvWXJSbCZGicQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/qkut3r.png" alt="Image"></p>
 <p>根据这张图，回到我们的示例，这里我们用的是B1850MOM，可知用的是全耦合的实验。如果开头是F的话，那么海洋海冰模式是不参与运转的，需要海表面的物理量了模式就会去读取现成的SST文件。</p>
 <p>–run-unsupported 的作用是：因为cesm2会给某些compsets设置“官方的”分辨率，表示这个分辨率是经过他们验证，充分可靠的，譬如FHIST的官方支持分辨率为f09_f09_mg17，但假如你就是想用f09_g17这个分辨率呢，也是可以跑。在创建case的时候不加–run-unsupported后面是会报错的。因此这个设置我理解的意思就是官方说“你小子用这个分辨率跑出来奇怪的结果可别找我，谁让你不用官方的分辨率”，哈哈开个玩笑。</p>
 <p>后面两个–compiler 与 –mach 是与你在一直模式过程中设置的config文件有关的，以–mach为例，指定了值后模式会进入~&#x2F;.cime&#x2F;config_machines.xml文件中读取与这个值相匹配的设置，并用到case的创建中，–compiler与之同理。这些应归于移植模式的设置，这里就不做讨论了。</p>
@@ -341,7 +341,7 @@
 
 <p>上述变量就被读入模式设置里了</p>
 <h4 id="3-namelist的设置"><a href="#3-namelist的设置" class="headerlink" title="3.namelist的设置"></a>3.namelist的设置</h4><p>执行上述命令以后，模式会在当前文件夹下生成下面几个文件，格式均为user_nl_ + 分量名</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCpKibC0ojrD8CpYkbQibHTVaEXIz8Ayib6qfFWrcUSCEIfph4B6cmGSDwLCVPQYzuybVjbBialrmaSo5Q/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/gea9n6.png" alt="Image"></p>
 <p>如果不去修改这些文件，那么在编译的过程中模式会读取默认的设置，但如果你想对某些设置进行修改，那么就在这个文件下进行替换。那样的话模式在编译的过程中就会将你新给的量替换掉默认的设置。这里改哪个分量模式就去修改哪个namelist文件，譬如我要对大气模式进行修改那么就去改user_nl_cam文件</p>
 <p>官方主页有关于所有设置的介绍，这里分享链接CESM2 Component Configuration Settings (ucar.edu)</p>
 <p>譬如你想增加输出的变量，那么就在user_nl_cam文件中的空白处加一行</p>
@@ -372,8 +372,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Cite%20Figures/" rel="prev" title="Cite Figures">
-      <i class="fa fa-chevron-left"></i> Cite Figures
+    <a href="/2022/05/01/Tool/CDO%20Ref%20Card/" rel="prev" title="CDO Ref Card">
+      <i class="fa fa-chevron-left"></i> CDO Ref Card
     </a></div>
       <div class="post-nav-item">
     <a href="/2022/05/01/Tool/CDO/" rel="next" title="CDO">
@@ -452,7 +452,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">168</span>
+          <span class="site-state-item-count">175</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
