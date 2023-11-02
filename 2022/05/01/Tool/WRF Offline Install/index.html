@@ -20,20 +20,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="WRF 离线安装手册安装Intel编译器下载与安装Download the Intel oneAPI HPC Toolkit   环境变量配置在~&#x2F;.bashrc中添加 1source &#x2F;home&#x2F;username&#x2F;intel&#x2F;oneapi&#x2F;setvars.sh intel64 --force  检查安装123$ icc -v$ icpc -v$ ifort -v  发现报错：1icc: &#x2F;lib">
+  <meta name="description" content="WRF 离线安装手册升级GCC 查看当前gcc版本 1234gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)Copyright (C) 2015 Free Software Foundation, Inc.This is free software; see the source for copying conditions.  There is NOwarr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WRF Offline Install">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/WRF%20Offline%20Install/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="WRF 离线安装手册安装Intel编译器下载与安装Download the Intel oneAPI HPC Toolkit   环境变量配置在~&#x2F;.bashrc中添加 1source &#x2F;home&#x2F;username&#x2F;intel&#x2F;oneapi&#x2F;setvars.sh intel64 --force  检查安装123$ icc -v$ icpc -v$ ifort -v  发现报错：1icc: &#x2F;lib">
+<meta property="og:description" content="WRF 离线安装手册升级GCC 查看当前gcc版本 1234gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)Copyright (C) 2015 Free Software Foundation, Inc.This is free software; see the source for copying conditions.  There is NOwarr">
 <meta property="og:locale">
-<meta property="og:image" content="https://p.ipic.vip/mdwsel.png">
-<meta property="og:image" content="https://p.ipic.vip/xor1t6.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-24T13:41:44.911Z">
+<meta property="article:modified_time" content="2023-10-30T01:41:15.842Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.ipic.vip/mdwsel.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF%20Offline%20Install/">
 
@@ -233,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-24 21:41:44" itemprop="dateModified" datetime="2023-10-24T21:41:44+08:00">2023-10-24</time>
+                <time title="Modified: 2023-10-30 09:41:15" itemprop="dateModified" datetime="2023-10-30T09:41:15+08:00">2023-10-30</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -263,48 +260,81 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="WRF-离线安装手册"><a href="#WRF-离线安装手册" class="headerlink" title="WRF 离线安装手册"></a>WRF 离线安装手册</h1><h2 id="安装Intel编译器"><a href="#安装Intel编译器" class="headerlink" title="安装Intel编译器"></a>安装Intel编译器</h2><h3 id="下载与安装"><a href="#下载与安装" class="headerlink" title="下载与安装"></a>下载与安装</h3><p><a target="_blank" rel="noopener" href="https://www.intel.com/content/www/us/en/developer/tools/oneapi/hpc-toolkit-download.html">Download the Intel oneAPI HPC Toolkit</a></p>
-<p><img src="https://p.ipic.vip/mdwsel.png" alt="Screenshot 2023-10-24 at 09.05.25"></p>
-<p><img src="https://p.ipic.vip/xor1t6.png" alt="Screenshot 2023-10-24 at 09.04.59"></p>
-<h3 id="环境变量配置"><a href="#环境变量配置" class="headerlink" title="环境变量配置"></a>环境变量配置</h3><p>在<code>~/.bashrc</code>中添加</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /home/username/intel/oneapi/setvars.sh intel64 --force</span><br></pre></td></tr></table></figure>
+        <h1 id="WRF-离线安装手册"><a href="#WRF-离线安装手册" class="headerlink" title="WRF 离线安装手册"></a>WRF 离线安装手册</h1><h2 id="升级GCC"><a href="#升级GCC" class="headerlink" title="升级GCC"></a>升级GCC</h2><ul>
+<li><p>查看当前gcc版本</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gcc (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)</span><br><span class="line">Copyright (C) 2015 Free Software Foundation, Inc.</span><br><span class="line">This is free software; see the source for copying conditions.  There is NO</span><br><span class="line">warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载并解压安装包 <a target="_blank" rel="noopener" href="http://mirror.hust.edu.cn/gnu/gcc/">http://mirror.hust.edu.cn/gnu/gcc/</a></p>
+</li>
+<li><p>下载prerequisites</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> gcc-13.2.0</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./contrib/download_prerequisites</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="检查安装"><a href="#检查安装" class="headerlink" title="检查安装"></a>检查安装</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">icc -v</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">icpc -v</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">ifort -v</span></span><br></pre></td></tr></table></figure>
+<p>显示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gmp-6.2.1.tar.bz2: OK</span><br><span class="line">mpfr-4.1.0.tar.bz2: OK</span><br><span class="line">mpc-1.2.1.tar.gz: OK</span><br><span class="line">isl-0.24.tar.bz2: OK</span><br></pre></td></tr></table></figure>
 
-<h4 id="发现报错："><a href="#发现报错：" class="headerlink" title="发现报错："></a>发现报错：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">icc: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.21&#x27; not found (required by icc)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装prerequisites（以gmp为例，四个包分别完成编译安装）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> gmp-6.2.1 <span class="comment"># 替换为 mpfr/mpc/isl</span></span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./configure --prefix=<span class="variable">$APP</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make istall</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make check</span></span><br></pre></td></tr></table></figure>
 
-<p>出现这个错误是因为CentOS7当前版本默认的GCC的版本太老，里面的动态链接库没有GLIBCXX_3.4.21。</p>
-<p>首先执行命令检查动态库：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">strings /usr/lib64/libstdc++.so.6 | grep GLIBC</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>mpfr-4.1.0 <mark>安装失败</mark>，显示<code>Incorrect MPFR version! (4.1.0 header vs 4.0.2 library)</code></p>
+<p>尝试下载对应版本<a target="_blank" rel="noopener" href="https://www.mpfr.org/mpfr-4.0.2/mpfr-4.0.2.tar.gz">mpfr-4.0.2.tar.gz</a></p>
+</li>
+<li><p>mpc <mark>安装失败</mark>，显示<code>configure: error: MPFR version &gt;= 4.1.0 required</code></p>
+<p>尝试下载旧版本<a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/gnu/mpc/mpc-1.1.0.tar.gz?spm=a2c6h.25603864.0.0.60dd1a8cLerm3X">mpc-1.1.0.tar.gz</a></p>
+<p>Isl 安装失败，显示<code>whether -lc should be explicitly linked in... no</code></p>
+<p>find .&#x2F; -name “libc*”</p>
+<p>&#x2F;home&#x2F;rychen&#x2F;anaconda3&#x2F;x86_64-conda-linux-gnu&#x2F;sysroot&#x2F;usr&#x2F;lib64&#x2F;libc.so</p>
+</li>
+</ul>
+</li>
+<li><p>安装gcc</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">./configure -prefix=<span class="variable">$APP</span> --with-gmp --enable-checking=release --enable-languages=all --disable-multilib</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make -j4 <span class="comment"># 此步骤需要一定时间</span></span></span><br></pre></td></tr></table></figure>
 
-<p>输入命令查看libstdc++.so.6的位置：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">find / -name libstdc++.so.6*</span></span><br></pre></td></tr></table></figure>
 
-<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/dm569263708/article/details/125198722">URL</a>，得知可能是需要通过省级gcc来解决，但直接新版gcc总是报错，故尝试采用conda的方式</p>
-<h2 id="Conda升级GCC版本"><a href="#Conda升级GCC版本" class="headerlink" title="Conda升级GCC版本"></a>Conda升级GCC版本</h2><p>使用conda安装gcc</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda install -c conda-forge gcc</span></span><br></pre></td></tr></table></figure>
 
-<p>链接conda安装的环境</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> <span class="variable">$CONDA_PREFIX</span>/bin</span></span><br></pre></td></tr></table></figure>
 
-<p>找到<code>x86_64-conda_cos6-linux-gnu-cc </code> 并链接为gcc</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">ln</span> -s /home/rychen/anaconda3/bin/x86_64-conda_cos6-linux-gnu-cc <span class="variable">$APP</span>/gcc</span></span><br></pre></td></tr></table></figure>
 
-<p>修改环境变量~.bashrc</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$APP:$PATH</span><br></pre></td></tr></table></figure>
 
-<p>此时查看<code>gcc --version</code>显示为</p>
-<p>找到较新版本的ibstdc++.so</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">find /home/rychen/ -name <span class="string">&quot;libstdc++.so*&quot;</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cp</span> /home/rychen/intel/oneapi/inspector/2023.2.0/lib64/libstdc++.so.6.0.22 <span class="variable">$APP</span>/lib</span></span><br></pre></td></tr></table></figure>
+<h2 id="依赖库的安装"><a href="#依赖库的安装" class="headerlink" title="依赖库的安装"></a>依赖库的安装</h2><h3 id="zlib"><a href="#zlib" class="headerlink" title="zlib"></a>zlib</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh zlib.sh ==========</span></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr zlib-1.3</span><br><span class="line"></span><br><span class="line">tar xvf zlib-1.3.tar.gz</span><br><span class="line">cd zlib-1.3</span><br><span class="line">CC=icc FC=ifort CXX=icpc CPPFLAGS=-I$&#123;APP&#125;/include LDFLAGS=-L$&#123;APP&#125;/lib ./configure --prefix=$APP</span><br><span class="line"></span><br><span class="line">make -j 4</span><br><span class="line">make install</span><br><span class="line">make check</span><br></pre></td></tr></table></figure>
 
-<p>修改环境变量~.bashrc</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LD_LIBRARY_PATH=$APP/lib:$LD_LIBRARY_PATH</span><br></pre></td></tr></table></figure>
+<p>安装成功输出：zlib 64-bit test OK</p>
+<h3 id="make"><a href="#make" class="headerlink" title="make"></a>make</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">make --version</span></span><br></pre></td></tr></table></figure>
 
-<p>查看GLIBC版本，此时包含了较新版本的</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">strings <span class="variable">$APP</span>/lib/libstdc++.so.6 |grep GLIBC</span></span><br></pre></td></tr></table></figure>
+<p>显示系统已安装：</p>
+<p>GNU Make 3.82</p>
+<p>Built for x86_64-redhat-linux-gnu</p>
+<h3 id="HDF5"><a href="#HDF5" class="headerlink" title="HDF5"></a>HDF5</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh hdf5.sh ==========</span></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr hdf5-1.8.18</span><br><span class="line"></span><br><span class="line">tar xvf hdf5-1.8.18.tar.gz</span><br><span class="line">cd hdf5-1.8.18</span><br><span class="line">CC=icc FC=ifort CXX=icpc --enable-fortran --enable-fortran2003 --enable-cxx --with-zlib=$HDF5 ./configure --prefix=$APP </span><br><span class="line"></span><br><span class="line">make -j 4</span><br><span class="line">make install</span><br><span class="line">make check</span><br></pre></td></tr></table></figure>
+<p>以上需要一定时间完成</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">h5dump</span></span><br></pre></td></tr></table></figure>
 
-<p>重新执行<code>icc -v</code>，<code>ifort -v</code>，<code>icpc -v</code> 不再报错</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2>
+<p>显示使用说明则安装成功</p>
+<h3 id="openssl"><a href="#openssl" class="headerlink" title="openssl"></a>openssl</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh openssl.sh ==========</span></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr openssl-1.1.1q</span><br><span class="line"></span><br><span class="line">tar xvf openssl-1.1.1q.tar.gz</span><br><span class="line">cd openssl-1.1.1q/</span><br><span class="line">./config shared zlib --prefix=$APP</span><br><span class="line"></span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="curl"><a href="#curl" class="headerlink" title="curl"></a>curl</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh curl.sh ==========</span></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr curl-8.4.0</span><br><span class="line"></span><br><span class="line">tar xvf curl-8.4.0.tar.gz</span><br><span class="line">cd curl-8.4.0</span><br><span class="line">./configure --prefix=$APP --with-zlib=$APP --with-openssl</span><br><span class="line">make -j 4</span><br><span class="line">make install</span><br><span class="line">make check</span><br></pre></td></tr></table></figure>
+
+<p>检查安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">curl --version</span></span><br></pre></td></tr></table></figure>
+
+<p>显示支持OpenSSL: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">curl 7.78.0 (x86_64-conda-linux-gnu) libcurl/7.78.0 OpenSSL/1.1.11 zlib/1.2.11 libssh2/1.9.0 nghttp2/1.41.0</span><br><span class="line"></span><br><span class="line">Release-Date: 2021-07-21</span><br><span class="line"></span><br><span class="line">Protocols: dict file ftp ftps gopher gophers http https imap imaps mqtt pop3 pop3s rtsp scp sftp smb smbs smtp smtps telnet tftp </span><br><span class="line"></span><br><span class="line">Features: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz NTLM NTLM_WB SPNEGO SSL TLS-SRP UnixSockets</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="netcdf"><a href="#netcdf" class="headerlink" title="netcdf"></a>netcdf</h3><p><strong>注意：</strong> netcdf 和 netcdf-fortran的版本对其问题</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh netcdf.sh ==========</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span> </span><br><span class="line"></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr netcdf-4.6.1</span><br><span class="line">tar xvf netcdf-4.6.1.tar.gz</span><br><span class="line">cd netcdf-4.6.1</span><br><span class="line">CC=icc FC=ifort CXX=icpc CPPFLAGS=-I$APP/include LDFLAGS=-L$APP/lib ./configure --prefix=$&#123;APP&#125; </span><br><span class="line">make install</span><br><span class="line">make check</span><br></pre></td></tr></table></figure>
+
+<p>检查安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nc-config --version</span></span><br></pre></td></tr></table></figure>
+
+<p>显示：netCDF 4.6.1</p>
+<h3 id="netcdf-fortran"><a href="#netcdf-fortran" class="headerlink" title="netcdf-fortran"></a>netcdf-fortran</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========== sh netcdf-fortran.sh ==========</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span> </span><br><span class="line"></span><br><span class="line">set -Eeuo pipefail</span><br><span class="line"></span><br><span class="line">cd $HOME/tar_szcs</span><br><span class="line">rm -fr netcdf-fortran-4.4.4</span><br><span class="line">tar xvf netcdf-fortran-4.4.4.tar.gz</span><br><span class="line">cd netcdf-fortran-4.4.4</span><br><span class="line">CC=icc FC=ifort CXX=icpc CPPFLAGS=-I$APP/include LDFLAGS=-L$APP/lib ./configure --prefix=$APP</span><br><span class="line">make install</span><br><span class="line">make check</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -319,12 +349,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/WRF-HPC/" rel="prev" title="WRF-HPC">
-      <i class="fa fa-chevron-left"></i> WRF-HPC
+    <a href="/2022/05/01/Tool/WRF/" rel="prev" title="WRF">
+      <i class="fa fa-chevron-left"></i> WRF
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Spack-WRF/" rel="next" title="Spack-WRF">
-      Spack-WRF <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/WPS/" rel="next" title="WPS">
+      WPS <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -384,7 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WRF-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">WRF 离线安装手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Intel%E7%BC%96%E8%AF%91%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">安装Intel编译器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.1.</span> <span class="nav-text">下载与安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.2.</span> <span class="nav-text">环境变量配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E5%AE%89%E8%A3%85"><span class="nav-number">1.1.3.</span> <span class="nav-text">检查安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%91%E7%8E%B0%E6%8A%A5%E9%94%99%EF%BC%9A"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">发现报错：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda%E5%8D%87%E7%BA%A7GCC%E7%89%88%E6%9C%AC"><span class="nav-number">1.2.</span> <span class="nav-text">Conda升级GCC版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.3.</span> <span class="nav-text"></span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WRF-%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">WRF 离线安装手册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%87%E7%BA%A7GCC"><span class="nav-number">1.1.</span> <span class="nav-text">升级GCC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E5%BA%93%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.2.</span> <span class="nav-text">依赖库的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#zlib"><span class="nav-number">1.2.1.</span> <span class="nav-text">zlib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#make"><span class="nav-number">1.2.2.</span> <span class="nav-text">make</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HDF5"><span class="nav-number">1.2.3.</span> <span class="nav-text">HDF5</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#openssl"><span class="nav-number">1.2.4.</span> <span class="nav-text">openssl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#curl"><span class="nav-number">1.2.5.</span> <span class="nav-text">curl</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netcdf"><span class="nav-number">1.2.6.</span> <span class="nav-text">netcdf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netcdf-fortran"><span class="nav-number">1.2.7.</span> <span class="nav-text">netcdf-fortran</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -399,7 +429,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">175</span>
+          <span class="site-state-item-count">178</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
