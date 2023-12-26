@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#114;&amp;#x6f;&amp;#x6f;&amp;#x74;&amp;#64">
+  <meta name="description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#x72;&amp;#x6f;&amp;#x6f;&amp;#116;&amp;#x4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SCP">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/SCP/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#114;&amp;#x6f;&amp;#x6f;&amp;#x74;&amp;#64">
+<meta property="og:description" content="scp时报错scp: Received message too long 220204320 scp: Ensure the remote shell produces no output for non-interactive sessions. 现象ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议) 使用命令行sftp &amp;#x72;&amp;#x6f;&amp;#x6f;&amp;#116;&amp;#x4">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
 <meta property="article:modified_time" content="2023-10-23T11:12:19.913Z">
@@ -263,7 +263,7 @@
         <h2 id="scp时报错"><a href="#scp时报错" class="headerlink" title="scp时报错"></a>scp时报错</h2><p><strong>scp: Received message too long 220204320</strong></p>
 <p><strong>scp: Ensure the remote shell produces no output for non-interactive sessions.</strong></p>
 <h4 id="现象"><a href="#现象" class="headerlink" title="现象"></a>现象</h4><p>ssh连接正常，但sftp却无法连接。(sftp是ssh内含的协议)</p>
-<p>使用命令行sftp <a href="mailto:&#114;&#x6f;&#x6f;&#x74;&#64;&#49;&#x30;&#49;&#x2e;&#x33;&#53;&#46;&#x78;&#x78;&#x2e;&#x78;&#120;">&#114;&#x6f;&#x6f;&#x74;&#64;&#49;&#x30;&#49;&#x2e;&#x33;&#53;&#46;&#x78;&#x78;&#x2e;&#x78;&#120;</a>连接时，返回了这个错误：Received message too long 1763729773 Ensure the remote shell produces no output for non-interactive sessions. (收到的信息太长 1763729773 确保远程shell对非交互式会话不产生输出)</p>
+<p>使用命令行sftp <a href="mailto:&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#x30;&#x31;&#x2e;&#51;&#53;&#46;&#x78;&#120;&#x2e;&#120;&#x78;">&#x72;&#x6f;&#x6f;&#116;&#x40;&#49;&#x30;&#x31;&#x2e;&#51;&#53;&#46;&#x78;&#120;&#x2e;&#120;&#x78;</a>连接时，返回了这个错误：Received message too long 1763729773 Ensure the remote shell produces no output for non-interactive sessions. (收到的信息太长 1763729773 确保远程shell对非交互式会话不产生输出)</p>
 <p>坑点在于使用Tabby(一个终端模拟器)连接sftp并不会报错，而是一直没反应。只有使用命令行连接时，才得知了这个错误，但平时很少人会尝试用命令行连接。</p>
 <h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p>原因是：~&#x2F;.bashrc 或 ~&#x2F;.bashrc等Shell启动文件中存在echo，printf等输出语句，导致sftp不能建立连接。<br>(这两是bash的启动文件，如果你用的是zsh等其他Shell，需要找与你用的Shell对应的启动文件。)<br>(关于shell启动文件详见：【Linux基础】理解并善用Shell – Shell精讲)</p>
 <p>————<br>根据这篇文章 Received message too long Ensure the remote shell produces no output for non-interactive sessions.<br>所说：经过实验：</p>
@@ -292,12 +292,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/R/" rel="prev" title="R">
-      <i class="fa fa-chevron-left"></i> R
+    <a href="/2022/05/01/Tool/Spack-WRF/" rel="prev" title="Spack-WRF">
+      <i class="fa fa-chevron-left"></i> Spack-WRF
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Python%20Library/" rel="next" title="Python Library">
-      Python Library <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Python3%20Notes/" rel="next" title="Python3 Notes">
+      Python3 Notes <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
