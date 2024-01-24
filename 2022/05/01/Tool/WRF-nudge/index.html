@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;85Hw1YJ4wKfS7tqnWmFdlw 一、Nuging简介Nudging是基于经验性的四维资料同化方法，通过在预报方程中增加强迫项，使模式输出结果逼近于观测资料（Observation Nudging）或再分析资料（Analysis Nudging）。这些强迫项相对于方程中的各项量级较小，保证了在每个积分步长中各物理量之间的动力平">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WRF-nudge">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/WRF-nudge/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;85Hw1YJ4wKfS7tqnWmFdlw 一、Nuging简介Nudging是基于经验性的四维资料同化方法，通过在预报方程中增加强迫项，使模式输出结果逼近于观测资料（Observation Nudging）或再分析资料（Analysis Nudging）。这些强迫项相对于方程中的各项量级较小，保证了在每个积分步长中各物理量之间的动力平">
+<meta property="og:locale">
+<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCrgR0D911a8sdId3OjiafqkoIdNZ9bFN6QfDtCwhGibolhC1dnCibibZuFg0ymYlmJMHwAXib0W75M8J3w/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-24T01:57:50.370Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCrgR0D911a8sdId3OjiafqkoIdNZ9bFN6QfDtCwhGibolhC1dnCibibZuFg0ymYlmJMHwAXib0W75M8J3w/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF-nudge/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>WRF-nudge | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/WRF-nudge/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WRF-nudge
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-01-24 09:57:50" itemprop="dateModified" datetime="2024-01-24T09:57:50+08:00">2024-01-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/85Hw1YJ4wKfS7tqnWmFdlw">https://mp.weixin.qq.com/s/85Hw1YJ4wKfS7tqnWmFdlw</a></p>
+<h1 id="一、Nuging简介"><a href="#一、Nuging简介" class="headerlink" title="一、Nuging简介"></a><strong>一、Nuging简介</strong></h1><p>Nudging是基于经验性的四维资料同化方法，通过在预报方程中增加强迫项，使模式输出结果逼近于观测资料（Observation Nudging）或再分析资料（Analysis Nudging）。这些强迫项相对于方程中的各项量级较小，保证了在每个积分步长中各物理量之间的动力平衡。</p>
+<p>WRF提供了两种Analysis Nudging方案，分别为Grid Nudging和Spectral Nudging。Grid Nudging 是使用格点对格点的松弛强迫项逐步逼近分析场。Spectral Nudging通过设置波数进行滤波，保留大尺度波动，滤掉小尺度的波动，从而将模拟状态不断靠近大尺度驱动状态，较好地减小大尺度误差。值得注意的是，在 WRF 模式中，两种方法同化的变量不同，Grid Nudging 中默认同化的变量包括水平风、位温和水汽混合比，Spectral Nudging 中默认同化水平风、位温和位势高度。</p>
+<h1 id="二、WRF模式中Nudging设置"><a href="#二、WRF模式中Nudging设置" class="headerlink" title="二、WRF模式中Nudging设置"></a><strong>二、WRF模式中Nudging设置</strong></h1><p>Nudging方法可在namelist.input中的&amp;fdda模块进行添加，WRF模式提供了Grid Nudging、 Spectral Nudging和Observation Nudging三种方案设置，可从em_real文件下examples.namelist、README.grid_fdda和README.obs_fdda中查看相应设置。也可从 <a target="_blank" rel="noopener" href="https://www.esrl.noaa.gov/gsd/wrfportal/namelist_input_options.html">https://www.esrl.noaa.gov/gsd/wrfportal/namelist_input_options.html</a> 网页查看每条语句含义。</p>
+<h2 id="2-1-Grid-Nudging设置"><a href="#2-1-Grid-Nudging设置" class="headerlink" title="2.1 Grid Nudging设置"></a>2.1 Grid Nudging设置</h2><table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;fdda</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>grid_fdda</td>
+<td>1</td>
+<td>grid-nudging on (&#x3D;0 off) for each domain 是否进行Grid Nuging（1:打开，0关闭）</td>
+</tr>
+<tr>
+<td>gfdda_inname</td>
+<td></td>
+<td>Defined name in real “wrffdda_d”</td>
+</tr>
+<tr>
+<td>gfdda_interval_m</td>
+<td>360</td>
+<td>Time interval (min) between analysis times</td>
+</tr>
+<tr>
+<td>gfdda_end_h</td>
+<td>6</td>
+<td>Time (in hours) to stop nudging after start of forecast 模式运行至同化结束的时间</td>
+</tr>
+<tr>
+<td>io_form_gfdda</td>
+<td>2</td>
+<td>Analysis format (2 &#x3D; netcdf)</td>
+</tr>
+<tr>
+<td>fgdt</td>
+<td>0</td>
+<td>Calculation frequency (in minutes) for analysis nudging.0 &#x3D; every time step, recommended</td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_uv</td>
+<td>0</td>
+<td>0 &#x3D; nudging in the pbl；1 &#x3D; no nudging of u and v (temp、qvapor) in the pbl  0表示在边界层内进行同化，1表示在边界层内关闭同化</td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_t</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_q</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_uv</td>
+<td>0</td>
+<td>if_zfac_X: 0 &#x3D; nudge X all layers，1 &#x3D; limit nudging to levels above k_zfac_X；   k_zfac_X: 10 &#x3D; model level below which nudging is switched off for Xif_zfac_uv设置为 0表示在所有模式层进行水平风场同化，设置为1表示仅在k_zfac_uv层次上进行同化。if_zfac_t和if_zfac_q与if_zfac_uv相同，只不过变量是温度和湿度，k_zfac_t和k_zfac_q与k_zfac_uv类似。</td>
+</tr>
+<tr>
+<td>k_zfac_uv</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_t</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>k_zfac_t</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_q</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>k_zfac_q</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>guv</td>
+<td>0.0003</td>
+<td>nudging coefficient for u and v(temp、qvapor) (sec-1)同化强度系数</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>gq</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>if_ramping</td>
+<td>0</td>
+<td>0&#x3D; nudging ends as a step function, 1&#x3D; ramping nudging down at end of period 0表示突然停止同化，1表示在模拟结束时逐渐停止同化</td>
+</tr>
+<tr>
+<td>dtramp_min</td>
+<td>60.0</td>
+<td>time (min) for ramping function, 60.0&#x3D;ramping starts at last analysis time, -60.0&#x3D;ramping ends at last analysis time同化逐渐结束经历的时间。60表示在最后分析时间开始逐渐停止同化，-60表示在最后分析时间已停止同化。</td>
+</tr>
+</tbody></table>
+<p>上面表格是针对Upper-air层次上进行Grid Nudigng（一些文献称为 3D Analysis Nudging），若要在Surface层次上进行Grid Nudigng（Surface Analysis Nuding），需要进行下列设置，两者既可以分开也可以合在一起使用。</p>
+<table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;fdda</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>grid_sfdda</td>
+<td>0</td>
+<td>surface fdda switch (1, on; 0, off)</td>
+</tr>
+<tr>
+<td>sgfdda_inname</td>
+<td></td>
+<td>“wrfsfdda_d” ; defined name for sfc nudgingi in input file (from program obsgrid)</td>
+</tr>
+<tr>
+<td>sgfdda_end_h</td>
+<td>6</td>
+<td>time (in hours) to stop sfc nudging after start of forecast</td>
+</tr>
+<tr>
+<td>sgfdda_interval_m</td>
+<td>180</td>
+<td>time interval (in min) between sfc analysis times (must use minutes)</td>
+</tr>
+<tr>
+<td>io_form_sgfdda</td>
+<td>2</td>
+<td>sfc analysis data io format (2 &#x3D; netCDF)</td>
+</tr>
+<tr>
+<td>guv_sfc</td>
+<td>0.0003</td>
+<td>nudging coefficient for sfc u and v(temp、qvapor) (sec-1)同化强度系数</td>
+</tr>
+<tr>
+<td>gt_sfc</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>gq_sfc</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>rinblw</td>
+<td>250.0</td>
+<td>radius of influence used to determine the confidence (or weights) for the analysis, which is based on the distance between the grid point to the nearest obs. The analysis without nearby observation is used at a reduced weight. 影响半径（km）</td>
+</tr>
+</tbody></table>
+<h2 id="2-2-Spectral-Nudging设置"><a href="#2-2-Spectral-Nudging设置" class="headerlink" title="2.2 Spectral Nudging设置"></a>2.2 Spectral Nudging设置</h2><table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;fdda</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>grid_fdda</td>
+<td>2</td>
+<td>2表示进行Spectral Nuging</td>
+</tr>
+<tr>
+<td>gfdda_inname</td>
+<td></td>
+<td>Defined name in real “wrffdda_d”</td>
+</tr>
+<tr>
+<td>gfdda_interval_m</td>
+<td>360</td>
+<td>Time interval (min) between analysis times</td>
+</tr>
+<tr>
+<td>gfdda_end_h</td>
+<td>6</td>
+<td>Time (in hours) to stop nudging after start of forecast 模式运行至Nudigng结束的时间</td>
+</tr>
+<tr>
+<td>io_form_gfdda</td>
+<td>2</td>
+<td>Analysis format (2 &#x3D; netcdf)</td>
+</tr>
+<tr>
+<td>fgdt</td>
+<td>0</td>
+<td>Calculation frequency (in minutes) for analysis nudging.0 &#x3D; every time step, recommended</td>
+</tr>
+<tr>
+<td>fgdtzero</td>
+<td>0</td>
+<td>nudging tendencies are set to zero in between fdda calls</td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_uv</td>
+<td>0</td>
+<td>0 &#x3D; nudging in the pbl；1 &#x3D; no nudging of u and v (temp、geopotential height) in the pblSpectral Nudging 中默认同化水平风、位温和位势高度，而Grid Nudging 中默认同化的变量包括水平风、位温和水汽混合比。</td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_t</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>if_no_pbl_nudging_ph</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_uv</td>
+<td>0</td>
+<td>if_zfac_X: 0 &#x3D; nudge X all layers，1 &#x3D; limit nudging to levels above k_zfac_X；k_zfac_X: 10 &#x3D; model level below which nudging is switched off for Xif_zfac_uv设置为 0表示在所有模式层进行水平风场同化，设置为1表示仅在k_zfac_uv层次上进行同化。if_zfac_t和if_zfac_ph与if_zfac_uv相同，只不过变量是温度和湿度，k_zfac_t和k_zfac_ph与k_zfac_uv类似。</td>
+</tr>
+<tr>
+<td>k_zfac_uv</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_t</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>k_zfac_t</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>if_zfac_ph</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>k_zfac_ph</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>dk_zfac_uv</td>
+<td></td>
+<td>depth in k between k_zfac_X to dk_zfac_X where nudging increases linearly to full strength</td>
+</tr>
+<tr>
+<td>dk_zfac_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>dk_zfac_ph</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>guv</td>
+<td>0.0003</td>
+<td>nudging coefficient for u and v(temp、geopotential height) (sec-1)同化强度系数</td>
+</tr>
+<tr>
+<td>gt</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>gph</td>
+<td>0.0003</td>
+<td></td>
+</tr>
+<tr>
+<td>xwavenum</td>
+<td>3</td>
+<td>top wave number to nudge in x&#x2F;y direction</td>
+</tr>
+<tr>
+<td>ywavenum</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>if_ramping</td>
+<td>0</td>
+<td>0&#x3D; nudging ends as a step function, 1&#x3D; ramping nudging down at end of period</td>
+</tr>
+<tr>
+<td>dtramp_min</td>
+<td>60.0</td>
+<td>time (min) for ramping function, 60.0&#x3D;ramping starts at last analysis time, -60.0&#x3D;ramping ends at last analysis time</td>
+</tr>
+</tbody></table>
+<h2 id="2-3-Observation-Nudging设置"><a href="#2-3-Observation-Nudging设置" class="headerlink" title="2.3 Observation Nudging设置"></a>2.3 Observation Nudging设置</h2><table>
+<thead>
+<tr>
+<th><strong>Name</strong></th>
+<th><strong>Value</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>在使用Observation Nudging之前，需要在namelist.input中&amp;time_control部分增加下列设置</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&amp;time_control</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>auxinput11_interval_s</td>
+<td>180</td>
+<td>同化观测点的间隔时间，单位：s</td>
+</tr>
+<tr>
+<td>auxinput11_end_h</td>
+<td>6</td>
+<td>同化结束时间，单位：h</td>
+</tr>
+<tr>
+<td>&amp;fdda</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>obs_nudge_opt</td>
+<td>1</td>
+<td>是否进行Observation Nuging（0：关闭，1：进行）</td>
+</tr>
+<tr>
+<td>max_obs</td>
+<td>150000</td>
+<td>max number of observations used on a domain during any given time window 同化最多的观测站点数</td>
+</tr>
+<tr>
+<td>fdda_start</td>
+<td>0</td>
+<td>obs nudging start time in minutes 同化开始时间（分钟）</td>
+</tr>
+<tr>
+<td>fdda_end</td>
+<td>180</td>
+<td>obs nudging end time in minutes 同化结束时间（分钟）</td>
+</tr>
+<tr>
+<td>obs_nudge_wind</td>
+<td>1</td>
+<td>obs_nudge_X: whether to nudge X (&#x3D;0 off；&#x3D;1 on)obs_coef_X: nudging coefficient for X, unit: s-1obs_nudge_X: 是否同化X；obs_coef_X：同化强度</td>
+</tr>
+<tr>
+<td>obs_coef_wind</td>
+<td>6.E-4</td>
+<td></td>
+</tr>
+<tr>
+<td>obs_nudge_temp</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>obs_coef_temp</td>
+<td>6.E-4</td>
+<td></td>
+</tr>
+<tr>
+<td>obs_nudge_mois</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>obs_coef_mois</td>
+<td>6.E-4</td>
+<td></td>
+</tr>
+<tr>
+<td>obs_rinxy</td>
+<td>240.</td>
+<td>horizontal radius of influence in km 水平影响半径（km）</td>
+</tr>
+<tr>
+<td>obs_rinsig</td>
+<td>0.1</td>
+<td>vertical radius of influence in eta 垂直影响半径（eta）</td>
+</tr>
+<tr>
+<td>obs_twindo</td>
+<td>0.6667</td>
+<td>half-period time window over which an observation will be used for nudging; the unit is in hours</td>
+</tr>
+<tr>
+<td>obs_npfi</td>
+<td>10</td>
+<td>freq in coarse grid timesteps for diag prints</td>
+</tr>
+<tr>
+<td>obs_ionf</td>
+<td>2</td>
+<td>freq in coarse grid timesteps for obs input and err calc</td>
+</tr>
+<tr>
+<td>obs_idynin</td>
+<td>0</td>
+<td>for dynamic initialization using a ramp-down function to gradually turn off the FDDA before the pure forecast (&#x3D;1 on)使用斜坡函数在数值预报之前逐渐关闭同化（&#x3D;1 开启）</td>
+</tr>
+<tr>
+<td>obs_dtramp</td>
+<td>40.</td>
+<td>time period in minutes over which the nudging is ramped down from one to zero. 同化强度从1将至为0的时间段</td>
+</tr>
+<tr>
+<td>obs_prt_freq</td>
+<td>10</td>
+<td>frequency in obs index for diagnostic printout</td>
+</tr>
+<tr>
+<td>obs_prt_max</td>
+<td>10</td>
+<td>maximum allowed obs entries in diagnostic printout</td>
+</tr>
+<tr>
+<td>obs_ipf_errob</td>
+<td>.true.</td>
+<td>.false. &#x3D; don’t print obs error diagnostics.true. &#x3D; print obs error diagnostics</td>
+</tr>
+<tr>
+<td>obs_ipf_nudob</td>
+<td>.true.</td>
+<td>.false. &#x3D; don’t print obs nudge diagnostics.true. &#x3D; print obs nudge diagnostics</td>
+</tr>
+<tr>
+<td>obs_ipf_in4dob</td>
+<td>.true.</td>
+<td>.false. &#x3D; don’t print obs input diagnostics.true. &#x3D; print obs input diagnostics</td>
+</tr>
+<tr>
+<td>obs_no_pbl_nudge_uv</td>
+<td>0</td>
+<td>1&#x3D;no nudging within pbl0&#x3D;nudging within pbl1表示在大气边界层内关闭同化，0表示进行同化</td>
+</tr>
+<tr>
+<td>obs_no_pbl_nudge_t</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>obs_no_pbl_nudge_q</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="三、OBSGRID资料前处理模块"><a href="#三、OBSGRID资料前处理模块" class="headerlink" title="三、OBSGRID资料前处理模块"></a><strong>三、OBSGRID资料前处理模块</strong></h1><p>在进行Nudging之前，需要通过OBSGRID模块将little_r格式的观测资料转化为WRF能直接读取的ASCII格式文件。OBSGRID模块的作用与WRFDA系统中资料前处理程序OBSPROC类似。OBSGRID模块以及little_r格式的详细介绍可参考WRF User’s Guide 第七章Objective Analysis (OBSGRID) 。<a target="_blank" rel="noopener" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html">https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html</a></p>
+<h2 id="3-1-编译OBSGRID模块"><a href="#3-1-编译OBSGRID模块" class="headerlink" title="3.1 编译OBSGRID模块"></a>3.1 编译OBSGRID模块</h2><p>（1）将OBSGRID.tar.gz压缩包放置在WPS文件夹下，解压缩文件</p>
+<p>tar -zxvf OBSGRID.tar.gz</p>
+<p>（2）解压缩后，将出现一个OBSGRID 目录，进入OBSGRID文件夹</p>
+<p>cd OBSGRID</p>
+<p>（3）编译</p>
+<p>.&#x2F;configure</p>
+<p>.&#x2F;compile</p>
+<p>.&#x2F;compile可能会出错，解决：在.&#x2F;configure之后，在configure.oa里，找到开头为CPPFLAGS这一行，删去”-C”选项，再编译就行了。如果成功，将创建可执行文件obsgrid.exe。</p>
+<h2 id="3-2、运行OBSGRID模块"><a href="#3-2、运行OBSGRID模块" class="headerlink" title="3.2、运行OBSGRID模块"></a>3.2、运行OBSGRID模块</h2><p>OBSGRID模块运行是在WRF模式.&#x2F;metgrid.exe步骤之后，运行OBSGRID模块需要输入little_r格式的观测资料和met_em.d0*的模式文件。</p>
+<p>（1）准备观测资料。观测资料须处理为little_r格式且文件命名格式为OBS:YYYY-MM-DD_HH，并将其储存在OBSGRID文件夹下。观测资料转为little_r格式网上提供了很多程序，可参考进行处理。</p>
+<p>（2）准备met_em.d0<em>模式文件。将.&#x2F;metgrid.exe步骤生成的met_em.d0</em>文件链接到OBSGRID文件夹下 。</p>
+<p>（3）修改namelist.oa文件。主要修改 &amp;record1的时间和时间间隔、&amp;record2的嵌套层数（grid_id）和文件名（obs_filename改为’OBS’）。</p>
+<p>（6）运行obsgrid.exe(.&#x2F;obsgrid.exe)。 在namelist.oa中每更改一次grid_id（嵌套层数），就要运行一次.&#x2F;obsgrid.exe。</p>
+<p>（7）运行完.&#x2F;obsgrid.exe之后，会出现metoa_em.d0<em>、OBS_DOMIANxxx、wrfsfdda_d0</em>。</p>
+<p>OBS_DOMAIN1xx和OBS_DOMAIN2xx分别存放d01和d02区域内单时次的观测数据，需要借助run_cat_obs_files.csh文件将每个区域多个单时次文件合并一个文件（OBS_DOMAINd01、OBS_DOMAINd02）。</p>
+<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="四、WRF模式中使用Nudging"><a href="#四、WRF模式中使用Nudging" class="headerlink" title="四、WRF模式中使用Nudging"></a><strong>四、WRF模式中使用Nudging</strong></h1><p><img src="https://mmbiz.qpic.cn/mmbiz_png/LxHThGfbUCrgR0D911a8sdId3OjiafqkoIdNZ9bFN6QfDtCwhGibolhC1dnCibibZuFg0ymYlmJMHwAXib0W75M8J3w/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><strong>W<strong><strong>RF</strong></strong>模式运行流程图</strong></p>
+<p>OBSGRID模块最终生成metoa_em.d0<em>、OBS_DOMIANd0</em>、wrfsfdda_d0<em>文件，其作用如下：1）metoa_em.d0</em>文件为后续Nudging提供了初始和边界条件，它与met_em.d0<em>文件作用类似，只不过metoa_em.d0</em>文件中融合了观测资料，将metoa_em.d0<em>文件链接至WRF模式em_real文件夹下并重命名为met_em.d0</em>，运行.&#x2F;real.exe会生成wrffdda文件。2）wrfsfdda 文件是进行Surface Analysis Nudging必备的文件，主要提供地表的信息。3）OBS_DOMIANd0*文件是进行Observation Nudging必备的文件，主要提供观测站点信息。</p>
+<p>WRF模式中进行Nudging时，需先将OSGRID文件生成的metoa_em.d0<em>、OBS_DOMIANd0</em>、wrfsfdda_d0<em>文件链接至em_real文件夹下，再在namelist.input文件中&amp;fdda模块添加相应的Nuding设置，运行.&#x2F;real.exe和.&#x2F;wrf.exe即可。值得注意的是，若要进行Observation Nudging 必须将OBS_DOMIANd0</em>文件链接至em_real文件夹下，若是Analysis Nudging，不需要链接OBS_DOMIANd0*文件。若要进行 Surface Analysis Nudging，必须链接wrfsfdda 文件，通常建议Surface Analysis Nudging和3D Analysis Nudging一起使用，即将wrfsfdda和wrffdda文件都作为WRF模式的输入文件。此外，Observation Nudging和Analysis Nudging还可同用，如在粗网格区域进行Analysis Nudging，在细网格区域进行Observation Nudging，这样搭配使用效果较好。由于边界层以下存在较多湍流，再分析资料在这一层结精确度较低，通常在边界层内关闭温度和湿度场的同化，仅允许边界层高度以上进行温湿度的同化，这样模型产生的边界层结构由模式中的物理学主导，风场的同化通常在所有模式层进行，关于WRF模式中Nudging的设置可参考[4]~[6]文章。</p>
+<p>与四维变分同化相比，Nudging 不需要计算伴随矩阵和背景误差协方差矩阵，计算成本较低，相对较为成熟且易于实现，可操作性强，但是Nudging只能同化模式变量。</p>
+<p>参考</p>
+<p>[1] WRF User’s Guide Chapter 7: Objective Analysis (OBSGRID)</p>
+<p><a target="_blank" rel="noopener" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html">https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html</a></p>
+<p>[2] Observation Nudging同化教程</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45372694/category_10278097.html">https://blog.csdn.net/weixin_45372694/category_10278097.html</a></p>
+<p>[3] WRF OBSGRID的简介与安装</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42487488/article/details/116034050">https://blog.csdn.net/weixin_42487488/article/details/116034050</a></p>
+<p>[4] Deng A , Stauffer D , Gaudet B , et al. 1.9 UPDATE ON WRF-ARW END-TO-END MULTI-SCALE FDDA SYSTEM. 2009.</p>
+<p>[5] Lauvaux T , Miles N L , Richardson S J , et al. Urban Emissions of CO2 from Davos, Switzerland: The First Real-Time Monitoring System Using an Atmospheric Inversion Technique[J]. Journal of Applied Meteorology and Climatology, 2013, 52(12):2654-2668.</p>
+<p>[6] Lauvaux T , Miles N L , Deng A , et al. High-resolution atmospheric inversion of urban CO_2 emissions during the dormant season of the Indianapolis Flux Experiment (INFLUX).</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Writting/" rel="prev" title="Writting">
+      <i class="fa fa-chevron-left"></i> Writting
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Yaml/" rel="next" title="Yaml">
+      Yaml <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81Nuging%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">一、Nuging简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81WRF%E6%A8%A1%E5%BC%8F%E4%B8%ADNudging%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">二、WRF模式中Nudging设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Grid-Nudging%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 Grid Nudging设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Spectral-Nudging%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Spectral Nudging设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Observation-Nudging%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 Observation Nudging设置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">3.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81OBSGRID%E8%B5%84%E6%96%99%E5%89%8D%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97"><span class="nav-number">4.</span> <span class="nav-text">三、OBSGRID资料前处理模块</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E7%BC%96%E8%AF%91OBSGRID%E6%A8%A1%E5%9D%97"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 编译OBSGRID模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2%E3%80%81%E8%BF%90%E8%A1%8COBSGRID%E6%A8%A1%E5%9D%97"><span class="nav-number">4.2.</span> <span class="nav-text">3.2、运行OBSGRID模块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">5.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81WRF%E6%A8%A1%E5%BC%8F%E4%B8%AD%E4%BD%BF%E7%94%A8Nudging"><span class="nav-number">6.</span> <span class="nav-text">四、WRF模式中使用Nudging</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">189</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

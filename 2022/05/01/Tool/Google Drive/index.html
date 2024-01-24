@@ -28,7 +28,7 @@
 <meta property="og:description" content="Google Drive 文件下载操作dgown (当文件个数小于50个时)安装 gdown1$ pip3 install gdown  python 脚本1234import gdownurl &#x3D; &amp;#x27;https:&#x2F;&#x2F;drive.google.com&#x2F;drive&#x2F;folders&#x2F;135hTTURfjn43fo4f?usp&#x3D;sharing&amp;#x27; gdown.download_fold">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-27T02:21:48.922Z">
+<meta property="article:modified_time" content="2023-12-27T08:36:57.545Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-12-27 10:21:48" itemprop="dateModified" datetime="2023-12-27T10:21:48+08:00">2023-12-27</time>
+                <time title="Modified: 2023-12-27 16:36:57" itemprop="dateModified" datetime="2023-12-27T16:36:57+08:00">2023-12-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -307,6 +307,11 @@
 </ol>
 <h3 id="命令行指令"><a href="#命令行指令" class="headerlink" title="命令行指令"></a>命令行指令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rclone listremotes</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rclone <span class="built_in">sync</span> remote_dir local_dir 	<span class="comment"># 下载文件</span></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rclone copy local_dir remote_dir 	<span class="comment"># 上传文件</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rclone <span class="built_in">mkdir</span> remote_dir 					<span class="comment"># 新建远程文件夹</span></span></span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>筛选文件名</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">rclone <span class="built_in">sync</span> <span class="built_in">test</span>:Past_3hourly /Volumes/CMIP/GloH2O/Past/3hourly --include <span class="string">&quot;*.00.nc&quot;</span></span></span><br></pre></td></tr></table></figure>
+
 
     </div>
 
@@ -322,12 +327,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Mac%20convert%20picture/" rel="prev" title="Mac convert picture">
-      <i class="fa fa-chevron-left"></i> Mac convert picture
+    <a href="/2022/05/01/Tool/GPU/" rel="prev" title="GPU">
+      <i class="fa fa-chevron-left"></i> GPU
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/LaTex%20Notes/" rel="next" title="LaTex Notes">
-      LaTex Notes <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Gitee/" rel="next" title="Gitee">
+      Gitee <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -402,7 +407,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">186</span>
+          <span class="site-state-item-count">189</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -440,7 +445,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2023</span>
+  <span itemprop="copyrightYear">2024</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
