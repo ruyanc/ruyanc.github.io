@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Conda软件环境迁移1234567891011121314151617# 更新conda$ conda update -n base -c conda-forge conda# 创建py3环境并安装python$ conda create -n py3 python&#x3D;3.12# 打包conda下的环境进行移植$ conda pack -n envsname -o conda_envsname.t">
+  <meta name="description" content="conda 机器学习环境搭建多种不同版本的python 查看当前所处的python环境  1python -V   创建一个名为python27的环境，指定Python版本是2.7（不用管是2.7.x，conda会为我们自动寻找2.7.x中的最新版本）  1conda create --name python27 python&#x3D;2.7   激活某个环境  1conda activate pytho">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Conda">
 <meta property="og:url" content="http://example.com/2022/05/01/Tool/Conda/index.html">
 <meta property="og:site_name" content="ruyanc">
-<meta property="og:description" content="Conda软件环境迁移1234567891011121314151617# 更新conda$ conda update -n base -c conda-forge conda# 创建py3环境并安装python$ conda create -n py3 python&#x3D;3.12# 打包conda下的环境进行移植$ conda pack -n envsname -o conda_envsname.t">
+<meta property="og:description" content="conda 机器学习环境搭建多种不同版本的python 查看当前所处的python环境  1python -V   创建一个名为python27的环境，指定Python版本是2.7（不用管是2.7.x，conda会为我们自动寻找2.7.x中的最新版本）  1conda create --name python27 python&#x3D;2.7   激活某个环境  1conda activate pytho">
 <meta property="og:locale">
 <meta property="og:image" content="https://p.ipic.vip/wixl54.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-23T11:12:20.335Z">
+<meta property="article:modified_time" content="2024-01-25T08:16:14.690Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p.ipic.vip/wixl54.png">
@@ -232,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-23 19:12:20" itemprop="dateModified" datetime="2023-10-23T19:12:20+08:00">2023-10-23</time>
+                <time title="Modified: 2024-01-25 16:16:14" itemprop="dateModified" datetime="2024-01-25T16:16:14+08:00">2024-01-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -262,12 +262,131 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="Conda软件环境迁移"><a href="#Conda软件环境迁移" class="headerlink" title="Conda软件环境迁移"></a>Conda软件环境迁移</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新conda</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda update -n base -c conda-forge conda</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建py3环境并安装python</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda create -n py3 python=3.12</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打包conda下的环境进行移植</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda pack -n envsname -o conda_envsname.tar.gz</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前所有软件环境</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda <span class="built_in">env</span> list</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前环境安装包</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda list</span></span><br></pre></td></tr></table></figure>
+        <h2 id="conda-机器学习环境搭建"><a href="#conda-机器学习环境搭建" class="headerlink" title="conda 机器学习环境搭建"></a>conda 机器学习环境搭建</h2><h3 id="多种不同版本的python"><a href="#多种不同版本的python" class="headerlink" title="多种不同版本的python"></a>多种不同版本的python</h3><ul>
+<li>查看当前所处的python环境</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建一个名为python27的环境，指定Python版本是2.7（不用管是2.7.x，conda会为我们自动寻找2.7.x中的最新版本）</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name python27 python=2.7</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>激活某个环境</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate python27</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看当前版本</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -V</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>退出环境</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="Conda-环境启动与退出"><a href="#Conda-环境启动与退出" class="headerlink" title="Conda 环境启动与退出"></a>Conda 环境启动与退出</h2><p>conda可以很方便地管理不同项目的环境，避免相互污染，常用命令如下：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">激活环境</span> </span><br><span class="line">source activate py36</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">退出环境</span> </span><br><span class="line">source deactivate</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">删除环境</span> </span><br><span class="line">conda remove -n py36 --all</span><br></pre></td></tr></table></figure>
+<h3 id="pytorch"><a href="#pytorch" class="headerlink" title="pytorch"></a>pytorch</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda create --name pytorch python=3.10</span><br><span class="line">conda activate pytorch</span><br><span class="line">conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia</span><br><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="tensorflow-sklearn-openCV"><a href="#tensorflow-sklearn-openCV" class="headerlink" title="tensorflow + sklearn + openCV"></a>tensorflow + sklearn + openCV</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda create --name tensorflow python=3.9</span><br><span class="line">conda activate tensorflow</span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow</span><br><span class="line">conda install keras</span><br><span class="line">conda install scikit-learn</span><br><span class="line">pip  install  opencv-python</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="NCL"><a href="#NCL" class="headerlink" title="NCL"></a>NCL</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda create -n ncl -c conda-forge ncl</span><br><span class="line">conda activate ncl</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="tensorflow-gpu"><a href="#tensorflow-gpu" class="headerlink" title="tensorflow-gpu"></a>tensorflow-gpu</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda create --name tensorflow-gpu python=3.9</span><br><span class="line">conda activate tensorflow</span><br><span class="line"></span><br><span class="line">sudo apt install clang</span><br><span class="line">clang --version</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><strong>使用 PyTorch 查看 CUDA 和 cuDNN 版本</strong></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">conda activate pytorch</span><br><span class="line">python</span><br><span class="line">import torch</span><br><span class="line">print(torch.__version__)</span><br><span class="line">print(torch.version.cuda)</span><br><span class="line">print(torch.backends.cudnn.version())</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><strong>查看机器显卡配置情况</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lspci | grep -i vga</span><br><span class="line"></span><br><span class="line"># 以下为输出</span><br><span class="line">2a:00.0 VGA compatible controller: NVIDIA Corporation Device 26b1 (rev a1)</span><br><span class="line">3d:00.0 VGA compatible controller: NVIDIA Corporation Device 26b1 (rev a1)</span><br></pre></td></tr></table></figure>
+
+<p>以第一列作为参数查看更详细信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">lspci -vvs 2a:00.0</span><br><span class="line"></span><br><span class="line"># 以下为输出</span><br><span class="line">2a:00.0 VGA compatible controller: NVIDIA Corporation Device 26b1 (rev a1) (prog-if 00 [VGA controller])</span><br><span class="line">	Subsystem: Lenovo Device 16a1</span><br><span class="line">	Physical Slot: 6</span><br><span class="line">	Control: I/O+ Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr+ Stepping- SERR+ FastB2B- DisINTx+</span><br><span class="line">	Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast &gt;TAbort- &lt;TAbort- &lt;MAbort- &gt;SERR- &lt;PERR- INTx-</span><br><span class="line">	Latency: 0</span><br><span class="line">	Interrupt: pin A routed to IRQ 243</span><br><span class="line">	NUMA node: 0</span><br><span class="line">	Region 0: Memory at a8000000 (32-bit, non-prefetchable) [size=16M]</span><br><span class="line">	Region 1: Memory at 202fe0000000 (64-bit, prefetchable) [size=256M]</span><br><span class="line">	Region 3: Memory at 202ff0000000 (64-bit, prefetchable) [size=32M]</span><br><span class="line">	Region 5: I/O ports at 6000 [size=128]</span><br><span class="line">	Expansion ROM at a9000000 [virtual] [disabled] [size=512K]</span><br><span class="line">	Capabilities: &lt;access denied&gt;</span><br><span class="line">	Kernel driver in use: nvidia</span><br><span class="line">	Kernel modules: nvidiafb, nouveau, nvidia_drm, nvidia</span><br></pre></td></tr></table></figure>
+
+<p>对于NVIDIA显卡，可以通过特定命令查看显卡信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi</span><br><span class="line"></span><br><span class="line"># 以下为输出</span><br><span class="line">Thu Jan 25 11:21:00 2024       </span><br><span class="line">+---------------------------------------------------------------------------------------+</span><br><span class="line">| NVIDIA-SMI 535.129.03             Driver Version: 535.129.03   CUDA Version: 12.2     |</span><br><span class="line">|-----------------------------------------+----------------------+----------------------+</span><br><span class="line">| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |</span><br><span class="line">| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |</span><br><span class="line">|                                         |                      |               MIG M. |</span><br><span class="line">|=========================================+======================+======================|</span><br><span class="line">|   0  NVIDIA RTX 6000 Ada Gene...    Off | 00000000:2A:00.0 Off |                  Off |</span><br><span class="line">| 30%   47C    P8              28W / 300W |     31MiB / 49140MiB |      0%      Default |</span><br><span class="line">|                                         |                      |                  N/A |</span><br><span class="line">+-----------------------------------------+----------------------+----------------------+</span><br><span class="line">|   1  NVIDIA RTX 6000 Ada Gene...    Off | 00000000:3D:00.0 Off |                  Off |</span><br><span class="line">| 30%   43C    P8              21W / 300W |     14MiB / 49140MiB |      0%      Default |</span><br><span class="line">|                                         |                      |                  N/A |</span><br><span class="line">+-----------------------------------------+----------------------+----------------------+</span><br><span class="line">                                                                                         </span><br><span class="line">+---------------------------------------------------------------------------------------+</span><br><span class="line">| Processes:                                                                            |</span><br><span class="line">|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |</span><br><span class="line">|        ID   ID                                                             Usage      |</span><br><span class="line">|=======================================================================================|</span><br><span class="line">|    0   N/A  N/A      1879      G   /usr/lib/xorg/Xorg                           10MiB |</span><br><span class="line">|    0   N/A  N/A      2139      G   /usr/bin/gnome-shell                          7MiB |</span><br><span class="line">|    1   N/A  N/A      1879      G   /usr/lib/xorg/Xorg                            4MiB |</span><br><span class="line">+---------------------------------------------------------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<p>其中，主要关注：</p>
+<p>Temp：温度，过高可能是哪里出了问题</p>
+<p>Memory-Usage：显存使用情况</p>
+<p>GPU-Util：GPU使用率</p>
+<p>CUDA Version: 后面要对应到TensorFlow版本</p>
+<p>关于显卡更详细的信息可参考相关资料。</p>
+<ul>
+<li><strong>确定tensorflow版本</strong></li>
+</ul>
+<p>TensorFlow版本不是随便安装的，对GPU的支持需要对应的驱动库，版本不对应会导致问题。</p>
+<p>所以真正开始动手安装之前一定要确认好版本。</p>
+<p>确认版本的顺序：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">机器上显卡类型 -&gt; 显卡的CUDA版本 -&gt; TensorFlow版本</span><br></pre></td></tr></table></figure>
+
+<p>具体版本间对应关系官网上有：<a target="_blank" rel="noopener" href="https://tensorflow.google.cn/install/source">https://tensorflow.google.cn/install/source</a> 。</p>
+<ul>
+<li><strong>安装TensorFlow 2.3.0</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda config --add channels conda-forge</span><br><span class="line">conda create --name tensorflow-gpu python=xxx cudatoolkit=xxx</span><br><span class="line">conda activate tensorflow-gpu</span><br><span class="line">conda install cudnn=xxx</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install tensorflow==2.3.0</span><br><span class="line">pip install --upgrade keras # 安装最新版本keras</span><br></pre></td></tr></table></figure>
+
+<p>测试 import tensorflow as tf 出现以下报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">TypeError: Descriptors cannot not be created directly.</span><br><span class="line">If this call came from a _pb2.py file, your generated code is out of date and must be regenerated with protoc &gt;= 3.19.0.</span><br><span class="line">If you cannot immediately regenerate your protos, some other possible workarounds are:</span><br><span class="line"> 1. Downgrade the protobuf package to 3.20.x or lower.</span><br><span class="line"> 2. Set PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python (but this will use pure-Python parsing and will be much slower).</span><br></pre></td></tr></table></figure>
+
+<p>解决方式：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip uninstall protobuf</span><br><span class="line">pip install protobuf==3.19.0</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><strong>完成安装测试</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">print(&quot;Num GPUs Available: &quot;, len(tf.config.list_physical_devices(&#x27;GPU&#x27;)))</span><br><span class="line"></span><br><span class="line"># 以下为输出</span><br><span class="line">Num GPUs Available:  2</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="cdo-nco"><a href="#cdo-nco" class="headerlink" title="cdo +nco"></a>cdo +nco</h3><p>参考：<a target="_blank" rel="noopener" href="https://bairdlangenbrunner.github.io/python-for-climate-scientists/conda/setting-up-conda-environments.html">https://bairdlangenbrunner.github.io/python-for-climate-scientists/conda/setting-up-conda-environments.html</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">conda install -c conda-forge cdo  或 sudo apt-get install cdo</span><br><span class="line">conda install -c conda-forge nco  或 sudo apt-get install nco</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pip -U</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果只是临时使用一下某个pip源的话，可以用如下方式进行Python包的安装：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple numpy</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="Conda软件环境迁移"><a href="#Conda软件环境迁移" class="headerlink" title="Conda软件环境迁移"></a>Conda软件环境迁移</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">更新conda</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda update -n base -c conda-forge conda</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">创建py3环境并安装python</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda create -n py3 python=3.12</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">打包conda下的环境进行移植</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda pack -n envsname -o conda_envsname.tar.gz</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前所有软件环境</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda <span class="built_in">env</span> list</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">查看当前环境安装包</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda list</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -356,6 +475,18 @@
 <li>此时conda env list就可以看到该环境了；</li>
 <li>activate wrfpy激活环境，执行conda-unpack，大功告成！</li>
 </ul>
+<h2 id="conda-环境重命名"><a href="#conda-环境重命名" class="headerlink" title="conda 环境重命名"></a>conda 环境重命名</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n tf --clone rcnn #把环境 rcnn 重命名成 tf</span><br><span class="line">conda remove -n rcnn --all </span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">conda 其实没有重命名指令，实现重命名是通过 <span class="built_in">clone</span> 完成的，分两步：1.先 <span class="built_in">clone</span> 一份 new name 的环境。2.删除 old name 的环境。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="列出当前安装的所有conda环境"><a href="#列出当前安装的所有conda环境" class="headerlink" title="列出当前安装的所有conda环境"></a>列出当前安装的所有conda环境</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda info -env</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="conda-恢复默认源"><a href="#conda-恢复默认源" class="headerlink" title="conda 恢复默认源"></a>conda 恢复默认源</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda config --remove-key channels</span><br></pre></td></tr></table></figure>
+
+
+
 
     </div>
 
@@ -371,12 +502,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/FNL/" rel="prev" title="FNL">
-      <i class="fa fa-chevron-left"></i> FNL
+    <a href="/2022/05/01/Tool/Fortran/" rel="prev" title="Fortran">
+      <i class="fa fa-chevron-left"></i> Fortran
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Debug%20Notes/" rel="next" title="Debug Notes">
-      Debug Notes <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Cite%20Figures/" rel="next" title="Cite Figures">
+      Cite Figures <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -436,7 +567,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB"><span class="nav-number">1.</span> <span class="nav-text">Conda软件环境迁移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda-%E7%8E%AF%E5%A2%83%E5%90%AF%E5%8A%A8%E4%B8%8E%E9%80%80%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">Conda 环境启动与退出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85conda-%E6%97%A0%E7%BD%91%E7%BB%9C%E8%BF%81%E7%A7%BBconda%E7%8E%AF%E5%A2%83"><span class="nav-number">3.</span> <span class="nav-text">linux服务器离线安装conda-无网络迁移conda环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="nav-number">3.1.</span> <span class="nav-text">问题背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">3.2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">3.2.1.</span> <span class="nav-text">下载安装包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">上传到服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">3.3.1.</span> <span class="nav-text">执行安装脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%87%BA%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E6%89%93%E5%8C%85%E7%8E%AF%E5%A2%83"><span class="nav-number">3.3.2.</span> <span class="nav-text">迁出机器部分——打包环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%85%A5%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E8%A7%A3%E5%8E%8B%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-number">3.3.3.</span> <span class="nav-text">迁入机器部分——解压、部署环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%81%94%E7%BD%91%E8%BD%AC%E7%A7%BB%E4%BE%9D%E8%B5%96%E5%8C%85%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">3.4.</span> <span class="nav-text">无联网转移依赖包如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E7%9B%B4%E6%8E%A5%E6%8B%B7%E8%B4%9Denvs%E4%B8%8B%E7%9A%84%E6%95%B4%E4%B8%AA%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83"><span class="nav-number">3.4.1.</span> <span class="nav-text">方法一：直接拷贝envs下的整个已有环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A"><span class="nav-number">3.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-number">3.5.</span> <span class="nav-text">目标机器可以访问互联网:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%9A"><span class="nav-number">3.6.</span> <span class="nav-text">目标机器不可以访问互联网：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Conda-Pack%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E8%BF%81%E7%A7%BB"><span class="nav-number">3.6.1.</span> <span class="nav-text">使用Conda-Pack来进行环境的打包和迁移</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#conda-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">conda 机器学习环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E7%A7%8D%E4%B8%8D%E5%90%8C%E7%89%88%E6%9C%AC%E7%9A%84python"><span class="nav-number">1.1.</span> <span class="nav-text">多种不同版本的python</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pytorch"><span class="nav-number">1.2.</span> <span class="nav-text">pytorch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensorflow-sklearn-openCV"><span class="nav-number">1.3.</span> <span class="nav-text">tensorflow + sklearn + openCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NCL"><span class="nav-number">1.4.</span> <span class="nav-text">NCL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tensorflow-gpu"><span class="nav-number">1.5.</span> <span class="nav-text">tensorflow-gpu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cdo-nco"><span class="nav-number">1.6.</span> <span class="nav-text">cdo +nco</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pip"><span class="nav-number">2.</span> <span class="nav-text">pip</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda%E8%BD%AF%E4%BB%B6%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB"><span class="nav-number">3.</span> <span class="nav-text">Conda软件环境迁移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85conda-%E6%97%A0%E7%BD%91%E7%BB%9C%E8%BF%81%E7%A7%BBconda%E7%8E%AF%E5%A2%83"><span class="nav-number">4.</span> <span class="nav-text">linux服务器离线安装conda-无网络迁移conda环境</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%97%AE%E9%A2%98%E8%83%8C%E6%99%AF"><span class="nav-number">4.1.</span> <span class="nav-text">问题背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">4.2.</span> <span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="nav-number">4.2.1.</span> <span class="nav-text">下载安装包</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">4.3.</span> <span class="nav-text">上传到服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%A7%E8%A1%8C%E5%AE%89%E8%A3%85%E8%84%9A%E6%9C%AC"><span class="nav-number">4.3.1.</span> <span class="nav-text">执行安装脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%87%BA%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E6%89%93%E5%8C%85%E7%8E%AF%E5%A2%83"><span class="nav-number">4.3.2.</span> <span class="nav-text">迁出机器部分——打包环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%81%E5%85%A5%E6%9C%BA%E5%99%A8%E9%83%A8%E5%88%86%E2%80%94%E2%80%94%E8%A7%A3%E5%8E%8B%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-number">4.3.3.</span> <span class="nav-text">迁入机器部分——解压、部署环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E8%81%94%E7%BD%91%E8%BD%AC%E7%A7%BB%E4%BE%9D%E8%B5%96%E5%8C%85%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">4.4.</span> <span class="nav-text">无联网转移依赖包如下：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9A%E7%9B%B4%E6%8E%A5%E6%8B%B7%E8%B4%9Denvs%E4%B8%8B%E7%9A%84%E6%95%B4%E4%B8%AA%E5%B7%B2%E6%9C%89%E7%8E%AF%E5%A2%83"><span class="nav-number">4.4.1.</span> <span class="nav-text">方法一：直接拷贝envs下的整个已有环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9A"><span class="nav-number">4.4.2.</span> <span class="nav-text">方法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91"><span class="nav-number">4.5.</span> <span class="nav-text">目标机器可以访问互联网:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E6%9C%BA%E5%99%A8%E4%B8%8D%E5%8F%AF%E4%BB%A5%E8%AE%BF%E9%97%AE%E4%BA%92%E8%81%94%E7%BD%91%EF%BC%9A"><span class="nav-number">4.6.</span> <span class="nav-text">目标机器不可以访问互联网：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8Conda-Pack%E6%9D%A5%E8%BF%9B%E8%A1%8C%E7%8E%AF%E5%A2%83%E7%9A%84%E6%89%93%E5%8C%85%E5%92%8C%E8%BF%81%E7%A7%BB"><span class="nav-number">4.6.1.</span> <span class="nav-text">使用Conda-Pack来进行环境的打包和迁移</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conda-%E7%8E%AF%E5%A2%83%E9%87%8D%E5%91%BD%E5%90%8D"><span class="nav-number">5.</span> <span class="nav-text">conda 环境重命名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E5%BD%93%E5%89%8D%E5%AE%89%E8%A3%85%E7%9A%84%E6%89%80%E6%9C%89conda%E7%8E%AF%E5%A2%83"><span class="nav-number">6.</span> <span class="nav-text">列出当前安装的所有conda环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#conda-%E6%81%A2%E5%A4%8D%E9%BB%98%E8%AE%A4%E6%BA%90"><span class="nav-number">7.</span> <span class="nav-text">conda 恢复默认源</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -451,7 +582,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">189</span>
+          <span class="site-state-item-count">191</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
