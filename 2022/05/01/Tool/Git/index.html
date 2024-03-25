@@ -28,7 +28,7 @@
 <meta property="og:description" content="来源：https:&#x2F;&#x2F;ohshitgit.com&#x2F;#magic-time-machine Git is hard: screwing up is easy, and figuring out how to fix your mistakes is fucking impossible. Git documentation has this chicken and egg problem where">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-12T13:24:38.623Z">
+<meta property="article:modified_time" content="2024-02-28T08:00:20.814Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-11-12 21:24:38" itemprop="dateModified" datetime="2023-11-12T21:24:38+08:00">2023-11-12</time>
+                <time title="Modified: 2024-02-28 16:00:20" itemprop="dateModified" datetime="2024-02-28T16:00:20+08:00">2024-02-28</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -323,6 +323,17 @@
 <p>Ref ‘refs&#x2F;heads&#x2F;master’ was rewritten</p>
 <p>表示删除成功。 </p>
 <p>然后执行push，OK。</p>
+<h2 id="修改-gitignore-文件，如何重新生效"><a href="#修改-gitignore-文件，如何重新生效" class="headerlink" title="修改 .gitignore 文件，如何重新生效"></a>修改 .gitignore 文件，如何重新生效</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;update .gitignore&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="gitignore-正则表达式"><a href="#gitignore-正则表达式" class="headerlink" title=".gitignore 正则表达式"></a>.gitignore 正则表达式</h2><p><code>#</code> ：将行标记为注释</p>
+<p><code>*</code>： 与 0 个或多个字符匹配<br><code>?</code>：与 1 个字符匹配<br><code>[abc]</code> ： 与 a、b 或 c 匹配<br><code>**</code>： 与嵌套目录匹配，比如 a&#x2F;**&#x2F;z 与以下项匹配<br>        a&#x2F;z<br>        a&#x2F;b&#x2F;z<br>        a&#x2F;b&#x2F;c&#x2F;z<br><code>!</code> ：取反</p>
+<p>举例：</p>
+<p><code>*.xml</code> # 忽略所有 .xml 结尾的文件</p>
+<p><code>!beans.xml</code> # 忽略所有 .xml 结尾的文件,但是beans.xml除外</p>
+<p><code>build/ </code># 忽略 build&#x2F; 目录下的所有文件</p>
+<p><code>doc/*.txt</code> 　# 会忽略 doc&#x2F;y.txt 但不包括 doc&#x2F;xx&#x2F;zzzz.txt</p>
 
     </div>
 
@@ -338,12 +349,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Gitee/" rel="prev" title="Gitee">
-      <i class="fa fa-chevron-left"></i> Gitee
+    <a href="/2022/05/01/Tool/GitHub/" rel="prev" title="Github">
+      <i class="fa fa-chevron-left"></i> Github
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/How%20to%20publish%20a%20paper/" rel="next" title="How to publish a paper">
-      How to publish a paper <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Gitee/" rel="next" title="Gitee">
+      Gitee <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -403,7 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#I-did-something-terribly-wrong-please-tell-me-git-has-a-magic-time-machine"><span class="nav-number">1.</span> <span class="nav-text">I did something terribly wrong, please tell me git has a magic time machine!?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-committed-and-immediately-realized-I-need-to-make-one-small-change"><span class="nav-number">2.</span> <span class="nav-text">I committed and immediately realized I need to make one small change!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-change-the-message-on-my-last-commit"><span class="nav-number">3.</span> <span class="nav-text">I need to change the message on my last commit!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-something-to-master-that-should-have-been-on-a-brand-new-branch"><span class="nav-number">4.</span> <span class="nav-text">I accidentally committed something to master that should have been on a brand new branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-to-the-wrong-branch"><span class="nav-number">5.</span> <span class="nav-text">I accidentally committed to the wrong branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-tried-to-run-a-diff-but-nothing-happened"><span class="nav-number">6.</span> <span class="nav-text">I tried to run a diff but nothing happened?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-a-commit-from-like-5-commits-ago"><span class="nav-number">7.</span> <span class="nav-text">I need to undo a commit from like 5 commits ago!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-my-changes-to-a-file"><span class="nav-number">8.</span> <span class="nav-text">I need to undo my changes to a file!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-give-up"><span class="nav-number">9.</span> <span class="nav-text">I give up.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8git%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">使用git提交代码时报错：</span></a></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#I-did-something-terribly-wrong-please-tell-me-git-has-a-magic-time-machine"><span class="nav-number">1.</span> <span class="nav-text">I did something terribly wrong, please tell me git has a magic time machine!?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-committed-and-immediately-realized-I-need-to-make-one-small-change"><span class="nav-number">2.</span> <span class="nav-text">I committed and immediately realized I need to make one small change!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-change-the-message-on-my-last-commit"><span class="nav-number">3.</span> <span class="nav-text">I need to change the message on my last commit!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-something-to-master-that-should-have-been-on-a-brand-new-branch"><span class="nav-number">4.</span> <span class="nav-text">I accidentally committed something to master that should have been on a brand new branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-accidentally-committed-to-the-wrong-branch"><span class="nav-number">5.</span> <span class="nav-text">I accidentally committed to the wrong branch!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-tried-to-run-a-diff-but-nothing-happened"><span class="nav-number">6.</span> <span class="nav-text">I tried to run a diff but nothing happened?!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-a-commit-from-like-5-commits-ago"><span class="nav-number">7.</span> <span class="nav-text">I need to undo a commit from like 5 commits ago!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-need-to-undo-my-changes-to-a-file"><span class="nav-number">8.</span> <span class="nav-text">I need to undo my changes to a file!</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#I-give-up"><span class="nav-number">9.</span> <span class="nav-text">I give up.</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8git%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%97%B6%E6%8A%A5%E9%94%99%EF%BC%9A"><span class="nav-number"></span> <span class="nav-text">使用git提交代码时报错：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-gitignore-%E6%96%87%E4%BB%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E9%87%8D%E6%96%B0%E7%94%9F%E6%95%88"><span class="nav-number"></span> <span class="nav-text">修改 .gitignore 文件，如何重新生效</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitignore-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="nav-number"></span> <span class="nav-text">.gitignore 正则表达式</span></a></div>
       </div>
       <!--/noindex-->
 
@@ -418,7 +429,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">191</span>
+          <span class="site-state-item-count">198</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

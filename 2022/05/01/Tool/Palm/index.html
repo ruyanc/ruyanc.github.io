@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Auto install下载自动安装脚本：http:&#x2F;&#x2F;palm.muk.uni-hannover.de&#x2F;trac&#x2F;attachment&#x2F;wiki&#x2F;doc&#x2F;install&#x2F;palm_installer 官网首页注册账号：https:&#x2F;&#x2F;palm.muk.uni-hannover.de&#x2F;trac 123bash palm_installer# 注意Checking general software">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Palm">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/Palm/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Auto install下载自动安装脚本：http:&#x2F;&#x2F;palm.muk.uni-hannover.de&#x2F;trac&#x2F;attachment&#x2F;wiki&#x2F;doc&#x2F;install&#x2F;palm_installer 官网首页注册账号：https:&#x2F;&#x2F;palm.muk.uni-hannover.de&#x2F;trac 123bash palm_installer# 注意Checking general software">
+<meta property="og:locale">
+<meta property="og:image" content="https://p.ipic.vip/5yxwm7.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-03-25T00:42:35.833Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/5yxwm7.png">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/Palm/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Palm | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/Palm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Palm
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-03-25 08:42:35" itemprop="dateModified" datetime="2024-03-25T08:42:35+08:00">2024-03-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Auto-install"><a href="#Auto-install" class="headerlink" title="Auto install"></a>Auto install</h2><p>下载自动安装脚本：<a target="_blank" rel="noopener" href="http://palm.muk.uni-hannover.de/trac/attachment/wiki/doc/install/palm_installer">http://palm.muk.uni-hannover.de/trac/attachment/wiki/doc/install/palm_installer</a></p>
+<p>官网首页注册账号：<a target="_blank" rel="noopener" href="https://palm.muk.uni-hannover.de/trac">https://palm.muk.uni-hannover.de/trac</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bash palm_installer</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意Checking general software requirements是否有不满足的环境</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">可能需要修改安装目录</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>！！！实际显示成功但实际失败了！！！</p>
+<p><img src="https://p.ipic.vip/5yxwm7.png" alt="Screenshot 2024-03-04 at 16.29.48"></p>
+<h2 id="Install-manually"><a href="#Install-manually" class="headerlink" title="Install manually"></a>Install manually</h2><p>参考：<a target="_blank" rel="noopener" href="https://docs.palm-model.org/23.10/Get_Started/">https://docs.palm-model.org/23.10/Get_Started/</a></p>
+<p><a target="_blank" rel="noopener" href="https://palm.muk.uni-hannover.de/trac/wiki/doc/install/advanced">https://palm.muk.uni-hannover.de/trac/wiki/doc/install/advanced</a></p>
+<h3 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h3><p><a target="_blank" rel="noopener" href="https://gitlab.palm-model.org/releases/palm_model_system/-/releases/v23.10">https://gitlab.palm-model.org/releases/palm_model_system/-/releases/v23.10</a></p>
+<h3 id="Software-Requirements"><a href="#Software-Requirements" class="headerlink" title="Software Requirements"></a>Software Requirements</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gfortran g++ make cmake coreutils libopenmpi-dev openmpi-bin libnetcdff-dev netcdf-bin libfftw3-dev python3-pip python3-pyqt5 flex bison ncl-ncarg</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export install_prefix=&quot;&lt;install-prefix&gt;&quot;</span><br><span class="line">bash install -p $&#123;install_prefix&#125;</span><br><span class="line">export PATH=$&#123;install_prefix&#125;/bin:$&#123;PATH&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="使用说明简介"><a href="#使用说明简介" class="headerlink" title="使用说明简介"></a>使用说明简介</h2><p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/ysqzhatian/article/details/106760093">https://blog.csdn.net/ysqzhatian/article/details/106760093</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ysqzhatian/article/details/112557474">https://blog.csdn.net/ysqzhatian/article/details/112557474</a></p>
+<h2 id="马玉龙讲解视频笔记"><a href="#马玉龙讲解视频笔记" class="headerlink" title="马玉龙讲解视频笔记"></a>马玉龙讲解视频笔记</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><h4 id="MAKE-DEPOSITORY-default"><a href="#MAKE-DEPOSITORY-default" class="headerlink" title="MAKE_DEPOSITORY_default"></a>MAKE_DEPOSITORY_default</h4><p>存放个人代码的修改</p>
+<p>源代码 + 编译中间文件 + 可执行文件存放位置</p>
+<p>可执行文件：<code>palm</code> 为palm主程序 + <code>combine_plot_fields.x</code> 为合并各节点的输出文件打到一个文件中</p>
+<h4 id="palm-config-default"><a href="#palm-config-default" class="headerlink" title=".palm.config.default"></a>.palm.config.default</h4><p>修改 %source_path为<code>/work/home/acyii6v8kt/WORK/Palm/palm_model_system-v23.10/MAKE_DEPOSITORY_default</code> 以保证原代码的整洁</p>
+<p>%compiler_options 添加 <code>-g -traceback</code> 进行代码调试，给出具体出错信息</p>
+<h4 id="x2F-bin-x2F-palmbuild"><a href="#x2F-bin-x2F-palmbuild" class="headerlink" title=".&#x2F;bin&#x2F;palmbuild"></a>.&#x2F;bin&#x2F;palmbuild</h4><p>首次安装好后重新编译时使用，即使用<code>.palm.config.default</code>配置文件</p>
+<h4 id="新建-test-文件夹用于存在运行个例"><a href="#新建-test-文件夹用于存在运行个例" class="headerlink" title="新建 test 文件夹用于存在运行个例"></a>新建 test 文件夹用于存在运行个例</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cp palm ./</span><br><span class="line">cp combine_plot_fields.x ./</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>准备输入文件和namelist:</li>
+</ul>
+<p> <code>PID_STATIC</code> 为nc格式的静态输入文件，包括网格信息，网格位置</p>
+<p><code>PIDS_DYNAMIC </code> 为nc格式的动态输入文件，包括边界条件（uvtpq 六个面，一般设置侧向，上下为默认）、初始条件</p>
+<p><code>PARIN</code> 为namelist </p>
+<p><code>ENVPAR</code> 为计算节点设置</p>
+<h4 id="DATA-3D-AV-NETCDF-输出结果时间平均"><a href="#DATA-3D-AV-NETCDF-输出结果时间平均" class="headerlink" title="DATA_3D_AV_NETCDF 输出结果时间平均"></a>DATA_3D_AV_NETCDF 输出结果时间平均</h4>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Paper%20Submission/" rel="prev" title="Paper submission">
+      <i class="fa fa-chevron-left"></i> Paper submission
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/ONNX/" rel="next" title="ONNX">
+      ONNX <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-install"><span class="nav-number">1.</span> <span class="nav-text">Auto install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-manually"><span class="nav-number">2.</span> <span class="nav-text">Install manually</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Download"><span class="nav-number">2.1.</span> <span class="nav-text">Download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Requirements"><span class="nav-number">2.2.</span> <span class="nav-text">Software Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">2.3.</span> <span class="nav-text">Installation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">使用说明简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E7%8E%89%E9%BE%99%E8%AE%B2%E8%A7%A3%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">马玉龙讲解视频笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MAKE-DEPOSITORY-default"><span class="nav-number">4.1.1.</span> <span class="nav-text">MAKE_DEPOSITORY_default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#palm-config-default"><span class="nav-number">4.1.2.</span> <span class="nav-text">.palm.config.default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x2F-bin-x2F-palmbuild"><span class="nav-number">4.1.3.</span> <span class="nav-text">.&#x2F;bin&#x2F;palmbuild</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA-test-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%94%A8%E4%BA%8E%E5%AD%98%E5%9C%A8%E8%BF%90%E8%A1%8C%E4%B8%AA%E4%BE%8B"><span class="nav-number">4.1.4.</span> <span class="nav-text">新建 test 文件夹用于存在运行个例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DATA-3D-AV-NETCDF-%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%97%B6%E9%97%B4%E5%B9%B3%E5%9D%87"><span class="nav-number">4.1.5.</span> <span class="nav-text">DATA_3D_AV_NETCDF 输出结果时间平均</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">198</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
