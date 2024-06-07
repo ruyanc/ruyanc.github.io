@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="PALM Static DriverGEO4PALM 安装使用指南 - for generate PIDS_STATIC 在mac环境下完成 代码下载与环境配置https:&#x2F;&#x2F;github.com&#x2F;dongqi-DQ&#x2F;GEO4PALM 12git clone https:&#x2F;&#x2F;github.com&#x2F;dongqi-DQ&#x2F;GEO4PALM.gitcd GEO4PALM   删除 geo4palm_env">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Palm Driver">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/PALM%20Driver/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="PALM Static DriverGEO4PALM 安装使用指南 - for generate PIDS_STATIC 在mac环境下完成 代码下载与环境配置https:&#x2F;&#x2F;github.com&#x2F;dongqi-DQ&#x2F;GEO4PALM 12git clone https:&#x2F;&#x2F;github.com&#x2F;dongqi-DQ&#x2F;GEO4PALM.gitcd GEO4PALM   删除 geo4palm_env">
+<meta property="og:locale">
+<meta property="og:image" content="https://p.ipic.vip/00oukz.png">
+<meta property="og:image" content="https://p.ipic.vip/ww775e.png">
+<meta property="og:image" content="https://p.ipic.vip/jfw2ol.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-07T08:01:09.166Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/00oukz.png">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/PALM%20Driver/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>Palm Driver | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/PALM%20Driver/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Palm Driver
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-06-07 16:01:09" itemprop="dateModified" datetime="2024-06-07T16:01:09+08:00">2024-06-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="PALM-Static-Driver"><a href="#PALM-Static-Driver" class="headerlink" title="PALM Static Driver"></a>PALM Static Driver</h3><p><font color='red'><strong>GEO4PALM 安装使用指南 - for generate PIDS_STATIC</strong></font></p>
+<p><font color='green'>在mac环境下完成</font></p>
+<h4 id="代码下载与环境配置"><a href="#代码下载与环境配置" class="headerlink" title="代码下载与环境配置"></a>代码下载与环境配置</h4><p><a target="_blank" rel="noopener" href="https://github.com/dongqi-DQ/GEO4PALM">https://github.com/dongqi-DQ/GEO4PALM</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/dongqi-DQ/GEO4PALM.git</span><br><span class="line">cd GEO4PALM</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除 <code>geo4palm_env.yml </code>文件中的以下字段：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- _libgcc_mutex=0.1=main</span><br><span class="line">  - _openmp_mutex=5.1=1_gnu</span><br><span class="line">  - alabaster=0.7.12=pyhd3eb1b0_0</span><br><span class="line">  ...</span><br><span class="line">  - zlib=1.2.13=h5eee18b_0</span><br><span class="line">  - zstd=1.5.5=hc292b87_0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建<code>conda</code>环境<code>GEO4PALM</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f geo4palm_env.yml -n GEO4PALM</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">出现gdal安装报错，更换为使用brew安装，完成此步需要较长时间</span></span><br><span class="line">brew install gdal</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>激活<code>GEO4PALM</code>虚拟环境</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate GEO4PALM</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>install <code>terracatalogueclient</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">which -a pip</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">返回：</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">/Users/Ruyan/miniconda3/envs/geo4palm/bin/pip  - use this thereafter</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">/opt/homebrew/bin/pip</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">完成此步需要较长时间</span></span><br><span class="line">/Users/Ruyan/miniconda3/envs/geo4palm/bin/pip install terracatalogueclient -i https://artifactory.vgt.vito.be/api/pypi/python-packages/simple </span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="可视化交互完成-domain-设置"><a href="#可视化交互完成-domain-设置" class="headerlink" title="可视化交互完成 domain 设置"></a>可视化交互完成 domain 设置</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install panel</span><br><span class="line">pip install geoviews</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">panel serve --port 8081 palm_domain_utility.py --show</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p.ipic.vip/00oukz.png" alt="44971717665529_.pic"></p>
+<ul>
+<li>对应修改<code>./JOBS/Wuhan/INPUT/config.static-Wuhan</code>中的 [case] 和 [domain] 参数</li>
+</ul>
+<h4 id="dem-地形数据准备"><a href="#dem-地形数据准备" class="headerlink" title="dem 地形数据准备"></a>dem 地形数据准备</h4><ul>
+<li>安装elevation - 基于集成的elevation工具包：<a target="_blank" rel="noopener" href="https://github.com/bopen/elevation?tab=readme-ov-file">https://github.com/bopen/elevation?tab=readme-ov-file</a></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/bopen/elevation.git</span><br><span class="line">pip install elevation</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>测试安装</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eio selfcheck</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Your system is ready.</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>选择区域范围</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eio clip -o Wuhan-30m-DEM.tif --bounds 113 29 115 31   # left bottom right top</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">注意：区域选择不可过大，否则会报错</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>移动生成数据到<code>INPUT</code>文件夹下</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv Wuhan-30m-DEM.tif ./JOBS/Wuhan/INPUT</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="shp-建筑物数据准备"><a href="#shp-建筑物数据准备" class="headerlink" title="shp 建筑物数据准备"></a>shp 建筑物数据准备</h4><p>网络资源：国内77个城市建筑物轮廓（带高度）数据分享 【环哥建筑物矢量shp】</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv17043593/">https://www.bilibili.com/read/cv17043593/</a></p>
+<p>shp 文件可视化网站： <a target="_blank" rel="noopener" href="https://mapshaper.org/">https://mapshaper.org/</a></p>
+<ul>
+<li><p>移动数据到<code>./JOBS/Wuhan/INPUT/shp</code>文件夹下</p>
+</li>
+<li><p>读取shp变量信息</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python read_shp.py</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">[(<span class="string">&#x27;DeletionFlag&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, 1, 0), [<span class="string">&#x27;Entity&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, 16, 0], [<span class="string">&#x27;Layer&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, 254, 0], [<span class="string">&#x27;LyrFrzn&#x27;</span>, <span class="string">&#x27;N&#x27;</span>, 5, 0], [<span class="string">&#x27;LyrOn&#x27;</span>, <span class="string">&#x27;N&#x27;</span>, 5, 0], [<span class="string">&#x27;Color&#x27;</span>, <span class="string">&#x27;N&#x27;</span>, 5, 0], [<span class="string">&#x27;Linetype&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, 254, 0], [<span class="string">&#x27;Elevation&#x27;</span>, <span class="string">&#x27;F&#x27;</span>, 19, 11], [<span class="string">&#x27;LineWt&#x27;</span>, <span class="string">&#x27;N&#x27;</span>, 5, 0], [<span class="string">&#x27;RefName&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, 254, 0], [<span class="string">&#x27;DocUpdate&#x27;</span>, <span class="string">&#x27;D&#x27;</span>, 8, 0]]</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>shp 转换 tif</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install rioxarray,geopandas,geocube</span><br><span class="line">python shp2tif.py Wuhan shp Elevation</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">tif file Elevation_9m_EPSG32650_shp2tif.tif saved</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对应修改<code>./JOBS/Wuhan/INPUT/config.static-Wuhan</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[urban]</span><br><span class="line">bldh     = &quot;Elevation_9m_EPSG32650_shp2tif.tif&quot;,</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="lu-土地利用类型"><a href="#lu-土地利用类型" class="headerlink" title="lu 土地利用类型"></a>lu 土地利用类型</h4><ul>
+<li><p>注册 ESA WorldCover 账号</p>
+</li>
+<li><p>修改<code>./JOBS/Wuhan/INPUT/config.static-Wuhan</code></p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">[case]</span><br><span class="line">case_name    = &quot;Wuhan&quot;,                   # prefix for a case</span><br><span class="line">origin_time  = &quot;2020-05-01 00:00:00 +00&quot;, # time in yyyy-mm-dd HH:MM:SS +HH format (+00 as in UTC)</span><br><span class="line">config_proj  = &quot;EPSG:32650&quot;,              # projection for PALM</span><br><span class="line">default_proj = &quot;EPSG:4326&quot;,               # projection of lat/lon to find domain location</span><br><span class="line">lu_table     = &quot;esa_2020v1_lu.csv&quot;,</span><br><span class="line"></span><br><span class="line">[domain]</span><br><span class="line">ndomain   = 1,                                </span><br><span class="line">centlat   = 30.508,</span><br><span class="line">centlon   = 114.393,                        </span><br><span class="line">nx        = 180, </span><br><span class="line">ny        = 180,   </span><br><span class="line">nz        = 100,   </span><br><span class="line">dx        = 9.0,</span><br><span class="line">dy        = 9.0,</span><br><span class="line">dz        = 9.0, </span><br><span class="line">z_origin  = 0.0,  </span><br><span class="line">ll_x      = 0.0, </span><br><span class="line">ll_y      = 0.0, </span><br><span class="line"></span><br><span class="line">[settings]</span><br><span class="line">water_temperature     = 283.0,</span><br><span class="line">building_height_dummy = 3.0,</span><br><span class="line">tree_height_filter    = 1.5,</span><br><span class="line"></span><br><span class="line">[geotif] </span><br><span class="line">water     = &quot;online&quot;,        </span><br><span class="line">dem       = &quot;Wuhan-30m-DEM.tif&quot;, </span><br><span class="line">lu        = &quot;esa&quot;,   </span><br><span class="line">resample_method = &quot;nearest&quot;, </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> NASA API is used format <span class="keyword">in</span> YYYY-MM-DD</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">SST <span class="built_in">date</span> should be the same as the orignin_time</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># No need to change start/end dates for NASA SRTMGL1_NC.003</span></span> </span><br><span class="line">dem_start_date = &#x27;2000-02-12&#x27;,</span><br><span class="line">dem_end_date = &#x27;2000-02-20&#x27;,</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment"># start/end dates for land use data set</span></span></span><br><span class="line">lu_start_date = &#x27;2020-10-01&#x27;,</span><br><span class="line">lu_end_date = &#x27;2020-10-30&#x27;,</span><br><span class="line"></span><br><span class="line">[urban]</span><br><span class="line">bldh     = &quot;Elevation_9m_EPSG32650_shp2tif.tif&quot;,</span><br><span class="line">bldid    = &quot;osm&quot;,</span><br><span class="line">pavement = &quot;osm&quot;,</span><br><span class="line">street   = &quot;osm&quot;, </span><br><span class="line"></span><br><span class="line">[plant]</span><br><span class="line">tree_lai_max   =  5.0,</span><br><span class="line">lad_max_height =  0.4,</span><br><span class="line">sfch = &quot;&quot;,</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>把 <code>esa_2020v1_lu.csv</code> 放到<code>./JOBS/Wuhan/INPUT/</code>文件夹下</li>
+</ul>
+<h4 id="运行-GEO4PALM"><a href="#运行-GEO4PALM" class="headerlink" title="运行 GEO4PALM"></a>运行 GEO4PALM</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pip install osmnx,netCDF4,dask</span><br><span class="line">python run_config_static.py Wuhan</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输入 NASA EarthData login account</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">输入 ESA WouldCover login account</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>返回数据下载信息</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Downloading SST file to ./JOBS/Wuhan/INPUT/</span><br><span class="line">SST file downloaded to ./JOBS/Wuhan/INPUT/</span><br><span class="line">You are about to download 152.17 MB, do you want to continue? [Y/n] Y</span><br><span class="line">ESA WorldCover data download done</span><br><span class="line">merge ESA data</span><br><span class="line">Done</span><br><span class="line">Retrieving OSM building data...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生成 Static Driver 数据到<code>./JOBS/Wuhan/OUTPUT</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncview Wuhan_static_N01</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://p.ipic.vip/ww775e.png" alt="Screenshot 2024-06-07 at 10.41.26"></p>
+<h3 id="PALM-Dynamic-Driver"><a href="#PALM-Dynamic-Driver" class="headerlink" title="PALM Dynamic Driver"></a>PALM Dynamic Driver</h3><p><font color='red'><strong>WRF4PALM 安装使用指南 - for generate PIDS_DYNAMIC</strong></font></p>
+<p><font color='green'>在WZCS环境下完成</font></p>
+<h4 id="代码下载与环境配置-1"><a href="#代码下载与环境配置-1" class="headerlink" title="代码下载与环境配置"></a>代码下载与环境配置</h4><p><a target="_blank" rel="noopener" href="https://github.com/dongqi-DQ/WRF4PALM">https://github.com/dongqi-DQ/WRF4PALM</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/dongqi-DQ/WRF4PALM.git</span><br><span class="line">cd WRF4PALM</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除 <code>geo4palm_env.yml </code>文件中的以下字段：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- _libgcc_mutex=0.1=main</span><br><span class="line">  - _openmp_mutex=5.1=1_gnu</span><br><span class="line">  - alabaster=0.7.12=pyhd3eb1b0_0</span><br><span class="line">  ...</span><br><span class="line">  - zlib=1.2.13=h5eee18b_0</span><br><span class="line">  - zstd=1.5.5=hc292b87_0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建<code>conda</code>环境<code>GEO4PALM</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f wrf4palm_env.yml -n WRF4PALM</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>激活<code>WRF4PALM</code>虚拟环境</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate WRF4PALM</span><br></pre></td></tr></table></figure>
+
+<h5 id="WZCS环境激活步骤"><a href="#WZCS环境激活步骤" class="headerlink" title="WZCS环境激活步骤"></a><font color='green'>WZCS环境激活步骤</font></h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- module load anaconda3/5.2.0 </span><br><span class="line">- module load python/3.8.10</span><br><span class="line">- source activate WRF4PALM</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>把WRF输出文件放到<code>./wrf_output</code>文件夹下</li>
+</ul>
+<h4 id="修改namelist-wrf4palm"><a href="#修改namelist-wrf4palm" class="headerlink" title="修改namelist.wrf4palm "></a>修改<code>namelist.wrf4palm </code></h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">[case]</span><br><span class="line">case_name = &quot;wuhan_test&quot;,</span><br><span class="line">max_pool = 32,</span><br><span class="line">geostrophic = &quot;p&quot;, ## alculate geostrophic wind using the variable pressure (option &quot;p&quot;) or geopotential height  (option &quot;z&quot;)</span><br><span class="line"></span><br><span class="line">[domain]</span><br><span class="line">palm_proj = &quot;EPSG:32650&quot;,    # projection of PALM</span><br><span class="line">centlat   = 30.508,</span><br><span class="line">centlon   = 114.393,  </span><br><span class="line">nx        = 180,                                  # number of grid points along x-axis</span><br><span class="line">ny        = 180,                                  # number of grid points along y-axis</span><br><span class="line">nz        = 100,                                  # number of grid points along z-axis</span><br><span class="line">dx        = 9,                                </span><br><span class="line">dy        = 9,                                 </span><br><span class="line">dz        = 9,                                     </span><br><span class="line">z_origin  = 0.0,                                  # elevated mean grid position (elevated terrain)</span><br><span class="line"></span><br><span class="line">[stretch]</span><br><span class="line">dz_stretch_factor = 1.0,        # stretch factor for a vertically stretched grid</span><br><span class="line">                                # set this to 1.0 if no streching required</span><br><span class="line">dz_stretch_level = 1200.0,      # Height level above which the grid is to be stretched vertically (in m)</span><br><span class="line"></span><br><span class="line">dz_max = 30.0,                  # allowed maximum vertical grid spacing (in m)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[wrf]</span><br><span class="line">wrf_path = &quot;./wrf_output/&quot;,</span><br><span class="line">wrf_output = &quot;wrfout_d03_2020-05-01_*&quot;, </span><br><span class="line"></span><br><span class="line">interp_mode = &quot;linear&quot;,</span><br><span class="line"></span><br><span class="line">start_year = 2020,</span><br><span class="line">start_month = 5,</span><br><span class="line">start_day = 1,</span><br><span class="line">start_hour = 0,</span><br><span class="line"></span><br><span class="line">end_year = 2020,</span><br><span class="line">end_month = 5,</span><br><span class="line">end_day = 1,</span><br><span class="line">end_hour = 12,</span><br><span class="line"></span><br><span class="line">dynamic_ts = 3600.0,         # PALM dynamic driver update frequency</span><br><span class="line"></span><br><span class="line">[soil]</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">layers <span class="keyword">for</span> soil temperature and moisture calculation</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">this shall be changed depending on different cases</span></span><br><span class="line"></span><br><span class="line">dz_soil = 0.01, 0.02, 0.04, 0.06, 0.14, 0.26, 0.54, 1.86,</span><br><span class="line">msoil = 0.3, # dummy value in case soil moisture from WRF output is 0.0</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行-WRF4PALM"><a href="#运行-WRF4PALM" class="headerlink" title="运行 WRF4PALM"></a>运行 WRF4PALM</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install salem,multiprocess,dask</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>修改<code>mpi_job.sh</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --job-name=OmpJob</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --nodes=1</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --ntasks-per-node=32   <span class="comment"># 与 namelist.wrf4palm 中的max_pool一致</span></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --partition=wzhcexclu01</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">SBATCH --exclusive</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">load the environment</span></span><br><span class="line">export I_MPI_PMI_LIBRARY=/opt/gridview/slurm/lib/libpmi.so</span><br><span class="line">python run_config_wrf4palm.py namelist.wrf4palm</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行<code>mpi_job.sh</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbatch mpi_job.sh</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>执行完成</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Add to your *_p3d file: </span><br><span class="line"> soil_temperature = [295.31546738281247, 295.31546738281247, 295.31546738281247, 295.31546738281247, 294.6043686659415, 293.1092400457651, 290.35686103980805, 290.20395097351076]</span><br><span class="line"> soil_moisture = [0.31395987400412556, 0.31395987400412556, 0.31395987400412556, 0.31395987400412556, 0.3273818972649503, 0.35219524385050477, 0.3706932271973485, 0.37172089375555517]</span><br><span class="line"> deep_soil_temperature = 288.4166</span><br><span class="line"></span><br><span class="line">PALM dynamic input file is ready. Script duration: 0:08:26.125738</span><br><span class="line">Start time: 2020-05-01T00:00:00.000000000</span><br><span class="line">End time: 2020-05-01T12:00:00.000000000</span><br><span class="line">Time step: 3600.0 seconds</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>生成 Dynamic Driver 数据到<code>./dynamic_files</code></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Wuhan_dynamic_2020_5_1_0</span><br></pre></td></tr></table></figure>
+
+<h4 id="检验对比"><a href="#检验对比" class="headerlink" title="检验对比"></a>检验对比</h4><p>n order for users to quickly check the quality of the dynamic driver generated by WRF4PALM, we provide a quick comparison script. Five variables are allowed (can be in uppercase or lowercase):</p>
+<p>U  -  V  -  W  -  PT  -  QV</p>
+<p>Three plot types are provided:</p>
+<p><strong>zcross</strong>: vertical cross sections of west&#x2F;east&#x2F;south&#x2F;north boundaries for the user specified variable and timestamp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python quick_compare.py [your namelist] zcross [variable name]</span><br></pre></td></tr></table></figure>
+
+<p>then the script will ask for the timestamp:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please enter the timestamp (yyyy-mm-dd-hh):</span><br></pre></td></tr></table></figure>
+
+<p>Once the timestamp is given, the script will return a comparison plot.</p>
+<p><strong>pr</strong>: vertical profiless of west&#x2F;east&#x2F;south&#x2F;north boundaries for the user specified variable and timestamp</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 quick_compare.py [your namelist] pr [variable name]</span><br></pre></td></tr></table></figure>
+
+<p>then the script will ask for the timestamp:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please enter the timestamp (yyyy-mm-dd-hh):</span><br></pre></td></tr></table></figure>
+
+<p>Once the timestamp is given, the script will return a comparison plot.<br>Note that the vertical profiles are horizontally averaged and hence the comparison only gives a approximate reference regarding the performance of WRF4PALM.</p>
+<p><strong>ts</strong>: time series of west&#x2F;east&#x2F;south&#x2F;north boundaries for the user specified variable and altitude</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 quick_compare.py [your namelist] ts [variable name]</span><br></pre></td></tr></table></figure>
+
+<p>then the script will ask for the altitude:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please enter the vertical level in m:</span><br></pre></td></tr></table></figure>
+
+<p>Once the vertical level is given, the script will return a comparison plot.<br>Note that the time series are horizontally averaged and hence the comparison only gives a approximate reference regarding the performance of WRF4PALM.</p>
+<p><img src="https://p.ipic.vip/jfw2ol.png" alt="compare"></p>
+<p><font color='red'><strong>！！注意！！原版代码<code>dynamic_util/surface_nan_solver.py </code>中存在bug</strong></font></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">以下为订正后的正确代码：</span></span><br><span class="line">def surface_nan_uv(data,z, uv10):</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    assuming U = a*log(z)+b</span><br><span class="line">    &#x27;&#x27;&#x27;</span><br><span class="line">    nan_idx = np.argwhere(np.isnan(data))</span><br><span class="line">    if nan_idx.size &gt; 0 :</span><br><span class="line">        nan_idx = int(nan_idx[-1])+1</span><br><span class="line">        terrain_height = z[nan_idx]</span><br><span class="line">        a = (data[nan_idx]-uv10)/np.log(terrain_height/(terrain_height-10))</span><br><span class="line">        b = uv10-a*np.log(terrain_height-10)</span><br><span class="line">        for i in range(0,int(nan_idx)):</span><br><span class="line">            data[i] = a*np.log(z[i])+b</span><br><span class="line">    return(data)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="WRF-ERA5-Downscaling"><a href="#WRF-ERA5-Downscaling" class="headerlink" title="WRF ERA5 Downscaling"></a>WRF ERA5 Downscaling</h2><h2 id="Run-PALM-simulation"><a href="#Run-PALM-simulation" class="headerlink" title="Run PALM simulation"></a>Run PALM simulation</h2>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/PATH/" rel="prev" title="PATH">
+      <i class="fa fa-chevron-left"></i> PATH
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/ONNX/" rel="next" title="ONNX">
+      ONNX <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#PALM-Static-Driver"><span class="nav-number">1.</span> <span class="nav-text">PALM Static Driver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.1.</span> <span class="nav-text">代码下载与环境配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E4%BA%A4%E4%BA%92%E5%AE%8C%E6%88%90-domain-%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">可视化交互完成 domain 设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#dem-%E5%9C%B0%E5%BD%A2%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="nav-number">1.3.</span> <span class="nav-text">dem 地形数据准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#shp-%E5%BB%BA%E7%AD%91%E7%89%A9%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="nav-number">1.4.</span> <span class="nav-text">shp 建筑物数据准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lu-%E5%9C%9F%E5%9C%B0%E5%88%A9%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.</span> <span class="nav-text">lu 土地利用类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-GEO4PALM"><span class="nav-number">1.6.</span> <span class="nav-text">运行 GEO4PALM</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PALM-Dynamic-Driver"><span class="nav-number">2.</span> <span class="nav-text">PALM Dynamic Driver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%8B%E8%BD%BD%E4%B8%8E%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE-1"><span class="nav-number">2.1.</span> <span class="nav-text">代码下载与环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#WZCS%E7%8E%AF%E5%A2%83%E6%BF%80%E6%B4%BB%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.1.1.</span> <span class="nav-text">WZCS环境激活步骤</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9namelist-wrf4palm"><span class="nav-number">2.2.</span> <span class="nav-text">修改namelist.wrf4palm </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C-WRF4PALM"><span class="nav-number">2.3.</span> <span class="nav-text">运行 WRF4PALM</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%80%E9%AA%8C%E5%AF%B9%E6%AF%94"><span class="nav-number">2.4.</span> <span class="nav-text">检验对比</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WRF-ERA5-Downscaling"><span class="nav-number"></span> <span class="nav-text">WRF ERA5 Downscaling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-PALM-simulation"><span class="nav-number"></span> <span class="nav-text">Run PALM simulation</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">202</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
