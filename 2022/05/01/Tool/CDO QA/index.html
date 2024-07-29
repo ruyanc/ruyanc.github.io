@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;RVU7Q9wg1W6IR-0DAHtJQw 总结整理了Cdo官网中最常见的，或者说被问得最多的问题，帮助下次可以更容易的找到问题的答案。 当然，cdo的许多命令是可以同时运行的，避免重复输出&#x2F;输入数据。 目录 如何获得帮助？[1] 如何在出版物中引用 CDO 用户指南？[2] 如何查看文件中的内容？[3] 如何查看文件中的时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CDO QA">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/CDO%20QA/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s&#x2F;RVU7Q9wg1W6IR-0DAHtJQw 总结整理了Cdo官网中最常见的，或者说被问得最多的问题，帮助下次可以更容易的找到问题的答案。 当然，cdo的许多命令是可以同时运行的，避免重复输出&#x2F;输入数据。 目录 如何获得帮助？[1] 如何在出版物中引用 CDO 用户指南？[2] 如何查看文件中的内容？[3] 如何查看文件中的时间">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-06-26T08:53:19.455Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/CDO%20QA/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>CDO QA | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/CDO%20QA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CDO QA
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-06-26 16:53:19" itemprop="dateModified" datetime="2024-06-26T16:53:19+08:00">2024-06-26</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/RVU7Q9wg1W6IR-0DAHtJQw">https://mp.weixin.qq.com/s/RVU7Q9wg1W6IR-0DAHtJQw</a></p>
+<p>总结整理了Cdo官网中最常见的，或者说被问得最多的问题，帮助下次可以更容易的找到问题的答案。</p>
+<p>当然，cdo的许多命令是可以同时运行的，避免重复输出&#x2F;输入数据。</p>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a><strong>目录</strong></h3><ol>
+<li>如何获得帮助？[1]</li>
+<li>如何在出版物中引用 CDO 用户指南？[2]</li>
+<li>如何查看文件中的内容？[3]</li>
+<li>如何查看文件中的时间步长？[4]</li>
+<li>我的文件中有多少个时间步长？[5]</li>
+<li>如何选择变量并将其保存到新文件？[6]</li>
+<li>如何提取时间步长？[7]</li>
+<li>如何将纬度的顺序从 N-S 反转为 S-N？[8]</li>
+<li>如何将温度单位从 K 转换为摄氏度？[9]</li>
+<li>如何将常数值设置为缺失值？[10]</li>
+<li>如何将值范围设置为缺失值？[11]</li>
+<li>如何使用纬度&#x2F;经度值（度）提取子区域？[12]</li>
+<li>如何更改变量的属性？[13]</li>
+<li>如何计算网格单元面积（以平方米为单位）？[14]</li>
+<li>如何将数据插入&#x2F;重新映射到另一个网格？[15]</li>
+<li>如何将 ASCII 文件转换为 netCDF？[16]</li>
+<li>如何从 netCDF&#x2F;GRIB 文件中提取数据并将其写入 ASCII 文件？[17]</li>
+<li>如何将我的数据重新映射到全局 1x1 度网格？[18]</li>
+<li>当我必须将多个文件重新映射到高斯 N32 网格时，如何创建权重文件？[19]</li>
+<li>如何将我的数据重新映射到另一个数据文件的不同网格？[20]</li>
+<li>如果数据文件中缺少坐标变量纬度和经度，如何添加？[21]</li>
+<li>如何添加缺失的时间坐标变量？[22]</li>
+<li>如何删除大小为 1 的维度？[23]</li>
+<li>如何设置或更改缺失值（或将 NaN 更改为缺失值）？[24]</li>
+<li>如何将所有缺失值设置为最接近的非缺失值？[25]</li>
+<li>如何创建 1x1 度陆地&#x2F;海洋掩模？[26]</li>
+<li>如何使用掩模文件？[27]</li>
+<li>如何将我的模型级别插入到压力级别？[28]</li>
+<li>如何将简化高斯网格上的数据转换为常规网格？[29]</li>
+<li>如何将包含多年的文件拆分为单个年度文件？[30]</li>
+<li>如何从我的数据中提取像 JFMAM 这样的特殊季节？[31]</li>
+<li>如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？[32]</li>
+<li>如何从多个文件中提取相同级别的相同变量？[33]</li>
+<li>如何将 seasavg 的默认季节 DJF 更改为 JFM？[34]</li>
+<li>如何将 GrADS 二进制文件转换为 netCDF？[35]</li>
+<li>如何创建变量的快速查看图？[36]</li>
+<li>如何检索温度低于 0 的霜冻天数？[37]</li>
+<li>如何计算前 31 个时间步长的两个文件的偏差？[38]</li>
+<li>如何删除 2 月 29 日？[39]</li>
+<li>当网格信息存储在单独的文件中时，如何重新映射 ICON 数据？[40]</li>
+<li>如何一步更改变量和全局文件属性？[41]</li>
+<li>为什么我不能更改纬度、经度和级别变量的属性和名称？[42]</li>
+<li>如何将我的级别值和单位从厘米转换为米？[43]</li>
+<li>为什么在将 GRIB2 转换为 netCDF 时出现错误，但 CDO 将 grb2 列为受支持？[44]</li>
+<li>为什么从 netCDF4 文件中提取一个时间步长时会得到更大的文件？[45]</li>
+<li>如何将 6 小时数据插入到 1 小时数据中？[46]</li>
+<li>如何加快我的脚本速度？[47]</li>
+</ol>
+<h3 id="如何获得帮助？"><a href="#如何获得帮助？" class="headerlink" title="如何获得帮助？"></a><strong>如何获得帮助？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -V</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何在出版物中引用-CDO-用户指南？"><a href="#如何在出版物中引用-CDO-用户指南？" class="headerlink" title="如何在出版物中引用 CDO 用户指南？"></a><strong>如何在出版物中引用 CDO 用户指南？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.mpimet.mpg.de/projects/cdo/wiki/Cite</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何查看文件中的内容？"><a href="#如何查看文件中的内容？" class="headerlink" title="如何查看文件中的内容？"></a><strong>如何查看文件中的内容？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo sinfon infile.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何查看文件中的时间步长？"><a href="#如何查看文件中的时间步长？" class="headerlink" title="如何查看文件中的时间步长？"></a><strong>如何查看文件中的时间步长？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo showtimestamp rectilinear_grid_2D.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="我的文件中有多少个时间步长？"><a href="#我的文件中有多少个时间步长？" class="headerlink" title="我的文件中有多少个时间步长？"></a><strong>我的文件中有多少个时间步长？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo ntime rectilinear_grid_2D.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何选择变量并将其保存到新文件？"><a href="#如何选择变量并将其保存到新文件？" class="headerlink" title="如何选择变量并将其保存到新文件？"></a><strong>如何选择变量并将其保存到新文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cdo -selname,variable infile outfile</span><br><span class="line">Ex:</span><br><span class="line">cdo -selname,tsurf rectilinear_grid_2D.nc tsurf_rectilinear_grid_2D.nc</span><br><span class="line">cdo -selname,tsurf,precip rectilinear_grid_2D.nc tsurf_precip_rectilinear_grid_2D.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何提取时间步长？"><a href="#如何提取时间步长？" class="headerlink" title="如何提取时间步长？"></a><strong>如何提取时间步长？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo seltimestep,t infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将纬度的顺序从-N-S-反转为-S-N？（注意：不是反过来）"><a href="#如何将纬度的顺序从-N-S-反转为-S-N？（注意：不是反过来）" class="headerlink" title="如何将纬度的顺序从 N-S 反转为 S-N？（注意：不是反过来）"></a><strong>如何将纬度的顺序从 N-S 反转为 S-N？（注意：不是反过来）</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo invertlat infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将温度单位从-K-转换为摄氏度？"><a href="#如何将温度单位从-K-转换为摄氏度？" class="headerlink" title="如何将温度单位从 K 转换为摄氏度？"></a><strong>如何将温度单位从 K 转换为摄氏度？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo addc,-273.15 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将常数值设置为缺失值？"><a href="#如何将常数值设置为缺失值？" class="headerlink" title="如何将常数值设置为缺失值？"></a><strong>如何将常数值设置为缺失值？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo setctomiss,value infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将值范围设置为缺失值？"><a href="#如何将值范围设置为缺失值？" class="headerlink" title="如何将值范围设置为缺失值？"></a><strong>如何将值范围设置为缺失值？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cdo setrtomiss,rmin,rmax infile outfile</span><br><span class="line"></span><br><span class="line">EX:</span><br><span class="line">cdo setrtomiss,0,273.15 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何使用纬度-x2F-经度值（度）提取子区域？"><a href="#如何使用纬度-x2F-经度值（度）提取子区域？" class="headerlink" title="如何使用纬度&#x2F;经度值（度）提取子区域？"></a><strong>如何使用纬度&#x2F;经度值（度）提取子区域？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -sellonlatbox,lonmin,lonmax,latmin,latmax infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何更改变量的属性？"><a href="#如何更改变量的属性？" class="headerlink" title="如何更改变量的属性？"></a><strong>如何更改变量的属性？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -setattribute,tas@units=&quot;K&quot; infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何计算网格单元面积（以平方米为单位）？"><a href="#如何计算网格单元面积（以平方米为单位）？" class="headerlink" title="如何计算网格单元面积（以平方米为单位）？"></a><strong>如何计算网格单元面积（以平方米为单位）？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo gridarea infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将数据插入-x2F-重新映射到另一个网格？"><a href="#如何将数据插入-x2F-重新映射到另一个网格？" class="headerlink" title="如何将数据插入&#x2F;重新映射到另一个网格？"></a><strong>如何将数据插入&#x2F;重新映射到另一个网格？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gridfile.txt:</span><br><span class="line"></span><br><span class="line">gridtype  = lonlat</span><br><span class="line">xsize     = 300</span><br><span class="line">ysize     = 207</span><br><span class="line">xfirst    = 47.51</span><br><span class="line">xinc      = 0.033333333</span><br><span class="line">yfirst    = 23.61</span><br><span class="line">yinc      = 0.033333333</span><br><span class="line"></span><br><span class="line">cdo remapbil,gridfile.txt infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将-ASCII-文件转换为-netCDF？"><a href="#如何将-ASCII-文件转换为-netCDF？" class="headerlink" title="如何将 ASCII 文件转换为 netCDF？"></a><strong>如何将 ASCII 文件转换为 netCDF？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gridfile.txt:</span><br><span class="line"></span><br><span class="line">gridtype = lonlat</span><br><span class="line">xsize = 32</span><br><span class="line">ysize = 64</span><br><span class="line">xfirst = 0.0</span><br><span class="line">xinc   = 1.0</span><br><span class="line">yfirst = 0.0</span><br><span class="line">yinc   = 1.0</span><br><span class="line"></span><br><span class="line">cdo -f nc -settaxis,2000-01-01,00:00:00,1day -setname,mask -input,gridfile.txt outfile.nc &lt; infile.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何从-netCDF-x2F-GRIB-文件中提取数据并将其写入-ASCII-文件？"><a href="#如何从-netCDF-x2F-GRIB-文件中提取数据并将其写入-ASCII-文件？" class="headerlink" title="如何从 netCDF&#x2F;GRIB 文件中提取数据并将其写入 ASCII 文件？"></a><strong>如何从 netCDF&#x2F;GRIB 文件中提取数据并将其写入 ASCII 文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -outputtab,name,date,lon,lat,value -sellevel,100000 -selname,variable infile.nc &gt; variable_lev100000.txt</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将我的数据重新插值到全局-1x1-度网格？"><a href="#如何将我的数据重新插值到全局-1x1-度网格？" class="headerlink" title="如何将我的数据重新插值到全局 1x1 度网格？"></a><strong>如何将我的数据重新插值到全局 1x1 度网格？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo remapbil,r360x180 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="当我必须将多个文件重新映射到高斯-N32-网格时，如何创建权重文件？"><a href="#当我必须将多个文件重新映射到高斯-N32-网格时，如何创建权重文件？" class="headerlink" title="当我必须将多个文件重新映射到高斯 N32 网格时，如何创建权重文件？"></a><strong>当我必须将多个文件重新映射到高斯 N32 网格时，如何创建权重文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cdo genbil,n32 infile weights.nc</span><br><span class="line">cdo remap,n32,weights.nc infile outfile    </span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将我的数据重新映射到另一个数据文件的不同网格？"><a href="#如何将我的数据重新映射到另一个数据文件的不同网格？" class="headerlink" title="如何将我的数据重新映射到另一个数据文件的不同网格？"></a><strong>如何将我的数据重新映射到另一个数据文件的不同网格？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -remapycon,other_data.nc infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如果数据文件中缺少坐标变量纬度和经度，如何添加？"><a href="#如果数据文件中缺少坐标变量纬度和经度，如何添加？" class="headerlink" title="如果数据文件中缺少坐标变量纬度和经度，如何添加？"></a><strong>如果数据文件中缺少坐标变量纬度和经度，如何添加？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cdo -f nc -setgrid,r360x180 infile outfile</span><br><span class="line"></span><br><span class="line">gridtype  = lonlat</span><br><span class="line">xsize     = 360</span><br><span class="line">ysize     = 180</span><br><span class="line">xfirst    = 10.0</span><br><span class="line">xinc      = 0.125 </span><br><span class="line">yfirst    = 0.0</span><br><span class="line">yinc      = 0.125</span><br><span class="line"></span><br><span class="line">cdo -f nc -setgrid,grid_latlon_global.txt infile outfile_with_latlon.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何添加缺失的时间坐标变量？"><a href="#如何添加缺失的时间坐标变量？" class="headerlink" title="如何添加缺失的时间坐标变量？"></a><strong>如何添加缺失的时间坐标变量？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -r -f nc -settaxis,2000-01-01,12:00:00,1day infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何删除大小为-1-的维度？"><a href="#如何删除大小为-1-的维度？" class="headerlink" title="如何删除大小为 1 的维度？"></a><strong>如何删除大小为 1 的维度？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo --reduce_dim infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何设置或更改缺失值（或将-NaN-更改为缺失值）？"><a href="#如何设置或更改缺失值（或将-NaN-更改为缺失值）？" class="headerlink" title="如何设置或更改缺失值（或将 NaN 更改为缺失值）？"></a><strong>如何设置或更改缺失值（或将 NaN 更改为缺失值）？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Set missing value to a constant value, e.g. -9999</span><br><span class="line"></span><br><span class="line">cdo setmisstoc,-9999 infile outfile</span><br><span class="line"></span><br><span class="line">Set constant value e.g. -999.9 to missing value</span><br><span class="line"></span><br><span class="line">cdo setctomiss,-999.9 infile outfile</span><br><span class="line"></span><br><span class="line">Set NaN to missing value and change the missing value to -9999.9</span><br><span class="line"></span><br><span class="line">cdo setmissval,nan infile outfile</span><br><span class="line">cdo setmissval,-9999.9 -setmissval,nan ifile ofile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将所有缺失值设置为最接近的非缺失值？"><a href="#如何将所有缺失值设置为最接近的非缺失值？" class="headerlink" title="如何将所有缺失值设置为最接近的非缺失值？"></a><strong>如何将所有缺失值设置为最接近的非缺失值？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -setmisstonn infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何创建-1x1-度陆地-x2F-海洋掩模？"><a href="#如何创建-1x1-度陆地-x2F-海洋掩模？" class="headerlink" title="如何创建 1x1 度陆地&#x2F;海洋掩模？"></a><strong>如何创建 1x1 度陆地&#x2F;海洋掩模？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Create a file with masked land:</span><br><span class="line"></span><br><span class="line">cdo -f nc -setrtomiss,0,10000 -topo masked_land.nc</span><br><span class="line"></span><br><span class="line">Create a file with masked ocean:</span><br><span class="line"></span><br><span class="line">cdo -f nc -setrtomiss,-20000,0 -topo masked_ocean.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何使用掩模文件？"><a href="#如何使用掩模文件？" class="headerlink" title="如何使用掩模文件？"></a><strong>如何使用掩模文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">In the forum section &#x27;Operator News&#x27; there is an article &#x27;Masking - more general&#x27; which describes the</span><br><span class="line">creation and use of mask files in more detail. https://code.mpimet.mpg.de/boards/53/topics/10933</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将我的模型级别插入到压力级别？"><a href="#如何将我的模型级别插入到压力级别？" class="headerlink" title="如何将我的模型级别插入到压力级别？"></a><strong>如何将我的模型级别插入到压力级别？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo ml2pl,92500,85000,50000,20000 &lt;input file&gt; &lt;output file&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将简化高斯网格上的数据转换为常规网格？"><a href="#如何将简化高斯网格上的数据转换为常规网格？" class="headerlink" title="如何将简化高斯网格上的数据转换为常规网格？"></a><strong>如何将简化高斯网格上的数据转换为常规网格？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cdo -R copy infile outfile</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">cdo -setgridtype,regular infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将包含多年的文件拆分为单个年度文件？"><a href="#如何将包含多年的文件拆分为单个年度文件？" class="headerlink" title="如何将包含多年的文件拆分为单个年度文件？"></a><strong>如何将包含多年的文件拆分为单个年度文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">You can do it manually year by year, e.g. to select the years 1960-2100:</span><br><span class="line"></span><br><span class="line">cdo -selyear,1960 infile 1960_data.nc</span><br><span class="line">cdo -selyear,1961 infile 1961_data.nc</span><br><span class="line">...</span><br><span class="line">cdo -selyear,2100 infile 2100_data.nc</span><br><span class="line">or more comfortable - do it in one command line</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">for year in $(seq -w 1961 1 2100); do cdo -f nc -selyear,$year infile $&#123;year&#125;_data.nc ; done</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何从我的数据中提取像-JFMAM-这样的特殊季节？"><a href="#如何从我的数据中提取像-JFMAM-这样的特殊季节？" class="headerlink" title="如何从我的数据中提取像 JFMAM 这样的特殊季节？"></a><strong>如何从我的数据中提取像 JFMAM 这样的特殊季节？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">To chose user defined seasons use the select operator with the parameter season</span><br><span class="line">where SEASON is a comma separated list of seasons (substring of DJFMAMJJA- SOND or ANN):</span><br><span class="line"></span><br><span class="line">cdo select,season=SEASON infile outfile</span><br><span class="line"></span><br><span class="line">here you have to do</span><br><span class="line"></span><br><span class="line">cdo select,season=JFMAM infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？"><a href="#如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？" class="headerlink" title="如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？"></a><strong>如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo select,timestep=-1 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何从多个文件中提取相同级别的相同变量？"><a href="#如何从多个文件中提取相同级别的相同变量？" class="headerlink" title="如何从多个文件中提取相同级别的相同变量？"></a><strong>如何从多个文件中提取相同级别的相同变量？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo select,name=T,U,V,level=200,500,850 infile1 infile2 infile3 outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将-seasavg-的默认季节-DJF-更改为-JFM？"><a href="#如何将-seasavg-的默认季节-DJF-更改为-JFM？" class="headerlink" title="如何将 seasavg 的默认季节 DJF 更改为 JFM？"></a><strong>如何将 seasavg 的默认季节 DJF 更改为 JFM？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Change the season months for e.g. seasavg (default DJF, MAM, JJA, SON) to e.g. JFM, AMJ, JAS and OND</span><br><span class="line"></span><br><span class="line">export CDO_SEASON_START=JAN</span><br><span class="line"></span><br><span class="line">Check the used seasons with -v option</span><br><span class="line"></span><br><span class="line">cdo -v seasavg infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将-GrADS-二进制文件转换为-netCDF？"><a href="#如何将-GrADS-二进制文件转换为-netCDF？" class="headerlink" title="如何将 GrADS 二进制文件转换为 netCDF？"></a><strong>如何将 GrADS 二进制文件转换为 netCDF？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -f nc import_binary infile.ctl outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何创建变量的快速查看图？"><a href="#如何创建变量的快速查看图？" class="headerlink" title="如何创建变量的快速查看图？"></a><strong>如何创建变量的快速查看图？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo shaded,device=&quot;pdf&quot; -seltimestep,25 -selname,tas in.nc plotfile_t25</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何检索温度低于-0-的霜冻天数？"><a href="#如何检索温度低于-0-的霜冻天数？" class="headerlink" title="如何检索温度低于 0 的霜冻天数？"></a><strong>如何检索温度低于 0 的霜冻天数？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cdo -f nc -timsum -ltc,0 infile outfile</span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">cdo -f nc -timsum -expr,&#x27;t2min = ((t2min &lt; 0.0)) ? 1.0 : (t2min/0.0)&#x27; infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何计算前-31-个时间步长的两个文件的偏差？"><a href="#如何计算前-31-个时间步长的两个文件的偏差？" class="headerlink" title="如何计算前 31 个时间步长的两个文件的偏差？"></a><strong>如何计算前 31 个时间步长的两个文件的偏差？</strong></h3><p>general: <code>bias = sum(obs(file1)-sim(file2))/ntimes</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -divc,31 -timsum -sub -seltimestep,1/31 file1 file2 outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何删除-2-月-29-日？"><a href="#如何删除-2-月-29-日？" class="headerlink" title="如何删除 2 月 29 日？"></a><strong>如何删除 2 月 29 日？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo delete,month=2,day=29 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="当网格信息存储在单独的文件中时，如何重新映射-ICON-数据？"><a href="#当网格信息存储在单独的文件中时，如何重新映射-ICON-数据？" class="headerlink" title="当网格信息存储在单独的文件中时，如何重新映射 ICON 数据？"></a><strong>当网格信息存储在单独的文件中时，如何重新映射 ICON 数据？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Assume you want to remap the ICON data to a global 1x1 degree grid.</span><br><span class="line">First, compute the weights using the separated grid file</span><br><span class="line"></span><br><span class="line">cdo genbil,r360x180 ICON_grid_information.nc weights.nc</span><br><span class="line"></span><br><span class="line">then remap ICON data</span><br><span class="line"></span><br><span class="line">cdo remap,r360x180,weights.nc -setgrid,ICON_grid_information.nc infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何一步更改变量和全局文件属性？"><a href="#如何一步更改变量和全局文件属性？" class="headerlink" title="如何一步更改变量和全局文件属性？"></a><strong>如何一步更改变量和全局文件属性？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo setattribute,FILE=myattributes.txt infile outfile</span><br></pre></td></tr></table></figure>
+
+<p>E.g. myattributes.txt:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">**institute=&quot;My institute&quot; </span><br><span class="line">source=&quot;my_original_file.nc&quot; </span><br><span class="line">tas@coordinates=&quot;lat lon&quot; </span><br><span class="line">tas@units=&quot;degC&quot; </span><br><span class="line">pres@units=&quot;hPa&quot; **</span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么我不能更改纬度、经度和级别变量的属性和名称？"><a href="#为什么我不能更改纬度、经度和级别变量的属性和名称？" class="headerlink" title="为什么我不能更改纬度、经度和级别变量的属性和名称？"></a><strong>为什么我不能更改纬度、经度和级别变量的属性和名称？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncatted -a units,lat,o,c,&quot;degrees_north&quot; -a units,lon,o,c,&quot;degrees_east&quot; infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将我的级别值和单位从厘米转换为米？"><a href="#如何将我的级别值和单位从厘米转换为米？" class="headerlink" title="如何将我的级别值和单位从厘米转换为米？"></a><strong>如何将我的级别值和单位从厘米转换为米？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env bash</span><br><span class="line"></span><br><span class="line">infile=&quot;infile.nc&quot; </span><br><span class="line"></span><br><span class="line">levels=$(cdo -s showlevel $infile)</span><br><span class="line">echo &quot;levels = $levels&quot; </span><br><span class="line"></span><br><span class="line">i=0</span><br><span class="line">for value in $levels; do</span><br><span class="line">    v=$(echo &quot;scale=6; $value/100&quot; | bc -l)</span><br><span class="line">    echo &quot;$value cm = $v m &quot; </span><br><span class="line">    if [[ $i -gt 0 ]]; then</span><br><span class="line">       levelsm=$(echo &quot;$levelsm, $v&quot;)</span><br><span class="line">    else</span><br><span class="line">       levelsm=$v</span><br><span class="line">    fi</span><br><span class="line">    i=`expr $i + 1`</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">cat &gt; zaxis_meter.txt &lt;&lt; EOF</span><br><span class="line">zaxistype = depth_below_land</span><br><span class="line">size      = $i</span><br><span class="line">name      = olevel</span><br><span class="line">units     = &quot;m&quot; </span><br><span class="line">levels    = $levelsm</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">cdo -f nc setzaxis,zaxis_meter.txt $infile outfile.nc</span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么在将-GRIB2-转换为-netCDF-时出现错误，但-CDO-将-grb2-列为受支持？"><a href="#为什么在将-GRIB2-转换为-netCDF-时出现错误，但-CDO-将-grb2-列为受支持？" class="headerlink" title="为什么在将 GRIB2 转换为 netCDF 时出现错误，但 CDO 将 grb2 列为受支持？"></a><strong>为什么在将 GRIB2 转换为 netCDF 时出现错误，但 CDO 将 grb2 列为受支持？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grib_set -s editionNumber=1 infile.grb new_infile.grb</span><br></pre></td></tr></table></figure>
+
+<h3 id="为什么从-netCDF4-文件中提取一个时间步长时会得到更大的文件？"><a href="#为什么从-netCDF4-文件中提取一个时间步长时会得到更大的文件？" class="headerlink" title="为什么从 netCDF4 文件中提取一个时间步长时会得到更大的文件？"></a><strong>为什么从 netCDF4 文件中提取一个时间步长时会得到更大的文件？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -z zip -seltimestep,7 infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何将-6-小时数据插入到-1-小时数据中？"><a href="#如何将-6-小时数据插入到-1-小时数据中？" class="headerlink" title="如何将 6 小时数据插入到 1 小时数据中？"></a><strong>如何将 6 小时数据插入到 1 小时数据中？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cdo inttime,6 infile outfile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">or</span><br><span class="line"></span><br><span class="line">cdo inttime,2011-01-01,00:00,1hour infile outfile</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何加快我的脚本速度？"><a href="#如何加快我的脚本速度？" class="headerlink" title="如何加快我的脚本速度？"></a><strong>如何加快我的脚本速度？</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://code.mpimet.mpg.de/boards/53/topics/6672</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://code.mpimet.mpg.de/projects/cdo/wiki/FAQ">https://code.mpimet.mpg.de/projects/cdo/wiki/FAQ</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Author%20Guide/" rel="prev" title="Author Guide">
+      <i class="fa fa-chevron-left"></i> Author Guide
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/AI/" rel="next" title="AI">
+      AI <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">1.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%BE%97%E5%B8%AE%E5%8A%A9%EF%BC%9F"><span class="nav-number">2.</span> <span class="nav-text">如何获得帮助？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E5%87%BA%E7%89%88%E7%89%A9%E4%B8%AD%E5%BC%95%E7%94%A8-CDO-%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">如何在出版物中引用 CDO 用户指南？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">如何查看文件中的内容？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E6%97%B6%E9%97%B4%E6%AD%A5%E9%95%BF%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">如何查看文件中的时间步长？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%AD%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E6%97%B6%E9%97%B4%E6%AD%A5%E9%95%BF%EF%BC%9F"><span class="nav-number">6.</span> <span class="nav-text">我的文件中有多少个时间步长？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%8F%98%E9%87%8F%E5%B9%B6%E5%B0%86%E5%85%B6%E4%BF%9D%E5%AD%98%E5%88%B0%E6%96%B0%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">如何选择变量并将其保存到新文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%8F%90%E5%8F%96%E6%97%B6%E9%97%B4%E6%AD%A5%E9%95%BF%EF%BC%9F"><span class="nav-number">8.</span> <span class="nav-text">如何提取时间步长？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E7%BA%AC%E5%BA%A6%E7%9A%84%E9%A1%BA%E5%BA%8F%E4%BB%8E-N-S-%E5%8F%8D%E8%BD%AC%E4%B8%BA-S-N%EF%BC%9F%EF%BC%88%E6%B3%A8%E6%84%8F%EF%BC%9A%E4%B8%8D%E6%98%AF%E5%8F%8D%E8%BF%87%E6%9D%A5%EF%BC%89"><span class="nav-number">9.</span> <span class="nav-text">如何将纬度的顺序从 N-S 反转为 S-N？（注意：不是反过来）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%B8%A9%E5%BA%A6%E5%8D%95%E4%BD%8D%E4%BB%8E-K-%E8%BD%AC%E6%8D%A2%E4%B8%BA%E6%91%84%E6%B0%8F%E5%BA%A6%EF%BC%9F"><span class="nav-number">10.</span> <span class="nav-text">如何将温度单位从 K 转换为摄氏度？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E5%B8%B8%E6%95%B0%E5%80%BC%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%BC%BA%E5%A4%B1%E5%80%BC%EF%BC%9F"><span class="nav-number">11.</span> <span class="nav-text">如何将常数值设置为缺失值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E5%80%BC%E8%8C%83%E5%9B%B4%E8%AE%BE%E7%BD%AE%E4%B8%BA%E7%BC%BA%E5%A4%B1%E5%80%BC%EF%BC%9F"><span class="nav-number">12.</span> <span class="nav-text">如何将值范围设置为缺失值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%BA%AC%E5%BA%A6-x2F-%E7%BB%8F%E5%BA%A6%E5%80%BC%EF%BC%88%E5%BA%A6%EF%BC%89%E6%8F%90%E5%8F%96%E5%AD%90%E5%8C%BA%E5%9F%9F%EF%BC%9F"><span class="nav-number">13.</span> <span class="nav-text">如何使用纬度&#x2F;经度值（度）提取子区域？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F%E7%9A%84%E5%B1%9E%E6%80%A7%EF%BC%9F"><span class="nav-number">14.</span> <span class="nav-text">如何更改变量的属性？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%BD%91%E6%A0%BC%E5%8D%95%E5%85%83%E9%9D%A2%E7%A7%AF%EF%BC%88%E4%BB%A5%E5%B9%B3%E6%96%B9%E7%B1%B3%E4%B8%BA%E5%8D%95%E4%BD%8D%EF%BC%89%EF%BC%9F"><span class="nav-number">15.</span> <span class="nav-text">如何计算网格单元面积（以平方米为单位）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5-x2F-%E9%87%8D%E6%96%B0%E6%98%A0%E5%B0%84%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E7%BD%91%E6%A0%BC%EF%BC%9F"><span class="nav-number">16.</span> <span class="nav-text">如何将数据插入&#x2F;重新映射到另一个网格？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86-ASCII-%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA-netCDF%EF%BC%9F"><span class="nav-number">17.</span> <span class="nav-text">如何将 ASCII 文件转换为 netCDF？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BB%8E-netCDF-x2F-GRIB-%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE%E5%B9%B6%E5%B0%86%E5%85%B6%E5%86%99%E5%85%A5-ASCII-%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">18.</span> <span class="nav-text">如何从 netCDF&#x2F;GRIB 文件中提取数据并将其写入 ASCII 文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%88%91%E7%9A%84%E6%95%B0%E6%8D%AE%E9%87%8D%E6%96%B0%E6%8F%92%E5%80%BC%E5%88%B0%E5%85%A8%E5%B1%80-1x1-%E5%BA%A6%E7%BD%91%E6%A0%BC%EF%BC%9F"><span class="nav-number">19.</span> <span class="nav-text">如何将我的数据重新插值到全局 1x1 度网格？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E6%88%91%E5%BF%85%E9%A1%BB%E5%B0%86%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E9%87%8D%E6%96%B0%E6%98%A0%E5%B0%84%E5%88%B0%E9%AB%98%E6%96%AF-N32-%E7%BD%91%E6%A0%BC%E6%97%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%9D%83%E9%87%8D%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">20.</span> <span class="nav-text">当我必须将多个文件重新映射到高斯 N32 网格时，如何创建权重文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%88%91%E7%9A%84%E6%95%B0%E6%8D%AE%E9%87%8D%E6%96%B0%E6%98%A0%E5%B0%84%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E7%9A%84%E4%B8%8D%E5%90%8C%E7%BD%91%E6%A0%BC%EF%BC%9F"><span class="nav-number">21.</span> <span class="nav-text">如何将我的数据重新映射到另一个数据文件的不同网格？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E6%95%B0%E6%8D%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E7%BC%BA%E5%B0%91%E5%9D%90%E6%A0%87%E5%8F%98%E9%87%8F%E7%BA%AC%E5%BA%A6%E5%92%8C%E7%BB%8F%E5%BA%A6%EF%BC%8C%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%EF%BC%9F"><span class="nav-number">22.</span> <span class="nav-text">如果数据文件中缺少坐标变量纬度和经度，如何添加？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E7%BC%BA%E5%A4%B1%E7%9A%84%E6%97%B6%E9%97%B4%E5%9D%90%E6%A0%87%E5%8F%98%E9%87%8F%EF%BC%9F"><span class="nav-number">23.</span> <span class="nav-text">如何添加缺失的时间坐标变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4%E5%A4%A7%E5%B0%8F%E4%B8%BA-1-%E7%9A%84%E7%BB%B4%E5%BA%A6%EF%BC%9F"><span class="nav-number">24.</span> <span class="nav-text">如何删除大小为 1 的维度？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%88%96%E6%9B%B4%E6%94%B9%E7%BC%BA%E5%A4%B1%E5%80%BC%EF%BC%88%E6%88%96%E5%B0%86-NaN-%E6%9B%B4%E6%94%B9%E4%B8%BA%E7%BC%BA%E5%A4%B1%E5%80%BC%EF%BC%89%EF%BC%9F"><span class="nav-number">25.</span> <span class="nav-text">如何设置或更改缺失值（或将 NaN 更改为缺失值）？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%89%80%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E8%AE%BE%E7%BD%AE%E4%B8%BA%E6%9C%80%E6%8E%A5%E8%BF%91%E7%9A%84%E9%9D%9E%E7%BC%BA%E5%A4%B1%E5%80%BC%EF%BC%9F"><span class="nav-number">26.</span> <span class="nav-text">如何将所有缺失值设置为最接近的非缺失值？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA-1x1-%E5%BA%A6%E9%99%86%E5%9C%B0-x2F-%E6%B5%B7%E6%B4%8B%E6%8E%A9%E6%A8%A1%EF%BC%9F"><span class="nav-number">27.</span> <span class="nav-text">如何创建 1x1 度陆地&#x2F;海洋掩模？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8E%A9%E6%A8%A1%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">28.</span> <span class="nav-text">如何使用掩模文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%88%91%E7%9A%84%E6%A8%A1%E5%9E%8B%E7%BA%A7%E5%88%AB%E6%8F%92%E5%85%A5%E5%88%B0%E5%8E%8B%E5%8A%9B%E7%BA%A7%E5%88%AB%EF%BC%9F"><span class="nav-number">29.</span> <span class="nav-text">如何将我的模型级别插入到压力级别？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E7%AE%80%E5%8C%96%E9%AB%98%E6%96%AF%E7%BD%91%E6%A0%BC%E4%B8%8A%E7%9A%84%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2%E4%B8%BA%E5%B8%B8%E8%A7%84%E7%BD%91%E6%A0%BC%EF%BC%9F"><span class="nav-number">30.</span> <span class="nav-text">如何将简化高斯网格上的数据转换为常规网格？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E5%8C%85%E5%90%AB%E5%A4%9A%E5%B9%B4%E7%9A%84%E6%96%87%E4%BB%B6%E6%8B%86%E5%88%86%E4%B8%BA%E5%8D%95%E4%B8%AA%E5%B9%B4%E5%BA%A6%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">31.</span> <span class="nav-text">如何将包含多年的文件拆分为单个年度文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BB%8E%E6%88%91%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B8%AD%E6%8F%90%E5%8F%96%E5%83%8F-JFMAM-%E8%BF%99%E6%A0%B7%E7%9A%84%E7%89%B9%E6%AE%8A%E5%AD%A3%E8%8A%82%EF%BC%9F"><span class="nav-number">32.</span> <span class="nav-text">如何从我的数据中提取像 JFMAM 这样的特殊季节？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%9C%A8%E4%B8%8D%E7%9F%A5%E9%81%93%E6%88%91%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%AD%E6%9C%89%E5%A4%9A%E5%B0%91%E4%B8%AA%E6%97%B6%E9%97%B4%E6%AD%A5%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E6%8F%90%E5%8F%96%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA%E6%97%B6%E9%97%B4%E6%AD%A5%EF%BC%9F"><span class="nav-number">33.</span> <span class="nav-text">如何在不知道我的文件中有多少个时间步的情况下提取最后一个时间步？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BB%8E%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E7%9B%B8%E5%90%8C%E7%BA%A7%E5%88%AB%E7%9A%84%E7%9B%B8%E5%90%8C%E5%8F%98%E9%87%8F%EF%BC%9F"><span class="nav-number">34.</span> <span class="nav-text">如何从多个文件中提取相同级别的相同变量？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86-seasavg-%E7%9A%84%E9%BB%98%E8%AE%A4%E5%AD%A3%E8%8A%82-DJF-%E6%9B%B4%E6%94%B9%E4%B8%BA-JFM%EF%BC%9F"><span class="nav-number">35.</span> <span class="nav-text">如何将 seasavg 的默认季节 DJF 更改为 JFM？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86-GrADS-%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BA-netCDF%EF%BC%9F"><span class="nav-number">36.</span> <span class="nav-text">如何将 GrADS 二进制文件转换为 netCDF？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E5%8F%98%E9%87%8F%E7%9A%84%E5%BF%AB%E9%80%9F%E6%9F%A5%E7%9C%8B%E5%9B%BE%EF%BC%9F"><span class="nav-number">37.</span> <span class="nav-text">如何创建变量的快速查看图？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E6%A3%80%E7%B4%A2%E6%B8%A9%E5%BA%A6%E4%BD%8E%E4%BA%8E-0-%E7%9A%84%E9%9C%9C%E5%86%BB%E5%A4%A9%E6%95%B0%EF%BC%9F"><span class="nav-number">38.</span> <span class="nav-text">如何检索温度低于 0 的霜冻天数？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E5%89%8D-31-%E4%B8%AA%E6%97%B6%E9%97%B4%E6%AD%A5%E9%95%BF%E7%9A%84%E4%B8%A4%E4%B8%AA%E6%96%87%E4%BB%B6%E7%9A%84%E5%81%8F%E5%B7%AE%EF%BC%9F"><span class="nav-number">39.</span> <span class="nav-text">如何计算前 31 个时间步长的两个文件的偏差？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%88%A0%E9%99%A4-2-%E6%9C%88-29-%E6%97%A5%EF%BC%9F"><span class="nav-number">40.</span> <span class="nav-text">如何删除 2 月 29 日？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BD%93%E7%BD%91%E6%A0%BC%E4%BF%A1%E6%81%AF%E5%AD%98%E5%82%A8%E5%9C%A8%E5%8D%95%E7%8B%AC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%AD%E6%97%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E9%87%8D%E6%96%B0%E6%98%A0%E5%B0%84-ICON-%E6%95%B0%E6%8D%AE%EF%BC%9F"><span class="nav-number">41.</span> <span class="nav-text">当网格信息存储在单独的文件中时，如何重新映射 ICON 数据？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%B8%80%E6%AD%A5%E6%9B%B4%E6%94%B9%E5%8F%98%E9%87%8F%E5%92%8C%E5%85%A8%E5%B1%80%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7%EF%BC%9F"><span class="nav-number">42.</span> <span class="nav-text">如何一步更改变量和全局文件属性？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%B8%8D%E8%83%BD%E6%9B%B4%E6%94%B9%E7%BA%AC%E5%BA%A6%E3%80%81%E7%BB%8F%E5%BA%A6%E5%92%8C%E7%BA%A7%E5%88%AB%E5%8F%98%E9%87%8F%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E5%90%8D%E7%A7%B0%EF%BC%9F"><span class="nav-number">43.</span> <span class="nav-text">为什么我不能更改纬度、经度和级别变量的属性和名称？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86%E6%88%91%E7%9A%84%E7%BA%A7%E5%88%AB%E5%80%BC%E5%92%8C%E5%8D%95%E4%BD%8D%E4%BB%8E%E5%8E%98%E7%B1%B3%E8%BD%AC%E6%8D%A2%E4%B8%BA%E7%B1%B3%EF%BC%9F"><span class="nav-number">44.</span> <span class="nav-text">如何将我的级别值和单位从厘米转换为米？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8%E5%B0%86-GRIB2-%E8%BD%AC%E6%8D%A2%E4%B8%BA-netCDF-%E6%97%B6%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%EF%BC%8C%E4%BD%86-CDO-%E5%B0%86-grb2-%E5%88%97%E4%B8%BA%E5%8F%97%E6%94%AF%E6%8C%81%EF%BC%9F"><span class="nav-number">45.</span> <span class="nav-text">为什么在将 GRIB2 转换为 netCDF 时出现错误，但 CDO 将 grb2 列为受支持？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BB%8E-netCDF4-%E6%96%87%E4%BB%B6%E4%B8%AD%E6%8F%90%E5%8F%96%E4%B8%80%E4%B8%AA%E6%97%B6%E9%97%B4%E6%AD%A5%E9%95%BF%E6%97%B6%E4%BC%9A%E5%BE%97%E5%88%B0%E6%9B%B4%E5%A4%A7%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%9F"><span class="nav-number">46.</span> <span class="nav-text">为什么从 netCDF4 文件中提取一个时间步长时会得到更大的文件？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%B0%86-6-%E5%B0%8F%E6%97%B6%E6%95%B0%E6%8D%AE%E6%8F%92%E5%85%A5%E5%88%B0-1-%E5%B0%8F%E6%97%B6%E6%95%B0%E6%8D%AE%E4%B8%AD%EF%BC%9F"><span class="nav-number">47.</span> <span class="nav-text">如何将 6 小时数据插入到 1 小时数据中？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E5%8A%A0%E5%BF%AB%E6%88%91%E7%9A%84%E8%84%9A%E6%9C%AC%E9%80%9F%E5%BA%A6%EF%BC%9F"><span class="nav-number">48.</span> <span class="nav-text">如何加快我的脚本速度？</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">203</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
