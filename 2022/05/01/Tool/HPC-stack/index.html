@@ -28,7 +28,7 @@
 <meta property="og:description" content="HPC-stack 安装手册参考： https:&#x2F;&#x2F;github.com&#x2F;comgsi&#x2F;documents https:&#x2F;&#x2F;hpc-stack.readthedocs.io&#x2F;en&#x2F;latest&#x2F; https:&#x2F;&#x2F;hpc-stack.readthedocs.io&#x2F;en&#x2F;latest&#x2F;hpc-install.html pre-requirements: Lmod1234sudo apt-get ins">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2024-03-22T08:52:52.243Z">
+<meta property="article:modified_time" content="2024-11-18T02:01:01.870Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2024-03-22 16:52:52" itemprop="dateModified" datetime="2024-03-22T16:52:52+08:00">2024-03-22</time>
+                <time title="Modified: 2024-11-18 10:01:01" itemprop="dateModified" datetime="2024-11-18T10:01:01+08:00">2024-11-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -291,10 +291,17 @@
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build_stack.sh -p /home/ruyanc/WORK/hpc-stack -c config/config_custom.sh -y stack/stack_custom.yaml -m</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>只编译其中一个库</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build_stack.sh -p /home/ruyanc/WORK/hpc-stack -c config/config_custom.sh -y stack/stack_custom.yaml -m -l netcdf</span><br></pre></td></tr></table></figure>
 
 
-<h4 id="目录结构说明"><a href="#目录结构说明" class="headerlink" title="目录结构说明"></a>目录结构说明</h4><p>hpc-stack&#x2F;libs&#x2F;下存放了</p>
-<h4 id="pio-安装出错"><a href="#pio-安装出错" class="headerlink" title="pio 安装出错"></a>pio 安装出错</h4><p><strong>解决方式：</strong> 修改<code>/work/home/acyii6v8kt/hpc-stack/pkg/pio-2.5.10/scripts/genf90.pl</code>中第一行为<code>my @types = qw(text real double int short);</code></p>
+
+
+
+<h4 id="DEBUG-pio-安装出错"><a href="#DEBUG-pio-安装出错" class="headerlink" title="DEBUG: pio 安装出错"></a>DEBUG: pio 安装出错</h4><p><strong>解决方式：</strong> 修改<code>/work/home/acyii6v8kt/hpc-stack/pkg/pio-2.5.10/scripts/genf90.pl</code>中第一行为<code>my @types = qw(text real double int short);</code></p>
+<h4 id="DUBUG：网络不好，无法下载安装文件"><a href="#DUBUG：网络不好，无法下载安装文件" class="headerlink" title="DUBUG：网络不好，无法下载安装文件"></a>DUBUG：网络不好，无法下载安装文件</h4><p><strong>解决方式：</strong> 外部下载后上传到<code>hpc-stack/pkg</code>下</p>
 <hr>
 <h3 id="Another-Choice-Inside-a-container-Singularity"><a href="#Another-Choice-Inside-a-container-Singularity" class="headerlink" title="Another Choice:  Inside a container - Singularity"></a>Another Choice:  Inside a container - Singularity</h3><p><a target="_blank" rel="noopener" href="https://docs.sylabs.io/guides/3.2/user-guide/installation.html">https://docs.sylabs.io/guides/3.2/user-guide/installation.html</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo apt-get update &amp;&amp; sudo apt-get install -y \</span></span><br><span class="line"><span class="language-bash">    build-essential \</span></span><br><span class="line"><span class="language-bash">    libssl-dev \</span></span><br><span class="line"><span class="language-bash">    uuid-dev \</span></span><br><span class="line"><span class="language-bash">    libgpgme11-dev \</span></span><br><span class="line"><span class="language-bash">    squashfs-tools \</span></span><br><span class="line"><span class="language-bash">    libseccomp-dev \</span></span><br><span class="line"><span class="language-bash">    wget \</span></span><br><span class="line"><span class="language-bash">    pkg-config \</span></span><br><span class="line"><span class="language-bash">    git</span></span><br></pre></td></tr></table></figure>
@@ -385,12 +392,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/IDL/" rel="prev" title="IDL">
-      <i class="fa fa-chevron-left"></i> IDL
+    <a href="/2022/05/01/Tool/Hexo/" rel="prev" title="Hexo">
+      <i class="fa fa-chevron-left"></i> Hexo
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Large%20Model%20Env/" rel="next" title="Large Model Env">
-      Large Model Env <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/CDO%20User%20Guide.md/" rel="next" title="CDO User Guide">
+      CDO User Guide <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -450,7 +457,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HPC-stack-%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">HPC-stack 安装手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pre-requirements-Lmod"><span class="nav-number">1.1.</span> <span class="nav-text">pre-requirements: Lmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Out-of-container"><span class="nav-number">1.2.</span> <span class="nav-text">Out of container</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.1.</span> <span class="nav-text">目录结构说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pio-%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99"><span class="nav-number">1.2.2.</span> <span class="nav-text">pio 安装出错</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Another-Choice-Inside-a-container-Singularity"><span class="nav-number">1.3.</span> <span class="nav-text">Another Choice:  Inside a container - Singularity</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Build-and-Run-the-Container"><span class="nav-number">1.3.1.</span> <span class="nav-text">Build and Run the Container</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Build-the-HPC-Stack"><span class="nav-number">1.3.2.</span> <span class="nav-text">Build the HPC-Stack</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HPC-stack-%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">HPC-stack 安装手册</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#pre-requirements-Lmod"><span class="nav-number">1.1.</span> <span class="nav-text">pre-requirements: Lmod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Out-of-container"><span class="nav-number">1.2.</span> <span class="nav-text">Out of container</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DEBUG-pio-%E5%AE%89%E8%A3%85%E5%87%BA%E9%94%99"><span class="nav-number">1.2.1.</span> <span class="nav-text">DEBUG: pio 安装出错</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DUBUG%EF%BC%9A%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%A5%BD%EF%BC%8C%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">DUBUG：网络不好，无法下载安装文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Another-Choice-Inside-a-container-Singularity"><span class="nav-number">1.3.</span> <span class="nav-text">Another Choice:  Inside a container - Singularity</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Build-and-Run-the-Container"><span class="nav-number">1.3.1.</span> <span class="nav-text">Build and Run the Container</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Build-the-HPC-Stack"><span class="nav-number">1.3.2.</span> <span class="nav-text">Build the HPC-Stack</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -465,7 +472,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">206</span>
+          <span class="site-state-item-count">210</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

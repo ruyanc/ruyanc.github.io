@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Palm GPU 移植Step 1：安装 NVIDIA OpenACC参考：OpenACC笔记  查看Linux系统版本  12$ cat &#x2F;etc&#x2F;issue# 返回 Ubuntu 20.04.6 LTS \n \l  尝试一：安装SDK Manager（失败） 官网：https:&#x2F;&#x2F;developer.nvidia.com&#x2F;sdk-manager  1$ sudo apt install .&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PALM-GPU">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/PALM-GPU/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="Palm GPU 移植Step 1：安装 NVIDIA OpenACC参考：OpenACC笔记  查看Linux系统版本  12$ cat &#x2F;etc&#x2F;issue# 返回 Ubuntu 20.04.6 LTS \n \l  尝试一：安装SDK Manager（失败） 官网：https:&#x2F;&#x2F;developer.nvidia.com&#x2F;sdk-manager  1$ sudo apt install .&#x2F;">
+<meta property="og:locale">
+<meta property="og:image" content="https://p.ipic.vip/t8rp10.png">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-19T02:39:15.900Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p.ipic.vip/t8rp10.png">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/PALM-GPU/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>PALM-GPU | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/PALM-GPU/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PALM-GPU
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-19 10:39:15" itemprop="dateModified" datetime="2024-11-19T10:39:15+08:00">2024-11-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="Palm-GPU-移植"><a href="#Palm-GPU-移植" class="headerlink" title="Palm GPU 移植"></a>Palm GPU 移植</h2><h3 id="Step-1：安装-NVIDIA-OpenACC"><a href="#Step-1：安装-NVIDIA-OpenACC" class="headerlink" title="Step 1：安装 NVIDIA OpenACC"></a>Step 1：安装 NVIDIA OpenACC</h3><p>参考：<a target="_blank" rel="noopener" href="https://wuli.wiki/online/OpACCn.html#:~:text=source%20~%2F.bashrc%20%E4%BB%A5%E5%90%8E%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%AF%95%E8%AF%95%20nvc%20--version%EF%BC%8C%20nvcc%20--version%20%E4%BA%86%E3%80%82,%E7%BC%96%E8%AF%91%E5%99%A8%E6%94%AF%E6%8C%81%20OpenACC%20%E5%92%8C%20OpenMP%EF%BC%8C%E8%80%8C%20nvcc%20%E5%88%99%E7%94%A8%E4%BA%8E%20CUDA%20%E7%BC%96%E7%A8%8B%E3%80%82">OpenACC笔记</a></p>
+<ul>
+<li>查看Linux系统版本</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cat</span> /etc/issue</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">返回 Ubuntu 20.04.6 LTS \n \l</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="尝试一：安装SDK-Manager（失败）"><a href="#尝试一：安装SDK-Manager（失败）" class="headerlink" title="尝试一：安装SDK Manager（失败）"></a>尝试一：安装SDK Manager（失败）</h4><ul>
+<li>官网：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/sdk-manager">https://developer.nvidia.com/sdk-manager</a></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sudo apt install ./sdkmanager_[version]-[build<span class="comment">#]_amd64.deb</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">sdkmanager --cli</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SDK Manager will start once login is completed. # 此步等待时间较长</span><br><span class="line">⠦ Waiting for user information from NVIDIA authentication server...</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>报错：<code>Error: User is not authorized on NVIDIA developer server</code></p>
+</li>
+<li><p>尝试：加入NIVIDA开发者计划 <a target="_blank" rel="noopener" href="https://developer.nvidia.com/nvidia-developer-program">https://developer.nvidia.com/nvidia-developer-program</a> - 仍然失败</p>
+</li>
+</ul>
+<p><img src="https://p.ipic.vip/t8rp10.png" alt="Screenshot 2024-11-12 at 17.10.32"></p>
+<h4 id="尝试二：只安装-NVIDIA-HPC-SDK-（成功）"><a href="#尝试二：只安装-NVIDIA-HPC-SDK-（成功）" class="headerlink" title="尝试二：只安装 NVIDIA HPC SDK （成功）"></a>尝试二：只安装 NVIDIA HPC SDK （成功）</h4><ul>
+<li>官网：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/hpc-sdk-downloads">https://developer.nvidia.com/hpc-sdk-downloads</a></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">wget https://developer.download.nvidia.com/hpc-sdk/24.9/nvhpc_2024_249_Linux_x86_64_cuda_12.6.tar.gz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">tar xpzf nvhpc_2024_249_Linux_x86_64_cuda_12.6.tar.gz</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nvhpc_2024_249_Linux_x86_64_cuda_12.6/install</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>安装测试</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nvc --version</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nvc 24.9-0 64-bit target on x86-64 Linux -tp sapphirerapids </span><br><span class="line">NVIDIA Compilers and Tools</span><br><span class="line">Copyright (c) 2024, NVIDIA CORPORATION &amp; AFFILIATES.  All rights reserved.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">nvcc --version</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">nvcc: NVIDIA (R) Cuda compiler driver</span><br><span class="line">Copyright (c) 2005-2024 NVIDIA Corporation</span><br><span class="line">Built on Fri_Jun_14_16:34:21_PDT_2024</span><br><span class="line">Cuda compilation tools, release 12.6, V12.6.20</span><br><span class="line">Build cuda_12.6.r12.6/compiler.34431801_0</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Step-2：使用nvhpc重新编译netcdf库"><a href="#Step-2：使用nvhpc重新编译netcdf库" class="headerlink" title="Step 2：使用nvhpc重新编译netcdf库"></a>Step 2：使用nvhpc重新编译netcdf库</h3><ul>
+<li><p><code>/home/ruyanc/libs</code>下创建<code>libraries.sh </code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">  </span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">##-------此处路径需要根据自己修改--------</span></span></span><br><span class="line">export DIR=/home/ruyanc/libs</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">##-------------------------------------</span></span></span><br><span class="line">export CC=nvc</span><br><span class="line">export FC=nvfortran</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## zlib</span></span></span><br><span class="line">export LD_LIBRARY_PATH=$DIR/hdf5/lib:$LD_LIBRARY_PATH</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## hdf5</span></span></span><br><span class="line">export PATH=$DIR/hdf5/bin:$PATH</span><br><span class="line">export LD_LIBRARY_PATH=$DIR/hdf5/lib:$LD_LIBRARY_PATH</span><br><span class="line">export HDF5_HOME=$DIR/hdf5</span><br><span class="line">export HDF5_INCDIR=$HDF5_HOME/include</span><br><span class="line">export HDF5_LIBDIR=$HDF5_HOME/lib</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="comment">## netcdf</span></span></span><br><span class="line">export PATH=$DIR/netcdf/bin:$PATH</span><br><span class="line">export LD_LIBRARY_PATH=$DIR/netcdf/lib:$LD_LIBRARY_PATH</span><br><span class="line">export NETCDF=$DIR/netcdf</span><br><span class="line">export NETCDF_INC=$NETCDF/include</span><br><span class="line">export NETCDF_LIB=$NETCDF/lib</span><br><span class="line">export NETCDF_INCDIR=$NETCDF/include</span><br><span class="line">export NETCDF_LIBDIR=$NETCDF/lib</span><br><span class="line">export NETCDFPATH=$NETCDF</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>下载安装包并安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">tar xzvf zlib-1.2.7.tar.gz</span><br><span class="line">cd zlib-1.2.7</span><br><span class="line">./configure --prefix=$DIR/hdf5</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">source ../libraries.sh</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tar xzvf hdf5-1.10.5.tar.gz</span><br><span class="line">cd hdf5-1.10.5/</span><br><span class="line">./configure --prefix=$DIR/hdf5 --with-zlib=$DIR/hdf5</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">source ../libraries.sh</span><br><span class="line"></span><br><span class="line">unzip netcdf-c-4.8.1.zip</span><br><span class="line">cd netcdf-c-4.8.1/</span><br><span class="line">CPPFLAGS=&quot;-I$DIR/hdf5/include&quot; LDFLAGS=&quot;-L$DIR/hdf5/lib&quot; ./configure --prefix=$DIR/netcdf --enable-netcdf-4 --enable-netcdf4 --enable-shared --disable-dap</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">source ../libraries.sh</span><br><span class="line"></span><br><span class="line">netcdf-fortran-4.5.4</span><br><span class="line">unzip netcdf-fortran-4.5.4.zip</span><br><span class="line">cd netcdf-fortran-4.5.4/</span><br><span class="line">CPPFLAGS=&quot;-I$DIR/netcdf/include&quot; LDFLAGS=&quot;-L$DIR/netcdf/lib&quot; ./configure --prefix=$DIR/netcdf  --FC=nvfortran</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">source ../libraries.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>检查安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nc-config --fc ## nvfortran</span><br><span class="line">nc-config --cc ## nvc</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Step-3：修改编译选项"><a href="#Step-3：修改编译选项" class="headerlink" title="Step 3：修改编译选项"></a>Step 3：修改编译选项</h3><p><strong>palm依赖rrtmg，而rrtmg以共享库方式编译链接，nvfortran在编译openacc程序时，似乎不支持共享库用同样的编译选项，因此只能分开编译rrtmg和palm</strong></p>
+<ul>
+<li><p>修改1：复制<code>packages/palm/model/share/cmake/CMakeLists.txt</code> 并重命名为<code>CMakeLists.1.txt</code>和<code>CMakeLists.2.txt</code></p>
+<p><code>CMakeLists.1.txt</code> 对应修改如下</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># compiler flag management</span></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Cray&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-em -K trap=fp -O3 -hnoomp -hnoacc -hfp3 -hdynamic&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125; -dynamic&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-eZ&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Intel&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-O3 -fp-model source -fno-alias -fpe0 -ftz -no-prec-div -no-prec-sqrt -ip -nbs -diag-disable 8290,8291&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125;&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)</span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __intel_compiler)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;GNU&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-Ofast -ffree-line-length-none&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125;&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)</span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __gfortran)</span><br><span class="line"><span class="keyword">else</span>() <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __fastv8)  <span class="comment">### added </span></span><br><span class="line"><span class="keyword">endif</span>()</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Cray&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-O3&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Intel&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-O3&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;GNU&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-Ofast -Wno-format -Wno-unused-result&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>()   <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-fast&quot;</span>)  <span class="comment">### added </span></span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure>
+
+<p><code>CMakeLists.2.txt</code> 对应修改如下</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># compiler flag management</span></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Cray&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-em -K trap=fp -O3 -hnoomp -hnoacc -hfp3 -hdynamic&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125; -dynamic&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-eZ&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Intel&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-O3 -fp-model source -fno-alias -fpe0 -ftz -no-prec-div -no-prec-sqrt -ip -nbs -diag-disable 8290,8291&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125;&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)</span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __intel_compiler)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_Fortran_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;GNU&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-Ofast -ffree-line-length-none&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;$&#123;PALM_COMPILER_OPTIONS&#125;&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)</span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __gfortran)</span><br><span class="line"><span class="keyword">else</span>()  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_COMPILER_OPTIONS <span class="string">&quot;-w -fast -acc -gpu=cc89 -Minfo=accel&quot;</span>)  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_LINKER_OPTIONS <span class="string">&quot;-acc -gpu=cc89&quot;</span>)  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>)  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">list</span>(APPEND PALM_CPP_OPTIONS __fastv8) <span class="comment">### added </span></span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Cray&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-O3&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;Intel&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-O3&quot;</span>)</span><br><span class="line"><span class="keyword">elseif</span>(<span class="variable">$&#123;CMAKE_C_COMPILER_ID&#125;</span> <span class="keyword">STREQUAL</span> <span class="string">&quot;GNU&quot;</span>)</span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-Ofast -Wno-format -Wno-unused-result&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>()  <span class="comment">### added </span></span><br><span class="line">   <span class="keyword">set</span>(PALM_C_COMPILER_OPTIONS <span class="string">&quot;-fast&quot;</span>)  <span class="comment">### added </span></span><br><span class="line"><span class="keyword">endif</span>()</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改2：<code>packages/palm/model/install</code>对应修改如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">install_function() &#123;</span><br><span class="line">   printf &quot;### %s\n&quot; &quot;Installing $&#123;program_name&#125; ...&quot;</span><br><span class="line">   if [ &quot;$&#123;do_clean&#125;&quot; == &quot;true&quot; ]; then</span><br><span class="line">      rm -r $&#123;install_prefix&#125;/MAKE_DEPOSITORY_default</span><br><span class="line">   fi</span><br><span class="line">   mkdir -p $&#123;install_prefix&#125;</span><br><span class="line">   cd $&#123;install_prefix&#125;</span><br><span class="line">   install_bin_dir=$&#123;install_prefix&#125;/bin</span><br><span class="line">   mkdir -p $&#123;install_bin_dir&#125;</span><br><span class="line">   chmod a+x $(realpath &quot;$&#123;project_bin_dir&#125;/batch_scp&quot;)</span><br><span class="line">   for executable in &quot;palmbuild&quot; &quot;palmconfigure&quot; &quot;palm_cti&quot; &quot;palmdoxygen&quot; &quot;palmrun&quot; &quot;palmtest&quot;; do</span><br><span class="line">      chmod a+x $(realpath &quot;$&#123;project_bin_dir&#125;/$&#123;executable&#125;&quot;)</span><br><span class="line">      ln -s -f $(realpath --relative-to=&quot;$&#123;install_bin_dir&#125;&quot; &quot;$&#123;project_bin_dir&#125;/$&#123;executable&#125;&quot;) $&#123;install_bin_dir&#125;</span><br><span class="line">   done</span><br><span class="line">   cp $&#123;project_share_dir&#125;/cmake/CMakeLists.1.txt $&#123;project_share_dir&#125;/cmake/CMakeLists.txt   ### added </span><br><span class="line">   bash $&#123;project_bin_dir&#125;/palmconfigure \</span><br><span class="line">        -p &quot;$&#123;install_prefix&#125;&quot; \</span><br><span class="line">        $&#123;fortran_compiler:+-c &#125;$&#123;fortran_compiler&#125; \</span><br><span class="line">        $&#123;netcdf_c_prefix:+-s &#125;$&#123;netcdf_c_prefix&#125; \</span><br><span class="line">        $&#123;netcdf_fortran_prefix:+-t &#125;$&#123;netcdf_fortran_prefix&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">configure palm with externals</span></span><br><span class="line">   cp $&#123;project_share_dir&#125;/cmake/CMakeLists.2.txt $&#123;project_share_dir&#125;/cmake/CMakeLists.txt   ### added </span><br><span class="line">   bash $&#123;project_bin_dir&#125;/palmconfigure \</span><br><span class="line">        -p &quot;$&#123;install_prefix&#125;&quot; \</span><br><span class="line">        $&#123;fortran_compiler:+-c &#125;$&#123;fortran_compiler&#125; \</span><br><span class="line">        $&#123;netcdf_c_prefix:+-s &#125;$&#123;netcdf_c_prefix&#125; \</span><br><span class="line">        $&#123;netcdf_fortran_prefix:+-t &#125;$&#123;netcdf_fortran_prefix&#125; \</span><br><span class="line">        -r &quot;$&#123;rrtmg_prefix&#125;&quot; \</span><br><span class="line">        -T &quot;$&#123;tenstream_prefix&#125;&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改3：<code>palm_model_system-v23.10/packages/dynamic_driver/inifor/share/cmake/CMakeLists.txt</code>中添加</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span>(INIFOR_COMPILER_OPTIONS <span class="string">&quot;-O3&quot;</span>)</span><br><span class="line"><span class="keyword">set</span>(INIFOR_CPP_FLAGS <span class="string">&quot;-cpp&quot;</span>) </span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>v23.10 仅支持 <code>constant_diffusion = .T.</code></strong></p>
+<ul>
+<li><p>修改：增加constant_diffusion参数，在packages&#x2F;palm&#x2F;model&#x2F;src&#x2F;parin.f90中添加</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">constant_diffusion, &amp;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="Step-4：编译"><a href="#Step-4：编译" class="headerlink" title="Step 4：编译"></a>Step 4：编译</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> install_prefix=/home/zhenkun/work/pgi/palm/v23.10</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;install_prefix&#125;</span>/bin:<span class="variable">$&#123;PATH&#125;</span></span><br><span class="line">bash install -p <span class="variable">$&#123;install_prefix&#125;</span></span><br><span class="line"><span class="built_in">export</span> PATH=/home/ruyanc/WORK/Palm-GPU/GPU_test/bin:<span class="variable">$&#123;PATH&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="Step-5：测试"><a href="#Step-5：测试" class="headerlink" title="Step 5：测试"></a>Step 5：测试</h3><ul>
+<li><p>切换环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module purge</span><br><span class="line">source ~/sdk.env</span><br><span class="line">source ~/libs/libraries.sh</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Slurm/" rel="prev" title="Slurm">
+      <i class="fa fa-chevron-left"></i> Slurm
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/SCP/" rel="next" title="SCP">
+      SCP <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Palm-GPU-%E7%A7%BB%E6%A4%8D"><span class="nav-number">1.</span> <span class="nav-text">Palm GPU 移植</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-1%EF%BC%9A%E5%AE%89%E8%A3%85-NVIDIA-OpenACC"><span class="nav-number">1.1.</span> <span class="nav-text">Step 1：安装 NVIDIA OpenACC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E4%B8%80%EF%BC%9A%E5%AE%89%E8%A3%85SDK-Manager%EF%BC%88%E5%A4%B1%E8%B4%A5%EF%BC%89"><span class="nav-number">1.1.1.</span> <span class="nav-text">尝试一：安装SDK Manager（失败）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%9D%E8%AF%95%E4%BA%8C%EF%BC%9A%E5%8F%AA%E5%AE%89%E8%A3%85-NVIDIA-HPC-SDK-%EF%BC%88%E6%88%90%E5%8A%9F%EF%BC%89"><span class="nav-number">1.1.2.</span> <span class="nav-text">尝试二：只安装 NVIDIA HPC SDK （成功）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-2%EF%BC%9A%E4%BD%BF%E7%94%A8nvhpc%E9%87%8D%E6%96%B0%E7%BC%96%E8%AF%91netcdf%E5%BA%93"><span class="nav-number">1.2.</span> <span class="nav-text">Step 2：使用nvhpc重新编译netcdf库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-3%EF%BC%9A%E4%BF%AE%E6%94%B9%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9"><span class="nav-number">1.3.</span> <span class="nav-text">Step 3：修改编译选项</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-4%EF%BC%9A%E7%BC%96%E8%AF%91"><span class="nav-number">1.4.</span> <span class="nav-text">Step 4：编译</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Step-5%EF%BC%9A%E6%B5%8B%E8%AF%95"><span class="nav-number">1.5.</span> <span class="nav-text">Step 5：测试</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
