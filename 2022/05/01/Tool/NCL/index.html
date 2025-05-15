@@ -28,7 +28,7 @@
 <meta property="og:description" content="℃      1~F34~0~F~ C  Function123456789101112131415161718192021222324252627282930undef(&quot;ttest_TLL&quot;)function ttest_TLL(x:numeric,y:numeric,sig:numeric)begin    dimXY &#x3D; dimsizes(x)    ntim  &#x3D; d">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-23T11:12:20.331Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.366Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-23 19:12:20" itemprop="dateModified" datetime="2023-10-23T19:12:20+08:00">2023-10-23</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -477,6 +477,12 @@
 <h4 id="3-动态生成临时脚本-1"><a href="#3-动态生成临时脚本-1" class="headerlink" title="3. 动态生成临时脚本"></a>3. 动态生成临时脚本</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os </span><br><span class="line"></span><br><span class="line"><span class="comment"># 变量</span></span><br><span class="line">lat = <span class="number">40</span></span><br><span class="line">fn  = <span class="string">&quot;gfs.2022022300f150&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 完整脚本</span></span><br><span class="line">src = <span class="string">f&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">begin</span></span><br><span class="line"><span class="string">    a = addfile(&quot;<span class="subst">&#123;fn&#125;</span>&quot;, &quot;r&quot;)</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    res@mpMinLatF  = <span class="subst">&#123;lat&#125;</span></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 输出到临时文件</span></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;Run.ncl&quot;</span>, <span class="string">&#x27;w&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(src)</span><br><span class="line"></span><br><span class="line">os.system(<span class="string">&quot;ncl Run.ncl&quot;</span>)</span><br></pre></td></tr></table></figure>
 
 
+
+
+
+<h2 id="ASCII-read"><a href="#ASCII-read" class="headerlink" title="ASCII read"></a>ASCII read</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ncols = <span class="number">32</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;================ read in data file =================&quot;</span>)</span><br><span class="line">values_try = asciiread(<span class="string">&quot;/work/home/acyii6v8kt/DATA/CMA/Station/SURF_GLB_HOR_INTEG_PROD_Asia_&quot;</span>+year+<span class="string">&quot;.txt&quot;</span>,-<span class="number">1</span>,<span class="string">&quot;float&quot;</span>)  ;(/nrows,ncols/)</span><br><span class="line">printVarSummary(values_try)</span><br><span class="line">nrows = dimsizes(values_try)/ncols</span><br><span class="line">delete(values_try)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;nrows = &quot;</span>+nrows)</span><br><span class="line"></span><br><span class="line">values_2d = asciiread(<span class="string">&quot;/work/home/acyii6v8kt/DATA/CMA/Station/SURF_GLB_HOR_INTEG_PROD_Asia_&quot;</span>+year+<span class="string">&quot;.txt&quot;</span>,(/nrows,ncols/),<span class="string">&quot;float&quot;</span>)</span><br><span class="line">printVarSummary(values_2d)</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -491,12 +497,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Python%20Assist%20%20Package/" rel="prev" title="Python Assist Package">
-      <i class="fa fa-chevron-left"></i> Python Assist Package
+    <a href="/2022/05/01/Tool/Model%20Whale/" rel="prev" title="Model Whale">
+      <i class="fa fa-chevron-left"></i> Model Whale
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Parameters/" rel="next" title="Parameters">
-      Parameters <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Model%20Tutorial/" rel="next" title="Model Tutorial">
+      Model Tutorial <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -556,7 +562,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">2.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NAN%E5%80%BC"><span class="nav-number">3.</span> <span class="nav-text">处理NAN值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">4.</span> <span class="nav-text">plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calculation"><span class="nav-number">5.</span> <span class="nav-text">Calculation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Function"><span class="nav-number">6.</span> <span class="nav-text">System_Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%89%B2%E6%A0%87"><span class="nav-number">7.</span> <span class="nav-text">自定义色标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Workspace-reallocation-would-exceed-maximum-size-100000000"><span class="nav-number">8.</span> <span class="nav-text">Error: Workspace reallocation would exceed maximum size 100000000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91NCL%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">向NCL脚本传递参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell-%E7%89%88%E6%9C%AC"><span class="nav-number">9.1.</span> <span class="nav-text">Shell 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">9.1.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="nav-number">9.1.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC"><span class="nav-number">9.1.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E7%89%88%E6%9C%AC"><span class="nav-number">9.2.</span> <span class="nav-text">Python 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="nav-number">9.2.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0-1"><span class="nav-number">9.2.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC-1"><span class="nav-number">9.2.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function"><span class="nav-number">1.</span> <span class="nav-text">Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IO"><span class="nav-number">2.</span> <span class="nav-text">IO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NAN%E5%80%BC"><span class="nav-number">3.</span> <span class="nav-text">处理NAN值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#plot"><span class="nav-number">4.</span> <span class="nav-text">plot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Calculation"><span class="nav-number">5.</span> <span class="nav-text">Calculation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#System-Function"><span class="nav-number">6.</span> <span class="nav-text">System_Function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%89%B2%E6%A0%87"><span class="nav-number">7.</span> <span class="nav-text">自定义色标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Error-Workspace-reallocation-would-exceed-maximum-size-100000000"><span class="nav-number">8.</span> <span class="nav-text">Error: Workspace reallocation would exceed maximum size 100000000</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%91NCL%E8%84%9A%E6%9C%AC%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">向NCL脚本传递参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shell-%E7%89%88%E6%9C%AC"><span class="nav-number">9.1.</span> <span class="nav-text">Shell 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">9.1.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0"><span class="nav-number">9.1.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC"><span class="nav-number">9.1.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-%E7%89%88%E6%9C%AC"><span class="nav-number">9.2.</span> <span class="nav-text">Python 版本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BC%A0%E9%80%92%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F-1"><span class="nav-number">9.2.1.</span> <span class="nav-text">1. 传递环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%8F%82%E6%95%B0-1"><span class="nav-number">9.2.2.</span> <span class="nav-text">2. 命令行参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8A%A8%E6%80%81%E7%94%9F%E6%88%90%E4%B8%B4%E6%97%B6%E8%84%9A%E6%9C%AC-1"><span class="nav-number">9.2.3.</span> <span class="nav-text">3. 动态生成临时脚本</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ASCII-read"><span class="nav-number">10.</span> <span class="nav-text">ASCII read</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -571,7 +577,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -609,7 +615,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

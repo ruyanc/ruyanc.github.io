@@ -27,14 +27,14 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Airflow 入门及使用来源：https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;84332879 什么是 Airflow？Airflow 是一个使用 python 语言编写的 data pipeline 调度和监控工作流的平台。 Airflow 是通过 DAG（Directed acyclic graph 有向无环图）来管理任务流程的任务调度工具， 不需要知道业务数据的具体内容，设置任务">
 <meta property="og:locale">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-2fd6a67f09a89317c158bfe1d14303e9_720w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-d8d01368c81629d0c04f3dd1c45a5235_720w.webp">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-f929b72603c82f548e5343c51f38ffa6_720w.webp">
+<meta property="og:image" content="https://p.ipic.vip/hf2pa4.jpg">
+<meta property="og:image" content="https://p.ipic.vip/4rh24y.jpg">
+<meta property="og:image" content="https://p.ipic.vip/yt90ft.jpg">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-27T06:10:01.642Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.346Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-2fd6a67f09a89317c158bfe1d14303e9_720w.webp">
+<meta name="twitter:image" content="https://p.ipic.vip/hf2pa4.jpg">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/Airflow/">
 
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-27 14:10:01" itemprop="dateModified" datetime="2023-10-27T14:10:01+08:00">2023-10-27</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -274,7 +274,7 @@
 <li>执行器：Executor 是一个消息队列进程，它被绑定到调度器中，用于确定实际执行每个任务计划的工作进程。 有不同类型的执行器，每个执行器都使用一个指定工作进程的类来执行任务。 例如，LocalExecutor 使用与调度器进程在同一台机器上运行的并行进程执行任务。 其他像 CeleryExecutor 的执行器使用存在于独立的工作机器集群中的工作进程执行任务。</li>
 <li>Workers：这些是实际执行任务逻辑的进程，由正在使用的执行器确定。</li>
 </ul>
-<p><img src="https://pic2.zhimg.com/80/v2-2fd6a67f09a89317c158bfe1d14303e9_720w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/hf2pa4.jpg" alt="img"></p>
 <h3 id="Airflow-解决哪些问题"><a href="#Airflow-解决哪些问题" class="headerlink" title="Airflow 解决哪些问题"></a>Airflow 解决哪些问题</h3><p>通常，在一个运维系统，数据分析系统，或测试系统等大型系统中，我们会有各种各样的依赖需求。包括但不限于： <em>时间依赖：任务需要等待某一个时间点触发。</em> 外部系统依赖：任务依赖外部系统需要调用接口去访问。 <em>任务间依赖：任务 A 需要在任务 B 完成后启动，两个任务互相间会产生影响。</em> 资源环境依赖：任务消耗资源非常多， 或者只能在特定的机器上执行。</p>
 <p>crontab 可以很好地处理定时执行任务的需求，但仅能管理时间上的依赖。</p>
 <p>Airflow 的核心概念是 DAG (有向无环图)。DAG 由一个或多个 task 组成，而这个 DAG 正是解决了上文所说任务间的依赖问题。 任务执行的先后依赖顺序、多个 task 之间的依赖关系可以很好的用 DAG 表示完善。</p>
@@ -306,11 +306,11 @@
 <blockquote>
 <p>任务图视图</p>
 </blockquote>
-<p><img src="https://pic2.zhimg.com/80/v2-d8d01368c81629d0c04f3dd1c45a5235_720w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/4rh24y.jpg" alt="img"></p>
 <blockquote>
 <p>任务树视图</p>
 </blockquote>
-<p><img src="https://pic3.zhimg.com/80/v2-f929b72603c82f548e5343c51f38ffa6_720w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/yt90ft.jpg" alt="img"></p>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 测试任务，格式：airflow test dag_id task_id execution_time</span></span><br><span class="line">airflow <span class="built_in">test</span> test_task test1 2019-09-10</span><br><span class="line"></span><br><span class="line"><span class="comment"># 开始运行任务(这一步也可以在web界面点trigger按钮)</span></span><br><span class="line">airflow trigger_dag test_task</span><br><span class="line"></span><br><span class="line"><span class="comment"># 守护进程运行webserver, 默认端口为8080，也可以通过`-p`来指定</span></span><br><span class="line">airflow webserver -D  </span><br><span class="line"></span><br><span class="line"><span class="comment"># 守护进程运行调度器     </span></span><br><span class="line">airflow scheduler -D   </span><br><span class="line"></span><br><span class="line"><span class="comment"># 守护进程运行调度器    </span></span><br><span class="line">airflow worker -D          </span><br><span class="line"></span><br><span class="line"><span class="comment"># 暂停任务</span></span><br><span class="line">airflow pause dag_id　     </span><br><span class="line"></span><br><span class="line"><span class="comment"># 取消暂停，等同于在web管理界面打开off按钮</span></span><br><span class="line">airflow unpause dag_id     </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看task列表</span></span><br><span class="line">airflow list_tasks dag_id  查看task列表</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空任务状态</span></span><br><span class="line">airflow clear dag_id       </span><br><span class="line"></span><br><span class="line"><span class="comment"># 运行task</span></span><br><span class="line">airflow run dag_id task_id execution_date</span><br></pre></td></tr></table></figure>
 
 <h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><p><a href="https://link.zhihu.com/?target=https://airflow.apache.org/start.html">Apache Airflow</a></p>
@@ -329,12 +329,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Author%20Guide/" rel="prev" title="Author Guide">
-      <i class="fa fa-chevron-left"></i> Author Guide
+    <a href="/2022/05/01/Tool/Bash/" rel="prev" title="Bash">
+      <i class="fa fa-chevron-left"></i> Bash
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/AI/" rel="next" title="AI">
-      AI <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Author%20Guide/" rel="next" title="Author Guide">
+      Author Guide <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -409,7 +409,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -447,7 +447,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

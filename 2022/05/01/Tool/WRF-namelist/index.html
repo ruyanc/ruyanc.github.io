@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="WRF namelist 参考From NOAA12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WRF-namelist">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/WRF-namelist/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="WRF namelist 参考From NOAA12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.329Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF-namelist/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>WRF-namelist | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/WRF-namelist/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WRF-namelist
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="WRF-namelist-参考"><a href="#WRF-namelist-参考" class="headerlink" title="WRF namelist 参考"></a>WRF namelist 参考</h2><h3 id="From-NOAA"><a href="#From-NOAA" class="headerlink" title="From NOAA"></a>From NOAA</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br><span class="line">406</span><br><span class="line">407</span><br><span class="line">408</span><br><span class="line">409</span><br><span class="line">410</span><br><span class="line">411</span><br><span class="line">412</span><br><span class="line">413</span><br><span class="line">414</span><br><span class="line">415</span><br><span class="line">416</span><br><span class="line">417</span><br><span class="line">418</span><br><span class="line">419</span><br><span class="line">420</span><br><span class="line">421</span><br><span class="line">422</span><br><span class="line">423</span><br><span class="line">424</span><br><span class="line">425</span><br><span class="line">426</span><br><span class="line">427</span><br><span class="line">428</span><br><span class="line">429</span><br><span class="line">430</span><br><span class="line">431</span><br><span class="line">432</span><br><span class="line">433</span><br><span class="line">434</span><br><span class="line">435</span><br><span class="line">436</span><br><span class="line">437</span><br><span class="line">438</span><br><span class="line">439</span><br><span class="line">440</span><br><span class="line">441</span><br><span class="line">442</span><br><span class="line">443</span><br><span class="line">444</span><br><span class="line">445</span><br><span class="line">446</span><br><span class="line">447</span><br><span class="line">448</span><br><span class="line">449</span><br><span class="line">450</span><br><span class="line">451</span><br><span class="line">452</span><br><span class="line">453</span><br><span class="line">454</span><br><span class="line">455</span><br><span class="line">456</span><br><span class="line">457</span><br><span class="line">458</span><br><span class="line">459</span><br><span class="line">460</span><br><span class="line">461</span><br><span class="line">462</span><br><span class="line">463</span><br><span class="line">464</span><br><span class="line">465</span><br><span class="line">466</span><br><span class="line">467</span><br><span class="line">468</span><br><span class="line">469</span><br><span class="line">470</span><br><span class="line">471</span><br><span class="line">472</span><br><span class="line">473</span><br><span class="line">474</span><br><span class="line">475</span><br><span class="line">476</span><br><span class="line">477</span><br><span class="line">478</span><br><span class="line">479</span><br><span class="line">480</span><br><span class="line">481</span><br><span class="line">482</span><br><span class="line">483</span><br><span class="line">484</span><br><span class="line">485</span><br><span class="line">486</span><br><span class="line">487</span><br><span class="line">488</span><br><span class="line">489</span><br><span class="line">490</span><br><span class="line">491</span><br><span class="line">492</span><br><span class="line">493</span><br><span class="line">494</span><br><span class="line">495</span><br><span class="line">496</span><br><span class="line">497</span><br><span class="line">498</span><br><span class="line">499</span><br><span class="line">500</span><br><span class="line">501</span><br><span class="line">502</span><br><span class="line">503</span><br><span class="line">504</span><br><span class="line">505</span><br><span class="line">506</span><br><span class="line">507</span><br><span class="line">508</span><br><span class="line">509</span><br><span class="line">510</span><br><span class="line">511</span><br><span class="line">512</span><br><span class="line">513</span><br><span class="line">514</span><br><span class="line">515</span><br><span class="line">516</span><br><span class="line">517</span><br><span class="line">518</span><br><span class="line">519</span><br><span class="line">520</span><br><span class="line">521</span><br><span class="line">522</span><br><span class="line">523</span><br><span class="line">524</span><br><span class="line">525</span><br><span class="line">526</span><br><span class="line">527</span><br><span class="line">528</span><br><span class="line">529</span><br><span class="line">530</span><br><span class="line">531</span><br><span class="line">532</span><br><span class="line">533</span><br><span class="line">534</span><br><span class="line">535</span><br><span class="line">536</span><br><span class="line">537</span><br><span class="line">538</span><br><span class="line">539</span><br><span class="line">540</span><br><span class="line">541</span><br><span class="line">542</span><br><span class="line">543</span><br><span class="line">544</span><br><span class="line">545</span><br><span class="line">546</span><br><span class="line">547</span><br><span class="line">548</span><br><span class="line">549</span><br><span class="line">550</span><br><span class="line">551</span><br><span class="line">552</span><br><span class="line">553</span><br><span class="line">554</span><br><span class="line">555</span><br><span class="line">556</span><br><span class="line">557</span><br><span class="line">558</span><br><span class="line">559</span><br><span class="line">560</span><br><span class="line">561</span><br><span class="line">562</span><br><span class="line">563</span><br><span class="line">564</span><br><span class="line">565</span><br><span class="line">566</span><br><span class="line">567</span><br><span class="line">568</span><br><span class="line">569</span><br><span class="line">570</span><br><span class="line">571</span><br><span class="line">572</span><br><span class="line">573</span><br><span class="line">574</span><br><span class="line">575</span><br><span class="line">576</span><br><span class="line">577</span><br><span class="line">578</span><br><span class="line">579</span><br><span class="line">580</span><br><span class="line">581</span><br><span class="line">582</span><br><span class="line">583</span><br><span class="line">584</span><br><span class="line">585</span><br><span class="line">586</span><br><span class="line">587</span><br><span class="line">588</span><br><span class="line">589</span><br><span class="line">590</span><br><span class="line">591</span><br><span class="line">592</span><br><span class="line">593</span><br><span class="line">594</span><br><span class="line">595</span><br><span class="line">596</span><br><span class="line">597</span><br><span class="line">598</span><br><span class="line">599</span><br><span class="line">600</span><br><span class="line">601</span><br><span class="line">602</span><br><span class="line">603</span><br><span class="line">604</span><br><span class="line">605</span><br><span class="line">606</span><br><span class="line">607</span><br><span class="line">608</span><br><span class="line">609</span><br><span class="line">610</span><br></pre></td><td class="code"><pre><span class="line">Note, this is not a namelist.input file. Find what interests you, and cut and paste them </span><br><span class="line">      to your own namelist.input file. For more information on these namelist parameters,</span><br><span class="line">      please see run/README.namelist or Chapter 5 of the User&#x27;s Guide.</span><br><span class="line"></span><br><span class="line">** More options for real in namelist record &amp;domains:</span><br><span class="line"></span><br><span class="line"> p_top_requested                     = 5000</span><br><span class="line"> interp_type                         = 2</span><br><span class="line"> extrap_type                         = 2</span><br><span class="line"> t_extrap_type                       = 2</span><br><span class="line"> lowest_lev_from_sfc                 = .false.</span><br><span class="line"> use_levels_below_ground             = .true.</span><br><span class="line"> use_surface                         = .true.</span><br><span class="line"> lagrange_order                      = 2</span><br><span class="line"> force_sfc_in_vinterp                = 1</span><br><span class="line"> zap_close_levels                    = 500</span><br><span class="line"> sfcp_to_sfcp                        = .false.</span><br><span class="line"> adjust_heights                      = .false.</span><br><span class="line"> smooth_cg_topo                      = .false.</span><br><span class="line"> eta_levels                          = 1.000, 0.990, 0.978, 0.964, 0.946,</span><br><span class="line">                                       0.922, 0.894, 0.860, 0.817, 0.766,</span><br><span class="line">                                       0.707, 0.644, 0.576, 0.507, 0.444,</span><br><span class="line">                                       0.380, 0.324, 0.273, 0.228, 0.188,</span><br><span class="line">                                       0.152, 0.121, 0.093, 0.069, 0.048,</span><br><span class="line">                                       0.029, 0.014, 0.000,</span><br><span class="line"></span><br><span class="line">** Using sst_update option (add these to namelist records &amp;time_control and</span><br><span class="line">   &amp;physics respectively):</span><br><span class="line"></span><br><span class="line"> &amp;time_control</span><br><span class="line"> auxinput4_inname                    = &quot;wrflowinp_d&lt;domain&gt;&quot;</span><br><span class="line"> auxinput4_interval                  = 360, 360, 360, </span><br><span class="line"> io_form_auxinput4                   = 2</span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> sst_update                          = 1,</span><br><span class="line"></span><br><span class="line">** Using Noah-MP option (Use sf_surface_physics option = 4, and add</span><br><span class="line">   &amp;noah_mp namelist record)</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line">   sf_surface_physics = 4</span><br><span class="line"></span><br><span class="line">&amp;noah_mp</span><br><span class="line"> dveg     = 4,</span><br><span class="line"> opt_crs  = 1,</span><br><span class="line"> opt_btr  = 1,</span><br><span class="line"> opt_run  = 1,</span><br><span class="line"> opt_sfc  = 1, </span><br><span class="line"> opt_frz  = 1, </span><br><span class="line"> opt_inf  = 1, </span><br><span class="line"> opt_rad  = 3, </span><br><span class="line"> opt_alb  = 2,</span><br><span class="line"> opt_snf  = 1,</span><br><span class="line"> opt_tbot = 2, </span><br><span class="line"> opt_stc  = 1,</span><br><span class="line">/</span><br><span class="line"></span><br><span class="line">** Using lake model</span><br><span class="line">&amp;physics</span><br><span class="line"> sf_lake_physics                     = 1,      1,     1,</span><br><span class="line"> lakedepth_default                   = 50.,    50.,   50.,</span><br><span class="line"> lake_min_elev                       = 5.,     5.,    5.,</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">** Using stochastic backscatter scheme (new namelist record since v3.6)</span><br><span class="line"></span><br><span class="line">&amp;stoch</span><br><span class="line"> stoch_force_opt                     = 1,        1,        1,</span><br><span class="line"> stoch_vertstruc_opt                 = 0,        0,        0,</span><br><span class="line"> tot_backscat_psi                    = 1.E-05,   1.E-05,   1.E-05,</span><br><span class="line"> tot_backscat_t                      = 1.E-06,   1.E-06,   1.E-06,</span><br><span class="line"> nens                                = 1,</span><br><span class="line"> ztau_psi                            = 10800.0,</span><br><span class="line"> ztau_t                              = 10800.0,</span><br><span class="line"> rexponent_psi                       =-1.83,</span><br><span class="line"> rexponent_t                         =-1.83,</span><br><span class="line"> zsigma2_eps                         = 0.0833,</span><br><span class="line"> zsigma2_eta                         = 0.0833,</span><br><span class="line"> kminforc                            = 1,</span><br><span class="line"> kminforc                            = 1,</span><br><span class="line"> kminforct                           = 1,</span><br><span class="line"> lminforct                           = 1,</span><br><span class="line"> kmaxforc                            = 1000000,</span><br><span class="line"> lmaxforc                            = 1000000,</span><br><span class="line"> kmaxforct                           = 1000000,</span><br><span class="line"> lmaxforct                           = 1000000,</span><br><span class="line"> perturb_bdy                         = 0,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using DFI options (note this is a separate namelist record):</span><br><span class="line"></span><br><span class="line"> &amp;dfi_control</span><br><span class="line"> dfi_opt                             = 3,</span><br><span class="line"> dfi_nfilter                         = 7,</span><br><span class="line"> dfi_cutoff_seconds                  = 3600,</span><br><span class="line"> dfi_write_filtered_input            = .true.</span><br><span class="line"> dfi_write_dfi_history               = .false.</span><br><span class="line"> dfi_bckstop_year                    = 2000,</span><br><span class="line"> dfi_bckstop_month                   = 01,</span><br><span class="line"> dfi_bckstop_day                     = 24,</span><br><span class="line"> dfi_bckstop_hour                    = 10,</span><br><span class="line"> dfi_bckstop_minute                  = 00,</span><br><span class="line"> dfi_bckstop_second                  = 00,</span><br><span class="line"> dfi_fwdstop_year                    = 2000,</span><br><span class="line"> dfi_fwdstop_month                   = 01,</span><br><span class="line"> dfi_fwdstop_day                     = 24,</span><br><span class="line"> dfi_fwdstop_hour                    = 13,</span><br><span class="line"> dfi_fwdstop_minute                  = 00,</span><br><span class="line"> dfi_fwdstop_second                  = 00,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> time_step_dfi                       = 60</span><br><span class="line"></span><br><span class="line">** Using gridded nudging option (note this is a separate namelist record) for</span><br><span class="line">   upperair nudging</span><br><span class="line"></span><br><span class="line">** Upper air gridded nudging requires an file generated by the real</span><br><span class="line">   program.  Activating grid_fdda for the real program is adequate.</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> grid_fdda                           = 1,     1,     1,</span><br><span class="line"> gfdda_inname                        = &quot;wrffdda_d&lt;domain&gt;&quot;,</span><br><span class="line"> gfdda_end_h                         = 24,    24,    24,</span><br><span class="line"> gfdda_interval_m                    = 360,   360,   360,</span><br><span class="line"> fgdt                                = 0,     0,     0,</span><br><span class="line"> if_no_pbl_nudging_uv                = 0,     0,     0,</span><br><span class="line"> if_no_pbl_nudging_t                 = 1,     1,     1,</span><br><span class="line"> if_no_pbl_nudging_q                 = 1,     1,     1,</span><br><span class="line"> if_zfac_uv                          = 0,     0,     0,</span><br><span class="line">  k_zfac_uv                          = 10,   10,    10,</span><br><span class="line"> if_zfac_t                           = 0,     0,     0,</span><br><span class="line">  k_zfac_t                           = 10,   10,    10,</span><br><span class="line"> if_zfac_q                           = 0,     0,     0,</span><br><span class="line">  k_zfac_q                           = 10,   10,    10,</span><br><span class="line"> guv                                 = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gt                                  = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gq                                  = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> if_ramping                          = 1,</span><br><span class="line"> dtramp_min                          = 60.0,</span><br><span class="line"> io_form_gfdda                       = 2,</span><br><span class="line"></span><br><span class="line">** Using gridded surface nudging option (note this is a separate namelist </span><br><span class="line">   record)</span><br><span class="line"></span><br><span class="line">** Note that upper-air and surface gridded nudging may be used together </span><br><span class="line">   or separately.  Surface nudging requires an input file generated by the</span><br><span class="line">   obsgrid program.</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> grid_sfdda                          = 1,     1,     1,</span><br><span class="line"> sgfdda_inname                       = &quot;wrfsfdda_d&lt;domain&gt;&quot;,</span><br><span class="line"> sgfdda_end_h                        = 24,    24,    24,</span><br><span class="line"> sgfdda_interval_m                   = 360,   360,   360,</span><br><span class="line"> io_form_sgfdda                      = 2,</span><br><span class="line"> guv_sfc                             = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gt_sfc                              = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gq_sfc                              = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> rinblw                              = 250.,</span><br><span class="line"></span><br><span class="line">** Using observation nudging option (note &amp;fdda is a separate namelist record):</span><br><span class="line"></span><br><span class="line"> &amp;time_control</span><br><span class="line"> auxinput11_interval_s               = 180 , 180 , 180</span><br><span class="line"> auxinput11_end_h                    = 6   , 6   , 6</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> obs_nudge_opt                       = 1,1,1,</span><br><span class="line"> max_obs                             = 150000,</span><br><span class="line"> fdda_start                          = 0.,  0.,  0.,</span><br><span class="line"> fdda_end                            = 720.,720.,720.,</span><br><span class="line"> obs_nudge_wind                      = 1,1,1,</span><br><span class="line"> obs_coef_wind                       = 6.E-4,6.E-4,6.E-4,</span><br><span class="line"> obs_nudge_temp                      = 1,1,1,</span><br><span class="line"> obs_coef_temp                       = 6.E-4,6.E-4,6.E-4,</span><br><span class="line"> obs_nudge_mois                      = 1,1,1,</span><br><span class="line"> obs_coef_mois                       = 6.E-4,6.E-4,6.E-4,</span><br><span class="line"> obs_rinxy                           = 240.,240.,180.,</span><br><span class="line"> obs_rinsig                          = 0.1,</span><br><span class="line"> obs_twindo                          = 0.6666667,0.6666667,0.6666667,</span><br><span class="line"> obs_npfi                            = 10,</span><br><span class="line"> obs_ionf                            = 2, 2, 2,</span><br><span class="line"> obs_idynin                          = 0,</span><br><span class="line"> obs_dtramp                          = 40.,</span><br><span class="line"> obs_prt_freq                        = 10, 10, 10,</span><br><span class="line"> obs_prt_max                         = 10</span><br><span class="line"> obs_ipf_errob                       = .true.</span><br><span class="line"> obs_ipf_nudob                       = .true.</span><br><span class="line"> obs_ipf_in4dob                      = .true</span><br><span class="line"> obs_no_pbl_nudge_uv                 = 0</span><br><span class="line"> obs_no_pbl_nudge_t                  = 0</span><br><span class="line"> obs_no_pbl_nudge_q                  = 0</span><br><span class="line"> obs_sfc_scheme_horiz                = 0</span><br><span class="line"> obs_sfc_scheme_vert                 = 0</span><br><span class="line"> obs_max_sndng_gap                   = 20</span><br><span class="line"> obs_nudgezfullr1_uv                 = 50</span><br><span class="line"> obs_nudgezrampr1_uv                 = 50</span><br><span class="line"> obs_nudgezfullr2_uv                 = 50</span><br><span class="line"> obs_nudgezrampr2_uv                 = 50</span><br><span class="line"> obs_nudgezfullr4_uv                 = -5000</span><br><span class="line"> obs_nudgezrampr4_uv                 = 50  </span><br><span class="line"> obs_nudgezfullr1_t                  = 50 </span><br><span class="line"> obs_nudgezrampr1_t                  = 50</span><br><span class="line"> obs_nudgezfullr2_t                  = 50</span><br><span class="line"> obs_nudgezrampr2_t                  = 50</span><br><span class="line"> obs_nudgezfullr4_t                  = -5000</span><br><span class="line"> obs_nudgezrampr4_t                  = 50  </span><br><span class="line"> obs_nudgezfullr1_q                  = 50 </span><br><span class="line"> obs_nudgezrampr1_q                  = 50</span><br><span class="line"> obs_nudgezfullr2_q                  = 50</span><br><span class="line"> obs_nudgezrampr2_q                  = 50</span><br><span class="line"> obs_nudgezfullr4_q                  = -5000</span><br><span class="line"> obs_nudgezrampr4_q                  = 50</span><br><span class="line"> obs_nudgezfullmin                   = 50</span><br><span class="line"> obs_nudgezrampmin                   = 50</span><br><span class="line"> obs_nudgezmax                       = 3000</span><br><span class="line"> obs_sfcfact                         = 1.0</span><br><span class="line"> obs_sfcfacr                         = 1.0</span><br><span class="line"> obs_dpsmx                           = 7.5</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line">** Using spectral nudging option</span><br><span class="line"></span><br><span class="line"> &amp;fdda</span><br><span class="line"> grid_fdda                           = 2,     2,     2,</span><br><span class="line"> gfdda_inname                        = &quot;wrffdda_d&lt;domain&gt;&quot;,</span><br><span class="line"> gfdda_end_h                         = 24,    24,    24,</span><br><span class="line"> gfdda_interval_m                    = 360,   360,   360,</span><br><span class="line"> fgdt                                = 0,     0,     0,</span><br><span class="line"> fgdtzero                            = 0,     0,     0,</span><br><span class="line"> if_no_pbl_nudging_uv                = 0,     0,     0,</span><br><span class="line"> if_no_pbl_nudging_t                 = 0,     0,     0,</span><br><span class="line"> if_no_pbl_nudging_ph                = 0,     0,     0,</span><br><span class="line"> if_zfac_uv                          = 0,     0,     0,</span><br><span class="line">  k_zfac_uv                          = 10,   10,    10,</span><br><span class="line"> if_zfac_t                           = 0,     0,     0,</span><br><span class="line">  k_zfac_t                           = 10,   10,    10,</span><br><span class="line"> if_zfac_ph                          = 0,     0,     0,</span><br><span class="line">  k_zfac_ph                          = 10,   10,    10,</span><br><span class="line"> dk_zfac_uv                          = 1,     1,     1,</span><br><span class="line"> dk_zfac_t                           = 1,     1,     1,</span><br><span class="line"> dk_zfac_ph                          = 1,     1,     1,</span><br><span class="line"> guv                                 = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gt                                  = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> gph                                 = 0.0003,     0.0003,     0.0003,</span><br><span class="line"> xwavenum                            = 3,</span><br><span class="line"> ywavenum                            = 3,</span><br><span class="line"> if_ramping                          = 1,</span><br><span class="line"> dtramp_min                          = 60.0,</span><br><span class="line"> io_form_gfdda                       = 2,</span><br><span class="line"></span><br><span class="line">** Using adaptive time step option (add these in namelist record &amp;domains):</span><br><span class="line"></span><br><span class="line"> use_adaptive_time_step              = .true.,</span><br><span class="line"> step_to_output_time                 = .true.,</span><br><span class="line"> target_cfl                          = 1.2, 1.2, 1.2,</span><br><span class="line"> target_hcfl                         = .84, .84, .84,</span><br><span class="line"> max_step_increase_pct               = 5,   51,  51,</span><br><span class="line"> starting_time_step                  = -1,  -1,  -1,</span><br><span class="line"> max_time_step                       = 360, 120, 40,</span><br><span class="line"> min_time_step                       =  90,  30, 10,</span><br><span class="line"> adaptation_domain                   =  1,</span><br><span class="line"></span><br><span class="line">** Using automatic vortex-following option (tropical storm tracking only;</span><br><span class="line">   add these in namelist record &amp;domains):</span><br><span class="line"></span><br><span class="line"> vortex_interval                     = 15, 15, 15,</span><br><span class="line"> max_vortex_speed                    = 40, 40, 40,</span><br><span class="line"> corral_dist                         =  8, 15, 15,</span><br><span class="line"> track_level                         = 50000,</span><br><span class="line"></span><br><span class="line">** Miscellaneous physics options for namelist record &amp;physics:</span><br><span class="line"></span><br><span class="line">Topographic shading (only effective when grid sizes are a few kilometers)</span><br><span class="line"></span><br><span class="line"> slope_rad                           = 1,     1,     1,</span><br><span class="line"> topo_shading                        = 1,     1,     1,</span><br><span class="line"> shadlen                             = 25000, </span><br><span class="line"></span><br><span class="line">Setting threashold value for defining seaice if seaice is not in the input file:</span><br><span class="line"></span><br><span class="line"> seaice_threshold                    = 271,</span><br><span class="line"></span><br><span class="line">Switching off latent heating from a microphysics scheme (must also set cu_physics = 0):</span><br><span class="line"></span><br><span class="line"> no_mp_heating                       = 0,</span><br><span class="line"></span><br><span class="line">** Using precipiatiion bucket in a time interval (minutes):</span><br><span class="line"></span><br><span class="line"> prec_acc_dt                         = 60.</span><br><span class="line"></span><br><span class="line">** Using bucket accumulations for multi-year simulations (guideline: mean monthly accumulation)</span><br><span class="line"></span><br><span class="line"> bucket_mm                           = 100.</span><br><span class="line"> bucket_J                            = 1.e9</span><br><span class="line"></span><br><span class="line">** Optional gravitational settling of fog/cloud droplets (MYNN PBL only)</span><br><span class="line"></span><br><span class="line"> grav_settling                       = 1,       ; default 0</span><br><span class="line"></span><br><span class="line">** Using implicit gravity-wave damping option (add these in namelist record &amp;dynamics):</span><br><span class="line"></span><br><span class="line"> damp_opt                            = 3,</span><br><span class="line"> zdamp                               = 5000.,  5000.,  5000.,</span><br><span class="line"> dampcoef                            = 0.2,    0.2,    0.2</span><br><span class="line"></span><br><span class="line">** Using expanded boundary zone and exponential decay option (add or modify these in</span><br><span class="line">    namelist record &amp;bdy_control):</span><br><span class="line"></span><br><span class="line"> spec_bdy_width                      = 10,</span><br><span class="line"> spec_zone                           = 1,</span><br><span class="line"> relax_zone                          = 9,</span><br><span class="line"> specified                           = .true., .false.,.false.,</span><br><span class="line"> spec_exp                            = 0.33</span><br><span class="line"></span><br><span class="line">For a tropical channel configuration, set the following:</span><br><span class="line"></span><br><span class="line"> specified                           = .true., .false.,.false.,</span><br><span class="line"> periodic_x                          = .true., .false.,.false.,</span><br><span class="line"></span><br><span class="line">** using io quilting option to improve output efficiency for large domain runs</span><br><span class="line">    (note that this is a separate namelist record):</span><br><span class="line"></span><br><span class="line"> &amp;namelist_quilt</span><br><span class="line"> nio_tasks_per_group = 2,</span><br><span class="line"> nio_groups = 1,</span><br><span class="line"></span><br><span class="line">** for tc bogusing:</span><br><span class="line"></span><br><span class="line"> &amp;tc</span><br><span class="line"> insert_bogus_storm                  = .true.,</span><br><span class="line"> remove_storm                        = .true.,</span><br><span class="line"> num_storm                           = 1,</span><br><span class="line"> latc_loc                            = 15.,</span><br><span class="line"> lonc_loc                            = -90.,</span><br><span class="line"> vmax_meters_per_second              = 30,</span><br><span class="line"> rmax                                = 50000,</span><br><span class="line"> vmax_ratio                          = 0.5,</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line">** for regional climate surface diagnostics such as max/min/mean/std of T2/Q2/wind/rainfall</span><br><span class="line">between selected output times (e.g. daily) in auxhist3</span><br><span class="line"></span><br><span class="line"> &amp;time_control</span><br><span class="line"> output_diagnostics      = 1</span><br><span class="line"> auxhist3_outname        = &#x27;wrfxtrm_d&lt;domain&gt;_&lt;date&gt;&#x27;</span><br><span class="line"> io_form_auxhist3        = 2</span><br><span class="line"> auxhist3_interval       = 1440</span><br><span class="line"> frames_per_auxhist3     = 1</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** for pressure-level (and some surface) diagnostics, output is on stream 23,</span><br><span class="line">where the listed pressure levels are in Pa.  For the height level interpolation,</span><br><span class="line">the unit is stream 22.</span><br><span class="line"></span><br><span class="line"> &amp;time_control</span><br><span class="line"> io_form_auxhist23                   =  2,</span><br><span class="line"> auxhist23_interval                  = 30,   30,    30,</span><br><span class="line"> frames_per_auxhist23                =  1,    1,     1, </span><br><span class="line"> auxhist23_outname                   = &quot;PLEVS_d&lt;domain&gt;_&lt;date&gt;&quot;</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;diags</span><br><span class="line"> p_lev_diags                         = 1</span><br><span class="line"> num_press_levels                    = 4</span><br><span class="line"> press_levels                        = 85000, 70000, 50000, 25000</span><br><span class="line"> use_tot_or_hyd_p                    = 2</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** for height-level diagnostics, output is on stream 22 (negative values</span><br><span class="line">for z_levels means AGL, so -500 is 500 m AGL, and 10000 is 10 km).</span><br><span class="line"></span><br><span class="line"> &amp;time_control</span><br><span class="line"> io_form_auxhist22                   =  2,</span><br><span class="line"> auxhist22_interval                  = 30,   30,    30,</span><br><span class="line"> frames_per_auxhist22                =  1,    1,     1, </span><br><span class="line"> auxhist22_outname                   = &quot;ZLEVS_d&lt;domain&gt;_&lt;date&gt;&quot;</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"> &amp;diags</span><br><span class="line"> z_lev_diags                         = 1</span><br><span class="line"> num_z_levels                        = 2</span><br><span class="line"> z_levels                            = -500, 10000</span><br><span class="line"> /</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using different flux formulation for tropical storm simulations</span><br><span class="line">   (best for grid spacing less than 2 km) </span><br><span class="line">   simple 1-D ocean mixed layer, or University of Miami 3DPWP ocean model</span><br><span class="line">   (add these in namelist record &amp;physics):</span><br><span class="line"></span><br><span class="line"> isftcflx                            = 1,</span><br><span class="line"> sf_ocean_physics                    = 0 (off), 1 (OML), 2 (3D PWP)</span><br><span class="line"> oml_hml0                            = 50,</span><br><span class="line"> oml_gamma                           = 0.14</span><br><span class="line"> omdt                                = 1</span><br><span class="line"></span><br><span class="line"> Add these in the &amp;domains section.  Note that the example here is for</span><br><span class="line"> a warm ocean: ocean_z is the depth of each layer (m), from the surface</span><br><span class="line"> downward; the associated temperature is ocean_t (K); and the associated </span><br><span class="line"> salinity is ocean_s (ppt).</span><br><span class="line"></span><br><span class="line"> ocean_levels                        = 30,</span><br><span class="line"> ocean_z                             =       5.,       15.,       25.,       35.,       45.,       55.,</span><br><span class="line">                                            65.,       75.,       85.,       95.,      105.,      115.,</span><br><span class="line">                                           125.,      135.,      145.,      155.,      165.,      175.,</span><br><span class="line">                                           185.,      195.,      210.,      230.,      250.,      270.,</span><br><span class="line">                                           290.,      310.,      330.,      350.,      370.,      390.</span><br><span class="line"> ocean_t                             = 302.3493,  302.3493,  302.3493,  302.1055,  301.9763,  301.6818,</span><br><span class="line">                                       301.2220,  300.7531,  300.1200,  299.4778,  298.7443,  297.9194,</span><br><span class="line">                                       297.0883,  296.1443,  295.1941,  294.1979,  293.1558,  292.1136,</span><br><span class="line">                                       291.0714,  290.0293,  288.7377,  287.1967,  285.6557,  284.8503,</span><br><span class="line">                                       284.0450,  283.4316,  283.0102,  282.5888,  282.1674,  281.7461</span><br><span class="line"> ocean_s                             =  34.0127,   34.0127,   34.0127,   34.3217,   34.2624,   34.2632,</span><br><span class="line">                                        34.3240,   34.3824,   34.3980,   34.4113,   34.4220,   34.4303,</span><br><span class="line">                                        34.6173,   34.6409,   34.6535,   34.6550,   34.6565,   34.6527,</span><br><span class="line">                                        34.6490,   34.6446,   34.6396,   34.6347,   34.6297,   34.6247,</span><br><span class="line">                                        34.6490,   34.6446,   34.6396,   34.6347,   34.6297,   34.6247</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">References for 3D ocean circulation model:</span><br><span class="line">Lee, C.-Y., and S. S. Chen, 2013: Stable Boundary Layer and Its Impact on Tropical Cyclone Structure in a Coupled Atmosphere-Ocean Model, Mon. Wea. Rev.</span><br><span class="line">Price, J. F., T. B. Sanford, and G. Z. Forristal, 1994: Forced stage response to a moving hurricane. J. Phy. Oceanogr., 24, 233-260.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using U. Miami Forward Lagrangian trajectory calculation </span><br><span class="line">  (add it in namelist record &amp;physics):</span><br><span class="line">&amp;domain</span><br><span class="line"> num_traj                            = 25,</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> traj_opt                            = 1,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Vertical nesting</span><br><span class="line"></span><br><span class="line">The WRF model now supports vertical nesting for a coincident (online)</span><br><span class="line">model simulation (during a single model run, differing numbers of</span><br><span class="line">vertical levels may be used per domain).  This is activated with a switch</span><br><span class="line">to turn on the option (vert_refine_method).  The namelist array eta_levels</span><br><span class="line">is manually filled in for each domain.  Below is an example for two </span><br><span class="line">domains.  </span><br><span class="line"></span><br><span class="line">NOTE: The user is restricted to either the RRTM or RRTMG radiation schemes.</span><br><span class="line"></span><br><span class="line"> &amp;domains</span><br><span class="line"> max_dom                             = 2,</span><br><span class="line"> e_vert                              = 35,    45,</span><br><span class="line"> eta_levels(1:35)                    = 1., 0.993, 0.983, 0.97, 0.954, 0.934, 0.909, 0.88, 0.8406663, 0.8013327, </span><br><span class="line">                                       0.761999, 0.7226653, 0.6525755, 0.5877361, 0.5278192, 0.472514, </span><br><span class="line">                                       0.4215262, 0.3745775, 0.3314044, 0.2917579, 0.2554026, 0.2221162, </span><br><span class="line">                                       0.1916888, 0.1639222, 0.1386297, 0.1156351, 0.09525016, 0.07733481, </span><br><span class="line">                                       0.06158983, 0.04775231, 0.03559115, 0.02490328, 0.0155102, 0.007255059, 0.</span><br><span class="line"> eta_levels(36:81)                   = 1.0000, 0.9946, 0.9875, 0.9789, 0.9685, 0.9562, 0.9413, 0.9238, 0.9037, 0.8813, 0.8514,</span><br><span class="line">                                       0.8210, 0.7906, 0.7602, 0.7298, 0.6812, 0.6290, 0.5796, 0.5333, 0.4901, 0.4493, 0.4109,</span><br><span class="line">                                       0.3746, 0.3412, 0.3098, 0.2802, 0.2524, 0.2267, 0.2028, 0.1803, 0.1593, 0.1398, 0.1219,</span><br><span class="line">                                       0.1054, 0.0904, 0.0766, 0.0645, 0.0534, 0.0433, 0.0341, 0.0259, 0.0185, 0.0118, 0.0056, 0.    </span><br><span class="line"> vert_refine_method                  = 0,     2,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Tropopause data level of max winds data, for program real.exe only</span><br><span class="line"></span><br><span class="line">When information (mostly NCEP supplied through GFS or NAM) is available </span><br><span class="line">in the Grib2 file, AND extracted with ungrib, the metgrid program inserts</span><br><span class="line">flag information into the data stream that is input by real.  The real</span><br><span class="line">program is able to use the available u, v, T, height fields (each may be on</span><br><span class="line">a tropopause .OR. the level of max winds) in the vertical interpolation.</span><br><span class="line">To &quot;tune&quot; the data, the user may select a level below which the max wind </span><br><span class="line">inforamtion is ignored.  The default is 300 hPa.  The user may also </span><br><span class="line">select the level that when exceeded the trop and maxw fields are ignored</span><br><span class="line">(due to the horizontal pressure difference detecting a user-defined</span><br><span class="line">discontinuity, and the metgrid horizontal interpolation across the </span><br><span class="line">discontinuity would be suspect).  By default, this option is turned off.</span><br><span class="line">The user may choose to individually activate the vertical interpolation of</span><br><span class="line">either the level of max winds .OR. the tropopause level.</span><br><span class="line"></span><br><span class="line">Default (all pressure units Pa):</span><br><span class="line"> &amp;domains</span><br><span class="line"> maxw_horiz_pres_diff                = 5000</span><br><span class="line"> trop_horiz_pres_diff                = 5000</span><br><span class="line"> maxw_above_this_level               = 30000</span><br><span class="line"> use_maxw_level                      = 0 (0=do not use level, 1 = use level)</span><br><span class="line"> use_trop_level                      = 0 (0=do not use level, 1 = use level)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using aerosol option aer_opt = 2:</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> aer_opt            = 2,</span><br><span class="line"> aer_type           = 1,</span><br><span class="line"> aer_aod550_opt     = 1,</span><br><span class="line"> aer_aod550_val     = 0.12,</span><br><span class="line"> aer_angexp_opt     = 1,</span><br><span class="line"> aer_angexp_val     = 1.3,</span><br><span class="line"> aer_ssa_opt        = 1,</span><br><span class="line"> aer_ssa_val        = 0.85,</span><br><span class="line"> aer_asy_opt        = 1,</span><br><span class="line"> aer_asy_val        = 0.90,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using Jimenez wind-farm scheme</span><br><span class="line"></span><br><span class="line">In the &amp;physics namelist record, set the MAX_DOM value:</span><br><span class="line"> windfarm                            = 1,    1,    1</span><br><span class="line"></span><br><span class="line">Also in the directory with namelist.input, is the file defining the</span><br><span class="line">specifics of the wind turbine type: wind-turbine-1.tbl</span><br><span class="line"></span><br><span class="line">The location of wind turbines are specified as lat lon, and </span><br><span class="line">the turbine type: windturbines.txt</span><br><span class="line"></span><br><span class="line">** Using stochastic schemes</span><br><span class="line">&amp;stoch</span><br><span class="line"> skebs              = 1, 1, 1, </span><br><span class="line"> rand_perturb       = 1, 1, 1, </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** Using kfcupscheme cu_physics (cumulus scheme option). This has been tested with</span><br><span class="line">the CAM radiation scheme and is not recommended with other radiation schemes.</span><br><span class="line">Regarding cu_rad_feedback, users want the parameterized clouds to affect radiation.  </span><br><span class="line">Turning it off is only useful as a sensitivity study to determine the importance of </span><br><span class="line">that effect. Regarding shallowcu_forced_ra option, setting it to true will override </span><br><span class="line">the cloud fraction calculations to a prescribed maximum cloud fraction (a value of 0.36)</span><br><span class="line">which can be changed by the user for sensitivity testing purposes.</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> cu_physics          = 10,    10,    10,</span><br><span class="line"> ra_lw_physics       = 3,     3,     3,</span><br><span class="line"> ra_sw_physics       = 3,     3,     3,</span><br><span class="line"> cu_rad_feedback     =.true.,.true.,.true.,</span><br><span class="line"> shallowcu_forced_ra = .false.,.false.,.false.,</span><br><span class="line"> numBins             = 21,    21,    21,</span><br><span class="line"> thBinSize           = 0.1,   0.1,   0.1,</span><br><span class="line"> rBinSize            = 0.0001,0.0001,0.0001,</span><br><span class="line"> minDeepFreq         = 0.333, 0.333, 0.333,</span><br><span class="line"> minShallowFreq      = 0.01,  0.01,  0.01, </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** To write out an input file during the model simulation.</span><br><span class="line"></span><br><span class="line">&amp;time_control</span><br><span class="line"> write_input                         = .TRUE.,</span><br><span class="line"> inputout_interval_m                 = 60, 60, 60</span><br><span class="line"> input_outname                       = &quot;wrfinput_out_d&lt;domain&gt;_&lt;date&gt;&quot;</span><br><span class="line"> inputout_begin_h                    = 3, 6, 6</span><br><span class="line"> inputout_end_h                      = 9, 6, 6</span><br><span class="line"></span><br><span class="line">** To use climatological data in Thompson microphysics option 28: in addition to</span><br><span class="line">process additional data in metgrid, use these:</span><br><span class="line"></span><br><span class="line">&amp;domains</span><br><span class="line"> wif_input_opt                       = 1</span><br><span class="line"> num_wif_levels                      = 30</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> mp_physics                          = 28,    28,    28,</span><br><span class="line"> use_aero_icbc                       = .true.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">** The hybrid vertical coordinate (HVC) requires three pieces:</span><br><span class="line">1. The WRF and real codes must be built with HVC activated (./configure -hyb)</span><br><span class="line">2. The eta location (etac) at which the eta levels higher up in the atmosphere</span><br><span class="line">   become isobaric must be defined (suggested default in Registry).</span><br><span class="line">3. The run-time option to select the HVC (hybrid_opt, default is OFF): </span><br><span class="line">&amp;dynamics</span><br><span class="line"> hybrid_opt          = 2,</span><br><span class="line"> etac                = 0.2,</span><br><span class="line"></span><br><span class="line">** New mechanism to specify physics:</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> physics_suite = &#x27;CONUS&#x27;</span><br><span class="line"></span><br><span class="line">which is equivalent to</span><br><span class="line"></span><br><span class="line"> mp_physics         = 8,</span><br><span class="line"> cu_physics         = 6,</span><br><span class="line"> ra_lw_physics      = 4,</span><br><span class="line"> ra_sw_physics      = 4,</span><br><span class="line"> bl_pbl_physics     = 2,</span><br><span class="line"> sf_sfclay_physics  = 2,</span><br><span class="line"> sf_surface_physics = 2,</span><br><span class="line"></span><br><span class="line">&amp;physics</span><br><span class="line"> physics_suite = &#x27;TROPICAL&#x27;</span><br><span class="line"></span><br><span class="line">which is equivalent to</span><br><span class="line"></span><br><span class="line"> mp_physics         = 6,</span><br><span class="line"> cu_physics         = 16,</span><br><span class="line"> ra_lw_physics      = 4,</span><br><span class="line"> ra_sw_physics      = 4,</span><br><span class="line"> bl_pbl_physics     = 1,</span><br><span class="line"> sf_sfclay_physics  = 91,</span><br><span class="line"> sf_surface_physics = 2,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">To overwrite the cu_physics option for a second nest, set </span><br><span class="line"></span><br><span class="line"> &amp;physics</span><br><span class="line"> physics_suite                       = &#x27;tropical&#x27;</span><br><span class="line"> cu_physics                          = -1,    -1,     0,</span><br><span class="line"> ...</span><br></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Yaml/" rel="prev" title="Yaml">
+      <i class="fa fa-chevron-left"></i> Yaml
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/WZCS/" rel="next" title="WZCS">
+      WZCS <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WRF-namelist-%E5%8F%82%E8%80%83"><span class="nav-number">1.</span> <span class="nav-text">WRF namelist 参考</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#From-NOAA"><span class="nav-number">1.1.</span> <span class="nav-text">From NOAA</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">220</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

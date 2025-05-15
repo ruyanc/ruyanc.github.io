@@ -27,12 +27,12 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Linux 安装GCC讲解(在线和无网离线)来源：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xuliangxing&#x2F;p&#x2F;7132018.html 本文主要介绍如何在无网络的环境下怎么离线安装GCC，如果有网，只需要通过命令 yum install gcc 进行安装就可以了，yum会自动把所有关联的依赖包也一起安装了，一键安装。　 1yum install gcc  　　下面介绍两种离线安装G">
 <meta property="og:locale">
-<meta property="og:image" content="https://p.ipic.vip/ehkpfw.png">
+<meta property="og:image" content="https://p.ipic.vip/kh53xd.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-23T11:12:19.845Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.313Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://p.ipic.vip/ehkpfw.png">
+<meta name="twitter:image" content="https://p.ipic.vip/kh53xd.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/GCC/">
 
@@ -232,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-23 19:12:19" itemprop="dateModified" datetime="2023-10-23T19:12:19+08:00">2023-10-23</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -287,7 +287,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 1 #设置光驱挂载点 </span><br><span class="line"> 2 mkdir -p /Application/cdrom </span><br><span class="line"> 3 #挂载光驱 </span><br><span class="line"> 4 mount /dev/cdrom /Application/cdrom  这个是挂载后文件地址，你也可以自己选着路径</span><br><span class="line"> 5 #备份原yum源 </span><br><span class="line"> 6 cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br><span class="line"> 7 #把光驱设为yum源 </span><br><span class="line"> 8 echo &quot;[base]&quot; &gt; /etc/yum.repos.d/CentOS-Base.repo </span><br><span class="line"> 9 echo &quot;name=CentOS-$releasever - Base&quot; &gt;&gt; /etc/yum.repos.d/CentOS-Base.repo </span><br><span class="line">10 echo &quot;baseurl=file:///Application/cdrom/&quot; &gt;&gt; /etc/yum.repos.d/CentOS-Base.repo 还记得你刚刚挂载镜像的地址不，没错，就是它</span><br><span class="line">11 echo &quot;gpgcheck=0&quot; &gt;&gt; /etc/yum.repos.d/CentOS-Base.repo </span><br><span class="line">12 #安装gcc </span><br><span class="line">13 yum install gcc -y </span><br><span class="line">14 #恢复原yum源 </span><br><span class="line">15 cp –f /etc/yum.repos.d/CentOS-Base.repo.bak /etc/yum.repos.d/CentOS-Base.repo </span><br></pre></td></tr></table></figure>
 
 <p>输入命令：gcc -v 查看有没有显示版本信息，如果所示</p>
-<p>　　<img src="https://p.ipic.vip/ehkpfw.png" alt="img"></p>
+<p>　　<img src="https://p.ipic.vip/kh53xd.png" alt="img"></p>
 
     </div>
 
@@ -303,12 +303,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/HPC-stack/" rel="prev" title="HPC-stack">
-      <i class="fa fa-chevron-left"></i> HPC-stack
+    <a href="/2022/05/01/Tool/GitHub/" rel="prev" title="Github">
+      <i class="fa fa-chevron-left"></i> Github
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Google%20Drive/" rel="next" title="Google Drive">
-      Google Drive <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/GPU-OpenACC/" rel="next" title="GPU-OpenACC">
+      GPU-OpenACC <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -383,7 +383,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -421,7 +421,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

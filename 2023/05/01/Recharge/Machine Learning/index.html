@@ -27,66 +27,66 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="Cross-Validation（交叉验证）详解在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法： 1.The Validation Set Approach第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（t">
 <meta property="og:locale">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-577bb114a1073273452cc1c73045e274_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-27f8c5989dd7790ccf6b626e6854e06c_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c6a79e230f946da8aefd793ed57c0454_1440w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-ec72b82d605902ddfa060c2fb5777a05_1440w.webp">
-<meta property="og:image" content="https://pic4.zhimg.com/80/v2-fcb843dd06c15a515d03a543864bbb77_1440w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-daf077823e7faa57c6f4014389fe12b9_1440w.webp">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-7302b5c15dcfc6746b51830b65debf62_1440w.webp">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-44a2d750251c54e0471ce073fc21607a_1440w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-003b9933dc4a0ff6ae1716270d760531_1440w.webp">
-<meta property="og:image" content="https://pic3.zhimg.com/80/v2-f9478d30112a1f76f9745b3c09f9739a_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-c4b66fed30622a0d5d6032918baf6838_1440w.webp">
-<meta property="og:image" content="https://pic4.zhimg.com/80/v2-ecdf00751c34bdac741e715caaacc703_1440w.webp">
-<meta property="og:image" content="https://pic1.zhimg.com/80/v2-b2b56757d4bb9d0f869d9d12491a0f04_1440w.webp">
-<meta property="og:image" content="https://pic2.zhimg.com/80/v2-3fc8cc39375fb250a53bf3cb88b91fe1_1440w.webp">
+<meta property="og:image" content="https://p.ipic.vip/j5nrvl.jpg">
+<meta property="og:image" content="https://p.ipic.vip/opu7kj.jpg">
+<meta property="og:image" content="https://p.ipic.vip/e56w3s.jpg">
+<meta property="og:image" content="https://p.ipic.vip/7983et.jpg">
+<meta property="og:image" content="https://p.ipic.vip/jgviny.jpg">
+<meta property="og:image" content="https://p.ipic.vip/w62vr9.jpg">
+<meta property="og:image" content="https://p.ipic.vip/xxxdjo.jpg">
+<meta property="og:image" content="https://p.ipic.vip/m19xuy.jpg">
+<meta property="og:image" content="https://p.ipic.vip/2l6e34.jpg">
+<meta property="og:image" content="https://p.ipic.vip/ni73qu.jpg">
+<meta property="og:image" content="https://p.ipic.vip/hqvjrh.jpg">
+<meta property="og:image" content="https://p.ipic.vip/4fzybh.jpg">
+<meta property="og:image" content="https://p.ipic.vip/yy9aey.jpg">
+<meta property="og:image" content="https://p.ipic.vip/4k2qyp.jpg">
+<meta property="og:image" content="https://p.ipic.vip/qhtanc.jpg">
 <meta property="og:image" content="https://p.ipic.vip/h8gs2d.png">
 <meta property="og:image" content="https://p.ipic.vip/mrrxt1.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20190821192552318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXdlaXl1eGlhbmc=,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://p.ipic.vip/5y2wbj.png">
 <meta property="og:image" content="https://p.ipic.vip/3qg5la.png">
 <meta property="og:image" content="https://p.ipic.vip/ry75un.png">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEia9Grf0jSwNITdlQRSolfkfctBXbHx9wsQqzxky5t54JEibpRTNXuOYCw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEianRBrxJURJmkiacRMS9D9XlOKGZEHkFQlw6icwWcJzIE5FZnwXXhicBh4g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaGK4LEhNg2RSticeWYOrcRkRLxtQhQr7UIjxcvEnYgJ9Ba0voNDcrzIQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaPfu1NfKsJIWGY565QpgBX5MoJUicNFibUJyCC3CqAib55UunDtFdChp8w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaFkQwvtTyPQzOriaJ1oMUTbfbKsmaMsmzAj9tBeYcC5bLaZn8ibaoqxpQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHOyKxicwFcGia5fdFQiczk7uUl0HXk8maHjkywayGdrxFa4ZmYQ8t3L7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbFjIEyTdcupbHx1aEX3TZqj4RJOldh6JiaPksRicrphzFSCmZo7venwsg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbrvsmg0tx8icB8Lbib6ia7icmia1nZnUW9TmXnE1CsOrmBYL39DYpQKLPia5A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbvy6AoeDv0eOxJjvJePegkkgd2oC5IeSiaPGWXSKZDkRRic7SbQKIicyrw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbfcYYk6iauCtNzNgwDq3k3JQYewiaumUTBkSwxbU3uib8NIWUPZ2z5EBpQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/sbesz0.png">
+<meta property="og:image" content="https://p.ipic.vip/jxd5mo.png">
+<meta property="og:image" content="https://p.ipic.vip/ujpurh.png">
+<meta property="og:image" content="https://p.ipic.vip/qrqql2.png">
+<meta property="og:image" content="https://p.ipic.vip/5puvua.png">
+<meta property="og:image" content="https://p.ipic.vip/wdwso5.png">
+<meta property="og:image" content="https://p.ipic.vip/kp7cy0.png">
+<meta property="og:image" content="https://p.ipic.vip/5q3c2w.png">
+<meta property="og:image" content="https://p.ipic.vip/98yvvg.png">
+<meta property="og:image" content="https://p.ipic.vip/a2xpxj.png">
 <meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHVPFamTWpahINzqcuXGBn32AeiczJYwBLy3aOXJdf4eBkzGAKzY8uKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibb6svMyq82iasFdTmQxicN6BkYUwc85V69e9IVA50ib0Xpsn9DjqmyKaYdA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_jpg/heS6wRSHVMmH3ouv8WpUtDrkE8FMOazoyrVbB6fkXHSib0iaHWsjbibljk1bZlCMdUAuaQNicvnjZxgHprza9tzysQ/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvQCwmvYeDSkMXU6xcrzWLHHI9KwE5aZh068ezeBykjRlb3hy6vqicbFg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvicGkxhiag7vDSp26PXZXTuIMibs2cGfesmsQwvF9BBqODemBSgpA0fSHw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSmfk9yGTNmucSMlfayulmNMeiaSW2y27EgPq7EMsgosLuaWSNJmItnA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv10BZHcojun9nIuGf6QFO9Q1Xib8mCDQeZJdqYQWrVFFYnZesN2k9KcA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5icy4IIztD4jphicLZlXP12sbe2EMqiaPy1xWMqlITNKFNY8bVzowPW3Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSv5X65Ccr7dgpydNrvJucTkvtjlVlL7MNzVsfzfKuVP6kNWibKP95Xw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv7ocmZWkUZem3rFibUzicZTfwRXazzEbhqCJ76dsx5z2OvXbAqkPKIibMg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5L0QDswhHqJXw7JUSKgwgKRTdlvaMHfPcXTeE2eKq7Uetxz36n0ic2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvjrnhdZHyOEohuiaszeDJw32mEKbJovnDQGRytnicfEsd73VH22BrRD6A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv9nmmoEfibtUSfichMZ0sGEvwnxk1FxnssYeicnLvic0C9g95qxlxicicicEUw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv644QLmL0IyENo4lOqX1JuCDVXAQbBxjCfnM3S5oYA9DAfz0Flt2KMA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv4mQthMcDDnib868aP7S53LhpfWvpghIbtEicGXRFCy1YDaYxx3VDeNyg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvHKSibwBM92A3XeXibA00whQrqqQK3w0MiaxwKuqZDZLbowYPriam4oDYibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvMVNianEJia2wm6OyeXwOWia2vqNkCWAf2waQlHic8aAcpicjeEibDiaibyaBgA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvZPHuDIe940ouryeicCcjhyCu2KUwByHmDkz2ZphPESGM22efs37T1jg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SrtJSVicpaROia6fMV9KvMnHQKslicMnibIu9tic1bhksfx5kDzHVFRag0lw/640?wx_fmt=png&wxfrom=13&tp=wxpic">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SCTZPptdBugNHKrUySXZQ1ho7aGL85hvPOj5BC0bqsPicBZG2h6ia7iaCw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2S6bycOEDCJU2AbHD7oI0cSkQflHZ9ibNo3TtIq67FVP8FQibXdss49ALA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SGQ9QicX6ib2VxqDpe63S2B7xSbEuk6j6Worr54I51IBUb6Jk0Iib4Lzww/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2Sc0SuZqkgbgje9jBOWW2OM0Yk20ULhI6GhY3Po9ADRycnCn09G3mHUg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SsI4NLEfWSXTg2waJB0QIlPUggZm0uT8yBcRah6CF0HemTTHYYZicia4A/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
-<meta property="og:image" content="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SElQbgxSUkzTAwSbU7bpLlnM1nnNWGHrTRibgNqicfRAOxmZfz3uuN4vQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1">
+<meta property="og:image" content="https://p.ipic.vip/l6g3b8.png">
+<meta property="og:image" content="https://p.ipic.vip/a01ixo.jpg">
+<meta property="og:image" content="https://p.ipic.vip/dalgsr.jpg">
+<meta property="og:image" content="https://p.ipic.vip/osnhyw.png">
+<meta property="og:image" content="https://p.ipic.vip/je9ku4.png">
+<meta property="og:image" content="https://p.ipic.vip/agl4sn.png">
+<meta property="og:image" content="https://p.ipic.vip/laixus.png">
+<meta property="og:image" content="https://p.ipic.vip/96l3vt.png">
+<meta property="og:image" content="https://p.ipic.vip/mz3bt4.png">
+<meta property="og:image" content="https://p.ipic.vip/zkhxd6.png">
+<meta property="og:image" content="https://p.ipic.vip/ctynpx.png">
+<meta property="og:image" content="https://p.ipic.vip/pjr30s.png">
+<meta property="og:image" content="https://p.ipic.vip/0jv36d.png">
+<meta property="og:image" content="https://p.ipic.vip/mgsydm.png">
+<meta property="og:image" content="https://p.ipic.vip/kn5sqf.png">
+<meta property="og:image" content="https://p.ipic.vip/tv12nm.png">
+<meta property="og:image" content="https://p.ipic.vip/sy8um3.png">
+<meta property="og:image" content="https://p.ipic.vip/ujvm4n.png">
+<meta property="og:image" content="https://p.ipic.vip/pe82gy.png">
+<meta property="og:image" content="https://p.ipic.vip/sj5j8r.png">
+<meta property="og:image" content="https://p.ipic.vip/mqod9w.png">
+<meta property="og:image" content="https://p.ipic.vip/inrqt1.png">
+<meta property="og:image" content="https://p.ipic.vip/333ts2.png">
+<meta property="og:image" content="https://p.ipic.vip/041u5l.png">
 <meta property="article:published_time" content="2023-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-07-28T06:55:39.019Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.264Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp">
+<meta name="twitter:image" content="https://p.ipic.vip/j5nrvl.jpg">
 
 <link rel="canonical" href="http://example.com/2023/05/01/Recharge/Machine%20Learning/">
 
@@ -286,7 +286,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-07-28 14:55:39" itemprop="dateModified" datetime="2023-07-28T14:55:39+08:00">2023-07-28</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -318,32 +318,32 @@
       
         <h2 id="Cross-Validation（交叉验证）详解"><a href="#Cross-Validation（交叉验证）详解" class="headerlink" title="Cross-Validation（交叉验证）详解"></a>Cross-Validation（交叉验证）详解</h2><p>在机器学习里，通常来说我们不能将全部用于数据训练模型，否则我们将没有数据集对该模型进行验证，从而评估我们的模型的预测效果。为了解决这一问题，有如下常用的方法：</p>
 <h3 id="1-The-Validation-Set-Approach"><a href="#1-The-Validation-Set-Approach" class="headerlink" title="1.The Validation Set Approach"></a>1.The Validation Set Approach</h3><p>第一种是最简单的，也是很容易就想到的。我们可以把整个数据集分成两部分，一部分用于训练，一部分用于验证，这也就是我们经常提到的训练集（training set）和测试集（test set）。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-dc2ac40390791ca7f0ccf53cee0d4881_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/j5nrvl.jpg" alt="img"></p>
 <p>例如，如上图所示，我们可以将蓝色部分的数据作为训练集（包含7、22、13等数据），将右侧的数据作为测试集（包含91等），这样通过在蓝色的训练集上训练模型，在测试集上观察不同模型不同参数对应的MSE的大小，就可以合适选择模型和参数了。</p>
 <p>不过，这个简单的方法存在两个弊端。</p>
 <p>1.最终模型与参数的选取将极大程度依赖于你对训练集和测试集的划分方法。什么意思呢？我们再看一张图：</p>
-<p><img src="https://pic1.zhimg.com/80/v2-577bb114a1073273452cc1c73045e274_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/opu7kj.jpg" alt="img"></p>
 <p>右边是十种不同的训练集和测试集划分方法得到的test MSE，可以看到，在不同的划分方法下，test MSE的变动是很大的，而且对应的最优degree也不一样。所以如果我们的训练集和测试集的划分方法不够好，很有可能无法选择到最好的模型与参数。</p>
 <p>2.该方法只用了部分数据进行模型的训练</p>
 <p>我们都知道，当用于模型训练的数据量越大时，训练出来的模型通常效果会越好。所以训练集和测试集的划分意味着我们无法充分利用我们手头已有的数据，所以得到的模型效果也会受到一定的影响。</p>
 <p>基于这样的背景，有人就提出了Cross-Validation方法，也就是交叉验证。</p>
 <h3 id="2-Cross-Validation"><a href="#2-Cross-Validation" class="headerlink" title="2.Cross-Validation"></a>2.Cross-Validation</h3><p><em><strong>2.1 LOOCV</strong></em></p>
 <p>首先，我们先介绍LOOCV方法，即（Leave-one-out cross-validation）。像Test set approach一样，LOOCV方法也包含将数据集分为训练集和测试集这一步骤。但是不同的是，我们现在只用一个数据作为测试集，其他的数据都作为训练集，并将此步骤重复N次（N为数据集的数据数量）。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-27f8c5989dd7790ccf6b626e6854e06c_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/e56w3s.jpg" alt="img"></p>
 <p>如上图所示，假设我们现在有n个数据组成的数据集，那么LOOCV的方法就是每次取出一个数据作为测试集的唯一元素，而其他n-1个数据都作为训练集用于训练模型和调参。结果就是我们最终训练了n个模型，每次都能得到一个MSE。而计算最终test MSE则就是将这n个MSE取平均。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-c6a79e230f946da8aefd793ed57c0454_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/7983et.jpg" alt="img"></p>
 <p>��比起test set approach，LOOCV有很多优点。首先它不受测试集合训练集划分方法的影响，因为每一个数据都单独的做过测试集。同时，其用了n-1个数据训练模型，也几乎用到了所有的数据，保证了模型的bias更小。不过LOOCV的缺点也很明显，那就是计算量过于大，是test set approach耗时的n-1倍。</p>
 <p>为了解决计算成本太大的弊端，又有人提供了下面的式子，使得LOOCV计算成本和只训练一个模型一样快。</p>
-<p><img src="https://pic2.zhimg.com/80/v2-ec72b82d605902ddfa060c2fb5777a05_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/jgviny.jpg" alt="img"></p>
 <p>其中��^表示第i个拟合值，而ℎ�则表示leverage。关于ℎ�的计算方法详见线性回归的部分（以后会涉及）。</p>
 <p><em><strong>2.2 K-fold Cross Validation</strong></em></p>
 <p>另外一种折中的办法叫做K折交叉验证，和LOOCV的不同在于，我们每次的测试集将不再只包含一个数据，而是多个，具体数目将根据K的选取决定。比如，如果K&#x3D;5，那么我们利用五折交叉验证的步骤就是：</p>
 <p>1.将所有数据集分成5份</p>
 <p>2.不重复地每次取其中一份做测试集，用其他四份做训练集训练模型，之后计算该模型在测试集上的����</p>
 <p>3.将5次的����取平均得到最后的MSE</p>
-<p><img src="https://pic4.zhimg.com/80/v2-fcb843dd06c15a515d03a543864bbb77_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/w62vr9.jpg" alt="img"></p>
 <p>不难理解，其实LOOCV是一种特殊的K-fold Cross Validation（K&#x3D;N）。再来看一组图：</p>
-<p><img src="https://pic2.zhimg.com/80/v2-daf077823e7faa57c6f4014389fe12b9_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/xxxdjo.jpg" alt="img"></p>
 <p>每一幅图种蓝色表示的真实的test MSE，而黑色虚线和橙线则分贝表示的是LOOCV方法和10-fold CV方法得到的test MSE。我们可以看到事实上LOOCV和10-fold CV对test MSE的估计是很相似的，但是相比LOOCV，10-fold CV的计算成本却小了很多，耗时更少。</p>
 <p><strong><em>2.3 Bias-Variance Trade-Off for* *k*</em>-Fold Cross-Validation*</strong></p>
 <p>最后，我们要说说K的选取。事实上，和开头给出的文章里的部分内容一样，K的选取是一个Bias和Variance的trade-off。</p>
@@ -351,7 +351,7 @@
 <p>一般来说，根据经验我们一般选择k&#x3D;5或10。</p>
 <p><em><strong>2.4 Cross-Validation on Classification Problems</strong></em></p>
 <p>上面我们讲的都是回归问题，所以用MSE来衡量test error。如果是分类问题，那么我们可以用以下式子来衡量Cross-Validation的test error：</p>
-<p><img src="https://pic3.zhimg.com/80/v2-7302b5c15dcfc6746b51830b65debf62_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/m19xuy.jpg" alt="img"></p>
 <p>其中Erri表示的是第i个模型在第i组测试集上的分类错误的个数。</p>
 <p>图片来源：《An Introduction to Statistical Learning with Applications in R》</p>
 <h2 id="不平衡数据处理"><a href="#不平衡数据处理" class="headerlink" title="不平衡数据处理"></a>不平衡数据处理</h2><p>本文作者用python代码示例解释了3种处理不平衡数据集的可选方法，包括数据层面上的2种重采样数据集方法和算法层面上的1个集成分类器方法。</p>
@@ -360,12 +360,12 @@
 <p><strong>这里</strong></p>
 <p><a href="https://link.zhihu.com/?target=https://www.kaggle.com/mlg-ulb/creditcardfraud">https://www.kaggle.com/mlg-ulb/creditcardfraud</a></p>
 <p>首先，我们先绘制类分布图，查看不平衡情况。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-44a2d750251c54e0471ce073fc21607a_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/2l6e34.jpg" alt="img"></p>
 <p>如你所见，非欺诈交易类型数据数量远远超过欺诈交易类型。如果我们在不解决这个类别不平衡问题的情况下训练了一个二分类模型，那么这个模型完全是有偏差的，稍后我还会向你演示它影响特征相关性的过程并解释其中的原因。</p>
 <p>现在，我们来介绍一些解决类别不平衡问题的技巧，你可以在这里找到完整代码的notebook。</p>
 <p><strong>这里</strong></p>
 <p><a href="https://link.zhihu.com/?target=https://github.com/wmlba/innovate2019/blob/master/Credit_Card_Fraud_Detection.ipynb">https://github.com/wmlba/innovate2019/blob/master/Credit_Card_Fraud_Detection.ipynb</a></p>
-<h3 id="重采样（过采样和欠采样）"><a href="#重采样（过采样和欠采样）" class="headerlink" title="重采样（过采样和欠采样）"></a>重采样（过采样和欠采样）</h3><p><img src="https://pic2.zhimg.com/80/v2-003b9933dc4a0ff6ae1716270d760531_1440w.webp" alt="img"></p>
+<h3 id="重采样（过采样和欠采样）"><a href="#重采样（过采样和欠采样）" class="headerlink" title="重采样（过采样和欠采样）"></a>重采样（过采样和欠采样）</h3><p><img src="https://p.ipic.vip/ni73qu.jpg" alt="img"></p>
 <p>这听起来很直接。欠采样就是一个随机删除一部分多数类（数量多的类型）数据的过程，这样可以使多数类数据数量可以和少数类（数量少的类型）相匹配。一个简单实现代码如下：</p>
 <p># Shuffle the Dataset.</p>
 <p>shuffled_df &#x3D; credit_df.sample(frac&#x3D;1,random_state&#x3D;4)</p>
@@ -382,10 +382,10 @@
 <p>plt.show()</p>
 <p><strong>对多数类进行欠采样</strong></p>
 <p>对数据集进行欠采样之后，我重新画出了类型分布图（如下），可见两个类型的数量相等。</p>
-<p><img src="https://pic3.zhimg.com/80/v2-f9478d30112a1f76f9745b3c09f9739a_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/hqvjrh.jpg" alt="img"></p>
 <p><strong>平衡数据集（欠采样）</strong></p>
 <p>第二种重采样技术叫过采样，这个过程比欠采样复杂一点。它是一个生成合成数据的过程，试图学习少数类样本特征随机地生成新的少数类样本数据。对于典型的分类问题，有许多方法对数据集进行过采样，最常见的技术是SMOTE（Synthetic Minority Over-sampling Technique，合成少数类过采样技术）。简单地说，就是在少数类数据点的特征空间里，根据随机选择的一个K最近邻样本随机地合成新样本。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-c4b66fed30622a0d5d6032918baf6838_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/4fzybh.jpg" alt="img"></p>
 <p><strong>来源</strong></p>
 <p><a href="https://link.zhihu.com/?target=https://imbalanced-learn.readthedocs.io/en/stable/over_sampling.html">https://imbalanced-learn.readthedocs.io/en/stable/over_sampling.html</a></p>
 <p>为了用python编码，我调用了imbalanced-learn 库（或imblearn），实现SMOTE的代码如下：</p>
@@ -408,9 +408,9 @@
 <p>sns.heatmap(corr, cmap&#x3D;’YlGnBu’, annot_kws&#x3D;{‘size’:30}, ax&#x3D;ax)</p>
 <p>ax.set_title(“Imbalanced Correlation Matrix”, fontsize&#x3D;14)</p>
 <p>plt.show()</p>
-<p><img src="https://pic4.zhimg.com/80/v2-ecdf00751c34bdac741e715caaacc703_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/yy9aey.jpg" alt="img"></p>
 <p><strong>重采样之后：</strong></p>
-<p><img src="https://pic1.zhimg.com/80/v2-b2b56757d4bb9d0f869d9d12491a0f04_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/4k2qyp.jpg" alt="img"></p>
 <p>请注意，现在特征相关性更明显了。在解决不平衡问题之前，大多数特征并没有显示出相关性，这肯定会影响模型的性能。除了会关系到整个模型的性能，特征性相关性还会影响ML模型的性能，因此修复类别不平衡问题非常重要。</p>
 <p><strong>会关系到整个模型的性能</strong></p>
 <p><a href="https://link.zhihu.com/?target=https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4">https://towardsdatascience.com/why-feature-correlation-matters-a-lot-847e8ba439c4</a></p>
@@ -450,7 +450,7 @@
 <li>在获取了样本集合之后，每次使用一个样本集合得到一个预测模型，对于n个样本集合来说，我们总共可以得到n个预测模型。</li>
 <li>如果我们需要解决的是分类问题，那么我们可以对前面得到的n个模型采用投票的方式得到分类的结果，对于回归问题来说，我们可以采用计算模型均值的方法来作为最终预测的结果。</li>
 </ol>
-<p><img src="https://pic2.zhimg.com/80/v2-3fc8cc39375fb250a53bf3cb88b91fe1_1440w.webp" alt="img"></p>
+<p><img src="https://p.ipic.vip/qhtanc.jpg" alt="img"></p>
 <p>特点在于随机采样，那么什么是随机采样（自组采样）呢？<br><strong>随机采样（bootstrap sample）从n个数据点中有放回</strong>地<strong>重复随机抽取</strong>一个样本（即同一个样本可被多次抽取），共抽取n次。创建一个与原数据大小相同得数据集，但有些数据点会缺失（大约1&#x2F;3），有些会重复。<br>举例说明：<br>原数据集：[‘a’, ‘b’, ‘c’, ‘d’]<br>随机采样1：[‘c’, ‘d’, ‘c’, ‘a’]<br>随机采样2：[‘d’, ‘d’, ‘a’, ‘b’]<br>…<br>对于缺失得数据点我们常常称之为袋外数据(Out Of Bag, 简称OOB)。这些数据没有参与训练集模型的拟合，因此可以用来检测模型的泛化能力。</p>
 <p><strong>bagging的集合策略</strong>也比较简单，对于分类问题，通常使用简单投票法，得到最多票数的类别或者类别之一为最终的模型输出。对于回归问题，通常使用简单平均法，对T个弱学习器得到的回归结果进行算术平均得到最终的模型输出。</p>
 <h2 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h2><h3 id="正则化的作用"><a href="#正则化的作用" class="headerlink" title="正则化的作用"></a>正则化的作用</h3><p>正则化的主要作用是防止过拟合，对模型添加正则化项可以限制模型的复杂度，使得模型在复杂度和性能达到平衡。<br>常用的正则化方法有L1正则化和L2正则化。L1正则化和L2正则化可以看做是损失函数的惩罚项。所谓『惩罚』是指对损失函数中的某些参数做一些限制。 L1正则化的模型建叫做Lasso回归，使用L2正则化的模型叫做Ridge回归（岭回归。但是使用正则化来防止过拟合的原理是什么？L1和L2正则化有什么区别呢？</p>
@@ -464,7 +464,7 @@
 <p><img src="https://p.ipic.vip/h8gs2d.png" alt="Screenshot 2023-06-09 at 10.49.27"></p>
 <p><img src="https://p.ipic.vip/mrrxt1.png" alt="Screenshot 2023-06-09 at 10.49.42"></p>
 <p>在二维平面上绘制以上两个式子的图像，可得L1约束的范围是一个顶点在坐标轴上的菱形，L2约束的范围是一个圆形。</p>
-<p><img src="https://img-blog.csdnimg.cn/20190821192552318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xpdXdlaXl1eGlhbmc=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://p.ipic.vip/5y2wbj.png" alt="在这里插入图片描述"></p>
 <p>上面的图，左面是L2约束下解空间的图像，右面是L1约束下解空间的图像。</p>
 <p>蓝色的圆圈表示损失函数的等值线。同一个圆上的损失函数值相等的，圆的半径越大表示损失值越大，由外到内，损失函数值越来越小，中间最小。</p>
 <p>如果没有L1和L2正则化约束的话，w1和w2是可以任意取值的，损失函数可以优化到中心的最小值的，此时中心对应的w1和w2的取值就是模型最终求得的参数。</p>
@@ -482,12 +482,12 @@
 <p><strong>1.防止过拟合</strong></p>
 <p>机器学习算法的泛化误差可以分为偏差(Bias)和方差(Variance)两部分。偏差指的是算法的期望预测与真实预测之间的偏差程度，反应了模型本身的拟合能力；方差度量了同等大小的训练集的变动导致学习性能的变化，刻画了数据扰动所导致的影响。</p>
 <p>如图10-9所示，随着机器学习的模型复杂度增加，偏差越来越小，但方差却越来越大，而当模型越简单时，模型的方差很小，偏差却往往越大，也就是说，高方差导致过拟合，而高偏差导致欠拟合。</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEia9Grf0jSwNITdlQRSolfkfctBXbHx9wsQqzxky5t54JEibpRTNXuOYCw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/sbesz0.png" alt="Image"></p>
 <p>图10-9 机器学习方差和偏差</p>
 <p>XGBoost有效解决了过拟合问题，对叶节点的权重进行了惩罚，防止过拟合，惩罚相当于添加了正则项，即目标函数为：训练损失加上正则项。</p>
 <p><strong>2.采用二阶泰勒展开加快收敛</strong></p>
 <p>GBDT的损失函数用了一阶收敛，用到了梯度下降，XGBoost的方法是用牛顿法进行二阶收敛，即将损失函数做二阶泰勒展开，使用前两阶作为改进的残差。梯度下降法是用了目标函数的一阶偏导数，而牛顿法就是用用了目标函数的二阶偏导数，二阶偏导数考虑了梯度的变化趋势，所以牛顿法会更容易收敛。图10-10显示了牛顿法(左)和梯度下降法(右)的迭代路径，可以发现，左边的路径更符合最优下降路径。使用二阶收敛，这也是XGBoost加快收敛的原因。</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEianRBrxJURJmkiacRMS9D9XlOKGZEHkFQlw6icwWcJzIE5FZnwXXhicBh4g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/jxd5mo.png" alt="Image"></p>
 <p>图10-10 牛顿法(左)和梯度下降法(右)</p>
 <p><strong>3.树构造的分裂条件采用导数统计量</strong></p>
 <p>在寻找最佳分割点时，XGBoost 也实现了一种完全搜索式的精确的贪心算法(Exact Greedy Algorithm)。这种搜索算法会遍历一个特征上所有可能的分裂点，分别计算其损失减小量，然后选择最优的分裂点。根据结构分数的增益情况计算出来选择哪个特征的哪个分割点，某个特征的重要性，就是它在所有树中出现的次数之和。即增益(Gain)计算完了之后会选择一个增益最高的特征来分裂，然后这个特征的重要性加1。</p>
@@ -514,10 +514,10 @@
 <p>则：</p>
 <p>并且得到相对应的最优目标函数值：</p>
 <p>以图10-11为例：</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaGK4LEhNg2RSticeWYOrcRkRLxtQhQr7UIjxcvEnYgJ9Ba0voNDcrzIQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/ujpurh.png" alt="Image"></p>
 <p>图10-11 决策树案例</p>
 <p>根据已知的数据，得到相应的参数如图10-12：</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaPfu1NfKsJIWGY565QpgBX5MoJUicNFibUJyCC3CqAib55UunDtFdChp8w/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/qrqql2.png" alt="Image"></p>
 <p>图10-12 决策树参数</p>
 <p>图10-12的数据，，根据公式(10.30)，则：</p>
 <p>$分数越小，代表这个树的结构越好。</p>
@@ -529,7 +529,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/87HjJEl4c1siakayfOPQ1OrmZuDqoFnEiaFkQwvtTyPQzOriaJ1oMUTbfbKsmaMsmzAj9tBeYcC5bLaZn8ibaoqxpQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></td>
+<td align="left"><img src="https://p.ipic.vip/5puvua.png" alt="Image"></td>
 </tr>
 </tbody></table>
 <p>算法思路：</p>
@@ -542,7 +542,7 @@
 <p>(3) XGBoost与GDBT都是逐次迭代来提高模型性能，但是XGBoost在选取最佳分割点时可以开启多线程进行，大大提高了运行速度。当然，后续微软又出了LightGBM，在内存占用和运行速度上又做了不少优化，但是从算法本身来说，优化点则并没有比XGBoost多。</p>
 <h2 id="XGBoost在地学中的应用及原理解析"><a href="#XGBoost在地学中的应用及原理解析" class="headerlink" title="XGBoost在地学中的应用及原理解析"></a>XGBoost在地学中的应用及原理解析</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p><strong>XGBoost</strong>（eXtreme Gradient Boosting）是一种非常流行的机器学习算法，被广泛应用于数据分析和预测任务中。它之所以受到欢迎，是因为它能够有效地处理各种复杂的问题，并提供准确的预测结果，正被广泛运用于地学研究中。</p>
 <h4 id="原理解析"><a href="#原理解析" class="headerlink" title="原理解析"></a>原理解析</h4><p><strong>核心原理</strong>：XGBoost的核心原理是在每一轮迭代中，根据之前弱分类器的表现来调整样本的权重，使得模型能够更加关注错误分类的样本，从而减少整体的误差。</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHOyKxicwFcGia5fdFQiczk7uUl0HXk8maHjkywayGdrxFa4ZmYQ8t3L7g/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/wdwso5.png" alt="Image"></p>
 <p><strong>举个例子</strong>：XGBoost的工作原理可以用一个简单的比喻来解释：就像训练一支强大的军队一样。初始时，我们有一些弱小的士兵（决策树），它们只能做出简单的决策。但通过反复训练和提升，我们能够让这些士兵逐渐变得更加聪明和强大。</p>
 <p>此外，XGBoost使用了一种特殊的目标函数，即损失函数的二阶泰勒展开，并采用近似贪婪算法对损失函数进行近似计算，快速找到每次迭代中最优的分裂点，从而减少了计算复杂度。同时，XGBoost引入了正则化技术和并行计算技术，提高了泛化能力，加快了训练速度。</p>
 <p><strong>优势与特点</strong></p>
@@ -552,16 +552,16 @@
 <p><strong>（4）可解释性</strong>：XGBoost提供了丰富的模型解释能力，可以输出特征重要性排名、节点分裂方式和模型预测的解释，有助于用户理解模型的决策过程，并为业务问题提供可解释的结果。</p>
 <h4 id="在地理学中典型的应用"><a href="#在地理学中典型的应用" class="headerlink" title="在地理学中典型的应用"></a>在地理学中典型的应用</h4><p><strong>（1）生态旅游适宜性评价</strong></p>
 <p>参考文献：黄钦,谭翠,杨波.基于XGBoost算法的亚热带地区生态旅游适宜性评价方法研究[J&#x2F;OL].地球信息科学学报.</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbFjIEyTdcupbHx1aEX3TZqj4RJOldh6JiaPksRicrphzFSCmZo7venwsg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbrvsmg0tx8icB8Lbib6ia7icmia1nZnUW9TmXnE1CsOrmBYL39DYpQKLPia5A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/kp7cy0.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/5q3c2w.png" alt="Image"></p>
 <p><strong>（2）大气污染反演</strong></p>
 <p>参考文献：胡占占,陈传法,胡保健.基于时空XGBoost的中国区域PM2.5浓度遥感反演[J].环境科学学报,2021,41(10).</p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbvy6AoeDv0eOxJjvJePegkkgd2oC5IeSiaPGWXSKZDkRRic7SbQKIicyrw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbfcYYk6iauCtNzNgwDq3k3JQYewiaumUTBkSwxbU3uib8NIWUPZ2z5EBpQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/98yvvg.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/a2xpxj.png" alt="Image"></p>
 <p><strong>（3）地灾风险分析</strong></p>
 <p>参考文献：张福浩,朱月月,赵习枝等.地理因子支持下的滑坡隐患点空间分布特征及识别研究[J].武汉大学学报(信息科学版),2020,45(08).</p>
 <p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibbHVPFamTWpahINzqcuXGBn32AeiczJYwBLy3aOXJdf4eBkzGAKzY8uKg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
-<p><img src="https://mmbiz.qpic.cn/sz_mmbiz_png/gGz97SeibVTPFxDRyfcMPukdjsI3hwbibb6svMyq82iasFdTmQxicN6BkYUwc85V69e9IVA50ib0Xpsn9DjqmyKaYdA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/l6g3b8.png" alt="Image"></p>
 <h2 id="LightGBM模型详解"><a href="#LightGBM模型详解" class="headerlink" title="LightGBM模型详解"></a>LightGBM模型详解</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">来源：数据科学与人工智能本文约4500字，建议阅读8分钟本文介绍了LightGBM的模型详解。</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -580,7 +580,7 @@
 <li>支持直接使用category特征</li>
 </ul>
 <p>下图是一组实验数据，在这份实验中，LightGBM 比 XGBoost 快将近 10 倍，内存占用率大约为 XGBoost 的 1&#x2F;6，准确率也略有提升。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/heS6wRSHVMmH3ouv8WpUtDrkE8FMOazoyrVbB6fkXHSib0iaHWsjbibljk1bZlCMdUAuaQNicvnjZxgHprza9tzysQ/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/a01ixo.jpg" alt="Image"></p>
 <h3 id="1-LightGBM动机"><a href="#1-LightGBM动机" class="headerlink" title="1. LightGBM动机"></a>1. LightGBM动机</h3><p>互联网领域的算法应用，通常背后都有海量的大数据。深度学习中一系列神经网络算法，都是以mini-batch的方式喂数据迭代训练的，总训练数据量不受内存限制。</p>
 <p>但我们用到的机器学习算法，比如 GBDT在每一次迭代的时候，都需要遍历整个训练数据多次。</p>
 <ul>
@@ -590,19 +590,19 @@
 <p>面对工业级海量的数据，普通的 GBDT 算法无法满足需求。LightGBM 提出的主要原因之一，就是为了解决上述大数据量级下的 GBDT 训练问题，以便工业实践中能支撑大数据量并保证效率。</p>
 <h3 id="2-XGBoost优缺点"><a href="#2-XGBoost优缺点" class="headerlink" title="2. XGBoost优缺点"></a>2. XGBoost优缺点</h3><p>我们之前介绍过强大的 XGBoost，但 XGBoost 也依旧存在一些缺点，LightGBM 针对其中的一部分进行了调整优化。XGB 优缺点归纳如下：</p>
 <h4 id="1）精确贪心算法"><a href="#1）精确贪心算法" class="headerlink" title="1）精确贪心算法"></a>1）精确贪心算法</h4><p>轮迭代时，都需要遍历整个训练数据多次。如果把整个训练数据装进内存则会限制训练数据的大小；如果不装进内存，反复地读写训练数据又会消耗非常大的时间。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvQCwmvYeDSkMXU6xcrzWLHHI9KwE5aZh068ezeBykjRlb3hy6vqicbFg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/dalgsr.jpg" alt="Image"></p>
 <ul>
 <li>优点：可以找到精确的划分条件。</li>
 <li>缺点：计算量巨大、内存占用巨大、易产生过拟合。</li>
 </ul>
-<h4 id="2）Level-wise生长方式"><a href="#2）Level-wise生长方式" class="headerlink" title="2）Level-wise生长方式"></a>2）Level-wise生长方式</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvicGkxhiag7vDSp26PXZXTuIMibs2cGfesmsQwvF9BBqODemBSgpA0fSHw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<h4 id="2）Level-wise生长方式"><a href="#2）Level-wise生长方式" class="headerlink" title="2）Level-wise生长方式"></a>2）Level-wise生长方式</h4><p><img src="https://p.ipic.vip/osnhyw.png" alt="Image"></p>
 <p>XGBoost 采用 Level-wise 的增长策略：基于层进行生长，直到达到停止条件。这种增长策略方便并行计算每一层的分裂节点，提高了训练速度，但同时也因为节点增益过小增加了很多不必要的分裂，增加了计算量。</p>
 <ul>
 <li>优点：可以使用多线程、可以加速精确贪心算法。</li>
 <li>缺点：效率低下，可能产生不必要的叶结点。</li>
 </ul>
 <h4 id="3）对cache优化不友好"><a href="#3）对cache优化不友好" class="headerlink" title="3）对cache优化不友好"></a>3）对cache优化不友好</h4><p>在预排序后，特征对梯度的访问是一种随机访问，并且不同的特征访问的顺序不一样，无法对 cache 进行优化。同时，在每一层长树的时候，需要随机访问一个行索引到叶子索引的数组，并且不同特征访问的顺序也不一样，也会造成较大的 cache miss。</p>
-<h3 id="3-LightGBM优化点"><a href="#3-LightGBM优化点" class="headerlink" title="3.LightGBM优化点"></a>3.LightGBM优化点</h3><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSmfk9yGTNmucSMlfayulmNMeiaSW2y27EgPq7EMsgosLuaWSNJmItnA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<h3 id="3-LightGBM优化点"><a href="#3-LightGBM优化点" class="headerlink" title="3.LightGBM优化点"></a>3.LightGBM优化点</h3><p><img src="https://p.ipic.vip/je9ku4.png" alt="Image"></p>
 <p>上个部分其实也是 LightGBM 作者们，构建新算法时着重优化的点。概括来说，LightGBM 主要有以下特点：</p>
 <ul>
 <li>基于 Histogram 的决策树算法</li>
@@ -624,7 +624,7 @@
 <li>由于需要对特征进行预排序并且需要保存排序后的索引值（为了后续快速的计算分裂点），因此内存需要训练数据的两倍。</li>
 <li>在遍历每一个分割点的时候，都需要进行分裂增益的计算，消耗的代价大。</li>
 </ul>
-<h4 id="2）LightGBM：直方图算法"><a href="#2）LightGBM：直方图算法" class="headerlink" title="2）LightGBM：直方图算法"></a>2）LightGBM：直方图算法</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv10BZHcojun9nIuGf6QFO9Q1Xib8mCDQeZJdqYQWrVFFYnZesN2k9KcA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<h4 id="2）LightGBM：直方图算法"><a href="#2）LightGBM：直方图算法" class="headerlink" title="2）LightGBM：直方图算法"></a>2）LightGBM：直方图算法</h4><p><img src="https://p.ipic.vip/agl4sn.png" alt="Image"></p>
 <p>LightGBM 使用的是直方图算法（histogram algorithm），占用的内存更低，数据分割的复杂度更低。直方图算法思想是：</p>
 <ul>
 <li>将连续的浮点特征离散成 k 个离散值，并构造宽度为 k 的 Histogram。</li>
@@ -632,13 +632,13 @@
 <li>在进行特征选择时，只需要根据直方图的离散值，遍历寻找最优的分割点。</li>
 </ul>
 <p><strong>（1）内存优化</strong></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5icy4IIztD4jphicLZlXP12sbe2EMqiaPy1xWMqlITNKFNY8bVzowPW3Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/laixus.png" alt="Image"></p>
 <p>直方图算法可以很大程度降低内存消耗，它不仅不需要额外存储预排序的结果，还可以只保存特征离散化后的值（一般用8位整型存储就足够了）。</p>
 <p>如图所示，用8位整型存储，内存消耗可以降低为原来的1&#x2F;8。</p>
 <p><strong>（2）计算量优化</strong></p>
 <p>应用直方图算法，计算代价也大幅降低，预排序算法每遍历一个特征值就需要计算一次分裂的增益，而直方图算法只需要计算 k 次（k可以认为是常数），时间复杂度从 O(#data*#feature) 直接优化到 O(k#*features)。</p>
 <p><strong>（3）注意点</strong></p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvSv5X65Ccr7dgpydNrvJucTkvtjlVlL7MNzVsfzfKuVP6kNWibKP95Xw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/96l3vt.png" alt="Image"></p>
 <p>直方图算法的理解和注意点如下：</p>
 <ul>
 <li>使用分桶 bin 替代原始数据相当于增加了正则化。</li>
@@ -655,14 +655,14 @@
 </ul>
 <p>Histogram 算法还可以进一步加速。一个叶子节点的 Histogram 可以直接由父节点的 Histogram 和兄弟节点的 Histogram 做差得到。一般情况下，构造 Histogram 需要遍历该叶子上的所有数据，通过该方法，只需要遍历 Histogram 的 k 个捅。速度提升了一倍。</p>
 <h3 id="5-决策树生长策略"><a href="#5-决策树生长策略" class="headerlink" title="5.决策树生长策略"></a>5.决策树生长策略</h3><h4 id="1）树生长策略调整"><a href="#1）树生长策略调整" class="headerlink" title="1）树生长策略调整"></a>1）树生长策略调整</h4><p>直方图算法之上，LightGBM 进行进一步的优化。它没有使用大多数GBDT工具使用的按层生长（Level-wise）的决策树生长策略，而使用了带有深度限制的按叶子生长（Leaf-wise）算法。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv7ocmZWkUZem3rFibUzicZTfwRXazzEbhqCJ76dsx5z2OvXbAqkPKIibMg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/mz3bt4.png" alt="Image"></p>
 <h4 id="2）XGBoost：Level-wise"><a href="#2）XGBoost：Level-wise" class="headerlink" title="2）XGBoost：Level-wise"></a>2）XGBoost：Level-wise</h4><p>XGBoost采用的是Level-wise（按层生长）策略生长的，能够同时分裂同一层的叶子，从而进行多线程优化，不容易过拟合。</p>
 <p>但不加区分的对待同一层的叶子，带来了很多没必要的开销。因为实际上很多叶子的分裂增益较低，没必要进行搜索和分裂。</p>
 <h4 id="3）LightGBM：Leaf-wise"><a href="#3）LightGBM：Leaf-wise" class="headerlink" title="3）LightGBM：Leaf-wise"></a>3）LightGBM：Leaf-wise</h4><p>LightGBM采用Leaf-wise（按叶子生长）生长策略，每次从当前所有叶子中找到分裂增益最大（一般也是数据量最大）的一个叶子，然后分裂，如此循环。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv5L0QDswhHqJXw7JUSKgwgKRTdlvaMHfPcXTeE2eKq7Uetxz36n0ic2Q/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/zkhxd6.png" alt="Image"></p>
 <p>同Level-wise相比，在分裂次数相同的情况下，Leaf-wise可以降低更多的误差，得到更好的精度。Leaf-wise的缺点是可能会长出比较深的决策树，产生过拟合。因此LightGBM在Leaf-wise之上增加了一个最大深度的限制，在保证高效率的同时防止过拟合。</p>
 <h3 id="6-直方图差加速"><a href="#6-直方图差加速" class="headerlink" title="6.直方图差加速"></a>6.直方图差加速</h3><p>LightGBM 另一个优化是 Histogram（直方图）做差加速。整个构建过程中可以观察到：一个叶子的直方图可以由它的父亲节点的直方图与它兄弟的直方图做差得到。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvjrnhdZHyOEohuiaszeDJw32mEKbJovnDQGRytnicfEsd73VH22BrRD6A/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/ctynpx.png" alt="Image"></p>
 <p>一般来说构造直方图，需要遍历该叶子上的所有数据，但直方图做差仅需遍历直方图的 k 个桶。利用上述特征，LightGBM 可以在构造一个叶子的直方图后，可以用非常微小的代价得到它兄弟叶子的直方图，在速度上可以提升一倍。</p>
 <h3 id="7-类别型特征支持"><a href="#7-类别型特征支持" class="headerlink" title="7.类别型特征支持"></a>7.类别型特征支持</h3><p>大多数机器学习工具都无法直接支持类别型特征，我们会先将其编码再做后续建模，如果使用 one-hot 这种编码方式还会降低空间和时间效率。</p>
 <p>LightGBM优化了对类别型特征的支持，可以直接输入类别特征，不需要额外的编码或 one-hot 0&#x2F;1 展开。并在决策树算法上增加了类别型特征的决策规则。</p>
@@ -671,18 +671,18 @@
 <p>使用one-hot编码的话，意味着在每一个决策节点上只能使用one vs rest（例如是不是男性，是不是一线城市等）的切分方式。当类别值很多时，每个类别上的数据可能会比较少，这时候切分会产生不平衡，这意味着切分增益也会很小。</p>
 <p><strong>问题2：影响决策树的学习。</strong></p>
 <p>就算可以在这个类别特征进行切分，也会把数据切分到很多零碎的小空间上，如下左图所示。而决策树学习时利用的是统计信息，在这些数据量小的空间上，统计信息不准确，学习会变差。但如果使用下右图的分裂方式，数据会被切分到两个比较大的空间，进一步的学习也会更好。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv9nmmoEfibtUSfichMZ0sGEvwnxk1FxnssYeicnLvic0C9g95qxlxicicicEUw/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/pjr30s.png" alt="Image"></p>
 <p>圈中的数值表示该结点内的数据。右图中叶子节点 X&#x3D;A || X&#x3D;C 的含义是 X&#x3D;A 或者 X&#x3D;C 放到左孩子，其余放到右孩子。</p>
 <h4 id="2）LightGBM类别型特征处理方式"><a href="#2）LightGBM类别型特征处理方式" class="headerlink" title="2）LightGBM类别型特征处理方式"></a>2）LightGBM类别型特征处理方式</h4><p>LightGBM 采用了 Many vs Many 的切分方式解决 one-hot 编码带来的问题，实现了类别特征的最优切分。用LightGBM可以直</p>
 <p>接输入类别特征，并产生上右图的效果。在 1 个 维的类别特征中寻找最优切分，朴素的枚举算法的复杂度是 ，而 LightGBM 采用了如 On Grouping For Maximum Homogeneity 的方法实现了 的算法。</p>
 <p>算法流程如图所示：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv644QLmL0IyENo4lOqX1JuCDVXAQbBxjCfnM3S5oYA9DAfz0Flt2KMA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/0jv36d.png" alt="Image"></p>
 <ul>
 <li>①在枚举分割点之前，先把直方图按每个类别的均值进行排序。</li>
 <li>②接着按照均值的结果依次枚举最优分割点。</li>
 </ul>
 <p>从下图可以看到，Sum(y)&#x2F;Count(y)为类别的均值。当然，这个方法很容易过拟合，所以在 LightGBM中 加入了很多对这个方法的约束和正则化。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkv4mQthMcDDnib868aP7S53LhpfWvpghIbtEicGXRFCy1YDaYxx3VDeNyg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/mgsydm.png" alt="Image"></p>
 <p>求解类别型特征的最优切分的具体流程如下：</p>
 <p>① 离散特征建立直方图的过程</p>
 <p>统计该特征下每一种离散值出现的次数，并从高到低排序，并过滤掉出现次数较少的特征值。然后为每一个特征值，建立一个 bin 容器，对于在bin容器内出现次数较少的特征值直接过滤掉，不建立 bin 容器。</p>
@@ -705,19 +705,19 @@
 <li>特征并行：在不同机器在不同的特征集合上分别寻找最优的分割点，然后在机器间同步最优的分割点。</li>
 <li>数据并行：让不同的机器先在本地构造直方图，然后进行全局的合并，最后在合并的直方图上面寻找最优分割点。</li>
 </ul>
-<h4 id="1）特征并行"><a href="#1）特征并行" class="headerlink" title="1）特征并行"></a>1）特征并行</h4><p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvHKSibwBM92A3XeXibA00whQrqqQK3w0MiaxwKuqZDZLbowYPriam4oDYibQ/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<h4 id="1）特征并行"><a href="#1）特征并行" class="headerlink" title="1）特征并行"></a>1）特征并行</h4><p><img src="https://p.ipic.vip/kn5sqf.png" alt="Image"></p>
 <p>LightGBM 在特征并行算法中，通过在本地保存全部数据避免对数据切分结果的通信。</p>
 <h4 id="2）数据并行"><a href="#2）数据并行" class="headerlink" title="2）数据并行"></a>2）数据并行</h4><p>Lightgbm 在数据并行中使用分散规约（Reduce scatter）把直方图合并的任务分摊到不同的机器，降低通信和计算，并利用直方图做差，进一步减少了一半的通信量。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvMVNianEJia2wm6OyeXwOWia2vqNkCWAf2waQlHic8aAcpicjeEibDiaibyaBgA/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/tv12nm.png" alt="Image"></p>
 <p>基于投票的数据并行则进一步优化数据并行中的通信代价，使通信代价变成常数级别。在数据量很大的时候，使用投票并行可以得到非常好的加速效果。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/dqVy90DEgE0RfZqDwPG8gv8gTB3JyIkvZPHuDIe940ouryeicCcjhyCu2KUwByHmDkz2ZphPESGM22efs37T1jg/640?wx_fmt=png&wxfrom=5&wx_lazy=1&wx_co=1&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/sy8um3.png" alt="Image"></p>
 <h2 id="注意力机制"><a href="#注意力机制" class="headerlink" title="注意力机制"></a>注意力机制</h2><p>在整个注意力过程中，模型会学习了三个权重:查询、键和值。查询、键和值的思想来源于信息检索系统。所以我们先理解数据库查询的思想。</p>
 <p>假设有一个数据库，里面有所有一些作家和他们的书籍信息。现在我想读一些Rabindranath写的书：</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SrtJSVicpaROia6fMV9KvMnHQKslicMnibIu9tic1bhksfx5kDzHVFRag0lw/640?wx_fmt=png&wxfrom=13&tp=wxpic" alt="Image"></p>
+<p><img src="https://p.ipic.vip/ujvm4n.png" alt="Image"></p>
 <p>在数据库中，作者名字类似于键，图书类似于值。查询的关键词Rabindranath是这个问题的键。所以需要计算查询和数据库的键(数据库中的所有作者)之间的相似度，然后返回最相似作者的值(书籍)。</p>
 <p>同样，注意力有三个矩阵，分别是查询矩阵(Q)、键矩阵(K)和值矩阵(V)。它们中的每一个都具有与输入嵌入相同的维数。模型在训练中学习这些度量的值。</p>
 <p>我们可以假设我们从每个单词中创建一个向量，这样我们就可以处理信息。对于每个单词，生成一个512维的向量。所有3个矩阵都是512x512(因为单词嵌入的维度是512)。对于每个标记嵌入，我们将其与所有三个矩阵(Q, K, V)相乘，每个标记将有3个长度为512的中间向量。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SCTZPptdBugNHKrUySXZQ1ho7aGL85hvPOj5BC0bqsPicBZG2h6ia7iaCw/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/pe82gy.png" alt="Image"></p>
 <p>接下来计算分数，它是查询和键向量之间的点积。分数决定了当我们在某个位置编码单词时，对输入句子的其他部分的关注程度。</p>
 <p>然后将点积除以关键向量维数的平方根。这种缩放是为了防止点积变得太大或太小(取决于正值或负值)，因为这可能导致训练期间的数值不稳定。选择比例因子是为了确保点积的方差近似等于1。</p>
 <p>然后通过softmax操作传递结果。这将分数标准化：它们都是正的，并且加起来等于1。softmax输出决定了我们应该从不同的单词中获取多少信息或特征(值)，也就是在计算权重。</p>
@@ -725,9 +725,9 @@
 <p>最后一步就是计算softmax与这些值的乘积，并将它们相加。</p>
 <h4 id="可视化图解"><a href="#可视化图解" class="headerlink" title="可视化图解"></a>可视化图解</h4><p>上面逻辑都是文字内容，看起来有一些枯燥，下面我们可视化它的矢量化实现。这样可以更加深入的理解。</p>
 <p>查询键和矩阵的计算方法如下</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2S6bycOEDCJU2AbHD7oI0cSkQflHZ9ibNo3TtIq67FVP8FQibXdss49ALA/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/sj5j8r.png" alt="Image"></p>
 <p>同样的方法可以计算键向量和值向量。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SGQ9QicX6ib2VxqDpe63S2B7xSbEuk6j6Worr54I51IBUb6Jk0Iib4Lzww/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2Sc0SuZqkgbgje9jBOWW2OM0Yk20ULhI6GhY3Po9ADRycnCn09G3mHUg/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/mqod9w.png" alt="Image"><img src="https://p.ipic.vip/inrqt1.png" alt="Image"></p>
 <p>最后计算得分和注意力输出。</p>
 <p>![Image](data:image&#x2F;svg+xml,%3C%3Fxml version&#x3D;’1.0’ encoding&#x3D;’UTF-8’%3F%3E%3Csvg width&#x3D;’1px’ height&#x3D;’1px’ viewBox&#x3D;’0 0 1 1’ version&#x3D;’1.1’ xmlns&#x3D;’<a target="_blank" rel="noopener" href="http://www.w3.org/2000/svg&#39;">http://www.w3.org/2000/svg&#39;</a> xmlns:xlink&#x3D;’<a target="_blank" rel="noopener" href="http://www.w3.org/1999/xlink&#39;%3E%3Ctitle%3E%3C/title%3E%3Cg">http://www.w3.org/1999/xlink&#39;%3E%3Ctitle%3E%3C/title%3E%3Cg</a> stroke&#x3D;’none’ stroke-width&#x3D;’1’ fill&#x3D;’none’ fill-rule&#x3D;’evenodd’ fill-opacity&#x3D;’0’%3E%3Cg transform&#x3D;’translate(-249.000000, -126.000000)’ fill&#x3D;’%23FFFFFF’%3E%3Crect x&#x3D;’249’ y&#x3D;’126’ width&#x3D;’1’ height&#x3D;’1’%3E%3C&#x2F;rect%3E%3C&#x2F;g%3E%3C&#x2F;g%3E%3C&#x2F;svg%3E)</p>
 <h4 id="简单代码实现"><a href="#简单代码实现" class="headerlink" title="简单代码实现"></a>简单代码实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"> <span class="keyword">import</span> torch.nn <span class="keyword">as</span> nn</span><br><span class="line"> <span class="keyword">from</span> typing <span class="keyword">import</span> <span class="type">List</span></span><br><span class="line"> </span><br><span class="line"> <span class="keyword">def</span> <span class="title function_">get_input_embeddings</span>(<span class="params">words: <span class="type">List</span>[<span class="built_in">str</span>], embeddings_dim: <span class="built_in">int</span></span>):</span><br><span class="line">     <span class="comment"># we are creating random vector of embeddings_dim size for each words</span></span><br><span class="line">     <span class="comment"># normally we train a tokenizer to get the embeddings.</span></span><br><span class="line">     <span class="comment"># check the blog on tokenizer to learn about this part</span></span><br><span class="line">     embeddings = [torch.randn(embeddings_dim) <span class="keyword">for</span> word <span class="keyword">in</span> words]</span><br><span class="line">     <span class="keyword">return</span> embeddings</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> text = <span class="string">&quot;I should sleep now&quot;</span></span><br><span class="line"> words = text.split(<span class="string">&quot; &quot;</span>)</span><br><span class="line"> <span class="built_in">len</span>(words) <span class="comment"># 4</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> embeddings_dim = <span class="number">512</span> <span class="comment"># 512 dim because the original paper uses it. we can use other dim also</span></span><br><span class="line"> embeddings = get_input_embeddings(words, embeddings_dim=embeddings_dim)</span><br><span class="line"> embeddings[<span class="number">0</span>].shape <span class="comment"># torch.Size([512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># initialize the query, key and value metrices</span></span><br><span class="line"> query_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> key_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> value_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> query_matrix.weight.shape, key_matrix.weight.shape, value_matrix.weight.shape <span class="comment"># torch.Size([512, 512]), torch.Size([512, 512]), torch.Size([512, 512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># query, key and value vectors computation for each words embeddings</span></span><br><span class="line"> query_vectors = torch.stack([query_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> key_vectors = torch.stack([key_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> value_vectors = torch.stack([value_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> query_vectors.shape, key_vectors.shape, value_vectors.shape <span class="comment"># torch.Size([4, 512]), torch.Size([4, 512]), torch.Size([4, 512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># compute the score</span></span><br><span class="line"> scores = torch.matmul(query_vectors, key_vectors.transpose(-<span class="number">2</span>, -<span class="number">1</span>)) / torch.sqrt(torch.tensor(embeddings_dim, dtype=torch.float32))</span><br><span class="line"> scores.shape <span class="comment"># torch.Size([4, 4])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># compute the attention weights for each of the words with the other words</span></span><br><span class="line"> softmax = nn.Softmax(dim=-<span class="number">1</span>)</span><br><span class="line"> attention_weights = softmax(scores)</span><br><span class="line"> attention_weights.shape <span class="comment"># torch.Size([4, 4])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># attention output</span></span><br><span class="line"> output = torch.matmul(attention_weights, value_vectors)</span><br><span class="line"> output.shape <span class="comment"># torch.Size([4, 512])</span></span><br></pre></td></tr></table></figure>
@@ -736,14 +736,14 @@
 
 <p>以上代码只是为了展示注意力机制的实现，并未优化。</p>
 <h4 id="多头注意力"><a href="#多头注意力" class="headerlink" title="多头注意力"></a>多头注意力</h4><p>上面提到的注意力是单头注意力，在原论文中有8个头。对于多头和单多头注意力计算相同，只是查询(q0-q3)，键(k0-k3)，值(v0-v3)中间向量会有一些区别。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SsI4NLEfWSXTg2waJB0QIlPUggZm0uT8yBcRah6CF0HemTTHYYZicia4A/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/333ts2.png" alt="Image"></p>
 <p>之后将查询向量分成相等的部分（有多少头就分成多少）。在上图中有8个头，查询，键和值向量的维度为512。所以就变为了8个64维的向量。</p>
 <p>把前64个向量放到第一个头，第二组向量放到第二个头，以此类推。在上面的图片中，我只展示了第一个头的计算。</p>
 <p><strong>这里需要注意的是：不同的框架有不同的实现方法，pytorch官方的实现是上面这种，但是tf和一些第三方的代码中是将每个头分开计算了</strong>，比如8个头会使用8个linear（tf的dense）而不是一个大linear再拆解。还记得Pytorch的transformer里面要求emb_dim能被num_heads整除吗，就是因为这个。</p>
 <p><strong>使用哪种方式都可以，因为最终的结果都类似影响不大。</strong></p>
 <p>当我们在一个head中有了小查询、键和值(64 dim的)之后，计算剩下的逻辑与单个head注意相同。最后得到的64维的向量来自每个头。</p>
 <p>我们将每个头的64个输出组合起来，得到最后的512个dim输出向量。</p>
-<p><img src="https://mmbiz.qpic.cn/mmbiz_png/6wQyVOrkRNLcmFeibS1WKzC93fRBSIB2SElQbgxSUkzTAwSbU7bpLlnM1nnNWGHrTRibgNqicfRAOxmZfz3uuN4vQ/640?wx_fmt=png&tp=wxpic&wxfrom=5&wx_lazy=1&wx_co=1" alt="Image"></p>
+<p><img src="https://p.ipic.vip/041u5l.png" alt="Image"></p>
 <p>多头注意力可以表示数据中的复杂关系。每个头都能学习不同的模式。多个头还提供了同时处理输入表示的不同子空间(本例：64个向量表示512个原始向量)的能力。</p>
 <h4 id="多头注意代码实现"><a href="#多头注意代码实现" class="headerlink" title="多头注意代码实现"></a>多头注意代码实现</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br></pre></td><td class="code"><pre><span class="line">num_heads = <span class="number">8</span></span><br><span class="line"> <span class="comment"># batch dim is 1 since we are processing one text.</span></span><br><span class="line"> batch_size = <span class="number">1</span></span><br><span class="line"> </span><br><span class="line"> text = <span class="string">&quot;I should sleep now&quot;</span></span><br><span class="line"> words = text.split(<span class="string">&quot; &quot;</span>)</span><br><span class="line"> <span class="built_in">len</span>(words) <span class="comment"># 4</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> embeddings_dim = <span class="number">512</span></span><br><span class="line"> embeddings = get_input_embeddings(words, embeddings_dim=embeddings_dim)</span><br><span class="line"> embeddings[<span class="number">0</span>].shape <span class="comment"># torch.Size([512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># initialize the query, key and value metrices</span></span><br><span class="line"> query_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> key_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> value_matrix = nn.Linear(embeddings_dim, embeddings_dim)</span><br><span class="line"> query_matrix.weight.shape, key_matrix.weight.shape, value_matrix.weight.shape <span class="comment"># torch.Size([512, 512]), torch.Size([512, 512]), torch.Size([512, 512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># query, key and value vectors computation for each words embeddings</span></span><br><span class="line"> query_vectors = torch.stack([query_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> key_vectors = torch.stack([key_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> value_vectors = torch.stack([value_matrix(embedding) <span class="keyword">for</span> embedding <span class="keyword">in</span> embeddings])</span><br><span class="line"> query_vectors.shape, key_vectors.shape, value_vectors.shape <span class="comment"># torch.Size([4, 512]), torch.Size([4, 512]), torch.Size([4, 512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># (batch_size, num_heads, seq_len, embeddings_dim)</span></span><br><span class="line"> query_vectors_view = query_vectors.view(batch_size, -<span class="number">1</span>, num_heads, embeddings_dim//num_heads).transpose(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"> key_vectors_view = key_vectors.view(batch_size, -<span class="number">1</span>, num_heads, embeddings_dim//num_heads).transpose(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"> value_vectors_view = value_vectors.view(batch_size, -<span class="number">1</span>, num_heads, embeddings_dim//num_heads).transpose(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"> query_vectors_view.shape, key_vectors_view.shape, value_vectors_view.shape</span><br><span class="line"> <span class="comment"># torch.Size([1, 8, 4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([1, 8, 4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([1, 8, 4, 64])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># We are splitting the each vectors into 8 heads.</span></span><br><span class="line"> <span class="comment"># Assuming we have one text (batch size of 1), So we split</span></span><br><span class="line"> <span class="comment"># the embedding vectors also into 8 parts. Each head will</span></span><br><span class="line"> <span class="comment"># take these parts. If we do this one head at a time.</span></span><br><span class="line"> head1_query_vector = query_vectors_view[<span class="number">0</span>, <span class="number">0</span>, ...]</span><br><span class="line"> head1_key_vector = key_vectors_view[<span class="number">0</span>, <span class="number">0</span>, ...]</span><br><span class="line"> head1_value_vector = value_vectors_view[<span class="number">0</span>, <span class="number">0</span>, ...]</span><br><span class="line"> head1_query_vector.shape, head1_key_vector.shape, head1_value_vector.shape</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># The above vectors are of same size as before only the feature dim is changed from 512 to 64</span></span><br><span class="line"> <span class="comment"># compute the score</span></span><br><span class="line"> scores_head1 = torch.matmul(head1_query_vector, head1_key_vector.permute(<span class="number">1</span>, <span class="number">0</span>)) / torch.sqrt(torch.tensor(embeddings_dim//num_heads, dtype=torch.float32))</span><br><span class="line"> scores_head1.shape <span class="comment"># torch.Size([4, 4])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># compute the attention weights for each of the words with the other words</span></span><br><span class="line"> softmax = nn.Softmax(dim=-<span class="number">1</span>)</span><br><span class="line"> attention_weights_head1 = softmax(scores_head1)</span><br><span class="line"> attention_weights_head1.shape <span class="comment"># torch.Size([4, 4])</span></span><br><span class="line"> </span><br><span class="line"> output_head1 = torch.matmul(attention_weights_head1, head1_value_vector)</span><br><span class="line"> output_head1.shape <span class="comment"># torch.Size([4, 512])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># we can compute the output for all the heads</span></span><br><span class="line"> outputs = []</span><br><span class="line"> <span class="keyword">for</span> head_idx <span class="keyword">in</span> <span class="built_in">range</span>(num_heads):</span><br><span class="line">     head_idx_query_vector = query_vectors_view[<span class="number">0</span>, head_idx, ...]</span><br><span class="line">     head_idx_key_vector = key_vectors_view[<span class="number">0</span>, head_idx, ...]</span><br><span class="line">     head_idx_value_vector = value_vectors_view[<span class="number">0</span>, head_idx, ...]</span><br><span class="line">     scores_head_idx = torch.matmul(head_idx_query_vector, head_idx_key_vector.permute(<span class="number">1</span>, <span class="number">0</span>)) / torch.sqrt(torch.tensor(embeddings_dim//num_heads, dtype=torch.float32))</span><br><span class="line"> </span><br><span class="line">     softmax = nn.Softmax(dim=-<span class="number">1</span>)</span><br><span class="line">     attention_weights_idx = softmax(scores_head_idx)</span><br><span class="line">     output = torch.matmul(attention_weights_idx, head_idx_value_vector)</span><br><span class="line">     outputs.append(output)</span><br><span class="line"> </span><br><span class="line"> [out.shape <span class="keyword">for</span> out <span class="keyword">in</span> outputs]</span><br><span class="line"> <span class="comment"># [torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64]),</span></span><br><span class="line"> <span class="comment"># torch.Size([4, 64])]</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment"># stack the result from each heads for the corresponding words</span></span><br><span class="line"> word0_outputs = torch.cat([out[<span class="number">0</span>] <span class="keyword">for</span> out <span class="keyword">in</span> outputs])</span><br><span class="line"> word0_outputs.shape</span><br><span class="line"> </span><br><span class="line"> <span class="comment"># lets do it for all the words</span></span><br><span class="line"> attn_outputs = []</span><br><span class="line"> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(words)):</span><br><span class="line">     attn_output = torch.cat([out[i] <span class="keyword">for</span> out <span class="keyword">in</span> outputs])</span><br><span class="line">     attn_outputs.append(attn_output)</span><br><span class="line"> [attn_output.shape <span class="keyword">for</span> attn_output <span class="keyword">in</span> attn_outputs] <span class="comment"># [torch.Size([512]), torch.Size([512]), torch.Size([512]), torch.Size([512])]</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># Now lets do it in vectorize way.</span></span><br><span class="line"> <span class="comment"># We can not permute the last two dimension of the key vector.</span></span><br><span class="line"> key_vectors_view.permute(<span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>).shape <span class="comment"># torch.Size([1, 8, 64, 4])</span></span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># Transpose the key vector on the last dim</span></span><br><span class="line"> score = torch.matmul(query_vectors_view, key_vectors_view.permute(<span class="number">0</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>)) <span class="comment"># Q*k</span></span><br><span class="line"> score = torch.softmax(score, dim=-<span class="number">1</span>)</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> <span class="comment"># reshape the results</span></span><br><span class="line"> attention_results = torch.matmul(score, value_vectors_view)</span><br><span class="line"> attention_results.shape <span class="comment"># [1, 8, 4, 64]</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment"># merge the results</span></span><br><span class="line"> attention_results = attention_results.permute(<span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>).contiguous().view(batch_size, -<span class="number">1</span>, embeddings_dim)</span><br><span class="line"> attention_results.shape <span class="comment"># torch.Size([1, 4, 512])</span></span><br></pre></td></tr></table></figure>
 
@@ -768,12 +768,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2023/05/01/Seminar/20230501-%E7%99%BE%E5%B9%B4%E9%A3%8E%E4%BA%91%E8%AE%B2%E5%9D%9B%20%E5%8E%86%E5%8F%B2%E5%9B%9E%E6%94%BE/" rel="prev" title="百年风云讲坛 历史回放">
-      <i class="fa fa-chevron-left"></i> 百年风云讲坛 历史回放
+    <a href="/2023/04/25/Seminar/20230426-%E6%BD%98%E4%B8%BD%E9%9C%9E/" rel="prev" title="潘丽霞">
+      <i class="fa fa-chevron-left"></i> 潘丽霞
     </a></div>
       <div class="post-nav-item">
-    <a href="/2023/05/01/Recharge/Six%20of%20the%20most%20useful%20ML%20algorithms/" rel="next" title="Six of the most useful ML algorithms">
-      Six of the most useful ML algorithms <i class="fa fa-chevron-right"></i>
+    <a href="/2023/05/01/Recharge/Pangu/" rel="next" title="Pangu">
+      Pangu <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -848,7 +848,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -886,7 +886,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

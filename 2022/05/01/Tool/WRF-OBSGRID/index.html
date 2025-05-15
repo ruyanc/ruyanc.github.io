@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="参考：https:&#x2F;&#x2F;www2.mmm.ucar.edu&#x2F;wrf&#x2F;users&#x2F;docs&#x2F;ObsNudgingGuide.pdf WRF OBSGRID 资料前处理模块在进行Nudging之前，需要通过OBSGRID模块将little_r格式的观测资料转化为WRF能直接读取的ASCII格式文件。 OBSGRID模块的作用与WRFDA系统中资料前处理程序OBSPROC类似。 OBSGRID模块以及li">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WRF-OBSGRID">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/WRF-OBSGRID/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="参考：https:&#x2F;&#x2F;www2.mmm.ucar.edu&#x2F;wrf&#x2F;users&#x2F;docs&#x2F;ObsNudgingGuide.pdf WRF OBSGRID 资料前处理模块在进行Nudging之前，需要通过OBSGRID模块将little_r格式的观测资料转化为WRF能直接读取的ASCII格式文件。 OBSGRID模块的作用与WRFDA系统中资料前处理程序OBSPROC类似。 OBSGRID模块以及li">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.366Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF-OBSGRID/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>WRF-OBSGRID | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/WRF-OBSGRID/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WRF-OBSGRID
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>参考：<a target="_blank" rel="noopener" href="https://www2.mmm.ucar.edu/wrf/users/docs/ObsNudgingGuide.pdf">https://www2.mmm.ucar.edu/wrf/users/docs/ObsNudgingGuide.pdf</a></p>
+<h2 id="WRF-OBSGRID-资料前处理模块"><a href="#WRF-OBSGRID-资料前处理模块" class="headerlink" title="WRF OBSGRID 资料前处理模块"></a>WRF OBSGRID 资料前处理模块</h2><p>在进行Nudging之前，需要通过OBSGRID模块将little_r格式的观测资料转化为WRF能直接读取的ASCII格式文件。</p>
+<p>OBSGRID模块的作用与WRFDA系统中资料前处理程序OBSPROC类似。</p>
+<p>OBSGRID模块以及little_r格式的详细介绍可参考WRF User’s Guide 第七章Objective Analysis (OBSGRID) 。</p>
+<p><a target="_blank" rel="noopener" href="https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html">https://www2.mmm.ucar.edu/wrf/users/docs/user_guide_v4/v4.4/users_guide_chap7.html</a></p>
+<h3 id="编译OBSGRID模块"><a href="#编译OBSGRID模块" class="headerlink" title="编译OBSGRID模块"></a>编译OBSGRID模块</h3><ul>
+<li><p>将OBSGRID.tar.gz压缩包放置在WPS文件夹下，解压缩文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip OBSGRID.zip</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压缩后，将出现一个OBSGRID 目录，进入OBSGRID文件夹</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd OBSGRID</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br><span class="line"></span><br><span class="line">./compile</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>.&#x2F;compile可能会出错，解决：在.&#x2F;configure之后，在configure.oa里，找到开头为CPPFLAGS这一行，删去”-C”选项，再编译就行了。如果成功，将创建可执行文件obsgrid.exe。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="观测资料准备"><a href="#观测资料准备" class="headerlink" title="观测资料准备"></a>观测资料准备</h3><ul>
+<li>下载地面和高空观测资料</li>
+</ul>
+<blockquote>
+<p>Upper-air data in <em>NMC ON29</em> format <em>(from early 1970s to early 2000) <a target="_blank" rel="noopener" href="http://rda.ucar.edu/datasets/ds353.4/">http://rda.ucar.edu/datasets/ds353.4/</a></em><br>Surface data in <em>NMC ON29</em> format <em>(from early 1970s to early 2000) <a target="_blank" rel="noopener" href="http://rda.ucar.edu/datasets/ds464.0/">http://rda.ucar.edu/datasets/ds464.0/</a></em><br>Upper-air data in NCEP BUFR format <em>(from 1999 to present) <a target="_blank" rel="noopener" href="http://rda.ucar.edu/datasets/ds351.0/">http://rda.ucar.edu/datasets/ds351.0/</a></em><br>Surface data in NCEP BUFR format <em>(from 1999 to present)  <a target="_blank" rel="noopener" href="http://rda.ucar.edu/datasets/ds461.0/">http://rda.ucar.edu/datasets/ds461.0/</a></em> </p>
+</blockquote>
+<p><strong>注意！！The newer data <em>(ds351.0 and ds461.0)</em> is also available in the little_r format. This data is sorted into 6-hourly windows, which are typically too large for use in OBSGRID. To reorder this into 3-hourly windows:</strong></p>
+<ul>
+<li><p>资料合并</p>
+<blockquote>
+<p>Combine (by using the Unix ‘cat’ command) all the surface and upper-air data into one large file called rda_obs.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash"><span class="built_in">cat</span> *2022* &gt; rda_obs</span></span><br><span class="line"><span class="meta prompt_">&gt;</span><span class="language-bash"><span class="built_in">ln</span> -s rda_obs <span class="variable">$OBSGRID</span></span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+<li><p>Compile and run the Fortran program util&#x2F;get_rda_data</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifort -FR get_rda_data.f -o get_rda_data.exe</span><br><span class="line">util/get_rda_data.exe  ## 可能需要等待较长时间</span><br></pre></td></tr></table></figure>
+
+<p>$OBSGRID目录下生成<code>OBS:YYYY-MM-DD_HH</code>文件（逐3小时）</p>
+</li>
+</ul>
+<h3 id="met-em-d0-模式文件准备"><a href="#met-em-d0-模式文件准备" class="headerlink" title="met_em.d0*模式文件准备"></a>met_em.d0*模式文件准备</h3><ul>
+<li>准备<code>met_em.d0*</code>*模式文件。将<code>./metgrid.exe</code>步骤生成的<code>met_em.d0*</code>文件链接到$OBSGRID文件夹下 。</li>
+</ul>
+<h3 id="修改namelist-oa"><a href="#修改namelist-oa" class="headerlink" title="修改namelist.oa"></a>修改namelist.oa</h3><ul>
+<li><p>修改<code>namelist.oa</code>文件</p>
+<p>主要修改 <code>&amp;record1</code>的时间和时间间隔、<code>&amp;record2</code>的嵌套层数（<code>grid_id</code>）和文件名（<code>obs_filename</code>改为’OBS’）</p>
+</li>
+</ul>
+<h3 id="运行obsgrid-exe"><a href="#运行obsgrid-exe" class="headerlink" title="运行obsgrid.exe"></a>运行obsgrid.exe</h3><ul>
+<li><p>先后设置grid_id&#x3D;1，grid_id&#x3D;2，并执行：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./obsgrid.exe</span><br></pre></td></tr></table></figure>
+
+<p>即在namelist.oa中每更改一次grid_id（嵌套层数），就要运行一次.&#x2F;obsgrid.exe</p>
+<p>生成<code>metoa_em.d0*</code>、<code>OBS_DOMIANxxx</code>、<code>wrfsfdda_d0*</code></p>
+</li>
+</ul>
+<p><strong>注意！！首次运行<code>./obsgrid.exe</code>出现<code>forrtl: severe (174): SIGSEGV, segmentation fault occurred</code>报错</strong></p>
+<p>解决方案：修改<code>$OBSGRID/src</code>下的<code>obs_sort_module.f</code>文件</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">IF</span>(<span class="built_in">ASSOCIATED</span> ( next )) <span class="keyword">THEN</span>  <span class="comment">!! added by Ruyan</span></span><br><span class="line">    <span class="keyword">IF</span>((.NOT. is_sounding) .AND. &amp;</span><br><span class="line">       (.NOT. eps_equal(next%meas%height%<span class="keyword">data</span>, obs(i)%info%elevation, <span class="number">1.</span>))) <span class="keyword">THEN</span></span><br><span class="line">     obs(i)%info%discard = .TRUE.</span><br><span class="line">     <span class="built_in">PRINT</span> <span class="string">&#x27;(A,A,A,A,F12.2,A,F12.2,A,A,A,A)&#x27;</span>,<span class="string">&#x27;WARNING: Ob indicates is_sounding=.FALSE. &#x27;</span>,&amp;</span><br><span class="line">      <span class="string">&#x27;but the ob height does &#x27;</span>,&amp;</span><br><span class="line">      <span class="string">&#x27;not match the station elevation.  This ob will be omitted since Obsgrid assumes &#x27;</span>,&amp;</span><br><span class="line">      <span class="string">&#x27;is_sounding=.FALSE. indicates a surface ob. Height = &#x27;</span>, next%meas%height%<span class="keyword">data</span>, &amp;</span><br><span class="line">      <span class="string">&#x27;, Elevation = &#x27;</span>, obs(i)%info%elevation,<span class="string">&#x27;, Ob ID = &#x27;</span>,<span class="built_in">TRIM</span>(<span class="built_in">ADJUSTL</span>(obs(i)%location%id)),&amp;</span><br><span class="line">      <span class="string">&#x27;, Ob Time = &#x27;</span>, obs(i)%valid_time%date_char </span><br><span class="line">    <span class="keyword">ENDIF</span></span><br><span class="line">    <span class="keyword">ENDIF</span>  <span class="comment">!! added by Ruyan</span></span><br><span class="line">    </span><br><span class="line">   <span class="comment">!!  解决方案参考：https://blog.csdn.net/FYSsuyi/article/details/131649148**</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="合并OBS-DOMAIN"><a href="#合并OBS-DOMAIN" class="headerlink" title="合并OBS_DOMAIN"></a>合并OBS_DOMAIN</h3><ul>
+<li><p><code>OBS_DOMAIN1xx</code>和<code>OBS_DOMAIN2xx</code>分别存放d01和d02区域内单时次的观测数据</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run_cat_obs_files.csh ###  将每个区域多个单时次文件合并成一个文件</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>​	得到 <code>OBS_DOMAINd01</code>、<code>OBS_DOMAINd02</code></p>
+<p><strong>注意！！ 当一次性处理的时次过多时，出现OBS_DOMAIN101 &amp; 201文件日期不全的问题</strong></p>
+<p>解决方法：进入<code>$OBSGRID/src/</code>，将原有的driver.F90文件备份为.bak文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> driver.F90 driver.F90.bak</span><br></pre></td></tr></table></figure>
+
+<p>修改driver.F90文件中关于OBS_DOMAIN文件名的3处设置：</p>
+<blockquote>
+<ol>
+<li>更改前：obs_nudge_file,’(“OBS_DOMAIN”,i1,i2.2)’</li>
+<li>更改后：obs_nudge_file,’(“OBS_DOMAIN”,i1,i4.4)’</li>
+</ol>
+</blockquote>
+<p>源文件使用Fortran 90编写，修改后意为写入4位的integer，空出的位数用0补齐。</p>
+<p>重新编译<code>./compile</code>即可</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_62874374/article/details/138635534">https://blog.csdn.net/weixin_62874374/article/details/138635534</a></p>
+<h3 id="try-1"><a href="#try-1" class="headerlink" title="try 1"></a>try 1</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&amp;fdda</span><br><span class="line">obs_nudge_opt  = 1,         1,         1  ! nudge部分开关（1代表打开，0代表关闭）</span><br><span class="line">max_obs        = 150000,    150000,   ! 同化的最大观测点数</span><br><span class="line">fdda_start     = 0.,        0.,                ! 开始同化时间</span><br><span class="line">fdda_end       = 99999.,    99999.,            ! 结束同化的时间</span><br><span class="line">obs_nudge_wind = 1,         1 ! 是否同化风速变量（1代表打开，0代表关闭）</span><br><span class="line">obs_coef_wind  = 6.E-4,     6.E-4,             ! 该变量nudge强度</span><br><span class="line">obs_nudge_temp = 1,         1 ! 是否同化温度（1代表打开，0代表关闭）</span><br><span class="line">obs_coef_temp  = 6.E-4,     6.E-4,             ! 该变量nudge强度</span><br><span class="line">obs_nudge_mois = 1,         1,                 ! 是否同化湿度（1代表打开，0代表关闭）</span><br><span class="line">obs_coef_mois  = 6.E-4,     6.E-4,             ! 该变量nudge强度</span><br><span class="line">obs_rinxy      = 240.,      240.        ! 水平影响半径km</span><br><span class="line">obs_rinsig     = 0.1,       ! 垂直影响半径</span><br><span class="line">obs_twindo     = 0.6666667, 0.6666667,         ! 时间权重函数h</span><br><span class="line">obs_npfi       = 10,        ! 观测点打印输出时间间隔（然而这个开关似乎对诊断输出没有任何影响）</span><br><span class="line">obs_ionf       = 2,         2,                 ! 计算是否需要读入观测数据的时间间隔（以粗网格时间步长为单位）</span><br><span class="line">obs_idynin     = 0,         ! 是否进行动态初始化模型运行（1 = yes, 0 = no）</span><br><span class="line">obs_dtramp     = 40.,       !动态初始化周期结束时的降阶周期长度min</span><br><span class="line">obs_prt_freq   = 10,        10,                ! 每隔10个打印一次以检查是否读入模式</span><br><span class="line">obs_prt_max    = 10 ! 最大打印数</span><br><span class="line">obs_ipf_errob  = .true. !</span><br><span class="line">obs_ipf_nudob  = .true. !</span><br><span class="line">obs_ipf_in4dob = .true. !</span><br><span class="line">obs_ipf_init   = .true. !（true代表开启打印，输入至相应诊断文件rsl.error或者rsl.output）</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="try-2"><a href="#try-2" class="headerlink" title="try 2"></a>try 2</h3>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/WRF-Nudging/" rel="prev" title="WRF-Nudging">
+      <i class="fa fa-chevron-left"></i> WRF-Nudging
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/WRF-DA_testcase/" rel="next" title="WRF-DA_testcase">
+      WRF-DA_testcase <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#WRF-OBSGRID-%E8%B5%84%E6%96%99%E5%89%8D%E5%A4%84%E7%90%86%E6%A8%A1%E5%9D%97"><span class="nav-number">1.</span> <span class="nav-text">WRF OBSGRID 资料前处理模块</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%AF%91OBSGRID%E6%A8%A1%E5%9D%97"><span class="nav-number">1.1.</span> <span class="nav-text">编译OBSGRID模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E6%B5%8B%E8%B5%84%E6%96%99%E5%87%86%E5%A4%87"><span class="nav-number">1.2.</span> <span class="nav-text">观测资料准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#met-em-d0-%E6%A8%A1%E5%BC%8F%E6%96%87%E4%BB%B6%E5%87%86%E5%A4%87"><span class="nav-number">1.3.</span> <span class="nav-text">met_em.d0*模式文件准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9namelist-oa"><span class="nav-number">1.4.</span> <span class="nav-text">修改namelist.oa</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%90%E8%A1%8Cobsgrid-exe"><span class="nav-number">1.5.</span> <span class="nav-text">运行obsgrid.exe</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6OBS-DOMAIN"><span class="nav-number">1.6.</span> <span class="nav-text">合并OBS_DOMAIN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-1"><span class="nav-number">1.7.</span> <span class="nav-text">try 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#try-2"><span class="nav-number">1.8.</span> <span class="nav-text">try 2</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">220</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

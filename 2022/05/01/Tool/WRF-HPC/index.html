@@ -27,16 +27,16 @@
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）来源：https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_43750300&#x2F;article&#x2F;details&#x2F;125741208 过段时间就要进所打工了，说到回所，肯定要用所里的服务器学着跑模式，然而身为小白的我，对这块还是云里雾里，老样子，先搞理论，把整个流程理清楚，不然回所上手又是一脸懵逼，浪费时间。首先">
 <meta property="og:locale">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/abd5d04e91a3406c85e1589be41f2fa0.png">
+<meta property="og:image" content="https://p.ipic.vip/gglona.png">
+<meta property="og:image" content="https://p.ipic.vip/drzvv1.png">
 <meta property="og:image" content="https://p.ipic.vip/iir5oy.png">
-<meta property="og:image" content="https://p.ipic.vip/e2v8v9.png">
+<meta property="og:image" content="https://p.ipic.vip/xdlfdh.png">
 <meta property="og:image" content="https://p.ipic.vip/ys73f7.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-11-22T03:00:11.939Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.372Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png">
+<meta name="twitter:image" content="https://p.ipic.vip/gglona.png">
 
 <link rel="canonical" href="http://example.com/2022/05/01/Tool/WRF-HPC/">
 
@@ -236,7 +236,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-11-22 11:00:11" itemprop="dateModified" datetime="2023-11-22T11:00:11+08:00">2023-11-22</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -268,11 +268,11 @@
       
         <h2 id="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）"><a href="#大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）" class="headerlink" title="大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）"></a>大型机上如何运行WRF模式？一文总结（并行运算、Linux基础、作业调度、WRF运行）</h2><p>来源：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43750300/article/details/125741208">https://blog.csdn.net/weixin_43750300/article/details/125741208</a></p>
 <p>过段时间就要进所打工了，说到回所，肯定要用所里的服务器学着跑模式，然而身为小白的我，对这块还是云里雾里，老样子，先搞理论，把整个流程理清楚，不然回所上手又是一脸懵逼，浪费时间。<br>首先应当指出的是，我的标题取得并不严谨，一般来说，我们的数值预报并不是用大型计算机来计算的，而是使用超算计算的，而超算严格来讲也和我们印象中的“计算机”有所差异，更接近于一个操作平台。平时所说的”使用大型机跑模式“，是一种口语化的表达，而这些表达往往会给初学者带来一些误解，致使在初次接触模式运行时，经常会无从下手。<br>“工欲善其事，必先利其器”，在开始学习模式时，除了对整个流程有所了解外，也应当适当了解我们所使用的平台本身，理清一些底层逻辑，这样我们在实际应用时，将会更加顺手与灵活。<br>在本文，我会首先给出一些基本概念，简单总结超算工作原理，之后我会给出运行WRF时Linux系统需要用到的一些操作，最后，我会给出WRF示例，并回顾总结整个流程。<br>注意：本篇文章的仅为入门内容，笔者无意教各位许多深入的知识，而是更想构建一个框架，以便各位在学习时能形成更加系统的知识框架，便于更好理解、应用、纠错。</p>
-<p><img src="https://img-blog.csdnimg.cn/6d211a2f6ed04b76a8512b2bfea7cc07.png" alt="在这里插入图片描述"></p>
+<p><img src="https://p.ipic.vip/gglona.png" alt="在这里插入图片描述"></p>
 <h4 id="大型机"><a href="#大型机" class="headerlink" title="大型机"></a>大型机</h4><p>大型机（mainframe)最初是指装在非常大的带框铁盒子里的大型计算机系统，随着科技的发展，目前的大型机已经不再是最初定义，从核心而言， 大型机是高性能的计算机，具有大量内存和处理器，能够实时处理数以十亿计的计算和事务。<br>目前来说，mainframe有了新的意义，已经由我们印象里“大型主机”变成了一种大型商业服务器的代称，不过，最常见的大型机指代的仍然是由IBM所制造的以可靠性、可伸缩性、兼容性和安全性作为核心设计价值的计算机，主要用于商业数据的保存、传输、管理。<br>从以上我们可以看出，大型机并的主要用户并不是科研运算，它更倾向于商业数据的管理，更加注重安全、兼容与隐私问题，而在使用科学数值模拟时，我们会更注重计算机的运算速度、内存等，这些并不是大型机应用范围，而是超算使用的领域。</p>
 <h4 id="超算集群-Cluster"><a href="#超算集群-Cluster" class="headerlink" title="超算集群(Cluster)"></a>超算集群(Cluster)</h4><p>超算并不是我们一般理解的一台占地极大，运算效率极强的计算机，而是一批性能强大的计算机组成的集群，更接近于一个多用户共享服务平台。<br>什么是集群？顾名思义，将多个独立计算机，利用高速通信技术，将它们联系起来，这样，这一批高性能计算机服务器与计算能力便集合起来，运算效率提高的同时，也降低了成本。<br>集群分为许多中，本文所介绍的便是高性能计算集群，也称并行运算，高性能计算集群就是我们一般指代的超级计算机，内部由数十至上万个独立服务器组成，并且在公共消息传递层上进行通信以并行运行应用程序。在生产环境中实际就是把任务切成蛋糕，然后下发到集群节点计算，计算后返回结果，然后继续领新任务计算，如此往复。<br>用最耳熟能详的一句话来概括超算集群的原理便是“集中力量办大事”，在天气预报、核试验模拟等运算量极大的应用中，一个计算能力强大的计算机是不够的。不过，与这种朴素的原理应用于计算机技术中，仍然需要与现实对应的一套运筹管理方案，我们下面来简单讲解以下。</p>
 <h4 id="基本架构"><a href="#基本架构" class="headerlink" title="基本架构"></a>基本架构</h4><p>下图是普林斯顿大学的超算集群结构，集群中每一个计算机称为节点(node），节点分为两种：头节点（head node)和计算节点（compute node)。</p>
-<p><img src="https://img-blog.csdnimg.cn/abd5d04e91a3406c85e1589be41f2fa0.png" alt="在这里插入图片描述"></p>
+<p><img src="https://p.ipic.vip/drzvv1.png" alt="在这里插入图片描述"></p>
 <p>典型的普林斯顿研究计算集群的通用架构。图由Mukarramahmad绘制，Jon Halverson修改。来源：<a target="_blank" rel="noopener" href="https://researchcomputing.princeton.edu/faq/what-is-a-cluster">https://researchcomputing.princeton.edu/faq/what-is-a-cluster</a><br>所谓头节点就是用户使用的计算机，在这台计算机上，我们主要编译代码、撰写脚本与提交任务。<br>计算节点：是运行任务的了计算机，在计算节点上运行作业，我们必须通过作业调度器。通过将作业提交给作业调度器，一旦请求的资源可用，这些作业将自动在计算节点上运行。<br>在运行模式时，用户应当使用软件将需要的数据、文件上传至cluster上，在撰写相应的脚本进行提交任务，并等待作业运算</p>
 <h3 id="系统：Linux"><a href="#系统：Linux" class="headerlink" title="系统：Linux"></a>系统：Linux</h3><p>目前超算使用的系统以Linux系统为主，再入门前我们必然要了解一些Linux基础知识，在本节我会介绍一些使用中需要Linux基本知识，如果想要更加系统了解相关Linux知识的话，推荐b站课程：尚硅谷Linux教程</p>
 <h4 id="远程登陆与文件传输"><a href="#远程登陆与文件传输" class="headerlink" title="远程登陆与文件传输"></a>远程登陆与文件传输</h4><p>我们已经知道了超算的架构是由多个计算机构成的集群，在实际使用时，用户自然不可能到超算集群所在的机房中使用，为了方便在各地的用户都能使用超算资源，我们首先需要远程登陆到超算的服务器上，以便我们能在自己的计算机上远程操作并使用超算系统。<br>远程登陆一般使用基于SSH网络协议实现两台计算机间的连接，通过相应的软件远程登陆与操作，许多软件可以完成：mobaxterm ssh secure shell xshell putty SecureCRT等，可以根据喜好选择。<br>在远程登陆后，我们还需要用基于FTP&#x2F;SFTP的安全协议完成两个电脑间的文件传输，用来实现自己的电脑和远程服务器之间文件的上传下载。<br>一般而言，远程登陆软件都带有与自己配套的文件传输软件，如xshell和xftp，在这里我推荐一款比较全能的终端软件：mobaxterm。<br>mobaxterm是一款增强型的终端软件，功能强大，且带有许多插件、操作方便，其下载安装与使用参考：MobaXterm</p>
@@ -286,7 +286,7 @@
 <h3 id="作业调度-x2F-任务提交"><a href="#作业调度-x2F-任务提交" class="headerlink" title="作业调度&#x2F;任务提交"></a>作业调度&#x2F;任务提交</h3><p>前面提到超算集群往往用于计算量极大的科学与军事应用中，并且是一个共享的服务平台，任何拥有平台账户的登陆后即可提交作业使用。<br>但并不是简单的将所有的计算机用来处理一个任务， 而往往是按需所取，用户需要等调度系统分配好相应的计算资源，才能开始运行，调度系统则是通过这种一些规则分配资源，以达到提高科研利用效率的目的。这与经典问题中的“排队论”似乎异曲同工之妙，对于作业调度通常由专门的作业调度器来安排，这里以Slurm为例简单介绍。</p>
 <h4 id="Slurm"><a href="#Slurm" class="headerlink" title="Slurm"></a>Slurm</h4><p>Slurm是一个开源，容错，高度可扩展的集群管理和作业调度系统，适用于大型和小型Linux集群。Slurm不需要对其操作进行内核修改，并且相对独立。作为集群工作负载管理器，Slurm有三个关键功能。首先，它在一段时间内为用户分配对资源（计算节点）的独占和&#x2F;或非独占访问，以便他们可以执行工作。其次，它提供了一个框架，用于在分配的节点集上启动，执行和监视工作（通常是并行作业）。最后，它通过管理待处理工作的队列来仲裁资源争用。</p>
 <p><strong>基本架构</strong><br>Slurm包含在每个计算节点上运行的slurmd守护程序和在管理节点上运行的中央slurmctld守护程序。<br>slurmctld:控制进程，相当于整个系统的中枢，负责资源状态维护、资源分配、作业调度、作业管理控制等。<br>slurmd：节点监控进程，负责收集节点上的资源状态并向控制进程报告。slurmd 接收来自控制进程与用户命令的请求，进行作业步任务加载、作业取消等操作。<br>**slurmstepd ：作业管理进程，由 slurmd 在加载作业步任务或批处理作业时派生。 负责计算任务启动、标准 I&#x2F;O 转发、信号传递、记账信息收集以及并行环境初始化等功能。<br>** slurmdbd：记录存储进程，命令工具与控制进程访问记账数据库的中间层。它提供访问记账数据与关联信息的统一接口，并起到用户认证与安全隔离的作用。<br>Slurm主要通过这些程序管理作业的分配、存储、执行与监视等内容。</p>
-<p><img src="https://p.ipic.vip/e2v8v9.png" alt="在这里插入图片描述"></p>
+<p><img src="https://p.ipic.vip/xdlfdh.png" alt="在这里插入图片描述"></p>
 <p>这些Slurm程序管理对象包括我们前文所说的节点(node)、计算资源， 分区（Partition），将节点分组， 作业(Job)或分配给用户的指定数量的资源分配时间和 工作步骤(Job Step)。<br>为了提高效率，Slurm会进行分区，这个分区类似于排队的队列，每个队列具有不同的特性，如：作业大小限制，作业时间限制，允许使用它的用户，不同队列用以完成不同的任务，队列间并不相互干扰。用户在提交作业时，应当指定作业所属调度器队列，随后，调度器会给对应队列的作业按优先级排序，并分配相应的节点与计算资源进行工作，如对应分区的资源耗尽，则用户作业需要排队等候。</p>
 <p><strong>基础命令</strong><br>关于Sliurm的简介与安装配置，可以查看：Slurm资源管理与作业调度系统安装配置，此处不再赘述，在安装配置好Slurm后，我们可以使用相应的命令进行作业调度、提交等功能，其基本命令概括如下：<br>sacct用于报告有关活动或已完成作业的作业或作业步骤会计信息。<br>salloc用于实时为作业分配资源。通常，这用于分配资源并生成shell。然后使用shell执行srun命令以启动并行任务。<br>sattach用于将标准输入，输出和错误加信号功能附加到当前正在运行的作业或作业步骤。可以多次附加和分离作业。<br>sbatch用于提交作业脚本以供以后执行。该脚本通常包含一个或多个用于启动并行任务的srun命令。<br>sbcast用于将文件从本地磁盘传输到分配给作业的节点上的本地磁盘。这可用于有效地使用无盘计算节点或相对于共享文件系统提供改进的性能。<br>scancel用于取消挂起或正在运行的作业或作业步骤。它还可用于向与正在运行的作业或作业步骤相关联的所有进程发送任意信号。<br>scontrol是用于查看和&#x2F;或修改Slurm状态的管理工具。请注意，许多 scontrol 命令只能以root用户身份执行。<br>sinfo报告由Slurm管理的分区和节点的状态。它具有各种过滤，排序和格式选项。<br>smap报告由Slurm管理的作业，分区和节点的状态信息，但以图形方式显示反映网络拓扑的信息。<br>squeue报告工作或工作步骤的状态。它具有各种过滤，排序和格式选项。默认情况下，它按优先级顺序报告正在运行的作业，然后按优先级顺序报告挂起的作业。<br>srun用于提交作业以便实时执行或启动作业步骤。 srun 有多种选项来指定资源要求，包括：最小和最大节点数，处理器数，要使用或不使用的特定节点，以及特定节点特征（如此多的内存，磁盘空间，某些必需的功能等） 。作业可以包含在作业节点分配中的独立或共享资源上顺序或并行执行的多个作业步骤。<br>strigger用于设置，获取或查看事件触发器。事件触发器包括节点关闭或作业接近其时间限制等事件。<br>sview是一个图形用户界面，用于获取和更新Slurm管理的作业，分区和节点的状态信息。<br>用户可以使用help来查看这些命令的基本描述。</p>
 <p>作业提交与运行<br>当然，在实际运用过程中，我们通常只会用到上述命令中的几个：</p>
@@ -378,12 +378,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/WRF-WZSZ/" rel="prev" title="WRF-WZSZ">
-      <i class="fa fa-chevron-left"></i> WRF-WZSZ
+    <a href="/2022/05/01/Tool/WZCS/" rel="prev" title="WZCS">
+      <i class="fa fa-chevron-left"></i> WZCS
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/WRF%20Offline%20Install/" rel="next" title="WRF Offline Install">
-      WRF Offline Install <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Python3%20Notes-1/" rel="next" title="Python3 Notes-1">
+      Python3 Notes-1 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -458,7 +458,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -496,7 +496,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

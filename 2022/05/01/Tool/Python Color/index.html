@@ -38,7 +38,7 @@
 <meta property="og:image" content="https://p.ipic.vip/j7esfd.png">
 <meta property="og:image" content="https://p.ipic.vip/jwtfg4.png">
 <meta property="og:image" content="https://p.ipic.vip/9iitta.png">
-<meta property="og:image" content="https://p.ipic.vip/fk8ukb.png">
+<meta property="og:image" content="https://p.ipic.vip/c8xxut.png">
 <meta property="og:image" content="https://p.ipic.vip/ld1hse.png">
 <meta property="og:image" content="https://p.ipic.vip/jtijna.png">
 <meta property="og:image" content="https://p.ipic.vip/mcwx0r.png">
@@ -47,7 +47,7 @@
 <meta property="og:image" content="https://p.ipic.vip/so1qyz.png">
 <meta property="og:image" content="https://p.ipic.vip/t5f8mx.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2023-10-23T11:12:20.220Z">
+<meta property="article:modified_time" content="2025-05-08T03:09:08.349Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p.ipic.vip/3e66na.jpg">
@@ -250,7 +250,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-10-23 19:12:20" itemprop="dateModified" datetime="2023-10-23T19:12:20+08:00">2023-10-23</time>
+                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -329,7 +329,7 @@
 <p>• 也可以通过TwoSlopeNorm设置vcenter将白色和0对应上</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cmap = cm.RdBu_r</span><br><span class="line">norm = mcolors.TwoSlopeNorm(vmin=-5, vcenter=0, vmax=10)   </span><br><span class="line">im = cm.ScalarMappable(norm=norm, cmap=cmap)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(6, 1))</span><br><span class="line">fig.subplots_adjust(bottom=0.5)</span><br><span class="line">fig.colorbar(im, cax=ax, orientation=&#x27;horizontal&#x27;,extend=&#x27;both&#x27;,)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://p.ipic.vip/fk8ukb.png" alt="Image"></p>
+<p><img src="https://p.ipic.vip/c8xxut.png" alt="Image"></p>
 <h3 id="3-利用自定义颜色生成连续colormap"><a href="#3-利用自定义颜色生成连续colormap" class="headerlink" title="3. 利用自定义颜色生成连续colormap"></a>3. 利用自定义颜色生成连续colormap</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># colors = [&#x27;red&#x27;, &#x27;green&#x27;, &#x27;blue&#x27;, &#x27;cyan&#x27;]</span><br><span class="line">colors = np.array([(255,0,0), (0,128,0), (0,0,255), (0,255,255)] ) /255. </span><br><span class="line">cmap = mcolors.LinearSegmentedColormap.from_list(&#x27;Mycmap&#x27;, colors)</span><br><span class="line">norm = mcolors.Normalize(vmin=5, vmax=10)    # 默认是0-1，可以通过vmin和vmax指定范围</span><br><span class="line">im = cm.ScalarMappable(norm=norm, cmap=cmap)</span><br><span class="line"></span><br><span class="line">fig, ax = plt.subplots(figsize=(6, 1))</span><br><span class="line">fig.subplots_adjust(bottom=0.5)</span><br><span class="line">fig.colorbar(im, cax=ax, orientation=&#x27;horizontal&#x27;,extend=&#x27;both&#x27;,)</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://p.ipic.vip/ld1hse.png" alt="Image"></p>
@@ -380,12 +380,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Python%20Library/" rel="prev" title="Python Library">
-      <i class="fa fa-chevron-left"></i> Python Library
+    <a href="/2022/05/01/Tool/Parameters/" rel="prev" title="Parameters">
+      <i class="fa fa-chevron-left"></i> Parameters
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Python%20Assist%20%20Package/" rel="next" title="Python Assist Package">
-      Python Assist Package <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/PIP/" rel="next" title="PIP">
+      PIP <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -460,7 +460,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">210</span>
+          <span class="site-state-item-count">220</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -498,7 +498,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2024</span>
+  <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
