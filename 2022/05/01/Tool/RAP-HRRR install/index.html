@@ -22,17 +22,17 @@
 
   <meta name="description" content="推荐 spack 底层环境配置12spack env create RaH_Gnu spack env activate RaH_Gnu    安装gcc 5.4.0  1234567891011# 1. 安装spack install gcc@5.4.0 cppflags&#x3D;&amp;#x27;-std&#x3D;gnu++14&amp;#x27; cxxflags&#x3D;&amp;#x27;-std&#x3D;gnu++14&amp;#x27;  #">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RAP-HRRR_install">
-<meta property="og:url" content="http://example.com/2022/05/01/Tool/RAP-HRRR_install/index.html">
+<meta property="og:title" content="RAP-HRRR install">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/RAP-HRRR%20install/index.html">
 <meta property="og:site_name" content="ruyanc">
 <meta property="og:description" content="推荐 spack 底层环境配置12spack env create RaH_Gnu spack env activate RaH_Gnu    安装gcc 5.4.0  1234567891011# 1. 安装spack install gcc@5.4.0 cppflags&#x3D;&amp;#x27;-std&#x3D;gnu++14&amp;#x27; cxxflags&#x3D;&amp;#x27;-std&#x3D;gnu++14&amp;#x27;  #">
 <meta property="og:locale">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-08-21T11:57:30.906Z">
+<meta property="article:modified_time" content="2025-08-21T12:12:56.224Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/05/01/Tool/RAP-HRRR_install/">
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/RAP-HRRR%20install/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>RAP-HRRR_install | ruyanc</title>
+  <title>RAP-HRRR install | ruyanc</title>
   
 
 
@@ -200,7 +200,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/RAP-HRRR_install/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/RAP-HRRR%20install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -213,7 +213,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          RAP-HRRR_install
+          RAP-HRRR install
         </h1>
 
         <div class="post-meta">
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-08-21 19:57:30" itemprop="dateModified" datetime="2025-08-21T19:57:30+08:00">2025-08-21</time>
+                <time title="Modified: 2025-08-21 20:12:56" itemprop="dateModified" datetime="2025-08-21T20:12:56+08:00">2025-08-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -268,12 +268,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1. 安装</span></span><br><span class="line">spack install gcc@5.4.0 cppflags=&#x27;-std=gnu++14&#x27; cxxflags=&#x27;-std=gnu++14&#x27;</span><br><span class="line"><span class="meta prompt_">  </span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2. 把刚装好的 5.4.0 注册为可用编译器</span></span><br><span class="line">spack compiler add &quot;$(spack location -i gcc@5.4.0)&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3. 验证</span></span><br><span class="line">spack compiler list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">4. 安装后使用</span></span><br><span class="line">spack load gcc@5.4.0</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>安装 <a href="mailto:&#x6f;&#x70;&#101;&#110;&#109;&#x70;&#105;&#x40;&#x34;&#46;&#53;&#46;&#49;">&#x6f;&#x70;&#101;&#110;&#109;&#x70;&#105;&#x40;&#x34;&#46;&#53;&#46;&#49;</a></li>
+<li>安装 <a href="mailto:&#x6f;&#x70;&#x65;&#x6e;&#109;&#x70;&#105;&#64;&#52;&#x2e;&#x35;&#46;&#x31;">&#x6f;&#x70;&#x65;&#x6e;&#109;&#x70;&#105;&#64;&#52;&#x2e;&#x35;&#46;&#x31;</a></li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spack add openmpi@4.5.1</span><br><span class="line">spack concretize</span><br><span class="line">spack install</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>安装<a href="mailto:&#x70;&#x79;&#116;&#x68;&#x6f;&#x6e;&#x40;&#x33;&#46;&#56;&#46;&#x30;">&#x70;&#x79;&#116;&#x68;&#x6f;&#x6e;&#x40;&#x33;&#46;&#56;&#46;&#x30;</a></li>
+<li>安装<a href="mailto:&#112;&#121;&#116;&#104;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#56;&#46;&#48;">&#112;&#121;&#116;&#104;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#56;&#46;&#48;</a></li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spack add python@3.8.0</span><br><span class="line">spack concretize</span><br><span class="line">spack install</span><br></pre></td></tr></table></figure>
 
@@ -363,7 +363,7 @@
 
 
 <h2 id="编译-rap-gsi"><a href="#编译-rap-gsi" class="headerlink" title="编译 rap_gsi"></a>编译 <code>rap_gsi</code></h2><ul>
-<li>spack 安装 <a href="mailto:&#99;&#109;&#x61;&#x6b;&#x65;&#x40;&#51;&#46;&#49;&#56;&#46;&#x36;">&#99;&#109;&#x61;&#x6b;&#x65;&#x40;&#51;&#46;&#49;&#56;&#46;&#x36;</a>、<a href="mailto:&#x6f;&#112;&#101;&#110;&#x62;&#x6c;&#97;&#x73;&#x40;&#x30;&#x2e;&#x33;&#46;&#50;&#48;">&#x6f;&#112;&#101;&#110;&#x62;&#x6c;&#97;&#x73;&#x40;&#x30;&#x2e;&#x33;&#46;&#50;&#48;</a>、<a href="mailto:&#98;&#x61;&#x63;&#105;&#x6f;&#x40;&#50;&#x2e;&#52;&#x2e;&#x31;">&#98;&#x61;&#x63;&#105;&#x6f;&#x40;&#50;&#x2e;&#52;&#x2e;&#x31;</a></li>
+<li>spack 安装 <a href="mailto:&#x63;&#109;&#97;&#x6b;&#101;&#64;&#x33;&#x2e;&#x31;&#x38;&#x2e;&#54;">&#x63;&#109;&#97;&#x6b;&#101;&#64;&#x33;&#x2e;&#x31;&#x38;&#x2e;&#54;</a>、<a href="mailto:&#x6f;&#112;&#x65;&#x6e;&#98;&#108;&#x61;&#x73;&#64;&#48;&#46;&#51;&#x2e;&#50;&#x30;">&#x6f;&#112;&#x65;&#x6e;&#98;&#108;&#x61;&#x73;&#64;&#48;&#46;&#51;&#x2e;&#50;&#x30;</a>、<a href="mailto:&#x62;&#x61;&#x63;&#105;&#x6f;&#64;&#x32;&#46;&#52;&#46;&#x31;">&#x62;&#x61;&#x63;&#105;&#x6f;&#64;&#x32;&#46;&#52;&#46;&#x31;</a></li>
 <li>spack 安装 crtm</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt安装git-lfs后，export GIT_LFS_SKIP_SMUDGE=1</span><br></pre></td></tr></table></figure>
@@ -592,12 +592,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/SCP/" rel="prev" title="SCP">
-      <i class="fa fa-chevron-left"></i> SCP
+    <a href="/2022/05/01/Tool/Spack/" rel="prev" title="Spack">
+      <i class="fa fa-chevron-left"></i> Spack
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Python3%20Notes-1/" rel="next" title="Python3 Notes-1">
-      Python3 Notes-1 <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/Spack-WRF/" rel="next" title="Spack-WRF">
+      Spack-WRF <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
