@@ -29,7 +29,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://p.ipic.vip/5yxwm7.png">
 <meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
-<meta property="article:modified_time" content="2025-05-08T03:09:08.353Z">
+<meta property="article:modified_time" content="2025-06-12T09:11:46.450Z">
 <meta property="article:author" content="ruyanc">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://p.ipic.vip/5yxwm7.png">
@@ -232,7 +232,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2025-05-08 11:09:08" itemprop="dateModified" datetime="2025-05-08T11:09:08+08:00">2025-05-08</time>
+                <time title="Modified: 2025-06-12 17:11:46" itemprop="dateModified" datetime="2025-06-12T17:11:46+08:00">2025-06-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -322,6 +322,29 @@
 <h3 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">0 14 * * * sh /work/home/acyii6v8kt/WORK/Palm/Backup_WZCS-Palm.sh</span><br><span class="line">0 15 * * * sh /work/home/acyii6v8kt/WORK/Downscaling/Backup_WZCS-Downscaling.sh</span><br><span class="line">0 2 * * * sh /work/home/acyii6v8kt/WORK/DATA_download/Backup_WZCS-DATA_download.sh</span><br><span class="line">0 3 * * * sh /work/home/acyii6v8kt/WORK/GSI/Backup_WZCS-GSI.sh</span><br><span class="line">0 0 * * * delete -rf /home_gkx/users/nsgkx_zx2/.trash/*</span><br><span class="line"></span><br><span class="line">0 0 * * * sh /work/home/acyii6v8kt/WORK/DATA_download/For_HAFS/download_00.sh</span><br><span class="line">0 12 * * * sh /work/home/acyii6v8kt/WORK/DATA_download/For_HAFS/download_12.sh</span><br><span class="line"></span><br><span class="line">0 16 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/check_HAFS_pm_001.sh</span><br><span class="line">0 4 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/check_HAFS_am_001.sh</span><br><span class="line"></span><br><span class="line">0 9 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/check_HAFS_am_036.sh</span><br><span class="line">30 9 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/run_am.sh &gt; /work/home/acyii6v8kt/WORK/Palm/Operational/log.run 2&gt;&amp;1</span><br><span class="line">0 18 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/output_am.sh &gt; /work/home/acyii6v8kt/WORK/Palm/Operational/log.output 2&gt;&amp;1</span><br><span class="line"></span><br><span class="line">0 21 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/check_HAFS_pm_036.sh</span><br><span class="line">30 21 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/run_pm.sh &gt; /work/home/acyii6v8kt/WORK/Palm/Operational/log.run 2&gt;&amp;1</span><br><span class="line">0 6 * * * sh /work/home/acyii6v8kt/WORK/Palm/Operational/output_pm.sh &gt; /work/home/acyii6v8kt/WORK/Palm/Operational/log.output 2&gt;&amp;1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
+
+
+
+<h2 id="Palm-XYCS"><a href="#Palm-XYCS" class="headerlink" title="Palm XYCS"></a>Palm XYCS</h2><h4 id="创建环境"><a href="#创建环境" class="headerlink" title="创建环境"></a>创建环境</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n Palm_v23 python=3.10</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source Palm_v23.env</span><br></pre></td></tr></table></figure>
+
+<p><strong>Palm_v23.env</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">export LC_ALL=en_US.UTF-8</span><br><span class="line">export LANG=en_US.UTF-8</span><br><span class="line"></span><br><span class="line">conda activate Palm_v23</span><br><span class="line">module load intel/2021u3</span><br><span class="line">module load hpc hpc-intel hpc-impi</span><br><span class="line">module load cmake/3.31.4</span><br><span class="line">module load pnetcdf/1.12.2</span><br><span class="line">module load netcdf/4.9.2</span><br><span class="line">module load textproc/flex/2.6.4</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export install_prefix=&quot;&lt;install-prefix&gt;&quot;</span><br><span class="line">bash install -p $&#123;install_prefix&#125;</span><br><span class="line">export PATH=$&#123;install_prefix&#125;/bin:$&#123;PATH&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="修改-palm-config-default"><a href="#修改-palm-config-default" class="headerlink" title="修改.palm.config.default"></a>修改.palm.config.default</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">修改 %source_path为/work/home/acyii6v8kt/WORK/Palm/palm_model_system-v23.10/MAKE_DEPOSITORY_default 以保证原代码的整洁</span><br><span class="line"><span class="meta prompt_">%</span><span class="language-bash">compiler_options 添加 -g -traceback 进行代码调试，给出具体出错信息</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">./bin/palmbuild</span><br><span class="line">首次安装好后重新编译时使用，即使用.palm.config.default配置文件</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="修改netcdf-data-input-mod-f90"><a href="#修改netcdf-data-input-mod-f90" class="headerlink" title="修改netcdf_data_input_mod.f90"></a>修改netcdf_data_input_mod.f90</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">!-- Get variable</span><br><span class="line">    nc_stat = NF90_GET_VAR( id, id_var, tmp, start = (/1, i1s, i2s /),    &amp;    </span><br><span class="line">            count = (/ 1, count_1, count_2 /) )! change by Ruyan</span><br></pre></td></tr></table></figure>
+
+<h4 id="重新编译"><a href="#重新编译" class="headerlink" title="重新编译"></a>重新编译</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/palmbuild</span><br></pre></td></tr></table></figure>
+
+
     </div>
 
     
@@ -336,12 +359,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/Nice%20Website/" rel="prev" title="Nice Website">
-      <i class="fa fa-chevron-left"></i> Nice Website
+    <a href="/2022/05/01/Tool/PATH/" rel="prev" title="PATH">
+      <i class="fa fa-chevron-left"></i> PATH
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/NOAA_data/" rel="next" title="NOAA DATA">
-      NOAA DATA <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/ONNX/" rel="next" title="ONNX">
+      ONNX <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -401,7 +424,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-install"><span class="nav-number">1.</span> <span class="nav-text">Auto install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-manually"><span class="nav-number">2.</span> <span class="nav-text">Install manually</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Download"><span class="nav-number">2.1.</span> <span class="nav-text">Download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Requirements"><span class="nav-number">2.2.</span> <span class="nav-text">Software Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">2.3.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verification"><span class="nav-number">2.4.</span> <span class="nav-text">Verification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DEBUG"><span class="nav-number">2.5.</span> <span class="nav-text">DEBUG</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">使用说明简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E7%8E%89%E9%BE%99%E8%AE%B2%E8%A7%A3%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">马玉龙讲解视频笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MAKE-DEPOSITORY-default"><span class="nav-number">4.1.1.</span> <span class="nav-text">MAKE_DEPOSITORY_default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#palm-config-default"><span class="nav-number">4.1.2.</span> <span class="nav-text">.palm.config.default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x2F-bin-x2F-palmbuild"><span class="nav-number">4.1.3.</span> <span class="nav-text">.&#x2F;bin&#x2F;palmbuild</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA-test-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%94%A8%E4%BA%8E%E5%AD%98%E5%9C%A8%E8%BF%90%E8%A1%8C%E4%B8%AA%E4%BE%8B"><span class="nav-number">4.1.4.</span> <span class="nav-text">新建 test 文件夹用于存在运行个例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DATA-3D-AV-NETCDF-%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%97%B6%E9%97%B4%E5%B9%B3%E5%9D%87"><span class="nav-number">4.1.5.</span> <span class="nav-text">DATA_3D_AV_NETCDF 输出结果时间平均</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto"><span class="nav-number">4.2.</span> <span class="nav-text">Auto</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Auto-install"><span class="nav-number">1.</span> <span class="nav-text">Auto install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-manually"><span class="nav-number">2.</span> <span class="nav-text">Install manually</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Download"><span class="nav-number">2.1.</span> <span class="nav-text">Download</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-Requirements"><span class="nav-number">2.2.</span> <span class="nav-text">Software Requirements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Installation"><span class="nav-number">2.3.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Verification"><span class="nav-number">2.4.</span> <span class="nav-text">Verification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DEBUG"><span class="nav-number">2.5.</span> <span class="nav-text">DEBUG</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">使用说明简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A9%AC%E7%8E%89%E9%BE%99%E8%AE%B2%E8%A7%A3%E8%A7%86%E9%A2%91%E7%AC%94%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">马玉龙讲解视频笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">目录结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#MAKE-DEPOSITORY-default"><span class="nav-number">4.1.1.</span> <span class="nav-text">MAKE_DEPOSITORY_default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#palm-config-default"><span class="nav-number">4.1.2.</span> <span class="nav-text">.palm.config.default</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#x2F-bin-x2F-palmbuild"><span class="nav-number">4.1.3.</span> <span class="nav-text">.&#x2F;bin&#x2F;palmbuild</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%B0%E5%BB%BA-test-%E6%96%87%E4%BB%B6%E5%A4%B9%E7%94%A8%E4%BA%8E%E5%AD%98%E5%9C%A8%E8%BF%90%E8%A1%8C%E4%B8%AA%E4%BE%8B"><span class="nav-number">4.1.4.</span> <span class="nav-text">新建 test 文件夹用于存在运行个例</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DATA-3D-AV-NETCDF-%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E6%97%B6%E9%97%B4%E5%B9%B3%E5%9D%87"><span class="nav-number">4.1.5.</span> <span class="nav-text">DATA_3D_AV_NETCDF 输出结果时间平均</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Auto"><span class="nav-number">4.2.</span> <span class="nav-text">Auto</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Palm-XYCS"><span class="nav-number">5.</span> <span class="nav-text">Palm XYCS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%8E%AF%E5%A2%83"><span class="nav-number">5.0.1.</span> <span class="nav-text">创建环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">5.0.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-palm-config-default"><span class="nav-number">5.0.3.</span> <span class="nav-text">修改.palm.config.default</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9netcdf-data-input-mod-f90"><span class="nav-number">5.1.</span> <span class="nav-text">修改netcdf_data_input_mod.f90</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E6%96%B0%E7%BC%96%E8%AF%91"><span class="nav-number">5.1.1.</span> <span class="nav-text">重新编译</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -416,7 +439,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">220</span>
+          <span class="site-state-item-count">223</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
