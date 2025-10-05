@@ -268,12 +268,12 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">1. 安装</span></span><br><span class="line">spack install gcc@5.4.0 cppflags=&#x27;-std=gnu++14&#x27; cxxflags=&#x27;-std=gnu++14&#x27;</span><br><span class="line"><span class="meta prompt_">  </span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">2. 把刚装好的 5.4.0 注册为可用编译器</span></span><br><span class="line">spack compiler add &quot;$(spack location -i gcc@5.4.0)&quot;</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">3. 验证</span></span><br><span class="line">spack compiler list</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">4. 安装后使用</span></span><br><span class="line">spack load gcc@5.4.0</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>安装 <a href="mailto:&#111;&#x70;&#x65;&#x6e;&#109;&#112;&#x69;&#x40;&#x34;&#x2e;&#x35;&#x2e;&#x31;">&#111;&#x70;&#x65;&#x6e;&#109;&#112;&#x69;&#x40;&#x34;&#x2e;&#x35;&#x2e;&#x31;</a></li>
+<li>安装 <a href="mailto:&#x6f;&#x70;&#101;&#110;&#109;&#x70;&#105;&#x40;&#52;&#46;&#53;&#x2e;&#49;">&#x6f;&#x70;&#101;&#110;&#109;&#x70;&#105;&#x40;&#52;&#46;&#53;&#x2e;&#49;</a></li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spack add openmpi@4.5.1</span><br><span class="line">spack concretize</span><br><span class="line">spack install</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>安装<a href="mailto:&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x38;&#x2e;&#48;">&#x70;&#121;&#x74;&#104;&#111;&#x6e;&#x40;&#x33;&#x2e;&#x38;&#x2e;&#48;</a></li>
+<li>安装<a href="mailto:&#112;&#x79;&#116;&#x68;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#x38;&#x2e;&#48;">&#112;&#x79;&#116;&#x68;&#x6f;&#x6e;&#x40;&#51;&#x2e;&#x38;&#x2e;&#48;</a></li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spack add python@3.8.0</span><br><span class="line">spack concretize</span><br><span class="line">spack install</span><br></pre></td></tr></table></figure>
 
@@ -374,7 +374,7 @@
 
 
 <h2 id="编译-rap-gsi"><a href="#编译-rap-gsi" class="headerlink" title="编译 rap_gsi"></a>编译 <code>rap_gsi</code></h2><ul>
-<li>spack 安装 <a href="mailto:&#99;&#x6d;&#97;&#107;&#x65;&#64;&#51;&#46;&#49;&#x38;&#x2e;&#54;">&#99;&#x6d;&#97;&#107;&#x65;&#64;&#51;&#46;&#49;&#x38;&#x2e;&#54;</a>、<a href="mailto:&#x6f;&#112;&#101;&#110;&#x62;&#108;&#97;&#115;&#x40;&#x30;&#x2e;&#51;&#46;&#x32;&#x30;">&#x6f;&#112;&#101;&#110;&#x62;&#108;&#97;&#115;&#x40;&#x30;&#x2e;&#51;&#46;&#x32;&#x30;</a>、<a href="mailto:&#x62;&#97;&#99;&#105;&#x6f;&#x40;&#x32;&#x2e;&#52;&#x2e;&#49;">&#x62;&#97;&#99;&#105;&#x6f;&#x40;&#x32;&#x2e;&#52;&#x2e;&#49;</a></li>
+<li>spack 安装 <a href="mailto:&#x63;&#x6d;&#x61;&#107;&#x65;&#64;&#x33;&#x2e;&#x31;&#x38;&#x2e;&#x36;">&#x63;&#x6d;&#x61;&#107;&#x65;&#64;&#x33;&#x2e;&#x31;&#x38;&#x2e;&#x36;</a>、<a href="mailto:&#x6f;&#112;&#101;&#110;&#x62;&#108;&#97;&#x73;&#64;&#48;&#46;&#x33;&#46;&#x32;&#48;">&#x6f;&#112;&#101;&#110;&#x62;&#108;&#97;&#x73;&#64;&#48;&#46;&#x33;&#46;&#x32;&#48;</a>、<a href="mailto:&#x62;&#97;&#x63;&#x69;&#x6f;&#64;&#x32;&#x2e;&#x34;&#46;&#49;">&#x62;&#97;&#x63;&#x69;&#x6f;&#64;&#x32;&#x2e;&#x34;&#46;&#49;</a></li>
 <li>spack 安装 crtm</li>
 </ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt安装git-lfs后，export GIT_LFS_SKIP_SMUDGE=1</span><br></pre></td></tr></table></figure>
@@ -603,12 +603,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/SCP/" rel="prev" title="SCP">
-      <i class="fa fa-chevron-left"></i> SCP
+    <a href="/2022/05/01/Tool/Python3%20Notes-1/" rel="prev" title="Python3 Notes-1">
+      <i class="fa fa-chevron-left"></i> Python3 Notes-1
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/01/Tool/RAP%20run/" rel="next" title="RAP run">
-      RAP run <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/01/Tool/RAP%20driver/" rel="next" title="RAP driver">
+      RAP driver <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
