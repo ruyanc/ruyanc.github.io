@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="来源：https:&#x2F;&#x2F;jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com&#x2F;en&#x2F;latest&#x2F;working-practices&#x2F;index.html Branching and merging code按照 git flow 的结构，仓库设有两个特殊分支：    main 分支：存放已发布的正式版本代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JEDI Working Principles">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/JEDI%20Working%20Principles/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="来源：https:&#x2F;&#x2F;jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com&#x2F;en&#x2F;latest&#x2F;working-practices&#x2F;index.html Branching and merging code按照 git flow 的结构，仓库设有两个特殊分支：    main 分支：存放已发布的正式版本代码">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-05T11:25:07.612Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/JEDI%20Working%20Principles/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>JEDI Working Principles | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/JEDI%20Working%20Principles/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JEDI Working Principles
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-10-05 19:25:07" itemprop="dateModified" datetime="2025-10-05T19:25:07+08:00">2025-10-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>来源：<a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/working-practices/index.html">https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/working-practices/index.html</a></p>
+<h2 id="Branching-and-merging-code"><a href="#Branching-and-merging-code" class="headerlink" title="Branching and merging code"></a>Branching and merging code</h2><p>按照 git flow 的结构，仓库设有两个特殊分支：  </p>
+<ul>
+<li><strong>main 分支</strong>：存放已发布的正式版本代码；  </li>
+<li><strong>develop 分支</strong>：存放即将进入下一版本的新功能与改进。</li>
+</ul>
+<p>除此之外，模型还定义了三种临时分支：  </p>
+<ol>
+<li><strong>feature 分支</strong>（功能分支）：用于开发新功能；  </li>
+<li><strong>release 分支</strong>（发布分支）：用于准备新版本发布；  </li>
+<li><strong>hotfix 分支</strong>（热修分支）：用于修复已发布版本中的紧急缺陷。</li>
+</ol>
+<p>这与过去“主干开发”模式不同——过去 main、develop、发布准备和缺陷修复都集中在同一条主干（trunk）上完成。</p>
+<p>一次典型的功能开发流程如下：  </p>
+<ol>
+<li>从 develop 分支拉出 feature 分支（例如命名为 <code>feature/great_new_stuff</code>），在此进行开发。  </li>
+<li>功能开发并自测完成后，把该分支合并回 develop。</li>
+</ol>
+<p>由于仓库内并行开发，期间可能有其他功能已先并入 develop。原则上，<strong>责任在于当前开发者</strong>：  </p>
+<ul>
+<li>先把自己的 feature 分支与最新 develop 合并；  </li>
+<li>解决所有冲突后再向 develop 提 PR。</li>
+</ul>
+<p>若冲突简单，开发者可自行处理；若冲突复杂，则需与引入冲突的开发者协作解决，或由代码守门人（gatekeeper）最终裁定。</p>
+<p>为尽早发现冲突、降低合并难度，应养成<strong>双向高频合并</strong>的习惯：  </p>
+<ul>
+<li>经常把 develop 合入 feature，保持功能分支“最新”；  </li>
+<li>功能完成一段落就及时合回 develop。</li>
+</ul>
+<p>比起“闭关”开发数周后再一次性解决巨型冲突，<strong>逐个小冲突逐个解决</strong>效率更高，也促使开发者提前沟通后续改动计划。</p>
+<p>当需要正式发布时，流程转入专门的 <strong>release 分支</strong>：  </p>
+<ol>
+<li>在 release 分支完成发布前的最终测试、文档更新与版本号调整；  </li>
+<li>发布就绪后，把 release 分支同时合并到 main 与 develop，并在 main 上打标签（如 <code>2.0</code> 表示大版本，<code>2.1</code> 表示小版本）。  </li>
+<li>此时 main 指向新的官方发布版，后续日常开发继续基于 develop 进行。</li>
+</ol>
+<p>即便测试再充分，已发布版本仍可能（且总会）出现需紧急修复的缺陷。此时：  </p>
+<ol>
+<li>从 main 的对应标签拉出 <strong>hotfix 分支</strong>；  </li>
+<li>在 hotfix 分支上实现并验证修复；  </li>
+<li>修复完成后，同时合并回 main 与 develop；  </li>
+<li>在 main 上升级修订号并打新标签（例如从 <code>2.1.0</code> → <code>2.1.1</code>）。</li>
+</ol>
+<p><strong>注意</strong>：为保证可重现性，<strong>已有标签绝不允许移动</strong>。</p>
+<p>更多 git-flow 细节与入门操作，请参考官方指南。</p>
+<h2 id="Forking-and-cloning-repositories"><a href="#Forking-and-cloning-repositories" class="headerlink" title="Forking and cloning repositories"></a>Forking and cloning repositories</h2><p>GitHub 及同类工具支持两种获取仓库的方式：<strong>克隆（clone）</strong>与<strong>复刻（fork）</strong>。  </p>
+<ul>
+<li><strong>克隆</strong>：适用于对官方仓库拥有推送权限的开发者。此时需严格遵循 git-flow 工作流。  </li>
+<li><strong>复刻（fork）</strong>：适用于无推送权限的开发者。他们可自由选择工作流，但仍推荐沿用 git-flow。</li>
+</ul>
+<p>在“协同统一资料同化与预报系统”这类多机构协作项目中，<strong>最佳实践是统一采用 fork 模式</strong>：</p>
+<ol>
+<li>所有合作方先共同认定一个<strong>中央官方仓库</strong>。  </li>
+<li>各合作方在此中央仓库的基础上创建自己的 <strong>organization fork</strong>，并开启<strong>自动同步</strong>（auto-sync），确保随时与官方保持最新。  </li>
+<li>在各合作方内部，每位开发者再对“本机构的 fork”做一次个人 fork，作为自己日常工作的“中央”远程库。  <ul>
+<li>若机构庞大，还可按<strong>团队&#x2F;小组&#x2F;部门</strong>再嵌套一层 fork，实现多级管理。</li>
+</ul>
+</li>
+</ol>
+<p>日常开发流程：  </p>
+<ul>
+<li>开发者从自己的个人 fork 克隆到本地进行编码，可<strong>随时、频繁地向自己的 fork 推送</strong>。  </li>
+<li>功能完成后，通过 <strong>Pull Request（PR）</strong> 将贡献提交至上一层仓库（最终汇聚到中央官方仓库）。  </li>
+<li>开发者之间也可<strong>互相拉取对方 fork 中的分支</strong>，便于多人协作开发同一功能；若需更大范围协同，可由有权限者将分支推到中央仓库，供多人共同操作。</li>
+</ul>
+<p>对于<strong>业务（operational）用户</strong>：  </p>
+<ul>
+<li>同样为自己所需的仓库创建个人 fork。  </li>
+<li>编译前，在本地磁盘克隆该 fork；  <ul>
+<li>若采用<strong>手动同步</strong>，则只有用户主动拉取时才会更新；  </li>
+<li>若开启<strong>自动同步</strong>，仍可通过<strong>打标签</strong>或<strong>指定某 commit</strong> 锁定版本，防止意外升级。</li>
+</ul>
+</li>
+<li>业务克隆可置于防火墙内、受备份策略保护的磁盘，满足运行安全规范。  </li>
+<li>GitHub 提供云端服务，也可在机构内部部署 <strong>GitHub Enterprise</strong>，于是整个 fork 链条都能留在受控网络中。</li>
+</ul>
+<h2 id="Reviewing-Code"><a href="#Reviewing-Code" class="headerlink" title="Reviewing Code"></a>Reviewing Code</h2><p>审查流程的作用是管控各分支（尤其是仓库的 develop 与 main 分支）的内容，确保仓库中的所有代码都能正常运行且保持高质量。凡是具有科学性质的讨论与决策，应在进入拉取请求（PR）与代码审查之前，先在 ZenHub 层面完成。</p>
+<h3 id="What-is-a-Code-Review"><a href="#What-is-a-Code-Review" class="headerlink" title="What is a Code Review?"></a>What is a Code Review?</h3><p>代码审查是指对软件源代码进行系统性检查，旨在发现潜在缺陷、验证逻辑正确性，并提升代码库的整体健康度。代码审查在提交拉取请求（PR）时进行。</p>
+<h3 id="Creating-a-Good-Pull-Request"><a href="#Creating-a-Good-Pull-Request" class="headerlink" title="Creating a Good Pull Request"></a>Creating a Good Pull Request</h3><p>拉取请求（PR）是一份关于“做了什么更改以及为何做此更改”的公开记录，它会成为仓库版本控制历史的永久组成部分。</p>
+<p>对开发者和审查者而言，通常最好频繁地以小幅增量进行代码审查与合并，而非一次性合并巨量更改。这样可以让其他可能受影响的开发者更早接触到新代码，并简化合并流程；实现这一点的方法之一就是先创建一个草稿 PR。</p>
+<p>当 PR 准备就绪、可以提交审查时，JEDI 开发者会按照规定流程创建并提交 PR，随后进入代码审查阶段。</p>
+<h3 id="The-Standard-of-Code-Review"><a href="#The-Standard-of-Code-Review" class="headerlink" title="The Standard of Code Review"></a>The Standard of Code Review</h3><p>评审流程是开发工作的有机组成部分，从一开始就应纳入考虑。代码评审的首要目的，是确保代码库的整体健康状况与质量随时间不断提升，即在代码清晰度、功能性、效率、可移植性和可扩展性等方面持续进步。这需要权衡：</p>
+<ul>
+<li>开发者需要推进工作；及时的评审有助于他们快速前进。  </li>
+<li>评审者必须确保 PR 的质量能让整体代码库变得更好，并对所评审的代码承担长期责任，以保证一致性与可维护性。</li>
+</ul>
+<p>代码评审的<strong>预期标准</strong>是：只要 PR <strong>确实</strong>提升了整体代码健康度，即使不完美，也应倾向于批准。没有“完美”的代码，只有“更好”的代码。评审者需在“推动进展”与“建议改进”的重要性之间取得平衡，追求持续改进。只要 PR 在功能、可维护性、可读性和可理解性方面带来改善，就适合合并到代码库中。</p>
+<h3 id="Benefits-of-Code-Reviews"><a href="#Benefits-of-Code-Reviews" class="headerlink" title="Benefits of Code Reviews"></a>Benefits of Code Reviews</h3><p><strong>共享知识 &#x2F; 提升知识传递</strong>： 当更多人既了解“大局”也掌握细节时，团队在软件开发上的协作会更加顺畅。</p>
+<p><strong>改进开发流程</strong>：  评审者通过代码审查接触到产品的复杂度、已知痛点与隐患区域，整个团队因此拥有多位“知情贡献者”，开发者与团队的速度自然加快。</p>
+<p><strong>全员指导</strong>：  代码审查促成围绕代码的持续对话，常能把隐性知识“挖”出来，并让新观点与老经验碰撞、融合。</p>
+<p><strong>持续进步</strong>：  审查过程不断让开发者接触新思路、新技术，代码质量随之水涨船高。</p>
+<p><strong>融入现有流程</strong>：  代码审查必须与团队既定工作流无缝衔接。例如采用“任务分支”模式时，应在<strong>代码写完、本地测试套件手动跑通之后、合并回上游之前</strong>发起审查。这样既能把评审者的时间花在机器查不出的问题上，也能防止低质量代码污染主干。</p>
+<h3 id="What-to-look-for-in-a-Code-Review"><a href="#What-to-look-for-in-a-Code-Review" class="headerlink" title="What to look for in a Code Review"></a>What to look for in a Code Review</h3><p>设计（Design）  </p>
+<ul>
+<li>代码交互是否合理？  </li>
+<li>是否存在逻辑错误？  </li>
+<li>需求是否被完整实现？一句话：该 issue 的“完成定义”（Definition of Done）达成了吗？</li>
+</ul>
+<p>功能（Functionality）  </p>
+<ul>
+<li>PR 是否真正实现了预期目标？  </li>
+<li>这些改动对终端用户和开发者都有利吗？</li>
+</ul>
+<p>复杂度（Complexity）  </p>
+<ul>
+<li>代码是否足够清晰，让评审者一次就能看懂？</li>
+</ul>
+<p>测试（Testing）  </p>
+<ul>
+<li>单元 &#x2F; 集成 &#x2F; 端到端测试是否针对本次改动合理覆盖？  </li>
+<li>代码一旦出错，测试会失败吗？  </li>
+<li>底层实现再变，测试也不会误报（false positive）吗？  </li>
+<li>既有测试是否继续全部通过？</li>
+</ul>
+<p>注释（Comments）  </p>
+<ul>
+<li>注释是否既清晰又“有必要”？  </li>
+<li>注释只解释“为什么”，而不是“在做什么”。</li>
+</ul>
+<p>风格与一致性（Style &amp; Consistency）  </p>
+<ul>
+<li>若项目有 Style Guide，本次改动是否完全遵循？</li>
+</ul>
+<p>文档（Documentation）  </p>
+<ul>
+<li>只要 PR 改变了行为或使用方式，对应文档必须同步更新，保持信息一致。</li>
+</ul>
+<h3 id="How-Fast-Should-Code-Reviews-Be"><a href="#How-Fast-Should-Code-Reviews-Be" class="headerlink" title="How Fast Should Code Reviews Be?"></a>How Fast Should Code Reviews Be?</h3><p>代码审查“耗时”——却能“很快”！  </p>
+<p>这一看似矛盾的说法，其实指向的是：<strong>优化产品交付速度，而非个人写码速度</strong>。团队整体开发速率才是核心，<strong>及时的审查正能加速这一过程</strong>。一旦审查不及时，就会：</p>
+<ul>
+<li><strong>拖慢团队速率</strong>——每份 PR 都在排队，新功能与缺陷修复被迫延期；  </li>
+<li><strong>引发抵触情绪</strong>——开发者最反感的就是“石沉大海”的 PR；只要 reviewer 响应够快，90% 的抱怨会消失；  </li>
+<li><strong>损害代码健康</strong>——慢审查会打击人做清理、重构、持续改进的积极性。</li>
+</ul>
+<p>要做到“既快又稳”，只需把握以下平衡点：</p>
+<ol>
+<li><p>速度 vs. 打断  </p>
+<ul>
+<li>若你<strong>不在深度专注区</strong>，看到 PR 就尽快审；  </li>
+<li>若你<strong>正沉浸式写码</strong>，别硬切上下文，先把手头任务完成。</li>
+</ul>
+</li>
+<li><p>先给“响应”，再给“完整”  </p>
+<ul>
+<li>我们看重的是<strong>响应时间</strong>，而非从提出到合并的总时长；  </li>
+<li>实在忙不过来，先回一句“我周三前处理，可先找 @XX 看”或给些<strong>初步大方向</strong>，也能让作者继续推进。</li>
+</ul>
+</li>
+<li><p>分担负荷  </p>
+<ul>
+<li>很多团队要求<strong>至少两票</strong>才能合并，听起来重？其实不；  </li>
+<li>作者发起 PR 时<strong>把网撒大</strong>，@ 整个小组；任意两人即可 Review，<strong>去中心化</strong>自然消除单点瓶颈，也让代码审查覆盖度最大化。</li>
+</ul>
+</li>
+</ol>
+<h3 id="Comments-in-a-code-review"><a href="#Comments-in-a-code-review" class="headerlink" title="Comments in a code review"></a>Comments in a code review</h3><p>代码评审中的评论旨在帮助 PR 作者进一步打磨代码，从而提升整个项目的代码健康度。高质量的评论应包含以下要素：</p>
+<ol>
+<li><strong>礼貌尊重</strong>：在指出问题的同时保持客气与尊重，语气清晰且具有建设性，让作者感受到帮助而非指责。</li>
+<li><strong>阐述理由</strong>：不仅指出“哪里有问题”，更要说明“为什么”——这条建议如何提升代码可维护性、可读性或性能，让作者理解背后的意图。</li>
+<li><strong>适度引导</strong>：平衡“指出问题”与“直接给答案”的度：  <ul>
+<li>把修复的具体实现留给作者，避免事无巨细地发号施令；  </li>
+<li>同时肯定代码中的亮点，并说明“好在哪里”，促使好的实践被持续复用。</li>
+</ul>
+</li>
+</ol>
+<h3 id="Give-and-Take-in-a-Code-Review"><a href="#Give-and-Take-in-a-Code-Review" class="headerlink" title="Give and Take in a Code Review"></a>Give and Take in a Code Review</h3><p>代码评审出现“修改建议 → 作者回应 → 再修改”的往复，看似“顶撞”，实则是健康的开发环节。以下几点可帮助把“拉锯”转化为“共赢”。</p>
+<ol>
+<li><p>谁对谁错？  </p>
+<p>开发者与评审者都应先问：这条建议合理吗？  </p>
+<ul>
+<li>任何意见都要给出<strong>技术理由</strong>；  </li>
+<li>只要能让代码<strong>更健康</strong>，多一次改动就值得；  </li>
+<li>代码健康的提升从来都是<strong>小步快跑</strong>。</li>
+</ul>
+</li>
+<li><p>“以后再清理”是陷阱  </p>
+<p>想把功能赶紧落地可以理解，但<strong>立即相关的收尾工作不能拖</strong>。  </p>
+<p>时间越久，补救概率越低，“以后清理”&#x3D; 代码库逐步腐烂。</p>
+</li>
+<li><p>冲突解决原则  </p>
+<p>记住评审的底线：<strong>只要 PR 让系统整体更健康，就值得通过</strong>——没有完美代码，只有更好代码。  </p>
+<ul>
+<li>技术事实 &gt; 个人偏好；  </li>
+<li>有 Style Guide 就以它为<strong>绝对权威</strong>；  </li>
+<li>软件设计问题绝非“风格”或“喜好”，而是<strong>基本设计原则</strong>。</li>
+</ul>
+</li>
+<li><p>与敏捷共生  </p>
+<p>好的代码评审天然贴合敏捷精神：  </p>
+<ul>
+<li><p>快速、持续交付可用软件 → 客户满意；  </p>
+</li>
+<li><p>客户与开发者紧密协作；  </p>
+</li>
+<li><p>追求卓越与良好设计；  </p>
+</li>
+<li><p>随时适应变化。  </p>
+<p>结果：团队速率↑、容量↑、规划与估算能力↑，最终交付更多功能。</p>
+</li>
+</ul>
+</li>
+<li><p>多级 fork 模型下的“层层评审”  </p>
+<ul>
+<li>每级 fork → 每级 PR → 每级评审，<strong>一个都不能少</strong>；  </li>
+<li>开发者向合作方仓库提 PR → 对方评审；  </li>
+<li>合作方再向中央仓库提 PR → 再次评审；  </li>
+<li>发布前，release 分支上的任何改动仍需评审；  </li>
+<li>全程讨论与文档对所有层级可见，<strong>知识不丢失</strong>。</li>
+</ul>
+</li>
+<li><p>复杂系统需要“分域评审”  </p>
+<p>现代资料同化与预报系统极其复杂，耦合系统时代更甚。<strong>没人能单刷全图</strong>。  </p>
+<p>把评审任务按** expertise 分散**给不同领域专家：  </p>
+<ul>
+<li><p>workload 均摊，  </p>
+</li>
+<li><p>评审效率提升，  </p>
+</li>
+<li><p>系统质量才有保障。</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="Testing"><a href="#Testing" class="headerlink" title="Testing"></a>Testing</h2><p>测试是开发流程的<strong>强制环节</strong>，任何分支在未通过测试前<strong>不得合并</strong>。</p>
+<p>为帮助开发者与评审人，JEDI 生态内置了一整套测试设施，核心目标只有两个：  </p>
+<ol>
+<li>方便<strong>编写</strong>测试；  </li>
+<li>方便<strong>运行</strong>测试。</li>
+</ol>
+<p>现有测试覆盖率再高，<strong>“加测试”仍是开发任务的一部分</strong>。  </p>
+<ul>
+<li>开发者最了解自己的代码，<strong>每个重大功能必须附带对应测试</strong>；  </li>
+<li>测试代码跟功能代码一样要走评审流程；  </li>
+<li>任何绕过或放宽测试标准的行为，必须<strong>充分论证并记录在案</strong>（详见“Adding a New Test”章节）。</li>
+</ul>
+<p>敏捷时代强调“小步快跑”，<strong>高频自动化测试</strong>成为刚需。  </p>
+<p>JEDI 的自动化框架与 GitHub 深度集成，通过 <strong>webhook</strong> 触发事件驱动测试：  </p>
+<ul>
+<li>每次对 <code>develop</code> 分支新建 PR → 自动构建 + 全量测试；  </li>
+<li>同一 PR 后续每次 push → 再次触发测试；  </li>
+<li>测试结果实时回写在 PR 页面，<strong>绿灯全亮才允许合并</strong>；  </li>
+<li>早期就能捕获兼容性&#x2F;回归错误，显著缩短评审周期，加速新功能落地。</li>
+</ul>
+<p><strong>多环境并行跑</strong>：  </p>
+<p>使用 <strong>Docker 容器</strong>预装三套编译器-MP I组合：  </p>
+<ol>
+<li>GNU + OpenMPI  </li>
+<li>CLANG + MPICH  </li>
+<li>Intel + impi  （GNU 与 CLANG 镜像已公开托管在 JCSDA DockerHub）</li>
+</ol>
+<p><strong>两套构建模式</strong>：  </p>
+<p>A. <strong>bundle 构建</strong>（推荐，普通用户直接用）  </p>
+<p>B. <strong>jedi-build-package</strong>（CI 专用，可把编译缓存写到 S3，二次构建秒级完成，详见其 README）</p>
+<p><strong>云资源</strong>：  </p>
+<p>当前核心仓库已接入 <strong>Travis-CI + AWS CodeBuild</strong>，每次 commit 自动并行跑测试：  </p>
+<ol>
+<li>云端拉取最新代码 →  </li>
+<li>启动对应 Docker 容器 →  </li>
+<li>容器内编译 + 运行测试 →  </li>
+<li>结果回传 PR 页面</li>
+</ol>
+<p>框架脚本几乎全放在 <code>CI/</code> 目录，仅 <code>.travis.yml</code> 置于根目录，方便统一维护。</p>
+<h3 id="GitHub-Automated-Testing"><a href="#GitHub-Automated-Testing" class="headerlink" title="GitHub Automated Testing"></a>GitHub Automated Testing</h3><p>JEDI Bundle 的大部分仓库现采用 <strong>AWS Batch</strong> 作为自动化测试后端：  </p>
+<ul>
+<li>每次触发时，系统<strong>随机</strong>为你拉起一套全新环境（Clang | GNU | Intel 容器三选一）。  </li>
+<li>想<strong>指定环境</strong>？在 PR 描述里加一行<strong>注解</strong>即可；完整注解列表与 CI 配置说明，都在 PR 页面 <strong>check run 的 “details” 链接</strong>里，点一下就能看到。</li>
+</ul>
+<p><strong>草稿 PR 默认不跑 CI</strong>  </p>
+<p>如果希望草稿阶段也测，请在 PR 描述里加一行：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">run-ci-on-draft=true</span><br></pre></td></tr></table></figure>
+
+<p><strong>手动重跑测试</strong><br>只需推送一个<strong>空提交</strong>即可重新触发：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit --allow-empty -m <span class="string">&#x27;trigger CI&#x27;</span> &amp;&amp; git push</span><br></pre></td></tr></table></figure>
+
+<h3 id="Testing-Development-across-Multiple-Repositories"><a href="#Testing-Development-across-Multiple-Repositories" class="headerlink" title="Testing Development across Multiple Repositories"></a>Testing Development across Multiple Repositories</h3><p>当一条新特性需要<strong>跨多个仓库联动</strong>时，可在主 PR 的描述里用 <code>build-group=</code> 注解把相关 PR“串”起来，让 JEDI CI 一次性拉取所有配套分支进行联编联测。</p>
+<p>模板示例（直接复制到 PR 描述即可）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">This is my generic pull request description. My change requires coordinated changes in oops and saber. My tests won&#x27;t pass unless your bundle contains the matching changes.</span><br><span class="line"></span><br><span class="line">build-group=https://github.com/JCSDA-internal/oops/pull/123</span><br><span class="line">build-group=https://github.com/JCSDA-internal/saber/pull/456</span><br></pre></td></tr></table></figure>
+
+<p>要点  </p>
+<ol>
+<li>每行一个 <code>build-group=</code>，URL 指向 <strong>JCSDA-internal</strong> 仓库的对应 PR。  </li>
+<li>注解必须放在 PR 描述里，标题或评论无效。  </li>
+<li>CI 会在<strong>同一批容器</strong>里先把这些 PR 全部合并，再跑测试，确保跨库兼容性。</li>
+</ol>
+<h3 id="Tips-on-How-to-Use-Automated-Testing-Tools"><a href="#Tips-on-How-to-Use-Automated-Testing-Tools" class="headerlink" title="Tips on How to Use Automated Testing Tools"></a>Tips on How to Use Automated Testing Tools</h3><p>自动化测试 <strong>不是调试工具</strong>，请务必先在本地<strong>完整编译并通过测试</strong>，再提交 PR。</p>
+<p>为避免占用 CI 资源，请<strong>减少推送次数</strong>：</p>
+<ul>
+<li>每 push 一次，AWS Batch 就会重新全量编译 + 测试；  </li>
+<li><strong>逐个 commit 猛推</strong>会堵塞队列，拖慢所有人。</li>
+</ul>
+<p><strong>省 CI 妙招</strong>  </p>
+<ol>
+<li><p>把 PR 切成 <strong>Draft</strong> 状态，改完一堆 commit 再转 Ready；  </p>
+</li>
+<li><p>或者本地 <code>git rebase</code> 整理好多个 commit，<strong>一次性 push</strong>。</p>
+</li>
+</ol>
+<h2 id="Creating-documentation"><a href="#Creating-documentation" class="headerlink" title="Creating documentation"></a>Creating documentation</h2><p>文档写作工具链</p>
+<ol>
+<li><p>指南与手册 → Sphinx（Python 静态文档生成器）  </p>
+<p>快速入门点这里：Getting Started with Sphinx</p>
+</li>
+<li><p>代码级文档 → Doxygen  </p>
+</li>
+<li><p>自动生成继承图、调用树、man 页等。</p>
+</li>
+</ol>
+<p>文档仓库<br>所有文档统一放到 <strong>JCSDA&#x2F;jedi-docs</strong> 仓库，并按 Git Flow 管理。</p>
+<p>完整步骤（一次搞定）</p>
+<ol>
+<li>更新本地  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout develop</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure></li>
+<li>新建功能分支  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b feature/my-branch</span><br><span class="line">git branch <span class="comment"># 确认当前分支</span></span><br></pre></td></tr></table></figure></li>
+<li>编辑&#x2F;新增文档  <ul>
+<li>改已有内容 → 直接编辑对应的 <code>.rst</code> 文件；  </li>
+<li>新增章节 → 新建 <code>.rst</code> 文件，并在同一级 <code>index.rst</code> 里把新文件注册进去（<code>toctree</code> 里加一行即可）。</li>
+</ul>
+</li>
+<li>提交推送  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;add: xxx 用户指南&quot;</span></span><br><span class="line">git push origin feature/my-branch</span><br></pre></td></tr></table></figure></li>
+<li>创建 PR → 评审合并到 <code>develop</code>，后续按 Git Flow 发布。</li>
+</ol>
+<p>小提示  </p>
+<ul>
+<li>若第一次用 git-flow，请先执行 <code>git flow init -d</code> 初始化。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/JEDI%20overview/" rel="prev" title="JEDI-overview">
+      <i class="fa fa-chevron-left"></i> JEDI-overview
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/How%20to%20publish%20a%20paper/" rel="next" title="How to publish a paper">
+      How to publish a paper <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Branching-and-merging-code"><span class="nav-number">1.</span> <span class="nav-text">Branching and merging code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Forking-and-cloning-repositories"><span class="nav-number">2.</span> <span class="nav-text">Forking and cloning repositories</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reviewing-Code"><span class="nav-number">3.</span> <span class="nav-text">Reviewing Code</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-a-Code-Review"><span class="nav-number">3.1.</span> <span class="nav-text">What is a Code Review?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-Good-Pull-Request"><span class="nav-number">3.2.</span> <span class="nav-text">Creating a Good Pull Request</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#The-Standard-of-Code-Review"><span class="nav-number">3.3.</span> <span class="nav-text">The Standard of Code Review</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Benefits-of-Code-Reviews"><span class="nav-number">3.4.</span> <span class="nav-text">Benefits of Code Reviews</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-look-for-in-a-Code-Review"><span class="nav-number">3.5.</span> <span class="nav-text">What to look for in a Code Review</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-Fast-Should-Code-Reviews-Be"><span class="nav-number">3.6.</span> <span class="nav-text">How Fast Should Code Reviews Be?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Comments-in-a-code-review"><span class="nav-number">3.7.</span> <span class="nav-text">Comments in a code review</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Give-and-Take-in-a-Code-Review"><span class="nav-number">3.8.</span> <span class="nav-text">Give and Take in a Code Review</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing"><span class="nav-number">4.</span> <span class="nav-text">Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub-Automated-Testing"><span class="nav-number">4.1.</span> <span class="nav-text">GitHub Automated Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Testing-Development-across-Multiple-Repositories"><span class="nav-number">4.2.</span> <span class="nav-text">Testing Development across Multiple Repositories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tips-on-How-to-Use-Automated-Testing-Tools"><span class="nav-number">4.3.</span> <span class="nav-text">Tips on How to Use Automated Testing Tools</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Creating-documentation"><span class="nav-number">5.</span> <span class="nav-text">Creating documentation</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

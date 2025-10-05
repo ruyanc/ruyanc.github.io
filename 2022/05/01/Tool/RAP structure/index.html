@@ -1,0 +1,2616 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="RAP structuresms&#x2F;makesms 目录 👉 归纳为一条主线： mirror_ftp&#x2F;STARTTIME → MAKEBC&#x2F;UPDATEBC → ANALYSIS&#x2F;PROCESS(ENKF) → FCST&#x2F;FCST_Pcyc → POSTMGR&#x2F;产品生成（GEMPAK、SNDP） → SMOKEPREP（水汽&#x2F;气">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAP structure">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/RAP%20structure/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="RAP structuresms&#x2F;makesms 目录 👉 归纳为一条主线： mirror_ftp&#x2F;STARTTIME → MAKEBC&#x2F;UPDATEBC → ANALYSIS&#x2F;PROCESS(ENKF) → FCST&#x2F;FCST_Pcyc → POSTMGR&#x2F;产品生成（GEMPAK、SNDP） → SMOKEPREP（水汽&#x2F;气">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-16T14:59:13.422Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/RAP%20structure/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>RAP structure | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/RAP%20structure/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RAP structure
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-09-16 22:59:13" itemprop="dateModified" datetime="2025-09-16T22:59:13+08:00">2025-09-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="RAP-structure"><a href="#RAP-structure" class="headerlink" title="RAP structure"></a>RAP structure</h2><h3 id="sms-x2F-makesms-目录"><a href="#sms-x2F-makesms-目录" class="headerlink" title="sms&#x2F;makesms 目录"></a>sms&#x2F;makesms 目录</h3><hr>
+<p>👉 归纳为一条主线：<br> <strong>mirror_ftp&#x2F;STARTTIME → MAKEBC&#x2F;UPDATEBC → ANALYSIS&#x2F;PROCESS(ENKF) → FCST&#x2F;FCST_Pcyc → POSTMGR&#x2F;产品生成（GEMPAK、SNDP） → SMOKEPREP（水汽&#x2F;气溶胶专项）</strong></p>
+<p><strong>初始化</strong></p>
+<ul>
+<li><code>mirror_ftp</code> 下载外部数据</li>
+<li><code>STARTTIME</code> 确定起报时刻</li>
+<li><code>jrap_makebc_xx.bsub</code> 生成边界条件</li>
+</ul>
+<p><strong>循环更新</strong></p>
+<ul>
+<li><code>jrap_updatebc_xx.bsub</code> &#x2F; <code>jrap_updatebc_pcyc_xx.bsub</code> 周期更新</li>
+</ul>
+<p><strong>分析&#x2F;同化</strong></p>
+<ul>
+<li><code>jrap_analysis_xx.bsub</code> &#x2F; <code>jrap_analysis_pcyc_xx.bsub</code></li>
+<li><code>jrap_process_xx.bsub</code> （包括 <code>enkf</code>）</li>
+</ul>
+<p><strong>数值预报</strong></p>
+<ul>
+<li><code>jrap_fcst_xx.bsub</code> （不同起报时次）</li>
+<li><code>jrap_fcst_pcyc_xx.bsub</code> （循环预报）</li>
+</ul>
+<p><strong>后处理</strong></p>
+<ul>
+<li><code>jrap_postmgr_xx.bsub</code> 负责整体后处理调度</li>
+<li><code>jrap_gempak_xx.bsub</code> 生成产品</li>
+<li><code>jrap_sndp_xx.bsub</code> 探空后处理</li>
+</ul>
+<p><strong>专项处理</strong></p>
+<ul>
+<li><code>jrap_smokeprep_xx.bsub</code> &#x2F; <code>jrap_smokeprep_pcyc_xx.bsub</code> 烟雾准备</li>
+</ul>
+<hr>
+<p>多个<strong>模板驱动的作业脚本批量生成器</strong>，用于快速生成 RAP 模型在 24 小时内所有整点（及偏循环）分析所需的 PBS 作业脚本，<strong>本身不运行模型，也不提交任务</strong>，仅为工作流准备脚本文件。举例说明如下：</p>
+<h4 id="make-sms-analysis"><a href="#make-sms-analysis" class="headerlink" title="make_sms_analysis"></a>make_sms_analysis</h4><ul>
+<li><strong>模板文件</strong>：<code>jrap_analysis_XX.bsub</code></li>
+<li><strong>目标文件</strong>：<code>jrap_analysis_$&#123;cyc&#125;.bsub</code></li>
+<li><strong>目的</strong>：为每个小时生成一个独立的 PBS 作业脚本，用于运行 RAP 全循环分析。</li>
+<li><strong>模板文件</strong>：<code>jrap_analysis_pcyc_XX.bsub</code></li>
+<li><strong>目标文件</strong>：<code>jrap_analysis_pcyc_$&#123;cyc&#125;.bsub</code></li>
+<li><strong>作用</strong>：为偏循环（partial cycle）分析生成作业脚本，通常用于 RAP 在 03Z 和 15Z 的冷启动前处理。</li>
+</ul>
+<h4 id="make-sms-fcst"><a href="#make-sms-fcst" class="headerlink" title="make_sms_fcst"></a>make_sms_fcst</h4><ul>
+<li><strong>模板文件</strong>：<code>jrap_fcst_XX.bsub</code></li>
+<li><strong>目标文件</strong>：<code>jrap_fcst_$&#123;cyc&#125;.bsub</code></li>
+<li><strong>目的</strong>：为每个小时生成一个独立的 PBS 作业脚本，用于运行 RAP 全循环预报。</li>
+<li><strong>模板文件</strong>：<code>jrap_fcst_pcyc_XX.bsub</code></li>
+<li><strong>目标文件</strong>：<code>jrap_fcst_pcyc_$&#123;cyc&#125;.bsub</code></li>
+<li><strong>作用</strong>：为偏循环（partial cycle）预报生成作业脚本，通常用于 RAP 在 03Z 和 15Z 冷启动后的短周期预报。</li>
+</ul>
+<h3 id="sms-目录"><a href="#sms-目录" class="headerlink" title="sms 目录"></a>sms 目录</h3><h4 id="jrap-makebc-00-x2F-06-x2F-12-x2F-18-bsub"><a href="#jrap-makebc-00-x2F-06-x2F-12-x2F-18-bsub" class="headerlink" title="jrap_makebc_00&#x2F;06&#x2F;12&#x2F;18.bsub"></a>jrap_makebc_00&#x2F;06&#x2F;12&#x2F;18.bsub</h4><p><strong>RAP 模式“makebc”步骤的 PBS 批量提交脚本</strong>，功能一句话概括：</p>
+<p>在 Cray 集群上申请 1 节点 128 核，加载编译&#x2F;库环境，调用业务驱动脚本 <code>JRAP_MAKEBC</code> 生成 RAP 区域边界条件与静态链接库，并把标准输出&#x2F;错误写到指定路径。</p>
+<p>最后一行：<code>$&#123;NWROOT&#125;/rap.$&#123;rap_ver&#125;/jobs/JRAP_MAKEBC</code>，完成：</p>
+<ul>
+<li>设置日期、目录、路径；</li>
+<li>执行 <code>exrap_makebc.sh</code> 生成边界&#x2F;静态场；</li>
+<li>输出归档到 <code>/com/</code> 与 <code>/nwges/rapbc</code>。</li>
+</ul>
+<h4 id="jrap-process-XX-bsub"><a href="#jrap-process-XX-bsub" class="headerlink" title="jrap_process_XX.bsub"></a>jrap_process_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的 <strong>水凝物处理任务</strong>，负责加载环境、运行水汽&#x2F;水凝物处理脚本 <code>JRAP_PROCESS_HYDRO</code>，提取并加工雷达、降水、云水等相关变量，并<strong>主动触发下一个小时的分析与烟雾预处理任务</strong>，是 RAP 实时循环系统中<strong>水凝物产品生成与循环推进的关键环节</strong>。</p>
+<p>提交下一步任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_analysis_XX.bsub</span><br><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_smokeprep_XX.bsub</span><br></pre></td></tr></table></figure>
+
+<h4 id="jrap-analysis-XX-bsub"><a href="#jrap-analysis-XX-bsub" class="headerlink" title="jrap_analysis_XX.bsub"></a>jrap_analysis_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>分析任务</strong>，负责加载环境、运行分析主脚本 <code>JRAP_ANALYSIS</code>，在完成后自动提交<strong>边界条件更新任务</strong>，是 RAP 实时循环系统中<strong>分析环节的标准作业入口</strong>。</p>
+<p>提交后续任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_updatebc_XX.bsub</span><br></pre></td></tr></table></figure>
+
+<h4 id="jrap-smokeprep-XX-bsub"><a href="#jrap-smokeprep-XX-bsub" class="headerlink" title="jrap_smokeprep_XX.bsub"></a>jrap_smokeprep_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的 <strong>烟雾预处理任务</strong>，负责加载环境、运行烟雾初始场生成脚本 <code>JRAP_PREP_SMOKE</code>，将火灾排放数据转化为 WRF 可用的烟雾初始场，是 RAP 空气质量模块中<strong>烟雾模拟的前置关键环节</strong>。</p>
+<h4 id="jrap-analysis-pcyc-XX-bsub"><a href="#jrap-analysis-pcyc-XX-bsub" class="headerlink" title="jrap_analysis_pcyc_XX.bsub"></a>jrap_analysis_pcyc_XX.bsub</h4><p> <strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>偏循环分析任务</strong>，负责加载环境、运行偏循环分析主脚本 <code>JRAP_ANALYSIS_PCYC</code>，并在完成后提交<strong>偏循环边界条件更新任务</strong>，是 RAP 实时循环系统中<strong>冷启动过渡与快速更新的关键环节</strong>。</p>
+<p>提交后续任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_updatebc_pcyc_XX.bsub</span><br></pre></td></tr></table></figure>
+
+<h4 id="jrap-updatebc-XX-bsub"><a href="#jrap-updatebc-XX-bsub" class="headerlink" title="jrap_updatebc_XX.bsub"></a>jrap_updatebc_XX.bsub</h4><p> <strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>边界条件更新任务</strong>，负责加载环境、运行更新主脚本 <code>JRAP_UPDATEBC</code>，并在完成后自动提交<strong>预报任务</strong>和<strong>后处理管理任务</strong>，是 RAP 实时循环系统中<strong>连接分析与预报的关键环节</strong>。</p>
+<p>提交后续任务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qsub $&#123;NWROOT&#125;/rap.$&#123;rap_ver&#125;/sms/jrap_fcst_XX.bsub</span><br><span class="line">qsub $&#123;NWROOT&#125;/rap.$&#123;rap_ver&#125;/sms/jrap_postmgr_XX.bsub</span><br></pre></td></tr></table></figure>
+
+<h4 id="jrap-fcst-XX-bsub"><a href="#jrap-fcst-XX-bsub" class="headerlink" title="jrap_fcst_XX.bsub"></a>jrap_fcst_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>预报任务</strong>，负责加载环境、运行 WRF-ARW 主程序，完成从分析场出发的短期数值天气预报，是 RAP 实时循环系统中<strong>最核心的预报环节</strong>。</p>
+<h4 id="jrap-postmgr-XX-bsub"><a href="#jrap-postmgr-XX-bsub" class="headerlink" title="jrap_postmgr_XX.bsub"></a>jrap_postmgr_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>后处理管理任务</strong>，负责加载环境、运行后处理调度脚本 <code>JRAP_POSTMGR</code>，完成预报产品的生成、分发和清理，是 RAP 实时循环系统中<strong>产品输出与归档的关键环节</strong>。</p>
+<h4 id="jrap-fcst-pcyc-XX-bsub"><a href="#jrap-fcst-pcyc-XX-bsub" class="headerlink" title="jrap_fcst_pcyc_XX.bsub"></a>jrap_fcst_pcyc_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的<strong>偏循环预报任务</strong>，负责加载环境、运行短周期 WRF 预报主脚本 <code>JRAP_FORECAST_PCYC</code>，并<strong>主动触发下一个小时的偏循环分析与烟雾预处理任务</strong>，是 RAP 快速更新循环中<strong>驱动链式推进的关键环节</strong>。</p>
+<p>提交下一步任务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_analysis_pcyc_YY.bsub</span><br><span class="line">qsub <span class="variable">$&#123;NWROOT&#125;</span>/rap.<span class="variable">$&#123;rap_ver&#125;</span>/sms/jrap_smokeprep_pcyc_YY.bsub</span><br></pre></td></tr></table></figure>
+
+<h4 id="jrap-sndp-XX-bsub"><a href="#jrap-sndp-XX-bsub" class="headerlink" title="jrap_sndp_XX.bsub"></a>jrap_sndp_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的 <strong>探空报处理任务</strong>，负责加载环境、运行探空后处理脚本 <code>JRAP_POSTSND</code>，将 WRF 预报结果转换为 BUFR 格式探空报文，是 RAP 实时循环系统中<strong>观测产品生成与验证支持的关键环节</strong>。</p>
+<h4 id="jrap-gempak-XX-bsub"><a href="#jrap-gempak-XX-bsub" class="headerlink" title="jrap_gempak_XX.bsub"></a>jrap_gempak_XX.bsub</h4><p><strong>PBS 作业脚本模板</strong>，用于提交 RAP 模型某一小时（XX）的 <strong>GEMPAK 后处理任务</strong>，负责加载环境、运行 GEMPAK 产品生成脚本 <code>JRAP_GEMPAK</code>，将 WRF 预报结果转换为 GEMPAK 格式图形产品，是 RAP 实时循环系统中<strong>图形产品生成的关键环节</strong>。</p>
+<h3 id="jobs-目录"><a href="#jobs-目录" class="headerlink" title="jobs 目录"></a>jobs 目录</h3><hr>
+<p>👉 总体顺序可以理解为：<br> <strong>MAKEBC&#x2F;UPDATEBC → ANALYSIS → FORECAST → POST&#x2F;产品生成 → CLEANUP</strong><br> （其中 PCYC 版本用于循环预报，RESTART 用于恢复）。</p>
+<p>逻辑顺序大致可以分为以下几个阶段：</p>
+<ol>
+<li><strong>准备边界条件（BC）</strong><ul>
+<li><code>JRAP_MAKEBC</code>：生成初始和边界条件。</li>
+<li><code>JRAP_UPDATEBC</code> &#x2F; <code>JRAP_UPDATEBC_PCYC</code>：周期性更新边界条件。</li>
+</ul>
+</li>
+<li><strong>分析与初值准备</strong><ul>
+<li><code>JRAP_ANALYSIS</code>：进行初始分析。</li>
+<li><code>JRAP_ANALYSIS_PCYC</code>：周期性分析。</li>
+</ul>
+</li>
+<li><strong>预报计算</strong><ul>
+<li><code>JRAP_FORECAST</code>：主预报作业。</li>
+<li><code>JRAP_FORECAST_PCYC</code>：周期性预报。</li>
+<li><code>JRAP_FORECAST_RESTART</code>：断点续跑&#x2F;重启。</li>
+</ul>
+</li>
+<li><strong>后处理与产品生成</strong><ul>
+<li><code>JRAP_POST</code>：主后处理。</li>
+<li><code>JRAP_POSTMGR</code>：后处理管理。</li>
+<li><code>JRAP_POSTSND</code>：探空&#x2F;点位后处理。</li>
+<li><code>JRAP_GEMPAK</code> &#x2F; <code>JRAP_GEMPAK_META</code>：生成可视化产品。</li>
+<li><code>JRAP_WRFBUFR</code>：生成 BUFR 格式数据。</li>
+<li><code>JRAP_PREP_SMOKE</code> &#x2F; <code>JRAP_PREP_SMOKE_PCYC</code>：烟雾&#x2F;气溶胶数据准备。</li>
+<li><code>JRAP_PROCESS_HYDRO</code>：水文相关处理。</li>
+</ul>
+</li>
+<li><strong>清理阶段</strong><ul>
+<li><code>JRAP_CLEANUP</code>：删除临时文件，释放空间。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="JRAP-MAKEBC"><a href="#JRAP-MAKEBC" class="headerlink" title="JRAP_MAKEBC"></a>JRAP_MAKEBC</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_makebc.sh</code>（或由 <code>$&#123;RAP_MAKEBCSH&#125;</code> 重定义），由它完成真正的 WPS 预处理、初始场裁剪和边界文件生成。</li>
+</ol>
+<h4 id="JRAP-ANALYSIS"><a href="#JRAP-ANALYSIS" class="headerlink" title="JRAP_ANALYSIS"></a>JRAP_ANALYSIS</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 构造时间戳与目录；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_analysis.sh</code>（或由 <code>$&#123;RAP_ANALSH&#125;</code> 重定义的路径），由它完成真正的分析流程。</li>
+</ol>
+<h4 id="JRAP-FORECAST"><a href="#JRAP-FORECAST" class="headerlink" title="JRAP_FORECAST"></a>JRAP_FORECAST</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 构造时间戳与目录；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_fcst.sh</code>（或由 <code>$&#123;RAP_FCSTSH&#125;</code> 重定义），由它完成真正的 WRF 预报积分。</li>
+</ol>
+<h4 id="JRAP-UPDATEBC"><a href="#JRAP-UPDATEBC" class="headerlink" title="JRAP_UPDATEBC"></a>JRAP_UPDATEBC</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_updatebc.sh</code>（或由 <code>$&#123;RAP_UPDATEBCSH&#125;</code> 重定义），由它完成真正的边界条件文件更新。</li>
+</ol>
+<h4 id="JRAP-POSTMGR"><a href="#JRAP-POSTMGR" class="headerlink" title="JRAP_POSTMGR"></a>JRAP_POSTMGR</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_postmgr.sh</code>（或由 <code>$&#123;RAP_POSTMGRSH&#125;</code> 重定义），由它监控 WRF 预报进度，并按需触发后续后处理任务（如 UPP、图形生成、BUFR 转换等）。</li>
+</ol>
+<h4 id="JRAP-POST"><a href="#JRAP-POST" class="headerlink" title="JRAP_POST"></a>JRAP_POST</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_post.sh</code>（或由 <code>$&#123;RAP_POSTSH&#125;</code> 重定义），由它完成真正的 UPP 转换、GRIB2 产品生成及 WMO 报文输出。</li>
+</ol>
+<h4 id="JRAP-WRFBUFR"><a href="#JRAP-WRFBUFR" class="headerlink" title="JRAP_WRFBUFR"></a>JRAP_WRFBUFR</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 构造时间戳与目录；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_wrfbufr.sh</code>（或由 <code>$&#123;RAP_WRFBUFRSH&#125;</code> 重定义），负责将 WRF 预报输出直接转换为 BUFR 格式探空报文，供观测对比和同化系统使用。</li>
+</ol>
+<h4 id="JRAP-POSTSND"><a href="#JRAP-POSTSND" class="headerlink" title="JRAP_POSTSND"></a>JRAP_POSTSND</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_postsnd.sh</code>（或由 <code>$&#123;RAP_SNDPSH&#125;</code> 重定义），在生成探空报文的基础上，可能包含额外的后处理步骤，以适配特定的下游产品生成需求。</li>
+</ol>
+<h4 id="JRAP-PROCESS-HYDRO"><a href="#JRAP-PROCESS-HYDRO" class="headerlink" title="JRAP_PROCESS_HYDRO"></a>JRAP_PROCESS_HYDRO</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与标准路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>env</code>&#x2F;<code>postmsg</code> 完成目录、日志、状态管理；</li>
+<li><strong>唯一核心调用</strong>是 <code>exrap_process_hydro.sh</code>（或由 <code>$&#123;RAP_PROCESSSH&#125;</code> 重定义），由它完成真正的水凝物处理流程。</li>
+</ol>
+<h4 id="JRAP-GEMPAK"><a href="#JRAP-GEMPAK" class="headerlink" title="JRAP_GEMPAK"></a>JRAP_GEMPAK</h4><ol>
+<li>用 <code>setpdy.sh</code> + <code>compath.py</code> 获取时间戳与输入路径；</li>
+<li>用 <code>mkdir</code>&#x2F;<code>echo</code>&#x2F;<code>chmod</code> 构造 MPMD 命令文件 <code>poescript</code>；</li>
+<li><strong>唯一核心调用</strong>是 <code>cfp</code>+<code>mpiexec</code>，并发执行 <code>exrap_nawips.sh</code>，将 WRF GRIB2 输出转换为 GEMPAK 格式图形文件（rap、rap20、rap13、rap32、rapak、raphi 六套分辨率）。</li>
+</ol>
+<h4 id="JRAP-CLEANUP"><a href="#JRAP-CLEANUP" class="headerlink" title="JRAP_CLEANUP"></a>JRAP_CLEANUP</h4><ol>
+<li><p>用 <code>setpdy.sh</code> 获取时间戳；</p>
+</li>
+<li><p>用 <code>printf</code> 构造循环小时；</p>
+</li>
+<li><p><strong>唯一实质性操作</strong>是 <code>rm</code> 批量删除临时目录，实现 RAP 循环结束后的 <strong>自动清盘</strong>。</p>
+</li>
+</ol>
+<h3 id="scripts-目录"><a href="#scripts-目录" class="headerlink" title="scripts 目录"></a>scripts 目录</h3><hr>
+<p>👉 综合来看，整个系统的作业顺序大体是：<br> <strong>MAKEBC&#x2F;UPDATEBC → ANALYSIS → FCST → POST（多类产品生成） → 特殊模块处理（SMOKE&#x2F;HYDRO）</strong></p>
+<ol>
+<li><strong>初始准备</strong><ul>
+<li><code>exrap_makebc.sh</code> 生成初始边界条件。</li>
+<li><code>exrap_updatebc.sh</code> &#x2F; <code>exrap_updatebc_pcyc.sh</code> 更新边界条件（定期运行）。</li>
+</ul>
+</li>
+<li><strong>分析（同化&#x2F;初值准备）</strong><ul>
+<li><code>exrap_analysis.sh</code>：基准分析。</li>
+<li><code>exrap_analysis_pcyc.sh</code>：周期性分析。</li>
+</ul>
+</li>
+<li><strong>数值预报</strong><ul>
+<li><code>exrap_fcst.sh</code>：主预报作业。</li>
+<li><code>exrap_fcst_pcyc.sh</code>：循环预报。</li>
+<li><code>exrap_fcst_restart.sh</code>：断点续跑。</li>
+</ul>
+</li>
+<li><strong>后处理&#x2F;产品生成</strong><ul>
+<li><code>exrap_post.sh</code>：主后处理。</li>
+<li><code>exrap_postmgr.sh</code>：后处理调度管理。</li>
+<li><code>exrap_postsnd.sh</code>：探空产品生成。</li>
+<li><code>exrap_wrfbufr.sh</code>：BUFR 格式数据输出。</li>
+<li><code>exrap_gempak_meta.sh</code>：GEMPAK 元数据。</li>
+<li><code>exrap_nawips.sh</code>：NAWIPS 可视化产品。</li>
+</ul>
+</li>
+<li><strong>专项处理</strong><ul>
+<li><code>exrap_prep_smoke.sh</code>：烟雾&#x2F;气溶胶输入准备。</li>
+<li><code>exrap_process_hydro.sh</code>：水文数据处理。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h4 id="exrap-makebc-sh"><a href="#exrap-makebc-sh" class="headerlink" title="exrap_makebc.sh"></a>exrap_makebc.sh</h4><p>⭕️ 核心程序（可执行文件）</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">路径变量</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_wps_ungrib</code></strong></td>
+<td align="left"><code>$EXECrap/rap_wps_ungrib</code></td>
+<td align="left">WPS 的 ungrib 模块，用于解码 GRIB 文件</td>
+<td align="left">直接执行，重定向输出到 <code>.out</code> 文件</td>
+</tr>
+<tr>
+<td align="left"><strong><code>rap_wps_metgrid</code></strong></td>
+<td align="left"><code>$EXECrap/rap_wps_metgrid</code></td>
+<td align="left">WPS 的 metgrid 模块，用于将 ungrib 输出插值到模型网格</td>
+<td align="left">通过 <code>mpiexec</code> 并行执行</td>
+</tr>
+<tr>
+<td align="left"><strong><code>rap_real_wpsdfi_bd.sh</code></strong></td>
+<td align="left"><code>$USHrap/rap_real_wpsdfi_bd.sh</code></td>
+<td align="left">调用 WRF REAL 程序，生成边界条件（BC）和输入文件</td>
+<td align="left">循环调用 00&#x2F;03&#x2F;06&#x2F;09&#x2F;12 小时</td>
+</tr>
+<tr>
+<td align="left"><strong><code>tar</code></strong></td>
+<td align="left">系统路径</td>
+<td align="left">打包 metgrid 输出文件为 <code>.tar</code> 归档</td>
+<td align="left"><code>mpiexec -n 1 tar -cvf ...</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具与命令</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具</th>
+<th align="left">用途</th>
+<th align="left">示例</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>cut</code></strong></td>
+<td align="left">提取时间字符串中的年月日时分</td>
+<td align="left"><code>syyyy=</code>echo ${START_TIME}</td>
+<td>cut -c1-4&#96;&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>sed</code></strong></td>
+<td align="left">替换 namelist.wps 中的时间、间隔、前缀等字段</td>
+<td align="left"><code>sed &quot;s/.../.../&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>cat</code></strong></td>
+<td align="left">合并 GRIB 文件（pgrb2a + pgrb2b）</td>
+<td align="left"><code>cat gfs.t$&#123;hh&#125;z.pgrb2a.* gfs.t$&#123;hh&#125;z.pgrb2b.* &gt; ...</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>ln -s</code></strong></td>
+<td align="left">创建符号链接（GRIBFILE.XXX、SST、常量文件）</td>
+<td align="left"><code>ln -s $&#123;gribfiles[$&#123;n&#125;]&#125; GRIBFILE.$&#123;id&#125;</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>cp</code></strong></td>
+<td align="left">复制 namelist、静态文件、可执行文件等</td>
+<td align="left"><code>cp $PARMrap/rap_namelist.wps ...</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>rm</code></strong></td>
+<td align="left">删除旧链接或文件</td>
+<td align="left"><code>rm -f Vtable</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>ls</code></strong></td>
+<td align="left">列出 GRIB 文件</td>
+<td align="left"><code>ls -1 gfs.t$&#123;hh&#125;z.pgrb2.0p25.f0[0-6]?</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>sort</code></strong></td>
+<td align="left">排序文件列表</td>
+<td align="left">&#96;ls …</td>
+<td>sort&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>echo</code></strong></td>
+<td align="left">输出信息或写入时间戳</td>
+<td align="left"><code>echo $&#123;START_TIME&#125; &gt; STARTTIME</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>date</code></strong></td>
+<td align="left">获取当前时间（用于日志）</td>
+<td align="left"><code>echo &quot;completed at </code>${DATE}<code>&quot;</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>mpiexec</code></strong></td>
+<td align="left">并行执行 metgrid 和 tar</td>
+<td align="left"><code>mpiexec -n 128 ./rap_wps_metgrid</code></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>cpreq</code></strong></td>
+<td align="left">NCEP 专用工具，复制文件并检查是否成功</td>
+<td align="left"><code>cpreq $&#123;COMINgfs&#125;/... .</code></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>⭕️ 主要输入文件（Input）</p>
+<table>
+<thead>
+<tr>
+<th align="left">文件类型</th>
+<th align="left">来源路径</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>GFS GRIB 文件</strong></td>
+<td align="left"><code>$COMINgfs/gfs.$&#123;ymd&#125;/$&#123;hh&#125;/atmos/gfs.t$&#123;hh&#125;z.pgrb2.0p25.fXXX</code></td>
+<td align="left">主预报输入，分为 <code>pgrb2a</code> 和 <code>pgrb2b</code></td>
+</tr>
+<tr>
+<td align="left"><strong>SST GRIB 文件</strong></td>
+<td align="left"><code>$COMINsst/nsst.$&#123;ymd&#125;/rtgssthr_grb_0.083.grib2</code></td>
+<td align="left">海温数据，用于 surface 边界</td>
+</tr>
+<tr>
+<td align="left"><strong>Vtable</strong></td>
+<td align="left"><code>$PARMrap/rap_Vtable.$&#123;SOURCE&#125;</code></td>
+<td align="left">告诉 ungrib 如何解码 GRIB 文件</td>
+</tr>
+<tr>
+<td align="left"><strong>namelist.wps</strong></td>
+<td align="left"><code>$PARMrap/rap_namelist.wps</code></td>
+<td align="left">WPS 配置文件模板</td>
+</tr>
+<tr>
+<td align="left"><strong>metgrid.tbl</strong></td>
+<td align="left"><code>$PARMrap/rap_metgrid.tbl</code></td>
+<td align="left">告诉 metgrid 如何处理字段</td>
+</tr>
+<tr>
+<td align="left"><strong>geo_em.d01.nc</strong></td>
+<td align="left"><code>$FIXrap/rap_geo_em.d01.nc</code></td>
+<td align="left">静态地理数据文件（地形、土地利用等）</td>
+</tr>
+<tr>
+<td align="left"><strong>常量文件</strong></td>
+<td align="left"><code>$PARMrap/QNWFA_QNIFA_Monthly_GFS</code></td>
+<td align="left">气溶胶背景场等常量数据</td>
+</tr>
+</tbody></table>
+<p>⭕️ 主要输出文件（Output）</p>
+<table>
+<thead>
+<tr>
+<th align="left">文件类型</th>
+<th align="left">路径</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>ungrib 输出</strong></td>
+<td align="left">当前工作目录</td>
+<td align="left"><code>FILE:YYYY-MM-DD_HH</code> 格式，解码后的中间文件</td>
+</tr>
+<tr>
+<td align="left"><strong>metgrid 输出</strong></td>
+<td align="left">当前工作目录</td>
+<td align="left"><code>met_em.d01.YYYY-MM-DD_HH:00:00.nc</code> 插值后的输入文件</td>
+</tr>
+<tr>
+<td align="left"><strong>REAL 输出</strong></td>
+<td align="left"><code>$DATA/tar</code></td>
+<td align="left">边界条件 <code>wrfbdy_d01</code> 和输入 <code>wrfinput_d01</code> 等</td>
+</tr>
+<tr>
+<td align="left"><strong>打包归档</strong></td>
+<td align="left"><code>$COMOUT/rap.t$&#123;cyc&#125;z.makebc.tar</code></td>
+<td align="left">所有 metgrid 输出打包为 <code>.tar</code> 文件</td>
+</tr>
+<tr>
+<td align="left"><strong>日志文件</strong></td>
+<td align="left">当前工作目录</td>
+<td align="left"><code>ungribgfs.out</code>、<code>ungribsst.out</code>、标准输出等</td>
+</tr>
+</tbody></table>
+<p>⭕️ 辅助脚本与模块</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>prep_step</code></strong></td>
+<td align="left">环境脚本</td>
+<td align="left">初始化程序运行环境（如 <code>pgm</code> 变量）</td>
+</tr>
+<tr>
+<td align="left"><strong><code>err_chk</code></strong></td>
+<td align="left">环境函数</td>
+<td align="left">检查程序返回值，失败则退出</td>
+</tr>
+<tr>
+<td align="left"><strong><code>postmsg</code></strong></td>
+<td align="left">环境函数</td>
+<td align="left">向系统日志发送完成信息</td>
+</tr>
+</tbody></table>
+<ol>
+<li><p>准备阶段<br>├── 设置时间变量<br>├── 复制 namelist.wps、Vtable、geo_em.d01.nc<br>└── 下载 GFS 和 SST GRIB 文件</p>
+</li>
+<li><p>ungrib 阶段<br>├── GFS ungrib → FILE:YYYY-MM-DD_HH<br>└── SST ungrib → sst:YYYY-MM-DD_HH</p>
+</li>
+<li><p>metgrid 阶段<br>└── 插值生成 met_em.d01.YYYY-MM-DD_HH:00:00.nc</p>
+</li>
+<li><p>REAL 阶段<br>└── 调用 rap_real_wpsdfi_bd.sh 生成 wrfinput 和 wrfbdy</p>
+</li>
+<li><p>打包阶段<br>└── tar 打包 met_em.*.nc → rap.t${cyc}z.makebc.tar</p>
+</li>
+</ol>
+<h4 id="exrap-analysis-sh"><a href="#exrap-analysis-sh" class="headerlink" title="exrap_analysis.sh"></a>exrap_analysis.sh</h4><p>⭕️ 核心分析程序（GSI）</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_gsi</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_gsi</code></td>
+<td align="left"><strong>主分析程序</strong>，执行变分同化（GSI）</td>
+<td align="left"><code>mpiexec -n 192 -ppn 64 ./rap_gsi &lt; gsiparm.anl</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 冷启动辅助程序（表面变量循环）</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_full_cycle_surface</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_full_cycle_surface</code></td>
+<td align="left">冷启动时循环表面变量（如土壤湿度、温度）</td>
+<td align="left"><code>mpiexec -n 1 -ppn 1 ./rap_full_cycle_surface</code></td>
+</tr>
+<tr>
+<td align="left"><strong><code>rap_surface_consistcheck</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_surface_consistcheck</code></td>
+<td align="left">检查表面变量一致性</td>
+<td align="left"><code>mpiexec -n 1 -ppn 1 ./rap_surface_consistcheck</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 卫星资料处理程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_update_gvf</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_update_gvf</code></td>
+<td align="left">更新绿度植被覆盖（GVF）资料</td>
+<td align="left"><code>mpiexec -n 1 -ppn 1 ./rap_update_gvf</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具（非自定义程序）</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具名</th>
+<th align="left">来源</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>ndate</code></strong></td>
+<td align="left"><code>$&#123;NDATE&#125;</code>（环境变量）</td>
+<td align="left">日期时间计算（如前一时刻）</td>
+<td align="left"><code>PCYC_TIME=</code><em>N<strong>D</strong>A**TE</em>−1START_TIME&#96;&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>stat</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">检查文件大小是否完整</td>
+<td align="left"><code>filesize=$(stat -c%s filename)</code></td>
+</tr>
+<tr>
+<td align="left"><strong><code>mpiexec</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">启动MPI并行任务</td>
+<td align="left">所有并行程序均通过 <code>mpiexec</code> 启动</td>
+</tr>
+</tbody></table>
+<p>⭕️ 脚本内部调用的辅助脚本</p>
+<table>
+<thead>
+<tr>
+<th align="left">脚本名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_gsiparm.anl.sh</code></strong></td>
+<td align="left"><code>$&#123;PARMrap&#125;/rap_gsiparm.anl.sh</code></td>
+<td align="left">动态生成GSI的namelist参数</td>
+<td align="left"><code>. $&#123;PARMrap&#125;/rap_gsiparm.anl.sh</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 固定文件与输入数据（非程序，但关键）</p>
+<table>
+<thead>
+<tr>
+<th align="left">类别</th>
+<th align="left">文件名示例</th>
+<th align="left">来源路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">背景场</td>
+<td align="left"><code>wrfinput_d01_&lt;time&gt;</code></td>
+<td align="left"><code>$&#123;RAPBC&#125;/</code></td>
+<td align="left">冷启动初始场</td>
+</tr>
+<tr>
+<td align="left">观测资料</td>
+<td align="left"><code>prepbufr</code>, <code>*.bufr_d</code></td>
+<td align="left"><code>$&#123;PREPDIR&#125;/</code></td>
+<td align="left">各类观测（雷达、卫星、探空等）</td>
+</tr>
+<tr>
+<td align="left">固定参数</td>
+<td align="left"><code>rap_anavinfo_arw_netcdf</code>, <code>berror_stats</code>, <code>satinfo</code>, <code>convinfo</code> 等</td>
+<td align="left"><code>$&#123;FIXrap&#125;/</code></td>
+<td align="left">GSI所需的固定配置</td>
+</tr>
+<tr>
+<td align="left">CRTM系数</td>
+<td align="left"><code>*.SpcCoeff.bin</code>, <code>*.TauCoeff.bin</code>, <code>EmisCoeff.bin</code> 等</td>
+<td align="left"><code>$&#123;FIXcrtm&#125;/</code></td>
+<td align="left">辐射传输模型CRTM所需系数</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-fcst-sh"><a href="#exrap-fcst-sh" class="headerlink" title="exrap_fcst.sh"></a>exrap_fcst.sh</h4><p>⭕️ 核心预报程序（WRF 主程序）</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_wrfarw_fcst</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wrfarw_fcst</code></td>
+<td align="left"><strong>WRF-ARW 主预报程序</strong>，执行数值预报积分</td>
+<td align="left">由 <code>rap_run_wrf.sh</code> 脚本调用</td>
+</tr>
+</tbody></table>
+<hr>
+<p>⭕️ 脚本&#x2F;包装器（非二进制程序，但可执行）</p>
+<table>
+<thead>
+<tr>
+<th align="left">脚本名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_run_wrf.sh</code></strong></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_run_wrf.sh</code></td>
+<td align="left"><strong>WRF 执行包装器脚本</strong>，负责 MPI 配置、节点分配、启动 WRF 主程序</td>
+<td align="left"><code>rap_run_wrf.sh rap_wrfarw_fcst run_wrf_config</code></td>
+</tr>
+<tr>
+<td align="left"><strong><code>rap_smoke_wrfinput.ksh</code></strong></td>
+<td align="left"><code>$&#123;HOMErap&#125;/ush/rap_smoke_wrfinput.ksh</code></td>
+<td align="left">为烟雾模块生成初始场</td>
+<td align="left"><code>rap_smoke_wrfinput.ksh wrfinput_d01</code></td>
+</tr>
+<tr>
+<td align="left"><strong><code>rap_cycle_smoke.ksh</code></strong></td>
+<td align="left"><code>$&#123;HOMErap&#125;/ush/rap_cycle_smoke.ksh</code></td>
+<td align="left">循环烟雾变量（如 PM2.5、CO）</td>
+<td align="left"><code>rap_cycle_smoke.ksh wrfinput_d01</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具（标准 Unix 命令）</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具名</th>
+<th align="left">来源</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>ndate</code></strong></td>
+<td align="left"><code>$&#123;NDATE&#125;</code>（环境变量）</td>
+<td align="left">计算预报结束时间、DFI 起止时间</td>
+<td align="left"><code>END_TIME=</code><em>N<strong>D</strong>A**TE</em>+{FCST_LENGTH} $START_TIME&#96;&#96;</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>cut</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">从时间字符串中提取年月日时分</td>
+<td align="left"><code>syyyy=</code>echo ${START_TIME}</td>
+<td>cut -c1-4&#96;&#96; 等</td>
+</tr>
+<tr>
+<td align="left"><strong><code>sed</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">动态替换 <code>namelist.input</code> 中的时间参数</td>
+<td align="left">多次用于更新 WRF 配置文件</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>cat</code> &#x2F; <code>echo</code> &#x2F; <code>mv</code> &#x2F; <code>cp</code> &#x2F; <code>ln -s</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">文件操作、链接、重命名、输出日志</td>
+<td align="left">多次使用</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件（非程序，但关键）</p>
+<table>
+<thead>
+<tr>
+<th align="left">文件类型</th>
+<th align="left">文件名</th>
+<th align="left">来源路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">初始场</td>
+<td align="left"><code>wrfinput_d01</code></td>
+<td align="left"><code>$&#123;COMIN&#125;/rap.t$&#123;cyc&#125;z.wrf_inout</code></td>
+<td align="left">WRF 初始条件</td>
+</tr>
+<tr>
+<td align="left">边界条件</td>
+<td align="left"><code>wrfbdy_d01</code></td>
+<td align="left"><code>$&#123;COMIN&#125;/rap.t$&#123;cyc&#125;z.wrfbdy</code> 或 <code>$&#123;BOUNDARY&#125;/</code></td>
+<td align="left">WRF 边界条件</td>
+</tr>
+<tr>
+<td align="left">配置文件</td>
+<td align="left"><code>namelist.input</code></td>
+<td align="left"><code>$&#123;PARMrap&#125;/rap_wrf.nl</code></td>
+<td align="left">WRF 主配置文件，被 <code>sed</code> 动态修改</td>
+</tr>
+<tr>
+<td align="left">运行配置</td>
+<td align="left"><code>run_wrf_config</code></td>
+<td align="left">当前目录生成</td>
+<td align="left">指定 MPI 排布、线程数、I&#x2F;O 配置等</td>
+</tr>
+<tr>
+<td align="left">数据表文件</td>
+<td align="left"><code>LANDUSE.TBL</code>, <code>RRTM_DATA</code>, <code>VEGPARM.TBL</code> 等</td>
+<td align="left"><code>$&#123;PARMrap&#125;/rap_run_*</code></td>
+<td align="left">WRF 所需的物理参数表，均通过 <code>ln -s</code> 链接</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-fcst-restart-sh"><a href="#exrap-fcst-restart-sh" class="headerlink" title="exrap_fcst_restart.sh"></a>exrap_fcst_restart.sh</h4><p>是一个 <strong>WRF 预报重启脚本</strong>，负责从已完成的预报文件中恢复状态，更新 WRF namelist 文件，运行 WRF 模型继续预报，并将结果输出到指定目录。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_wrfarw_fcst</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wrfarw_fcst</code></td>
+<td align="left">运行 WRF 模型的预报任务</td>
+</tr>
+<tr>
+<td align="left"><code>ncatted</code></td>
+<td align="left">系统工具</td>
+<td align="left">修改 NetCDF 文件的元数据</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件，用于准备输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除文件，清理临时文件</td>
+</tr>
+<tr>
+<td align="left"><code>ls</code></td>
+<td align="left">列出目录中的文件，用于获取文件列表</td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从字符串中提取特定部分，用于解析日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>head</code></td>
+<td align="left">提取文件的前几行，用于获取第一个文件名</td>
+</tr>
+<tr>
+<td align="left"><code>tail</code></td>
+<td align="left">提取文件的最后几行，用于获取最后一个文件名</td>
+</tr>
+<tr>
+<td align="left"><code>basename</code></td>
+<td align="left">提取文件名，去除路径部分</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">获取当前日期和时间，用于时间计算</td>
+</tr>
+<tr>
+<td align="left"><code>expr</code></td>
+<td align="left">执行算术运算，用于递增变量 <code>n</code></td>
+</tr>
+<tr>
+<td align="left"><code>sed</code></td>
+<td align="left">用于更新 namelist 文件中的时间、间隔等参数</td>
+</tr>
+<tr>
+<td align="left"><code>mv</code></td>
+<td align="left">移动或重命名文件</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>module</code></td>
+<td align="left">加载或卸载模块，用于设置运行环境</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>wrfbdy_d01</code></td>
+<td align="left">WRF 边界条件文件</td>
+</tr>
+<tr>
+<td align="left"><code>wrfout_d01_*</code></td>
+<td align="left">WRF 预报输出文件，包含气象数据</td>
+</tr>
+<tr>
+<td align="left"><code>fcstdone*</code></td>
+<td align="left">标记已完成的预报小时文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_wrf_restart.nl</code></td>
+<td align="left">WRF 预报 namelist 模板文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_run_*</code></td>
+<td align="left">WRF 预报所需的各种参数表文件</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>namelist.input</code></td>
+<td align="left">生成的 WRF namelist 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rsl.out.0000</code></td>
+<td align="left">WRF 预报的标准输出日志文件</td>
+</tr>
+<tr>
+<td align="left"><code>wrfout_d01_*</code></td>
+<td align="left">更新后的 WRF 预报输出文件</td>
+</tr>
+<tr>
+<td align="left"><code>fcstdone*</code></td>
+<td align="left">更新后的标记文件，表示预报小时已完成</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-makebc-sh-1"><a href="#exrap-makebc-sh-1" class="headerlink" title="exrap_makebc.sh"></a>exrap_makebc.sh</h4><p>是一个 <strong>WPS 数据准备脚本</strong>，负责从 GFS 和 SST 数据中提取气象信息，运行 ungrib 和 metgrid 程序，生成 WRF 模型所需的气象网格数据和边界条件文件，并将最终结果打包归档。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_wps_ungrib</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wps_ungrib</code></td>
+<td align="left">将 GFS GRIB 文件转换为 WPS 格式，供后续处理使用</td>
+</tr>
+<tr>
+<td align="left"><code>rap_wps_metgrid</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wps_metgrid</code></td>
+<td align="left">运行 WPS 的 metgrid 程序，生成气象网格数据</td>
+</tr>
+<tr>
+<td align="left"><code>rap_real_wpsdfi_bd.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_real_wpsdfi_bd.sh</code></td>
+<td align="left">运行 REAL 程序，生成边界条件和输入文件</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>setpdy.sh</code></td>
+<td align="left">生成当前 cycle 的年月日字串，输出 <code>./PDY</code> 文件供后续 <code>source</code></td>
+</tr>
+<tr>
+<td align="left"><code>cpreq</code></td>
+<td align="left">复制文件，类似于 <code>cp</code>，但可能包含额外的错误检查或日志记录</td>
+</tr>
+<tr>
+<td align="left"><code>cat</code></td>
+<td align="left">合并文件内容，将多个文件内容合并为一个文件</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到 WPS 的 Vtable 文件和 GFS GRIB 文件</td>
+</tr>
+<tr>
+<td align="left"><code>sed</code></td>
+<td align="left">用于更新 namelist 文件中的时间、间隔等参数</td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从字符串中提取特定部分，用于解析日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">获取当前日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>mkdir</code></td>
+<td align="left">创建目录</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除文件或目录</td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件或目录</td>
+</tr>
+<tr>
+<td align="left"><code>mv</code></td>
+<td align="left">移动或重命名文件或目录</td>
+</tr>
+<tr>
+<td align="left"><code>tar</code></td>
+<td align="left">打包文件，生成 tar 归档文件</td>
+</tr>
+<tr>
+<td align="left"><code>mpiexec</code></td>
+<td align="left">启动并行任务，运行 metgrid 程序</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>gfs.t$&#123;start_hour&#125;z.pgrb2.0p25.f000</code></td>
+<td align="left">GFS GRIB 文件，包含初始时刻的气象数据</td>
+</tr>
+<tr>
+<td align="left"><code>gfs.t$&#123;start_hour&#125;z.pgrb2.0p25.f003</code></td>
+<td align="left">GFS GRIB 文件，包含 3 小时后的气象数据</td>
+</tr>
+<tr>
+<td align="left"><code>...</code></td>
+<td align="left">其他 GFS GRIB 文件，覆盖整个预报周期</td>
+</tr>
+<tr>
+<td align="left"><code>rtgssthr_grb_0.083.grib2</code></td>
+<td align="left">SST GRIB 文件，包含海表温度数据</td>
+</tr>
+<tr>
+<td align="left"><code>rap_namelist.wps</code></td>
+<td align="left">WPS 的 namelist 文件模板</td>
+</tr>
+<tr>
+<td align="left"><code>rap_metgrid.tbl</code></td>
+<td align="left">WPS 的 metgrid 表文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_geo_em.d01.nc</code></td>
+<td align="left">地理网格静态文件</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>ungribgfs.out</code></td>
+<td align="left">GFS ungrib 程序的输出日志</td>
+</tr>
+<tr>
+<td align="left"><code>ungribsst.out</code></td>
+<td align="left">SST ungrib 程序的输出日志</td>
+</tr>
+<tr>
+<td align="left"><code>met_em.d01.nc</code></td>
+<td align="left">metgrid 生成的气象网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.makebc.tar</code></td>
+<td align="left">打包后的边界条件文件，供后续使用</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-updatebc-sh"><a href="#exrap-updatebc-sh" class="headerlink" title="exrap_updatebc.sh"></a>exrap_updatebc.sh</h4><p>⭕️ 核心程序（唯一主程序）</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>rap_update_bc</code></strong></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_update_bc</code></td>
+<td align="left"><strong>更新边界条件（BC）核心程序</strong>，根据分析场更新 WRF 边界文件 <code>wrfbdy_d01</code></td>
+<td align="left"><code>./rap_update_bc &gt;&gt; $DATA/$pgmout 2&gt;errfile</code></td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具（非自定义程序）</p>
+<table>
+<thead>
+<tr>
+<th align="left">工具名</th>
+<th align="left">来源</th>
+<th align="left">作用</th>
+<th align="left">调用方式</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong><code>ndate</code></strong></td>
+<td align="left"><code>$&#123;NDATE&#125;</code>（环境变量）</td>
+<td align="left">计算预报结束时间（如 <code>END_TIME</code>）</td>
+<td align="left"><code>END_TIME=</code><em>N<strong>D</strong>A**TE</em>+{FCST_LENGTH} $START_TIME&#96;&#96;</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>stat</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">检查边界文件大小是否完整（避免并发写入不完整）</td>
+<td align="left"><code>filesize=$(stat -c%s $&#123;XX[0]&#125;)</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>awk</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">从文件名中提取时间戳</td>
+<td align="left">&#96;echo ${XX[0]}</td>
+<td>awk ‘BEGIN {FS&#x3D;”&#x2F;“} {print $NF}’</td>
+<td>cut -c12-&#96;</td>
+</tr>
+<tr>
+<td align="left"><strong><code>cut</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">从时间字符串中提取年月日时分</td>
+<td align="left"><code>syyyy=</code>echo ${START_TIME}</td>
+<td>cut -c1-4&#96;&#96; 等</td>
+<td></td>
+</tr>
+<tr>
+<td align="left"><strong><code>ls</code> &#x2F; <code>sort</code> &#x2F; <code>sleep</code> &#x2F; <code>expr</code></strong></td>
+<td align="left">系统命令</td>
+<td align="left">文件列表、排序、等待、计数等常规操作</td>
+<td align="left">多次使用</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件（非程序，但关键）</p>
+<table>
+<thead>
+<tr>
+<th align="left">文件类型</th>
+<th align="left">文件名</th>
+<th align="left">来源路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">初始场</td>
+<td align="left"><code>wrf_inout</code></td>
+<td align="left"><code>$&#123;DATA&#125;/gsiprd/wrf_inout</code></td>
+<td align="left">被链接为 <code>wrfinput_d01</code> 和 <code>wrfvar_output</code></td>
+</tr>
+<tr>
+<td align="left">边界条件</td>
+<td align="left"><code>wrfbdy_d01.*</code></td>
+<td align="left"><code>$&#123;RAPBC&#125;/</code></td>
+<td align="left">被查找并拷贝为 <code>wrfbdy_d01</code></td>
+</tr>
+<tr>
+<td align="left">参数文件</td>
+<td align="left"><code>rap_update_bc_parame.in</code></td>
+<td align="left"><code>$&#123;PARMrap&#125;/rap_update_bc_parame.in</code></td>
+<td align="left">被拷贝为 <code>parame.in</code>，作为 <code>rap_update_bc</code> 的输入参数</td>
+</tr>
+<tr>
+<td align="left">输出文件</td>
+<td align="left"><code>wrfbdy_d01</code></td>
+<td align="left">当前目录，最终拷贝到 <code>$&#123;COMOUT&#125;/rap.t$&#123;cyc&#125;z.wrfbdy</code></td>
+<td align="left">更新后的边界条件文件</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-postmgr-sh"><a href="#exrap-postmgr-sh" class="headerlink" title="exrap_postmgr.sh"></a>exrap_postmgr.sh</h4><p>是一个 <strong>后处理管理脚本</strong>，负责监控 RAP 预报任务的进度，当每个预报小时完成时，通过 <code>ecflow_client</code> 通知 ECFLOW 调度系统释放对应的后处理任务（如 UPP、BUFR 转换等）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>ecflow_client</code></td>
+<td align="left">直接调用</td>
+<td align="left">通知 ECFLOW 调度系统释放后续任务（如后处理、BUFR 转换等）</td>
+</tr>
+</tbody></table>
+<hr>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除文件 <code>posthours</code>（若存在）</td>
+</tr>
+<tr>
+<td align="left"><code>echo</code></td>
+<td align="left">将小时数追加到文件 <code>posthours</code></td>
+</tr>
+<tr>
+<td align="left"><code>cat</code></td>
+<td align="left">读取文件 <code>posthours</code> 内容到变量 <code>postjobs</code></td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从 <code>$START_TIME</code> 中提取年、月、日、时</td>
+</tr>
+<tr>
+<td align="left"><code>sleep</code></td>
+<td align="left">暂停脚本执行，等待 10 秒</td>
+</tr>
+<tr>
+<td align="left"><code>wc</code></td>
+<td align="left">统计 <code>postjobs</code> 中剩余的小时数</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>fcstdone$&#123;fhr&#125;00.$&#123;shh&#125;</code></td>
+<td align="left">标记特定预报小时（如 <code>f0000</code>）的 WRF 预报任务是否完成</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>posthours</code></td>
+<td align="left">存储需要监控的预报小时列表</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-post-sh"><a href="#exrap-post-sh" class="headerlink" title="exrap_post.sh"></a>exrap_post.sh</h4><p>是一个 <strong>RAP 后处理脚本</strong>，负责从 WRF 预报输出中提取和转换气象数据，生成多种 GRIB2 格式的分析和预报产品，并将这些产品发送到下游系统（如 DBN、ECFLOW）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_wrfpost</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wrfpost</code></td>
+<td align="left">运行 WRF 后处理程序，生成 GRIB2 格式的分析和预报产品</td>
+</tr>
+<tr>
+<td align="left"><code>rap_update_fields</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_update_fields</code></td>
+<td align="left">更新 WRF 输出字段，用于特定分析处理</td>
+</tr>
+<tr>
+<td align="left"><code>rap_subflds_g2</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_subflds_g2</code></td>
+<td align="left">提取和处理特定字段（如降水、积雪等），生成 3 小时累积产品</td>
+</tr>
+<tr>
+<td align="left"><code>rap_mkawp.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_mkawp.sh</code></td>
+<td align="left">转换 WRF 输出到 AWIPS 格式</td>
+</tr>
+<tr>
+<td align="left"><code>rap_smartinit.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_smartinit.sh</code></td>
+<td align="left">为特定子域生成初始化文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_smoke.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_smoke.sh</code></td>
+<td align="left">生成烟雾相关产品</td>
+</tr>
+<tr>
+<td align="left"><code>rap_smoke_wmo.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_smoke_wmo.sh</code></td>
+<td align="left">生成烟雾 WMO 格式产品</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除临时文件和目录</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>cat</code></td>
+<td align="left">合并文件内容，将多个文件内容合并为一个文件</td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从字符串中提取特定部分，用于解析日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>stat</code></td>
+<td align="left">获取文件大小，用于检查文件完整性</td>
+</tr>
+<tr>
+<td align="left"><code>sleep</code></td>
+<td align="left">暂停脚本执行，等待指定时间</td>
+</tr>
+<tr>
+<td align="left"><code>grep</code></td>
+<td align="left">从文件中提取匹配特定模式的行</td>
+</tr>
+<tr>
+<td align="left"><code>wc</code></td>
+<td align="left">统计文件中的行数</td>
+</tr>
+<tr>
+<td align="left"><code>expr</code></td>
+<td align="left">执行算术运算</td>
+</tr>
+<tr>
+<td align="left"><code>mpiexec</code></td>
+<td align="left">启动并行任务，运行后处理程序</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+<tr>
+<td align="left"><code>ecflow_client</code></td>
+<td align="left">通知 ECFLOW 调度系统释放后续任务</td>
+</tr>
+<tr>
+<td align="left"><code>dbn_alert</code></td>
+<td align="left">向 DBN 系统发送警报，通知产品生成完成</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>wrfout_d01_$&#123;timestr2&#125;</code></td>
+<td align="left">WRF 预报输出文件，包含气象数据</td>
+</tr>
+<tr>
+<td align="left"><code>wrfinput_d01</code></td>
+<td align="left">WRF 分析输入文件，用于特定分析处理</td>
+</tr>
+<tr>
+<td align="left"><code>wrfout_analyzed_d01</code></td>
+<td align="left">WRF 分析输出文件，用于特定分析处理</td>
+</tr>
+<tr>
+<td align="left"><code>rap_parmlist_*.txt</code></td>
+<td align="left">参数列表文件，定义需要处理的字段</td>
+</tr>
+<tr>
+<td align="left"><code>rap_vector_fields.txt</code></td>
+<td align="left">定义需要处理的矢量字段</td>
+</tr>
+<tr>
+<td align="left"><code>rap_budget_fields.txt</code></td>
+<td align="left">定义需要使用预算插值的字段</td>
+</tr>
+<tr>
+<td align="left"><code>rap_neighbor_fields.txt</code></td>
+<td align="left">定义需要使用邻近插值的字段</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>WRFNAT$&#123;fhr&#125;.tm00</code></td>
+<td align="left">生成的 GRIB2 格式自然网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>WRFPRS$&#123;fhr&#125;.tm00</code></td>
+<td align="left">生成的 GRIB2 格式压力网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>WRFMSL$&#123;fhr&#125;.tm00</code></td>
+<td align="left">生成的 GRIB2 格式海平面网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.wrfnatf$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式自然网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.wrfprsf$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式压力网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.wrfmslf$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式海平面网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.awp$&#123;grid&#125;bgrbf$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式子域网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.awp$&#123;grid&#125;pgrbf$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式子域网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.awip32f$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式 AWIP32 网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.gtg130f$&#123;fhr&#125;.grib2</code></td>
+<td align="left">输出的 GRIB2 格式 GTG 网格文件</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-wrfbufr-sh"><a href="#exrap-wrfbufr-sh" class="headerlink" title="exrap_wrfbufr.sh"></a>exrap_wrfbufr.sh</h4><p><code>exrap_wrfbufr.sh</code> 是一个 <strong>WRF → BUFR 转换脚本</strong>，负责从 WRF 预报输出中提取气象数据，转换为 BUFR 格式探空报文，并将这些报文发送到下游系统（如 DBN、ECFLOW）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_wrfbufr</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_wrfbufr</code></td>
+<td align="left">运行 WRF → BUFR 转换程序，将 WRF 预报输出转换为 BUFR 格式</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件，用于准备输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除临时文件和目录</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>stat</code></td>
+<td align="left">获取文件大小，用于检查文件完整性</td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从字符串中提取特定部分，用于解析日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">获取当前日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>mpiexec</code></td>
+<td align="left">启动并行任务，运行 WRF → BUFR 转换程序</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>wrfout_d01_$&#123;timeform&#125;</code></td>
+<td align="left">WRF 预报输出文件，包含气象数据</td>
+</tr>
+<tr>
+<td align="left"><code>wrfinput_d01</code></td>
+<td align="left">WRF 分析输入文件，用于特定分析处理</td>
+</tr>
+<tr>
+<td align="left"><code>rap_profdat</code></td>
+<td align="left">配置文件，包含 BUFR 转换所需参数</td>
+</tr>
+<tr>
+<td align="left"><code>rapGES_FCYC/rap_$&#123;CYC_TIME&#125;f0$counterhr</code></td>
+<td align="left">前一小时的 WRF 预报文件，用于小时平均字段</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>profilm.c1.tm00</code></td>
+<td align="left">生成的 BUFR 格式探空报文文件</td>
+</tr>
+<tr>
+<td align="left"><code>profilm.c1.f$&#123;fhr&#125;</code></td>
+<td align="left">重命名后的 BUFR 文件，用于后续处理</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-postsnd-sh"><a href="#exrap-postsnd-sh" class="headerlink" title="exrap_postsnd.sh"></a>exrap_postsnd.sh</h4><p>是一个 <strong>探空报文生成脚本</strong>，负责从 WRF 预报输出中提取探空数据，生成 BUFR 格式探空报文，并将这些报文发送到下游系统（如 DBN、GEMPAK）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_sndp</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_sndp</code></td>
+<td align="left">生成探空报文（BUFR 格式）</td>
+</tr>
+<tr>
+<td align="left"><code>rap_stnmlist</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_stnmlist</code></td>
+<td align="left">将 BUFR 文件分解为单站文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_bfr2gpk.sh</code></td>
+<td align="left"><code>$&#123;USHrap&#125;/rap_bfr2gpk.sh</code></td>
+<td align="left">将 BUFR 文件转换为 GEMPAK 格式</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件，用于准备输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除临时文件和目录</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>cat</code></td>
+<td align="left">合并文件内容，将多个文件内容合并为一个文件</td>
+</tr>
+<tr>
+<td align="left"><code>mv</code></td>
+<td align="left">移动或重命名文件</td>
+</tr>
+<tr>
+<td align="left"><code>tar</code></td>
+<td align="left">打包文件，生成 tar 归档文件</td>
+</tr>
+<tr>
+<td align="left"><code>gzip</code></td>
+<td align="left">压缩文件，生成 gzip 压缩文件</td>
+</tr>
+<tr>
+<td align="left"><code>cwordsh</code></td>
+<td align="left">用于块化&#x2F;解块化 BUFR 文件，使其与 GEMPAK 兼容</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+<tr>
+<td align="left"><code>dbn_alert</code></td>
+<td align="left">向 DBN 系统发送警报，通知产品生成完成</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>profilm.c1.f$&#123;fhr&#125;</code></td>
+<td align="left">WRF → BUFR 转换后的探空报文文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap_bufr.tbl</code></td>
+<td align="left">BUFR 表文件，定义 BUFR 消息结构</td>
+</tr>
+<tr>
+<td align="left"><code>rap_modtop.parm</code></td>
+<td align="left">参数文件，定义探空报文生成所需参数</td>
+</tr>
+<tr>
+<td align="left"><code>rap_sndp.parm.mono</code></td>
+<td align="left">参数文件，定义探空报文生成所需参数</td>
+</tr>
+<tr>
+<td align="left"><code>class1.bufr</code></td>
+<td align="left">生成的 BUFR 格式探空报文文件</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>profilm.c1.$&#123;tmmark&#125;</code></td>
+<td align="left">合并后的探空报文文件</td>
+</tr>
+<tr>
+<td align="left"><code>class1.bufr_unblock</code></td>
+<td align="left">解块化的 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>class1.bufr_block</code></td>
+<td align="left">块化的 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.class1.bufr.$&#123;tmmark&#125;</code></td>
+<td align="left">输出的 BUFR 格式探空报文文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.bufrsnd.tar.gz</code></td>
+<td align="left">压缩的探空报文文件归档</td>
+</tr>
+<tr>
+<td align="left"><code>rap.$&#123;cycle&#125;.bufrsnd.tar.gz</code></td>
+<td align="left">输出的压缩探空报文文件归档</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-process-hydro-sh"><a href="#exrap-process-hydro-sh" class="headerlink" title="exrap_process_hydro.sh"></a>exrap_process_hydro.sh</h4><p>是一个 <strong>水凝物处理脚本</strong>，负责从多种数据源（如雷达反射率、Langley 云、闪电数据）中提取和处理气象数据，生成 BUFR 格式的分析产品，并将这些产品发送到下游系统（如 DBN）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_process_mosaic</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_process_mosaic</code></td>
+<td align="left">处理雷达马赛克数据，生成 BUFR 格式的反射率产品</td>
+</tr>
+<tr>
+<td align="left"><code>rap_process_cloud</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_process_cloud</code></td>
+<td align="left">处理 Langley 云数据，生成 BUFR 格式的云产品</td>
+</tr>
+<tr>
+<td align="left"><code>rap_process_lightning</code></td>
+<td align="left"><code>$&#123;EXECrap&#125;/rap_process_lightning</code></td>
+<td align="left">处理闪电数据，生成 BUFR 格式的闪电产品</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件，用于准备输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除临时文件和目录</td>
+</tr>
+<tr>
+<td align="left"><code>ln -s</code></td>
+<td align="left">创建符号链接，用于链接到输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>gzip</code></td>
+<td align="left">解压缩 <code>.gz</code> 文件</td>
+</tr>
+<tr>
+<td align="left"><code>date</code></td>
+<td align="left">获取当前日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>cut</code></td>
+<td align="left">从字符串中提取特定部分，用于解析日期和时间</td>
+</tr>
+<tr>
+<td align="left"><code>ls</code></td>
+<td align="left">列出目录中的文件，用于检查文件存在性</td>
+</tr>
+<tr>
+<td align="left"><code>wc</code></td>
+<td align="left">统计文件中的行数</td>
+</tr>
+<tr>
+<td align="left"><code>more</code></td>
+<td align="left">查看文件内容</td>
+</tr>
+<tr>
+<td align="left"><code>time</code></td>
+<td align="left">测量程序运行时间</td>
+</tr>
+<tr>
+<td align="left"><code>mpiexec</code></td>
+<td align="left">启动并行任务，运行核心处理程序</td>
+</tr>
+<tr>
+<td align="left"><code>mail.py</code></td>
+<td align="left">发送邮件通知，用于错误报告</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>rap_prepobs.bufrtable</code></td>
+<td align="left">BUFR 表文件，定义 BUFR 消息结构</td>
+</tr>
+<tr>
+<td align="left"><code>rap_geo_em.d01.nc</code></td>
+<td align="left">地理网格静态文件</td>
+</tr>
+<tr>
+<td align="left"><code>MergedReflectivityQC_*_$&#123;PDY&#125;-$&#123;cyc&#125;????.grib2.gz</code></td>
+<td align="left">雷达反射率 GRIB2 文件（NSSL 格式）</td>
+</tr>
+<tr>
+<td align="left"><code>MREF3D33L.$&#123;PDY&#125;.$&#123;HH&#125;$&#123;mm&#125;00.gz</code></td>
+<td align="left">雷达反射率二进制文件（8 瓦片格式）</td>
+</tr>
+<tr>
+<td align="left"><code>tile1-8/$&#123;PDY&#125;_$&#123;cyc&#125;00.mosaic</code></td>
+<td align="left">雷达反射率二进制文件（81 瓦片格式）</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.lgycld.tm00.bufr_d</code></td>
+<td align="left">Langley 云数据 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.lghtng.tm00.bufr_d</code></td>
+<td align="left">闪电数据 BUFR 文件</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>NSSLRefInGSI.bufr</code></td>
+<td align="left">生成的 NSSL 反射率 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>NASALaRCCloudInGSI.bufr</code></td>
+<td align="left">生成的 Langley 云 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>LightningInGSI.bufr</code></td>
+<td align="left">生成的闪电 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.mosaic.bufr</code></td>
+<td align="left">输出的马赛克 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.nasacloud.bufr</code></td>
+<td align="left">输出的云 BUFR 文件</td>
+</tr>
+<tr>
+<td align="left"><code>rap.t$&#123;cyc&#125;z.lghtng.bufr</code></td>
+<td align="left">输出的闪电 BUFR 文件</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-nawips-sh"><a href="#exrap-nawips-sh" class="headerlink" title="exrap_nawips.sh"></a>exrap_nawips.sh</h4><p>是一个 <strong>GRIB 转 GEMPAK 脚本</strong>，负责将 NCEP GRIB 文件转换为 GEMPAK 格式，并生成特定层次（如 ZAGL、theta）的产品，最终将这些产品发送到下游系统（如 DBN、ECFLOW）。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>nagrib2</code></td>
+<td align="left"><code>$&#123;GEMEXE&#125;/nagrib2</code></td>
+<td align="left">将 GRIB 文件转换为 GEMPAK 格式</td>
+</tr>
+<tr>
+<td align="left"><code>gdvint</code></td>
+<td align="left"><code>$&#123;GEMEXE&#125;/gdvint</code></td>
+<td align="left">在 GEMPAK 中处理垂直插值，生成特定层次的产品</td>
+</tr>
+</tbody></table>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>mkdir</code></td>
+<td align="left">创建目录</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录</td>
+</tr>
+<tr>
+<td align="left"><code>cp</code></td>
+<td align="left">复制文件，用于准备输入文件和配置文件</td>
+</tr>
+<tr>
+<td align="left"><code>sleep</code></td>
+<td align="left">暂停脚本执行，等待指定时间</td>
+</tr>
+<tr>
+<td align="left"><code>let</code></td>
+<td align="left">执行算术运算</td>
+</tr>
+<tr>
+<td align="left"><code>typeset</code></td>
+<td align="left">设置变量格式（如补零）</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+<tr>
+<td align="left"><code>err_exit</code></td>
+<td align="left">自定义函数，用于在发生错误时退出脚本</td>
+</tr>
+<tr>
+<td align="left"><code>ecflow_client</code></td>
+<td align="left">通知 ECFLOW 调度系统释放后续任务</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>g2varsncep1.tbl</code></td>
+<td align="left">GEMPAK 表文件，定义 GRIB2 到 GEMPAK 的变量映射</td>
+</tr>
+<tr>
+<td align="left"><code>g2vcrdncep1.tbl</code></td>
+<td align="left">GEMPAK 表文件，定义 GRIB2 坐标信息</td>
+</tr>
+<tr>
+<td align="left"><code>g2varswmo2.tbl</code></td>
+<td align="left">GEMPAK 表文件，定义 WMO 标准的 GRIB2 变量映射</td>
+</tr>
+<tr>
+<td align="left"><code>g2vcrdwmo2.tbl</code></td>
+<td align="left">GEMPAK 表文件，定义 WMO 标准的 GRIB2 坐标信息</td>
+</tr>
+<tr>
+<td align="left"><code>$&#123;model&#125;.$&#123;cycle&#125;.$&#123;GRIB&#125;$&#123;fhr&#125;$&#123;EXT&#125;</code></td>
+<td align="left">输入的 GRIB 文件，包含气象数据</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输出文件</p>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>$&#123;RUN&#125;_$&#123;PDY&#125;$&#123;cyc&#125;f$&#123;fhr3&#125;</code></td>
+<td align="left">输出的 GEMPAK 格式网格文件</td>
+</tr>
+<tr>
+<td align="left"><code>$&#123;RUN&#125;_$&#123;PDY&#125;$&#123;cyc&#125;f$&#123;fhr3&#125;.idx</code></td>
+<td align="left">输出的 GEMPAK 索引文件</td>
+</tr>
+</tbody></table>
+<h4 id="exrap-gempak-meta-sh"><a href="#exrap-gempak-meta-sh" class="headerlink" title="exrap_gempak_meta.sh"></a>exrap_gempak_meta.sh</h4><p>是一个 <strong>并行任务调度脚本</strong>，负责从 <code>$FIXgempak/rap_meta</code> 中读取命令列表，生成并行脚本 <code>poescript</code>，并通过 <code>mpirun.lsf</code> 启动并行任务，完成 GEMPAK 元数据处理。</p>
+<p>⭕️ 核心程序</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">调用路径</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>mpirun.lsf</code></td>
+<td align="left">直接调用</td>
+<td align="left">启动并行任务，运行生成的并行脚本 <code>poescript</code></td>
+</tr>
+</tbody></table>
+<hr>
+<p>⭕️ 系统工具</p>
+<table>
+<thead>
+<tr>
+<th align="left">程序名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>set</code></td>
+<td align="left">设置脚本调试模式（<code>set -x</code>），便于跟踪脚本执行过程</td>
+</tr>
+<tr>
+<td align="left"><code>cd</code></td>
+<td align="left">切换工作目录到 <code>$DATA</code></td>
+</tr>
+<tr>
+<td align="left"><code>rm</code></td>
+<td align="left">删除文件 <code>$DATA/poescript</code></td>
+</tr>
+<tr>
+<td align="left"><code>cat</code></td>
+<td align="left">读取文件内容，用于统计行数</td>
+</tr>
+<tr>
+<td align="left"><code>wc</code></td>
+<td align="left">统计文件中的行数</td>
+</tr>
+<tr>
+<td align="left"><code>chmod</code></td>
+<td align="left">修改文件权限，使 <code>poescript</code> 可执行</td>
+</tr>
+<tr>
+<td align="left"><code>expr</code></td>
+<td align="left">执行算术运算，用于递增变量 <code>n</code></td>
+</tr>
+<tr>
+<td align="left"><code>eval</code></td>
+<td align="left">执行字符串作为命令，用于动态生成脚本内容</td>
+</tr>
+<tr>
+<td align="left"><code>postmsg</code></td>
+<td align="left">向事件管理器（ECF&#x2F;SMS）回传完成状态</td>
+</tr>
+</tbody></table>
+<p>⭕️ 输入输出文件</p>
+<ul>
+<li>输入文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>$FIXgempak/rap_meta</code></td>
+<td align="left">包含要并行执行的命令列表</td>
+</tr>
+</tbody></table>
+<ul>
+<li>输出文件</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">文件名</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>$DATA/poescript</code></td>
+<td align="left">生成的并行脚本，包含要执行的命令</td>
+</tr>
+<tr>
+<td align="left"><code>output.$n</code></td>
+<td align="left">每个并行任务的标准输出文件</td>
+</tr>
+</tbody></table>
+<h3 id="ush-目录"><a href="#ush-目录" class="headerlink" title="ush 目录"></a>ush 目录</h3><h4 id="rap-real-wpsdfi-bd-sh"><a href="#rap-real-wpsdfi-bd-sh" class="headerlink" title="rap_real_wpsdfi_bd.sh"></a>rap_real_wpsdfi_bd.sh</h4><p>这是一个用于运行WRF Real程序的Shell脚本，主要功能是处理RAP模式的初始化和边界条件生成，包括数字滤波初始化（DFI）处理，为WRF预报运行准备必要的输入文件。</p>
+<h4 id="rap-run-wrf-sh"><a href="#rap-run-wrf-sh" class="headerlink" title="rap_run_wrf.sh"></a>rap_run_wrf.sh</h4><p>这是一个用于运行WRF模型的Shell脚本，专门为RAP模式配置和启动WRF预报运行。脚本主要功能是设置WRF运行的并行计算环境、资源分配和性能优化参数。</p>
+<h4 id="rap-smartinit-sh"><a href="#rap-smartinit-sh" class="headerlink" title="rap_smartinit.sh"></a>rap_smartinit.sh</h4><p>这是一个用于生成RAP模式SMARTINIT产品的Shell脚本，主要功能是将WRF模型输出的原生网格数据插值和转换为NDFD（National Digital Forecast Database）网格格式，生成面向业务应用的精细化预报产品。</p>
+<p>定义不同NDFD网格的投影和范围参数：</p>
+<ul>
+<li><strong>网格187</strong>（CONUS）: 兰伯特投影，233.723448:2345:2539.703, 19.228976:1597:2539.703</li>
+<li><strong>网格198</strong>（阿拉斯加）: 极射赤面投影，181.429000:1649:2976.563, 40.530101:1105:2976.563</li>
+<li><strong>网格196</strong>（夏威夷）: 墨卡托投影，198.474999:321:2500.000, 18.072699:225:2500.000</li>
+<li><strong>网格194</strong>（波多黎各）: 墨卡托投影，291.804700:353:1250.000, 16.828700:257:1250.000</li>
+</ul>
+<h4 id="rap-mkawp-sh"><a href="#rap-mkawp-sh" class="headerlink" title="rap_mkawp.sh"></a>rap_mkawp.sh</h4><p>这是一个用于生成Rapid Refresh (RAP) 模式AWIPS产品的复杂脚本，主要功能是处理不同网格的GRIB2数据，生成累积降水、雪水当量等产品，并将其转换为AWIPS可用的格式进行分发。</p>
+<h4 id="rap-grib2sfc-sh"><a href="#rap-grib2sfc-sh" class="headerlink" title="rap_grib2sfc.sh"></a>rap_grib2sfc.sh</h4><p>这是一个用于从RAP模式GRIB2输出文件中提取特定表面和近地面气象要素的Shell脚本。脚本通过<code>wgrib2</code>工具筛选和组合特定的气象变量，生成一个包含选定要素的GRIB2文件，提取的变量涵盖了表面观测、近地面气象条件、云特征和对流能量等关键气象要素，通常用于：</p>
+<ol>
+<li>减少数据存储需求</li>
+<li>提高数据访问效率</li>
+<li>为特定应用（如航空天气、表面天气分析）提供定制数据子集</li>
+<li>准备输入数据用于可视化或进一步处理</li>
+</ol>
+<h4 id="rap-bfr2gpk-sh"><a href="#rap-bfr2gpk-sh" class="headerlink" title="rap_bfr2gpk.sh"></a>rap_bfr2gpk.sh</h4><p>这是一个用于处理Rapid Refresh (RAP) 模式输出的BUFR格式数据的Shell脚本，主要功能是将BUFR格式的气象数据转换为GEMPAK软件可用的表面观测数据和探空数据格式，以便进行进一步的气象分析和可视化。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Slurm-Install/" rel="prev" title="Slurm-Install">
+      <i class="fa fa-chevron-left"></i> Slurm-Install
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/SCP/" rel="next" title="SCP">
+      SCP <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RAP-structure"><span class="nav-number">1.</span> <span class="nav-text">RAP structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#sms-x2F-makesms-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.1.</span> <span class="nav-text">sms&#x2F;makesms 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#make-sms-analysis"><span class="nav-number">1.1.1.</span> <span class="nav-text">make_sms_analysis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#make-sms-fcst"><span class="nav-number">1.1.2.</span> <span class="nav-text">make_sms_fcst</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sms-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.2.</span> <span class="nav-text">sms 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-makebc-00-x2F-06-x2F-12-x2F-18-bsub"><span class="nav-number">1.2.1.</span> <span class="nav-text">jrap_makebc_00&#x2F;06&#x2F;12&#x2F;18.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-process-XX-bsub"><span class="nav-number">1.2.2.</span> <span class="nav-text">jrap_process_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-analysis-XX-bsub"><span class="nav-number">1.2.3.</span> <span class="nav-text">jrap_analysis_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-smokeprep-XX-bsub"><span class="nav-number">1.2.4.</span> <span class="nav-text">jrap_smokeprep_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-analysis-pcyc-XX-bsub"><span class="nav-number">1.2.5.</span> <span class="nav-text">jrap_analysis_pcyc_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-updatebc-XX-bsub"><span class="nav-number">1.2.6.</span> <span class="nav-text">jrap_updatebc_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-fcst-XX-bsub"><span class="nav-number">1.2.7.</span> <span class="nav-text">jrap_fcst_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-postmgr-XX-bsub"><span class="nav-number">1.2.8.</span> <span class="nav-text">jrap_postmgr_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-fcst-pcyc-XX-bsub"><span class="nav-number">1.2.9.</span> <span class="nav-text">jrap_fcst_pcyc_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-sndp-XX-bsub"><span class="nav-number">1.2.10.</span> <span class="nav-text">jrap_sndp_XX.bsub</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#jrap-gempak-XX-bsub"><span class="nav-number">1.2.11.</span> <span class="nav-text">jrap_gempak_XX.bsub</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#jobs-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.3.</span> <span class="nav-text">jobs 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-MAKEBC"><span class="nav-number">1.3.1.</span> <span class="nav-text">JRAP_MAKEBC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-ANALYSIS"><span class="nav-number">1.3.2.</span> <span class="nav-text">JRAP_ANALYSIS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-FORECAST"><span class="nav-number">1.3.3.</span> <span class="nav-text">JRAP_FORECAST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-UPDATEBC"><span class="nav-number">1.3.4.</span> <span class="nav-text">JRAP_UPDATEBC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-POSTMGR"><span class="nav-number">1.3.5.</span> <span class="nav-text">JRAP_POSTMGR</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-POST"><span class="nav-number">1.3.6.</span> <span class="nav-text">JRAP_POST</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-WRFBUFR"><span class="nav-number">1.3.7.</span> <span class="nav-text">JRAP_WRFBUFR</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-POSTSND"><span class="nav-number">1.3.8.</span> <span class="nav-text">JRAP_POSTSND</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-PROCESS-HYDRO"><span class="nav-number">1.3.9.</span> <span class="nav-text">JRAP_PROCESS_HYDRO</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-GEMPAK"><span class="nav-number">1.3.10.</span> <span class="nav-text">JRAP_GEMPAK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-CLEANUP"><span class="nav-number">1.3.11.</span> <span class="nav-text">JRAP_CLEANUP</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#scripts-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.4.</span> <span class="nav-text">scripts 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-makebc-sh"><span class="nav-number">1.4.1.</span> <span class="nav-text">exrap_makebc.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-analysis-sh"><span class="nav-number">1.4.2.</span> <span class="nav-text">exrap_analysis.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-fcst-sh"><span class="nav-number">1.4.3.</span> <span class="nav-text">exrap_fcst.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-fcst-restart-sh"><span class="nav-number">1.4.4.</span> <span class="nav-text">exrap_fcst_restart.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-makebc-sh-1"><span class="nav-number">1.4.5.</span> <span class="nav-text">exrap_makebc.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-updatebc-sh"><span class="nav-number">1.4.6.</span> <span class="nav-text">exrap_updatebc.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-postmgr-sh"><span class="nav-number">1.4.7.</span> <span class="nav-text">exrap_postmgr.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-post-sh"><span class="nav-number">1.4.8.</span> <span class="nav-text">exrap_post.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-wrfbufr-sh"><span class="nav-number">1.4.9.</span> <span class="nav-text">exrap_wrfbufr.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-postsnd-sh"><span class="nav-number">1.4.10.</span> <span class="nav-text">exrap_postsnd.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-process-hydro-sh"><span class="nav-number">1.4.11.</span> <span class="nav-text">exrap_process_hydro.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-nawips-sh"><span class="nav-number">1.4.12.</span> <span class="nav-text">exrap_nawips.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#exrap-gempak-meta-sh"><span class="nav-number">1.4.13.</span> <span class="nav-text">exrap_gempak_meta.sh</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ush-%E7%9B%AE%E5%BD%95"><span class="nav-number">1.5.</span> <span class="nav-text">ush 目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-real-wpsdfi-bd-sh"><span class="nav-number">1.5.1.</span> <span class="nav-text">rap_real_wpsdfi_bd.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-run-wrf-sh"><span class="nav-number">1.5.2.</span> <span class="nav-text">rap_run_wrf.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-smartinit-sh"><span class="nav-number">1.5.3.</span> <span class="nav-text">rap_smartinit.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-mkawp-sh"><span class="nav-number">1.5.4.</span> <span class="nav-text">rap_mkawp.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-grib2sfc-sh"><span class="nav-number">1.5.5.</span> <span class="nav-text">rap_grib2sfc.sh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#rap-bfr2gpk-sh"><span class="nav-number">1.5.6.</span> <span class="nav-text">rap_bfr2gpk.sh</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

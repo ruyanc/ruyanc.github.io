@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="RAP driver参数文件123456wget -c --mirror --no-parent --cut-dirs&#x3D;7 \     --directory-prefix&#x3D;. \     --force-directories \     -P parm \     -nH --no-host-directories \     https:&#x2F;&#x2F;www.nco.ncep.noaa.gov&#x2F;pmb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAP driver">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/RAP%20driver/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="RAP driver参数文件123456wget -c --mirror --no-parent --cut-dirs&#x3D;7 \     --directory-prefix&#x3D;. \     --force-directories \     -P parm \     -nH --no-host-directories \     https:&#x2F;&#x2F;www.nco.ncep.noaa.gov&#x2F;pmb">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-19T01:55:13.727Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/RAP%20driver/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>RAP driver | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/RAP%20driver/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RAP driver
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-09-19 09:55:13" itemprop="dateModified" datetime="2025-09-19T09:55:13+08:00">2025-09-19</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="RAP-driver"><a href="#RAP-driver" class="headerlink" title="RAP driver"></a>RAP driver</h2><h4 id="参数文件"><a href="#参数文件" class="headerlink" title="参数文件"></a>参数文件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -c --mirror --no-parent --cut-dirs=7 \</span><br><span class="line">     --directory-prefix=. \</span><br><span class="line">     --force-directories \</span><br><span class="line">     -P parm \</span><br><span class="line">     -nH --no-host-directories \</span><br><span class="line">     https://www.nco.ncep.noaa.gov/pmb/codes/nwprod/rap.v5.1.20/parm/</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="初始场和边界条件"><a href="#初始场和边界条件" class="headerlink" title="初始场和边界条件"></a>初始场和边界条件</h4><p>✅ rap fix文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -c --mirror --no-parent --cut-dirs=7 \</span><br><span class="line">     --directory-prefix=. \</span><br><span class="line">     --force-directories \</span><br><span class="line">     -P fix \</span><br><span class="line">     -nH --no-host-directories \</span><br><span class="line">     https://www.nco.ncep.noaa.gov/pmb/codes/nwprod/rap.v5.1.20/fix/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -c --mirror --no-parent --cut-dirs=7 \</span><br><span class="line">     --directory-prefix=. \</span><br><span class="line">     --force-directories \</span><br><span class="line">     -P fix \</span><br><span class="line">     -nH --no-host-directories \</span><br><span class="line">     https://www.nco.ncep.noaa.gov/pmb/codes/nwprod/hrrr.v4.1.20/fix/</span><br></pre></td></tr></table></figure>
+
+<p>✅ crtm fix 文件</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/JCSDA/crtm/blob/master/Get_CRTM_Binary_Files.sh">https://github.com/JCSDA/crtm/blob/master/Get_CRTM_Binary_Files.sh</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://bin.ssec.wisc.edu/pub/s4/CRTM/fix_REL-2.4.0.tgz</span><br></pre></td></tr></table></figure>
+
+<p>✅ GFS 分析&#x2F;预报场</p>
+<p>冷启动通常需要过去某些时间的场（analysis）＋边界未来演变。</p>
+<ul>
+<li>GDAS</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gdas.20250914/00/atmos/gdas.t00z.atmanl.nc</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>GFS</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/bash</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">------------------------------------------------------------------------</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> GFS 0.25° pgrb2  00–66 h 每 3 h 循环下载脚本</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"> 保存路径: ./gfs/YYYYMMDD/CCC/gfs.tCCz.pgrb2.0p25.fFFF</span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">------------------------------------------------------------------------</span></span><br><span class="line">set -eu</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">=========== 用户可改参数 ================================================</span></span><br><span class="line">PDY=$&#123;PDY:-20250918&#125;          # 日期</span><br><span class="line">cyc_list=&quot;00 06 12 18&quot;        # 起报时刻</span><br><span class="line">fstart=24 ; fend=66 ; fstep=3  # 预报时段 00-66，步长 3h</span><br><span class="line">baseurl=&quot;https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod&quot;</span><br><span class="line">outdir=&quot;./gfs/$&#123;PDY&#125;&quot;         # 本地根目录</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">========================================================================</span></span><br><span class="line"></span><br><span class="line">mkdir -p &quot;$&#123;outdir&#125;&quot;</span><br><span class="line"></span><br><span class="line">for cyc in $&#123;cyc_list&#125;; do</span><br><span class="line">  mkdir -p &quot;$&#123;outdir&#125;/$&#123;cyc&#125;&quot;</span><br><span class="line">  for (( f=fstart; f&lt;=fend; f=f+fstep )); do</span><br><span class="line">    # 格式化成 3 位数字</span><br><span class="line">    fff=$(printf &quot;%03d&quot; $f)</span><br><span class="line">    file=&quot;gfs.t$&#123;cyc&#125;z.pgrb2.0p25.f$&#123;fff&#125;&quot;</span><br><span class="line">    url=&quot;$&#123;baseurl&#125;/gfs.$&#123;PDY&#125;/$&#123;cyc&#125;/atmos/$&#123;file&#125;&quot;</span><br><span class="line">    echo &quot;[INFO] downloading  $url&quot;</span><br><span class="line">    # -c 断点续传，-O 显式指定存放路径</span><br><span class="line">    wget -c &quot;$&#123;url&#125;&quot; -O &quot;$&#123;outdir&#125;/$&#123;cyc&#125;/$&#123;file&#125;&quot;</span><br><span class="line">  done</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line">echo &quot;[INFO] 全部下载完成 → $&#123;outdir&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>enkfgdas</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget -c --mirror --no-parent --cut-dirs=10 \</span><br><span class="line">     --directory-prefix=. \</span><br><span class="line">     --force-directories \</span><br><span class="line">     -P enkfgdas \</span><br><span class="line">     -nH --no-host-directories \</span><br><span class="line">     https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/enkfgdas.20250918/00/atmos/</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="陆面-x2F-下垫面资料"><a href="#陆面-x2F-下垫面资料" class="headerlink" title="陆面&#x2F;下垫面资料"></a>陆面&#x2F;下垫面资料</h4><p>✅ 海温资料（daily update）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.ncei.noaa.gov/data/sea-surface-temperature-optimum-interpolation/v2.1/access/avhrr/202509/oisst-avhrr-v02r01.20250914_preliminary.nc</span><br></pre></td></tr></table></figure>
+
+
+
+<p>wget  <a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.20250914/rtofs_glo_sst_20250914.tar.gz">https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.20250914/rtofs_glo_sst_20250914.tar.gz</a></p>
+<p>wget <a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.20250915/rtofs_glo_sst_20250915_hcasts.nc.gz">https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtofs/prod/rtofs.20250915/rtofs_glo_sst_20250915_hcasts.nc.gz</a></p>
+<ul>
+<li>转换为grib2格式的文件</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cdo -f grb2 -setgridtype,regular -setunit,K -addc,273.15 -selname,sst oisst_global.nc oisst_global.grib2</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>✅ 冰雪资料（daily update）</p>
+<p>U.S. National Ice Center IMS Snow and Ice Products</p>
+<p><a target="_blank" rel="noopener" href="https://usicecenter.gov/Products/ImsData">https://usicecenter.gov/Products/ImsData</a></p>
+<p>✅ 植被覆盖 GVF（weakly update）</p>
+<p><a target="_blank" rel="noopener" href="https://www.star.nesdis.noaa.gov/smcd/emb/land/others/documents/instructions_vi_gvf_dat_from_CLASS.pdf">https://www.star.nesdis.noaa.gov/smcd/emb/land/others/documents/instructions_vi_gvf_dat_from_CLASS.pdf</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.aev.class.noaa.gov/saa/products/welcome">https://www.aev.class.noaa.gov/saa/products/welcome</a></p>
+<p>JPSS_NGRN → Goto Cart → Place Order</p>
+<h4 id="观测资料（用于分析-x2F-同化）"><a href="#观测资料（用于分析-x2F-同化）" class="headerlink" title="观测资料（用于分析&#x2F;同化）"></a>观测资料（用于分析&#x2F;同化）</h4><p>✅ obsproc 预处理后的数据文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget --mirror --no-parent --cut-dirs=8 \</span><br><span class="line">     --directory-prefix=. \</span><br><span class="line">     --force-directories \</span><br><span class="line">     -P rap.20250914 \</span><br><span class="line">     https://nomads.ncep.noaa.gov/pub/data/nccf/com/obsproc/prod/rap.20250914/</span><br></pre></td></tr></table></figure>
+
+<p>wget <a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/obsproc/prod/gdas.20250914/gdas.t00z.prepbufr.nr">https://nomads.ncep.noaa.gov/pub/data/nccf/com/obsproc/prod/gdas.20250914/gdas.t00z.prepbufr.nr</a></p>
+<p>wget –mirror –no-parent –cut-dirs&#x3D;7 <a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20250914/00/atmos/bufr.t00z/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.20250914/00/atmos/bufr.t00z/</a></p>
+<p>⭕️ GTS</p>
+<p>Global BUFR Data Stream: Ships and Buoy Observations from National Weather Service Telecommunications Gateway (NWS TG)</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00953">https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00953</a></p>
+<p>⭕️ Aircraft</p>
+<p>⭕️ Radiosonde</p>
+<p>NWS US Radiosonde B &amp; C BUFR High Resolution</p>
+<p><a target="_blank" rel="noopener" href="https://www.ncei.noaa.gov/data/us-radiosonde-bufr/archive/">https://www.ncei.noaa.gov/data/us-radiosonde-bufr/archive/</a></p>
+<p>⭕️ Surface</p>
+<p>⭕️ Satwind</p>
+<p>⭐️ bufr数据下载</p>
+<p>实时：<a target="_blank" rel="noopener" href="https://tgftp.nws.noaa.gov/SL.us008001/DF.bf/">https://tgftp.nws.noaa.gov/SL.us008001/DF.bf/</a></p>
+<p>历史：<a target="_blank" rel="noopener" href="https://gdex.ucar.edu/datasets/d337000/">https://gdex.ucar.edu/datasets/d337000/</a></p>
+<h3 id="常规观测资料的预处理和质控"><a href="#常规观测资料的预处理和质控" class="headerlink" title="常规观测资料的预处理和质控"></a>常规观测资料的预处理和质控</h3><p><a target="_blank" rel="noopener" href="https://obsproc-nwpc.readthedocs.io/zh-cn/latest/">https://obsproc-nwpc.readthedocs.io/zh-cn/latest/</a></p>
+<h3 id="检查数据下载的完整性"><a href="#检查数据下载的完整性" class="headerlink" title="检查数据下载的完整性"></a>检查数据下载的完整性</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">!/bin/sh<span class="comment">#</span></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash"><span class="built_in">export</span> fname=<span class="string">&quot;global_satinfo.txt_rapv5_for_CIRS_FSR_ATMS_ABI_20190702&quot;</span></span></span><br><span class="line">for fname in *; do</span><br><span class="line">md5sum $fname &gt; check.txt</span><br><span class="line">md5sum -c check.txt</span><br><span class="line">rm check.txt</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<hr>
+<p>以下为AI总结</p>
+<h3 id="外部驱动数据类型汇总"><a href="#外部驱动数据类型汇总" class="headerlink" title="外部驱动数据类型汇总"></a>外部驱动数据类型汇总</h3><p>冷启动运行 RAP（就是没有已有 RAP 周期循环状态或者有限／缺失状态的情况下启动）通常需要以下外部驱动数据：</p>
+<table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>作用／为什么需要</th>
+<th>常见格式 &#x2F; 要素</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>全局模式“初始场 &#x2F; 边界条件”（Initial Conditions &amp; Lateral Boundary Conditions, IC&#x2F;LBC）</td>
+<td>用于给区域模式 (RAP) 的初始大气场、温度、湿度、风、地表状态等，以及边界的时间演变，用来驱动模型边界。</td>
+<td>通常来自 GFS（或 NAM、GDAS 等）的大尺度气象场。格式 GRIB2 或 NEMSIO。包括多个气压层 + 地面变量 + 土壤温湿度等。</td>
+</tr>
+<tr>
+<td>静态地表资料（Static &#x2F; “fix” 文件）</td>
+<td>地形、高程，土地利用 &#x2F;覆盖类型，土壤类型，常年地面覆被（植被、水体、城市等），海岸线，常年气候背景（地表粗糙度、河网等）</td>
+<td>NetCDF、GRIB 或定制静态文件。</td>
+</tr>
+<tr>
+<td>海表温度 &#x2F; 冰盖 &#x2F;海冰覆盖 &#x2F;水面状态</td>
+<td>用于边界面热量 &#x2F;水汽通量 &#x2F;反射率等地表–海面接口条件。</td>
+<td>SST &#x2F;冰覆盖 &#x2F;海冰边界静态或近实况。</td>
+</tr>
+<tr>
+<td>土壤状况 &#x2F;土壤湿度 &#x2F;土壤温度 &#x2F;冻土状态</td>
+<td>地表与地下热量和水分交换很关键，需要初始土壤温湿度 &#x2F;温度分布。</td>
+<td>多层土壤变量，有些资料可能在已有循环中，但冷启动时要从外部获取。</td>
+</tr>
+<tr>
+<td>气象观测资料（用于分析／同化）</td>
+<td>包括：地面观测（气温、湿度、压力、风速&#x2F;风向）、高空气球 (radiosondes)、商用飞机报文（Aircraft reports：AMDAR 等）、雷达资料、卫星资料（包括卫星辐射、遥感水汽、云 &#x2F;冰 &#x2F;辐射相关观测）</td>
+<td>多种格式（BUFR, GRIB, 特定卫星的 Level-1／2 辐射数据等）</td>
+</tr>
+<tr>
+<td>遥感产品 &#x2F; 雾 &#x2F;云 &#x2F;水汽 &#x2F;辐射资料</td>
+<td>用于改善云、水汽、水露点等变量的初始状态和同化。</td>
+<td>卫星 &#x2F;微波探测 &#x2F;红外／可见光等。</td>
+</tr>
+<tr>
+<td>气象分析背景 &#x2F;气候气象背景统计项（误差协方差、背景场）</td>
+<td>同化系统通常需要背景误差协方差、先验背景场、观测误差统计等，这些也算“驱动”或辅助资料。</td>
+<td>通常来自历史资料或已有同化系统内部积累。</td>
+</tr>
+</tbody></table>
+<h3 id="RAP-特定驱动-amp-关键来源"><a href="#RAP-特定驱动-amp-关键来源" class="headerlink" title="RAP 特定驱动 &amp;关键来源"></a>RAP 特定驱动 &amp;关键来源</h3><p>从文献和 NOAA&#x2F;NCEP 的资料里可以看到 RAP 在冷启动或一般运行中常用以下关键来源：</p>
+<ul>
+<li>RAP 的边界条件来源是 <strong>Global Forecast System (GFS)</strong> 模型。 <a target="_blank" rel="noopener" href="https://repository.library.noaa.gov/view/noaa/31477/noaa_31477_DS1.pdf?utm_source=chatgpt.com">NOAA Institutional Repository+2nco.ncep.noaa.gov+2</a></li>
+<li>RAP 的同化（analysis）系统使用多种观测：surface stations、radiosondes（高空气球）、商用飞机、雷达（radar reflectivity &amp; radial velocity 等）、卫星观察资料（水汽、云、辐射等） <a target="_blank" rel="noopener" href="https://journals.ametsoc.org/view/journals/mwre/145/8/mwr-d-16-0398.1.xml?utm_source=chatgpt.com">美国气象学会期刊+2nco.ncep.noaa.gov+2</a></li>
+<li>静态地形 &#x2F;地表覆盖等 fix 文件由 NOAA 提供。虽然我没找到公开 “RAP fix 文件完全包” 的清单细节，但在 UFS &#x2F; SRW 这样的系统里，“fix” 数据集是必须预先下载的。其内容包括地形、土地覆盖、水体、海岸线、植被&#x2F;植被类型、常年气候场等。 <a target="_blank" rel="noopener" href="https://ufs-srweather-app.readthedocs.io/en/develop/UsersGuide/CustomizingTheWorkflow/InputOutputFiles.html?utm_source=chatgpt.com">ufs-srweather-app.readthedocs.io+1</a></li>
+</ul>
+<h3 id="下载／获取方式"><a href="#下载／获取方式" class="headerlink" title="下载／获取方式"></a>下载／获取方式</h3><p>下面是这些数据通常可以从 NOAA 或关联平台获取的方法／链接：</p>
+<table>
+<thead>
+<tr>
+<th>数据／资料</th>
+<th>来源／平台</th>
+<th>获取方式（FTP &#x2F; HTTP &#x2F; API）</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GFS 模型数据（用于 IC &#x2F; LBC）</td>
+<td>NOAA NOMADS &#x2F; NWS &#x2F; NCEP 公共模式数据仓库存档</td>
+<td>HTTP 或 FTP，例如 NOMADS GRIB2 接口，也可能通过 AWS Open Data &#x2F; S3</td>
+<td>要确保选择正确的周期（cycle time），变量（温度、风、湿度等），所需层数，时间范围。冷启动通常需要过去某些时间的场（analysis）＋边界未来演变。</td>
+</tr>
+<tr>
+<td>RAP 自身的分析／预报检验数据</td>
+<td>NOAA NCEI（Rapid Refresh &#x2F; RAP archive）</td>
+<td>HTTP &#x2F; HTTPS &#x2F; THREDDS 服务 &#x2F;下载站点</td>
+<td>若冷启动想对照或用做初始化，也可能用 RAP 的分析场。可能缺少某些观测驱动变量。 <a target="_blank" rel="noopener" href="https://www.ncei.noaa.gov/products/weather-climate-models/rapid-refresh-update?utm_source=chatgpt.com">国家环境信息中心+1</a></td>
+</tr>
+<tr>
+<td>观测资料（surface, radiosonde, aircraft, radar, satellite）</td>
+<td>多个来源：NCEP &#x2F; NWS &#x2F; NOAA &#x2F; NASA &#x2F;卫星遥感机构 &#x2F;地面观测网 &#x2F;航空报文网络</td>
+<td>通常通过 NOAA 的观测数据中心（如 NCEI, NWS）提供 BUFR 或其他格式；卫星资料通过 NOAA&#x2F;NASA 的卫星数据仓库；雷达资料可能通过国防或气象雷达站网络 &#x2F;NEXRAD &#x2F;NOAA Radar Ops 等。</td>
+<td>要注意时间戳对齐、质量控制、空间缺口等问题。对于冷启动，初始分析质量很敏感观测资料是否包含完整。</td>
+</tr>
+<tr>
+<td>静态地表资料（terrain, land cover, soil type, etc.）</td>
+<td>NOAA &#x2F; USGS &#x2F;其他地面数据机构</td>
+<td>下载“fix”文件集；可能 NOAA 提供；USGS 地形、土地覆盖数据库等</td>
+<td>分辨率、格式要与模型网格匹配；可能需要投影&#x2F;重网格处理。</td>
+</tr>
+<tr>
+<td>海表温度 &#x2F; 海冰覆盖</td>
+<td>NOAA OISST &#x2F;冰冻海洋数据 &#x2F;卫星检验资料</td>
+<td>NOAA 的 OISST 数据产品；冰情图 &#x2F;冰盖产品；静态或近实况产品通过 NOAA &#x2F;NASA 网站</td>
+<td>要检查最新性、时间延迟；如果模拟包括海冰，条件要做得准确。</td>
+</tr>
+<tr>
+<td>土壤温度／湿度等地表状态</td>
+<td>如果已有循环则可从之前模拟中获取；否则可能需要外部气象再分析／重分析产品提供土壤状态（例如再分析资料）</td>
+<td>NOAA &#x2F; NASA 再分析数据集（例如 NCEP Reanalysis, ERA5 等）或从类似 RAP archive 如果包含此类变量</td>
+<td>冷启动时土壤状态可能是瓶颈，因为土壤调整／湿度分布可能很不准确，会导致地表–大气相互作用误差较大。</td>
+</tr>
+</tbody></table>
+<h3 id="一个可能的冷启动流程（带下载步骤）"><a href="#一个可能的冷启动流程（带下载步骤）" class="headerlink" title="一个可能的冷启动流程（带下载步骤）"></a>一个可能的冷启动流程（带下载步骤）</h3><p>为了更清晰，这里举一个示例流程（假设你要冷启动 RAPv5，13-km 分辨率）：</p>
+<ol>
+<li>从 NOAA &#x2F; NOMADS 下载 GFS 的最新分析场（例如 00Z 分析）所需的变量：温度、风速（u, v）、湿度、水汽、气压、高度、地表压力、地面温度、土壤温度／湿度等。</li>
+<li>下载静态地形 &#x2F;地表资料 fix 文件集：地形边界，高程，土地覆盖类型，水体掩膜（land&#x2F;water mask），植被类型等。</li>
+<li>如果你的区域包含海岸或海面，获取最近的 SST &#x2F;海冰掩膜资料。</li>
+<li>获取观测资料以用于分析同化：地面气象站、飞机报文、高空气球、卫星水汽&#x2F;云&#x2F;辐射 &#x2F;雷达反射率和径向速度等。</li>
+<li>准备背景误差协方差 &#x2F;先验背景场，如果你的同化系统需要这类静态或半静态资料。</li>
+<li>将这些资料格式化为模型所需格式（GRIB2&#x2F;NEMSIO&#x2F;或者模型专用输入格式），包括插值到模型网格。</li>
+<li>配置 namelist／模式启动控制文件（指定初始时间、边界条件频率、同化窗口等）。</li>
+</ol>
+<hr>
+<h3 id="初始场和边界条件-1"><a href="#初始场和边界条件-1" class="headerlink" title="初始场和边界条件"></a>初始场和边界条件</h3><ul>
+<li><strong>GFS 分析&#x2F;预报场</strong><ul>
+<li>用作 RAP 冷启动的初始条件和外部边界条件。</li>
+<li><strong>数据源</strong>：<ul>
+<li>NOAA NOMADS: <a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/">https://nomads.ncep.noaa.gov</a></li>
+<li>NCEI 数据归档: <a target="_blank" rel="noopener" href="https://www.ncei.noaa.gov/">https://www.ncei.noaa.gov/</a></li>
+</ul>
+</li>
+<li><strong>文件格式</strong>：GRIB2</li>
+</ul>
+</li>
+</ul>
+<h3 id="观测资料（用于分析-x2F-同化）-1"><a href="#观测资料（用于分析-x2F-同化）-1" class="headerlink" title="观测资料（用于分析&#x2F;同化）"></a>观测资料（用于分析&#x2F;同化）</h3><ul>
+<li><strong>地面观测（SYNOP、METAR、SHIP、BUOY）</strong></li>
+<li><strong>探空（RAOB）</strong></li>
+<li><strong>飞机观测（ACARS、AMDAR）</strong></li>
+<li><strong>卫星反演产品（GOES radiance、AMSU、IASI、ATMS 等）</strong></li>
+<li><strong>雷达资料（NEXRAD Level II&#x2F;III，radial winds，reflectivity）</strong></li>
+<li><strong>GPS 掩星、GPS PW</strong></li>
+<li><strong>航空模式专用：PIREPs</strong><ul>
+<li><strong>获取方式</strong>：<ul>
+<li><strong>NCEP Data Tank &#x2F; NCEI</strong>: <a target="_blank" rel="noopener" href="https://www.ncei.noaa.gov/">https://www.ncei.noaa.gov</a></li>
+<li><strong>MADIS（Meteorological Assimilation Data Ingest System）</strong>: <a target="_blank" rel="noopener" href="https://madis.ncep.noaa.gov/">https://madis.ncep.noaa.gov</a></li>
+<li><strong>NOAA AWS S3 buckets</strong>（含部分雷达&#x2F;卫星数据）。</li>
+<li>归档观测可通过 <code>AWS CLI</code> 或 <code>wget/curl</code> 获取。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="陆面-x2F-下垫面资料-1"><a href="#陆面-x2F-下垫面资料-1" class="headerlink" title="陆面&#x2F;下垫面资料"></a>陆面&#x2F;下垫面资料</h3><ul>
+<li><strong>土地利用&#x2F;地表类型</strong>（MODIS&#x2F;USGS NLCD）</li>
+<li><strong>土壤湿度&#x2F;土壤温度（GFS 或 NLDAS）</strong></li>
+<li><strong>积雪数据（IMS Daily Snow, SNODAS）</strong></li>
+<li><strong>海表温度（RTG_SST, GHRSST）</strong><ul>
+<li><strong>数据源</strong>：<ul>
+<li>NCEP RTG_SST (<a target="_blank" rel="noopener" href="https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtgsst/prod/">https://nomads.ncep.noaa.gov/pub/data/nccf/com/rtgsst/prod/</a>)</li>
+<li>NSIDC &#x2F; NOAA IMS (雪盖数据)</li>
+<li>NASA LAADS DAAC (MODIS 数据)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="化学-x2F-气溶胶数据（若启用）"><a href="#化学-x2F-气溶胶数据（若启用）" class="headerlink" title="化学&#x2F;气溶胶数据（若启用）"></a>化学&#x2F;气溶胶数据（若启用）</h3><ul>
+<li><strong>SMOKE 模型产物或 HRRR-Smoke 初值</strong>（火点、排放数据）<ul>
+<li><strong>来源</strong>：<ul>
+<li>NOAA ARL &#x2F; EPA。</li>
+<li>Fire INventory from NCAR (FINN)。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/RAP%20fix/" rel="prev" title="RAP fix">
+      <i class="fa fa-chevron-left"></i> RAP fix
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Python3%20Notes-2/" rel="next" title="Python3 Notes-2">
+      Python3 Notes-2 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RAP-driver"><span class="nav-number">1.</span> <span class="nav-text">RAP driver</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%82%E6%95%B0%E6%96%87%E4%BB%B6"><span class="nav-number">1.0.1.</span> <span class="nav-text">参数文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%9C%BA%E5%92%8C%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6"><span class="nav-number">1.0.2.</span> <span class="nav-text">初始场和边界条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%99%86%E9%9D%A2-x2F-%E4%B8%8B%E5%9E%AB%E9%9D%A2%E8%B5%84%E6%96%99"><span class="nav-number">1.0.3.</span> <span class="nav-text">陆面&#x2F;下垫面资料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%82%E6%B5%8B%E8%B5%84%E6%96%99%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%86%E6%9E%90-x2F-%E5%90%8C%E5%8C%96%EF%BC%89"><span class="nav-number">1.0.4.</span> <span class="nav-text">观测资料（用于分析&#x2F;同化）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%84%E8%A7%82%E6%B5%8B%E8%B5%84%E6%96%99%E7%9A%84%E9%A2%84%E5%A4%84%E7%90%86%E5%92%8C%E8%B4%A8%E6%8E%A7"><span class="nav-number">1.1.</span> <span class="nav-text">常规观测资料的预处理和质控</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A3%80%E6%9F%A5%E6%95%B0%E6%8D%AE%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-number">1.2.</span> <span class="nav-text">检查数据下载的完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%83%A8%E9%A9%B1%E5%8A%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%B1%87%E6%80%BB"><span class="nav-number">1.3.</span> <span class="nav-text">外部驱动数据类型汇总</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RAP-%E7%89%B9%E5%AE%9A%E9%A9%B1%E5%8A%A8-amp-%E5%85%B3%E9%94%AE%E6%9D%A5%E6%BA%90"><span class="nav-number">1.4.</span> <span class="nav-text">RAP 特定驱动 &amp;关键来源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%EF%BC%8F%E8%8E%B7%E5%8F%96%E6%96%B9%E5%BC%8F"><span class="nav-number">1.5.</span> <span class="nav-text">下载／获取方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E5%8F%AF%E8%83%BD%E7%9A%84%E5%86%B7%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%EF%BC%88%E5%B8%A6%E4%B8%8B%E8%BD%BD%E6%AD%A5%E9%AA%A4%EF%BC%89"><span class="nav-number">1.6.</span> <span class="nav-text">一个可能的冷启动流程（带下载步骤）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%9C%BA%E5%92%8C%E8%BE%B9%E7%95%8C%E6%9D%A1%E4%BB%B6-1"><span class="nav-number">1.7.</span> <span class="nav-text">初始场和边界条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%82%E6%B5%8B%E8%B5%84%E6%96%99%EF%BC%88%E7%94%A8%E4%BA%8E%E5%88%86%E6%9E%90-x2F-%E5%90%8C%E5%8C%96%EF%BC%89-1"><span class="nav-number">1.8.</span> <span class="nav-text">观测资料（用于分析&#x2F;同化）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%86%E9%9D%A2-x2F-%E4%B8%8B%E5%9E%AB%E9%9D%A2%E8%B5%84%E6%96%99-1"><span class="nav-number">1.9.</span> <span class="nav-text">陆面&#x2F;下垫面资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%96%E5%AD%A6-x2F-%E6%B0%94%E6%BA%B6%E8%83%B6%E6%95%B0%E6%8D%AE%EF%BC%88%E8%8B%A5%E5%90%AF%E7%94%A8%EF%BC%89"><span class="nav-number">1.10.</span> <span class="nav-text">化学&#x2F;气溶胶数据（若启用）</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

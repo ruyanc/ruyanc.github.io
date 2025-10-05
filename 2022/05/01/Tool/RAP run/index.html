@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="RAP runSTEP 1 基础流程跑通（不含观测处理）：Jrap_makebc → Jrap_analyses → jrap_updatebc → jrap_forecast → jrap_post → jrap_cleanup JRAP_MAKEBC实际调用scripts&#x2F;exrap_makebc.sh JRAP_ANALYSES实际调用scripts&#x2F;exrap_anal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RAP run">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/RAP%20run/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="RAP runSTEP 1 基础流程跑通（不含观测处理）：Jrap_makebc → Jrap_analyses → jrap_updatebc → jrap_forecast → jrap_post → jrap_cleanup JRAP_MAKEBC实际调用scripts&#x2F;exrap_makebc.sh JRAP_ANALYSES实际调用scripts&#x2F;exrap_anal">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-09-19T02:28:54.712Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/RAP%20run/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>RAP run | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/RAP%20run/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          RAP run
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-09-19 10:28:54" itemprop="dateModified" datetime="2025-09-19T10:28:54+08:00">2025-09-19</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="RAP-run"><a href="#RAP-run" class="headerlink" title="RAP run"></a>RAP run</h2><h3 id="STEP-1-基础流程跑通（不含观测处理）："><a href="#STEP-1-基础流程跑通（不含观测处理）：" class="headerlink" title="STEP 1 基础流程跑通（不含观测处理）："></a>STEP 1 基础流程跑通（不含观测处理）：</h3><p>Jrap_makebc → Jrap_analyses → jrap_updatebc → jrap_forecast → jrap_post → jrap_cleanup</p>
+<h4 id="JRAP-MAKEBC"><a href="#JRAP-MAKEBC" class="headerlink" title="JRAP_MAKEBC"></a>JRAP_MAKEBC</h4><p>实际调用scripts&#x2F;exrap_makebc.sh</p>
+<h3 id="JRAP-ANALYSES"><a href="#JRAP-ANALYSES" class="headerlink" title="JRAP_ANALYSES"></a>JRAP_ANALYSES</h3><p>实际调用scripts&#x2F;exrap_analysis.sh</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>关键动作</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>1. 环境准备</strong></td>
+<td>进入 <code>$DATA/gsiprd</code>，设 OMP 线程 2，栈 500 M</td>
+<td>为 GSI 提供运行环境</td>
+</tr>
+<tr>
+<td><strong>2. 背景场获取</strong></td>
+<td>按优先序查找：<br>① 部分循环 1 h 预报 (<code>rap_&#123;-1&#125;f001</code>)<br>② 最近完整循环 3 h 间隔预报 (<code>rap_&#123;-3/6/9…&#125;f03/06/09…</code>)<br>③ 冷启动用 <code>wrfinput_d01_$&#123;time_str&#125;</code></td>
+<td>确保总有初始场可用，避免失败</td>
+</tr>
+<tr>
+<td><strong>3. 卫星偏差文件</strong></td>
+<td>回溯 120 个循环，定位最近一套 <code>radstat./satbias./satbias_pc.</code></td>
+<td>为辐射资料提供偏差修正</td>
+</tr>
+<tr>
+<td><strong>4. SST 更新</strong></td>
+<td>仅在 01Z 循环，调用 <code>rap_process_sst</code> 把 RTG 0.083° GRIB2 插值到网格</td>
+<td>保证海面温度时效性</td>
+</tr>
+<tr>
+<td><strong>5. 观测资料软链接</strong></td>
+<td>逐类检查 <code>prepbufr</code>、<code>mosaic</code>、<code>nasacloud</code>、<code>lghtng</code>、<code>nexrad</code>、<code>satwnd</code>、AMSU-A&#x2F;B、MHS、ATMS、CrIS、IASI、SEVIRI、AIRS、SSMIS、GOESND、EARS、DirectBroadcast 等 BUFR 文件；存在即 <code>ln -s</code> 到工作目录</td>
+<td>为 GSI 提供所有可用观测</td>
+</tr>
+<tr>
+<td><strong>6. 固定文件 &amp; CRTM 系数</strong></td>
+<td>复制 <code>anavinfo</code>、<code>berror</code>、<code>convinfo</code>、<code>ozinfo</code>、<code>pcpinfo</code>、卫星角度&#x2F;光谱&#x2F;透射系数、地表发射率等；按 <code>satinfo</code> 列表自动链接 CRTM 系数</td>
+<td>构建 GSI 所需的静态输入</td>
+</tr>
+<tr>
+<td><strong>7. 集合 hybrid 背景误差</strong></td>
+<td>查找最近 80 个成员的 GFS EnKF 预报，构建 <code>filelist03</code>，若成员足 80 则 <code>beta1_inv=0.15</code> 启用 hybrid</td>
+<td>提高分析精度</td>
+</tr>
+<tr>
+<td><strong>8. 第一轮 GSI（主要同化）</strong></td>
+<td><code>mpiexec -n 192 ./rap_gsi</code> 读取 <code>gsiparm.anl</code>（<code>miter=2</code>）生成 <code>sigf03</code>（分析增量）</td>
+<td>完成资料同化</td>
+</tr>
+<tr>
+<td><strong>9. 诊断文件收集</strong></td>
+<td>将 <code>pe*.$&#123;type&#125;_01/03</code> 合并为 <code>diag_$&#123;type&#125;_ges/anl.$&#123;PDY&#125;$&#123;cyc&#125;</code>，并打包 <code>radstat.rap_$&#123;PDY&#125;$&#123;cyc&#125;</code>、<code>satbias_out_$&#123;PDY&#125;$&#123;cyc&#125;</code> 供下次循环使用</td>
+<td>支持偏差更新与后评估</td>
+</tr>
+<tr>
+<td><strong>10. 第二轮 GSI（云分析&#x2F;增量更新）</strong></td>
+<td>关闭 hybrid，设 <code>cloudanalysistype=6</code>，以 <code>sigf03_step1</code> 为初值再跑 GSI，输出最终 <code>wrf_inout</code></td>
+<td>进一步优化湿度&#x2F;云场</td>
+</tr>
+<tr>
+<td><strong>11. 积雪修剪</strong></td>
+<td>00Z 循环调用 <code>rap_process_imssnow</code> 用 IMS 雪盖调整模式雪场</td>
+<td>避免雪盖异常</td>
+</tr>
+<tr>
+<td><strong>12. 结果输出</strong></td>
+<td>把最终 <code>wrf_inout</code> 复制为 <code>rap.t$&#123;cyc&#125;z.wrf_inout</code> 到 <code>$COMOUT</code></td>
+<td>供后续 forecast 任务使用</td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/RAP-HRRR%20install/" rel="prev" title="RAP-HRRR install">
+      <i class="fa fa-chevron-left"></i> RAP-HRRR install
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/RAP%20ecflow/" rel="next" title="RAP ecflow">
+      RAP ecflow <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RAP-run"><span class="nav-number">1.</span> <span class="nav-text">RAP run</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#STEP-1-%E5%9F%BA%E7%A1%80%E6%B5%81%E7%A8%8B%E8%B7%91%E9%80%9A%EF%BC%88%E4%B8%8D%E5%90%AB%E8%A7%82%E6%B5%8B%E5%A4%84%E7%90%86%EF%BC%89%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">STEP 1 基础流程跑通（不含观测处理）：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JRAP-MAKEBC"><span class="nav-number">1.1.1.</span> <span class="nav-text">JRAP_MAKEBC</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JRAP-ANALYSES"><span class="nav-number">1.2.</span> <span class="nav-text">JRAP_ANALYSES</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">232</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
