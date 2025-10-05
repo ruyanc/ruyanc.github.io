@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="JEDI Portability正如我们在其他章节所强调的，JEDI 的核心愿景之一，是让它足够通用、强大且高效，从而能够支撑从教学实验性质的“玩具模型”到面向前沿研究与业务预报的耦合数值天气预报（NWP）系统等各类应用。这意味着 JEDI 用户所使用的计算平台将千差万别——从笔记本电脑、工作站到云环境，再到国家级中心的超级计算机。 然而，JEDI 并非孤立存在。与任何现代复杂软件包一样，它依赖大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JEDI using">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/JEDI%20using/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="JEDI Portability正如我们在其他章节所强调的，JEDI 的核心愿景之一，是让它足够通用、强大且高效，从而能够支撑从教学实验性质的“玩具模型”到面向前沿研究与业务预报的耦合数值天气预报（NWP）系统等各类应用。这意味着 JEDI 用户所使用的计算平台将千差万别——从笔记本电脑、工作站到云环境，再到国家级中心的超级计算机。 然而，JEDI 并非孤立存在。与任何现代复杂软件包一样，它依赖大">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-05T12:51:22.837Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/JEDI%20using/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>JEDI using | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/JEDI%20using/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JEDI using
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-10-05 20:51:22" itemprop="dateModified" datetime="2025-10-05T20:51:22+08:00">2025-10-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="JEDI-Portability"><a href="#JEDI-Portability" class="headerlink" title="JEDI Portability"></a>JEDI Portability</h2><p>正如我们在其他章节所强调的，JEDI 的核心愿景之一，是让它足够通用、强大且高效，从而能够支撑从教学实验性质的“玩具模型”到面向前沿研究与业务预报的耦合数值天气预报（NWP）系统等各类应用。这意味着 JEDI 用户所使用的计算平台将千差万别——从笔记本电脑、工作站到云环境，再到国家级中心的超级计算机。</p>
+<p>然而，JEDI 并非孤立存在。与任何现代复杂软件包一样，它依赖大量第三方库和工具来扩展功能与提升性能。例如：</p>
+<ul>
+<li>读写 NetCDF 数据文件的库（NetCDF、HDF5、PNetCDF）</li>
+<li>线性代数计算库（LAPACK、Eigen3）</li>
+<li>通过消息传递接口（MPI）实现进程间通信</li>
+<li>甚至包括构建工具本身（C++&#x2F;C&#x2F;Fortran 编译器、cmake、ecbuild）</li>
+</ul>
+<p>对于只想快速投入科研的用户来说，梳理这些依赖关系往往令人头疼。</p>
+<p>为了帮助 JEDI 用户和开发者迅速搭建一致且高效的计算环境，JEDI 团队提供了一套“可移植性工具”，包括：</p>
+<ol>
+<li><p><strong>spack-stack 完整软件栈</strong>  </p>
+<p>基于开源包管理器 Spack（由劳伦斯利弗莫尔国家实验室 LLNL 最初开发），涵盖已编译依赖与 Python 环境，并提供在 HPC、云、通用 macOS&#x2F;Linux 上的构建与使用指南。</p>
+</li>
+<li><p><strong>云机器镜像</strong>  </p>
+<p>例如适用于 Amazon Web Services 的 AMI 镜像。</p>
+</li>
+<li><p><strong>选定 HPC 系统的环境模块</strong>（Environment Modules）</p>
+</li>
+<li><p><strong>Docker &amp; Singularity 软件容器</strong></p>
+</li>
+</ol>
+<p>spack-stack 仓库内含详细说明和 Spack 配置文件，指定目标平台、软件包、版本及构建选项，用于构建和运行 JEDI（及其他应用）。spack-stack 的标签版本将与 JEDI 的公开发行版保持同步。我们利用 spack-stack 在云镜像（如 AMI）、HPC 系统以及通用 macOS&#x2F;Linux 上生成环境模块。</p>
+<p>同样的 spack 配置也用于构建 Docker 和 Singularity 容器，这些容器可在笔记本、工作站、云平台及 HPC 上运行，并借助 Amazon CodeBuild 与 Travis-CI 服务于持续集成测试。</p>
+<p>本节后续将介绍如何使用 spack-stack 软件环境来构建和运行 JEDI 应用。</p>
+<h3 id="Building-spack-stack-modules-for-JEDI"><a href="#Building-spack-stack-modules-for-JEDI" class="headerlink" title="Building spack-stack modules for JEDI"></a>Building spack-stack modules for JEDI</h3><p>本节内容仅针对 <strong>支持 JEDI 应用（Skylab v8 版本）</strong> 的 spack-stack 环境构建；通用操作请查阅 <a target="_blank" rel="noopener" href="https://spack-stack.readthedocs.io/">最新 spack-stack 文档</a>。  </p>
+<p>务必先对照 <strong>JEDI &#x2F; spack-stack 版本对应表</strong> 确认兼容组合，再开始安装。下文仅列出与通用文档<strong>差异点</strong>，未提及步骤请按官方流程执行。</p>
+<p><strong>一、本版本支持平台</strong></p>
+<ul>
+<li><strong>macOS</strong> + clang（ewok 图形依赖无法用 gcc 构建）  </li>
+<li><strong>Red Hat</strong> + gcc  </li>
+<li><strong>Ubuntu</strong> + gcc  </li>
+<li><strong>Ubuntu</strong> + intel</li>
+</ul>
+<p><strong>二、macOS 前置准备</strong></p>
+<ol>
+<li>安装 <a target="_blank" rel="noopener" href="https://brew.sh/">Homebrew</a>（建议全新安装）  </li>
+<li>按<a target="_blank" rel="noopener" href="https://docs.brew.sh/FAQ#how-do-i-uninstall-homebrew">官方 FAQ</a> 卸旧版本  </li>
+<li>阅读 spack-stack 文档中 <strong>macOS &#x2F; Apple Silicon (M1&#x2F;M2)</strong> 专项说明</li>
+</ol>
+<p><strong>三、安装系统依赖</strong></p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>入口</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>macOS</td>
+<td><a target="_blank" rel="noopener" href="https://spack-stack.readthedocs.io/en/1.7.0/NewSiteConfigs.html#homebrew-notes">spack-stack macOS 章节</a></td>
+</tr>
+<tr>
+<td>Red Hat</td>
+<td>同一文档后续 <strong>Red Hat 前置安装</strong> 小节</td>
+</tr>
+</tbody></table>
+<p><strong>四、获取代码</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> -b release/1.9.0 --recursive https://github.com/JCSDA/spack-stack spack-stack-1.9.0</span><br><span class="line"><span class="built_in">cd</span> spack-stack-1.9.0</span><br><span class="line"><span class="built_in">source</span> setup.sh</span><br></pre></td></tr></table></figure>
+
+<p><strong>五、创建并激活环境</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Linux 示例；macOS 请换 --site=macos.default</span></span><br><span class="line">spack stack create <span class="built_in">env</span> --site=linux.default --template=skylab-dev --name=skylab-8.0.0</span><br><span class="line"></span><br><span class="line">spack <span class="built_in">env</span> activate -p envs/skylab-8.0.0</span><br><span class="line"><span class="built_in">export</span> SPACK_SYSTEM_CONFIG_PATH=<span class="string">&quot;<span class="variable">$PWD</span>/envs/skylab-8.0.0/site&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>六、开始构建</strong></p>
+<p>从 <strong>Step 3</strong> 起继续遵循  </p>
+<p><a target="_blank" rel="noopener" href="https://spack-stack.readthedocs.io/en/latest/NewSiteConfigs.html#creating-a-new-environment">Creating a new environment</a> 官方步骤即可完成编译。</p>
+<p>下一节将详细介绍如何在不同平台<strong>使用已装好的 spack-stack 模块</strong>来构建与运行 JEDI。</p>
+<h3 id="Using-spack-stack-modules-to-build-and-run-JEDI"><a href="#Using-spack-stack-modules-to-build-and-run-JEDI" class="headerlink" title="Using spack-stack modules to build and run JEDI"></a>Using spack-stack modules to build and run JEDI</h3><p>本节专门介绍如何使用 <strong>spack-stack 环境模块（lmod&#x2F;lua 或 tcl&#x2F;tk）</strong> 来编译与运行 JEDI 应用；通用操作仍请参考 spack-stack 官方文档。</p>
+<p><strong>一、模块优势</strong></p>
+<p>spack-stack 会自动为所有编译包及 Python 包生成模块，<strong>HPC、云、个人电脑</strong>上用法完全一致。<br>主流两种实现：</p>
+<ul>
+<li><strong>lmod&#x2F;lua</strong>（推荐，功能更强）  </li>
+<li><strong>tcl&#x2F;tk</strong>（旧版）</li>
+</ul>
+<p>常用命令（两者通用）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module list                    <span class="comment"># 已加载模块</span></span><br><span class="line">module spider &lt;关键字&gt;         <span class="comment"># 搜索含关键字的模块</span></span><br><span class="line">module avail                   <span class="comment"># 列出与当前环境兼容的模块</span></span><br><span class="line">module load &lt;包1&gt; &lt;包2&gt; ...    <span class="comment"># 加载</span></span><br><span class="line">module unload &lt;包1&gt; &lt;包2&gt; ...  <span class="comment"># 卸载</span></span><br><span class="line">module purge                   <span class="comment"># 清空所有</span></span><br></pre></td></tr></table></figure>
+
+<p>lmod 额外便利：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module swap &lt;包A&gt; &lt;包B&gt;        <span class="comment"># 一键替换</span></span><br></pre></td></tr></table></figure>
+<p>并自动处理依赖、冲突与加载顺序。</p>
+<p><strong>二、通用三步法（任意 HPC 均适用）</strong></p>
+<ol>
+<li><p><strong>先清环境</strong>  </p>
+<p>不要在 <code>.bashrc</code> &#x2F; <code>.bash_profile</code> 里预加载其他模块或改搜索路径，保持“干净”启动。</p>
+</li>
+<li><p><strong>加载 spack-stack 站点模块</strong>  </p>
+<p>参考 <a target="_blank" rel="noopener" href="https://spack-stack.readthedocs.io/">spack-stack 预配置站点文档</a> 里对应 HPC 的段落。</p>
+</li>
+<li><p><strong>加载 JEDI &#x2F; Skylab v8 专用模块</strong>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">module load jedi-fv3-env</span><br><span class="line">module load ewok-env</span><br><span class="line">module load soca-env</span><br><span class="line">module load sp</span><br></pre></td></tr></table></figure>
+<p>完成后即可按需编译、运行任意 JEDI bundle。</p>
+</li>
+</ol>
+<p><strong>三、一键脚本：jedi-tools（推荐）</strong></p>
+<p>仓库已封装好设置脚本，可自动完成模块加载与路径配置。</p>
+<ol>
+<li><p><strong>先确认 git-lfs</strong>  </p>
+<p>在 Hercules、Discover 等机器需先加载：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">module show git-lfs   <span class="comment"># 查看是否存在</span></span><br><span class="line">module load git-lfs   <span class="comment"># 存在则加载</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>若系统已自带 git-lfs，可跳过。</p>
+</blockquote>
+</li>
+<li><p><strong>创建 JEDI_ROOT 并克隆工具</strong>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p <span class="variable">$JEDI_ROOT</span></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$JEDI_ROOT</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/JCSDA-internal/jedi-tools</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>配置并生效</strong>  </p>
+<p>编辑 <code>jedi-tools/buildscripts/setup.sh</code> 头部，填写：</p>
+<ul>
+<li><p><code>JEDI_ROOT</code> 路径</p>
+</li>
+<li><p><code>HOST</code> 机器名</p>
+</li>
+<li><p><code>COMPILER</code> 编译器</p>
+</li>
+<li><p><code>USER</code> 用户名</p>
+</li>
+<li><p><code>API_KEY</code>（部分平台需要）  </p>
+<p>保存后执行：</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> jedi-tools</span><br><span class="line">vi buildscripts/setup.sh      <span class="comment"># 按提示填写</span></span><br><span class="line"><span class="built_in">source</span> buildscripts/setup.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>验证 &amp; 继续</strong>  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">module list   <span class="comment"># 确认模块已加载</span></span><br></pre></td></tr></table></figure>
+<p>随后即可进入「Building and compiling JEDI」步骤。</p>
+</li>
+</ol>
+<p><strong>四、HPC 专用补充</strong></p>
+<p>各机器作业提交、队列策略等细节请查阅  </p>
+<p><a target="_blank" rel="noopener" href="https://jedi-docs.readthedocs.io/">Skylab HPC 用户指南</a>。</p>
+<h3 id="JEDI-Containers"><a href="#JEDI-Containers" class="headerlink" title="JEDI Containers"></a>JEDI Containers</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/container_overview.html">Software Containers</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/container_overview.html#docker">Docker</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/container_overview.html#available-containers">Available Containers</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/singularity.html">Singularity</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/singularity.html#installing-singularity">Installing Singularity</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/singularity.html#using-the-jedi-singularity-container">Using the JEDI Singularity Container</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/singularity.html#working-with-singularity">Working with Singularity</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html">Vagrant (for Mac and Windows)</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html#installing-and-configuring-vagrant">Installing and Configuring Vagrant</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html#customizing-the-vagrantfile-optional">Customizing the Vagrantfile (optional)</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html#working-with-vagrant-and-the-jedi-container">Working with Vagrant and the JEDI Container</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html#deleting-a-vagrant-vm">Deleting a Vagrant VM</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/containers/vagrant.html#tunneling-to-host-from-singularity-jupyter-lab-example">Tunneling to Host from Singularity: jupyter-lab Example</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="JEDI-on-AWS"><a href="#JEDI-on-AWS" class="headerlink" title="JEDI on AWS"></a>JEDI on AWS</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/overview.html">AWS Overview</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/singlenode.html">Running JEDI on a Single Compute Node</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/singlenode.html#launching-instance">Launching instance</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/singlenode.html#logging-in">Logging in</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/singlenode.html#suspending-or-terminating-your-compute-node">Suspending or terminating your compute node</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/jedi_environment/cloud/singlenode.html#choosing-a-different-ec2-instance-type">Choosing a different EC2 Instance Type</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="Building-and-Running-JEDI"><a href="#Building-and-Running-JEDI" class="headerlink" title="Building and Running JEDI"></a>Building and Running JEDI</h2><h3 id="Building-and-Running-JEDI-1"><a href="#Building-and-Running-JEDI-1" class="headerlink" title="Building and Running JEDI"></a>Building and Running JEDI</h3><p>如《CMake、CTest 与 ecbuild》一节所述，JEDI 的构建流程主要依托 <strong>CMake</strong> 与 <strong>ecbuild</strong>，可大幅简化操作。典型工作流分为以下步骤（后文逐一详解）：</p>
+<ol start="0">
+<li>配置系统：设置 Git 与加载 spack-stack 环境（若尚未完成）  </li>
+<li>克隆所需的 JEDI bundle，并基于 spack-stack 的 Python 创建并激活 Python3 虚拟环境（venv）  </li>
+<li>（可选）编辑 bundle 中的 CMakeLists.txt，指定要使用的代码分支  </li>
+<li>进入构建目录，运行 ecbuild 生成 Makefile 等基础设施  </li>
+<li>执行 <code>make update</code>（可选，拉取最新代码）与 <code>make</code> 进行编译  </li>
+<li>运行 <code>ctest</code> 验证 bundle 是否正常工作</li>
+</ol>
+<p>对应的命令示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;src-directory&gt;</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/JCSDA/jedi-bundle.git</span><br><span class="line"><span class="built_in">cd</span> &lt;build-directory&gt;</span><br><span class="line"><span class="comment"># 详见构建步骤 3，了解如何在 ecbuild 命令中指定正确的 Python3 解释器</span></span><br><span class="line">ecbuild &lt;src-directory&gt;/jedi-bundle</span><br><span class="line">make update</span><br><span class="line">make -j4</span><br><span class="line">ctest</span><br></pre></td></tr></table></figure>
+
+<p>本文将分步讲解 0–4 步的各类选项；第 5 步（测试）详见 <strong>JEDI Testing</strong> 页面。</p>
+<ul>
+<li><p><strong>步骤 0 与 1</strong> 通常只需执行一次。  </p>
+</li>
+<li><p>若你是开发者，需要频繁修改代码，则 <strong>步骤 2–5</strong> 会反复进行，且频率逐渐升高：  </p>
+<p>– 仅涉及单个仓库时，<strong>步骤 2</strong>（告诉 ecbuild 使用本地分支）可能只需一次；  </p>
+<p>– <strong>步骤 3</strong>（ecbuild）仅在目录结构或依赖关系发生显著变化时才需重新执行；  </p>
+<p>– <strong>步骤 4 与 5</strong>（编译与测试）将随代码修改而高频率运行。</p>
+</li>
+</ul>
+<h4 id="Step-0-System-Configuration"><a href="#Step-0-System-Configuration" class="headerlink" title="Step 0: System Configuration"></a>Step 0: System Configuration</h4><p>在正式构建 JEDI 之前，请先完成以下一次性系统配置。完成后，整个开发周期内无需再次设置。</p>
+<p><strong>一、加载 spack-stack 环境</strong>  </p>
+<ol>
+<li>各支持的超算平台已预装近一年的 spack-stack 发布版本，直接 <code>module load</code> 即可（用法见《使用 spack-stack 模块构建与运行 JEDI》）。  </li>
+<li>若使用 <strong>公开发行的 JEDI</strong>，务必匹配对应版本：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>发布日期</th>
+<th>JEDI-bundle 标签</th>
+<th>spack-stack 版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2025-03</td>
+<td>develop</td>
+<td>1.9.0</td>
+</tr>
+<tr>
+<td>2024-10</td>
+<td>develop</td>
+<td>1.8.0</td>
+</tr>
+<tr>
+<td>2024-04</td>
+<td>skylab-v8.0.0</td>
+<td>1.7.0</td>
+</tr>
+<tr>
+<td>2024-01</td>
+<td>skylab-v7.0.0</td>
+<td>1.6.0</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>本地机或非支持平台需<strong>自行编译 spack-stack</strong>（见前文构建指南）。</li>
+</ol>
+<p><strong>二、Git 全局配置（一次即可）</strong></p>
+<ol>
+<li><p>用户身份  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name  <span class="string">&quot;你的GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;注册GitHub的邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>缓存 GitHub 凭证（避免 ecbuild 多次克隆时反复输密码）  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper <span class="string">&#x27;cache --timeout=3600&#x27;</span>   <span class="comment"># 3600秒=1小时，可酌情加大</span></span><br></pre></td></tr></table></figure>
+<p>某些高安全超算可能要求<strong>明文落盘</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add credential.helper <span class="string">&#x27;store&#x27;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>在 HPC 上你的 home 目录已受系统级保护，风险可控；笔记本或公共桌面环境请谨慎使用。</p>
+</blockquote>
+</li>
+<li><p>初始化 Git LFS（容器内外均需一次）  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git lfs install --skip-repo</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>三、Open MPI 超订设置（≤ 4 核笔记本必备）</strong></p>
+<p>JEDI 大量测试最少需要 <strong>6 个 MPI 任务</strong>。若 CPU 线程数 &lt; 6，请允许单核运行多任务：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.openmpi</span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;rmaps_base_oversubscribe = 1&quot;</span> &gt; ~/.openmpi/mca-params.conf</span><br></pre></td></tr></table></figure>
+
+<p>完成以上三步后，即可进入 <strong>克隆 → 构建 → 测试</strong> 流程。</p>
+<h4 id="Step-1-Clone-the-Desired-JEDI-Bundle"><a href="#Step-1-Clone-the-Desired-JEDI-Bundle" class="headerlink" title="Step 1: Clone the Desired JEDI Bundle"></a>Step 1: Clone the Desired JEDI Bundle</h4><p>JEDI 应用采用“<strong>高阶 bundle</strong>”形式组织，把运行所需的所有 Git 仓库一次性汇集到位。  </p>
+<ul>
+<li>个别 bundle 与特定模式（如 FV3、MPAS）绑定；  </li>
+<li><strong>绝大多数场景推荐使用通用 jedi-bundle</strong>。</li>
+</ul>
+<p><strong>一、准备 JEDI_ROOT</strong></p>
+<p>任选路径创建根目录（可叫任意名字，示例用 <code>jedi</code>），并导出环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p &lt;path-to-root&gt;/jedi</span><br><span class="line"><span class="built_in">export</span> JEDI_ROOT=&lt;path-to-root&gt;/jedi</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>后文所有文档均以 <code>$JEDI_ROOT</code> 指代该目录。</p>
+</blockquote>
+<p><strong>二、一次性创建并激活 Python 虚拟环境</strong></p>
+<p>（基于 spack-stack 的 python3，带系统库）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首次创建</span></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$JEDI_ROOT</span></span><br><span class="line"><span class="variable">$python_ROOT</span>/bin/python3 -m venv --system-site-packages venv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 每次编译/运行前务必激活</span></span><br><span class="line"><span class="built_in">source</span> venv/bin/activate</span><br></pre></td></tr></table></figure>
+
+<p><strong>三、获取 bundle</strong></p>
+<table>
+<thead>
+<tr>
+<th>用户类型</th>
+<th>仓库地址</th>
+<th>推荐分支</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>公开用户</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/JCSDA/jedi-bundle">https://github.com/JCSDA/jedi-bundle</a></td>
+<td>最新发行版，如 <code>-b 8.0.0</code></td>
+</tr>
+<tr>
+<td><strong>内部开发者</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/jcsda-internal/jedi-bundle">https://github.com/jcsda-internal/jedi-bundle</a></td>
+<td>默认 <code>develop</code>（无需 <code>-b</code>）</td>
+</tr>
+</tbody></table>
+<p>示例命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$JEDI_ROOT</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 公开用户</span></span><br><span class="line">git <span class="built_in">clone</span> -b 8.0.0 https://github.com/JCSDA/jedi-bundle.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 内部开发者</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/jcsda-internal/jedi-bundle.git</span><br></pre></td></tr></table></figure>
+
+<p>克隆完成后即可进入后续 <strong>ecbuild → make → ctest</strong> 流程。</p>
+<h4 id="Step-2-Choose-your-Repos"><a href="#Step-2-Choose-your-Repos" class="headerlink" title="Step 2: Choose your Repos"></a>Step 2: Choose your Repos</h4><ol>
+<li><strong>设定 <code>JEDI_SRC</code></strong></li>
+</ol>
+<p>克隆完成后，bundle 目录即为<strong>源码根目录</strong>，建议导出为环境变量：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JEDI_SRC=<span class="variable">$JEDI_ROOT</span>/jedi-bundle</span><br></pre></td></tr></table></figure>
+<p>下文默认已 <code>cd $JEDI_SRC</code>。</p>
+<ol start="2">
+<li><strong>文件结构</strong></li>
+</ol>
+<p>目录内容很少，关键文件：</p>
+<ul>
+<li><code>README</code>： bundle 专用说明  </li>
+<li><code>CMakeLists.txt</code>：定义 ecbuild 要拉取&#x2F;编译的所有仓库和分支</li>
+</ul>
+<ol start="3">
+<li><strong>默认片段示例（jedi-bundle）</strong></li>
+</ol>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ecbuild_bundle(<span class="keyword">PROJECT</span> gsw   GIT <span class="string">&quot;https://github.com/jcsda-internal/GSW-Fortran.git&quot;</span> BRANCH develop UPDATE)</span><br><span class="line">ecbuild_bundle(<span class="keyword">PROJECT</span> oops  GIT <span class="string">&quot;https://github.com/jcsda-internal/oops.git&quot;</span>        BRANCH develop UPDATE)</span><br><span class="line">ecbuild_bundle(<span class="keyword">PROJECT</span> vader GIT <span class="string">&quot;https://github.com/jcsda-internal/vader.git&quot;</span>       BRANCH develop UPDATE)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>BRANCH</code>：指定要检出的分支  </li>
+<li><code>UPDATE</code>：允许 <code>make update</code> 时强制拉取最新提交  </li>
+<li>若本地<strong>不存在</strong>该仓库，ecbuild 会自动克隆；<strong>存在</strong>则不再拉取，除非带 <code>UPDATE</code> 并执行 <code>make update</code></li>
+</ul>
+<ol start="4">
+<li><strong>开发者常用改动</strong></li>
+</ol>
+<p><strong>场景</strong>：你已在本地创建并切换到功能分支，例如  </p>
+<p><code>ufo/feature/newstuff</code></p>
+<p><strong>做法</strong>：</p>
+<ol>
+<li><p>把 <code>CMakeLists.txt</code> 对应行改为  </p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ecbuild_bundle(<span class="keyword">PROJECT</span> ufo</span><br><span class="line">               GIT <span class="string">&quot;$&#123;JEDI_SRC&#125;/ufo&quot;</span>   <span class="comment"># 指向本地副本</span></span><br><span class="line">               BRANCH feature/newstuff) <span class="comment"># 移除 UPDATE</span></span><br></pre></td></tr></table></figure></li>
+<li><p>之后 ecbuild 会<strong>直接使用</strong>你的本地分支，不会尝试远程更新。</p>
+</li>
+<li><p><strong>拉取特定标签或commit</strong></p>
+</li>
+</ol>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ecbuild_bundle(<span class="keyword">PROJECT</span> eckit</span><br><span class="line">               GIT <span class="string">&quot;https://github.com/ECMWF/eckit.git&quot;</span></span><br><span class="line">               TAG <span class="number">0.18</span>.<span class="number">5</span>)   <span class="comment"># 或 HASH &lt;sha&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><strong>更多选项</strong></li>
+</ol>
+<p>参见 ECMWF ecbuild 仓库：  </p>
+<p><code>cmake/ecbuild_bundle.cmake</code></p>
+<h4 id="Step-3-Run-ecbuild-from-the-build-directory"><a href="#Step-3-Run-ecbuild-from-the-build-directory" class="headerlink" title="Step 3: Run ecbuild (from the build directory)"></a>Step 3: Run ecbuild (from the build directory)</h4><ol>
+<li><strong>创建并导出构建目录</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$JEDI_ROOT</span></span><br><span class="line"><span class="built_in">mkdir</span> build</span><br><span class="line"><span class="built_in">export</span> JEDI_BUILD=<span class="variable">$JEDI_ROOT</span>/build</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>基本 ecbuild 命令</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$JEDI_BUILD</span></span><br><span class="line">ecbuild <span class="variable">$JEDI_SRC</span>          <span class="comment"># 源码目录 = $JEDI_SRC</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>源码与构建目录必须分开</strong>  </li>
+<li>在已配置好的 HPC 或 AWS 实例上，上述命令通常可直接使用  </li>
+<li>首次运行需几分钟，请耐心等待</li>
+</ul>
+<ol start="3">
+<li><strong>显式指定 Python3 解释器（可选）</strong></li>
+</ol>
+<p>若系统存在多个 Python3，使用 spack-stack 提供的版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ecbuild -DPython3_EXECUTABLE=<span class="variable">$&#123;python_ROOT&#125;</span>/bin/python3 <span class="variable">$JEDI_SRC</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>同理可指向其他 Python3 安装路径</p>
+</blockquote>
+<ol start="4">
+<li><strong>警告：部分 bundle 需先运行专用脚本</strong></li>
+</ol>
+<p>某些 HPC 环境<strong>要求先执行 bundle 提供的构建脚本</strong>，而非直接 <code>ecbuild</code>。<br>→ 务必先阅读 <code>&lt;JEDI_SRC&gt;/README</code>，确认是否需要额外步骤。</p>
+<ol start="5">
+<li><strong>ecbuild 常用选项与传参给 CMake</strong></li>
+</ol>
+<p>ecbuild 是 CMake 的封装，语法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ecbuild [ecbuild-选项] [--] [CMake-选项] &lt;src-directory&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>实用示例</strong>  </p>
+<p>① <strong>Debug 模式</strong>（开启调试符号 + 额外运行时检查）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ecbuild --build=debug <span class="variable">$JEDI_SRC</span></span><br></pre></td></tr></table></figure>
+
+<p>② <strong>指定编译器及额外标志</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ecbuild -- \</span><br><span class="line">        -DCMAKE_CXX_COMPILER=/usr/bin/g++ \</span><br><span class="line">        -DCMAKE_CXX_FLAGS=<span class="string">&quot;-Wfloat-equal -Wcast-align&quot;</span> \</span><br><span class="line">        <span class="variable">$JEDI_SRC</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><strong>平台相关提示</strong></li>
+</ol>
+<ul>
+<li><strong>已支持 HPC</strong>：先加载对应 spack-stack 模块（见《使用 spack-stack 模块》），即可直接使用 ecbuild、eckit 等全部依赖  </li>
+<li><strong>未被支持的系统</strong>：参考 spack-stack 文档，自行生成 site-config 并安装软件栈，再执行 ecbuild</li>
+</ul>
+<p>完成 ecbuild 后，构建目录将生成 <code>Makefile</code> 及相关配置文件，接下来即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make update &amp;&amp; make -j&lt;x&gt; &amp;&amp; ctest</span><br></pre></td></tr></table></figure>
+
+<h4 id="Step-4-Run-make-from-the-build-directory"><a href="#Step-4-Run-make-from-the-build-directory" class="headerlink" title="Step 4: Run make (from the build directory)"></a>Step 4: Run make (from the build directory)</h4><ol>
+<li><strong>更新源码（可选但强烈建议）</strong></li>
+</ol>
+<p>在构建目录执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make update</span><br></pre></td></tr></table></figure>
+<ul>
+<li>仅会拉取 <code>CMakeLists.txt</code> 中带有 <code>UPDATE</code> 参数的仓库  </li>
+<li><strong>若本地有未推送的改动</strong>，可能产生合并冲突，需先手工解决</li>
+</ul>
+<ol start="2">
+<li><strong>并行编译</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make -j4          <span class="comment"># 4 进程并行，可视 CPU 核数提高</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>台式机&#x2F;笔记本&#x2F;HPC 均适用；典型提速 2–4 倍  </li>
+<li>编译耗时 ≥10 min，请耐心等待</li>
+</ul>
+<ol start="3">
+<li><strong>调试&#x2F;排错常用选项</strong></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>目的</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>显示完整编译命令</td>
+<td><code>make VERBOSE=1 -j4</code></td>
+</tr>
+<tr>
+<td>单进程重编（定位真实报错）</td>
+<td><code>make VERBOSE=1</code> 或 <code>make -j1</code></td>
+</tr>
+<tr>
+<td>查看所有可用目标</td>
+<td><code>make --help</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>并行失败时，末行输出<strong>不一定</strong>是根本原因；改单进程重跑即可看清第一条错误。</p>
+</blockquote>
+<ol start="4">
+<li><strong>下一步</strong></li>
+</ol>
+<p>编译成功后，按 <strong><a target="_blank" rel="noopener" href="https://jedi-docs.readthedocs.io/en/latest/testing/index.html">JEDI Testing</a></strong> 页面运行 <code>ctest</code> 验证功能。</p>
+<h3 id="Running-JEDI-applications"><a href="#Running-JEDI-applications" class="headerlink" title="Running JEDI applications"></a>Running JEDI applications</h3><p>运行 JEDI 可执行文件时有四种常用模式，均通过命令行开关控制：</p>
+<ol>
+<li><p><strong>业务运行模式</strong>（最常用）  </p>
+<p>以下示例用 FV3 变分系统读取 <code>myconfig.yaml</code> 并输出结果；<code>N</code> 为 MPI 进程数，按平台将 <code>mpiexec -n N</code> 换成 <code>srun -n N</code> 等对应启动器，并放入作业脚本或交互会话执行：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mpiexec -n N fv3jedi-var.x myconfig.yaml [output-file]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>仅验证配置模式</strong>  </p>
+<p>不真正跑同化，只检查 <code>myconfig.yaml</code> 是否符合 JSON Schema，给出友好报错：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fv3jedi-var.x --validate-only myconfig.yaml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>跳过验证模式</strong>  </p>
+<p>直接运行，不做配置合法性检查。仅建议在“同配置已先通过 <code>--validate-only</code>”时使用，否则出错信息可能晦涩难懂：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fv3jedi-var.x --no-validate myconfig.yaml [output-file]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>生成 JSON 模式模式</strong>  </p>
+<p>导出变分应用的 JSON Schema，可供 IDE 实现配置键自动补全与实时校验：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fv3jedi-var.x --output-json-schema=myschema.schema</span><br></pre></td></tr></table></figure></li>
+</ol>
+<blockquote>
+<p>其余 JEDI 应用（<code>mpasjedi-var.x</code>、<code>soca-var.x</code> 等）命令格式完全相同，只需替换可执行文件名。</p>
+</blockquote>
+<h3 id="JEDI-Configuration-Files-Content"><a href="#JEDI-Configuration-Files-Content" class="headerlink" title="JEDI Configuration Files: Content"></a>JEDI Configuration Files: Content</h3><p>这份文档并非“终极参考手册”，它只是用通俗语言带你快速看懂 JEDI 配置文件里常见字段的用途与玩法。不同模式、不同观测类型对同一功能的实现往往名字不同、参数也不同，所以这里列出的只是“通用套路”，而非“死规矩”。</p>
+<p>欢迎用户和开发者随时往配置里加自己的“新花样”，并顺手把配套代码也补上。想少走弯路？直接把 saber、ioda、ufo、fv3-jedi 这几个官方仓库的配置文件当“模板”抄作业就行——结构、内容、命名风格都给你示范好了。</p>
+<p>本文唯一目标：让你拿到一份 YAML&#x2F;JSON 配置后，能秒懂顶层字段在干嘛，并随心所欲地改它、跑应用；顺便也能给开发者提供写新测试的灵感。  </p>
+<p>如果你想“让 JEDI 认新字段”——也就是改源码去解析配置——请移步姊妹篇《JEDI 配置文件：实战实现指南》，那里全是干活代码。</p>
+<p>下面各节就按 YAML&#x2F;JSON 的顶层 key 逐一拆解，告诉你它们各自管哪片天。</p>
+<h4 id="geometry"><a href="#geometry" class="headerlink" title="geometry"></a>geometry</h4><p><strong>功能</strong>：一次性定义“模式网格”+“并行剖分”。</p>
+<ul>
+<li>水平&#x2F;垂直分辨率、层数、格点分布；</li>
+<li>计算节点如何分块（tile、MPI-rank、io-group）。<br><strong>特殊场景</strong>：FV3 等模式不内嵌网格，而从 git-LFS 提供的二进制文件读取；同时可附带 1 个或多个 Fortran namelist，供模式启动时完成剖分与初始化。</li>
+</ul>
+<h4 id="state"><a href="#state" class="headerlink" title="state"></a>state</h4><p><strong>功能</strong>：为“模式状态”批量注册单元测试。<br>覆盖范围：文件 I&#x2F;O、空间插值、变量增删、增量（increment）运算、背景误差协方差矩阵构造等。<br><strong>用途</strong>：开发者快速回归测试；用户验证新编译或新机器环境。</p>
+<h4 id="model-linear-model"><a href="#model-linear-model" class="headerlink" title="model, linear model"></a>model, linear model</h4><p><strong>功能</strong>：分别给“全量模式”与“切线&#x2F;伴随模式”开参数表。<br>可含：</p>
+<ul>
+<li>物理过程开关、时间步长、扩散系数；</li>
+<li>物理包选项（微物理、对流、辐射等）；</li>
+<li>任意 Fortran namelist 文件路径，模式启动时自动 ingest。</li>
+</ul>
+<h4 id="background-error"><a href="#background-error" class="headerlink" title="background error"></a>background error</h4><p><strong>功能</strong>：规定背景误差协方差矩阵（B 矩阵）的构造方案。<br>首关键字 <strong>covariance model</strong> 决定算法：</p>
+<ul>
+<li><strong>BUMP</strong>（默认流行项）：非结构化网格背景误差协方差包，由 JCSDA &#x2F; Météo-France 的 B. Menetrier 开发，已集成于 saber；</li>
+<li><strong>static</strong>：部分模式提供预计算的静态 B 矩阵，直接加载即可。</li>
+</ul>
+<h4 id="model-aux-control-model-aux-error"><a href="#model-aux-control-model-aux-error" class="headerlink" title="model aux control, model aux error"></a>model aux control, model aux error</h4><p><strong>功能</strong>：分别定义“模式偏差估计”与“偏差误差协方差”。</p>
+<ul>
+<li>偏差项可含：卫星辐射度扫描偏差、探空仪系统误差、海温漂移等；</li>
+<li>协方差形式目前多设为对角或分块对角，也可通过 saber 插件扩展。</li>
+</ul>
+<h4 id="initial-condition"><a href="#initial-condition" class="headerlink" title="initial condition"></a>initial condition</h4><p>本条目用于定义一次预报或资料同化（DA）循环的初始条件。  </p>
+<p>其典型做法是给出模型启动时需读取的重启文件路径及相应的 Fortran namelist 列表；亦可直接指定某种理想化的解析初始场。  </p>
+<p>JEDI 目前内置多套解析初始场方案，均源于 2012 年由 NOAA、NSF、DOE、NCAR 与密歇根大学联合主导的 Dynamical Core Intercomparison Project（DCMIP）所提出的理想化基准试验。  </p>
+<p>未来可视需求扩展更多解析模型选项。</p>
+<h4 id="observations"><a href="#observations" class="headerlink" title="observations"></a>observations</h4><p>本节通常是配置文件中篇幅最大的一部分，用于：</p>
+<ol>
+<li>在 HofX 应用中指定要计算的观测，  </li>
+<li>或在一次资料同化（DA）循环中指定要同化的观测，  </li>
+<li>同时给出观测扰动（perturbation）设定。</li>
+</ol>
+<p>在顶层，<code>obs perturbations</code>（YAML 关键字）控制是否对观测加扰动，默认值为 <code>false</code>。</p>
+<p><code>observers</code> 是一个列表，每个元素对应一种观测类型，其常用子项如下（均为 YAML 键）：</p>
+<ul>
+<li><p><strong>obs space</strong>（必需）：观测空间相关配置  </p>
+<ul>
+<li><strong>name</strong>（必需）：便于日志识别的描述性名称  </li>
+<li><strong>obsdatain</strong>（必需）：输入引擎  <ul>
+<li><strong>engine</strong>（必需）  <ul>
+<li><strong>type</strong>：后端类型（<code>H5File</code>、<code>ODB</code> 等）  </li>
+<li><strong>obsfile</strong>：输入文件名</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>obsdataout</strong>（可选）：输出引擎（格式同 <code>obsdatain</code>）  </li>
+<li><strong>observed variables</strong>（可选）：需由 UFO 滤波器处理、且其观测值可从输入文件直接载入的变量列表。  <ul>
+<li>若省略，则默认使用输入文件中所有 <code>ObsValue</code> 变量；  </li>
+<li>若同时给出 <code>channels</code>，则该列表对“观测变量”和“模拟变量”均生效。</li>
+</ul>
+</li>
+<li><strong>derived variables</strong>（可选）：观测值无法直接载入、必须由滤波器生成的变量列表。  </li>
+<li><strong>simulated variables</strong>（必需，可为空列表）：需要由观测算子模拟的变量列表。</li>
+</ul>
+</li>
+<li><p><strong>obs operator</strong>（必需）：观测算子及其选项  </p>
+<ul>
+<li><strong>name</strong>（必需）：<code>ObsOperator</code> 与 <code>LinearObsOperator</code> 工厂注册名（C++ 代码中定义）。  </li>
+<li>其余选项视具体算子而定（参见各算子文档）。</li>
+</ul>
+</li>
+<li><p><strong>obs error</strong>（DA 必需）：观测误差协方差矩阵配置  </p>
+<ul>
+<li>首项通常为 <strong>covariance model</strong>，指定构造方法；目前仅支持 <code>diagonal</code>（对角），这也是缺省行为。  </li>
+<li>初始误差标准差优先从 <code>ObsError</code> 组读取；缺失的变量将被置为缺测值，用户必须通过滤波器（通常用 <code>assign error</code> 动作）在后续流程中补全，否则最终会被剔除。</li>
+</ul>
+</li>
+<li><p><strong>obs filters</strong>（可选）：质量控制（QC）滤波器列表（参见现有滤波器文档）。</p>
+</li>
+<li><p><strong>obs bias</strong>（可选）：偏差校正方案。</p>
+</li>
+<li><p><strong>geovals</strong>（可选，仅 UFO 测试使用）：指定模拟输出文件及其他测试参数。</p>
+</li>
+</ul>
+<p><strong>典型示例</strong></p>
+<ol>
+<li><p>探空仪（radiosonde）  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">obs space:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">Radiosonde</span></span><br><span class="line">  <span class="attr">obsdatain:</span></span><br><span class="line">    <span class="attr">engine:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">H5File</span></span><br><span class="line">      <span class="attr">obsfile:</span> <span class="string">Data/sondes_obs_2018041500.nc4</span></span><br><span class="line">  <span class="attr">simulated variables:</span> [<span class="string">airTemperature</span>, <span class="string">windEastward</span>, <span class="string">windNorthward</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>AMSU-A 辐射率（含通道选择）  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">obs space:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">amsua_n19</span></span><br><span class="line">  <span class="attr">obsdatain:</span></span><br><span class="line">    <span class="attr">engine:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">H5File</span></span><br><span class="line">      <span class="attr">obsfile:</span> <span class="string">Data/amsua_n19_obs_2018041500.nc4</span></span><br><span class="line">  <span class="attr">obsdataout:</span></span><br><span class="line">    <span class="attr">engine:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">H5File</span></span><br><span class="line">      <span class="attr">obsfile:</span> <span class="string">Data/amsua_n19_obs_2018041500_out.nc4</span></span><br><span class="line">  <span class="attr">simulated variables:</span> [<span class="string">brightnessTemperature</span>]</span><br><span class="line">  <span class="attr">channels:</span> <span class="number">1</span><span class="number">-10</span><span class="string">,15</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>派生风分量（输入为风速&#x2F;风向，需滤波转换）  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">obs space:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">Radiosonde</span></span><br><span class="line">  <span class="attr">obsdatain:</span></span><br><span class="line">    <span class="attr">engine:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">H5File</span></span><br><span class="line">      <span class="attr">obsfile:</span> <span class="string">Data/sondes_obs_2018041500.nc4</span></span><br><span class="line">  <span class="attr">simulated variables:</span> [<span class="string">airTemperature</span>, <span class="string">windEastward</span>, <span class="string">windNorthward</span>]</span><br><span class="line">  <span class="attr">derived variables:</span> [<span class="string">windEastward</span>, <span class="string">windNorthward</span>]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>观测+派生变量混合（先质控再派生气压）  </p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">obs space:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">Surface</span></span><br><span class="line">  <span class="attr">obsdatain:</span></span><br><span class="line">    <span class="attr">engine:</span></span><br><span class="line">      <span class="attr">type:</span> <span class="string">H5File</span></span><br><span class="line">      <span class="attr">obsfile:</span> <span class="string">Data/ufo/testinput_tier_1/PStar_obs_20210521T1200Z.nc4</span></span><br><span class="line">  <span class="attr">observed variables:</span> [<span class="string">station_pressure</span>, <span class="string">mean_sea_level_pressure</span>]</span><br><span class="line">  <span class="attr">derived variables:</span> [<span class="string">stationPressure</span>]</span><br><span class="line">  <span class="attr">simulated variables:</span> [<span class="string">stationPressure</span>]</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>观测空间扩展（companion records）</strong></p>
+<p>当原始数据已按记录（record）分组时，可为每条记录自动生成一条“伴随记录”（companion record），并赋予固定层数。用法示例：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">observations:</span></span><br><span class="line">  <span class="attr">observers:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">obs space:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">Sonde</span></span><br><span class="line">      <span class="attr">obsdatain:</span></span><br><span class="line">        <span class="attr">engine:</span></span><br><span class="line">          <span class="attr">type:</span> <span class="string">ODB</span></span><br><span class="line">          <span class="attr">obsfile:</span> <span class="string">sonde.odb</span></span><br><span class="line">        <span class="attr">obsgrouping:</span></span><br><span class="line">          <span class="attr">group variables:</span> [ <span class="string">&quot;stationIdentification&quot;</span> ]</span><br><span class="line">      <span class="attr">extension:</span></span><br><span class="line">        <span class="attr">allocate companion records with length:</span> <span class="number">10</span></span><br><span class="line">        <span class="attr">variables filled with non-missing values:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;latitude&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;longitude&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;dateTime&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;pressure&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;air_pressure_levels&quot;</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">&quot;stationIdentification&quot;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>allocate companion records with length</code> 控制每条伴随记录的层数（&gt;0 的整数；非法值则跳过扩展）。  </li>
+<li>仅当 <code>obsgrouping.group variables</code> 已设置时才生效。  </li>
+<li>设原始数据有 <code>nlocs</code> 个位置、<code>nrecs</code> 条记录，每条伴随记录含 <code>ncomplocs</code> 层，则观测空间总共增加 <code>ncomplocs * nrecs</code> 个位置。  </li>
+<li>伴随记录与原记录位于同一 MPI 进程；原记录索引为 <code>k</code> 时，其伴随记录索引为 <code>k + nrecs</code>。  </li>
+<li>默认把 <code>MetaData</code> 组内列出的变量首值复制到伴随记录各层，其余变量填缺测；用户可在后续滤波器中再用 <code>FillAveragedProfileData</code> 或 <code>ProfileAverageObsPressure</code> 等函数细化。  </li>
+<li>扩展后会自动新增 <code>MetaData/extendedObsSpace</code> 变量：0 表示原始数据，1 表示扩展数据，可供 <code>where</code> 语句筛选。</li>
+</ul>
+<p>附：通过 IODA 写出结果的完整 YAML 片段</p>
+<p>（此处可继续给出示例，略）</p>
+<h4 id="time-window"><a href="#time-window" class="headerlink" title="time window"></a>time window</h4><p><strong>用途</strong>：为变分（Variational）、集合变分（EDA）、局地集合 DA（LocalEnsembleDA）、造观测（MakeObs）、观测算子（HofX&#x2F;EnsHofX）等应用统一划定“同化时间窗”。</p>
+<p><strong>子项</strong>（ISO-8601 格式）：</p>
+<ul>
+<li><strong>begin</strong>：窗口起始时刻</li>
+<li><strong>length</strong>：窗口长度（如 <code>PT6H</code>）</li>
+<li><strong>end</strong>：窗口结束时刻</li>
+</ul>
+<p><strong>约束</strong>：只能填 <strong>length</strong> 或 <strong>end</strong> 之一，否则抛异常。</p>
+<ul>
+<li><strong>bound to include</strong>：指定哪一侧闭区间，可选 <code>begin</code>&#x2F;<code>end</code>（默认 <code>end</code>）。</li>
+</ul>
+<h4 id="cost-function"><a href="#cost-function" class="headerlink" title="cost function"></a>cost function</h4><p><strong>用途</strong>：列出计算代价函数所需的全部参数、控制变量与开关。<br>（具体可扩展项参见“现有代价函数”文档。）</p>
+<h4 id="minimizer"><a href="#minimizer" class="headerlink" title="minimizer"></a>minimizer</h4><p><strong>用途</strong>：告诉 OOPS 采用哪种迭代算法最小化上述代价函数。<br><strong>algorithm</strong> 可选值：<br><code>DRGMRESR</code>, <code>DRIPCG</code>, <code>GMRESR</code>, <code>IPCG</code>, <code>SaddlePoint</code>, <code>RPCG</code>, <code>DRPCG</code>, <code>DRPFOM</code>, <code>LBGMRESR</code>, <code>DRPLanczos</code>, <code>PCG</code>, <code>PLanczos</code>, <code>RPLanczos</code>, <code>MINRES</code>, <code>FGMRES</code><br>（算法细节参见“minimizers”专页。）</p>
+<h4 id="output"><a href="#output" class="headerlink" title="output"></a>output</h4><p><strong>用途</strong>：统一描述所有输出文件的<strong>文件名、存储路径、格式、输出频率</strong>等属性。<br>支持一次性为多个模块（状态、观测、诊断）分别设定输出规则。</p>
+<h4 id="top-level-variables"><a href="#top-level-variables" class="headerlink" title="top-level variables"></a>top-level variables</h4><p>JEDI 配置采用层级 YAML&#x2F;JSON，除上述高频段外，其余字段均可视为独立 <code>Configuration</code> 对象，按需插入即可。</p>
+<h2 id="Running-Skylab"><a href="#Running-Skylab" class="headerlink" title="Running Skylab"></a>Running Skylab</h2><h3 id="Building-and-running-SkyLab"><a href="#Building-and-running-SkyLab" class="headerlink" title="Building and running SkyLab"></a>Building and running SkyLab</h3><h4 id="List-of-spack-software-and-AMIs"><a href="#List-of-spack-software-and-AMIs" class="headerlink" title="List of spack, software, and AMIs"></a>List of spack, software, and AMIs</h4><p>使用版本</p>
+<ul>
+<li>spack-stack-1.9.1（2025 年 3 月发布）</li>
+</ul>
+<p> <br> 源码：<a target="_blank" rel="noopener" href="https://github.com/JCSDA/spack-stack/tree/release/1.9.0">https://github.com/JCSDA/spack-stack/tree/release/1.9.0</a>  </p>
+<p> 文档：<a target="_blank" rel="noopener" href="https://spack-stack.readthedocs.io/en/1.9.1">https://spack-stack.readthedocs.io/en/1.9.1</a>  
+ </p>
+<ul>
+<li>公开 AMI（美国东部 2 区，Ohio）</li>
+</ul>
+<p> <br> 系统：Ubuntu 24.04，已预装 gcc 与 oneAPI  </p>
+<p> AMI ID：ami-0e1056b9bfde93698<br> <br> 控制台链接：<a target="_blank" rel="noopener" href="https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#ImageDetails:imageId=ami-0e1056b9bfde93698">https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#ImageDetails:imageId=ami-0e1056b9bfde93698</a>  </p>
+<p>实例选型提示  </p>
+<ul>
+<li>最低要求：c6i.4xlarge 及以上规格  </li>
+<li>运行 skylab-atm-land-small 实验推荐：c6i.8xlarge</li>
+</ul>
+<p>更多 AWS 使用说明请参考官方文档《JEDI on AWS》。</p>
+<h4 id="Developer-Section"><a href="#Developer-Section" class="headerlink" title="Developer Section"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/running_skylab.html#developer-section">Developer Section</a></h4><h3 id="Skylab-HPC-users-guide"><a href="#Skylab-HPC-users-guide" class="headerlink" title="Skylab HPC users guide"></a>Skylab HPC users guide</h3><h4 id="General-Tips-for-HPC-Systems"><a href="#General-Tips-for-HPC-Systems" class="headerlink" title="General Tips for HPC Systems"></a>General Tips for HPC Systems</h4><p>下面给出一份“即拷即用”的中文版 HPC 使用摘要，保留所有关键命令与脚本，方便贴进终端或作业脚本。</p>
+<p>通用 HPC 提醒</p>
+<ol>
+<li>登录节点禁止直接跑 MPI：  <ul>
+<li>编译完 JEDI 后，务必通过作业调度器（Slurm&#x2F;PBS）提交，或用 <code>salloc</code> 申请交互节点。</li>
+</ul>
+</li>
+<li>提交队列的好处：  <ul>
+<li>可断线走人，作业仍在后台跑；结果写进 <code>slurm-&lt;作业号&gt;.out</code>（或 PBS 的 <code>*.o*</code>）。</li>
+</ul>
+</li>
+</ol>
+<p>交互式快速测试（Slurm 系统）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 申请资源（以 4 任务为例，10 分钟）</span></span><br><span class="line">salloc --ntasks=4 --cpus-per-task=1 --time=00:10:00</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 进入分配节点后，重新加载模块（路径自行替换）</span></span><br><span class="line">module purge</span><br><span class="line">module use /path/to/spack-stack/modulefiles</span><br><span class="line">module load jedi-stack</span><br><span class="line"><span class="built_in">ulimit</span> -s unlimited</span><br><span class="line"><span class="built_in">ulimit</span> -v unlimited</span><br><span class="line"><span class="built_in">export</span> HDF5_USE_FILE_LOCKING=FALSE</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 跑测试</span></span><br><span class="line"><span class="built_in">cd</span> &lt;bundle-build-dir&gt;</span><br><span class="line">ctest 2&gt;&amp;1 | <span class="built_in">tee</span> ctest.log</span><br></pre></td></tr></table></figure>
+<p>退出交互即释放资源。</p>
+<p>一键提交 ctest（Slurm：Orion、Discover、Hera、S4）<br>保存为 <code>run_ctest.slurm</code>，改尖括号内字段：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="comment">#SBATCH --job-name=jedi_ctest</span></span><br><span class="line"><span class="comment">#SBATCH --nodes=1               # 整节点，ctest 内部自动拆分任务</span></span><br><span class="line"><span class="comment">#SBATCH --account=&lt;account&gt;</span></span><br><span class="line"><span class="comment">#SBATCH --partition=&lt;partition&gt;</span></span><br><span class="line"><span class="comment">#SBATCH --qos=&lt;qos&gt;</span></span><br><span class="line"><span class="comment">#SBATCH --time=0:10:00</span></span><br><span class="line"><span class="comment">#SBATCH --mail-user=&lt;email&gt;</span></span><br><span class="line"><span class="comment">#SBATCH --mail-type=ALL</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> /etc/bashrc</span><br><span class="line">module purge</span><br><span class="line"><span class="comment"># ===== 在这里插入 spack-stack 的 module load 语句 =====</span></span><br><span class="line">module list</span><br><span class="line"></span><br><span class="line"><span class="built_in">ulimit</span> -s unlimited</span><br><span class="line"><span class="built_in">ulimit</span> -v unlimited</span><br><span class="line"><span class="built_in">export</span> SLURM_EXPORT_ENV=ALL</span><br><span class="line"><span class="built_in">export</span> HDF5_USE_FILE_LOCKING=FALSE</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> &lt;path-to-bundle-build-directory&gt;</span><br><span class="line">ctest</span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<p>提交与查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sbatch run_ctest.slurm</span><br><span class="line">squeue -u <span class="variable">$USER</span>          <span class="comment"># 看状态</span></span><br><span class="line">scancel &lt;JOBID&gt;          <span class="comment"># 若要删作业</span></span><br></pre></td></tr></table></figure>
+
+<p>单独跑某个可执行（节省核时）<br>脚本改为按任务数计费，<strong>不</strong>占满整节点：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#SBATCH --ntasks=4          # 只申请 4 核，节点数由调度自动算</span></span><br><span class="line"><span class="comment">#SBATCH --cpus-per-task=1</span></span><br><span class="line"><span class="comment">#SBATCH --time=0:10:00</span></span><br><span class="line">...</span><br><span class="line">srun --ntasks=4 --cpu_bind=core --distribution=block:block \</span><br><span class="line">     test_ufo_radiosonde_opr testinput/radiosonde.yaml</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：JEDI 内存占用较高，若出现 OOM，可改回 <code>--nodes=1</code> 并减少 <code>--ntasks</code>。</p>
+</blockquote>
+<p>PBS 系统（Derecho、Casper、Narwhal）<br>保存为 <code>run_ctest.pbs</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment">#PBS -N jedi_ctest</span></span><br><span class="line"><span class="comment">#PBS -A &lt;account&gt;</span></span><br><span class="line"><span class="comment">#PBS -l walltime=00:20:00</span></span><br><span class="line"><span class="comment">#PBS -l select=1:ncpus=24:mpiprocs=24</span></span><br><span class="line"><span class="comment">#PBS -q regular</span></span><br><span class="line"><span class="comment">#PBS -j oe</span></span><br><span class="line"><span class="comment">#PBS -k eod</span></span><br><span class="line"><span class="comment">#PBS -m abe</span></span><br><span class="line"><span class="comment">#PBS -M &lt;your-email&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># ===== 在这里插入 module purge / module load =====</span></span><br><span class="line"><span class="built_in">cd</span> &lt;build-directory&gt;</span><br><span class="line">ctest</span><br></pre></td></tr></table></figure>
+<p>提交与查看：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">qsub run_ctest.pbs</span><br><span class="line">qstat -u <span class="variable">$USER</span></span><br><span class="line">qdel &lt;JOBID&gt;      <span class="comment"># 删作业</span></span><br></pre></td></tr></table></figure>
+
+<p>常见排错</p>
+<ul>
+<li><code>OOM killed</code> → 增加节点或整节点申请，减少单节点任务数。  </li>
+<li><code>File locking</code> 报错 → 确认 <code>export HDF5_USE_FILE_LOCKING=FALSE</code> 已写入脚本。  </li>
+<li>模块冲突 → 先用 <code>module purge</code>，再按 spack-stack 文档顺序加载。</li>
+</ul>
+<p>祝跑图顺利，测试全绿！</p>
+<h4 id="System-Specific-Information"><a href="#System-Specific-Information" class="headerlink" title="System Specific Information"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#system-specific-information">System Specific Information</a></h4><h4 id="Casper"><a href="#Casper" class="headerlink" title="Casper"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#casper">Casper</a></h4><h4 id="Derecho"><a href="#Derecho" class="headerlink" title="Derecho"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#derecho">Derecho</a></h4><h4 id="Discover"><a href="#Discover" class="headerlink" title="Discover"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#discover">Discover</a></h4><h4 id="Hera"><a href="#Hera" class="headerlink" title="Hera"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#hera">Hera</a></h4><h4 id="Hercules-amp-Orion"><a href="#Hercules-amp-Orion" class="headerlink" title="Hercules &amp; Orion"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#hercules-orion">Hercules &amp; Orion</a></h4><h4 id="Narwhal"><a href="#Narwhal" class="headerlink" title="Narwhal"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#narwhal">Narwhal</a></h4><h4 id="S4"><a href="#S4" class="headerlink" title="S4"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/using/running_skylab/HPC_users_guide.html#s4">S4</a></h4>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Mac%20Cron/" rel="prev" title="Mac Cron">
+      <i class="fa fa-chevron-left"></i> Mac Cron
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/Lmod/" rel="next" title="Lmod">
+      Lmod <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JEDI-Portability"><span class="nav-number">1.</span> <span class="nav-text">JEDI Portability</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-spack-stack-modules-for-JEDI"><span class="nav-number">1.1.</span> <span class="nav-text">Building spack-stack modules for JEDI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-spack-stack-modules-to-build-and-run-JEDI"><span class="nav-number">1.2.</span> <span class="nav-text">Using spack-stack modules to build and run JEDI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JEDI-Containers"><span class="nav-number">1.3.</span> <span class="nav-text">JEDI Containers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JEDI-on-AWS"><span class="nav-number">1.4.</span> <span class="nav-text">JEDI on AWS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-and-Running-JEDI"><span class="nav-number">2.</span> <span class="nav-text">Building and Running JEDI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-and-Running-JEDI-1"><span class="nav-number">2.1.</span> <span class="nav-text">Building and Running JEDI</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-0-System-Configuration"><span class="nav-number">2.1.1.</span> <span class="nav-text">Step 0: System Configuration</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-1-Clone-the-Desired-JEDI-Bundle"><span class="nav-number">2.1.2.</span> <span class="nav-text">Step 1: Clone the Desired JEDI Bundle</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-2-Choose-your-Repos"><span class="nav-number">2.1.3.</span> <span class="nav-text">Step 2: Choose your Repos</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-3-Run-ecbuild-from-the-build-directory"><span class="nav-number">2.1.4.</span> <span class="nav-text">Step 3: Run ecbuild (from the build directory)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Step-4-Run-make-from-the-build-directory"><span class="nav-number">2.1.5.</span> <span class="nav-text">Step 4: Run make (from the build directory)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-JEDI-applications"><span class="nav-number">2.2.</span> <span class="nav-text">Running JEDI applications</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JEDI-Configuration-Files-Content"><span class="nav-number">2.3.</span> <span class="nav-text">JEDI Configuration Files: Content</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#geometry"><span class="nav-number">2.3.1.</span> <span class="nav-text">geometry</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#state"><span class="nav-number">2.3.2.</span> <span class="nav-text">state</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#model-linear-model"><span class="nav-number">2.3.3.</span> <span class="nav-text">model, linear model</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-error"><span class="nav-number">2.3.4.</span> <span class="nav-text">background error</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#model-aux-control-model-aux-error"><span class="nav-number">2.3.5.</span> <span class="nav-text">model aux control, model aux error</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#initial-condition"><span class="nav-number">2.3.6.</span> <span class="nav-text">initial condition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#observations"><span class="nav-number">2.3.7.</span> <span class="nav-text">observations</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#time-window"><span class="nav-number">2.3.8.</span> <span class="nav-text">time window</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cost-function"><span class="nav-number">2.3.9.</span> <span class="nav-text">cost function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#minimizer"><span class="nav-number">2.3.10.</span> <span class="nav-text">minimizer</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#output"><span class="nav-number">2.3.11.</span> <span class="nav-text">output</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#top-level-variables"><span class="nav-number">2.3.12.</span> <span class="nav-text">top-level variables</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-Skylab"><span class="nav-number">3.</span> <span class="nav-text">Running Skylab</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Building-and-running-SkyLab"><span class="nav-number">3.1.</span> <span class="nav-text">Building and running SkyLab</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#List-of-spack-software-and-AMIs"><span class="nav-number">3.1.1.</span> <span class="nav-text">List of spack, software, and AMIs</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Developer-Section"><span class="nav-number">3.1.2.</span> <span class="nav-text">Developer Section</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Skylab-HPC-users-guide"><span class="nav-number">3.2.</span> <span class="nav-text">Skylab HPC users guide</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#General-Tips-for-HPC-Systems"><span class="nav-number">3.2.1.</span> <span class="nav-text">General Tips for HPC Systems</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#System-Specific-Information"><span class="nav-number">3.2.2.</span> <span class="nav-text">System Specific Information</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Casper"><span class="nav-number">3.2.3.</span> <span class="nav-text">Casper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Derecho"><span class="nav-number">3.2.4.</span> <span class="nav-text">Derecho</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Discover"><span class="nav-number">3.2.5.</span> <span class="nav-text">Discover</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hera"><span class="nav-number">3.2.6.</span> <span class="nav-text">Hera</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hercules-amp-Orion"><span class="nav-number">3.2.7.</span> <span class="nav-text">Hercules &amp; Orion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Narwhal"><span class="nav-number">3.2.8.</span> <span class="nav-text">Narwhal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#S4"><span class="nav-number">3.2.9.</span> <span class="nav-text">S4</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">234</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+

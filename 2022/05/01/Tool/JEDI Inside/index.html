@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Egg_32x32.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Egg_16x16.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="JEDI ComponentsOOPS OOPS Introduction OOPS Applications OOPS Algorithmic details OOPS Interfaces OOPS generic implementations of the interfaces OOPS Toy Models  SABER SABER Error Covariance Model SABE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JEDI inside">
+<meta property="og:url" content="http://example.com/2022/05/01/Tool/JEDI%20Inside/index.html">
+<meta property="og:site_name" content="ruyanc">
+<meta property="og:description" content="JEDI ComponentsOOPS OOPS Introduction OOPS Applications OOPS Algorithmic details OOPS Interfaces OOPS generic implementations of the interfaces OOPS Toy Models  SABER SABER Error Covariance Model SABE">
+<meta property="og:locale">
+<meta property="article:published_time" content="2022-05-01T04:00:00.000Z">
+<meta property="article:modified_time" content="2025-10-05T13:07:45.803Z">
+<meta property="article:author" content="ruyanc">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://example.com/2022/05/01/Tool/JEDI%20Inside/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>JEDI inside | ruyanc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ruyanc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Acedemic Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-atmsci">
+
+    <a href="/categories/AtmSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>AtmSci</a>
+
+  </li>
+        <li class="menu-item menu-item-ocnsci">
+
+    <a href="/categories/OcnSci/" rel="section"><i class="fa fa-graduation-cap fa-fw"></i>OcnSci</a>
+
+  </li>
+        <li class="menu-item menu-item-seminar">
+
+    <a href="/categories/Seminar/" rel="section"><i class="fa fa-users fa-fw"></i>Seminar</a>
+
+  </li>
+        <li class="menu-item menu-item-readcube">
+
+    <a href="/categories/ReadCube/" rel="section"><i class="fa fa-archive fa-fw"></i>ReadCube</a>
+
+  </li>
+        <li class="menu-item menu-item-publication">
+
+    <a href="/categories/Publication" rel="section"><i class="fa fa-archive fa-fw"></i>Publication</a>
+
+  </li>
+        <li class="menu-item menu-item-recharge">
+
+    <a href="/categories/Recharge/" rel="section"><i class="fa fa-coffee fa-fw"></i>Recharge</a>
+
+  </li>
+        <li class="menu-item menu-item-tool">
+
+    <a href="/categories/Tool/" rel="section"><i class="fa fa-wrench fa-fw"></i>Tool</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/05/01/Tool/JEDI%20Inside/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="ruyanc">
+      <meta itemprop="description" content="E-mail: ruyan1810@gmail.com">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ruyanc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          JEDI inside
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-05-01 12:00:00" itemprop="dateCreated datePublished" datetime="2022-05-01T12:00:00+08:00">2022-05-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2025-10-05 21:07:45" itemprop="dateModified" datetime="2025-10-05T21:07:45+08:00">2025-10-05</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tool/" itemprop="url" rel="index"><span itemprop="name">Tool</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="JEDI-Components"><a href="#JEDI-Components" class="headerlink" title="JEDI Components"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/index.html">JEDI Components</a></h2><h3 id="OOPS"><a href="#OOPS" class="headerlink" title="OOPS"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/index.html">OOPS</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/introduction.html">OOPS Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/applications/index.html">OOPS Applications</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/algorithmic_details/index.html">OOPS Algorithmic details</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/interfaces/index.html">OOPS Interfaces</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/generic-implementations/index.html">OOPS generic implementations of the interfaces</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/oops/toy-models/index.html">OOPS Toy Models</a></li>
+</ul>
+<h3 id="SABER"><a href="#SABER" class="headerlink" title="SABER"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html">SABER</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html#saber-error-covariance-model">SABER Error Covariance Model</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html#saber-blocks">SABER blocks</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html#saber-applications">SABER applications</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html#calibration-of-saber-error-covariance">Calibration of SABER error covariance</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/saber/index.html#saber-testing">SABER testing</a></li>
+</ul>
+<h3 id="IODA"><a href="#IODA" class="headerlink" title="IODA"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ioda/index.html">IODA</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ioda/introduction.html">IODA Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ioda/details.html">IODA Details</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ioda/interface.html">IODA Interfaces</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ioda/file-formats.html">IODA File Formats</a></li>
+</ul>
+<h3 id="UFO"><a href="#UFO" class="headerlink" title="UFO"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/index.html">UFO</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/dataflow.html">Observation Processing Flow</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/obsops.html">Observation Operators in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/newobsop.html">Creating a new Observation Operator in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/qcfilters/index.html">Quality Control in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/variabletransforms/index.html">Variable transforms</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/obserrors.html">Observation uncertainties in the UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/obserrors.html#observation-error-covariances-in-ufo">Observation error covariances in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/varbc.html">Variational Bias Correction in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/varbc.html#static-bias-correction-in-ufo">Static Bias Correction in UFO</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/ufo/varbc.html#available-predictors">Available Predictors</a></li>
+</ul>
+<h3 id="VADER"><a href="#VADER" class="headerlink" title="VADER"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/vader/index.html">VADER</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/vader/how_to_use_vader.html">High-Level Overview of VADER</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/vader/how_to_use_vader.html#how-to-use-vader">How To Use VADER</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/vader/recipe_naming.html">Recipe Naming Standard</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/vader/VariableChanges/index.html">Vader Variable Changes</a></li>
+</ul>
+<h3 id="FV3-JEDI"><a href="#FV3-JEDI" class="headerlink" title="FV3-JEDI"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/index.html">FV3-JEDI</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/introduction.html">Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/build.html">Building FV3-JEDI</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/classes.html">Classes and Configuration</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/data.html">Data files</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/testing.html">Testing</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/fv3-jedi/visualization.html">Visualization with FV3-JEDI</a></li>
+</ul>
+<h3 id="MPAS-JEDI"><a href="#MPAS-JEDI" class="headerlink" title="MPAS-JEDI"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/index.html">MPAS-JEDI</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/introduction.html">Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/build.html">Building and Testing MPAS-JEDI</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/classes.html">Classes and Configuration</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/staticB.html">Static Background Error Covariance</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/data.html">Test files</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/testing.html">More on Testing</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/mpas-jedi/diagnostics.html">Diagnostics</a></li>
+</ul>
+<h3 id="SOCA"><a href="#SOCA" class="headerlink" title="SOCA"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/soca/index.html">SOCA</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/soca/introduction.html">Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/soca/build.html">Building SOCA in Singularity</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/soca/classes.html">Classes and Configuration</a></li>
+</ul>
+<h3 id="Configuring-JEDI"><a href="#Configuring-JEDI" class="headerlink" title="Configuring JEDI"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/index.html">Configuring JEDI</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/configuration.html">JEDI Configuration Files: Implementation</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/configuration.html#file-format">File Format</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/configuration.html#c-usage">C++ Usage</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/configuration.html#summary-of-c-configuration-methods">Summary of C++ Configuration Methods</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/configuration.html#fortran-usage">Fortran Usage</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html">Parameter Classes</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#introduction">Introduction</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#more-complex-types">More Complex Types</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#parameter-nesting">Parameter Nesting</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#optional-parameters">Optional Parameters</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#constraints">Constraints</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#polymorphic-parameters">Polymorphic Parameters</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#parameter-composition">Parameter Composition</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#conversion-to-configuration-objects">Conversion to <code>Configuration</code> Objects</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#copying-parameters-objects">Copying <code>Parameters</code> Objects</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#validation">Validation</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#oops-interfaces-supporting-parameters">OOPS Interfaces Supporting <code>Parameters</code></a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/configuration/parameters.html#headers-to-include-adding-support-for-new-parameter-types">Headers to Include; Adding Support for New Parameter Types</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="Skylab-components"><a href="#Skylab-components" class="headerlink" title="Skylab components"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/index.html">Skylab components</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html">SkyLab experiments: Parameters and description</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#experiment-configuration">Experiment configuration</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#retrieving-experiment-configuration">Retrieving experiment configuration</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#plots-configuration">Plots configuration</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#existing-experiments-and-adding-new-experiments">Existing experiments and adding new experiments</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#skylab-aero-yaml">1. skylab-aero.yaml</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#skylab-atm-land-yaml">2. skylab-atm-land.yaml</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#skylab-marine-yaml">3. skylab-marine.yaml</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/jedi-components/skylab/skylab_description.html#skylab-trace-gas-yaml">4. skylab-trace-gas.yaml</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="JEDI-Data-Conventions"><a href="#JEDI-Data-Conventions" class="headerlink" title="JEDI Data Conventions"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/index.html">JEDI Data Conventions</a></h2><h3 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/intro.html">Introduction</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/intro.html#goals">Goals</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/intro.html#how-to-read-this-document">How to read this document</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/intro.html#procedure-for-updating-these-conventions">Procedure for updating these conventions</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/intro.html#credits">Credits</a></li>
+</ul>
+<h3 id="Convention-Tables"><a href="#Convention-Tables" class="headerlink" title="Convention Tables"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/tbls.html">Convention Tables</a></h3><h3 id="Files-and-Components"><a href="#Files-and-Components" class="headerlink" title="Files and Components"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html">Files and Components</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#files">Files</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#groups">Groups</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#data-types">Data types</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#variables">Variables</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#attributes">Attributes</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#dimension-scales">Dimension scales</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#links-future-ioda-release">Links (future IODA release)</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/files_and_components.html#mount-points-future-ioda-release">Mount points (future IODA release)</a></li>
+</ul>
+<h3 id="Objects-and-Layouts"><a href="#Objects-and-Layouts" class="headerlink" title="Objects and Layouts"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html">Objects and Layouts</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#obsgroups-obsspaces">ObsGroups &amp; ObsSpaces</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#global-attributes">Global attributes</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#global-attributes-added-by-r2d2-upon-ingest">Global attributes added by R2D2 upon ingest</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#group-based-data-organization">Group-based data organization</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#variable-names">Variable names</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#variable-properties-and-attributes">Variable properties and attributes</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#storage-type-and-missing-values">Storage type and missing values</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#attributes-and-units">Attributes and Units</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#using-dimensions-properly">Using dimensions properly</a></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#other-data-organizational-structures">Other Data Organizational Structures</a><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/conventions/objects_and_layouts.html#bias-related-data">Bias-related data</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="JEDI-Testing"><a href="#JEDI-Testing" class="headerlink" title="JEDI Testing"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/index.html">JEDI Testing</a></h2><h3 id="JEDI-Testing-1"><a href="#JEDI-Testing-1" class="headerlink" title="JEDI Testing"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html">JEDI Testing</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#running-ctest">Running ctest</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#manual-execution">Manual Execution</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#the-jedi-test-suite">The JEDI test suite</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#tests-as-applications">Tests as Applications</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#initialization-and-execution-of-unit-tests">Initialization and Execution of Unit Tests</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#anatomy-of-a-unit-test">Anatomy of a Unit Test</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#integration-and-system-application-testing">Integration and System (Application) Testing</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/unit_testing.html#jedi-testing-framework">JEDI Testing Framework</a></li>
+</ul>
+<h3 id="Adding-a-New-Test"><a href="#Adding-a-New-Test" class="headerlink" title="Adding a New Test"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html">Adding a New Test</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-1-create-a-file-for-your-test-application">Step 1: Create a File for your Test Application</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-2-define-a-test-fixture">Step 2: Define A Test Fixture</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-3-define-your-unit-tests">Step 3: Define Your Unit Tests</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-4-register-your-unit-tests-with-eckit">Step 4: Register your Unit Tests with eckit</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-6-create-an-executable">Step 6: Create an Executable</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-7-create-a-configuration-file">Step 7: Create a Configuration File</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#step-8-register-all-files-with-cmake-and-ctest">Step 8: Register all files with CMake and CTest</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/testing/adding_a_test.html#adding-an-application-test">Adding an Application Test</a></li>
+</ul>
+<h2 id="Best-Practices-for-Developers"><a href="#Best-Practices-for-Developers" class="headerlink" title="Best Practices for Developers"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/index.html">Best Practices for Developers</a></h2><h3 id="Create-PLEATED-Issues-to-let-your-team-know-what-you-are-working-on"><a href="#Create-PLEATED-Issues-to-let-your-team-know-what-you-are-working-on" class="headerlink" title="Create PLEATED Issues to let your team know what you are working on"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/issues.html">Create PLEATED Issues to let your team know what you are working on</a></h3><h3 id="Follow-the-Git-flow-Paradigm"><a href="#Follow-the-Git-flow-Paradigm" class="headerlink" title="Follow the Git flow Paradigm"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/gitflow.html">Follow the Git flow Paradigm</a></h3><h3 id="TRIPLE-the-impact-of-your-GitHub-Pull-Requests"><a href="#TRIPLE-the-impact-of-your-GitHub-Pull-Requests" class="headerlink" title="TRIPLE the impact of your GitHub Pull Requests"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/pullrequest.html">TRIPLE the impact of your GitHub Pull Requests</a></h3><h3 id="Document-your-code"><a href="#Document-your-code" class="headerlink" title="Document your code"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/document.html">Document your code</a></h3><h3 id="Treat-ECMWF-Forks-as-Forks"><a href="#Treat-ECMWF-Forks-as-Forks" class="headerlink" title="Treat ECMWF Forks as Forks"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/ecmwf_forks.html">Treat ECMWF Forks as Forks</a></h3><h3 id="OpenMP-Safety-in-JEDI-and-UFO"><a href="#OpenMP-Safety-in-JEDI-and-UFO" class="headerlink" title="OpenMP Safety in JEDI and UFO"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/practices/openmp.html">OpenMP Safety in JEDI and UFO</a></h3><h2 id="Developer-Tools"><a href="#Developer-Tools" class="headerlink" title="Developer Tools"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/index.html">Developer Tools</a></h2><h3 id="Homebrew-Mac-only"><a href="#Homebrew-Mac-only" class="headerlink" title="Homebrew (Mac only)"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/homebrew.html">Homebrew (Mac only)</a></h3><h3 id="Git-flow-Application"><a href="#Git-flow-Application" class="headerlink" title="Git flow (Application)"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-gitflow.html">Git flow (Application)</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-gitflow.html#installing-git-flow">Installing git flow</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-gitflow.html#initializing-your-local-repository">Initializing your local repository</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-gitflow.html#working-with-git-flow-branches">Working with git-flow branches</a></li>
+</ul>
+<h3 id="Git-LFS"><a href="#Git-LFS" class="headerlink" title="Git-LFS"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gitlfs.html">Git-LFS</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gitlfs.html#installing-git-lfs">Installing git-lfs</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gitlfs.html#using-git-lfs">Using git-lfs</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gitlfs.html#adding-large-files-to-a-jedi-repository">Adding large files to a JEDI repository</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gitlfs.html#activating-git-lfs-for-a-jedi-repository">Activating Git-LFS for a JEDI repository</a></li>
+</ul>
+<h3 id="Sphinx"><a href="#Sphinx" class="headerlink" title="Sphinx"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-sphinx.html">Sphinx</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-sphinx.html#installing-sphinx">Installing Sphinx</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-sphinx.html#initial-configuration-for-using-sphinx">Initial Configuration for Using Sphinx</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-sphinx.html#writing-your-document">Writing Your Document</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/getting-started-with-sphinx.html#more-help-with-getting-started">More Help with Getting Started</a></li>
+</ul>
+<h3 id="Doxygen"><a href="#Doxygen" class="headerlink" title="Doxygen"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html">Doxygen</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html#installing-doxygen">Installing Doxygen</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html#documenting-c-source-code">Documenting C++ source code</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html#documenting-fortran-source-code">Documenting Fortran source code</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html#running-doxygen-and-viewing-the-results">Running Doxygen and Viewing the Results</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/doxygen.html#doxywizard-and-customizing-the-doxygen-build">Doxywizard and Customizing the Doxygen Build</a></li>
+</ul>
+<h3 id="CMake-CTest-and-ecbuild"><a href="#CMake-CTest-and-ecbuild" class="headerlink" title="CMake, CTest, and ecbuild"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/cmake.html">CMake, CTest, and ecbuild</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/cmake.html#cmake-and-ctest">CMake and CTest</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/cmake.html#id1">ecbuild</a></li>
+</ul>
+<h3 id="Debugging-Tools"><a href="#Debugging-Tools" class="headerlink" title="Debugging Tools"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/debuggers.html">Debugging Tools</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/debuggers.html#building-with-debug-flags">Building with Debug flags</a></li>
+</ul>
+<h3 id="gcov"><a href="#gcov" class="headerlink" title="gcov"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gcov.html">gcov</a></h3><h3 id="GPTL"><a href="#GPTL" class="headerlink" title="GPTL"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/gptl.html">GPTL</a></h3><h3 id="OOPS-ENVIRONMENT-VARIABLES"><a href="#OOPS-ENVIRONMENT-VARIABLES" class="headerlink" title="OOPS ENVIRONMENT VARIABLES"></a><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html">OOPS ENVIRONMENT VARIABLES</a></h3><ul>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html#more-prints-for-pe-0">More prints for PE 0</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html#more-info-prints-for-all-pes">More info prints for all PEs</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html#more-prints-for-all-pes">More prints for all PEs</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html#redirect-output-to-log-files-for-each-pe">Redirect output to log files for each PE</a></li>
+<li><a target="_blank" rel="noopener" href="https://jointcenterforsatellitedataassimilation-jedi-docs.readthedocs-hosted.com/en/latest/inside/developer_tools/oops-env-variables.html#turn-on-parameter-validation">Turn on Parameter validation</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/JEDI%20Working%20Principles/" rel="prev" title="JEDI Working Principles">
+      <i class="fa fa-chevron-left"></i> JEDI Working Principles
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/05/01/Tool/How%20to%20publish%20a%20paper/" rel="next" title="How to publish a paper">
+      How to publish a paper <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JEDI-Components"><span class="nav-number">1.</span> <span class="nav-text">JEDI Components</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OOPS"><span class="nav-number">1.1.</span> <span class="nav-text">OOPS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SABER"><span class="nav-number">1.2.</span> <span class="nav-text">SABER</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IODA"><span class="nav-number">1.3.</span> <span class="nav-text">IODA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UFO"><span class="nav-number">1.4.</span> <span class="nav-text">UFO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VADER"><span class="nav-number">1.5.</span> <span class="nav-text">VADER</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FV3-JEDI"><span class="nav-number">1.6.</span> <span class="nav-text">FV3-JEDI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MPAS-JEDI"><span class="nav-number">1.7.</span> <span class="nav-text">MPAS-JEDI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SOCA"><span class="nav-number">1.8.</span> <span class="nav-text">SOCA</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-JEDI"><span class="nav-number">1.9.</span> <span class="nav-text">Configuring JEDI</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Skylab-components"><span class="nav-number">1.10.</span> <span class="nav-text">Skylab components</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JEDI-Data-Conventions"><span class="nav-number">2.</span> <span class="nav-text">JEDI Data Conventions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Introduction"><span class="nav-number">2.1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Convention-Tables"><span class="nav-number">2.2.</span> <span class="nav-text">Convention Tables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Files-and-Components"><span class="nav-number">2.3.</span> <span class="nav-text">Files and Components</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Objects-and-Layouts"><span class="nav-number">2.4.</span> <span class="nav-text">Objects and Layouts</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JEDI-Testing"><span class="nav-number">3.</span> <span class="nav-text">JEDI Testing</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JEDI-Testing-1"><span class="nav-number">3.1.</span> <span class="nav-text">JEDI Testing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Adding-a-New-Test"><span class="nav-number">3.2.</span> <span class="nav-text">Adding a New Test</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Best-Practices-for-Developers"><span class="nav-number">4.</span> <span class="nav-text">Best Practices for Developers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-PLEATED-Issues-to-let-your-team-know-what-you-are-working-on"><span class="nav-number">4.1.</span> <span class="nav-text">Create PLEATED Issues to let your team know what you are working on</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Follow-the-Git-flow-Paradigm"><span class="nav-number">4.2.</span> <span class="nav-text">Follow the Git flow Paradigm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TRIPLE-the-impact-of-your-GitHub-Pull-Requests"><span class="nav-number">4.3.</span> <span class="nav-text">TRIPLE the impact of your GitHub Pull Requests</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Document-your-code"><span class="nav-number">4.4.</span> <span class="nav-text">Document your code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Treat-ECMWF-Forks-as-Forks"><span class="nav-number">4.5.</span> <span class="nav-text">Treat ECMWF Forks as Forks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenMP-Safety-in-JEDI-and-UFO"><span class="nav-number">4.6.</span> <span class="nav-text">OpenMP Safety in JEDI and UFO</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Developer-Tools"><span class="nav-number">5.</span> <span class="nav-text">Developer Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Homebrew-Mac-only"><span class="nav-number">5.1.</span> <span class="nav-text">Homebrew (Mac only)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-flow-Application"><span class="nav-number">5.2.</span> <span class="nav-text">Git flow (Application)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Git-LFS"><span class="nav-number">5.3.</span> <span class="nav-text">Git-LFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Sphinx"><span class="nav-number">5.4.</span> <span class="nav-text">Sphinx</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Doxygen"><span class="nav-number">5.5.</span> <span class="nav-text">Doxygen</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMake-CTest-and-ecbuild"><span class="nav-number">5.6.</span> <span class="nav-text">CMake, CTest, and ecbuild</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debugging-Tools"><span class="nav-number">5.7.</span> <span class="nav-text">Debugging Tools</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gcov"><span class="nav-number">5.8.</span> <span class="nav-text">gcov</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GPTL"><span class="nav-number">5.9.</span> <span class="nav-text">GPTL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OOPS-ENVIRONMENT-VARIABLES"><span class="nav-number">5.10.</span> <span class="nav-text">OOPS ENVIRONMENT VARIABLES</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="ruyanc"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">ruyanc</p>
+  <div class="site-description" itemprop="description">E-mail: ruyan1810@gmail.com</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">234</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ruyanc</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script size="300" alpha="0.3" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"scale":0.5},"log":false});</script></body>
+</html>
+
